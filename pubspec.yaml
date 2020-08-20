@@ -4,7 +4,7 @@ homepage: https://github.com/krawieck/lemmy_api_client
 description: Future-based API client for Lemmy
 
 environment:
-  sdk: ">=2.4.0 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   json_annotation: ^3.0.1
