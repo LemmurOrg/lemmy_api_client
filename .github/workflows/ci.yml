@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cedx/setup-dart@v2
+        with:
+          release-channel: stable
+
+      - uses: actions/checkout@v2
+
+      - name: Get dependencies
+        run: pub get
+
+      - name: Run lints
+        run: dartanalyzer .
+
+      - name: Run tests
+        run: pub run test
