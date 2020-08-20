@@ -21,7 +21,7 @@ jobs:
         run: pub get
 
       - name: Run lints
-        run: dartanalyzer .
+        run: dartanalyzer --fatal-warnings --fatal-infos .
 
       - name: Run tests
         run: pub run test
