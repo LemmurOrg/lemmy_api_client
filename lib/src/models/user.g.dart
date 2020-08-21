@@ -32,6 +32,42 @@ UserView _$UserViewFromJson(Map<String, dynamic> json) {
   );
 }
 
+User _$UserFromJson(Map<String, dynamic> json) {
+  return User(
+    id: json['id'] as int,
+    name: json['name'] as String,
+    preferredUsername: json['preferred_username'] as String,
+    passwordEncrypted: json['password_encrypted'] as String,
+    email: json['email'] as String,
+    avatar: json['avatar'] as String,
+    admin: json['admin'] as bool,
+    banned: json['banned'] as bool,
+    published: json['published'] == null
+        ? null
+        : DateTime.parse(json['published'] as String),
+    updated: json['updated'] == null
+        ? null
+        : DateTime.parse(json['updated'] as String),
+    showNsfw: json['show_nsfw'] as bool,
+    theme: json['theme'] as String,
+    defaultSortType: json['default_sort_type'] as int,
+    defaultListingType: json['default_listing_type'] as int,
+    lang: json['lang'] as String,
+    showAvatars: json['show_avatars'] as bool,
+    sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
+    matrixUserId: json['matrix_user_id'] as String,
+    actorId: json['actor_id'] as String,
+    bio: json['bio'] as String,
+    local: json['local'] as bool,
+    privateKey: json['private_key'] as String,
+    publicKey: json['public_key'] as String,
+    lastRefreshedAt: json['last_refreshed_at'] == null
+        ? null
+        : DateTime.parse(json['last_refreshed_at'] as String),
+    banner: json['banner'] as String,
+  );
+}
+
 UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
   return UserMentionView(
     id: json['id'] as int,

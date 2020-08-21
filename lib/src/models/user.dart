@@ -67,6 +67,84 @@ class UserView {
       _$UserViewFromJson(json);
 }
 
+/// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user.rs#L13
+@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
+class User {
+  final int id;
+  final String name;
+
+  /// can be null
+  final String preferredUsername;
+  final String passwordEncrypted;
+
+  /// can be null
+  final String email;
+
+  /// can be null
+  final String avatar;
+  final bool admin;
+  final bool banned;
+  final DateTime published;
+
+  /// can be null
+  final DateTime updated;
+  final bool showNsfw;
+  final String theme;
+  final int defaultSortType;
+  final int defaultListingType;
+  final String lang;
+  final bool showAvatars;
+  final bool sendNotificationsToEmail;
+
+  /// can be null
+  final String matrixUserId;
+  final String actorId;
+
+  /// can be null
+  final String bio;
+  final bool local;
+
+  /// can be null
+  final String privateKey;
+
+  /// can be null
+  final String publicKey;
+  final DateTime lastRefreshedAt;
+
+  /// can be null
+  final String banner;
+
+  const User({
+    this.id,
+    this.name,
+    this.preferredUsername,
+    this.passwordEncrypted,
+    this.email,
+    this.avatar,
+    this.admin,
+    this.banned,
+    this.published,
+    this.updated,
+    this.showNsfw,
+    this.theme,
+    this.defaultSortType,
+    this.defaultListingType,
+    this.lang,
+    this.showAvatars,
+    this.sendNotificationsToEmail,
+    this.matrixUserId,
+    this.actorId,
+    this.bio,
+    this.local,
+    this.privateKey,
+    this.publicKey,
+    this.lastRefreshedAt,
+    this.banner,
+  });
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+}
+
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user_mention_view.rs#L90
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
 class UserMentionView {

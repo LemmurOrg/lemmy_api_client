@@ -63,6 +63,7 @@ class SiteView {
       _$SiteViewFromJson(json);
 }
 
+/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-site
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
 class FullSiteView {
   /// can be null
@@ -71,9 +72,11 @@ class FullSiteView {
   final List<UserView> banned;
   final int online;
   final String version;
-  final UserView myUser;
 
-  FullSiteView({
+  /// can be null
+  final User myUser;
+
+  const FullSiteView({
     this.site,
     this.admins,
     this.banned,

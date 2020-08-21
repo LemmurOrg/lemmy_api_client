@@ -171,12 +171,13 @@ class CommunityModeratorView {
       _$CommunityModeratorViewFromJson(json);
 }
 
+/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-community
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
 class FullCommunityView {
   final CommunityView community;
   final List<CommunityModeratorView> moderators;
 
-  FullCommunityView({this.community, this.moderators});
+  const FullCommunityView({this.community, this.moderators});
 
   factory FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$FullCommunityViewFromJson(json);

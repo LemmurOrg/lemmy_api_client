@@ -50,6 +50,6 @@ FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     myUser: json['my_user'] == null
         ? null
-        : UserView.fromJson(json['my_user'] as Map<String, dynamic>),
+        : User.fromJson(json['my_user'] as Map<String, dynamic>),
   );
 }
