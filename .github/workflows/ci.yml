@@ -20,8 +20,10 @@ jobs:
       - name: Get dependencies
         run: pub get
 
-      - name: Run lints
-        run: dartanalyzer --fatal-warnings --fatal-infos .
+      # disabled because: https://github.com/dart-lang/sdk/issues/25551
+      # 4.5yo bug...
+      # - name: Run lints
+      #   run: dartanalyzer --fatal-warnings --fatal-infos .
 
       - name: Run tests
         run: pub run test
