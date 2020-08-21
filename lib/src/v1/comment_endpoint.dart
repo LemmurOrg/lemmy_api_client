@@ -98,7 +98,7 @@ extension CommentEndpoint on V1 {
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#create-comment-like
   Future<CommentView> createCommentLike({
     @required int commentId,
-    @required Vote score,
+    @required VoteType score,
     @required String auth,
   }) {
     assert(commentId != null);

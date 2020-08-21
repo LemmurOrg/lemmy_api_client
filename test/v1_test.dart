@@ -139,7 +139,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.createCommentLike(
-            score: Vote.up,
+            score: VoteType.up,
             commentId: 123,
             auth: 'asd',
           );
@@ -200,7 +200,7 @@ void main() {
         expect(() async {
           await lemmy.createPostLike(
             postId: 1,
-            score: Vote.up,
+            score: VoteType.up,
             auth: 'asd',
           );
         }, throwsA(isA<NotLoggedInException>()));

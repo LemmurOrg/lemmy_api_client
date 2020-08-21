@@ -56,20 +56,20 @@ class V1 with HttpHelper {
   }
 }
 
-enum Vote {
+enum VoteType {
   up,
   none,
   down,
 }
 
-extension VoteValue on Vote {
+extension VoteTypeValue on VoteType {
   int get value {
     switch (this) {
-      case Vote.up:
+      case VoteType.up:
         return 1;
-      case Vote.none:
+      case VoteType.none:
         return 0;
-      case Vote.down:
+      case VoteType.down:
         return -1;
     }
     throw Exception('unreachable');
@@ -82,7 +82,7 @@ enum PostListingType {
   community,
 }
 
-extension PostTypeValue on PostListingType {
+extension PostListingTypeValue on PostListingType {
   String get value {
     switch (this) {
       case PostListingType.all:

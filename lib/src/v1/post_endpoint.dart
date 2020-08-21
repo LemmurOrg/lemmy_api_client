@@ -68,7 +68,7 @@ extension PostEndpoint on V1 {
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#create-post-like
   Future<PostView> createPostLike({
     @required int postId,
-    @required Vote score,
+    @required VoteType score,
     @required String auth,
   }) async {
     assert(postId != null);
