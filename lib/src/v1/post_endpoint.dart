@@ -5,7 +5,7 @@ import 'main.dart';
 
 extension PostEndpoint on V1 {
   /// POST /post
-  /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#post
+  /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#create-post
   Future<PostView> createPost({
     @required String name,
     String url,
