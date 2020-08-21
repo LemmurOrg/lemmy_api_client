@@ -14,7 +14,8 @@ extension UserEndpoint on V1 {
     @required String usernameOrEmail,
     @required String password,
   }) async {
-    assert(usernameOrEmail != null, password != null);
+    assert(usernameOrEmail != null);
+    assert(password != null);
 
     final res = await post('/user/login', {
       'username_or_email': usernameOrEmail,
@@ -40,7 +41,10 @@ extension UserEndpoint on V1 {
     assert(password != null);
     assert(passwordVerify != null);
     assert(admin != null);
-    assert(((captchaUuid != null) ^ (captchaAnswer != null)));
+    assert(
+        (captchaUuid != null) ^ (captchaAnswer != null),
+        'Either captchaUuid or captchaAnswer should be passed'
+        ' not both or none');
 
     throw UnimplementedError();
   }
@@ -65,7 +69,8 @@ extension UserEndpoint on V1 {
   }) async {
     assert(sort != null);
     assert(savedOnly != null);
-    assert((userId != null) ^ (username != null));
+    assert((userId != null) ^ (username != null),
+        'Either userId or username should be passed not both or none');
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
@@ -76,7 +81,7 @@ extension UserEndpoint on V1 {
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),
       if (communityId != null) 'community_id': communityId.toString(),
-      if (savedOnly != null) 'saved_only': savedOnly.toString(),
+      'saved_only': savedOnly.toString(),
       if (auth != null) 'auth': auth,
     });
 
@@ -114,6 +119,8 @@ extension UserEndpoint on V1 {
     assert(sort != null);
     assert(unreadOnly != null);
     assert(auth != null);
+    assert(limit == null || limit >= 0);
+    assert(page == null || page > 0);
 
     var res = await get('/user/replies', {
       'sort': sort.value,
@@ -138,6 +145,8 @@ extension UserEndpoint on V1 {
     assert(sort != null);
     assert(unreadOnly != null);
     assert(auth != null);
+    assert(limit == null || limit >= 0);
+    assert(page == null || page > 0);
 
     throw UnimplementedError();
   }

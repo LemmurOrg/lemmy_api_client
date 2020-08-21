@@ -11,7 +11,8 @@ extension CommunityEndpoint on V1 {
     String name,
     String auth,
   }) async {
-    assert(id != null || name != null);
+    assert((id != null) ^ (name != null),
+        'Either id or name should be passed, not both or none');
 
     var res = await get('/community', {
       if (id != null) 'id': id.toString(),
@@ -49,10 +50,14 @@ extension CommunityEndpoint on V1 {
     @required bool follow,
     @required String auth,
   }) async {
+    assert(communityId != null);
+    assert(follow != null);
+    assert(auth != null);
+
     var res = await post('/community/follow', {
-      if (communityId != null) 'community_id': communityId,
-      if (follow != null) 'follow': follow,
-      if (auth != null) 'auth': auth,
+      'community_id': communityId,
+      'follow': follow,
+      'auth': auth,
     });
 
     return CommunityView.fromJson(res['community']);
@@ -63,6 +68,8 @@ extension CommunityEndpoint on V1 {
   Future<List<CommunityFollowerView>> getFollowedCommunities({
     @required String auth,
   }) async {
+    assert(auth != null);
+
     final res = await get('/user/followed_communities', {
       'auth': auth,
     });
