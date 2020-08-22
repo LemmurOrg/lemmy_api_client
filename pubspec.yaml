@@ -16,7 +16,3 @@ dev_dependencies:
   effective_dart: ^1.0.0
   json_serializable: ^3.3.0
   build_runner: ^1.10.0
-
-# due to: https://github.com/flutter/flutter/issues/62240
-dependency_overrides:
-  analyzer: "0.39.14"
