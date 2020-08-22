@@ -44,7 +44,7 @@ extension UserEndpoint on V1 {
     assert(
         (captchaUuid != null) ^ (captchaAnswer != null),
         'Either captchaUuid or captchaAnswer should be passed'
-        ' not both or none');
+        ' not both nor none or none');
 
     throw UnimplementedError();
   }
@@ -70,7 +70,7 @@ extension UserEndpoint on V1 {
     assert(sort != null);
     assert(savedOnly != null);
     assert((userId != null) ^ (username != null),
-        'Either userId or username should be passed not both or none');
+        'Either userId or username should be passed not both nor none or none');
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 

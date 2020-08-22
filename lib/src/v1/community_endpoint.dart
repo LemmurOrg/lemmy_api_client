@@ -12,7 +12,7 @@ extension CommunityEndpoint on V1 {
     String auth,
   }) async {
     assert((id != null) ^ (name != null),
-        'Either id or name should be passed, not both or none');
+        'Either id or name should be passed, not both nor none or none');
 
     var res = await get('/community', {
       if (id != null) 'id': id.toString(),
