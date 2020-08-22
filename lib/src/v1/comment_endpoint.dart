@@ -12,12 +12,20 @@ extension CommentEndpoint on V1 {
     @required int postId,
     int formId,
     @required String auth,
-  }) {
+  }) async {
     assert(content != null);
     assert(postId != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/comment', {
+      'content': content,
+      if (parentId != null) 'parent_id': parentId,
+      'post_id': postId,
+      if (formId != null) 'form_id': formId,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 
   /// PUT /comment
@@ -42,12 +50,18 @@ extension CommentEndpoint on V1 {
     @required int editId,
     @required bool deleted,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(deleted != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/comment/delete', {
+      'edit_id': editId,
+      'deleted': deleted,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 
   /// POST /comment/remove
@@ -58,12 +72,19 @@ extension CommentEndpoint on V1 {
     @required bool removed,
     String reason,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(removed != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/comment/remove', {
+      'edit_id': editId,
+      'removed': removed,
+      if (reason != null) 'reason': reason,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 
   /// POST /comment/mark_as_read
@@ -72,12 +93,18 @@ extension CommentEndpoint on V1 {
     @required int editId,
     @required bool read,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(read != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/comment/mark_as_read', {
+      'edit_id': editId,
+      'read': read,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 
   /// POST /comment/save
@@ -86,12 +113,18 @@ extension CommentEndpoint on V1 {
     @required int commentId,
     @required bool save,
     @required String auth,
-  }) {
+  }) async {
     assert(commentId != null);
     assert(save != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/comment/save', {
+      'comment_id': commentId,
+      'save': save,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 
   /// POST /comment/like
@@ -100,11 +133,17 @@ extension CommentEndpoint on V1 {
     @required int commentId,
     @required VoteType score,
     @required String auth,
-  }) {
+  }) async {
     assert(commentId != null);
     assert(score != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/comment/like', {
+      'comment_id': commentId,
+      'score': score.value,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 }
