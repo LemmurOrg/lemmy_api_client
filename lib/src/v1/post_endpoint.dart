@@ -13,13 +13,22 @@ extension PostEndpoint on V1 {
     @required bool nsfw,
     @required int communityId,
     @required String auth,
-  }) {
+  }) async {
     assert(name != null);
     assert(nsfw != null);
     assert(communityId != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/post', {
+      'name': name,
+      if (url != null) 'url': url,
+      if (body != null) 'body': body,
+      'nsfw': nsfw,
+      'community_id': communityId,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
   }
 
   /// GET /post
@@ -109,12 +118,18 @@ extension PostEndpoint on V1 {
     @required int editId,
     @required bool deleted,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(deleted != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/post/delete', {
+      'edit_id': editId,
+      'deleted': deleted,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
   }
 
   /// POST /post/remove
@@ -125,12 +140,19 @@ extension PostEndpoint on V1 {
     @required bool removed,
     String reason,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(removed != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/post/remove', {
+      'edit_id': editId,
+      'removed': removed,
+      if (reason != null) 'reason': reason,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
   }
 
   /// POST /post/save
@@ -139,11 +161,17 @@ extension PostEndpoint on V1 {
     @required int postId,
     @required bool save,
     @required String auth,
-  }) {
+  }) async {
     assert(postId != null);
     assert(save != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/post/save', {
+      'post_id': postId,
+      'save': save,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
   }
 }
