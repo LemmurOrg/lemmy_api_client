@@ -90,7 +90,7 @@ extension PostEndpoint on V1 {
       'auth': auth,
     });
 
-    return PostView.fromJson(res);
+    return PostView.fromJson(res['post']);
   }
 
   /// PUT /post
@@ -102,13 +102,22 @@ extension PostEndpoint on V1 {
     String body,
     @required bool nsfw,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(name != null);
     assert(nsfw != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await put('/post', {
+      'edit_id': editId,
+      'name': name,
+      if (url != null) 'url': url,
+      if (body != null) 'body': body,
+      'nsfw': nsfw,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
   }
 
   /// POST /post/delete

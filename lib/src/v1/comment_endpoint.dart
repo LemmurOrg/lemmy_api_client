@@ -35,12 +35,19 @@ extension CommentEndpoint on V1 {
     @required int editId,
     String formId,
     @required String auth,
-  }) {
+  }) async {
     assert(content != null);
     assert(editId != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await put('/comment', {
+      'content': content,
+      'edit_id': editId,
+      if (formId != null) 'form_id': formId,
+      'auth': auth,
+    });
+
+    return CommentView.fromJson(res['comment']);
   }
 
   /// POST /comment/delete

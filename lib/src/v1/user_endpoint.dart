@@ -109,14 +109,22 @@ extension UserEndpoint on V1 {
     @required SortType defaultSortType,
     @required PostListingType defaultListingType,
     @required String auth,
-  }) {
+  }) async {
     assert(showNsfw != null);
     assert(theme != null);
     assert(defaultSortType != null);
     assert(defaultListingType != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await put('/save_user_settings', {
+      'show_nsfw': showNsfw,
+      'theme': theme,
+      'default_sort_type': defaultSortType.value,
+      'default_listing_type': defaultListingType.value,
+      'auth': auth,
+    });
+
+    return res['jwt'];
   }
 
   /// GET /user/replies
@@ -243,12 +251,18 @@ extension UserEndpoint on V1 {
     @required int editId,
     @required String content,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(content != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await put('/private_message', {
+      'edit_id': editId,
+      'content': content,
+      'auth': auth,
+    });
+
+    return PrivateMessageView.fromJson(res['message']);
   }
 
   /// POST /private_message/delete

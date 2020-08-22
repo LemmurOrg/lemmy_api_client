@@ -36,4 +36,19 @@ mixin HttpHelper {
 
     return jsonDecode(res.body);
   }
+
+  Future<Map<String, dynamic>> put(
+      String path, Map<String, dynamic> body) async {
+    var res = await http.put(
+      Uri.https(host, '$extraPath$path'),
+      body: jsonEncode(body),
+      headers: {HttpHeaders.contentTypeHeader: ContentType.json.mimeType},
+    );
+
+    if (!res.ok) {
+      // failed request, handle here
+    }
+
+    return jsonDecode(res.body);
+  }
 }
