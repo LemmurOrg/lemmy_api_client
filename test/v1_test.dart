@@ -21,6 +21,15 @@ class UsernameTakenException implements Exception {
   String toString() => _message;
 }
 
+class TooSimplePasswordException implements Exception {
+  final String _message;
+
+  TooSimplePasswordException(this._message);
+
+  @override
+  String toString() => _message;
+}
+
 void main() {
   group('lemmy API v1', () {
     final lemmy = LemmyAPI('dev.lemmy.ml').v1;
@@ -256,15 +265,41 @@ void main() {
     });
 
     group('register', () {
-      // TODO(krawieck): the signature seems to be wrong, waiting for correction
-      // test('handles already existing account', () async {
-      //   expect(() async {
-      //     await lemmy.register(
-      //       usernameOrEmail: '123',
-      //       password: '123',
-      //     );
-      //   }, throwsA(isA<UsernameTakenException>()));
-      // });
+      test('handles already existing account', () async {
+        expect(() async {
+          await lemmy.register(
+            username: 'krawieck',
+            password: '123',
+            passwordVerify: '123',
+            admin: false,
+          );
+        }, throwsA(isA<UsernameTakenException>()));
+      });
+
+      test('handles too simple passwords', () async {
+        expect(() async {
+          await lemmy.register(
+            username: 'krawieck',
+            password: '123',
+            passwordVerify: '123',
+            admin: false,
+          );
+        }, throwsA(isA<TooSimplePasswordException>()));
+      });
+
+      test('forbids both captchaUuid and captchaAnswer being passed at once',
+          () async {
+        expect(() async {
+          await lemmy.register(
+            username: 'krawieck',
+            password: '123',
+            passwordVerify: '123',
+            admin: false,
+            captchaAnswer: 'asd',
+            captchaUuid: 'asd',
+          );
+        }, throwsA(isA<AssertionError>()));
+      });
     });
 
     group('getCaptcha', () {
@@ -275,16 +310,19 @@ void main() {
 
     group('getUserDetails', () {
       test('correctly fetches', () async {
-        await lemmy.getUserDetails(sort: SortType.active, username: 'krawieck');
+        await lemmy.getUserDetails(
+            sort: SortType.active, username: 'krawieck', savedOnly: false);
       });
 
       test('forbids illegal numbers', () async {
         expect(() async {
-          await lemmy.getUserDetails(sort: SortType.active, page: 0);
+          await lemmy.getUserDetails(
+              sort: SortType.active, savedOnly: false, page: 0);
         }, throwsA(isA<AssertionError>()));
 
         expect(() async {
-          await lemmy.getUserDetails(sort: SortType.active, limit: -1);
+          await lemmy.getUserDetails(
+              sort: SortType.active, savedOnly: false, limit: -1);
         }, throwsA(isA<AssertionError>()));
       });
 
@@ -293,6 +331,7 @@ void main() {
           await lemmy.getUserDetails(
             sort: SortType.active,
             username: 'asd',
+            savedOnly: false,
             userId: 123,
           );
         }, throwsA(isA<AssertionError>()));
@@ -302,6 +341,7 @@ void main() {
         expect(() async {
           await lemmy.getUserDetails(
             sort: SortType.active,
+            savedOnly: false,
             auth: '123',
           );
         }, throwsA(isA<NotLoggedInException>()));
@@ -354,37 +394,112 @@ void main() {
       });
     });
 
+    group('getCommunity', () {
+      test('correctly fetches', () async {
+        await lemmy.getCommunity(name: 'javascript');
+      });
+
+      test('forbids both name and id being passed at once', () async {
+        expect(() async {
+          await lemmy.getCommunity(name: 'asd', id: 12);
+        }, throwsA(isA<AssertionError>()));
+      });
+
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getCommunity(auth: 'asd');
+        }, throwsA(isA<NotLoggedInException>()));
+      });
+    });
+
+    group('listCommunities', () {
+      test('correctly fetches', () async {
+        await lemmy.listCommunities(sort: SortType.active);
+      });
+
+      test('forbids illegal numbers', () async {
+        expect(() async {
+          await lemmy.listCommunities(sort: SortType.active, page: 0);
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.listCommunities(sort: SortType.active, limit: -1);
+        }, throwsA(isA<AssertionError>()));
+      });
+
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.listCommunities(sort: SortType.active, auth: 'asd');
+        }, throwsA(isA<NotLoggedInException>()));
+      });
+    });
+
+    group('followCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.followCommunity(
+            communityId: 123,
+            follow: true,
+            auth: 'asd',
+          );
+        }, throwsA(isA<NotLoggedInException>()));
+      });
+    });
+
+    group('getFollowedCommunities', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getFollowedCommunities(auth: 'asd');
+        }, throwsA(isA<NotLoggedInException>()));
+      });
+    });
+
+    group('getSite', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getSite(auth: 'asd');
+        }, throwsA(isA<NotLoggedInException>()));
+      });
+    });
+
+    group('getSiteConfig', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getSiteConfig(auth: 'asd');
+        }, throwsA(isA<NotLoggedInException>()));
+      });
+    });
+
     group('getUserMentions', () {
-      // TODO(krawieck): the signature seems to be wrong, waiting for correction
-      // test('forbids illegal numbers', () async {
-      //   expect(() async {
-      // await lemmy.getUserMentions(
-      //   sort: SortType.active,
-      //   unreadOnly: false,
-      //   auth: 'asd',
-      //   page: 0,
-      // );
-      //   }, throwsA(isA<AssertionError>()));
+      test('forbids illegal numbers', () async {
+        expect(() async {
+          await lemmy.getUserMentions(
+            sort: SortType.active,
+            unreadOnly: false,
+            auth: 'asd',
+            page: 0,
+          );
+        }, throwsA(isA<AssertionError>()));
 
-      //   expect(() async {
-      //     await lemmy.getUserMentions(
-      //       sort: SortType.active,
-      //       unreadOnly: false,
-      //       auth: 'asd',
-      //       limit: -1,
-      //     );
-      //   }, throwsA(isA<AssertionError>()));
-      // });
+        expect(() async {
+          await lemmy.getUserMentions(
+            sort: SortType.active,
+            unreadOnly: false,
+            auth: 'asd',
+            limit: -1,
+          );
+        }, throwsA(isA<AssertionError>()));
+      });
 
-      // test('handles invalid tokens', () async {
-      //   expect(() async {
-      //     await lemmy.getUserMentions(
-      //       sort: SortType.active,
-      //       unreadOnly: false,
-      //       auth: 'asd',
-      //     );
-      //   }, throwsA(isA<NotLoggedInException>()));
-      // });
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getUserMentions(
+            sort: SortType.active,
+            unreadOnly: false,
+            auth: 'asd',
+          );
+        }, throwsA(isA<NotLoggedInException>()));
+      });
     });
 
     group('markUserMentionAsRead', () {

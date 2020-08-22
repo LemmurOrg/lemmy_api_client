@@ -1,3 +1,5 @@
+import 'package:meta/meta.dart';
+
 import '../models/site.dart';
 import '../v1/main.dart';
 
@@ -15,7 +17,9 @@ extension SiteEndpoint on V1 {
   /// GET /site/config
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-site-config
   /// admin stuff
-  Future<String> getSiteConfig() {
+  Future<String> getSiteConfig({@required String auth}) {
+    assert(auth != null);
+
     throw UnimplementedError();
   }
 }

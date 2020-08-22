@@ -136,7 +136,7 @@ extension UserEndpoint on V1 {
   /// GET /user/mentions
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-user-mentions
   Future<List<UserMentionView>> getUserMentions({
-    @required String sort,
+    @required SortType sort,
     int page,
     int limit,
     @required bool unreadOnly,
