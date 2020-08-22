@@ -17,7 +17,7 @@ extension UserEndpoint on V1 {
     assert(usernameOrEmail != null);
     assert(password != null);
 
-    final res = await post('/user/login', {
+    var res = await post('/user/login', {
       'username_or_email': usernameOrEmail,
       'password': password,
     });
@@ -36,7 +36,7 @@ extension UserEndpoint on V1 {
     @required bool admin,
     String captchaUuid,
     String captchaAnswer,
-  }) {
+  }) async {
     assert(username != null);
     assert(password != null);
     assert(passwordVerify != null);
@@ -46,13 +46,25 @@ extension UserEndpoint on V1 {
         'Either captchaUuid or captchaAnswer should be passed'
         ' not both nor none or none');
 
-    throw UnimplementedError();
+    var res = await post('/user/register', {
+      'username': username,
+      if (password != null) 'password': password,
+      'password': password,
+      'password_verify': passwordVerify,
+      'admin': admin,
+      if (captchaUuid != null) 'captcha_uuid': captchaUuid,
+      if (captchaAnswer != null) 'captcha_answer': captchaAnswer,
+    });
+
+    return res['jwt'];
   }
 
   /// GET /user/get_captcha
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
-  Future<Captcha> getCaptcha() {
-    throw UnimplementedError();
+  Future<Captcha> getCaptcha() async {
+    var res = await get('/user/get_captcha');
+
+    return Captcha.fromJson(res['ok']);
   }
 
   /// GET /user
@@ -129,6 +141,7 @@ extension UserEndpoint on V1 {
       'unread_only': unreadOnly.toString(),
       'auth': auth,
     });
+
     List<dynamic> replies = res['replies'];
     return replies.map((e) => ReplyView.fromJson(e)).toList();
   }
@@ -141,14 +154,23 @@ extension UserEndpoint on V1 {
     int limit,
     @required bool unreadOnly,
     @required String auth,
-  }) {
+  }) async {
     assert(sort != null);
     assert(unreadOnly != null);
     assert(auth != null);
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    throw UnimplementedError();
+    var res = await get('/user/mentions', {
+      'sort': sort.value,
+      if (page != null) 'page': page.toString(),
+      if (limit != null) 'limit': limit.toString(),
+      'unread_only': unreadOnly.toString(),
+      'auth': auth,
+    });
+
+    List<dynamic> replies = res['mentions'];
+    return replies.map((e) => UserMentionView.fromJson(e)).toList();
   }
 
   /// POST /user/mention/mark_as_read
@@ -157,12 +179,18 @@ extension UserEndpoint on V1 {
     @required int userMentionId,
     @required bool read,
     @required String auth,
-  }) {
+  }) async {
     assert(userMentionId != null);
     assert(read != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/user/mention/mark_as_read', {
+      'user_mention_id': userMentionId,
+      'read': read,
+      'auth': auth,
+    });
+
+    return UserMentionView.fromJson(res['mention']);
   }
 
   /// GET /private_message/list
@@ -172,11 +200,21 @@ extension UserEndpoint on V1 {
     int page,
     int limit,
     @required String auth,
-  }) {
+  }) async {
     assert(unreadOnly != null);
     assert(auth != null);
+    assert(limit == null || limit >= 0);
+    assert(page == null || page > 0);
 
-    throw UnimplementedError();
+    var res = await get('/private_message/list', {
+      'unread_only': unreadOnly.toString(),
+      if (page != null) 'page': page.toString(),
+      if (limit != null) 'limit': limit.toString(),
+      'auth': auth,
+    });
+
+    List<dynamic> replies = res['messages'];
+    return replies.map((e) => PrivateMessageView.fromJson(e)).toList();
   }
 
   /// POST /private_message
@@ -185,12 +223,18 @@ extension UserEndpoint on V1 {
     @required String content,
     @required int recipientId,
     @required String auth,
-  }) {
+  }) async {
     assert(content != null);
     assert(recipientId != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/private_message', {
+      'content': content,
+      'recipient_id': recipientId,
+      'auth': auth,
+    });
+
+    return PrivateMessageView.fromJson(res['message']);
   }
 
   /// PUT /private_message
@@ -213,12 +257,18 @@ extension UserEndpoint on V1 {
     @required int editId,
     @required bool deleted,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(deleted != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/private_message/delete', {
+      'edit_id': editId,
+      'deleted': deleted,
+      'auth': auth,
+    });
+
+    return PrivateMessageView.fromJson(res['message']);
   }
 
   /// POST /private_message/mark_as_read
@@ -227,22 +277,33 @@ extension UserEndpoint on V1 {
     @required int editId,
     @required bool read,
     @required String auth,
-  }) {
+  }) async {
     assert(editId != null);
     assert(read != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/private_message/mark_as_read', {
+      'edit_id': editId,
+      'read': read,
+      'auth': auth,
+    });
+
+    return PrivateMessageView.fromJson(res['message']);
   }
 
   /// POST /user/mark_all_as_read
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#mark-all-as-read
   Future<List<ReplyView>> markAllAsRead({
     @required String auth,
-  }) {
+  }) async {
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/user/mark_all_as_read', {
+      'auth': auth,
+    });
+
+    List<dynamic> replies = res['replies'];
+    return replies.map((e) => ReplyView.fromJson(e)).toList();
   }
 
   /// POST /user/delete_account
@@ -251,10 +312,15 @@ extension UserEndpoint on V1 {
   Future<String> deleteAccount({
     @required String password,
     @required String auth,
-  }) {
+  }) async {
     assert(password != null);
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await post('/user/delete_account', {
+      'password': password,
+      'auth': auth,
+    });
+
+    return res['jwt'];
   }
 }

@@ -17,9 +17,13 @@ extension SiteEndpoint on V1 {
   /// GET /site/config
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-site-config
   /// admin stuff
-  Future<String> getSiteConfig({@required String auth}) {
+  Future<String> getSiteConfig({@required String auth}) async {
     assert(auth != null);
 
-    throw UnimplementedError();
+    var res = await get('/site/config', {
+      'auth': auth,
+    });
+
+    return res['config_hjson'];
   }
 }
