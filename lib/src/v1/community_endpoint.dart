@@ -41,6 +41,7 @@ extension CommunityEndpoint on V1 {
       if (limit != null) 'limit': limit.toString(),
       if (auth != null) 'auth': auth,
     });
+
     List<dynamic> communities = res['communities'];
     return communities.map((e) => CommunityView.fromJson(e)).toList();
   }
@@ -72,7 +73,7 @@ extension CommunityEndpoint on V1 {
   }) async {
     assert(auth != null);
 
-    final res = await get('/user/followed_communities', {
+    var res = await get('/user/followed_communities', {
       'auth': auth,
     });
     final List<dynamic> communities = res['communities'];

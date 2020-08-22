@@ -42,10 +42,10 @@ void main() {
 
     group('search', () {
       test('correctly fetches', () async {
-        final res = await lemmy.search(
+        var res = await lemmy.search(
             type: SearchType.all, q: 'asd', sort: SortType.active);
 
-        expect(res.type, SortType.active.value);
+        expect(res.type, SearchType.all.value);
       });
 
       test('forbids illegal numbers', () async {
@@ -186,7 +186,7 @@ void main() {
 
     group('getPosts', () {
       test('correctly fetches', () async {
-        final res = await lemmy.getPosts(
+        var res = await lemmy.getPosts(
             type: PostListingType.all, sort: SortType.active);
         expect(res.length, 10);
       });

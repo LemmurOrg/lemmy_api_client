@@ -22,8 +22,8 @@ class V1 with HttpHelper {
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#list-categories
   Future<List<Category>> listCategories() async {
     var res = await get('/categories');
-    List<dynamic> categories = res['categories'];
 
+    List<dynamic> categories = res['categories'];
     return categories.map((e) => Category.fromJson(e)).toList();
   }
 
