@@ -60,6 +60,8 @@ extension PostEndpoint on V1 {
   }) async {
     assert(type != null);
     assert(sort != null);
+    assert(limit == null || limit >= 0);
+    assert(page == null || page > 0);
 
     var json = await get('/post/list', {
       'type_': type.value,

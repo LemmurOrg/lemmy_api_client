@@ -42,6 +42,8 @@ class V1 with HttpHelper {
     assert(q != null);
     assert(type != null);
     assert(sort != null);
+    assert(limit == null || limit >= 0);
+    assert(page == null || page > 0);
 
     var res = await get('/search', {
       'q': q,
