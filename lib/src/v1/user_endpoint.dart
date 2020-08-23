@@ -45,7 +45,7 @@ extension UserEndpoint on V1 {
     assert(
         (captchaUuid != null) ^ (captchaAnswer != null),
         'Either captchaUuid or captchaAnswer should be passed'
-        ' not both nor none or none');
+        ' not both nor none');
 
     var res = await post('/user/register', {
       'username': username,
@@ -83,7 +83,7 @@ extension UserEndpoint on V1 {
     assert(sort != null);
     assert(savedOnly != null);
     assert((userId != null) ^ (username != null),
-        'Either userId or username should be passed not both nor none or none');
+        'Either userId or username should be passed not both nor none');
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
