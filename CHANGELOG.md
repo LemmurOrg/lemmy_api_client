@@ -1,3 +1,9 @@
+## 0.1.1 - 2020-08-23
+
+### Changed
+
+- Logo now is displayed on pub.dev
+
 ## 0.1.0 - 2020-08-23
 
 ### Added
