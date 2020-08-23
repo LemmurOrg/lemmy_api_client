@@ -256,7 +256,7 @@ void main() {
     });
 
     group('register', () {
-      test('handles already existing account', () async {
+      test('handles already existing accounts', () async {
         expect(() async {
           await lemmy.register(
             username: 'krawieck',
@@ -278,7 +278,7 @@ void main() {
         }, throwsA(isA<TooSimplePasswordException>()));
       });
 
-      test('forbids both captchaUuid and captchaAnswer being passed at once',
+      test('when a captcha paramenter is present, all should be passed',
           () async {
         expect(() async {
           await lemmy.register(
@@ -286,8 +286,17 @@ void main() {
             password: '123',
             passwordVerify: '123',
             admin: false,
-            captchaAnswer: 'asd',
             captchaUuid: 'asd',
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.register(
+            username: 'krawieck',
+            password: '123',
+            passwordVerify: '123',
+            admin: false,
+            captchaAnswer: 'asd',
           );
         }, throwsA(isA<AssertionError>()));
       });
@@ -491,7 +500,7 @@ void main() {
 
       test('handles invalid tokens', () async {
         expect(() async {
-          await lemmy.getCommunity(auth: 'asd');
+          await lemmy.getCommunity(name: 'asd', auth: 'asd');
         }, throwsA(isA<InvalidAuthException>()));
       });
     });

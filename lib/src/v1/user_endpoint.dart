@@ -42,10 +42,14 @@ extension UserEndpoint on V1 {
     assert(password != null);
     assert(passwordVerify != null);
     assert(admin != null);
-    assert(
-        (captchaUuid != null) ^ (captchaAnswer != null),
-        'Either captchaUuid or captchaAnswer should be passed'
-        ' not both nor none');
+
+    if (captchaUuid != null || captchaAnswer != null) {
+      assert(
+        captchaUuid != null && captchaAnswer != null,
+        'When passing a captcha parameter, '
+        'both captchaUuid and captchaAnswer should be present',
+      );
+    }
 
     var res = await post('/user/register', {
       'username': username,
