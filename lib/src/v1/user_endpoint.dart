@@ -109,19 +109,55 @@ extension UserEndpoint on V1 {
     @required String theme,
     @required SortType defaultSortType,
     @required PostListingType defaultListingType,
+    @required String lang,
+    String avatar,
+    String banner,
+    String preferredUsername,
+    String email,
+    String bio,
+    String matrixUserId,
+    String newPassword,
+    String newPasswordVerify,
+    String oldPassword,
+    @required bool showAvatar,
+    @required bool sendNotificationsToEmail,
     @required String auth,
   }) async {
     assert(showNsfw != null);
     assert(theme != null);
     assert(defaultSortType != null);
     assert(defaultListingType != null);
+    assert(lang != null);
+    assert(showAvatar != null);
+    assert(sendNotificationsToEmail != null);
     assert(auth != null);
+    if (newPassword != null ||
+        oldPassword != null ||
+        newPasswordVerify != null) {
+      assert(
+        newPassword != null && oldPassword != null && newPasswordVerify != null,
+        'When passing any password, all three should be passed: '
+        'newPassword, oldPassword, newPasswordVerify',
+      );
+    }
 
     var res = await put('/save_user_settings', {
       'show_nsfw': showNsfw,
       'theme': theme,
-      'default_sort_type': defaultSortType.value,
-      'default_listing_type': defaultListingType.value,
+      'default_sort_type': defaultSortType.index,
+      'default_listing_type': defaultListingType.index,
+      'lang': lang,
+      if (avatar != null) 'avatar': avatar,
+      if (banner != null) 'banner': banner,
+      if (preferredUsername != null) 'preferred_username': preferredUsername,
+      if (email != null) 'email': email,
+      if (bio != null) 'bio': bio,
+      if (matrixUserId != null) 'matrix_user_id': matrixUserId,
+      if (newPassword != null) 'new_password': newPassword,
+      if (newPasswordVerify != null) 'new_password_verify': newPasswordVerify,
+      if (oldPassword != null) 'old_password': oldPassword,
+      'show_avatar': showAvatar,
+      'send_notifications_to_email': sendNotificationsToEmail,
       'auth': auth,
     });
 

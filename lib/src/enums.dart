@@ -36,6 +36,18 @@ extension PostListingTypeValue on PostListingType {
     }
     throw Exception('unreachable');
   }
+
+  int get index {
+    switch (this) {
+      case PostListingType.all:
+        return 0;
+      case PostListingType.subscribed:
+        return 1;
+      case PostListingType.community:
+        return 2;
+    }
+    throw Exception('unreachable');
+  }
 }
 
 enum SortType {
@@ -69,6 +81,28 @@ extension SortTypeValue on SortType {
         return 'TopYear';
       case SortType.topAll:
         return 'TopAll';
+    }
+    throw Exception('unreachable');
+  }
+
+  int get index {
+    switch (this) {
+      case SortType.active:
+        return 0;
+      case SortType.hot:
+        return 1;
+      case SortType.new_:
+        return 2;
+      case SortType.topDay:
+        return 3;
+      case SortType.topWeek:
+        return 4;
+      case SortType.topMonth:
+        return 5;
+      case SortType.topYear:
+        return 6;
+      case SortType.topAll:
+        return 7;
     }
     throw Exception('unreachable');
   }

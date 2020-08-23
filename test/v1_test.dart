@@ -333,6 +333,7 @@ void main() {
           await lemmy.getUserDetails(
             sort: SortType.active,
             savedOnly: false,
+            username: 'asd',
             auth: '123',
           );
         }, throwsA(isA<InvalidAuthException>()));
@@ -340,6 +341,95 @@ void main() {
     });
 
     group('saveUserSettings', () {
+      test('when any password is passed, the rest should be present', () async {
+        expect(() async {
+          await lemmy.saveUserSettings(
+            showNsfw: true,
+            theme: 'asd',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
+            newPassword: 'asd',
+            auth: '123',
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.saveUserSettings(
+            showNsfw: true,
+            theme: 'asd',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
+            newPasswordVerify: 'asd',
+            auth: '123',
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.saveUserSettings(
+            showNsfw: true,
+            theme: 'asd',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
+            oldPassword: 'asd',
+            auth: '123',
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.saveUserSettings(
+            showNsfw: true,
+            theme: 'asd',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
+            newPassword: 'asd',
+            newPasswordVerify: 'asd',
+            auth: '123',
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.saveUserSettings(
+            showNsfw: true,
+            theme: 'asd',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
+            newPassword: 'asd',
+            oldPassword: 'asd',
+            auth: '123',
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.saveUserSettings(
+            showNsfw: true,
+            theme: 'asd',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
+            newPasswordVerify: 'asd',
+            oldPassword: 'asd',
+            auth: '123',
+          );
+        }, throwsA(isA<AssertionError>()));
+      });
+
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.saveUserSettings(
@@ -347,6 +437,9 @@ void main() {
             theme: 'asd',
             defaultSortType: SortType.active,
             defaultListingType: PostListingType.all,
+            sendNotificationsToEmail: false,
+            showAvatar: false,
+            lang: 'en',
             auth: '123',
           );
         }, throwsA(isA<InvalidAuthException>()));
