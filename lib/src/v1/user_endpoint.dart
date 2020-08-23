@@ -105,7 +105,7 @@ extension UserEndpoint on V1 {
     return UserDetails.fromJson(res);
   }
 
-  /// PUT /save_user_settings
+  /// PUT ~~/save_user_settings~~ /user/save_user_settings
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-user-settings
   /// returns jwt
   Future<String> saveUserSettings({
@@ -145,7 +145,7 @@ extension UserEndpoint on V1 {
       );
     }
 
-    var res = await put('/save_user_settings', {
+    var res = await put('/user/save_user_settings', {
       'show_nsfw': showNsfw,
       'theme': theme,
       'default_sort_type': defaultSortType.index,
@@ -195,7 +195,7 @@ extension UserEndpoint on V1 {
     return replies.map((e) => ReplyView.fromJson(e)).toList();
   }
 
-  /// GET /user/mentions
+  /// GET ~~/user/mentions~~ /user/mention
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-user-mentions
   Future<List<UserMentionView>> getUserMentions({
     @required SortType sort,
@@ -210,7 +210,7 @@ extension UserEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/user/mentions', {
+    var res = await get('/user/mention', {
       'sort': sort.value,
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),

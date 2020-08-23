@@ -115,7 +115,7 @@ extension CommentEndpoint on V1 {
     return CommentView.fromJson(res['comment']);
   }
 
-  /// POST /comment/save
+  /// ~~POST~~ PUT /comment/save
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-comment
   Future<CommentView> saveComment({
     @required int commentId,
@@ -126,7 +126,7 @@ extension CommentEndpoint on V1 {
     assert(save != null);
     assert(auth != null);
 
-    var res = await post('/comment/save', {
+    var res = await put('/comment/save', {
       'comment_id': commentId,
       'save': save,
       'auth': auth,
