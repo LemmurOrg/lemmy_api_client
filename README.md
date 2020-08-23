@@ -2,7 +2,7 @@
 
 <div align="center">
 
- <img width=200px height=200px src="logo.svg"/>
+ <img width=200px height=200px src="https://raw.githubusercontent.com/krawieck/lemmy_api_client/master/logo.svg"/>
 
 [![pub package](https://img.shields.io/pub/v/lemmy_api_client.svg)](https://pub.dev/packages/lemmy_api_client)
 [![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
