@@ -1,26 +1,6 @@
 import 'package:lemmy_api_client/lemmy_api_client.dart';
 import 'package:test/test.dart';
 
-// these are mock exceptions
-// should be removed as soon as the real one is implemented
-class UsernameTakenException implements Exception {
-  final String _message;
-
-  UsernameTakenException(this._message);
-
-  @override
-  String toString() => _message;
-}
-
-class TooSimplePasswordException implements Exception {
-  final String _message;
-
-  TooSimplePasswordException(this._message);
-
-  @override
-  String toString() => _message;
-}
-
 void main() {
   group('lemmy API v1', () {
     final lemmy = LemmyAPI('dev.lemmy.ml').v1;
