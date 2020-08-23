@@ -235,58 +235,58 @@ void main() {
       });
     });
 
-    group('register', () {
-      test('handles already existing accounts', () async {
-        expect(() async {
-          await lemmy.register(
-            username: 'krawieck',
-            password: '123',
-            passwordVerify: '123',
-            admin: false,
-          );
-        }, throwsA(isA<UsernameTakenException>()));
-      });
+    // group('register', () {
+    //   test('handles already existing accounts', () async {
+    //     expect(() async {
+    //       await lemmy.register(
+    //         username: 'krawieck',
+    //         password: '123',
+    //         passwordVerify: '123',
+    //         admin: false,
+    //       );
+    //     }, throwsA(isA<UsernameTakenException>()));
+    //   });
 
-      test('handles too simple passwords', () async {
-        expect(() async {
-          await lemmy.register(
-            username: 'krawieck',
-            password: '123',
-            passwordVerify: '123',
-            admin: false,
-          );
-        }, throwsA(isA<TooSimplePasswordException>()));
-      });
+    //   test('handles too simple passwords', () async {
+    //     expect(() async {
+    //       await lemmy.register(
+    //         username: 'krawieck',
+    //         password: '123',
+    //         passwordVerify: '123',
+    //         admin: false,
+    //       );
+    //     }, throwsA(isA<TooSimplePasswordException>()));
+    //   });
 
-      test('when a captcha paramenter is present, all should be passed',
-          () async {
-        expect(() async {
-          await lemmy.register(
-            username: 'krawieck',
-            password: '123',
-            passwordVerify: '123',
-            admin: false,
-            captchaUuid: 'asd',
-          );
-        }, throwsA(isA<AssertionError>()));
+    //   test('when a captcha paramenter is present, all should be passed',
+    //       () async {
+    //     expect(() async {
+    //       await lemmy.register(
+    //         username: 'krawieck',
+    //         password: '123',
+    //         passwordVerify: '123',
+    //         admin: false,
+    //         captchaUuid: 'asd',
+    //       );
+    //     }, throwsA(isA<AssertionError>()));
 
-        expect(() async {
-          await lemmy.register(
-            username: 'krawieck',
-            password: '123',
-            passwordVerify: '123',
-            admin: false,
-            captchaAnswer: 'asd',
-          );
-        }, throwsA(isA<AssertionError>()));
-      });
-    });
+    //     expect(() async {
+    //       await lemmy.register(
+    //         username: 'krawieck',
+    //         password: '123',
+    //         passwordVerify: '123',
+    //         admin: false,
+    //         captchaAnswer: 'asd',
+    //       );
+    //     }, throwsA(isA<AssertionError>()));
+    //   });
+    // });
 
-    group('getCaptcha', () {
-      test('correctly fetches', () async {
-        await lemmy.getCaptcha();
-      });
-    });
+    // group('getCaptcha', () {
+    //   test('correctly fetches', () async {
+    //     await lemmy.getCaptcha();
+    //   });
+    // });
 
     group('getUserDetails', () {
       test('correctly fetches', () async {

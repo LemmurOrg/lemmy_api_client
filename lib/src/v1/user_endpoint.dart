@@ -26,44 +26,46 @@ extension UserEndpoint on V1 {
     return res['jwt'];
   }
 
+  // TODO(shilangyu): lemmy provides no information about specific errors making it hard to understand what went wrong in the request
   /// POST /user/register
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#register
   /// returns jwt
-  Future<String> register({
-    @required String username,
-    String email,
-    @required String password,
-    @required String passwordVerify,
-    @required bool admin,
-    String captchaUuid,
-    String captchaAnswer,
-  }) async {
-    assert(username != null);
-    assert(password != null);
-    assert(passwordVerify != null);
-    assert(admin != null);
+  // Future<String> register({
+  //   @required String username,
+  //   String email,
+  //   @required String password,
+  //   @required String passwordVerify,
+  //   @required bool admin,
+  //   String captchaUuid,
+  //   String captchaAnswer,
+  // }) async {
+  //   assert(username != null);
+  //   assert(password != null);
+  //   assert(passwordVerify != null);
+  //   assert(admin != null);
 
-    if (captchaUuid != null || captchaAnswer != null) {
-      assert(
-        captchaUuid != null && captchaAnswer != null,
-        'When passing a captcha parameter, '
-        'both captchaUuid and captchaAnswer should be present',
-      );
-    }
+  //   if (captchaUuid != null || captchaAnswer != null) {
+  //     assert(
+  //       captchaUuid != null && captchaAnswer != null,
+  //       'When passing a captcha parameter, '
+  //       'both captchaUuid and captchaAnswer should be present',
+  //     );
+  //   }
 
-    var res = await post('/user/register', {
-      'username': username,
-      if (password != null) 'password': password,
-      'password': password,
-      'password_verify': passwordVerify,
-      'admin': admin,
-      if (captchaUuid != null) 'captcha_uuid': captchaUuid,
-      if (captchaAnswer != null) 'captcha_answer': captchaAnswer,
-    });
+  //   var res = await post('/user/register', {
+  //     'username': username,
+  //     if (password != null) 'password': password,
+  //     'password': password,
+  //     'password_verify': passwordVerify,
+  //     'admin': admin,
+  //     if (captchaUuid != null) 'captcha_uuid': captchaUuid,
+  //     if (captchaAnswer != null) 'captcha_answer': captchaAnswer,
+  //   });
 
-    return res['jwt'];
-  }
+  //   return res['jwt'];
+  // }
 
+  // TODO(shilangyu): this seems broken on lemmy's end, returns status code 400 with no body
   /// GET /user/get_captcha
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
   Future<Captcha> getCaptcha() async {
