@@ -1,5 +1,6 @@
 import 'package:meta/meta.dart' show required;
 
+import '../enums.dart';
 import '../models/post.dart';
 import 'main.dart';
 

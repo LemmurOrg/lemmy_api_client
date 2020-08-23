@@ -1,5 +1,6 @@
 import 'package:meta/meta.dart' show required;
 
+import '../enums.dart';
 import '../models/captcha.dart';
 import '../models/comment.dart';
 import '../models/private_message.dart';
