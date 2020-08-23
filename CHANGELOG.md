@@ -1,3 +1,13 @@
+## 0.1.2 - 2020-08-23
+
+### Added
+
+- examples for pub.dev
+
+### Changed
+
+- Works on the web
+
 ## 0.1.1 - 2020-08-23
 
 ### Changed
