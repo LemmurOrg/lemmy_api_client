@@ -1,6 +1,7 @@
 import 'src/v1/main.dart';
 
 export 'src/enums.dart';
+export 'src/exceptions.dart';
 export 'src/v1/main.dart';
 
 class LemmyAPI {

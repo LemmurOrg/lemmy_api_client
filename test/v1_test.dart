@@ -3,15 +3,6 @@ import 'package:test/test.dart';
 
 // these are mock exceptions
 // should be removed as soon as the real one is implemented
-class NotLoggedInException implements Exception {
-  final String _message;
-
-  NotLoggedInException(this._message);
-
-  @override
-  String toString() => _message;
-}
-
 class UsernameTakenException implements Exception {
   final String _message;
 
@@ -68,7 +59,7 @@ void main() {
             sort: SortType.active,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -80,7 +71,7 @@ void main() {
             postId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -92,7 +83,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -104,7 +95,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -116,7 +107,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -128,7 +119,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -140,7 +131,7 @@ void main() {
             commentId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -152,7 +143,7 @@ void main() {
             commentId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -165,7 +156,7 @@ void main() {
             communityId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -180,7 +171,7 @@ void main() {
             id: 1,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -212,7 +203,7 @@ void main() {
             score: VoteType.up,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -225,7 +216,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -237,7 +228,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -249,7 +240,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -260,7 +251,7 @@ void main() {
             usernameOrEmail: '123',
             password: '123',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -344,7 +335,7 @@ void main() {
             savedOnly: false,
             auth: '123',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -358,7 +349,7 @@ void main() {
             defaultListingType: PostListingType.all,
             auth: '123',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -390,7 +381,7 @@ void main() {
             unreadOnly: false,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -408,7 +399,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getCommunity(auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -430,7 +421,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.listCommunities(sort: SortType.active, auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -442,7 +433,7 @@ void main() {
             follow: true,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -450,7 +441,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getFollowedCommunities(auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -458,7 +449,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getSite(auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -466,7 +457,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getSiteConfig(auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -498,7 +489,7 @@ void main() {
             unreadOnly: false,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -510,7 +501,7 @@ void main() {
             read: true,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -539,7 +530,7 @@ void main() {
             unreadOnly: false,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -551,7 +542,7 @@ void main() {
             recipientId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -563,7 +554,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -575,7 +566,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -587,7 +578,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -595,7 +586,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.markAllAsRead(auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
@@ -603,7 +594,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.deleteAccount(password: 'asd', auth: 'asd');
-        }, throwsA(isA<NotLoggedInException>()));
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
   });
