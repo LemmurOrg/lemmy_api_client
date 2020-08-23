@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
@@ -20,7 +19,7 @@ mixin HttpHelper {
     } on FormatException catch (_) {}
 
     switch (res.statusCode) {
-      case HttpStatus.badRequest:
+      case 400:
         throw InvalidAuthException(
             jsonBody['error'] ?? 'there was no error message provided');
       default:
@@ -44,7 +43,7 @@ mixin HttpHelper {
     var res = await http.post(
       Uri.https(host, '$extraPath$path'),
       body: jsonEncode(body),
-      headers: {HttpHeaders.contentTypeHeader: ContentType.json.mimeType},
+      headers: {'Content-Type': 'application/json'},
     );
 
     if (!res.ok) {
@@ -59,7 +58,7 @@ mixin HttpHelper {
     var res = await http.put(
       Uri.https(host, '$extraPath$path'),
       body: jsonEncode(body),
-      headers: {HttpHeaders.contentTypeHeader: ContentType.json.mimeType},
+      headers: {'Content-Type': 'application/json'},
     );
 
     if (!res.ok) {
