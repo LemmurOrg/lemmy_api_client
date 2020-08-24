@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:meta/meta.dart' show alwaysThrows;
 
 import './exceptions.dart';
 
@@ -12,6 +13,7 @@ mixin HttpHelper {
   String host;
   String extraPath;
 
+  @alwaysThrows
   void _throwResponseFail(http.Response res) {
     var jsonBody = {};
     try {

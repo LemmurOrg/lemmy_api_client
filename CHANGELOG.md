@@ -1,3 +1,9 @@
+## 0.1.3 - 2020-08-24
+
+### Added
+
+- lowered meta semver range
+
 ## 0.1.2 - 2020-08-23
 
 ### Added
