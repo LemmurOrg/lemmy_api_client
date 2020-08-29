@@ -13,14 +13,14 @@ export 'src/models/site.dart';
 export 'src/models/user.dart';
 export 'src/v1/main.dart';
 
-class LemmyAPI {
+class LemmyApi {
   /// host uri of this lemmy instance
   String host;
 
   V1 v1;
 
   /// initialize lemmy api instance
-  LemmyAPI(this.host)
+  LemmyApi(this.host)
       : assert(host != null),
         v1 = V1(host);
 }

@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('lemmy API v1', () {
-    final lemmy = LemmyAPI('dev.lemmy.ml').v1;
+    final lemmy = LemmyApi('dev.lemmy.ml').v1;
 
     group('listCategories', () {
       test('correctly fetches', () async {
