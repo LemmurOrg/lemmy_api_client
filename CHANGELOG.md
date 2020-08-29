@@ -1,3 +1,10 @@
+## 0.2.0 - 2020-08-29
+
+### Changed
+
+- Renamed `LemmyAPI` to `LemmyApi`
+- Endpoints that return a jwt now return a parsed jwt instead of just a raw one
+
 ## 0.1.4 - 2020-08-28
 
 ### Changed
