@@ -1,3 +1,9 @@
+## 0.2.1 - 2020-08-29
+
+### Fixed
+
+- Changed examples to reflect changes
+
 ## 0.2.0 - 2020-08-29
 
 ### Changed
