@@ -3,6 +3,7 @@ import 'package:meta/meta.dart' show required;
 import '../enums.dart';
 import '../models/captcha.dart';
 import '../models/comment.dart';
+import '../models/jwt.dart';
 import '../models/private_message.dart';
 import '../models/user.dart';
 import 'main.dart';
@@ -10,8 +11,7 @@ import 'main.dart';
 extension UserEndpoint on V1 {
   /// POST /user/login
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#login
-  /// returns jwt
-  Future<String> login({
+  Future<Jwt> login({
     @required String usernameOrEmail,
     @required String password,
   }) async {
@@ -23,7 +23,7 @@ extension UserEndpoint on V1 {
       'password': password,
     });
 
-    return res['jwt'];
+    return Jwt(res['jwt']);
   }
 
   // TODO(shilangyu): lemmy provides no information about specific errors making it hard to understand what went wrong in the request
@@ -109,8 +109,7 @@ extension UserEndpoint on V1 {
 
   /// PUT ~~/save_user_settings~~ /user/save_user_settings
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-user-settings
-  /// returns jwt
-  Future<String> saveUserSettings({
+  Future<Jwt> saveUserSettings({
     @required bool showNsfw,
     @required String theme,
     @required SortType defaultSortType,
@@ -167,7 +166,7 @@ extension UserEndpoint on V1 {
       'auth': auth,
     });
 
-    return res['jwt'];
+    return Jwt(res['jwt']);
   }
 
   /// GET /user/replies
@@ -365,8 +364,7 @@ extension UserEndpoint on V1 {
 
   /// POST /user/delete_account
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#delete-account
-  /// returns jwt
-  Future<String> deleteAccount({
+  Future<Jwt> deleteAccount({
     @required String password,
     @required String auth,
   }) async {
@@ -378,6 +376,6 @@ extension UserEndpoint on V1 {
       'auth': auth,
     });
 
-    return res['jwt'];
+    return Jwt(res['jwt']);
   }
 }
