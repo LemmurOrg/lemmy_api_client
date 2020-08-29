@@ -7,7 +7,8 @@ void main() async {
 
   // call methods that are named after op codes from the lemmy docs
   var token = await lemmy.login(usernameOrEmail: 'asd', password: 'ads');
-  var messages = await lemmy.getPrivateMessages(unreadOnly: true, auth: token);
+  var messages =
+      await lemmy.getPrivateMessages(unreadOnly: true, auth: token.raw);
 
   print(messages);
 }
