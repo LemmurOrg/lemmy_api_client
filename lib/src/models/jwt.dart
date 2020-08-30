@@ -14,7 +14,6 @@ Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
       ),
     );
 
-/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
 class Jwt {
   final String raw;
   final JwtPayload payload;
@@ -22,7 +21,6 @@ class Jwt {
   Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
 }
 
-/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
 class JwtPayload {
   final int id;
