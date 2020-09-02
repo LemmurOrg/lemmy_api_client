@@ -32,6 +32,28 @@ UserView _$UserViewFromJson(Map<String, dynamic> json) {
   );
 }
 
+Map<String, dynamic> _$UserViewToJson(UserView instance) => <String, dynamic>{
+      'id': instance.id,
+      'actor_id': instance.actorId,
+      'name': instance.name,
+      'preferred_username': instance.preferredUsername,
+      'avatar': instance.avatar,
+      'banner': instance.banner,
+      'email': instance.email,
+      'matrix_user_id': instance.matrixUserId,
+      'bio': instance.bio,
+      'local': instance.local,
+      'admin': instance.admin,
+      'banned': instance.banned,
+      'show_avatars': instance.showAvatars,
+      'send_notifications_to_email': instance.sendNotificationsToEmail,
+      'published': instance.published?.toIso8601String(),
+      'number_of_posts': instance.numberOfPosts,
+      'post_score': instance.postScore,
+      'number_of_comments': instance.numberOfComments,
+      'comment_score': instance.commentScore,
+    };
+
 User _$UserFromJson(Map<String, dynamic> json) {
   return User(
     id: json['id'] as int,

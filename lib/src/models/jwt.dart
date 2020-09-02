@@ -19,9 +19,11 @@ class Jwt {
   final JwtPayload payload;
 
   Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
+
+  Map<String, dynamic> toJson() => {'raw': raw, 'payload': payload};
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
+@JsonSerializable(fieldRename: FieldRename.snake)
 class JwtPayload {
   final int id;
   final String iss;
@@ -30,4 +32,6 @@ class JwtPayload {
 
   factory JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$JwtPayloadFromJson(json);
+
+  Map<String, dynamic> toJson() => _$JwtPayloadToJson(this);
 }

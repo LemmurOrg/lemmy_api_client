@@ -12,3 +12,9 @@ JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
     iss: json['iss'] as String,
   );
 }
+
+Map<String, dynamic> _$JwtPayloadToJson(JwtPayload instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'iss': instance.iss,
+    };
