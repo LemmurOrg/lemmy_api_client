@@ -32,28 +32,6 @@ UserView _$UserViewFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$UserViewToJson(UserView instance) => <String, dynamic>{
-      'id': instance.id,
-      'actor_id': instance.actorId,
-      'name': instance.name,
-      'preferred_username': instance.preferredUsername,
-      'avatar': instance.avatar,
-      'banner': instance.banner,
-      'email': instance.email,
-      'matrix_user_id': instance.matrixUserId,
-      'bio': instance.bio,
-      'local': instance.local,
-      'admin': instance.admin,
-      'banned': instance.banned,
-      'show_avatars': instance.showAvatars,
-      'send_notifications_to_email': instance.sendNotificationsToEmail,
-      'published': instance.published?.toIso8601String(),
-      'number_of_posts': instance.numberOfPosts,
-      'post_score': instance.postScore,
-      'number_of_comments': instance.numberOfComments,
-      'comment_score': instance.commentScore,
-    };
-
 User _$UserFromJson(Map<String, dynamic> json) {
   return User(
     id: json['id'] as int,
@@ -89,6 +67,34 @@ User _$UserFromJson(Map<String, dynamic> json) {
     banner: json['banner'] as String,
   );
 }
+
+Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'preferred_username': instance.preferredUsername,
+      'password_encrypted': instance.passwordEncrypted,
+      'email': instance.email,
+      'avatar': instance.avatar,
+      'admin': instance.admin,
+      'banned': instance.banned,
+      'published': instance.published?.toIso8601String(),
+      'updated': instance.updated?.toIso8601String(),
+      'show_nsfw': instance.showNsfw,
+      'theme': instance.theme,
+      'default_sort_type': instance.defaultSortType,
+      'default_listing_type': instance.defaultListingType,
+      'lang': instance.lang,
+      'show_avatars': instance.showAvatars,
+      'send_notifications_to_email': instance.sendNotificationsToEmail,
+      'matrix_user_id': instance.matrixUserId,
+      'actor_id': instance.actorId,
+      'bio': instance.bio,
+      'local': instance.local,
+      'private_key': instance.privateKey,
+      'public_key': instance.publicKey,
+      'last_refreshed_at': instance.lastRefreshedAt?.toIso8601String(),
+      'banner': instance.banner,
+    };
 
 UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
   return UserMentionView(
