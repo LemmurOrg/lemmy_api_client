@@ -1,3 +1,9 @@
+## 0.2.2 - 2020-09-02
+
+### Added
+
+- Jwt and User is serializable to json
+
 ## 0.2.1 - 2020-08-29
 
 ### Fixed
