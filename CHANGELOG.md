@@ -1,3 +1,9 @@
+## 0.3.0 - 2020-09-02
+
+### Breaking
+
+- Moved toJson from UserView to User
+
 ## 0.2.2 - 2020-09-02
 
 ### Added
