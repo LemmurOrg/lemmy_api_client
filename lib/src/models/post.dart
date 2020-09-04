@@ -140,19 +140,19 @@ class PostView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-post
 @JsonSerializable(createToJson: false)
-class FullPost {
+class FullPostView {
   final PostView post;
   final List<CommentView> comments;
   final CommunityView community;
   final List<CommunityModeratorView> moderators;
 
-  const FullPost({
+  const FullPostView({
     this.post,
     this.comments,
     this.community,
     this.moderators,
   });
 
-  factory FullPost.fromJson(Map<String, dynamic> json) =>
-      _$FullPostFromJson(json);
+  factory FullPostView.fromJson(Map<String, dynamic> json) =>
+      _$FullPostViewFromJson(json);
 }

@@ -34,7 +34,7 @@ extension PostEndpoint on V1 {
 
   /// GET /post
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-post
-  Future<FullPost> getPost({
+  Future<FullPostView> getPost({
     @required int id,
     String auth,
   }) async {
@@ -45,7 +45,7 @@ extension PostEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    return FullPost.fromJson(res);
+    return FullPostView.fromJson(res);
   }
 
   /// GET /post/list

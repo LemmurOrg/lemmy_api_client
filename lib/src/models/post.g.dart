@@ -65,8 +65,8 @@ PostView _$PostViewFromJson(Map<String, dynamic> json) {
   );
 }
 
-FullPost _$FullPostFromJson(Map<String, dynamic> json) {
-  return FullPost(
+FullPostView _$FullPostViewFromJson(Map<String, dynamic> json) {
+  return FullPostView(
     post: json['post'] == null
         ? null
         : PostView.fromJson(json['post'] as Map<String, dynamic>),

@@ -1,3 +1,9 @@
+## Unreleased
+
+### Breaking
+
+- Renamed FullPost to FullPostView
+
 ## 0.3.0 - 2020-09-02
 
 ### Breaking
