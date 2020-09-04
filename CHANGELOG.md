@@ -4,6 +4,11 @@
 
 - Added rest of the user endpoints:
   - `POST /user/ban`
+- Added rest of the site endpoints:
+  - `PUT /site/config`
+  - `POST /site`
+  - `PUT /site`
+  - `POST /site/transfer`
 
 ### Breaking
 

@@ -88,3 +88,21 @@ class FullSiteView {
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
 }
+
+/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#transfer-site
+@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
+class TransferredSite {
+  /// can be null
+  final SiteView site;
+  final List<UserView> admins;
+  final List<UserView> banned;
+
+  const TransferredSite({
+    this.site,
+    this.admins,
+    this.banned,
+  });
+
+  factory TransferredSite.fromJson(Map<String, dynamic> json) =>
+      _$TransferredSiteFromJson(json);
+}

@@ -53,3 +53,19 @@ FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
         : User.fromJson(json['my_user'] as Map<String, dynamic>),
   );
 }
+
+TransferredSite _$TransferredSiteFromJson(Map<String, dynamic> json) {
+  return TransferredSite(
+    site: json['site'] == null
+        ? null
+        : SiteView.fromJson(json['site'] as Map<String, dynamic>),
+    admins: (json['admins'] as List)
+        ?.map((e) =>
+            e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    banned: (json['banned'] as List)
+        ?.map((e) =>
+            e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}

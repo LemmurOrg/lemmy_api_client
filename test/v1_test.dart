@@ -543,10 +543,42 @@ void main() {
       });
     });
 
+    group('createSite', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.createSite(name: 'asd', auth: 'asd');
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('editSite', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.editSite(name: 'asd', auth: 'asd');
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('transferSite', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.transferSite(userId: 123, auth: 'asd');
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
     group('getSiteConfig', () {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getSiteConfig(auth: 'asd');
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('saveSiteConfig', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.saveSiteConfig(configHjson: 'asd', auth: 'asd');
         }, throwsA(isA<InvalidAuthException>()));
       });
     });
