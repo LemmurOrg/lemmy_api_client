@@ -13,6 +13,10 @@ mixin HttpHelper {
   String host;
   String extraPath;
 
+  /// throws appropriate exception based on the response
+  /// if the error is unknown, throws UnknownResponseException.
+  /// Ideally UnknownResponseException should never be thrown
+  /// for the end user.
   @alwaysThrows
   void _throwResponseFail(http.Response res) {
     var jsonBody = {};
@@ -29,6 +33,7 @@ mixin HttpHelper {
     }
   }
 
+  /// a helper GET method that serializes query params
   Future<Map<String, dynamic>> get(String path,
       [Map<String, String> query]) async {
     var res = await http.get(Uri.https(host, '$extraPath$path', query));
@@ -40,6 +45,8 @@ mixin HttpHelper {
     return jsonDecode(res.body);
   }
 
+  /// a helper POST method that serializes body into JSON
+  /// and adds appropriate headers
   Future<Map<String, dynamic>> post(
       String path, Map<String, dynamic> body) async {
     var res = await http.post(
@@ -55,6 +62,8 @@ mixin HttpHelper {
     return jsonDecode(res.body);
   }
 
+  /// a helper PUT method that serializes body into JSON
+  /// and adds appropriate headers
   Future<Map<String, dynamic>> put(
       String path, Map<String, dynamic> body) async {
     var res = await http.put(
