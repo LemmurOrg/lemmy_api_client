@@ -1,5 +1,10 @@
 ## Unreleased
 
+### Added
+
+- Added rest of the user endpoints:
+  - `POST /user/ban`
+
 ### Breaking
 
 - Renamed FullPost to FullPostView

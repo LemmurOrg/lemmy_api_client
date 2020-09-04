@@ -264,3 +264,18 @@ class UserDetails {
   factory UserDetails.fromJson(Map<String, dynamic> json) =>
       _$UserDetailsFromJson(json);
 }
+
+/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#ban-user
+@JsonSerializable(createToJson: false)
+class BannedUser {
+  final UserView user;
+  final bool banned;
+
+  const BannedUser({
+    this.user,
+    this.banned,
+  });
+
+  factory BannedUser.fromJson(Map<String, dynamic> json) =>
+      _$BannedUserFromJson(json);
+}

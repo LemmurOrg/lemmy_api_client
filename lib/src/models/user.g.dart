@@ -165,3 +165,12 @@ UserDetails _$UserDetailsFromJson(Map<String, dynamic> json) {
         ?.toList(),
   );
 }
+
+BannedUser _$BannedUserFromJson(Map<String, dynamic> json) {
+  return BannedUser(
+    user: json['user'] == null
+        ? null
+        : UserView.fromJson(json['user'] as Map<String, dynamic>),
+    banned: json['banned'] as bool,
+  );
+}

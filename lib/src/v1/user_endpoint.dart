@@ -378,4 +378,30 @@ extension UserEndpoint on V1 {
 
     return Jwt(res['jwt']);
   }
+
+  /// POST /user/ban
+  /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#ban-user
+  Future<BannedUser> banUser({
+    @required int userId,
+    @required bool ban,
+    bool removeData,
+    String reason,
+    int expires,
+    @required String auth,
+  }) async {
+    assert(ban != null);
+    assert(userId != null);
+    assert(auth != null);
+
+    var res = await post('/user/ban', {
+      'user_id': userId,
+      'ban': ban,
+      if (removeData != null) 'remove_data': removeData,
+      if (reason != null) 'reason': reason,
+      if (expires != null) 'expires': expires,
+      'auth': auth,
+    });
+
+    return BannedUser.fromJson(res);
+  }
 }

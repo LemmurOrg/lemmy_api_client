@@ -435,6 +435,14 @@ void main() {
       });
     });
 
+    group('banUser', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.banUser(userId: 123, ban: true, auth: '123');
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
     group('getReplies', () {
       test('forbids illegal numbers', () async {
         expect(() async {
