@@ -9,6 +9,9 @@
   - `POST /site`
   - `PUT /site`
   - `POST /site/transfer`
+- Added rest of the post endpoints:
+  - `POST /post/sticky`
+  - `POST /post/locked`
 
 ### Breaking
 

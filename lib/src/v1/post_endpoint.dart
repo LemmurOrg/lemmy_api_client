@@ -186,4 +186,44 @@ extension PostEndpoint on V1 {
 
     return PostView.fromJson(res['post']);
   }
+
+  /// POST /post/lock
+  /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#lock-post
+  Future<PostView> lockPost({
+    @required int editId,
+    @required bool locked,
+    @required String auth,
+  }) async {
+    assert(editId != null);
+    assert(locked != null);
+    assert(auth != null);
+
+    var res = await post('/post/lock', {
+      'edit_id': editId,
+      'locked': locked,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
+  }
+
+  /// POST /post/sticky
+  /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#sticky-post
+  Future<PostView> stickyPost({
+    @required int editId,
+    @required bool stickied,
+    @required String auth,
+  }) async {
+    assert(editId != null);
+    assert(stickied != null);
+    assert(auth != null);
+
+    var res = await post('/post/sticky', {
+      'edit_id': editId,
+      'stickied': stickied,
+      'auth': auth,
+    });
+
+    return PostView.fromJson(res['post']);
+  }
 }

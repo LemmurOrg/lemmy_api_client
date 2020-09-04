@@ -224,6 +224,30 @@ void main() {
       });
     });
 
+    group('lockPost', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.lockPost(
+            locked: true,
+            editId: 123,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('stickyPost', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.stickyPost(
+            stickied: true,
+            editId: 123,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
     group('login', () {
       test('handles invalid credentials', () async {
         expect(() async {
