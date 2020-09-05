@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
 
 import '../models/site.dart';
-import '../v1/main.dart';
+import 'main.dart';
 
 extension SiteEndpoint on V1 {
   /// PUT /site/config

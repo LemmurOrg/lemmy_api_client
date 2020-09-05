@@ -293,3 +293,29 @@ class ModAddView {
   factory ModAddView.fromJson(Map<String, dynamic> json) =>
       _$ModAddViewFromJson(json);
 }
+
+/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-modlog
+@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
+class Modlog {
+  final List<ModRemovePostView> removedPosts;
+  final List<ModLockPostView> lockedPosts;
+  final List<ModRemoveCommentView> removedComments;
+  final List<ModRemoveCommunityView> removedCommunities;
+  final List<ModBanFromCommunityView> bannedFromCommunity;
+  final List<ModBanView> banned;
+  final List<ModAddCommunityView> addedToCommunity;
+  final List<ModAddView> added;
+
+  const Modlog({
+    this.removedPosts,
+    this.lockedPosts,
+    this.removedComments,
+    this.removedCommunities,
+    this.bannedFromCommunity,
+    this.banned,
+    this.addedToCommunity,
+    this.added,
+  });
+
+  factory Modlog.fromJson(Map<String, dynamic> json) => _$ModlogFromJson(json);
+}

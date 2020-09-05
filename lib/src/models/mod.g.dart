@@ -139,3 +139,46 @@ ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
     otherUserName: json['other_user_name'] as String,
   );
 }
+
+Modlog _$ModlogFromJson(Map<String, dynamic> json) {
+  return Modlog(
+    removedPosts: (json['removed_posts'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ModRemovePostView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    lockedPosts: (json['locked_posts'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ModLockPostView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    removedComments: (json['removed_comments'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ModRemoveCommentView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    removedCommunities: (json['removed_communities'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ModRemoveCommunityView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    bannedFromCommunity: (json['banned_from_community'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ModBanFromCommunityView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    banned: (json['banned'] as List)
+        ?.map((e) =>
+            e == null ? null : ModBanView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    addedToCommunity: (json['added_to_community'] as List)
+        ?.map((e) => e == null
+            ? null
+            : ModAddCommunityView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    added: (json['added'] as List)
+        ?.map((e) =>
+            e == null ? null : ModAddView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}

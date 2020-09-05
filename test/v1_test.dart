@@ -43,6 +43,32 @@ void main() {
       });
     });
 
+    group('addAdmin', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.addAdmin(auth: 'asd', userId: 123, added: true);
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('getModlog', () {
+      test('correctly fetches', () async {
+        var res = await lemmy.getModlog();
+
+        expect(res.banned, isA<List>());
+      });
+
+      test('forbids illegal numbers', () async {
+        expect(() async {
+          await lemmy.getModlog(page: 0);
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.getModlog(limit: -1);
+        }, throwsA(isA<AssertionError>()));
+      });
+    });
+
     group('createComment', () {
       test('handles invalid tokens', () async {
         expect(() async {

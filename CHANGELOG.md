@@ -12,6 +12,9 @@
 - Added rest of the post endpoints:
   - `POST /post/sticky`
   - `POST /post/locked`
+- Added rest of the misc endpoints:
+  - `POST /admin/add`
+  - `GET /modlog`
 
 ### Breaking
 
