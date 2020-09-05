@@ -543,6 +543,94 @@ void main() {
       });
     });
 
+    group('createCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.createCommunity(
+            name: 'asd',
+            title: 'asd',
+            categoryId: 123,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('editCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.editCommunity(
+            editId: 123,
+            title: 'asd',
+            categoryId: 123,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('banFromCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.banFromCommunity(
+            communityId: 123,
+            userId: 123,
+            ban: true,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('addModToCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.addModToCommunity(
+            communityId: 123,
+            userId: 123,
+            added: true,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('deleteCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.deleteCommunity(
+            editId: 123,
+            deleted: true,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('removeCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.removeCommunity(
+            editId: 123,
+            removed: true,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
+    group('transferCommunity', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.transferCommunity(
+            communityId: 123,
+            userId: 123,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
     group('listCommunities', () {
       test('correctly fetches', () async {
         await lemmy.listCommunities(sort: SortType.active);

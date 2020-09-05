@@ -99,3 +99,20 @@ FullCommunityView _$FullCommunityViewFromJson(Map<String, dynamic> json) {
         ?.toList(),
   );
 }
+
+TransferredCommunity _$TransferredCommunityFromJson(Map<String, dynamic> json) {
+  return TransferredCommunity(
+    community: json['community'] == null
+        ? null
+        : CommunityView.fromJson(json['community'] as Map<String, dynamic>),
+    moderators: (json['moderators'] as List)
+        ?.map((e) => e == null
+            ? null
+            : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    admins: (json['admins'] as List)
+        ?.map((e) =>
+            e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}

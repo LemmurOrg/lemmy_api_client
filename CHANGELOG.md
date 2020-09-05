@@ -12,6 +12,14 @@
 - Added rest of the post endpoints:
   - `POST /post/sticky`
   - `POST /post/locked`
+- Added rest of the community endpoints:
+  - `POST /community`
+  - `PUT /community`
+  - `POST /community/ban_user`
+  - `POST /community/mod`
+  - `POST /community/delete`
+  - `POST /community/remove`
+  - `POST /community/transfer`
 - Added rest of the misc endpoints:
   - `POST /admin/add`
   - `GET /modlog`

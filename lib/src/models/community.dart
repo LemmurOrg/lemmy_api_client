@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'user.dart';
+
 part 'community.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L130
@@ -181,4 +183,17 @@ class FullCommunityView {
 
   factory FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$FullCommunityViewFromJson(json);
+}
+
+/// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#transfer-community
+@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
+class TransferredCommunity {
+  final CommunityView community;
+  final List<CommunityModeratorView> moderators;
+  final List<UserView> admins;
+
+  const TransferredCommunity({this.community, this.moderators, this.admins});
+
+  factory TransferredCommunity.fromJson(Map<String, dynamic> json) =>
+      _$TransferredCommunityFromJson(json);
 }
