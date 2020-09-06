@@ -1,3 +1,13 @@
+## 0.4.1 - 2020-09-06
+
+### Added
+
+- Added `RateLimitException`
+
+### Changed
+
+- Changed `UnknownResponseException` to `UnknownResponseError` and exposed it as a public member
+
 ## 0.4.0 - 2020-09-05
 
 ### Added
