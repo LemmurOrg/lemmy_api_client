@@ -19,15 +19,27 @@ mixin HttpHelper {
   /// for the end user.
   @alwaysThrows
   void _throwResponseFail(http.Response res) {
-    var jsonBody = {};
-    try {
-      jsonBody = jsonDecode(res.body);
-    } on FormatException catch (_) {}
+    String errorMessage = () {
+      try {
+        Map<String, dynamic> json = jsonDecode(res.body);
+        return json['error'];
+      } on FormatException catch (_) {
+        return res.body;
+      }
+    }();
 
     switch (res.statusCode) {
       case 400:
         throw InvalidAuthException(
-            jsonBody['error'] ?? 'there was no error message provided');
+            errorMessage ?? 'there was no error message provided');
+      case 500:
+        if (errorMessage != null &&
+            errorMessage.toLowerCase().contains('too many requests')) {
+          throw RateLimitException(
+              errorMessage ?? 'there was no error message provided');
+        }
+        continue dflt;
+      dflt:
       default:
         throw UnknownResponseError(res);
     }

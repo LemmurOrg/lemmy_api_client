@@ -11,6 +11,15 @@ class InvalidAuthException implements Exception {
   String toString() => '${runtimeType.toString()}: $_message';
 }
 
+class RateLimitException implements Exception {
+  final String _message;
+
+  RateLimitException(this._message);
+
+  @override
+  String toString() => '${runtimeType.toString()}: $_message';
+}
+
 class UnknownResponseError extends Error {
   final http.Response res;
 
