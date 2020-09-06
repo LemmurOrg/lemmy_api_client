@@ -1,7 +1,7 @@
 import 'src/v1/main.dart';
 
 export 'src/enums.dart';
-export 'src/exceptions.dart' hide UnknownResponseException;
+export 'src/exceptions.dart';
 export 'src/models/captcha.dart';
 export 'src/models/category.dart';
 export 'src/models/comment.dart';

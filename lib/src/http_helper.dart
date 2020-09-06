@@ -29,7 +29,7 @@ mixin HttpHelper {
         throw InvalidAuthException(
             jsonBody['error'] ?? 'there was no error message provided');
       default:
-        throw UnknownResponseException(res);
+        throw UnknownResponseError(res);
     }
   }
 
