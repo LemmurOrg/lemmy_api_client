@@ -30,7 +30,7 @@ class V1 with HttpHelper {
     return categories.map((e) => Category.fromJson(e)).toList();
   }
 
-  /// ~~POST~~ GET /search
+  /// GET /search
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#search
   Future<Search> search({
     @required String q,

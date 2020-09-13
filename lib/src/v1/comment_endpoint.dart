@@ -115,7 +115,7 @@ extension CommentEndpoint on V1 {
     return CommentView.fromJson(res['comment']);
   }
 
-  /// ~~POST~~ PUT /comment/save
+  /// PUT /comment/save
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-comment
   Future<CommentView> saveComment({
     @required int commentId,

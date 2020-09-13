@@ -107,7 +107,7 @@ extension UserEndpoint on V1 {
     return UserDetails.fromJson(res);
   }
 
-  /// PUT ~~/save_user_settings~~ /user/save_user_settings
+  /// PUT /user/save_user_settings
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-user-settings
   Future<Jwt> saveUserSettings({
     @required bool showNsfw,
@@ -196,7 +196,7 @@ extension UserEndpoint on V1 {
     return replies.map((e) => ReplyView.fromJson(e)).toList();
   }
 
-  /// GET ~~/user/mentions~~ /user/mention
+  /// GET /user/mention
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-user-mentions
   Future<List<UserMentionView>> getUserMentions({
     @required SortType sort,
