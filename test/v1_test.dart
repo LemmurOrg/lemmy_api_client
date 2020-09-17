@@ -181,6 +181,18 @@ void main() {
       });
     });
 
+    group('savePost', () {
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.savePost(
+            save: true,
+            postId: 1,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
     group('getPosts', () {
       test('correctly fetches', () async {
         var res = await lemmy.getPosts(

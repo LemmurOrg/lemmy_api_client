@@ -167,7 +167,7 @@ extension PostEndpoint on V1 {
     return PostView.fromJson(res['post']);
   }
 
-  /// POST /post/save
+  /// PUT /post/save
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-post
   Future<PostView> savePost({
     @required int postId,
@@ -178,7 +178,7 @@ extension PostEndpoint on V1 {
     assert(save != null);
     assert(auth != null);
 
-    var res = await post('/post/save', {
+    var res = await put('/post/save', {
       'post_id': postId,
       'save': save,
       'auth': auth,
