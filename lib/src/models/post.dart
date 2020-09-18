@@ -2,6 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 import './comment.dart';
 import './community.dart';
+import '../enums.dart';
 
 part 'post.g.dart';
 
@@ -74,7 +75,8 @@ class PostView {
   final int userId;
 
   /// can be null
-  final int myVote;
+  @JsonKey(fromJson: VoteType.tryParse)
+  final VoteType myVote;
 
   /// can be null
   final bool subscribed;

@@ -132,7 +132,7 @@ UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
     hotRank: json['hot_rank'] as int,
     hotRankActive: json['hot_rank_active'] as int,
     userId: json['user_id'] as int,
-    myVote: json['my_vote'] as int,
+    myVote: VoteType.tryParse(json['my_vote'] as int),
     saved: json['saved'] as bool,
     recipientId: json['recipient_id'] as int,
     recipientActorId: json['recipient_actor_id'] as String,

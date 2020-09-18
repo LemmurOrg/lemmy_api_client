@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:lemmy_api_client/lemmy_api_client.dart';
 import 'package:lemmy_api_client/src/models/post.dart';
 import 'package:test/test.dart';
 
@@ -101,7 +102,7 @@ void main() {
     expect(
         post.newestActivityTime, DateTime.parse('2020-08-02T20:31:19.303284'));
     expect(post.userId, 13709);
-    expect(post.myVote, 0);
+    expect(post.myVote, VoteType.none);
     expect(post.subscribed, false);
     expect(post.read, false);
     expect(post.saved, false);

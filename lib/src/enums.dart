@@ -1,21 +1,26 @@
-enum VoteType {
-  up,
-  none,
-  down,
-}
+class VoteType {
+  final int _value;
 
-extension VoteTypeValue on VoteType {
-  int get value {
-    switch (this) {
-      case VoteType.up:
-        return 1;
-      case VoteType.none:
-        return 0;
-      case VoteType.down:
-        return -1;
+  const VoteType._(this._value);
+
+  int get value => _value;
+
+  static VoteType tryParse(int value) {
+    switch (value) {
+      case 1:
+        return up;
+      case 0:
+        return none;
+      case -1:
+        return down;
+      default:
+        return null;
     }
-    throw Exception('unreachable');
   }
+
+  static const VoteType up = VoteType._(1);
+  static const VoteType none = VoteType._(0);
+  static const VoteType down = VoteType._(-1);
 }
 
 enum PostListingType {

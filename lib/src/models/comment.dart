@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import '../enums.dart';
+
 part 'comment.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/comment_view.rs#L91
@@ -51,7 +53,8 @@ class CommentView {
   final int userId;
 
   /// can be null
-  final int myVote;
+  @JsonKey(fromJson: VoteType.tryParse)
+  final VoteType myVote;
 
   /// can be null
   final bool subscribed;
@@ -150,7 +153,8 @@ class ReplyView {
   final int userId;
 
   /// can be null
-  final int myVote;
+  @JsonKey(fromJson: VoteType.tryParse)
+  final VoteType myVote;
 
   /// can be null
   final bool subscribed;

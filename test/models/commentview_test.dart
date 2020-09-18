@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:lemmy_api_client/lemmy_api_client.dart';
 import 'package:lemmy_api_client/src/models/comment.dart';
 import 'package:test/test.dart';
 
@@ -81,7 +82,7 @@ void main() {
     expect(comment.hotRank, 0);
     expect(comment.hotRankActive, 0);
     expect(comment.userId, 13709);
-    expect(comment.myVote, 0);
+    expect(comment.myVote, VoteType.none);
     expect(comment.subscribed, false);
     expect(comment.saved, false);
   });

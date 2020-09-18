@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 import './comment.dart';
 import './community.dart';
 import './post.dart';
+import '../enums.dart';
 
 part 'user.g.dart';
 
@@ -194,7 +195,8 @@ class UserMentionView {
   final int userId;
 
   /// can be null
-  final int myVote;
+  @JsonKey(fromJson: VoteType.tryParse)
+  final VoteType myVote;
 
   /// can be null
   final bool saved;
