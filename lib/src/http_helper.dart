@@ -54,7 +54,7 @@ mixin HttpHelper {
       _throwResponseFail(res);
     }
 
-    return jsonDecode(res.body);
+    return jsonDecode(utf8.decode(res.bodyBytes));
   }
 
   /// a helper POST method that serializes body into JSON
@@ -71,7 +71,7 @@ mixin HttpHelper {
       _throwResponseFail(res);
     }
 
-    return jsonDecode(res.body);
+    return jsonDecode(utf8.decode(res.bodyBytes));
   }
 
   /// a helper PUT method that serializes body into JSON
@@ -88,6 +88,6 @@ mixin HttpHelper {
       _throwResponseFail(res);
     }
 
-    return jsonDecode(res.body);
+    return jsonDecode(utf8.decode(res.bodyBytes));
   }
 }
