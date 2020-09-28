@@ -57,6 +57,7 @@ extension PostEndpoint on V1 {
     int limit,
     int communityId,
     String communityName,
+    String auth,
   }) async {
     assert(type != null);
     assert(sort != null);
@@ -70,6 +71,7 @@ extension PostEndpoint on V1 {
       if (limit != null) 'limit': limit.toString(),
       if (communityId != null) 'community_id': communityId.toString(),
       if (communityName != null) 'community_name': communityName,
+      if (auth != null) 'auth': auth,
     });
 
     List<dynamic> posts = json['posts'];
