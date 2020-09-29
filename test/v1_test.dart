@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   group('lemmy API v1', () {
-    final lemmy = LemmyApi('dev.lemmy.ml').v1;
+    final lemmy = LemmyApi('lemmygrad.ml').v1;
 
     group('listCategories', () {
       test('correctly fetches', () async {
@@ -203,7 +203,7 @@ void main() {
 
     group('getPost', () {
       test('correctly fetches', () async {
-        await lemmy.getPost(id: 38936);
+        await lemmy.getPost(id: 8382);
       });
 
       test('handles invalid tokens', () async {
@@ -581,7 +581,7 @@ void main() {
 
     group('getCommunity', () {
       test('correctly fetches', () async {
-        await lemmy.getCommunity(name: 'javascript');
+        await lemmy.getCommunity(name: 'communism');
       });
 
       test('forbids both name and id being passed at once', () async {
