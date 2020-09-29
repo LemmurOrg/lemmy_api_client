@@ -5,7 +5,7 @@ import 'package:meta/meta.dart' show alwaysThrows;
 
 import './exceptions.dart';
 
-extension OkResponse on http.Response {
+extension on http.Response {
   bool get ok => statusCode >= 200 && statusCode < 300;
 }
 
@@ -13,36 +13,21 @@ mixin HttpHelper {
   String host;
   String extraPath;
 
-  /// throws appropriate exception based on the response
-  /// if the error is unknown, throws UnknownResponseException.
-  /// Ideally UnknownResponseException should never be thrown
-  /// for the end user.
+  /// throws LemmyApiException with an i18n error message
+  /// Looks for a message in this order:
+  /// jsonBody.error -> rawBody -> null
   @alwaysThrows
   void _throwResponseFail(http.Response res) {
     String errorMessage = () {
       try {
         Map<String, dynamic> json = jsonDecode(res.body);
         return json['error'];
-      } on FormatException catch (_) {
+      } on FormatException {
         return res.body;
       }
     }();
 
-    switch (res.statusCode) {
-      case 400:
-        throw InvalidAuthException(
-            errorMessage ?? 'there was no error message provided');
-      case 500:
-        if (errorMessage != null &&
-            errorMessage.toLowerCase().contains('too many requests')) {
-          throw RateLimitException(
-              errorMessage ?? 'there was no error message provided');
-        }
-        continue dflt;
-      dflt:
-      default:
-        throw UnknownResponseError(res);
-    }
+    throw LemmyApiException(errorMessage);
   }
 
   /// a helper GET method that serializes query params

@@ -39,7 +39,7 @@ void main() {
             sort: SortType.active,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -47,7 +47,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.addAdmin(auth: 'asd', userId: 123, added: true);
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -77,7 +77,7 @@ void main() {
             postId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -112,7 +112,7 @@ void main() {
             type: CommentListingType.community,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -124,7 +124,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -136,7 +136,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -148,7 +148,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -160,7 +160,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -172,7 +172,7 @@ void main() {
             commentId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -184,7 +184,7 @@ void main() {
             commentId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -197,7 +197,7 @@ void main() {
             communityId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -212,7 +212,7 @@ void main() {
             id: 1,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -224,7 +224,7 @@ void main() {
             postId: 1,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -251,7 +251,7 @@ void main() {
         expect(() async {
           await lemmy.getPosts(
               type: PostListingType.all, sort: SortType.active, auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -263,7 +263,7 @@ void main() {
             score: VoteType.up,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -276,7 +276,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -288,7 +288,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -300,7 +300,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -312,7 +312,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -324,7 +324,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -335,7 +335,7 @@ void main() {
             usernameOrEmail: '123',
             password: '123',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -429,7 +429,7 @@ void main() {
             username: 'asd',
             auth: '123',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -535,7 +535,7 @@ void main() {
             lang: 'en',
             auth: '123',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -543,7 +543,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.banUser(userId: 123, ban: true, auth: '123');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -575,7 +575,7 @@ void main() {
             unreadOnly: false,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -593,7 +593,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getCommunity(name: 'asd', auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -606,7 +606,7 @@ void main() {
             categoryId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -619,7 +619,7 @@ void main() {
             categoryId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -632,7 +632,7 @@ void main() {
             ban: true,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -645,7 +645,7 @@ void main() {
             added: true,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -657,7 +657,7 @@ void main() {
             deleted: true,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -669,7 +669,7 @@ void main() {
             removed: true,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -681,7 +681,7 @@ void main() {
             userId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -703,7 +703,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.listCommunities(sort: SortType.active, auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -715,7 +715,7 @@ void main() {
             follow: true,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -723,7 +723,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getFollowedCommunities(auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -731,7 +731,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getSite(auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -739,7 +739,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.createSite(name: 'asd', auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -747,7 +747,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.editSite(name: 'asd', auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -755,7 +755,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.transferSite(userId: 123, auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -763,7 +763,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.getSiteConfig(auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -771,7 +771,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.saveSiteConfig(configHjson: 'asd', auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -803,7 +803,7 @@ void main() {
             unreadOnly: false,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -815,7 +815,7 @@ void main() {
             read: true,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -844,7 +844,7 @@ void main() {
             unreadOnly: false,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -856,7 +856,7 @@ void main() {
             recipientId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -868,7 +868,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -880,7 +880,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -892,7 +892,7 @@ void main() {
             editId: 123,
             auth: 'asd',
           );
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -900,7 +900,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.markAllAsRead(auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
 
@@ -908,7 +908,7 @@ void main() {
       test('handles invalid tokens', () async {
         expect(() async {
           await lemmy.deleteAccount(password: 'asd', auth: 'asd');
-        }, throwsA(isA<InvalidAuthException>()));
+        }, throwsA(isA<LemmyApiException>()));
       });
     });
   });

@@ -17,9 +17,9 @@ export 'src/v1/main.dart';
 
 class LemmyApi {
   /// host uri of this lemmy instance
-  String host;
+  final String host;
 
-  V1 v1;
+  final V1 v1;
 
   /// initialize lemmy api instance
   LemmyApi(this.host)
