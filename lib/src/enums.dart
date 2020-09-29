@@ -141,3 +141,23 @@ extension SearchTypeValue on SearchType {
     throw Exception('unreachable');
   }
 }
+
+enum CommentListingType {
+  all,
+  subscribed,
+  community,
+}
+
+extension CommentListingTypeValue on CommentListingType {
+  String get value {
+    switch (this) {
+      case CommentListingType.all:
+        return 'All';
+      case CommentListingType.subscribed:
+        return 'Subscribed';
+      case CommentListingType.community:
+        return 'Community';
+    }
+    throw Exception('unreachable');
+  }
+}

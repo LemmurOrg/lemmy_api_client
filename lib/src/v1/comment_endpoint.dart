@@ -29,6 +29,36 @@ extension CommentEndpoint on V1 {
     return CommentView.fromJson(res['comment']);
   }
 
+  /// GET /comment/list
+  /// dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-comments
+  Future<List<CommentView>> getComments({
+    @required CommentListingType type,
+    @required SortType sort,
+    int page,
+    int limit,
+    int communityId,
+    String communityName,
+    String auth,
+  }) async {
+    assert(type != null);
+    assert(sort != null);
+    assert(limit == null || limit >= 0);
+    assert(page == null || page > 0);
+
+    var res = await get('/comment/list', {
+      'type_': type.value,
+      'sort': sort.value,
+      if (page != null) 'page': page.toString(),
+      if (limit != null) 'limit': limit.toString(),
+      if (communityId != null) 'community_id': communityId.toString(),
+      if (communityName != null) 'community_name': communityName,
+      if (auth != null) 'auth': auth,
+    });
+
+    List<dynamic> comments = res['comments'];
+    return comments.map((e) => CommentView.fromJson(e)).toList();
+  }
+
   /// PUT /comment
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#edit-comment
   Future<CommentView> editComment({

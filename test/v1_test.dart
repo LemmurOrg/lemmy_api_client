@@ -81,6 +81,41 @@ void main() {
       });
     });
 
+    group('getComments', () {
+      test('correctly fetches', () async {
+        var res = await lemmy.getComments(
+            sort: SortType.active, type: CommentListingType.community);
+        expect(res.length, 10);
+      });
+
+      test('forbids illegal numbers', () async {
+        expect(() async {
+          await lemmy.getComments(
+            sort: SortType.active,
+            type: CommentListingType.community,
+            page: 0,
+          );
+        }, throwsA(isA<AssertionError>()));
+
+        expect(() async {
+          await lemmy.getComments(
+            sort: SortType.active,
+            type: CommentListingType.community,
+            limit: -1,
+          );
+        }, throwsA(isA<AssertionError>()));
+      });
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getComments(
+            sort: SortType.active,
+            type: CommentListingType.community,
+            auth: 'asd',
+          );
+        }, throwsA(isA<InvalidAuthException>()));
+      });
+    });
+
     group('editComment', () {
       test('handles invalid tokens', () async {
         expect(() async {
@@ -210,6 +245,13 @@ void main() {
           await lemmy.getPosts(
               type: PostListingType.all, sort: SortType.active, limit: -1);
         }, throwsA(isA<AssertionError>()));
+      });
+
+      test('handles invalid tokens', () async {
+        expect(() async {
+          await lemmy.getPosts(
+              type: PostListingType.all, sort: SortType.active, auth: 'asd');
+        }, throwsA(isA<InvalidAuthException>()));
       });
     });
 
