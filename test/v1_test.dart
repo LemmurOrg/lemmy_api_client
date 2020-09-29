@@ -16,7 +16,7 @@ void main() {
         var res = await lemmy.search(
             type: SearchType.all, q: 'asd', sort: SortType.active);
 
-        expect(res.type, SearchType.all.value);
+        expect(res.type, SearchType.all);
       });
 
       test('forbids illegal numbers', () async {

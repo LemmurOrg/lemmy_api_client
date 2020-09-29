@@ -113,33 +113,38 @@ extension SortTypeValue on SortType {
   }
 }
 
-enum SearchType {
-  all,
-  comments,
-  posts,
-  communities,
-  users,
-  url,
-}
+class SearchType {
+  final String _value;
 
-extension SearchTypeValue on SearchType {
-  String get value {
-    switch (this) {
-      case SearchType.all:
-        return 'All';
-      case SearchType.comments:
-        return 'Comments';
-      case SearchType.posts:
-        return 'Posts';
-      case SearchType.communities:
-        return 'Communities';
-      case SearchType.users:
-        return 'Users';
-      case SearchType.url:
-        return 'Url';
+  const SearchType._(this._value);
+
+  String get value => _value;
+
+  static SearchType tryParse(String value) {
+    switch (value) {
+      case 'All':
+        return all;
+      case 'Comments':
+        return comments;
+      case 'Posts':
+        return posts;
+      case 'Communities':
+        return communities;
+      case 'Users':
+        return users;
+      case 'Url':
+        return url;
+      default:
+        return null;
     }
-    throw Exception('unreachable');
   }
+
+  static const SearchType all = SearchType._('All');
+  static const SearchType comments = SearchType._('Comments');
+  static const SearchType posts = SearchType._('Posts');
+  static const SearchType communities = SearchType._('Communities');
+  static const SearchType users = SearchType._('Users');
+  static const SearchType url = SearchType._('Url');
 }
 
 enum CommentListingType {
