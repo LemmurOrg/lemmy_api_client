@@ -1,3 +1,18 @@
+## 0.6.0 - 2020-09-29
+
+### Added
+
+- `GET /comment/list`
+
+### Fix
+
+- Added missing auth field in `getPost`
+- Correctly decoding utf8 bodies
+
+### Breaking
+
+- type on `Search` model is now an enum
+
 ## 0.5.0 - 2020-09-18
 
 ### Breaking
