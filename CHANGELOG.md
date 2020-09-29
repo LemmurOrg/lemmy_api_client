@@ -1,3 +1,9 @@
+## 0.7.0 - 2020-09-29
+
+### Breaking
+
+- Removed statically typed errors, now every error is forwarded by `LemmyApiException` with a i18n message
+
 ## 0.6.0 - 2020-09-29
 
 ### Added
