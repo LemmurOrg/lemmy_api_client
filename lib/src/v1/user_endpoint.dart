@@ -26,7 +26,8 @@ extension UserEndpoint on V1 {
     return Jwt(res['jwt']);
   }
 
-  // TODO(shilangyu): lemmy provides no information about specific errors making it hard to understand what went wrong in the request
+  // TODO(shilangyu): lemmy provides no information about specific errors making
+  // it hard to understand what went wrong in the request
   /// POST /user/register
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#register
   /// returns jwt
@@ -65,7 +66,8 @@ extension UserEndpoint on V1 {
   //   return res['jwt'];
   // }
 
-  // TODO(shilangyu): this seems broken on lemmy's end, returns status code 400 with no body
+  // TODO(shilangyu): this seems broken on lemmy's end, returns
+  // status code 400 with no body
   /// GET /user/get_captcha
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
   Future<Captcha> getCaptcha() async {
