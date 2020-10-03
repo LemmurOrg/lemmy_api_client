@@ -1,3 +1,4 @@
+import 'src/pictrs.dart';
 import 'src/v1/main.dart';
 
 export 'src/enums.dart';
@@ -21,8 +22,11 @@ class LemmyApi {
 
   final V1 v1;
 
+  final Pictrs pictrs;
+
   /// initialize lemmy api instance
   LemmyApi(this.host)
       : assert(host != null),
-        v1 = V1(host);
+        v1 = V1(host),
+        pictrs = Pictrs(host);
 }
