@@ -1,5 +1,5 @@
 name: lemmy_api_client
-version: 0.7.0
+version: 0.7.1
 homepage: https://github.com/krawieck/lemmy_api_client
 description: Future-based http client for the Lemmy API. Provides an easy interface and statically typed responses.
 

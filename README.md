@@ -19,6 +19,7 @@ A Dart client for the Lemmy API
 - Simple 1:1 translation of the [Lemmy API docs](https://dev.lemmy.ml/docs/contributing_websocket_http_api.html)
 - Strictly typed responses
 - Http and [~~websocket~~](https://github.com/krawieck/lemmy_api_client/issues/4) interface
+- Pictrs endpoints
 
 ## Example
 
