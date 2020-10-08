@@ -5,7 +5,7 @@ import 'package:meta/meta.dart' show alwaysThrows;
 
 import './exceptions.dart';
 
-extension on http.Response {
+extension OkHttpResponse on http.Response {
   bool get ok => statusCode >= 200 && statusCode < 300;
 }
 

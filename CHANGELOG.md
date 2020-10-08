@@ -1,3 +1,13 @@
+## 0.7.2 - 2020-10-08
+
+### Fixed
+
+- Exporting pictrs models
+
+### Changed
+
+- Error handling in pictrs delete method
+
 ## 0.7.1 - 2020-10-07
 
 ### Added

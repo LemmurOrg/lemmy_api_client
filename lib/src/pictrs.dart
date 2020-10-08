@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+import 'exceptions.dart';
+import 'http_helper.dart';
 import 'models/pictrs.dart';
 
 class Pictrs {
@@ -21,7 +23,12 @@ class Pictrs {
   }
 
   Future<void> delete(PictrsUploadFile pictrsFile) async {
-    await http.delete(Uri.https(host,
+    var res = await http.delete(Uri.https(host,
         '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}'));
+
+    if (!res.ok) {
+      var json = jsonDecode(utf8.decode(res.bodyBytes));
+      throw LemmyApiException(json['msg']);
+    }
   }
 }
