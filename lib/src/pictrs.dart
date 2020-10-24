@@ -23,12 +23,20 @@ class Pictrs {
   }
 
   Future<void> delete(PictrsUploadFile pictrsFile) async {
-    var res = await http.delete(Uri.https(host,
+    var res = await http.get(Uri.https(host,
         '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}'));
 
     if (!res.ok) {
-      var json = jsonDecode(utf8.decode(res.bodyBytes));
-      throw LemmyApiException(json['msg']);
+      switch (res.statusCode) {
+        case 403:
+          throw LemmyApiException('pictrs_wrong_delete_token');
+          break;
+        case 404:
+          throw LemmyApiException('pictrs_not_found');
+          break;
+        default:
+          throw LemmyApiException('pictrs_unknown_error');
+      }
     }
   }
 }
