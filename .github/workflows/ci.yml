@@ -28,3 +28,5 @@ jobs:
 
       - name: Run tests
         run: dart test
+        env:
+          TEST_JWT: ${{ secrets.TEST_JWT }}
