@@ -1,3 +1,9 @@
+## 0.8.0 - 2020-12-04
+
+### Fixed
+
+- Pict-rs upload requires auth
+
 ## 0.7.3 - 2020-10-24
 
 ### Fixed
