@@ -1,12 +1,15 @@
+import 'dart:io';
+
 import 'package:lemmy_api_client/lemmy_api_client.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('pictrs', () {
-    final pictrs = LemmyApi('dev.lemmy.ml').pictrs;
+    final pictrs = LemmyApi('lemmy.ml').pictrs;
 
     test('successful upload and delete', () async {
-      final res = await pictrs.upload('test/test.png');
+      final res = await pictrs.upload(
+          filePath: 'test/test.png', auth: Platform.environment['TEST_JWT']);
       await pictrs.delete(res.files[0]);
     });
 

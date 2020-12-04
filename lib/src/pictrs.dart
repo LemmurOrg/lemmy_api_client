@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:meta/meta.dart';
 
 import 'exceptions.dart';
 import 'http_helper.dart';
@@ -12,9 +13,16 @@ class Pictrs {
 
   const Pictrs(this.host);
 
-  Future<PictrsUpload> upload(String filePath) async {
+  Future<PictrsUpload> upload({
+    @required String filePath,
+    @required String auth,
+  }) async {
+    assert(filePath != null);
+    assert(auth != null);
+
     final req = http.MultipartRequest('POST', Uri.https(host, extraPath))
       ..files.add(await http.MultipartFile.fromPath('images[]', filePath));
+    req.headers['Cookie'] = 'jwt=$auth';
 
     var res = await req.send();
     var body = jsonDecode(utf8.decode(await res.stream.toBytes()));
