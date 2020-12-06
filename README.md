@@ -4,9 +4,9 @@
 
  <img width=200px height=200px src="https://raw.githubusercontent.com/krawieck/lemmy_api_client/master/logo.svg"/>
 
-[![pub package](https://img.shields.io/pub/v/lemmy_api_client.svg)](https://pub.dev/packages/lemmy_api_client)
+[![](https://img.shields.io/pub/v/lemmy_api_client.svg?logo=dart)](https://pub.dev/packages/lemmy_api_client)
 [![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
-[![style: effective dart](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
+[![](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 
 A Dart client for the Lemmy API
 
