@@ -25,6 +25,7 @@ class VoteType {
 
 enum PostListingType {
   all,
+  local,
   subscribed,
   community,
 }
@@ -34,6 +35,8 @@ extension PostListingTypeValue on PostListingType {
     switch (this) {
       case PostListingType.all:
         return 'All';
+      case PostListingType.local:
+        return 'Local';
       case PostListingType.subscribed:
         return 'Subscribed';
       case PostListingType.community:
@@ -46,10 +49,12 @@ extension PostListingTypeValue on PostListingType {
     switch (this) {
       case PostListingType.all:
         return 0;
-      case PostListingType.subscribed:
+      case PostListingType.local:
         return 1;
-      case PostListingType.community:
+      case PostListingType.subscribed:
         return 2;
+      case PostListingType.community:
+        return 3;
     }
     throw Exception('unreachable');
   }
