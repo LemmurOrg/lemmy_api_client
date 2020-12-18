@@ -1,3 +1,9 @@
+## 0.8. - 2020-12-19
+
+### Added
+
+- Added `local` variant to `PostListingType`
+
 ## 0.8.0 - 2020-12-04
 
 ### Fixed
