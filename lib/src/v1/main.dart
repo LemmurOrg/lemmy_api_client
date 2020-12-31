@@ -1,4 +1,3 @@
-import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
@@ -7,6 +6,7 @@ import '../models/category.dart';
 import '../models/mod.dart';
 import '../models/search.dart';
 import '../models/user.dart';
+import '../utils/augmenter.dart';
 
 export 'comment_endpoint.dart';
 export 'community_endpoint.dart';

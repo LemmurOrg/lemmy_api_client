@@ -1,7 +1,7 @@
-import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart';
 
 import '../models/site.dart';
+import '../utils/augmenter.dart';
 import 'main.dart';
 
 extension SiteEndpoint on V1 {
