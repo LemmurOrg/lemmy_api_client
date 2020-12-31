@@ -1,4 +1,3 @@
-import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
@@ -7,6 +6,7 @@ import '../models/comment.dart';
 import '../models/jwt.dart';
 import '../models/private_message.dart';
 import '../models/user.dart';
+import '../utils/augmenter.dart';
 import 'main.dart';
 
 extension UserEndpoint on V1 {
