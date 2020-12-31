@@ -3,6 +3,7 @@ import 'package:meta/meta.dart' show required;
 import '../enums.dart';
 import '../models/community.dart';
 import '../models/user.dart';
+import '../utils/augmenter.dart';
 import 'main.dart';
 
 extension CommunityEndpoint on V1 {
@@ -22,7 +23,13 @@ extension CommunityEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    return FullCommunityView.fromJson(res);
+    var view = FullCommunityView.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.community);
+    view.moderators.forEach(augmenter);
+
+    return view;
   }
 
   /// POST /community
@@ -109,7 +116,12 @@ extension CommunityEndpoint on V1 {
       'auth': auth,
     });
 
-    return BannedUser.fromJson(res);
+    var view = BannedUser.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.user);
+
+    return view;
   }
 
   /// POST /community/mod
@@ -197,7 +209,14 @@ extension CommunityEndpoint on V1 {
       'auth': auth,
     });
 
-    return TransferredCommunity.fromJson(res);
+    var view = TransferredCommunity.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.community);
+    view.moderators.forEach(augmenter);
+    view.admins.forEach(augmenter);
+
+    return view;
   }
 
   /// GET /community/list

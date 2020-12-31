@@ -1,10 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'with_instance_host.dart';
+
 part 'mod.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L24
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModRemovePostView {
+class ModRemovePostView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int postId;
@@ -22,7 +24,7 @@ class ModRemovePostView {
   final int communityId;
   final String communityName;
 
-  const ModRemovePostView({
+  ModRemovePostView({
     this.id,
     this.modUserId,
     this.postId,
@@ -41,7 +43,7 @@ class ModRemovePostView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L84
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModLockPostView {
+class ModLockPostView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int postId;
@@ -56,7 +58,7 @@ class ModLockPostView {
   final int communityId;
   final String communityName;
 
-  const ModLockPostView({
+  ModLockPostView({
     this.id,
     this.modUserId,
     this.postId,
@@ -74,7 +76,7 @@ class ModLockPostView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L207
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModRemoveCommentView {
+class ModRemoveCommentView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int commentId;
@@ -96,7 +98,7 @@ class ModRemoveCommentView {
   final int communityId;
   final String communityName;
 
-  const ModRemoveCommentView({
+  ModRemoveCommentView({
     this.id,
     this.modUserId,
     this.commentId,
@@ -119,7 +121,7 @@ class ModRemoveCommentView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L271
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModRemoveCommunityView {
+class ModRemoveCommunityView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int communityId;
@@ -138,7 +140,7 @@ class ModRemoveCommunityView {
   final String modUserName;
   final String communityName;
 
-  const ModRemoveCommunityView({
+  ModRemoveCommunityView({
     this.id,
     this.modUserId,
     this.communityId,
@@ -156,7 +158,7 @@ class ModRemoveCommunityView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L327
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModBanFromCommunityView {
+class ModBanFromCommunityView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int otherUserId;
@@ -177,7 +179,7 @@ class ModBanFromCommunityView {
   final String otherUserName;
   final String communityName;
 
-  const ModBanFromCommunityView({
+  ModBanFromCommunityView({
     this.id,
     this.modUserId,
     this.otherUserId,
@@ -197,7 +199,7 @@ class ModBanFromCommunityView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L388
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModBanView {
+class ModBanView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int otherUserId;
@@ -216,7 +218,7 @@ class ModBanView {
   final String modUserName;
   final String otherUserName;
 
-  const ModBanView({
+  ModBanView({
     this.id,
     this.modUserId,
     this.otherUserId,
@@ -234,7 +236,7 @@ class ModBanView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L442
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModAddCommunityView {
+class ModAddCommunityView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int otherUserId;
@@ -249,7 +251,7 @@ class ModAddCommunityView {
   final String otherUserName;
   final String communityName;
 
-  const ModAddCommunityView({
+  ModAddCommunityView({
     this.id,
     this.modUserId,
     this.otherUserId,
@@ -267,7 +269,7 @@ class ModAddCommunityView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/moderator_views.rs#L499
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ModAddView {
+class ModAddView extends WithInstanceHost {
   final int id;
   final int modUserId;
   final int otherUserId;
@@ -280,7 +282,7 @@ class ModAddView {
   final String modUserName;
   final String otherUserName;
 
-  const ModAddView({
+  ModAddView({
     this.id,
     this.modUserId,
     this.otherUserId,
@@ -296,7 +298,7 @@ class ModAddView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-modlog
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class Modlog {
+class Modlog extends WithInstanceHost {
   final List<ModRemovePostView> removedPosts;
   final List<ModLockPostView> lockedPosts;
   final List<ModRemoveCommentView> removedComments;
@@ -306,7 +308,7 @@ class Modlog {
   final List<ModAddCommunityView> addedToCommunity;
   final List<ModAddView> added;
 
-  const Modlog({
+  Modlog({
     this.removedPosts,
     this.lockedPosts,
     this.removedComments,

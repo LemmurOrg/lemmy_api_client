@@ -19,7 +19,7 @@ ModRemovePostView _$ModRemovePostViewFromJson(Map<String, dynamic> json) {
     postName: json['post_name'] as String,
     communityId: json['community_id'] as int,
     communityName: json['community_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
@@ -34,7 +34,7 @@ ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
     postName: json['post_name'] as String,
     communityId: json['community_id'] as int,
     communityName: json['community_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
@@ -54,7 +54,7 @@ ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
     postName: json['post_name'] as String,
     communityId: json['community_id'] as int,
     communityName: json['community_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModRemoveCommunityView _$ModRemoveCommunityViewFromJson(
@@ -72,7 +72,7 @@ ModRemoveCommunityView _$ModRemoveCommunityViewFromJson(
         json['when_'] == null ? null : DateTime.parse(json['when_'] as String),
     modUserName: json['mod_user_name'] as String,
     communityName: json['community_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
@@ -92,7 +92,7 @@ ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
     modUserName: json['mod_user_name'] as String,
     otherUserName: json['other_user_name'] as String,
     communityName: json['community_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
@@ -109,7 +109,7 @@ ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
         json['when_'] == null ? null : DateTime.parse(json['when_'] as String),
     modUserName: json['mod_user_name'] as String,
     otherUserName: json['other_user_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModAddCommunityView _$ModAddCommunityViewFromJson(Map<String, dynamic> json) {
@@ -124,7 +124,7 @@ ModAddCommunityView _$ModAddCommunityViewFromJson(Map<String, dynamic> json) {
     modUserName: json['mod_user_name'] as String,
     otherUserName: json['other_user_name'] as String,
     communityName: json['community_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
@@ -137,7 +137,7 @@ ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
         json['when_'] == null ? null : DateTime.parse(json['when_'] as String),
     modUserName: json['mod_user_name'] as String,
     otherUserName: json['other_user_name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Modlog _$ModlogFromJson(Map<String, dynamic> json) {
@@ -180,5 +180,5 @@ Modlog _$ModlogFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ModAddView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }

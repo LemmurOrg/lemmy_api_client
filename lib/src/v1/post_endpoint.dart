@@ -1,3 +1,4 @@
+import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
@@ -45,7 +46,15 @@ extension PostEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    return FullPostView.fromJson(res);
+    var view = FullPostView.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.post);
+    view.comments.forEach(augmenter);
+    augmenter(view.community);
+    view.moderators.forEach(augmenter);
+
+    return view;
   }
 
   /// GET /post/list
@@ -75,7 +84,7 @@ extension PostEndpoint on V1 {
     });
 
     List<dynamic> posts = json['posts'];
-    return posts.map((e) => PostView.fromJson(e)).toList();
+    return posts.map((e) => PostView.fromJson(e)..instanceHost = host).toList();
   }
 
   /// POST /post/like

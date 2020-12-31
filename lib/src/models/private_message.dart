@@ -1,10 +1,12 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'with_instance_host.dart';
+
 part 'private_message.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/private_message_view.rs#L35
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class PrivateMessageView {
+class PrivateMessageView extends WithInstanceHost {
   final int id;
   final int creatorId;
   final int recipientId;
@@ -36,7 +38,7 @@ class PrivateMessageView {
   final String recipientActorId;
   final bool recipientLocal;
 
-  const PrivateMessageView({
+  PrivateMessageView({
     this.id,
     this.creatorId,
     this.recipientId,

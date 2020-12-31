@@ -10,5 +10,5 @@ Category _$CategoryFromJson(Map<String, dynamic> json) {
   return Category(
     id: json['id'] as int,
     name: json['name'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }

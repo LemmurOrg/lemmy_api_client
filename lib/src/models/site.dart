@@ -1,12 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../models/user.dart';
+import 'with_instance_host.dart';
 
 part 'site.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/site_view.rs#L31
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class SiteView {
+class SiteView extends WithInstanceHost {
   final int id;
   final String name;
 
@@ -38,7 +39,7 @@ class SiteView {
   final int numberOfComments;
   final int numberOfCommunities;
 
-  const SiteView({
+  SiteView({
     this.id,
     this.name,
     this.description,
@@ -65,7 +66,7 @@ class SiteView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-site
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class FullSiteView {
+class FullSiteView extends WithInstanceHost {
   /// can be null
   final SiteView site;
   final List<UserView> admins;
@@ -76,7 +77,7 @@ class FullSiteView {
   /// can be null
   final User myUser;
 
-  const FullSiteView({
+  FullSiteView({
     this.site,
     this.admins,
     this.banned,
@@ -91,13 +92,13 @@ class FullSiteView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#transfer-site
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class TransferredSite {
+class TransferredSite extends WithInstanceHost {
   /// can be null
   final SiteView site;
   final List<UserView> admins;
   final List<UserView> banned;
 
-  const TransferredSite({
+  TransferredSite({
     this.site,
     this.admins,
     this.banned,

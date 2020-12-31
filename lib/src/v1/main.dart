@@ -1,3 +1,4 @@
+import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
@@ -27,7 +28,9 @@ class V1 with HttpHelper {
     var res = await get('/categories');
 
     List<dynamic> categories = res['categories'];
-    return categories.map((e) => Category.fromJson(e)).toList();
+    return categories
+        .map((e) => Category.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// GET /search
@@ -57,7 +60,15 @@ class V1 with HttpHelper {
       if (auth != null) 'auth': auth,
     });
 
-    return Search.fromJson(res);
+    var view = Search.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    view.comments.forEach(augmenter);
+    view.posts.forEach(augmenter);
+    view.communities.forEach(augmenter);
+    view.users.forEach(augmenter);
+
+    return view;
   }
 
   /// POST /admin/add
@@ -78,7 +89,9 @@ class V1 with HttpHelper {
     });
 
     List<dynamic> admins = res['admins'];
-    return admins.map((e) => UserView.fromJson(e)).toList();
+    return admins
+        .map((e) => UserView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// GET /modlog
@@ -99,6 +112,18 @@ class V1 with HttpHelper {
       if (limit != null) 'limit': limit.toString(),
     });
 
-    return Modlog.fromJson(res);
+    var view = Modlog.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    view.removedPosts.forEach(augmenter);
+    view.lockedPosts.forEach(augmenter);
+    view.removedComments.forEach(augmenter);
+    view.removedCommunities.forEach(augmenter);
+    view.bannedFromCommunity.forEach(augmenter);
+    view.banned.forEach(augmenter);
+    view.addedToCommunity.forEach(augmenter);
+    view.added.forEach(augmenter);
+
+    return view;
   }
 }

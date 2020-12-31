@@ -1,3 +1,4 @@
+import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
@@ -106,7 +107,16 @@ extension UserEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    return UserDetails.fromJson(res);
+    var view = UserDetails.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.user);
+    view.follows.forEach(augmenter);
+    view.moderates.forEach(augmenter);
+    view.comments.forEach(augmenter);
+    view.posts.forEach(augmenter);
+
+    return view;
   }
 
   /// PUT /user/save_user_settings
@@ -195,7 +205,9 @@ extension UserEndpoint on V1 {
     });
 
     List<dynamic> replies = res['replies'];
-    return replies.map((e) => ReplyView.fromJson(e)).toList();
+    return replies
+        .map((e) => ReplyView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// GET /user/mention
@@ -222,7 +234,9 @@ extension UserEndpoint on V1 {
     });
 
     List<dynamic> replies = res['mentions'];
-    return replies.map((e) => UserMentionView.fromJson(e)).toList();
+    return replies
+        .map((e) => UserMentionView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// POST /user/mention/mark_as_read
@@ -266,7 +280,9 @@ extension UserEndpoint on V1 {
     });
 
     List<dynamic> replies = res['messages'];
-    return replies.map((e) => PrivateMessageView.fromJson(e)).toList();
+    return replies
+        .map((e) => PrivateMessageView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// POST /private_message
@@ -361,7 +377,9 @@ extension UserEndpoint on V1 {
     });
 
     List<dynamic> replies = res['replies'];
-    return replies.map((e) => ReplyView.fromJson(e)).toList();
+    return replies
+        .map((e) => ReplyView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// POST /user/delete_account

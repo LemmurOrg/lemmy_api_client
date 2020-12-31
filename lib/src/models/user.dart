@@ -4,12 +4,13 @@ import './comment.dart';
 import './community.dart';
 import './post.dart';
 import '../enums.dart';
+import 'with_instance_host.dart';
 
 part 'user.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user_view.rs#L58
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class UserView {
+class UserView extends WithInstanceHost {
   final int id;
   final String actorId;
   final String name;
@@ -42,7 +43,7 @@ class UserView {
   final int numberOfComments;
   final int commentScore;
 
-  const UserView({
+  UserView({
     this.id,
     this.actorId,
     this.name,
@@ -70,7 +71,7 @@ class UserView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user.rs#L13
 @JsonSerializable(fieldRename: FieldRename.snake)
-class User {
+class User extends WithInstanceHost {
   final int id;
   final String name;
 
@@ -115,7 +116,7 @@ class User {
   /// can be null
   final String banner;
 
-  const User({
+  User({
     this.id,
     this.name,
     this.preferredUsername,
@@ -150,7 +151,7 @@ class User {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user_mention_view.rs#L90
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class UserMentionView {
+class UserMentionView extends WithInstanceHost {
   final int id;
   final int userMentionId;
   final int creatorId;
@@ -204,7 +205,7 @@ class UserMentionView {
   final String recipientActorId;
   final bool recipientLocal;
 
-  const UserMentionView({
+  UserMentionView({
     this.id,
     this.userMentionId,
     this.creatorId,
@@ -248,14 +249,14 @@ class UserMentionView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-user-details
 @JsonSerializable(createToJson: false)
-class UserDetails {
+class UserDetails extends WithInstanceHost {
   final UserView user;
   final List<CommunityFollowerView> follows;
   final List<CommunityModeratorView> moderates;
   final List<CommentView> comments;
   final List<PostView> posts;
 
-  const UserDetails({
+  UserDetails({
     this.user,
     this.follows,
     this.moderates,
@@ -269,11 +270,11 @@ class UserDetails {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#ban-user
 @JsonSerializable(createToJson: false)
-class BannedUser {
+class BannedUser extends WithInstanceHost {
   final UserView user;
   final bool banned;
 
-  const BannedUser({
+  BannedUser({
     this.user,
     this.banned,
   });

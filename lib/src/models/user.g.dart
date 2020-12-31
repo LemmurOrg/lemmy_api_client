@@ -29,7 +29,7 @@ UserView _$UserViewFromJson(Map<String, dynamic> json) {
     postScore: json['post_score'] as int,
     numberOfComments: json['number_of_comments'] as int,
     commentScore: json['comment_score'] as int,
-  );
+  )..instanceHost = json['instanceHost'] as String;
 }
 
 User _$UserFromJson(Map<String, dynamic> json) {
@@ -65,10 +65,11 @@ User _$UserFromJson(Map<String, dynamic> json) {
         ? null
         : DateTime.parse(json['last_refreshed_at'] as String),
     banner: json['banner'] as String,
-  );
+  )..instanceHost = json['instanceHost'] as String;
 }
 
 Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
+      'instanceHost': instance.instanceHost,
       'id': instance.id,
       'name': instance.name,
       'preferred_username': instance.preferredUsername,
@@ -137,7 +138,7 @@ UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
     recipientId: json['recipient_id'] as int,
     recipientActorId: json['recipient_actor_id'] as String,
     recipientLocal: json['recipient_local'] as bool,
-  );
+  )..instanceHost = json['instanceHost'] as String;
 }
 
 UserDetails _$UserDetailsFromJson(Map<String, dynamic> json) {
@@ -163,7 +164,7 @@ UserDetails _$UserDetailsFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : PostView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instanceHost'] as String;
 }
 
 BannedUser _$BannedUserFromJson(Map<String, dynamic> json) {
@@ -172,5 +173,5 @@ BannedUser _$BannedUserFromJson(Map<String, dynamic> json) {
         ? null
         : UserView.fromJson(json['user'] as Map<String, dynamic>),
     banned: json['banned'] as bool,
-  );
+  )..instanceHost = json['instanceHost'] as String;
 }

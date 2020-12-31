@@ -30,6 +30,12 @@ mixin HttpHelper {
     throw LemmyApiException(errorMessage);
   }
 
+  /// adds a `instance_host` key to a json
+  Map<String, dynamic> _augmentWithInstanceHost(Map<String, dynamic> json) {
+    json['instanceHost'] = host;
+    return json;
+  }
+
   /// a helper GET method that serializes query params
   Future<Map<String, dynamic>> get(String path,
       [Map<String, String> query]) async {
@@ -39,7 +45,7 @@ mixin HttpHelper {
       _throwResponseFail(res);
     }
 
-    return jsonDecode(utf8.decode(res.bodyBytes));
+    return _augmentWithInstanceHost(jsonDecode(utf8.decode(res.bodyBytes)));
   }
 
   /// a helper POST method that serializes body into JSON
@@ -56,7 +62,7 @@ mixin HttpHelper {
       _throwResponseFail(res);
     }
 
-    return jsonDecode(utf8.decode(res.bodyBytes));
+    return _augmentWithInstanceHost(jsonDecode(utf8.decode(res.bodyBytes)));
   }
 
   /// a helper PUT method that serializes body into JSON
@@ -73,6 +79,6 @@ mixin HttpHelper {
       _throwResponseFail(res);
     }
 
-    return jsonDecode(utf8.decode(res.bodyBytes));
+    return _augmentWithInstanceHost(jsonDecode(utf8.decode(res.bodyBytes)));
   }
 }

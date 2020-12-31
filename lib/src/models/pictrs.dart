@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'with_instance_host.dart';
+
 part 'pictrs.g.dart';
 
 /// Based on https://git.asonix.dog/asonix/pict-rs/
@@ -16,11 +18,14 @@ class PictrsUploadFile {
 }
 
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class PictrsUpload {
+class PictrsUpload extends WithInstanceHost {
   final String msg;
   final List<PictrsUploadFile> files;
 
-  const PictrsUpload({this.msg, this.files});
+  PictrsUpload({
+    this.msg,
+    this.files,
+  });
 
   factory PictrsUpload.fromJson(Map<String, dynamic> json) =>
       _$PictrsUploadFromJson(json);

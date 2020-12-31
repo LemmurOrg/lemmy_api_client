@@ -1,12 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'user.dart';
+import 'with_instance_host.dart';
 
 part 'community.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L130
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommunityView {
+class CommunityView extends WithInstanceHost {
   final int id;
   final String name;
   final String title;
@@ -52,7 +53,7 @@ class CommunityView {
   /// can be null
   final bool subscribed;
 
-  const CommunityView({
+  CommunityView({
     this.id,
     this.name,
     this.title,
@@ -89,7 +90,7 @@ class CommunityView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L336
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommunityFollowerView {
+class CommunityFollowerView extends WithInstanceHost {
   final int id;
   final int communityId;
   final int userId;
@@ -110,7 +111,7 @@ class CommunityFollowerView {
   /// can be null
   final String communityIcon;
 
-  const CommunityFollowerView({
+  CommunityFollowerView({
     this.id,
     this.communityId,
     this.userId,
@@ -132,7 +133,7 @@ class CommunityFollowerView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L298
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommunityModeratorView {
+class CommunityModeratorView extends WithInstanceHost {
   final int id;
   final int communityId;
   final int userId;
@@ -153,7 +154,7 @@ class CommunityModeratorView {
   /// can be null
   final String communityIcon;
 
-  const CommunityModeratorView({
+  CommunityModeratorView({
     this.id,
     this.communityId,
     this.userId,
@@ -175,11 +176,14 @@ class CommunityModeratorView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-community
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class FullCommunityView {
+class FullCommunityView extends WithInstanceHost {
   final CommunityView community;
   final List<CommunityModeratorView> moderators;
 
-  const FullCommunityView({this.community, this.moderators});
+  FullCommunityView({
+    this.community,
+    this.moderators,
+  });
 
   factory FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$FullCommunityViewFromJson(json);
@@ -187,12 +191,16 @@ class FullCommunityView {
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#transfer-community
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class TransferredCommunity {
+class TransferredCommunity extends WithInstanceHost {
   final CommunityView community;
   final List<CommunityModeratorView> moderators;
   final List<UserView> admins;
 
-  const TransferredCommunity({this.community, this.moderators, this.admins});
+  TransferredCommunity({
+    this.community,
+    this.moderators,
+    this.admins,
+  });
 
   factory TransferredCommunity.fromJson(Map<String, dynamic> json) =>
       _$TransferredCommunityFromJson(json);

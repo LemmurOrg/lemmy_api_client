@@ -1,12 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../enums.dart';
+import 'with_instance_host.dart';
 
 part 'comment.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/comment_view.rs#L91
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommentView {
+class CommentView extends WithInstanceHost {
   final int id;
   final int creatorId;
   final int postId;
@@ -62,7 +63,7 @@ class CommentView {
   /// can be null
   final bool saved;
 
-  const CommentView({
+  CommentView({
     this.id,
     this.creatorId,
     this.postId,
@@ -106,7 +107,7 @@ class CommentView {
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/comment_view.rs#L356
 @JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ReplyView {
+class ReplyView extends WithInstanceHost {
   final int id;
   final int creatorId;
   final int postId;
@@ -163,7 +164,7 @@ class ReplyView {
   final bool saved;
   final int recipientId;
 
-  const ReplyView({
+  ReplyView({
     this.id,
     this.creatorId,
     this.postId,

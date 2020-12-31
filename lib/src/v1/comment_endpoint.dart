@@ -56,7 +56,9 @@ extension CommentEndpoint on V1 {
     });
 
     List<dynamic> comments = res['comments'];
-    return comments.map((e) => CommentView.fromJson(e)).toList();
+    return comments
+        .map((e) => CommentView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// PUT /comment

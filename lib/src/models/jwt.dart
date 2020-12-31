@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:json_annotation/json_annotation.dart';
 
+import 'with_instance_host.dart';
+
 part 'jwt.g.dart';
 
 Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
@@ -24,11 +26,14 @@ class Jwt {
 }
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class JwtPayload {
+class JwtPayload extends WithInstanceHost {
   final int id;
   final String iss;
 
-  const JwtPayload({this.id, this.iss});
+  JwtPayload({
+    this.id,
+    this.iss,
+  });
 
   factory JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$JwtPayloadFromJson(json);

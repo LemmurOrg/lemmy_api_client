@@ -27,7 +27,7 @@ class Pictrs {
     var res = await req.send();
     var body = jsonDecode(utf8.decode(await res.stream.toBytes()));
 
-    return PictrsUpload.fromJson(body);
+    return PictrsUpload.fromJson(body)..instanceHost = host;
   }
 
   Future<void> delete(PictrsUploadFile pictrsFile) async {

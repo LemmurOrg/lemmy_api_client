@@ -1,3 +1,4 @@
+import 'package:lemmy_api_client/src/utils/augmenter.dart';
 import 'package:meta/meta.dart';
 
 import '../models/site.dart';
@@ -40,7 +41,15 @@ extension SiteEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    return FullSiteView.fromJson(res);
+    var view = FullSiteView.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.site);
+    view.admins.forEach(augmenter);
+    view.banned.forEach(augmenter);
+    augmenter(view.myUser);
+
+    return view;
   }
 
   /// POST /site
@@ -103,6 +112,13 @@ extension SiteEndpoint on V1 {
       'auth': auth,
     });
 
-    return TransferredSite.fromJson(res);
+    var view = TransferredSite.fromJson(res);
+
+    final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
+    augmenter(view.site);
+    view.admins.forEach(augmenter);
+    view.banned.forEach(augmenter);
+
+    return view;
   }
 }
