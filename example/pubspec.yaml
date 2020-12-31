@@ -1,0 +1,10 @@
+name: lemmy_api_client_example
+version: 0.0.0
+description: A new Flutter project.
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  lemmy_api_client:
+    path: ../
