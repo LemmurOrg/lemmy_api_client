@@ -20,6 +20,7 @@ A Dart client for the Lemmy API
 - Strictly typed responses
 - Http and [~~websocket~~](https://github.com/krawieck/lemmy_api_client/issues/4) interface
 - Pictrs endpoints
+- Models have a `.instanceHost` property that indicates the instance that return a given object
 
 ## Example
 

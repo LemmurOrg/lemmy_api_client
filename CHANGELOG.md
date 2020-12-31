@@ -1,3 +1,9 @@
+## 0.8.2 - 2020-12-31
+
+### Added
+
+- All models are now augmented with a `instanceHost` property that shows where did the response come from. Very useful when dealing with multiple instances at once and not knowing what object belongs to what instance.
+
 ## 0.8.1 - 2020-12-19
 
 ### Added
