@@ -49,7 +49,7 @@ CommentView _$CommentViewFromJson(Map<String, dynamic> json) {
     myVote: VoteType.tryParse(json['my_vote'] as int),
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
-  )..instanceHost = json['instance_host'] as String;
+  )..instanceHost = json['instanceHost'] as String;
 }
 
 ReplyView _$ReplyViewFromJson(Map<String, dynamic> json) {
@@ -96,5 +96,5 @@ ReplyView _$ReplyViewFromJson(Map<String, dynamic> json) {
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
     recipientId: json['recipient_id'] as int,
-  )..instanceHost = json['instance_host'] as String;
+  )..instanceHost = json['instanceHost'] as String;
 }

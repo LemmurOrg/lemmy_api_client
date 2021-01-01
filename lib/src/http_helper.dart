@@ -30,7 +30,7 @@ mixin HttpHelper {
     throw LemmyApiException(errorMessage);
   }
 
-  /// adds a `instance_host` key to a json
+  /// adds a `instanceHost` key to a json
   Map<String, dynamic> _augmentWithInstanceHost(Map<String, dynamic> json) {
     json['instanceHost'] = host;
     return json;

@@ -62,7 +62,7 @@ PostView _$PostViewFromJson(Map<String, dynamic> json) {
     subscribed: json['subscribed'] as bool,
     read: json['read'] as bool,
     saved: json['saved'] as bool,
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 FullPostView _$FullPostViewFromJson(Map<String, dynamic> json) {
@@ -82,5 +82,5 @@ FullPostView _$FullPostViewFromJson(Map<String, dynamic> json) {
             ? null
             : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
