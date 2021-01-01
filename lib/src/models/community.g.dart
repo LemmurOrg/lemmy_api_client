@@ -42,7 +42,7 @@ CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
     hotRank: json['hot_rank'] as int,
     userId: json['user_id'] as int,
     subscribed: json['subscribed'] as bool,
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 CommunityFollowerView _$CommunityFollowerViewFromJson(
@@ -63,7 +63,7 @@ CommunityFollowerView _$CommunityFollowerViewFromJson(
     communityLocal: json['community_local'] as bool,
     communityName: json['community_name'] as String,
     communityIcon: json['community_icon'] as String,
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 CommunityModeratorView _$CommunityModeratorViewFromJson(
@@ -84,7 +84,7 @@ CommunityModeratorView _$CommunityModeratorViewFromJson(
     communityLocal: json['community_local'] as bool,
     communityName: json['community_name'] as String,
     communityIcon: json['community_icon'] as String,
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 FullCommunityView _$FullCommunityViewFromJson(Map<String, dynamic> json) {
@@ -97,7 +97,7 @@ FullCommunityView _$FullCommunityViewFromJson(Map<String, dynamic> json) {
             ? null
             : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 TransferredCommunity _$TransferredCommunityFromJson(Map<String, dynamic> json) {
@@ -114,5 +114,5 @@ TransferredCommunity _$TransferredCommunityFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }

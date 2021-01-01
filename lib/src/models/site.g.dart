@@ -30,7 +30,7 @@ SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
     numberOfPosts: json['number_of_posts'] as int,
     numberOfComments: json['number_of_comments'] as int,
     numberOfCommunities: json['number_of_communities'] as int,
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
@@ -51,7 +51,7 @@ FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
     myUser: json['my_user'] == null
         ? null
         : User.fromJson(json['my_user'] as Map<String, dynamic>),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
 
 TransferredSite _$TransferredSiteFromJson(Map<String, dynamic> json) {
@@ -67,5 +67,5 @@ TransferredSite _$TransferredSiteFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }

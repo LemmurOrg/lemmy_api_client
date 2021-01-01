@@ -21,5 +21,5 @@ PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
             ? null
             : PictrsUploadFile.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }

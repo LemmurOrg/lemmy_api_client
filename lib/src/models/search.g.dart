@@ -26,5 +26,5 @@ Search _$SearchFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instanceHost'] as String;
+  )..instanceHost = json['instance_host'] as String;
 }
