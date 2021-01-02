@@ -1,3 +1,9 @@
+## 0.8.5 - 2021-01-02
+
+### Fixed
+
+- Fixed v0.8.4 (third time's the charm?)
+
 ## 0.8.4 - 2021-01-01
 
 ### Fixed
