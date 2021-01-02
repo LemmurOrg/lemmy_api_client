@@ -145,7 +145,9 @@ extension CommunityEndpoint on V1 {
     });
 
     final List<dynamic> communities = res['moderators'];
-    return communities.map((e) => CommunityModeratorView.fromJson(e)).toList();
+    return communities
+        .map((e) => CommunityModeratorView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// POST /community/delete
@@ -239,7 +241,9 @@ extension CommunityEndpoint on V1 {
     });
 
     List<dynamic> communities = res['communities'];
-    return communities.map((e) => CommunityView.fromJson(e)).toList();
+    return communities
+        .map((e) => CommunityView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 
   /// POST /community/follow
@@ -274,6 +278,8 @@ extension CommunityEndpoint on V1 {
     });
 
     final List<dynamic> communities = res['communities'];
-    return communities.map((e) => CommunityFollowerView.fromJson(e)).toList();
+    return communities
+        .map((e) => CommunityFollowerView.fromJson(e)..instanceHost = host)
+        .toList();
   }
 }
