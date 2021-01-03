@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('PostView test', () {
-    Map<String, dynamic> communityJson = jsonDecode('''
+    final Map<String, dynamic> communityJson = jsonDecode('''
       {
         "id": 3,
         "name": "haskell",
@@ -37,7 +37,7 @@ void main() {
         "subscribed": null
     }''');
 
-    var community = CommunityView.fromJson(communityJson);
+    final community = CommunityView.fromJson(communityJson);
 
     expect(community.id, 3);
     expect(community.name, 'haskell');

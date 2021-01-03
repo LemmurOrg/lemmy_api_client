@@ -18,7 +18,7 @@ extension CommentEndpoint on V1 {
     assert(postId != null);
     assert(auth != null);
 
-    var res = await post('/comment', {
+    final res = await post('/comment', {
       'content': content,
       if (parentId != null) 'parent_id': parentId,
       'post_id': postId,
@@ -45,7 +45,7 @@ extension CommentEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/comment/list', {
+    final res = await get('/comment/list', {
       'type_': type.value,
       'sort': sort.value,
       if (page != null) 'page': page.toString(),
@@ -55,7 +55,7 @@ extension CommentEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    List<dynamic> comments = res['comments'];
+    final List<dynamic> comments = res['comments'];
     return comments
         .map((e) => CommentView.fromJson(e)..instanceHost = host)
         .toList();
@@ -73,7 +73,7 @@ extension CommentEndpoint on V1 {
     assert(editId != null);
     assert(auth != null);
 
-    var res = await put('/comment', {
+    final res = await put('/comment', {
       'content': content,
       'edit_id': editId,
       if (formId != null) 'form_id': formId,
@@ -95,7 +95,7 @@ extension CommentEndpoint on V1 {
     assert(deleted != null);
     assert(auth != null);
 
-    var res = await post('/comment/delete', {
+    final res = await post('/comment/delete', {
       'edit_id': editId,
       'deleted': deleted,
       'auth': auth,
@@ -117,7 +117,7 @@ extension CommentEndpoint on V1 {
     assert(removed != null);
     assert(auth != null);
 
-    var res = await post('/comment/remove', {
+    final res = await post('/comment/remove', {
       'edit_id': editId,
       'removed': removed,
       if (reason != null) 'reason': reason,
@@ -138,7 +138,7 @@ extension CommentEndpoint on V1 {
     assert(read != null);
     assert(auth != null);
 
-    var res = await post('/comment/mark_as_read', {
+    final res = await post('/comment/mark_as_read', {
       'edit_id': editId,
       'read': read,
       'auth': auth,
@@ -158,7 +158,7 @@ extension CommentEndpoint on V1 {
     assert(save != null);
     assert(auth != null);
 
-    var res = await put('/comment/save', {
+    final res = await put('/comment/save', {
       'comment_id': commentId,
       'save': save,
       'auth': auth,
@@ -178,7 +178,7 @@ extension CommentEndpoint on V1 {
     assert(score != null);
     assert(auth != null);
 
-    var res = await post('/comment/like', {
+    final res = await post('/comment/like', {
       'comment_id': commentId,
       'score': score.value,
       'auth': auth,

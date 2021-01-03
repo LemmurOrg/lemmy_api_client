@@ -25,9 +25,9 @@ class V1 with HttpHelper {
   /// GET /categories
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#list-categories
   Future<List<Category>> listCategories() async {
-    var res = await get('/categories');
+    final res = await get('/categories');
 
-    List<dynamic> categories = res['categories'];
+    final List<dynamic> categories = res['categories'];
     return categories
         .map((e) => Category.fromJson(e)..instanceHost = host)
         .toList();
@@ -50,7 +50,7 @@ class V1 with HttpHelper {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/search', {
+    final res = await get('/search', {
       'q': q,
       'type_': type.value,
       if (communityId != null) 'community_id': communityId,
@@ -60,7 +60,7 @@ class V1 with HttpHelper {
       if (auth != null) 'auth': auth,
     });
 
-    var view = Search.fromJson(res);
+    final view = Search.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     view.comments.forEach(augmenter);
@@ -82,13 +82,13 @@ class V1 with HttpHelper {
     assert(added != null);
     assert(auth != null);
 
-    var res = await post('/admin/add', {
+    final res = await post('/admin/add', {
       'user_id': userId,
       'added': added,
       'auth': auth,
     });
 
-    List<dynamic> admins = res['admins'];
+    final List<dynamic> admins = res['admins'];
     return admins
         .map((e) => UserView.fromJson(e)..instanceHost = host)
         .toList();
@@ -105,14 +105,14 @@ class V1 with HttpHelper {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/modlog', {
+    final res = await get('/modlog', {
       if (modUserId != null) 'mod_user_id': modUserId.toString(),
       if (communityId != null) 'community_id': communityId.toString(),
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),
     });
 
-    var view = Modlog.fromJson(res);
+    final view = Modlog.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     view.removedPosts.forEach(augmenter);

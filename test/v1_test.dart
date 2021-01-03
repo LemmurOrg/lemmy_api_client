@@ -13,7 +13,7 @@ void main() {
 
     group('search', () {
       test('correctly fetches', () async {
-        var res = await lemmy.search(
+        final res = await lemmy.search(
             type: SearchType.all, q: 'asd', sort: SortType.active);
 
         expect(res.type, SearchType.all);
@@ -53,7 +53,7 @@ void main() {
 
     group('getModlog', () {
       test('correctly fetches', () async {
-        var res = await lemmy.getModlog();
+        final res = await lemmy.getModlog();
 
         expect(res.banned, isA<List>());
       });
@@ -83,7 +83,7 @@ void main() {
 
     group('getComments', () {
       test('correctly fetches', () async {
-        var res = await lemmy.getComments(
+        final res = await lemmy.getComments(
             sort: SortType.active, type: CommentListingType.community);
         expect(res.length, 10);
       });
@@ -230,7 +230,7 @@ void main() {
 
     group('getPosts', () {
       test('correctly fetches', () async {
-        var res = await lemmy.getPosts(
+        final res = await lemmy.getPosts(
             type: PostListingType.all, sort: SortType.active);
         expect(res.length, 10);
       });

@@ -17,13 +17,13 @@ extension CommunityEndpoint on V1 {
     assert((id != null) ^ (name != null),
         'Either id or name should be passed, not both nor none');
 
-    var res = await get('/community', {
+    final res = await get('/community', {
       if (id != null) 'id': id.toString(),
       if (name != null) 'name': name,
       if (auth != null) 'auth': auth,
     });
 
-    var view = FullCommunityView.fromJson(res);
+    final view = FullCommunityView.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.community);
@@ -48,7 +48,7 @@ extension CommunityEndpoint on V1 {
     assert(categoryId != null);
     assert(auth != null);
 
-    var res = await post('/community', {
+    final res = await post('/community', {
       'name': name,
       'title': title,
       if (description != null) 'description': description,
@@ -77,7 +77,7 @@ extension CommunityEndpoint on V1 {
     assert(categoryId != null);
     assert(auth != null);
 
-    var res = await put('/community', {
+    final res = await put('/community', {
       'edit_id': editId,
       'title': title,
       if (description != null) 'description': description,
@@ -106,7 +106,7 @@ extension CommunityEndpoint on V1 {
     assert(ban != null);
     assert(auth != null);
 
-    var res = await post('/community/ban_user', {
+    final res = await post('/community/ban_user', {
       'community_id': communityId,
       'user_id': userId,
       'ban': ban,
@@ -116,7 +116,7 @@ extension CommunityEndpoint on V1 {
       'auth': auth,
     });
 
-    var view = BannedUser.fromJson(res);
+    final view = BannedUser.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.user);
@@ -137,7 +137,7 @@ extension CommunityEndpoint on V1 {
     assert(added != null);
     assert(auth != null);
 
-    var res = await post('/community/mod', {
+    final res = await post('/community/mod', {
       'community_id': communityId,
       'user_id': userId,
       'added': added,
@@ -161,7 +161,7 @@ extension CommunityEndpoint on V1 {
     assert(deleted != null);
     assert(auth != null);
 
-    var res = await post('/community/delete', {
+    final res = await post('/community/delete', {
       'edit_id': editId,
       'deleted': deleted,
       'auth': auth,
@@ -183,7 +183,7 @@ extension CommunityEndpoint on V1 {
     assert(removed != null);
     assert(auth != null);
 
-    var res = await post('/community/remove', {
+    final res = await post('/community/remove', {
       'edit_id': editId,
       'removed': removed,
       if (reason != null) 'reason': reason,
@@ -205,13 +205,13 @@ extension CommunityEndpoint on V1 {
     assert(userId != null);
     assert(auth != null);
 
-    var res = await post('/community/transfer', {
+    final res = await post('/community/transfer', {
       'community_id': communityId,
       'user_id': userId,
       'auth': auth,
     });
 
-    var view = TransferredCommunity.fromJson(res);
+    final view = TransferredCommunity.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.community);
@@ -233,14 +233,14 @@ extension CommunityEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/community/list', {
+    final res = await get('/community/list', {
       'sort': sort.value,
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),
       if (auth != null) 'auth': auth,
     });
 
-    List<dynamic> communities = res['communities'];
+    final List<dynamic> communities = res['communities'];
     return communities
         .map((e) => CommunityView.fromJson(e)..instanceHost = host)
         .toList();
@@ -257,7 +257,7 @@ extension CommunityEndpoint on V1 {
     assert(follow != null);
     assert(auth != null);
 
-    var res = await post('/community/follow', {
+    final res = await post('/community/follow', {
       'community_id': communityId,
       'follow': follow,
       'auth': auth,
@@ -273,7 +273,7 @@ extension CommunityEndpoint on V1 {
   }) async {
     assert(auth != null);
 
-    var res = await get('/user/followed_communities', {
+    final res = await get('/user/followed_communities', {
       'auth': auth,
     });
 

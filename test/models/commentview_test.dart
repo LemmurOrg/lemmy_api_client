@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('CommentView test', () {
-    Map<String, dynamic> commentFromApi = jsonDecode(""" 
+    final Map<String, dynamic> commentFromApi = jsonDecode(""" 
       {
         "id": 14296,
         "creator_id": 8218,
@@ -45,7 +45,7 @@ void main() {
         "saved": false
       }""");
 
-    var comment = CommentView.fromJson(commentFromApi);
+    final comment = CommentView.fromJson(commentFromApi);
 
     expect(comment.id, 14296);
     expect(comment.creatorId, 8218);

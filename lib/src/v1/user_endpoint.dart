@@ -19,7 +19,7 @@ extension UserEndpoint on V1 {
     assert(usernameOrEmail != null);
     assert(password != null);
 
-    var res = await post('/user/login', {
+    final res = await post('/user/login', {
       'username_or_email': usernameOrEmail,
       'password': password,
     });
@@ -54,7 +54,7 @@ extension UserEndpoint on V1 {
   //     );
   //   }
 
-  //   var res = await post('/user/register', {
+  //   final res = await post('/user/register', {
   //     'username': username,
   //     if (password != null) 'password': password,
   //     'password': password,
@@ -72,7 +72,7 @@ extension UserEndpoint on V1 {
   /// GET /user/get_captcha
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
   Future<Captcha> getCaptcha() async {
-    var res = await get('/user/get_captcha');
+    final res = await get('/user/get_captcha');
 
     return Captcha.fromJson(res['ok']);
   }
@@ -96,7 +96,7 @@ extension UserEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/user', {
+    final res = await get('/user', {
       if (userId != null) 'user_id': userId.toString(),
       if (username != null) 'username': username,
       'sort': sort.value,
@@ -107,7 +107,7 @@ extension UserEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    var view = UserDetails.fromJson(res);
+    final view = UserDetails.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.user);
@@ -158,7 +158,7 @@ extension UserEndpoint on V1 {
       );
     }
 
-    var res = await put('/user/save_user_settings', {
+    final res = await put('/user/save_user_settings', {
       'show_nsfw': showNsfw,
       'theme': theme,
       'default_sort_type': defaultSortType.index,
@@ -196,7 +196,7 @@ extension UserEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/user/replies', {
+    final res = await get('/user/replies', {
       'sort': sort.value,
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),
@@ -204,7 +204,7 @@ extension UserEndpoint on V1 {
       'auth': auth,
     });
 
-    List<dynamic> replies = res['replies'];
+    final List<dynamic> replies = res['replies'];
     return replies
         .map((e) => ReplyView.fromJson(e)..instanceHost = host)
         .toList();
@@ -225,7 +225,7 @@ extension UserEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/user/mention', {
+    final res = await get('/user/mention', {
       'sort': sort.value,
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),
@@ -233,7 +233,7 @@ extension UserEndpoint on V1 {
       'auth': auth,
     });
 
-    List<dynamic> replies = res['mentions'];
+    final List<dynamic> replies = res['mentions'];
     return replies
         .map((e) => UserMentionView.fromJson(e)..instanceHost = host)
         .toList();
@@ -250,7 +250,7 @@ extension UserEndpoint on V1 {
     assert(read != null);
     assert(auth != null);
 
-    var res = await post('/user/mention/mark_as_read', {
+    final res = await post('/user/mention/mark_as_read', {
       'user_mention_id': userMentionId,
       'read': read,
       'auth': auth,
@@ -272,14 +272,14 @@ extension UserEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var res = await get('/private_message/list', {
+    final res = await get('/private_message/list', {
       'unread_only': unreadOnly.toString(),
       if (page != null) 'page': page.toString(),
       if (limit != null) 'limit': limit.toString(),
       'auth': auth,
     });
 
-    List<dynamic> replies = res['messages'];
+    final List<dynamic> replies = res['messages'];
     return replies
         .map((e) => PrivateMessageView.fromJson(e)..instanceHost = host)
         .toList();
@@ -296,7 +296,7 @@ extension UserEndpoint on V1 {
     assert(recipientId != null);
     assert(auth != null);
 
-    var res = await post('/private_message', {
+    final res = await post('/private_message', {
       'content': content,
       'recipient_id': recipientId,
       'auth': auth,
@@ -316,7 +316,7 @@ extension UserEndpoint on V1 {
     assert(content != null);
     assert(auth != null);
 
-    var res = await put('/private_message', {
+    final res = await put('/private_message', {
       'edit_id': editId,
       'content': content,
       'auth': auth,
@@ -336,7 +336,7 @@ extension UserEndpoint on V1 {
     assert(deleted != null);
     assert(auth != null);
 
-    var res = await post('/private_message/delete', {
+    final res = await post('/private_message/delete', {
       'edit_id': editId,
       'deleted': deleted,
       'auth': auth,
@@ -356,7 +356,7 @@ extension UserEndpoint on V1 {
     assert(read != null);
     assert(auth != null);
 
-    var res = await post('/private_message/mark_as_read', {
+    final res = await post('/private_message/mark_as_read', {
       'edit_id': editId,
       'read': read,
       'auth': auth,
@@ -372,11 +372,11 @@ extension UserEndpoint on V1 {
   }) async {
     assert(auth != null);
 
-    var res = await post('/user/mark_all_as_read', {
+    final res = await post('/user/mark_all_as_read', {
       'auth': auth,
     });
 
-    List<dynamic> replies = res['replies'];
+    final List<dynamic> replies = res['replies'];
     return replies
         .map((e) => ReplyView.fromJson(e)..instanceHost = host)
         .toList();
@@ -391,7 +391,7 @@ extension UserEndpoint on V1 {
     assert(password != null);
     assert(auth != null);
 
-    var res = await post('/user/delete_account', {
+    final res = await post('/user/delete_account', {
       'password': password,
       'auth': auth,
     });
@@ -413,7 +413,7 @@ extension UserEndpoint on V1 {
     assert(userId != null);
     assert(auth != null);
 
-    var res = await post('/user/ban', {
+    final res = await post('/user/ban', {
       'user_id': userId,
       'ban': ban,
       if (removeData != null) 'remove_data': removeData,

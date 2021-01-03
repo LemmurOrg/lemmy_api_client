@@ -21,7 +21,7 @@ extension PostEndpoint on V1 {
     assert(communityId != null);
     assert(auth != null);
 
-    var res = await post('/post', {
+    final res = await post('/post', {
       'name': name,
       if (url != null) 'url': url,
       if (body != null) 'body': body,
@@ -41,12 +41,12 @@ extension PostEndpoint on V1 {
   }) async {
     assert(id != null);
 
-    var res = await get('/post', {
+    final res = await get('/post', {
       'id': id.toString(),
       if (auth != null) 'auth': auth,
     });
 
-    var view = FullPostView.fromJson(res);
+    final view = FullPostView.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.post);
@@ -73,7 +73,7 @@ extension PostEndpoint on V1 {
     assert(limit == null || limit >= 0);
     assert(page == null || page > 0);
 
-    var json = await get('/post/list', {
+    final json = await get('/post/list', {
       'type_': type.value,
       'sort': sort.value,
       if (page != null) 'page': page.toString(),
@@ -83,7 +83,7 @@ extension PostEndpoint on V1 {
       if (auth != null) 'auth': auth,
     });
 
-    List<dynamic> posts = json['posts'];
+    final List<dynamic> posts = json['posts'];
     return posts.map((e) => PostView.fromJson(e)..instanceHost = host).toList();
   }
 
@@ -98,7 +98,7 @@ extension PostEndpoint on V1 {
     assert(score != null);
     assert(auth != null);
 
-    var res = await post('/post/like', {
+    final res = await post('/post/like', {
       'post_id': postId,
       'score': score.value,
       'auth': auth,
@@ -122,7 +122,7 @@ extension PostEndpoint on V1 {
     assert(nsfw != null);
     assert(auth != null);
 
-    var res = await put('/post', {
+    final res = await put('/post', {
       'edit_id': editId,
       'name': name,
       if (url != null) 'url': url,
@@ -146,7 +146,7 @@ extension PostEndpoint on V1 {
     assert(deleted != null);
     assert(auth != null);
 
-    var res = await post('/post/delete', {
+    final res = await post('/post/delete', {
       'edit_id': editId,
       'deleted': deleted,
       'auth': auth,
@@ -168,7 +168,7 @@ extension PostEndpoint on V1 {
     assert(removed != null);
     assert(auth != null);
 
-    var res = await post('/post/remove', {
+    final res = await post('/post/remove', {
       'edit_id': editId,
       'removed': removed,
       if (reason != null) 'reason': reason,
@@ -189,7 +189,7 @@ extension PostEndpoint on V1 {
     assert(save != null);
     assert(auth != null);
 
-    var res = await put('/post/save', {
+    final res = await put('/post/save', {
       'post_id': postId,
       'save': save,
       'auth': auth,
@@ -209,7 +209,7 @@ extension PostEndpoint on V1 {
     assert(locked != null);
     assert(auth != null);
 
-    var res = await post('/post/lock', {
+    final res = await post('/post/lock', {
       'edit_id': editId,
       'locked': locked,
       'auth': auth,
@@ -229,7 +229,7 @@ extension PostEndpoint on V1 {
     assert(stickied != null);
     assert(auth != null);
 
-    var res = await post('/post/sticky', {
+    final res = await post('/post/sticky', {
       'edit_id': editId,
       'stickied': stickied,
       'auth': auth,

@@ -24,26 +24,26 @@ class Pictrs {
       ..files.add(await http.MultipartFile.fromPath('images[]', filePath));
     req.headers['Cookie'] = 'jwt=$auth';
 
-    var res = await req.send();
-    var body = jsonDecode(utf8.decode(await res.stream.toBytes()));
+    final res = await req.send();
+    final body = jsonDecode(utf8.decode(await res.stream.toBytes()));
 
     return PictrsUpload.fromJson(body)..instanceHost = host;
   }
 
   Future<void> delete(PictrsUploadFile pictrsFile) async {
-    var res = await http.get(Uri.https(host,
+    final res = await http.get(Uri.https(host,
         '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}'));
 
     if (!res.ok) {
       switch (res.statusCode) {
         case 403:
-          throw LemmyApiException('pictrs_wrong_delete_token');
+          throw const LemmyApiException('pictrs_wrong_delete_token');
           break;
         case 404:
-          throw LemmyApiException('pictrs_not_found');
+          throw const LemmyApiException('pictrs_not_found');
           break;
         default:
-          throw LemmyApiException('pictrs_unknown_error');
+          throw const LemmyApiException('pictrs_unknown_error');
       }
     }
   }

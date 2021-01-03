@@ -18,9 +18,9 @@ mixin HttpHelper {
   /// jsonBody.error -> rawBody -> null
   @alwaysThrows
   void _throwResponseFail(http.Response res) {
-    String errorMessage = () {
+    final String errorMessage = () {
       try {
-        Map<String, dynamic> json = jsonDecode(res.body);
+        final Map<String, dynamic> json = jsonDecode(res.body);
         return json['error'];
       } on FormatException {
         return res.body;
@@ -39,7 +39,7 @@ mixin HttpHelper {
   /// a helper GET method that serializes query params
   Future<Map<String, dynamic>> get(String path,
       [Map<String, String> query]) async {
-    var res = await http.get(Uri.https(host, '$extraPath$path', query));
+    final res = await http.get(Uri.https(host, '$extraPath$path', query));
 
     if (!res.ok) {
       _throwResponseFail(res);
@@ -52,7 +52,7 @@ mixin HttpHelper {
   /// and adds appropriate headers
   Future<Map<String, dynamic>> post(
       String path, Map<String, dynamic> body) async {
-    var res = await http.post(
+    final res = await http.post(
       Uri.https(host, '$extraPath$path'),
       body: jsonEncode(body),
       headers: {'Content-Type': 'application/json'},
@@ -69,7 +69,7 @@ mixin HttpHelper {
   /// and adds appropriate headers
   Future<Map<String, dynamic>> put(
       String path, Map<String, dynamic> body) async {
-    var res = await http.put(
+    final res = await http.put(
       Uri.https(host, '$extraPath$path'),
       body: jsonEncode(body),
       headers: {'Content-Type': 'application/json'},

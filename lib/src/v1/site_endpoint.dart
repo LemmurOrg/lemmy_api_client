@@ -14,7 +14,7 @@ extension SiteEndpoint on V1 {
     assert(configHjson != null);
     assert(auth != null);
 
-    var res = await put('/site/config', {
+    final res = await put('/site/config', {
       'config_hjson': configHjson,
       'auth': auth,
     });
@@ -27,7 +27,7 @@ extension SiteEndpoint on V1 {
   Future<String> getSiteConfig({@required String auth}) async {
     assert(auth != null);
 
-    var res = await get('/site/config', {
+    final res = await get('/site/config', {
       'auth': auth,
     });
 
@@ -37,11 +37,11 @@ extension SiteEndpoint on V1 {
   /// GET /site
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-site
   Future<FullSiteView> getSite({String auth}) async {
-    var res = await get('/site', {
+    final res = await get('/site', {
       if (auth != null) 'auth': auth,
     });
 
-    var view = FullSiteView.fromJson(res);
+    final view = FullSiteView.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.site);
@@ -64,7 +64,7 @@ extension SiteEndpoint on V1 {
     assert(name != null);
     assert(auth != null);
 
-    var res = await post('/site', {
+    final res = await post('/site', {
       'name': name,
       if (description != null) 'description': description,
       if (icon != null) 'icon': icon,
@@ -87,7 +87,7 @@ extension SiteEndpoint on V1 {
     assert(name != null);
     assert(auth != null);
 
-    var res = await put('/site', {
+    final res = await put('/site', {
       'name': name,
       if (description != null) 'description': description,
       if (icon != null) 'icon': icon,
@@ -107,12 +107,12 @@ extension SiteEndpoint on V1 {
     assert(userId != null);
     assert(auth != null);
 
-    var res = await post('/site/transfer', {
+    final res = await post('/site/transfer', {
       'user_id': userId,
       'auth': auth,
     });
 
-    var view = TransferredSite.fromJson(res);
+    final view = TransferredSite.fromJson(res);
 
     final augmenter = createWithInstanceHostAugmenter(view.instanceHost);
     augmenter(view.site);

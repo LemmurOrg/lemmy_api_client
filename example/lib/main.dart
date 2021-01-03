@@ -1,13 +1,13 @@
 import 'package:lemmy_api_client/lemmy_api_client.dart';
 
-void main() async {
+Future<void> main() async {
   // instantiate your lemmy instance with
   // the host uri and choose the API version
-  var lemmy = LemmyApi('dev.lemmy.ml').v1;
+  final lemmy = LemmyApi('dev.lemmy.ml').v1;
 
   // call methods that are named after op codes from the lemmy docs
-  var token = await lemmy.login(usernameOrEmail: 'asd', password: 'ads');
-  var messages =
+  final token = await lemmy.login(usernameOrEmail: 'asd', password: 'ads');
+  final messages =
       await lemmy.getPrivateMessages(unreadOnly: true, auth: token.raw);
 
   print(messages);

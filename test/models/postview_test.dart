@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('PostView test', () {
-    Map<String, dynamic> postJson = jsonDecode('''
+    final Map<String, dynamic> postJson = jsonDecode('''
       {
         "id": 38501,
         "name": "Niklaus Wirth was right and that is a problem",
@@ -56,7 +56,7 @@ void main() {
         "saved": false
       }''');
 
-    var post = PostView.fromJson(postJson);
+    final post = PostView.fromJson(postJson);
 
     expect(post.id, 38501);
     expect(post.name, 'Niklaus Wirth was right and that is a problem');

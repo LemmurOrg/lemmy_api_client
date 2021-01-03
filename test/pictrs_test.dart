@@ -16,7 +16,7 @@ void main() {
     group('delete', () {
       test('fails to delete a not existing resource', () async {
         try {
-          final rs = PictrsUploadFile(deleteToken: '123', file: 'qwe.jpg');
+          const rs = PictrsUploadFile(deleteToken: '123', file: 'qwe.jpg');
           await pictrs.delete(rs);
         } on LemmyApiException catch (err) {
           expect(err.message, 'pictrs_not_found');
@@ -25,7 +25,7 @@ void main() {
 
       test('fails to delete with a wrong token', () async {
         try {
-          final rs =
+          const rs =
               PictrsUploadFile(deleteToken: '123', file: 'r4ThsBI1dQ.jpg');
           await pictrs.delete(rs);
         } on LemmyApiException catch (err) {

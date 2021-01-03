@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('UserView test', () {
-    Map<String, dynamic> userJson = jsonDecode('''
+    final Map<String, dynamic> userJson = jsonDecode('''
       {
         "id": 13709,
         "actor_id": "https://dev.lemmy.ml/u/krawieck",
@@ -28,7 +28,7 @@ void main() {
         "comment_score": 0
       }''');
 
-    var user = UserView.fromJson(userJson);
+    final user = UserView.fromJson(userJson);
 
     expect(user.id, 13709);
     expect(user.actorId, 'https://dev.lemmy.ml/u/krawieck');
