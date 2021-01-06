@@ -1,3 +1,9 @@
+## 0.9.0 - 2021-01-06
+
+### Added
+
+- `User` model now uses enums for its fields
+
 ## 0.8.5 - 2021-01-02
 
 ### Fixed
