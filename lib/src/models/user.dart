@@ -70,7 +70,7 @@ class UserView extends WithInstanceHost {
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user.rs#L13
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
 class User extends WithInstanceHost {
   final int id;
   final String name;
@@ -92,8 +92,12 @@ class User extends WithInstanceHost {
   final DateTime updated;
   final bool showNsfw;
   final String theme;
-  final int defaultSortType;
-  final int defaultListingType;
+
+  @JsonKey(fromJson: SortType.tryParse)
+  final SortType defaultSortType;
+
+  @JsonKey(fromJson: PostListingType.tryParse)
+  final PostListingType defaultListingType;
   final String lang;
   final bool showAvatars;
   final bool sendNotificationsToEmail;
@@ -145,8 +149,6 @@ class User extends WithInstanceHost {
   });
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-
-  Map<String, dynamic> toJson() => _$UserToJson(this);
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user_mention_view.rs#L90

@@ -50,8 +50,9 @@ User _$UserFromJson(Map<String, dynamic> json) {
         : DateTime.parse(json['updated'] as String),
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
-    defaultSortType: json['default_sort_type'] as int,
-    defaultListingType: json['default_listing_type'] as int,
+    defaultSortType: SortType.tryParse(json['default_sort_type'] as int),
+    defaultListingType:
+        PostListingType.tryParse(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
@@ -67,35 +68,6 @@ User _$UserFromJson(Map<String, dynamic> json) {
     banner: json['banner'] as String,
   )..instanceHost = json['instance_host'] as String;
 }
-
-Map<String, dynamic> _$UserToJson(User instance) => <String, dynamic>{
-      'instance_host': instance.instanceHost,
-      'id': instance.id,
-      'name': instance.name,
-      'preferred_username': instance.preferredUsername,
-      'password_encrypted': instance.passwordEncrypted,
-      'email': instance.email,
-      'avatar': instance.avatar,
-      'admin': instance.admin,
-      'banned': instance.banned,
-      'published': instance.published?.toIso8601String(),
-      'updated': instance.updated?.toIso8601String(),
-      'show_nsfw': instance.showNsfw,
-      'theme': instance.theme,
-      'default_sort_type': instance.defaultSortType,
-      'default_listing_type': instance.defaultListingType,
-      'lang': instance.lang,
-      'show_avatars': instance.showAvatars,
-      'send_notifications_to_email': instance.sendNotificationsToEmail,
-      'matrix_user_id': instance.matrixUserId,
-      'actor_id': instance.actorId,
-      'bio': instance.bio,
-      'local': instance.local,
-      'private_key': instance.privateKey,
-      'public_key': instance.publicKey,
-      'last_refreshed_at': instance.lastRefreshedAt?.toIso8601String(),
-      'banner': instance.banner,
-    };
 
 UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
   return UserMentionView(

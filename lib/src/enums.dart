@@ -23,99 +23,63 @@ class VoteType {
   static const VoteType down = VoteType._(-1);
 }
 
-enum PostListingType {
-  all,
-  local,
-  subscribed,
-  community,
+class PostListingType {
+  final String _value;
+
+  const PostListingType._(this._value);
+
+  String get value => _value;
+
+  static PostListingType tryParse(int index) =>
+      index >= values.length ? null : values[index];
+
+  int get index => values.indexOf(this);
+
+  static const PostListingType all = PostListingType._('All');
+  static const PostListingType local = PostListingType._('Local');
+  static const PostListingType subscribed = PostListingType._('Subscribed');
+  static const PostListingType community = PostListingType._('Community');
+
+  static const List<PostListingType> values = [
+    all,
+    local,
+    subscribed,
+    community
+  ];
 }
 
-extension PostListingTypeValue on PostListingType {
-  String get value {
-    switch (this) {
-      case PostListingType.all:
-        return 'All';
-      case PostListingType.local:
-        return 'Local';
-      case PostListingType.subscribed:
-        return 'Subscribed';
-      case PostListingType.community:
-        return 'Community';
-    }
-    throw Exception('unreachable');
-  }
+class SortType {
+  final String _value;
 
-  int get index {
-    switch (this) {
-      case PostListingType.all:
-        return 0;
-      case PostListingType.local:
-        return 1;
-      case PostListingType.subscribed:
-        return 2;
-      case PostListingType.community:
-        return 3;
-    }
-    throw Exception('unreachable');
-  }
-}
+  const SortType._(this._value);
 
-enum SortType {
-  active,
-  hot,
+  String get value => _value;
+
+  static SortType tryParse(int index) =>
+      index >= values.length ? null : values[index];
+
+  int get index => values.indexOf(this);
+
+  static const SortType active = SortType._('Active');
+  static const SortType hot = SortType._('Hot');
   // ignore: constant_identifier_names
-  new_,
-  topDay,
-  topWeek,
-  topMonth,
-  topYear,
-  topAll,
-}
+  static const SortType new_ = SortType._('New');
+  static const SortType topDay = SortType._('TopDay');
+  static const SortType topWeek = SortType._('TopWeek');
+  static const SortType topMonth = SortType._('TopMonth');
+  static const SortType topYear = SortType._('TopYear');
+  static const SortType topAll = SortType._('TopAll');
 
-extension SortTypeValue on SortType {
-  String get value {
-    switch (this) {
-      case SortType.active:
-        return 'Active';
-      case SortType.hot:
-        return 'Hot';
-      case SortType.new_:
-        return 'New';
-      case SortType.topDay:
-        return 'TopDay';
-      case SortType.topWeek:
-        return 'TopWeek';
-      case SortType.topMonth:
-        return 'TopMonth';
-      case SortType.topYear:
-        return 'TopYear';
-      case SortType.topAll:
-        return 'TopAll';
-    }
-    throw Exception('unreachable');
-  }
-
-  int get index {
-    switch (this) {
-      case SortType.active:
-        return 0;
-      case SortType.hot:
-        return 1;
-      case SortType.new_:
-        return 2;
-      case SortType.topDay:
-        return 3;
-      case SortType.topWeek:
-        return 4;
-      case SortType.topMonth:
-        return 5;
-      case SortType.topYear:
-        return 6;
-      case SortType.topAll:
-        return 7;
-    }
-    throw Exception('unreachable');
-  }
+  static const List<SortType> values = [
+    active,
+    hot,
+    new_,
+    topDay,
+    topWeek,
+    topMonth,
+    topYear,
+    topAll,
+  ];
 }
 
 class SearchType {
@@ -125,24 +89,8 @@ class SearchType {
 
   String get value => _value;
 
-  static SearchType tryParse(String value) {
-    switch (value) {
-      case 'All':
-        return all;
-      case 'Comments':
-        return comments;
-      case 'Posts':
-        return posts;
-      case 'Communities':
-        return communities;
-      case 'Users':
-        return users;
-      case 'Url':
-        return url;
-      default:
-        return null;
-    }
-  }
+  static SearchType tryParse(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
 
   static const SearchType all = SearchType._('All');
   static const SearchType comments = SearchType._('Comments');
@@ -150,6 +98,15 @@ class SearchType {
   static const SearchType communities = SearchType._('Communities');
   static const SearchType users = SearchType._('Users');
   static const SearchType url = SearchType._('Url');
+
+  static const List<SearchType> values = [
+    all,
+    comments,
+    posts,
+    communities,
+    users,
+    url,
+  ];
 }
 
 enum CommentListingType {
