@@ -136,7 +136,7 @@ extension UserEndpoint on V1 {
     String newPassword,
     String newPasswordVerify,
     String oldPassword,
-    @required bool showAvatar,
+    @required bool showAvatars,
     @required bool sendNotificationsToEmail,
     @required String auth,
   }) async {
@@ -145,7 +145,7 @@ extension UserEndpoint on V1 {
     assert(defaultSortType != null);
     assert(defaultListingType != null);
     assert(lang != null);
-    assert(showAvatar != null);
+    assert(showAvatars != null);
     assert(sendNotificationsToEmail != null);
     assert(auth != null);
     if (newPassword != null ||
@@ -173,7 +173,7 @@ extension UserEndpoint on V1 {
       if (newPassword != null) 'new_password': newPassword,
       if (newPasswordVerify != null) 'new_password_verify': newPasswordVerify,
       if (oldPassword != null) 'old_password': oldPassword,
-      'show_avatar': showAvatar,
+      'show_avatars': showAvatars,
       'send_notifications_to_email': sendNotificationsToEmail,
       'auth': auth,
     });
