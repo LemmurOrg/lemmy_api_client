@@ -1,3 +1,9 @@
+## 0.9.1 - 2021-01-07
+
+### Changed
+
+- All models are now generated with `freezed` + `json_serializable`. This unlocks a handy `.copyWith()` method on all models and make all models data classes (which means they can be compared with `==` value wise). Models are now more null-safe making `lemmy_api_client` more ready for null-safety
+
 ## 0.9.0 - 2021-01-06
 
 ### Added
