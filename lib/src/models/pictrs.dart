@@ -1,32 +1,35 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'with_instance_host.dart';
 
+part 'pictrs.freezed.dart';
 part 'pictrs.g.dart';
 
 /// Based on https://git.asonix.dog/asonix/pict-rs/
 
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class PictrsUploadFile {
-  final String deleteToken;
-  final String file;
+@freezed
+abstract class PictrsUploadFile implements _$PictrsUploadFile {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory PictrsUploadFile({
+    @required String deleteToken,
+    @required String file,
+  }) = _PictrsUploadFile;
 
-  const PictrsUploadFile({this.deleteToken, this.file});
-
+  const PictrsUploadFile._();
   factory PictrsUploadFile.fromJson(Map<String, dynamic> json) =>
       _$PictrsUploadFileFromJson(json);
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class PictrsUpload extends WithInstanceHost {
-  final String msg;
-  final List<PictrsUploadFile> files;
+@freezed
+abstract class PictrsUpload extends WithInstanceHost implements _$PictrsUpload {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory PictrsUpload({
+    @required String msg,
+    @required List<PictrsUploadFile> files,
+  }) = _PictrsUpload;
 
-  PictrsUpload({
-    this.msg,
-    this.files,
-  });
-
+  PictrsUpload._();
   factory PictrsUpload.fromJson(Map<String, dynamic> json) =>
       _$PictrsUploadFromJson(json);
 }

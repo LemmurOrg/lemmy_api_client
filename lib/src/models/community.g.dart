@@ -6,8 +6,8 @@ part of 'community.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
-  return CommunityView(
+_$_CommunityView _$_$_CommunityViewFromJson(Map<String, dynamic> json) {
+  return _$_CommunityView(
     id: json['id'] as int,
     name: json['name'] as String,
     title: json['title'] as String,
@@ -45,9 +45,42 @@ CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
   )..instanceHost = json['instance_host'] as String;
 }
 
-CommunityFollowerView _$CommunityFollowerViewFromJson(
+Map<String, dynamic> _$_$_CommunityViewToJson(_$_CommunityView instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'id': instance.id,
+      'name': instance.name,
+      'title': instance.title,
+      'icon': instance.icon,
+      'banner': instance.banner,
+      'description': instance.description,
+      'category_id': instance.categoryId,
+      'creator_id': instance.creatorId,
+      'removed': instance.removed,
+      'published': instance.published?.toIso8601String(),
+      'updated': instance.updated?.toIso8601String(),
+      'deleted': instance.deleted,
+      'nsfw': instance.nsfw,
+      'actor_id': instance.actorId,
+      'local': instance.local,
+      'last_refreshed_at': instance.lastRefreshedAt?.toIso8601String(),
+      'creator_actor_id': instance.creatorActorId,
+      'creator_local': instance.creatorLocal,
+      'creator_name': instance.creatorName,
+      'creator_preferred_username': instance.creatorPreferredUsername,
+      'creator_avatar': instance.creatorAvatar,
+      'category_name': instance.categoryName,
+      'number_of_subscribers': instance.numberOfSubscribers,
+      'number_of_posts': instance.numberOfPosts,
+      'number_of_comments': instance.numberOfComments,
+      'hot_rank': instance.hotRank,
+      'user_id': instance.userId,
+      'subscribed': instance.subscribed,
+    };
+
+_$_CommunityFollowerView _$_$_CommunityFollowerViewFromJson(
     Map<String, dynamic> json) {
-  return CommunityFollowerView(
+  return _$_CommunityFollowerView(
     id: json['id'] as int,
     communityId: json['community_id'] as int,
     userId: json['user_id'] as int,
@@ -66,9 +99,28 @@ CommunityFollowerView _$CommunityFollowerViewFromJson(
   )..instanceHost = json['instance_host'] as String;
 }
 
-CommunityModeratorView _$CommunityModeratorViewFromJson(
+Map<String, dynamic> _$_$_CommunityFollowerViewToJson(
+        _$_CommunityFollowerView instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'id': instance.id,
+      'community_id': instance.communityId,
+      'user_id': instance.userId,
+      'published': instance.published?.toIso8601String(),
+      'user_actor_id': instance.userActorId,
+      'user_local': instance.userLocal,
+      'user_name': instance.userName,
+      'user_preferred_username': instance.userPreferredUsername,
+      'avatar': instance.avatar,
+      'community_actor_id': instance.communityActorId,
+      'community_local': instance.communityLocal,
+      'community_name': instance.communityName,
+      'community_icon': instance.communityIcon,
+    };
+
+_$_CommunityModeratorView _$_$_CommunityModeratorViewFromJson(
     Map<String, dynamic> json) {
-  return CommunityModeratorView(
+  return _$_CommunityModeratorView(
     id: json['id'] as int,
     communityId: json['community_id'] as int,
     userId: json['user_id'] as int,
@@ -87,8 +139,27 @@ CommunityModeratorView _$CommunityModeratorViewFromJson(
   )..instanceHost = json['instance_host'] as String;
 }
 
-FullCommunityView _$FullCommunityViewFromJson(Map<String, dynamic> json) {
-  return FullCommunityView(
+Map<String, dynamic> _$_$_CommunityModeratorViewToJson(
+        _$_CommunityModeratorView instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'id': instance.id,
+      'community_id': instance.communityId,
+      'user_id': instance.userId,
+      'published': instance.published?.toIso8601String(),
+      'user_actor_id': instance.userActorId,
+      'user_local': instance.userLocal,
+      'user_name': instance.userName,
+      'user_preferred_username': instance.userPreferredUsername,
+      'avatar': instance.avatar,
+      'community_actor_id': instance.communityActorId,
+      'community_local': instance.communityLocal,
+      'community_name': instance.communityName,
+      'community_icon': instance.communityIcon,
+    };
+
+_$_FullCommunityView _$_$_FullCommunityViewFromJson(Map<String, dynamic> json) {
+  return _$_FullCommunityView(
     community: json['community'] == null
         ? null
         : CommunityView.fromJson(json['community'] as Map<String, dynamic>),
@@ -100,8 +171,17 @@ FullCommunityView _$FullCommunityViewFromJson(Map<String, dynamic> json) {
   )..instanceHost = json['instance_host'] as String;
 }
 
-TransferredCommunity _$TransferredCommunityFromJson(Map<String, dynamic> json) {
-  return TransferredCommunity(
+Map<String, dynamic> _$_$_FullCommunityViewToJson(
+        _$_FullCommunityView instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'community': instance.community,
+      'moderators': instance.moderators,
+    };
+
+_$_TransferredCommunity _$_$_TransferredCommunityFromJson(
+    Map<String, dynamic> json) {
+  return _$_TransferredCommunity(
     community: json['community'] == null
         ? null
         : CommunityView.fromJson(json['community'] as Map<String, dynamic>),
@@ -116,3 +196,12 @@ TransferredCommunity _$TransferredCommunityFromJson(Map<String, dynamic> json) {
         ?.toList(),
   )..instanceHost = json['instance_host'] as String;
 }
+
+Map<String, dynamic> _$_$_TransferredCommunityToJson(
+        _$_TransferredCommunity instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'community': instance.community,
+      'moderators': instance.moderators,
+      'admins': instance.admins,
+    };

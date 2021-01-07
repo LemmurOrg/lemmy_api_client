@@ -1,207 +1,132 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'user.dart';
 import 'with_instance_host.dart';
 
+part 'community.freezed.dart';
 part 'community.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L130
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommunityView extends WithInstanceHost {
-  final int id;
-  final String name;
-  final String title;
+@freezed
+abstract class CommunityView extends WithInstanceHost
+    implements _$CommunityView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory CommunityView({
+    @required int id,
+    @required String name,
+    @required String title,
+    String icon,
+    String banner,
+    String description,
+    @required int categoryId,
+    @required int creatorId,
+    @required bool removed,
+    @required DateTime published,
+    DateTime updated,
+    @required bool deleted,
+    @required bool nsfw,
+    @required String actorId,
+    @required bool local,
+    @required DateTime lastRefreshedAt,
+    @required String creatorActorId,
+    @required bool creatorLocal,
+    @required String creatorName,
+    String creatorPreferredUsername,
+    String creatorAvatar,
+    @required String categoryName,
+    @required int numberOfSubscribers,
+    @required int numberOfPosts,
+    @required int numberOfComments,
+    @required int hotRank,
+    int userId,
+    bool subscribed,
+  }) = _CommunityView;
 
-  /// can be null
-  final String icon;
-
-  /// can be null
-  final String banner;
-
-  /// can be null
-  final String description;
-  final int categoryId;
-  final int creatorId;
-  final bool removed;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool deleted;
-  final bool nsfw;
-  final String actorId;
-  final bool local;
-  final DateTime lastRefreshedAt;
-  final String creatorActorId;
-  final bool creatorLocal;
-  final String creatorName;
-
-  /// can be null
-  final String creatorPreferredUsername;
-
-  /// can be null
-  final String creatorAvatar;
-  final String categoryName;
-  final int numberOfSubscribers;
-  final int numberOfPosts;
-  final int numberOfComments;
-  final int hotRank;
-
-  /// can be null
-  final int userId;
-
-  /// can be null
-  final bool subscribed;
-
-  CommunityView({
-    this.id,
-    this.name,
-    this.title,
-    this.icon,
-    this.banner,
-    this.description,
-    this.categoryId,
-    this.creatorId,
-    this.removed,
-    this.published,
-    this.updated,
-    this.deleted,
-    this.nsfw,
-    this.actorId,
-    this.local,
-    this.lastRefreshedAt,
-    this.creatorActorId,
-    this.creatorLocal,
-    this.creatorName,
-    this.creatorPreferredUsername,
-    this.creatorAvatar,
-    this.categoryName,
-    this.numberOfSubscribers,
-    this.numberOfPosts,
-    this.numberOfComments,
-    this.hotRank,
-    this.userId,
-    this.subscribed,
-  });
-
+  CommunityView._();
   factory CommunityView.fromJson(Map<String, dynamic> json) =>
       _$CommunityViewFromJson(json);
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L336
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommunityFollowerView extends WithInstanceHost {
-  final int id;
-  final int communityId;
-  final int userId;
-  final DateTime published;
-  final String userActorId;
-  final bool userLocal;
-  final String userName;
+@freezed
+abstract class CommunityFollowerView extends WithInstanceHost
+    implements _$CommunityFollowerView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory CommunityFollowerView({
+    @required int id,
+    @required int communityId,
+    @required int userId,
+    @required DateTime published,
+    @required String userActorId,
+    @required bool userLocal,
+    @required String userName,
+    String userPreferredUsername,
+    String avatar,
+    @required String communityActorId,
+    @required bool communityLocal,
+    @required String communityName,
+    String communityIcon,
+  }) = _CommunityFollowerView;
 
-  /// can be null
-  final String userPreferredUsername;
-
-  /// can be null
-  final String avatar;
-  final String communityActorId;
-  final bool communityLocal;
-  final String communityName;
-
-  /// can be null
-  final String communityIcon;
-
-  CommunityFollowerView({
-    this.id,
-    this.communityId,
-    this.userId,
-    this.published,
-    this.userActorId,
-    this.userLocal,
-    this.userName,
-    this.userPreferredUsername,
-    this.avatar,
-    this.communityActorId,
-    this.communityLocal,
-    this.communityName,
-    this.communityIcon,
-  });
-
+  CommunityFollowerView._();
   factory CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
       _$CommunityFollowerViewFromJson(json);
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/community_view.rs#L298
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommunityModeratorView extends WithInstanceHost {
-  final int id;
-  final int communityId;
-  final int userId;
-  final DateTime published;
-  final String userActorId;
-  final bool userLocal;
-  final String userName;
+@freezed
+abstract class CommunityModeratorView extends WithInstanceHost
+    implements _$CommunityModeratorView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory CommunityModeratorView({
+    @required int id,
+    @required int communityId,
+    @required int userId,
+    @required DateTime published,
+    @required String userActorId,
+    @required bool userLocal,
+    @required String userName,
+    String userPreferredUsername,
+    String avatar,
+    @required String communityActorId,
+    @required bool communityLocal,
+    @required String communityName,
+    String communityIcon,
+  }) = _CommunityModeratorView;
 
-  /// can be null
-  final String userPreferredUsername;
-
-  /// can be null
-  final String avatar;
-  final String communityActorId;
-  final bool communityLocal;
-  final String communityName;
-
-  /// can be null
-  final String communityIcon;
-
-  CommunityModeratorView({
-    this.id,
-    this.communityId,
-    this.userId,
-    this.published,
-    this.userActorId,
-    this.userLocal,
-    this.userName,
-    this.userPreferredUsername,
-    this.avatar,
-    this.communityActorId,
-    this.communityLocal,
-    this.communityName,
-    this.communityIcon,
-  });
-
+  CommunityModeratorView._();
   factory CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
       _$CommunityModeratorViewFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-community
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class FullCommunityView extends WithInstanceHost {
-  final CommunityView community;
-  final List<CommunityModeratorView> moderators;
+@freezed
+abstract class FullCommunityView extends WithInstanceHost
+    implements _$FullCommunityView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory FullCommunityView({
+    @required CommunityView community,
+    @required List<CommunityModeratorView> moderators,
+  }) = _FullCommunityView;
 
-  FullCommunityView({
-    this.community,
-    this.moderators,
-  });
-
+  FullCommunityView._();
   factory FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$FullCommunityViewFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#transfer-community
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class TransferredCommunity extends WithInstanceHost {
-  final CommunityView community;
-  final List<CommunityModeratorView> moderators;
-  final List<UserView> admins;
+@freezed
+abstract class TransferredCommunity extends WithInstanceHost
+    implements _$TransferredCommunity {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory TransferredCommunity({
+    @required CommunityView community,
+    @required List<CommunityModeratorView> moderators,
+    @required List<UserView> admins,
+  }) = _TransferredCommunity;
 
-  TransferredCommunity({
-    this.community,
-    this.moderators,
-    this.admins,
-  });
-
+  TransferredCommunity._();
   factory TransferredCommunity.fromJson(Map<String, dynamic> json) =>
       _$TransferredCommunityFromJson(json);
 }

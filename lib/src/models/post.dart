@@ -1,3 +1,4 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import './comment.dart';
@@ -5,157 +6,79 @@ import './community.dart';
 import '../enums.dart';
 import 'with_instance_host.dart';
 
+part 'post.freezed.dart';
 part 'post.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/post_view.rs#L113
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class PostView extends WithInstanceHost {
-  final int id;
-  final String name;
+@freezed
+abstract class PostView extends WithInstanceHost implements _$PostView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory PostView({
+    @required int id,
+    @required String name,
+    String url,
+    String body,
+    @required int creatorId,
+    @required int communityId,
+    @required bool removed,
+    @required bool locked,
+    @required DateTime published,
+    DateTime updated,
+    @required bool deleted,
+    @required bool nsfw,
+    @required bool stickied,
+    String embedTitle,
+    String embedDescription,
+    String embedHtml,
+    String thumbnailUrl,
+    @required String apId,
+    @required bool local,
+    @required String creatorActorId,
+    @required bool creatorLocal,
+    @required String creatorName,
+    String creatorPreferredUsername,
+    @required DateTime creatorPublished,
+    String creatorAvatar,
+    @required bool banned,
+    @required bool bannedFromCommunity,
+    @required String communityActorId,
+    @required bool communityLocal,
+    @required String communityName,
+    String communityIcon,
+    @required bool communityRemoved,
+    @required bool communityDeleted,
+    @required bool communityNsfw,
+    @required int numberOfComments,
+    @required int score,
+    @required int upvotes,
+    @required int downvotes,
+    @required int hotRank,
+    @required int hotRankActive,
+    @required DateTime newestActivityTime,
+    int userId,
+    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    bool subscribed,
+    bool read,
+    bool saved,
+  }) = _PostView;
 
-  /// can be null
-  final String url;
-
-  /// can be null
-  final String body;
-  final int creatorId;
-  final int communityId;
-  final bool removed;
-  final bool locked;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool deleted;
-  final bool nsfw;
-  final bool stickied;
-
-  /// can be null
-  final String embedTitle;
-
-  /// can be null
-  final String embedDescription;
-
-  /// can be null
-  final String embedHtml;
-
-  /// can be null
-  final String thumbnailUrl;
-  final String apId;
-  final bool local;
-  final String creatorActorId;
-  final bool creatorLocal;
-  final String creatorName;
-
-  /// can be null
-  final String creatorPreferredUsername;
-  final DateTime creatorPublished;
-
-  /// can be null
-  final String creatorAvatar;
-  final bool banned;
-  final bool bannedFromCommunity;
-  final String communityActorId;
-  final bool communityLocal;
-  final String communityName;
-
-  /// can be null
-  final String communityIcon;
-  final bool communityRemoved;
-  final bool communityDeleted;
-  final bool communityNsfw;
-  final int numberOfComments;
-  final int score;
-  final int upvotes;
-  final int downvotes;
-  final int hotRank;
-  final int hotRankActive;
-  final DateTime newestActivityTime;
-
-  /// can be null
-  final int userId;
-
-  /// can be null
-  @JsonKey(fromJson: VoteType.tryParse)
-  final VoteType myVote;
-
-  /// can be null
-  final bool subscribed;
-
-  /// can be null
-  final bool read;
-
-  /// can be null
-  final bool saved;
-
-  PostView({
-    this.id,
-    this.name,
-    this.url,
-    this.body,
-    this.creatorId,
-    this.communityId,
-    this.removed,
-    this.locked,
-    this.published,
-    this.updated,
-    this.deleted,
-    this.nsfw,
-    this.stickied,
-    this.embedTitle,
-    this.embedDescription,
-    this.embedHtml,
-    this.thumbnailUrl,
-    this.apId,
-    this.local,
-    this.creatorActorId,
-    this.creatorLocal,
-    this.creatorName,
-    this.creatorPreferredUsername,
-    this.creatorPublished,
-    this.creatorAvatar,
-    this.banned,
-    this.bannedFromCommunity,
-    this.communityActorId,
-    this.communityLocal,
-    this.communityName,
-    this.communityIcon,
-    this.communityRemoved,
-    this.communityDeleted,
-    this.communityNsfw,
-    this.numberOfComments,
-    this.score,
-    this.upvotes,
-    this.downvotes,
-    this.hotRank,
-    this.hotRankActive,
-    this.newestActivityTime,
-    this.userId,
-    this.myVote,
-    this.subscribed,
-    this.read,
-    this.saved,
-  });
-
+  PostView._();
   factory PostView.fromJson(Map<String, dynamic> json) =>
       _$PostViewFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-post
-@JsonSerializable(createToJson: false)
-class FullPostView extends WithInstanceHost {
-  final PostView post;
-  final List<CommentView> comments;
-  final CommunityView community;
-  final List<CommunityModeratorView> moderators;
+@freezed
+abstract class FullPostView extends WithInstanceHost implements _$FullPostView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory FullPostView({
+    @required PostView post,
+    @required List<CommentView> comments,
+    @required CommunityView community,
+    @required List<CommunityModeratorView> moderators,
+  }) = _FullPostView;
 
-  FullPostView({
-    this.post,
-    this.comments,
-    this.community,
-    this.moderators,
-  });
-
+  FullPostView._();
   factory FullPostView.fromJson(Map<String, dynamic> json) =>
       _$FullPostViewFromJson(json);
 }

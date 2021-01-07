@@ -6,8 +6,8 @@ part of 'search.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Search _$SearchFromJson(Map<String, dynamic> json) {
-  return Search(
+_$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
+  return _$_Search(
     type: SearchType.tryParse(json['type_'] as String),
     comments: (json['comments'] as List)
         ?.map((e) =>
@@ -28,3 +28,12 @@ Search _$SearchFromJson(Map<String, dynamic> json) {
         ?.toList(),
   )..instanceHost = json['instance_host'] as String;
 }
+
+Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) => <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'type_': instance.type,
+      'comments': instance.comments,
+      'posts': instance.posts,
+      'communities': instance.communities,
+      'users': instance.users,
+    };

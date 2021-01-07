@@ -1,9 +1,11 @@
 import 'dart:convert';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'with_instance_host.dart';
 
+part 'jwt.freezed.dart';
 part 'jwt.g.dart';
 
 Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
@@ -25,18 +27,15 @@ class Jwt {
   Map<String, dynamic> toJson() => {'raw': raw, 'payload': payload};
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-class JwtPayload extends WithInstanceHost {
-  final int id;
-  final String iss;
+@freezed
+abstract class JwtPayload extends WithInstanceHost implements _$JwtPayload {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory JwtPayload({
+    @required int id,
+    @required String iss,
+  }) = _JwtPayload;
 
-  JwtPayload({
-    this.id,
-    this.iss,
-  });
-
+  JwtPayload._();
   factory JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$JwtPayloadFromJson(json);
-
-  Map<String, dynamic> toJson() => _$JwtPayloadToJson(this);
 }

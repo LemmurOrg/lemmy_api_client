@@ -18,6 +18,8 @@ class VoteType {
     }
   }
 
+  static int toJson([VoteType vote]) => vote?.value;
+
   static const VoteType up = VoteType._(1);
   static const VoteType none = VoteType._(0);
   static const VoteType down = VoteType._(-1);
@@ -34,6 +36,8 @@ class PostListingType {
       index >= values.length ? null : values[index];
 
   int get index => values.indexOf(this);
+
+  static int toJson([PostListingType postListing]) => postListing?.index;
 
   static const PostListingType all = PostListingType._('All');
   static const PostListingType local = PostListingType._('Local');
@@ -59,6 +63,8 @@ class SortType {
       index >= values.length ? null : values[index];
 
   int get index => values.indexOf(this);
+
+  static int toJson([SortType sort]) => sort?.index;
 
   static const SortType active = SortType._('Active');
   static const SortType hot = SortType._('Hot');
@@ -91,6 +97,8 @@ class SearchType {
 
   static SearchType tryParse(String value) =>
       values.firstWhere((e) => e.value == value, orElse: () => null);
+
+  static String toJson([SearchType search]) => search?.value;
 
   static const SearchType all = SearchType._('All');
   static const SearchType comments = SearchType._('Comments');

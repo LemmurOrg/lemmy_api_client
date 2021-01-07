@@ -1,208 +1,103 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../enums.dart';
 import 'with_instance_host.dart';
 
+part 'comment.freezed.dart';
 part 'comment.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/comment_view.rs#L91
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class CommentView extends WithInstanceHost {
-  final int id;
-  final int creatorId;
-  final int postId;
-  final String postName;
+@freezed
+abstract class CommentView extends WithInstanceHost implements _$CommentView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory CommentView({
+    @required int id,
+    @required int creatorId,
+    @required int postId,
+    @required String postName,
+    int parentId,
+    @required String content,
+    @required bool removed,
+    @required bool read,
+    @required DateTime published,
+    DateTime updated,
+    @required bool deleted,
+    @required String apId,
+    @required bool local,
+    @required int communityId,
+    @required String communityActorId,
+    @required bool communityLocal,
+    @required String communityName,
+    String communityIcon,
+    @required bool banned,
+    @required bool bannedFromCommunity,
+    @required String creatorActorId,
+    @required bool creatorLocal,
+    @required String creatorName,
+    String creatorPreferredUsername,
+    @required DateTime creatorPublished,
+    String creatorAvatar,
+    @required int score,
+    @required int upvotes,
+    @required int downvotes,
+    @required int hotRank,
+    @required int hotRankActive,
+    int userId,
+    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    bool subscribed,
+    bool saved,
+  }) = _CommentView;
 
-  /// can be null
-  final int parentId;
-  final String content;
-  final bool removed;
-  final bool read;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool deleted;
-  final String apId;
-  final bool local;
-  final int communityId;
-  final String communityActorId;
-  final bool communityLocal;
-  final String communityName;
-
-  /// can be null
-  final String communityIcon;
-  final bool banned;
-  final bool bannedFromCommunity;
-  final String creatorActorId;
-  final bool creatorLocal;
-  final String creatorName;
-
-  /// can be null
-  final String creatorPreferredUsername;
-  final DateTime creatorPublished;
-
-  /// can be null
-  final String creatorAvatar;
-  final int score;
-  final int upvotes;
-  final int downvotes;
-  final int hotRank;
-  final int hotRankActive;
-
-  /// can be null
-  final int userId;
-
-  /// can be null
-  @JsonKey(fromJson: VoteType.tryParse)
-  final VoteType myVote;
-
-  /// can be null
-  final bool subscribed;
-
-  /// can be null
-  final bool saved;
-
-  CommentView({
-    this.id,
-    this.creatorId,
-    this.postId,
-    this.postName,
-    this.parentId,
-    this.content,
-    this.removed,
-    this.read,
-    this.published,
-    this.updated,
-    this.deleted,
-    this.apId,
-    this.local,
-    this.communityId,
-    this.communityActorId,
-    this.communityLocal,
-    this.communityName,
-    this.communityIcon,
-    this.banned,
-    this.bannedFromCommunity,
-    this.creatorActorId,
-    this.creatorLocal,
-    this.creatorName,
-    this.creatorPreferredUsername,
-    this.creatorPublished,
-    this.creatorAvatar,
-    this.score,
-    this.upvotes,
-    this.downvotes,
-    this.hotRank,
-    this.hotRankActive,
-    this.userId,
-    this.myVote,
-    this.subscribed,
-    this.saved,
-  });
-
+  CommentView._();
   factory CommentView.fromJson(Map<String, dynamic> json) =>
       _$CommentViewFromJson(json);
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/comment_view.rs#L356
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class ReplyView extends WithInstanceHost {
-  final int id;
-  final int creatorId;
-  final int postId;
-  final String postName;
+@freezed
+abstract class ReplyView extends WithInstanceHost implements _$ReplyView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory ReplyView({
+    @required int id,
+    @required int creatorId,
+    @required int postId,
+    @required String postName,
+    int parentId,
+    @required String content,
+    @required bool removed,
+    @required bool read,
+    @required DateTime published,
+    DateTime updated,
+    @required bool deleted,
+    @required String apId,
+    @required bool local,
+    @required int communityId,
+    @required String communityActorId,
+    @required bool communityLocal,
+    @required String communityName,
+    String communityIcon,
+    @required bool banned,
+    @required bool bannedFromCommunity,
+    @required String creatorActorId,
+    @required bool creatorLocal,
+    @required String creatorName,
+    String creatorPreferredUsername,
+    String creatorAvatar,
+    @required DateTime creatorPublished,
+    @required int score,
+    @required int upvotes,
+    @required int downvotes,
+    @required int hotRank,
+    @required int hotRankActive,
+    int userId,
+    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    bool subscribed,
+    bool saved,
+    @required int recipientId,
+  }) = _ReplyView;
 
-  /// can be null
-  final int parentId;
-  final String content;
-  final bool removed;
-  final bool read;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool deleted;
-  final String apId;
-  final bool local;
-  final int communityId;
-  final String communityActorId;
-  final bool communityLocal;
-  final String communityName;
-
-  /// can be null
-  final String communityIcon;
-  final bool banned;
-  final bool bannedFromCommunity;
-  final String creatorActorId;
-  final bool creatorLocal;
-  final String creatorName;
-
-  /// can be null
-  final String creatorPreferredUsername;
-
-  /// can be null
-  final String creatorAvatar;
-  final DateTime creatorPublished;
-  final int score;
-  final int upvotes;
-  final int downvotes;
-  final int hotRank;
-  final int hotRankActive;
-
-  /// can be null
-  final int userId;
-
-  /// can be null
-  @JsonKey(fromJson: VoteType.tryParse)
-  final VoteType myVote;
-
-  /// can be null
-  final bool subscribed;
-
-  /// can be null
-  final bool saved;
-  final int recipientId;
-
-  ReplyView({
-    this.id,
-    this.creatorId,
-    this.postId,
-    this.postName,
-    this.parentId,
-    this.content,
-    this.removed,
-    this.read,
-    this.published,
-    this.updated,
-    this.deleted,
-    this.apId,
-    this.local,
-    this.communityId,
-    this.communityActorId,
-    this.communityLocal,
-    this.communityName,
-    this.communityIcon,
-    this.banned,
-    this.bannedFromCommunity,
-    this.creatorActorId,
-    this.creatorLocal,
-    this.creatorName,
-    this.creatorPreferredUsername,
-    this.creatorAvatar,
-    this.creatorPublished,
-    this.score,
-    this.upvotes,
-    this.downvotes,
-    this.hotRank,
-    this.hotRankActive,
-    this.userId,
-    this.myVote,
-    this.subscribed,
-    this.saved,
-    this.recipientId,
-  });
-
+  ReplyView._();
   factory ReplyView.fromJson(Map<String, dynamic> json) =>
       _$ReplyViewFromJson(json);
 }

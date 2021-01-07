@@ -1,109 +1,72 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../models/user.dart';
 import 'with_instance_host.dart';
 
+part 'site.freezed.dart';
 part 'site.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/site_view.rs#L31
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class SiteView extends WithInstanceHost {
-  final int id;
-  final String name;
+@freezed
+abstract class SiteView extends WithInstanceHost implements _$SiteView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory SiteView({
+    @required int id,
+    @required String name,
+    String description,
+    @required int creatorId,
+    @required DateTime published,
+    DateTime updated,
+    @required bool enableDownvotes,
+    @required bool openRegistration,
+    @required bool enableNsfw,
+    String icon,
+    String banner,
+    @required String creatorName,
+    String creatorPreferredUsername,
+    String creatorAvatar,
+    @required int numberOfUsers,
+    @required int numberOfPosts,
+    @required int numberOfComments,
+    @required int numberOfCommunities,
+  }) = _SiteView;
 
-  /// can be null
-  final String description;
-  final int creatorId;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool enableDownvotes;
-  final bool openRegistration;
-  final bool enableNsfw;
-
-  /// can be null
-  final String icon;
-
-  /// can be null
-  final String banner;
-  final String creatorName;
-
-  /// can be null
-  final String creatorPreferredUsername;
-
-  /// can be null
-  final String creatorAvatar;
-  final int numberOfUsers;
-  final int numberOfPosts;
-  final int numberOfComments;
-  final int numberOfCommunities;
-
-  SiteView({
-    this.id,
-    this.name,
-    this.description,
-    this.creatorId,
-    this.published,
-    this.updated,
-    this.enableDownvotes,
-    this.openRegistration,
-    this.enableNsfw,
-    this.icon,
-    this.banner,
-    this.creatorName,
-    this.creatorPreferredUsername,
-    this.creatorAvatar,
-    this.numberOfUsers,
-    this.numberOfPosts,
-    this.numberOfComments,
-    this.numberOfCommunities,
-  });
-
+  SiteView._();
   factory SiteView.fromJson(Map<String, dynamic> json) =>
       _$SiteViewFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-site
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class FullSiteView extends WithInstanceHost {
-  /// can be null
-  final SiteView site;
-  final List<UserView> admins;
-  final List<UserView> banned;
-  final int online;
-  final String version;
+@freezed
+abstract class FullSiteView extends WithInstanceHost implements _$FullSiteView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory FullSiteView({
+    SiteView site,
+    @required List<UserView> admins,
+    @required List<UserView> banned,
+    @required int online,
+    @required String version,
+    User myUser,
+  }) = _FullSiteView;
 
-  /// can be null
-  final User myUser;
-
-  FullSiteView({
-    this.site,
-    this.admins,
-    this.banned,
-    this.online,
-    this.version,
-    this.myUser,
-  });
-
+  FullSiteView._();
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#transfer-site
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class TransferredSite extends WithInstanceHost {
-  /// can be null
-  final SiteView site;
-  final List<UserView> admins;
-  final List<UserView> banned;
+@freezed
+abstract class TransferredSite extends WithInstanceHost
+    implements _$TransferredSite {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory TransferredSite({
+    SiteView site,
+    @required List<UserView> admins,
+    @required List<UserView> banned,
+  }) = _TransferredSite;
 
-  TransferredSite({
-    this.site,
-    this.admins,
-    this.banned,
-  });
-
+  TransferredSite._();
   factory TransferredSite.fromJson(Map<String, dynamic> json) =>
       _$TransferredSiteFromJson(json);
 }

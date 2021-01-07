@@ -1,4 +1,6 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:meta/meta.dart';
 
 import './comment.dart';
 import './community.dart';
@@ -6,281 +8,153 @@ import './post.dart';
 import '../enums.dart';
 import 'with_instance_host.dart';
 
+part 'user.freezed.dart';
 part 'user.g.dart';
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user_view.rs#L58
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class UserView extends WithInstanceHost {
-  final int id;
-  final String actorId;
-  final String name;
+@freezed
+abstract class UserView extends WithInstanceHost implements _$UserView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory UserView({
+    @required int id,
+    @required String actorId,
+    @required String name,
+    String preferredUsername,
+    String avatar,
+    String banner,
+    String email,
+    String matrixUserId,
+    String bio,
+    @required bool local,
+    @required bool admin,
+    @required bool banned,
+    @required bool showAvatars,
+    @required bool sendNotificationsToEmail,
+    @required DateTime published,
+    @required int numberOfPosts,
+    @required int postScore,
+    @required int numberOfComments,
+    @required int commentScore,
+  }) = _UserView;
 
-  /// can be null
-  final String preferredUsername;
-
-  /// can be null
-  final String avatar;
-
-  /// can be null
-  final String banner;
-
-  /// can be null
-  final String email;
-
-  /// can be null
-  final String matrixUserId;
-
-  /// can be null
-  final String bio;
-  final bool local;
-  final bool admin;
-  final bool banned;
-  final bool showAvatars;
-  final bool sendNotificationsToEmail;
-  final DateTime published;
-  final int numberOfPosts;
-  final int postScore;
-  final int numberOfComments;
-  final int commentScore;
-
-  UserView({
-    this.id,
-    this.actorId,
-    this.name,
-    this.preferredUsername,
-    this.avatar,
-    this.banner,
-    this.email,
-    this.matrixUserId,
-    this.bio,
-    this.local,
-    this.admin,
-    this.banned,
-    this.showAvatars,
-    this.sendNotificationsToEmail,
-    this.published,
-    this.numberOfPosts,
-    this.postScore,
-    this.numberOfComments,
-    this.commentScore,
-  });
-
+  UserView._();
   factory UserView.fromJson(Map<String, dynamic> json) =>
       _$UserViewFromJson(json);
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user.rs#L13
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class User extends WithInstanceHost {
-  final int id;
-  final String name;
+@freezed
+abstract class User extends WithInstanceHost implements _$User {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory User({
+    @required int id,
+    @required String name,
+    String preferredUsername,
+    @required String passwordEncrypted,
+    String email,
+    String avatar,
+    @required bool admin,
+    @required bool banned,
+    @required DateTime published,
+    DateTime updated,
+    @required bool showNsfw,
+    @required String theme,
+    @JsonKey(fromJson: SortType.tryParse) @required SortType defaultSortType,
+    @JsonKey(fromJson: PostListingType.tryParse)
+    @required
+        PostListingType defaultListingType,
+    @required String lang,
+    @required bool showAvatars,
+    @required bool sendNotificationsToEmail,
+    String matrixUserId,
+    @required String actorId,
+    String bio,
+    @required bool local,
+    String privateKey,
+    String publicKey,
+    @required DateTime lastRefreshedAt,
+    String banner,
+  }) = _User;
 
-  /// can be null
-  final String preferredUsername;
-  final String passwordEncrypted;
-
-  /// can be null
-  final String email;
-
-  /// can be null
-  final String avatar;
-  final bool admin;
-  final bool banned;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool showNsfw;
-  final String theme;
-
-  @JsonKey(fromJson: SortType.tryParse)
-  final SortType defaultSortType;
-
-  @JsonKey(fromJson: PostListingType.tryParse)
-  final PostListingType defaultListingType;
-  final String lang;
-  final bool showAvatars;
-  final bool sendNotificationsToEmail;
-
-  /// can be null
-  final String matrixUserId;
-  final String actorId;
-
-  /// can be null
-  final String bio;
-  final bool local;
-
-  /// can be null
-  final String privateKey;
-
-  /// can be null
-  final String publicKey;
-  final DateTime lastRefreshedAt;
-
-  /// can be null
-  final String banner;
-
-  User({
-    this.id,
-    this.name,
-    this.preferredUsername,
-    this.passwordEncrypted,
-    this.email,
-    this.avatar,
-    this.admin,
-    this.banned,
-    this.published,
-    this.updated,
-    this.showNsfw,
-    this.theme,
-    this.defaultSortType,
-    this.defaultListingType,
-    this.lang,
-    this.showAvatars,
-    this.sendNotificationsToEmail,
-    this.matrixUserId,
-    this.actorId,
-    this.bio,
-    this.local,
-    this.privateKey,
-    this.publicKey,
-    this.lastRefreshedAt,
-    this.banner,
-  });
-
+  User._();
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
 
 /// based on https://github.com/LemmyNet/lemmy/blob/464ea862b10fa7b226b2550268e40d8e685a939c/server/lemmy_db/src/user_mention_view.rs#L90
-@JsonSerializable(fieldRename: FieldRename.snake, createToJson: false)
-class UserMentionView extends WithInstanceHost {
-  final int id;
-  final int userMentionId;
-  final int creatorId;
-  final String creatorActorId;
-  final bool creatorLocal;
-  final int postId;
-  final String postName;
+@freezed
+abstract class UserMentionView extends WithInstanceHost
+    implements _$UserMentionView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory UserMentionView({
+    @required int id,
+    @required int userMentionId,
+    @required int creatorId,
+    @required String creatorActorId,
+    @required bool creatorLocal,
+    @required int postId,
+    @required String postName,
+    int parentId,
+    @required String content,
+    @required bool removed,
+    @required bool read,
+    @required DateTime published,
+    DateTime updated,
+    @required bool deleted,
+    @required int communityId,
+    @required String communityActorId,
+    @required bool communityLocal,
+    @required String communityName,
+    String communityIcon,
+    @required bool banned,
+    @required bool bannedFromCommunity,
+    @required String creatorName,
+    String creatorPreferredUsername,
+    String creatorAvatar,
+    @required int score,
+    @required int upvotes,
+    @required int downvotes,
+    @required int hotRank,
+    @required int hotRankActive,
+    int userId,
+    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    bool saved,
+    @required int recipientId,
+    @required String recipientActorId,
+    @required bool recipientLocal,
+  }) = _UserMentionView;
 
-  /// can be null
-  final int parentId;
-  final String content;
-  final bool removed;
-  final bool read;
-  final DateTime published;
-
-  /// can be null
-  final DateTime updated;
-  final bool deleted;
-  final int communityId;
-  final String communityActorId;
-  final bool communityLocal;
-  final String communityName;
-
-  /// can be null
-  final String communityIcon;
-  final bool banned;
-  final bool bannedFromCommunity;
-  final String creatorName;
-
-  /// can be null
-  final String creatorPreferredUsername;
-
-  /// can be null
-  final String creatorAvatar;
-  final int score;
-  final int upvotes;
-  final int downvotes;
-  final int hotRank;
-  final int hotRankActive;
-
-  /// can be null
-  final int userId;
-
-  /// can be null
-  @JsonKey(fromJson: VoteType.tryParse)
-  final VoteType myVote;
-
-  /// can be null
-  final bool saved;
-  final int recipientId;
-  final String recipientActorId;
-  final bool recipientLocal;
-
-  UserMentionView({
-    this.id,
-    this.userMentionId,
-    this.creatorId,
-    this.creatorActorId,
-    this.creatorLocal,
-    this.postId,
-    this.postName,
-    this.parentId,
-    this.content,
-    this.removed,
-    this.read,
-    this.published,
-    this.updated,
-    this.deleted,
-    this.communityId,
-    this.communityActorId,
-    this.communityLocal,
-    this.communityName,
-    this.communityIcon,
-    this.banned,
-    this.bannedFromCommunity,
-    this.creatorName,
-    this.creatorPreferredUsername,
-    this.creatorAvatar,
-    this.score,
-    this.upvotes,
-    this.downvotes,
-    this.hotRank,
-    this.hotRankActive,
-    this.userId,
-    this.myVote,
-    this.saved,
-    this.recipientId,
-    this.recipientActorId,
-    this.recipientLocal,
-  });
-
+  UserMentionView._();
   factory UserMentionView.fromJson(Map<String, dynamic> json) =>
       _$UserMentionViewFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-user-details
-@JsonSerializable(createToJson: false)
-class UserDetails extends WithInstanceHost {
-  final UserView user;
-  final List<CommunityFollowerView> follows;
-  final List<CommunityModeratorView> moderates;
-  final List<CommentView> comments;
-  final List<PostView> posts;
+@freezed
+abstract class UserDetails extends WithInstanceHost implements _$UserDetails {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory UserDetails({
+    @required UserView user,
+    @required List<CommunityFollowerView> follows,
+    @required List<CommunityModeratorView> moderates,
+    @required List<CommentView> comments,
+    @required List<PostView> posts,
+  }) = _UserDetails;
 
-  UserDetails({
-    this.user,
-    this.follows,
-    this.moderates,
-    this.comments,
-    this.posts,
-  });
-
+  UserDetails._();
   factory UserDetails.fromJson(Map<String, dynamic> json) =>
       _$UserDetailsFromJson(json);
 }
 
 /// based on https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#ban-user
-@JsonSerializable(createToJson: false)
-class BannedUser extends WithInstanceHost {
-  final UserView user;
-  final bool banned;
+@freezed
+abstract class BannedUser extends WithInstanceHost implements _$BannedUser {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory BannedUser({
+    @required UserView user,
+    @required bool banned,
+  }) = _BannedUser;
 
-  BannedUser({
-    this.user,
-    this.banned,
-  });
-
+  BannedUser._();
   factory BannedUser.fromJson(Map<String, dynamic> json) =>
       _$BannedUserFromJson(json);
 }

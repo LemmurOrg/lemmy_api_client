@@ -6,15 +6,22 @@ part of 'pictrs.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
-  return PictrsUploadFile(
+_$_PictrsUploadFile _$_$_PictrsUploadFileFromJson(Map<String, dynamic> json) {
+  return _$_PictrsUploadFile(
     deleteToken: json['delete_token'] as String,
     file: json['file'] as String,
   );
 }
 
-PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
-  return PictrsUpload(
+Map<String, dynamic> _$_$_PictrsUploadFileToJson(
+        _$_PictrsUploadFile instance) =>
+    <String, dynamic>{
+      'delete_token': instance.deleteToken,
+      'file': instance.file,
+    };
+
+_$_PictrsUpload _$_$_PictrsUploadFromJson(Map<String, dynamic> json) {
+  return _$_PictrsUpload(
     msg: json['msg'] as String,
     files: (json['files'] as List)
         ?.map((e) => e == null
@@ -23,3 +30,10 @@ PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
         ?.toList(),
   )..instanceHost = json['instance_host'] as String;
 }
+
+Map<String, dynamic> _$_$_PictrsUploadToJson(_$_PictrsUpload instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'msg': instance.msg,
+      'files': instance.files,
+    };
