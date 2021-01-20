@@ -223,7 +223,7 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_UserSafe extends _UserSafe {
@@ -728,7 +728,7 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_UserSafeSettings extends _UserSafeSettings {
@@ -1203,7 +1203,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_Site extends _Site {
@@ -1541,7 +1541,7 @@ class __$PrivateMessageCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_PrivateMessage extends _PrivateMessage {
@@ -1888,7 +1888,7 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_PostReport extends _PostReport {
@@ -2312,7 +2312,7 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_Post extends _Post {
@@ -2671,7 +2671,7 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_PasswordResetRequest extends _PasswordResetRequest {
@@ -2901,7 +2901,7 @@ class __$ModRemovePostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModRemovePost extends _ModRemovePost {
@@ -3139,7 +3139,7 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModLockPost extends _ModLockPost {
@@ -3369,7 +3369,7 @@ class __$ModStickyPostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModStickyPost extends _ModStickyPost {
@@ -3609,7 +3609,7 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModRemoveComment extends _ModRemoveComment {
@@ -3870,7 +3870,7 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModRemoveCommunity extends _ModRemoveCommunity {
@@ -4152,7 +4152,7 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModBanFromCommunity extends _ModBanFromCommunity {
@@ -4429,7 +4429,7 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModBan extends _ModBan {
@@ -4691,7 +4691,7 @@ class __$ModAddCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModAddCommunity extends _ModAddCommunity {
@@ -4930,7 +4930,7 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_ModAdd extends _ModAdd {
@@ -5254,7 +5254,7 @@ class __$CommunitySafeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_CommunitySafe extends _CommunitySafe {
@@ -5627,7 +5627,7 @@ class __$CommentReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_CommentReport extends _CommentReport {
@@ -5957,7 +5957,7 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_Comment extends _Comment {
@@ -6219,7 +6219,7 @@ class __$CategoryCopyWithImpl<$Res> extends _$CategoryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_Category extends _Category {
@@ -6405,7 +6405,7 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
+@JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_UserMention extends _UserMention {

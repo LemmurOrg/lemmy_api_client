@@ -5,6 +5,7 @@ part 'source.g.dart';
 
 @freezed
 abstract class UserSafe implements _$UserSafe {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafe({
     @required int id,
     @required String name,
@@ -29,6 +30,7 @@ abstract class UserSafe implements _$UserSafe {
 
 @freezed
 abstract class UserSafeSettings implements _$UserSafeSettings {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafeSettings({
     @required int id,
     @required String name,
@@ -62,6 +64,7 @@ abstract class UserSafeSettings implements _$UserSafeSettings {
 
 @freezed
 abstract class Site implements _$Site {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Site({
     @required int id,
     @required String name,
@@ -82,6 +85,7 @@ abstract class Site implements _$Site {
 
 @freezed
 abstract class PrivateMessage implements _$PrivateMessage {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessage({
     @required int id,
     @required int creatorId,
@@ -102,6 +106,7 @@ abstract class PrivateMessage implements _$PrivateMessage {
 
 @freezed
 abstract class PostReport implements _$PostReport {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReport({
     @required int id,
     @required int creatorId,
@@ -123,6 +128,7 @@ abstract class PostReport implements _$PostReport {
 
 @freezed
 abstract class Post implements _$Post {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Post({
     @required int id,
     @required String name,
@@ -151,6 +157,7 @@ abstract class Post implements _$Post {
 
 @freezed
 abstract class PasswordResetRequest implements _$PasswordResetRequest {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory PasswordResetRequest({
     @required int id,
     @required int userId,
@@ -165,6 +172,7 @@ abstract class PasswordResetRequest implements _$PasswordResetRequest {
 
 @freezed
 abstract class ModRemovePost implements _$ModRemovePost {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePost({
     @required int id,
     @required int modUserId,
@@ -181,6 +189,7 @@ abstract class ModRemovePost implements _$ModRemovePost {
 
 @freezed
 abstract class ModLockPost implements _$ModLockPost {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPost({
     @required int id,
     @required int modUserId,
@@ -196,6 +205,7 @@ abstract class ModLockPost implements _$ModLockPost {
 
 @freezed
 abstract class ModStickyPost implements _$ModStickyPost {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPost({
     @required int id,
     @required int modUserId,
@@ -211,6 +221,7 @@ abstract class ModStickyPost implements _$ModStickyPost {
 
 @freezed
 abstract class ModRemoveComment implements _$ModRemoveComment {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveComment({
     @required int id,
     @required int modUserId,
@@ -227,6 +238,7 @@ abstract class ModRemoveComment implements _$ModRemoveComment {
 
 @freezed
 abstract class ModRemoveCommunity implements _$ModRemoveCommunity {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunity({
     @required int id,
     @required int modUserId,
@@ -244,6 +256,7 @@ abstract class ModRemoveCommunity implements _$ModRemoveCommunity {
 
 @freezed
 abstract class ModBanFromCommunity implements _$ModBanFromCommunity {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunity({
     @required int id,
     @required int modUserId,
@@ -262,6 +275,7 @@ abstract class ModBanFromCommunity implements _$ModBanFromCommunity {
 
 @freezed
 abstract class ModBan implements _$ModBan {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBan({
     @required int id,
     @required int modUserId,
@@ -278,6 +292,7 @@ abstract class ModBan implements _$ModBan {
 
 @freezed
 abstract class ModAddCommunity implements _$ModAddCommunity {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunity({
     @required int id,
     @required int modUserId,
@@ -294,6 +309,7 @@ abstract class ModAddCommunity implements _$ModAddCommunity {
 
 @freezed
 abstract class ModAdd implements _$ModAdd {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAdd({
     @required int id,
     @required int modUserId,
@@ -308,6 +324,7 @@ abstract class ModAdd implements _$ModAdd {
 
 @freezed
 abstract class CommunitySafe implements _$CommunitySafe {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunitySafe({
     @required int id,
     @required String name,
@@ -333,6 +350,7 @@ abstract class CommunitySafe implements _$CommunitySafe {
 
 @freezed
 abstract class CommentReport implements _$CommentReport {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReport({
     @required int id,
     @required int creatorId,
@@ -352,6 +370,7 @@ abstract class CommentReport implements _$CommentReport {
 
 @freezed
 abstract class Comment implements _$Comment {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Comment({
     @required int id,
     @required int creatorId,
@@ -374,6 +393,7 @@ abstract class Comment implements _$Comment {
 
 @freezed
 abstract class Category implements _$Category {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory Category({
     @required int id,
     @required String name,
@@ -386,6 +406,7 @@ abstract class Category implements _$Category {
 
 @freezed
 abstract class UserMention implements _$UserMention {
+  @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMention({
     @required int id,
     @required int recipientId,
