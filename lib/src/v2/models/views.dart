@@ -3,6 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../enums.dart';
 import 'aggregates.dart';
+import 'source.dart';
+
+part 'views.freezed.dart';
+part 'views.g.dart';
 
 @freezed
 abstract class UserViewSafe implements _$UserViewSafe {
