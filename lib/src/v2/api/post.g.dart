@@ -6,8 +6,8 @@ part of 'post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetPostResponse _$_$_GetPostResponseFromJson(Map<String, dynamic> json) {
-  return _$_GetPostResponse(
+_$_FullPost _$_$_FullPostFromJson(Map<String, dynamic> json) {
+  return _$_FullPost(
     postView: json['post_view'] == null
         ? null
         : PostView.fromJson(json['post_view'] as Map<String, dynamic>),
@@ -28,7 +28,7 @@ _$_GetPostResponse _$_$_GetPostResponseFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_GetPostResponseToJson(_$_GetPostResponse instance) =>
+Map<String, dynamic> _$_$_FullPostToJson(_$_FullPost instance) =>
     <String, dynamic>{
       'post_view': instance.postView,
       'community_view': instance.communityView,
@@ -54,6 +54,66 @@ Map<String, dynamic> _$_$_GetPostToJson(_$_GetPost instance) {
   }
 
   writeNotNull('id', instance.id);
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
+_$_CreatePost _$_$_CreatePostFromJson(Map<String, dynamic> json) {
+  return _$_CreatePost(
+    name: json['name'] as String,
+    url: json['url'] as String,
+    body: json['body'] as String,
+    nsfw: json['nsfw'] as bool,
+    communityId: json['community_id'] as int,
+    auth: json['auth'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_CreatePostToJson(_$_CreatePost instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('url', instance.url);
+  writeNotNull('body', instance.body);
+  writeNotNull('nsfw', instance.nsfw);
+  writeNotNull('community_id', instance.communityId);
+  writeNotNull('auth', instance.auth);
+  return val;
+}
+
+_$_GetPosts _$_$_GetPostsFromJson(Map<String, dynamic> json) {
+  return _$_GetPosts(
+    type: PostListingType.tryParse(json['type_'] as int),
+    sort: SortType.tryParse(json['sort'] as int),
+    page: json['page'] as int,
+    limit: json['limit'] as int,
+    communityId: json['community_id'] as int,
+    communityName: json['community_name'] as String,
+    auth: json['auth'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('type_', instance.type);
+  writeNotNull('sort', instance.sort);
+  writeNotNull('page', instance.page);
+  writeNotNull('limit', instance.limit);
+  writeNotNull('community_id', instance.communityId);
+  writeNotNull('community_name', instance.communityName);
   writeNotNull('auth', instance.auth);
   return val;
 }

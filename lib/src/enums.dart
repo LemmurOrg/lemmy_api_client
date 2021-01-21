@@ -44,6 +44,9 @@ class PostListingType {
   static const PostListingType subscribed = PostListingType._('Subscribed');
   static const PostListingType community = PostListingType._('Community');
 
+  @override
+  String toString() => value;
+
   static const List<PostListingType> values = [
     all,
     local,
@@ -75,6 +78,9 @@ class SortType {
   static const SortType topMonth = SortType._('TopMonth');
   static const SortType topYear = SortType._('TopYear');
   static const SortType topAll = SortType._('TopAll');
+
+  @override
+  String toString() => value;
 
   static const List<SortType> values = [
     active,

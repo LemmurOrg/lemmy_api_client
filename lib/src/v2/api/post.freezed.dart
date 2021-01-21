@@ -8,22 +8,22 @@ part of 'post.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-GetPostResponse _$GetPostResponseFromJson(Map<String, dynamic> json) {
-  return _GetPostResponse.fromJson(json);
+FullPost _$FullPostFromJson(Map<String, dynamic> json) {
+  return _FullPost.fromJson(json);
 }
 
 /// @nodoc
-class _$GetPostResponseTearOff {
-  const _$GetPostResponseTearOff();
+class _$FullPostTearOff {
+  const _$FullPostTearOff();
 
 // ignore: unused_element
-  _GetPostResponse call(
+  _FullPost call(
       {@required PostView postView,
       @required CommunityView communityView,
       @required List<CommentView> comments,
       @required List<CommunityModeratorView> moderators,
       @required int online}) {
-    return _GetPostResponse(
+    return _FullPost(
       postView: postView,
       communityView: communityView,
       comments: comments,
@@ -33,17 +33,17 @@ class _$GetPostResponseTearOff {
   }
 
 // ignore: unused_element
-  GetPostResponse fromJson(Map<String, Object> json) {
-    return GetPostResponse.fromJson(json);
+  FullPost fromJson(Map<String, Object> json) {
+    return FullPost.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $GetPostResponse = _$GetPostResponseTearOff();
+const $FullPost = _$FullPostTearOff();
 
 /// @nodoc
-mixin _$GetPostResponse {
+mixin _$FullPost {
   PostView get postView;
   CommunityView get communityView;
   List<CommentView> get comments;
@@ -51,14 +51,13 @@ mixin _$GetPostResponse {
   int get online;
 
   Map<String, dynamic> toJson();
-  $GetPostResponseCopyWith<GetPostResponse> get copyWith;
+  $FullPostCopyWith<FullPost> get copyWith;
 }
 
 /// @nodoc
-abstract class $GetPostResponseCopyWith<$Res> {
-  factory $GetPostResponseCopyWith(
-          GetPostResponse value, $Res Function(GetPostResponse) then) =
-      _$GetPostResponseCopyWithImpl<$Res>;
+abstract class $FullPostCopyWith<$Res> {
+  factory $FullPostCopyWith(FullPost value, $Res Function(FullPost) then) =
+      _$FullPostCopyWithImpl<$Res>;
   $Res call(
       {PostView postView,
       CommunityView communityView,
@@ -71,13 +70,12 @@ abstract class $GetPostResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetPostResponseCopyWithImpl<$Res>
-    implements $GetPostResponseCopyWith<$Res> {
-  _$GetPostResponseCopyWithImpl(this._value, this._then);
+class _$FullPostCopyWithImpl<$Res> implements $FullPostCopyWith<$Res> {
+  _$FullPostCopyWithImpl(this._value, this._then);
 
-  final GetPostResponse _value;
+  final FullPost _value;
   // ignore: unused_field
-  final $Res Function(GetPostResponse) _then;
+  final $Res Function(FullPost) _then;
 
   @override
   $Res call({
@@ -123,11 +121,9 @@ class _$GetPostResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetPostResponseCopyWith<$Res>
-    implements $GetPostResponseCopyWith<$Res> {
-  factory _$GetPostResponseCopyWith(
-          _GetPostResponse value, $Res Function(_GetPostResponse) then) =
-      __$GetPostResponseCopyWithImpl<$Res>;
+abstract class _$FullPostCopyWith<$Res> implements $FullPostCopyWith<$Res> {
+  factory _$FullPostCopyWith(_FullPost value, $Res Function(_FullPost) then) =
+      __$FullPostCopyWithImpl<$Res>;
   @override
   $Res call(
       {PostView postView,
@@ -143,15 +139,13 @@ abstract class _$GetPostResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GetPostResponseCopyWithImpl<$Res>
-    extends _$GetPostResponseCopyWithImpl<$Res>
-    implements _$GetPostResponseCopyWith<$Res> {
-  __$GetPostResponseCopyWithImpl(
-      _GetPostResponse _value, $Res Function(_GetPostResponse) _then)
-      : super(_value, (v) => _then(v as _GetPostResponse));
+class __$FullPostCopyWithImpl<$Res> extends _$FullPostCopyWithImpl<$Res>
+    implements _$FullPostCopyWith<$Res> {
+  __$FullPostCopyWithImpl(_FullPost _value, $Res Function(_FullPost) _then)
+      : super(_value, (v) => _then(v as _FullPost));
 
   @override
-  _GetPostResponse get _value => super._value as _GetPostResponse;
+  _FullPost get _value => super._value as _FullPost;
 
   @override
   $Res call({
@@ -161,7 +155,7 @@ class __$GetPostResponseCopyWithImpl<$Res>
     Object moderators = freezed,
     Object online = freezed,
   }) {
-    return _then(_GetPostResponse(
+    return _then(_FullPost(
       postView: postView == freezed ? _value.postView : postView as PostView,
       communityView: communityView == freezed
           ? _value.communityView
@@ -179,8 +173,8 @@ class __$GetPostResponseCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_GetPostResponse extends _GetPostResponse {
-  _$_GetPostResponse(
+class _$_FullPost extends _FullPost {
+  _$_FullPost(
       {@required this.postView,
       @required this.communityView,
       @required this.comments,
@@ -193,8 +187,8 @@ class _$_GetPostResponse extends _GetPostResponse {
         assert(online != null),
         super._();
 
-  factory _$_GetPostResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetPostResponseFromJson(json);
+  factory _$_FullPost.fromJson(Map<String, dynamic> json) =>
+      _$_$_FullPostFromJson(json);
 
   @override
   final PostView postView;
@@ -209,13 +203,13 @@ class _$_GetPostResponse extends _GetPostResponse {
 
   @override
   String toString() {
-    return 'GetPostResponse(postView: $postView, communityView: $communityView, comments: $comments, moderators: $moderators, online: $online)';
+    return 'FullPost(postView: $postView, communityView: $communityView, comments: $comments, moderators: $moderators, online: $online)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetPostResponse &&
+        (other is _FullPost &&
             (identical(other.postView, postView) ||
                 const DeepCollectionEquality()
                     .equals(other.postView, postView)) &&
@@ -242,26 +236,25 @@ class _$_GetPostResponse extends _GetPostResponse {
       const DeepCollectionEquality().hash(online);
 
   @override
-  _$GetPostResponseCopyWith<_GetPostResponse> get copyWith =>
-      __$GetPostResponseCopyWithImpl<_GetPostResponse>(this, _$identity);
+  _$FullPostCopyWith<_FullPost> get copyWith =>
+      __$FullPostCopyWithImpl<_FullPost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetPostResponseToJson(this);
+    return _$_$_FullPostToJson(this);
   }
 }
 
-abstract class _GetPostResponse extends GetPostResponse {
-  _GetPostResponse._() : super._();
-  factory _GetPostResponse(
+abstract class _FullPost extends FullPost {
+  _FullPost._() : super._();
+  factory _FullPost(
       {@required PostView postView,
       @required CommunityView communityView,
       @required List<CommentView> comments,
       @required List<CommunityModeratorView> moderators,
-      @required int online}) = _$_GetPostResponse;
+      @required int online}) = _$_FullPost;
 
-  factory _GetPostResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetPostResponse.fromJson;
+  factory _FullPost.fromJson(Map<String, dynamic> json) = _$_FullPost.fromJson;
 
   @override
   PostView get postView;
@@ -274,7 +267,7 @@ abstract class _GetPostResponse extends GetPostResponse {
   @override
   int get online;
   @override
-  _$GetPostResponseCopyWith<_GetPostResponse> get copyWith;
+  _$FullPostCopyWith<_FullPost> get copyWith;
 }
 
 GetPost _$GetPostFromJson(Map<String, dynamic> json) {
@@ -427,4 +420,531 @@ abstract class _GetPost extends GetPost {
   String get auth;
   @override
   _$GetPostCopyWith<_GetPost> get copyWith;
+}
+
+CreatePost _$CreatePostFromJson(Map<String, dynamic> json) {
+  return _CreatePost.fromJson(json);
+}
+
+/// @nodoc
+class _$CreatePostTearOff {
+  const _$CreatePostTearOff();
+
+// ignore: unused_element
+  _CreatePost call(
+      {@required String name,
+      String url,
+      String body,
+      @required bool nsfw,
+      @required int communityId,
+      @required String auth}) {
+    return _CreatePost(
+      name: name,
+      url: url,
+      body: body,
+      nsfw: nsfw,
+      communityId: communityId,
+      auth: auth,
+    );
+  }
+
+// ignore: unused_element
+  CreatePost fromJson(Map<String, Object> json) {
+    return CreatePost.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $CreatePost = _$CreatePostTearOff();
+
+/// @nodoc
+mixin _$CreatePost {
+  String get name;
+  String get url;
+  String get body;
+  bool get nsfw;
+  int get communityId;
+  String get auth;
+
+  Map<String, dynamic> toJson();
+  $CreatePostCopyWith<CreatePost> get copyWith;
+}
+
+/// @nodoc
+abstract class $CreatePostCopyWith<$Res> {
+  factory $CreatePostCopyWith(
+          CreatePost value, $Res Function(CreatePost) then) =
+      _$CreatePostCopyWithImpl<$Res>;
+  $Res call(
+      {String name,
+      String url,
+      String body,
+      bool nsfw,
+      int communityId,
+      String auth});
+}
+
+/// @nodoc
+class _$CreatePostCopyWithImpl<$Res> implements $CreatePostCopyWith<$Res> {
+  _$CreatePostCopyWithImpl(this._value, this._then);
+
+  final CreatePost _value;
+  // ignore: unused_field
+  final $Res Function(CreatePost) _then;
+
+  @override
+  $Res call({
+    Object name = freezed,
+    Object url = freezed,
+    Object body = freezed,
+    Object nsfw = freezed,
+    Object communityId = freezed,
+    Object auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: name == freezed ? _value.name : name as String,
+      url: url == freezed ? _value.url : url as String,
+      body: body == freezed ? _value.body : body as String,
+      nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
+      communityId:
+          communityId == freezed ? _value.communityId : communityId as int,
+      auth: auth == freezed ? _value.auth : auth as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$CreatePostCopyWith<$Res> implements $CreatePostCopyWith<$Res> {
+  factory _$CreatePostCopyWith(
+          _CreatePost value, $Res Function(_CreatePost) then) =
+      __$CreatePostCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String name,
+      String url,
+      String body,
+      bool nsfw,
+      int communityId,
+      String auth});
+}
+
+/// @nodoc
+class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
+    implements _$CreatePostCopyWith<$Res> {
+  __$CreatePostCopyWithImpl(
+      _CreatePost _value, $Res Function(_CreatePost) _then)
+      : super(_value, (v) => _then(v as _CreatePost));
+
+  @override
+  _CreatePost get _value => super._value as _CreatePost;
+
+  @override
+  $Res call({
+    Object name = freezed,
+    Object url = freezed,
+    Object body = freezed,
+    Object nsfw = freezed,
+    Object communityId = freezed,
+    Object auth = freezed,
+  }) {
+    return _then(_CreatePost(
+      name: name == freezed ? _value.name : name as String,
+      url: url == freezed ? _value.url : url as String,
+      body: body == freezed ? _value.body : body as String,
+      nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
+      communityId:
+          communityId == freezed ? _value.communityId : communityId as int,
+      auth: auth == freezed ? _value.auth : auth as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_CreatePost extends _CreatePost {
+  _$_CreatePost(
+      {@required this.name,
+      this.url,
+      this.body,
+      @required this.nsfw,
+      @required this.communityId,
+      @required this.auth})
+      : assert(name != null),
+        assert(nsfw != null),
+        assert(communityId != null),
+        assert(auth != null),
+        super._();
+
+  factory _$_CreatePost.fromJson(Map<String, dynamic> json) =>
+      _$_$_CreatePostFromJson(json);
+
+  @override
+  final String name;
+  @override
+  final String url;
+  @override
+  final String body;
+  @override
+  final bool nsfw;
+  @override
+  final int communityId;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'CreatePost(name: $name, url: $url, body: $body, nsfw: $nsfw, communityId: $communityId, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _CreatePost &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)) &&
+            (identical(other.body, body) ||
+                const DeepCollectionEquality().equals(other.body, body)) &&
+            (identical(other.nsfw, nsfw) ||
+                const DeepCollectionEquality().equals(other.nsfw, nsfw)) &&
+            (identical(other.communityId, communityId) ||
+                const DeepCollectionEquality()
+                    .equals(other.communityId, communityId)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(url) ^
+      const DeepCollectionEquality().hash(body) ^
+      const DeepCollectionEquality().hash(nsfw) ^
+      const DeepCollectionEquality().hash(communityId) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @override
+  _$CreatePostCopyWith<_CreatePost> get copyWith =>
+      __$CreatePostCopyWithImpl<_CreatePost>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_CreatePostToJson(this);
+  }
+}
+
+abstract class _CreatePost extends CreatePost {
+  _CreatePost._() : super._();
+  factory _CreatePost(
+      {@required String name,
+      String url,
+      String body,
+      @required bool nsfw,
+      @required int communityId,
+      @required String auth}) = _$_CreatePost;
+
+  factory _CreatePost.fromJson(Map<String, dynamic> json) =
+      _$_CreatePost.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get url;
+  @override
+  String get body;
+  @override
+  bool get nsfw;
+  @override
+  int get communityId;
+  @override
+  String get auth;
+  @override
+  _$CreatePostCopyWith<_CreatePost> get copyWith;
+}
+
+GetPosts _$GetPostsFromJson(Map<String, dynamic> json) {
+  return _GetPosts.fromJson(json);
+}
+
+/// @nodoc
+class _$GetPostsTearOff {
+  const _$GetPostsTearOff();
+
+// ignore: unused_element
+  _GetPosts call(
+      {@required
+      @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+          PostListingType type,
+      @required
+      @JsonKey(fromJson: SortType.tryParse)
+          SortType sort,
+      int page,
+      int limit,
+      int communityId,
+      String communityName,
+      String auth}) {
+    return _GetPosts(
+      type: type,
+      sort: sort,
+      page: page,
+      limit: limit,
+      communityId: communityId,
+      communityName: communityName,
+      auth: auth,
+    );
+  }
+
+// ignore: unused_element
+  GetPosts fromJson(Map<String, Object> json) {
+    return GetPosts.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $GetPosts = _$GetPostsTearOff();
+
+/// @nodoc
+mixin _$GetPosts {
+  @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+  PostListingType get type;
+  @JsonKey(fromJson: SortType.tryParse)
+  SortType get sort; // TODO: move to Paginated class?
+  int get page;
+  int get limit;
+  int get communityId;
+  String get communityName;
+  String get auth;
+
+  Map<String, dynamic> toJson();
+  $GetPostsCopyWith<GetPosts> get copyWith;
+}
+
+/// @nodoc
+abstract class $GetPostsCopyWith<$Res> {
+  factory $GetPostsCopyWith(GetPosts value, $Res Function(GetPosts) then) =
+      _$GetPostsCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+          PostListingType type,
+      @JsonKey(fromJson: SortType.tryParse)
+          SortType sort,
+      int page,
+      int limit,
+      int communityId,
+      String communityName,
+      String auth});
+}
+
+/// @nodoc
+class _$GetPostsCopyWithImpl<$Res> implements $GetPostsCopyWith<$Res> {
+  _$GetPostsCopyWithImpl(this._value, this._then);
+
+  final GetPosts _value;
+  // ignore: unused_field
+  final $Res Function(GetPosts) _then;
+
+  @override
+  $Res call({
+    Object type = freezed,
+    Object sort = freezed,
+    Object page = freezed,
+    Object limit = freezed,
+    Object communityId = freezed,
+    Object communityName = freezed,
+    Object auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      type: type == freezed ? _value.type : type as PostListingType,
+      sort: sort == freezed ? _value.sort : sort as SortType,
+      page: page == freezed ? _value.page : page as int,
+      limit: limit == freezed ? _value.limit : limit as int,
+      communityId:
+          communityId == freezed ? _value.communityId : communityId as int,
+      communityName: communityName == freezed
+          ? _value.communityName
+          : communityName as String,
+      auth: auth == freezed ? _value.auth : auth as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
+  factory _$GetPostsCopyWith(_GetPosts value, $Res Function(_GetPosts) then) =
+      __$GetPostsCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+          PostListingType type,
+      @JsonKey(fromJson: SortType.tryParse)
+          SortType sort,
+      int page,
+      int limit,
+      int communityId,
+      String communityName,
+      String auth});
+}
+
+/// @nodoc
+class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
+    implements _$GetPostsCopyWith<$Res> {
+  __$GetPostsCopyWithImpl(_GetPosts _value, $Res Function(_GetPosts) _then)
+      : super(_value, (v) => _then(v as _GetPosts));
+
+  @override
+  _GetPosts get _value => super._value as _GetPosts;
+
+  @override
+  $Res call({
+    Object type = freezed,
+    Object sort = freezed,
+    Object page = freezed,
+    Object limit = freezed,
+    Object communityId = freezed,
+    Object communityName = freezed,
+    Object auth = freezed,
+  }) {
+    return _then(_GetPosts(
+      type: type == freezed ? _value.type : type as PostListingType,
+      sort: sort == freezed ? _value.sort : sort as SortType,
+      page: page == freezed ? _value.page : page as int,
+      limit: limit == freezed ? _value.limit : limit as int,
+      communityId:
+          communityId == freezed ? _value.communityId : communityId as int,
+      communityName: communityName == freezed
+          ? _value.communityName
+          : communityName as String,
+      auth: auth == freezed ? _value.auth : auth as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_GetPosts extends _GetPosts {
+  _$_GetPosts(
+      {@required
+      @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+          this.type,
+      @required
+      @JsonKey(fromJson: SortType.tryParse)
+          this.sort,
+      this.page,
+      this.limit,
+      this.communityId,
+      this.communityName,
+      this.auth})
+      : assert(type != null),
+        assert(sort != null),
+        super._();
+
+  factory _$_GetPosts.fromJson(Map<String, dynamic> json) =>
+      _$_$_GetPostsFromJson(json);
+
+  @override
+  @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+  final PostListingType type;
+  @override
+  @JsonKey(fromJson: SortType.tryParse)
+  final SortType sort;
+  @override // TODO: move to Paginated class?
+  final int page;
+  @override
+  final int limit;
+  @override
+  final int communityId;
+  @override
+  final String communityName;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'GetPosts(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetPosts &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.sort, sort) ||
+                const DeepCollectionEquality().equals(other.sort, sort)) &&
+            (identical(other.page, page) ||
+                const DeepCollectionEquality().equals(other.page, page)) &&
+            (identical(other.limit, limit) ||
+                const DeepCollectionEquality().equals(other.limit, limit)) &&
+            (identical(other.communityId, communityId) ||
+                const DeepCollectionEquality()
+                    .equals(other.communityId, communityId)) &&
+            (identical(other.communityName, communityName) ||
+                const DeepCollectionEquality()
+                    .equals(other.communityName, communityName)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(sort) ^
+      const DeepCollectionEquality().hash(page) ^
+      const DeepCollectionEquality().hash(limit) ^
+      const DeepCollectionEquality().hash(communityId) ^
+      const DeepCollectionEquality().hash(communityName) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @override
+  _$GetPostsCopyWith<_GetPosts> get copyWith =>
+      __$GetPostsCopyWithImpl<_GetPosts>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_GetPostsToJson(this);
+  }
+}
+
+abstract class _GetPosts extends GetPosts {
+  _GetPosts._() : super._();
+  factory _GetPosts(
+      {@required
+      @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+          PostListingType type,
+      @required
+      @JsonKey(fromJson: SortType.tryParse)
+          SortType sort,
+      int page,
+      int limit,
+      int communityId,
+      String communityName,
+      String auth}) = _$_GetPosts;
+
+  factory _GetPosts.fromJson(Map<String, dynamic> json) = _$_GetPosts.fromJson;
+
+  @override
+  @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
+  PostListingType get type;
+  @override
+  @JsonKey(fromJson: SortType.tryParse)
+  SortType get sort;
+  @override // TODO: move to Paginated class?
+  int get page;
+  @override
+  int get limit;
+  @override
+  int get communityId;
+  @override
+  String get communityName;
+  @override
+  String get auth;
+  @override
+  _$GetPostsCopyWith<_GetPosts> get copyWith;
 }
