@@ -50,7 +50,7 @@ class _$CommentViewTearOff {
       @required int hotRank,
       @required int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved}) {
     return _CommentView(
@@ -136,7 +136,6 @@ mixin _$CommentView {
   int get hotRank;
   int get hotRankActive;
   int get userId;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   bool get subscribed;
   bool get saved;
@@ -183,7 +182,7 @@ abstract class $CommentViewCopyWith<$Res> {
       int hotRank,
       int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved});
 }
@@ -339,7 +338,7 @@ abstract class _$CommentViewCopyWith<$Res>
       int hotRank,
       int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved});
 }
@@ -494,7 +493,7 @@ class _$_CommentView extends _CommentView {
       @required this.hotRank,
       @required this.hotRankActive,
       this.userId,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote,
+      this.myVote,
       this.subscribed,
       this.saved})
       : assert(id != null),
@@ -593,7 +592,6 @@ class _$_CommentView extends _CommentView {
   @override
   final int userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
   @override
   final bool subscribed;
@@ -773,7 +771,7 @@ abstract class _CommentView extends CommentView {
       @required int hotRank,
       @required int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved}) = _$_CommentView;
 
@@ -845,7 +843,6 @@ abstract class _CommentView extends CommentView {
   @override
   int get userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   bool get subscribed;
@@ -897,7 +894,7 @@ class _$ReplyViewTearOff {
       @required int hotRank,
       @required int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved,
       @required int recipientId}) {
@@ -985,7 +982,6 @@ mixin _$ReplyView {
   int get hotRank;
   int get hotRankActive;
   int get userId;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   bool get subscribed;
   bool get saved;
@@ -1032,7 +1028,7 @@ abstract class $ReplyViewCopyWith<$Res> {
       int hotRank,
       int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved,
       int recipientId});
@@ -1191,7 +1187,7 @@ abstract class _$ReplyViewCopyWith<$Res> implements $ReplyViewCopyWith<$Res> {
       int hotRank,
       int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved,
       int recipientId});
@@ -1349,7 +1345,7 @@ class _$_ReplyView extends _ReplyView {
       @required this.hotRank,
       @required this.hotRankActive,
       this.userId,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote,
+      this.myVote,
       this.subscribed,
       this.saved,
       @required this.recipientId})
@@ -1450,7 +1446,6 @@ class _$_ReplyView extends _ReplyView {
   @override
   final int userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
   @override
   final bool subscribed;
@@ -1634,7 +1629,7 @@ abstract class _ReplyView extends ReplyView {
       @required int hotRank,
       @required int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool saved,
       @required int recipientId}) = _$_ReplyView;
@@ -1707,7 +1702,6 @@ abstract class _ReplyView extends ReplyView {
   @override
   int get userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   bool get subscribed;

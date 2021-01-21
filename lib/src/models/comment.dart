@@ -44,7 +44,7 @@ abstract class CommentView extends WithInstanceHost implements _$CommentView {
     @required int hotRank,
     @required int hotRankActive,
     int userId,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
     bool subscribed,
     bool saved,
   }) = _CommentView;
@@ -91,7 +91,7 @@ abstract class ReplyView extends WithInstanceHost implements _$ReplyView {
     @required int hotRank,
     @required int hotRankActive,
     int userId,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
     bool subscribed,
     bool saved,
     @required int recipientId,

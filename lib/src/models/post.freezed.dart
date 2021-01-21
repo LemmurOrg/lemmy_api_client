@@ -60,7 +60,7 @@ class _$PostViewTearOff {
       @required int hotRankActive,
       @required DateTime newestActivityTime,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool read,
       bool saved}) {
@@ -168,7 +168,6 @@ mixin _$PostView {
   int get hotRankActive;
   DateTime get newestActivityTime;
   int get userId;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   bool get subscribed;
   bool get read;
@@ -225,7 +224,7 @@ abstract class $PostViewCopyWith<$Res> {
       int hotRankActive,
       DateTime newestActivityTime,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool read,
       bool saved});
@@ -427,7 +426,7 @@ abstract class _$PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
       int hotRankActive,
       DateTime newestActivityTime,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool read,
       bool saved});
@@ -629,7 +628,7 @@ class _$_PostView extends _PostView {
       @required this.hotRankActive,
       @required this.newestActivityTime,
       this.userId,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote,
+      this.myVote,
       this.subscribed,
       this.read,
       this.saved})
@@ -754,7 +753,6 @@ class _$_PostView extends _PostView {
   @override
   final int userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
   @override
   final bool subscribed;
@@ -967,7 +965,7 @@ abstract class _PostView extends PostView {
       @required int hotRankActive,
       @required DateTime newestActivityTime,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool subscribed,
       bool read,
       bool saved}) = _$_PostView;
@@ -1059,7 +1057,6 @@ abstract class _PostView extends PostView {
   @override
   int get userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   bool get subscribed;

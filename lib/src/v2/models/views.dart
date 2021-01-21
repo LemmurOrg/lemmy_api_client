@@ -35,7 +35,7 @@ abstract class UserMentionView implements _$UserMentionView {
     @required bool creatorBannedFromCommunity,
     @required bool subscribed,
     @required bool saved,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
   }) = _UserMentionView;
 
   UserMentionView._();
@@ -83,7 +83,7 @@ abstract class PostView implements _$PostView {
     @required bool subscribed,
     @required bool saved,
     @required bool read,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
   }) = _PostView;
 
   PostView._();
@@ -121,7 +121,7 @@ abstract class CommentView implements _$CommentView {
     @required bool creatorBannedFromCommunity,
     @required bool subscribed,
     @required bool saved,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
   }) = _CommentView;
 
   CommentView._();

@@ -16,9 +16,7 @@ part 'search.g.dart';
 abstract class Search extends WithInstanceHost implements _$Search {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Search({
-    @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
-    @required
-        SearchType type,
+    @required @JsonKey(name: 'type_') SearchType type,
     @required List<CommentView> comments,
     @required List<PostView> posts,
     @required List<CommunityView> communities,

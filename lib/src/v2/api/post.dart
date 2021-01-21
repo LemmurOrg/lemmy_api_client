@@ -77,10 +77,8 @@ abstract class CreatePost implements _$CreatePost, LemmyApiQuery<PostView> {
 abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetPosts({
-    @required
-    @JsonKey(name: 'type_', fromJson: PostListingType.tryParse)
-        PostListingType type,
-    @required @JsonKey(fromJson: SortType.tryParse) SortType sort,
+    @required @JsonKey(name: 'type_') PostListingType type,
+    @required SortType sort,
     // TODO: move to Paginated class?
     int page,
     int limit,

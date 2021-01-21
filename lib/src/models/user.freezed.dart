@@ -536,48 +536,30 @@ class _$UserTearOff {
 
 // ignore: unused_element
   _User call(
-      {@required
-          int id,
-      @required
-          String name,
+      {@required int id,
+      @required String name,
       String preferredUsername,
-      @required
-          String passwordEncrypted,
+      @required String passwordEncrypted,
       String email,
       String avatar,
-      @required
-          bool admin,
-      @required
-          bool banned,
-      @required
-          DateTime published,
+      @required bool admin,
+      @required bool banned,
+      @required DateTime published,
       DateTime updated,
-      @required
-          bool showNsfw,
-      @required
-          String theme,
-      @required
-      @JsonKey(fromJson: SortType.tryParse)
-          SortType defaultSortType,
-      @required
-      @JsonKey(fromJson: PostListingType.tryParse)
-          PostListingType defaultListingType,
-      @required
-          String lang,
-      @required
-          bool showAvatars,
-      @required
-          bool sendNotificationsToEmail,
+      @required bool showNsfw,
+      @required String theme,
+      @required SortType defaultSortType,
+      @required PostListingType defaultListingType,
+      @required String lang,
+      @required bool showAvatars,
+      @required bool sendNotificationsToEmail,
       String matrixUserId,
-      @required
-          String actorId,
+      @required String actorId,
       String bio,
-      @required
-          bool local,
+      @required bool local,
       String privateKey,
       String publicKey,
-      @required
-          DateTime lastRefreshedAt,
+      @required DateTime lastRefreshedAt,
       String banner}) {
     return _User(
       id: id,
@@ -632,9 +614,7 @@ mixin _$User {
   DateTime get updated;
   bool get showNsfw;
   String get theme;
-  @JsonKey(fromJson: SortType.tryParse)
   SortType get defaultSortType;
-  @JsonKey(fromJson: PostListingType.tryParse)
   PostListingType get defaultListingType;
   String get lang;
   bool get showAvatars;
@@ -669,10 +649,8 @@ abstract class $UserCopyWith<$Res> {
       DateTime updated,
       bool showNsfw,
       String theme,
-      @JsonKey(fromJson: SortType.tryParse)
-          SortType defaultSortType,
-      @JsonKey(fromJson: PostListingType.tryParse)
-          PostListingType defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -787,10 +765,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       DateTime updated,
       bool showNsfw,
       String theme,
-      @JsonKey(fromJson: SortType.tryParse)
-          SortType defaultSortType,
-      @JsonKey(fromJson: PostListingType.tryParse)
-          PostListingType defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -893,48 +869,30 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 class _$_User extends _User {
   _$_User(
-      {@required
-          this.id,
-      @required
-          this.name,
+      {@required this.id,
+      @required this.name,
       this.preferredUsername,
-      @required
-          this.passwordEncrypted,
+      @required this.passwordEncrypted,
       this.email,
       this.avatar,
-      @required
-          this.admin,
-      @required
-          this.banned,
-      @required
-          this.published,
+      @required this.admin,
+      @required this.banned,
+      @required this.published,
       this.updated,
-      @required
-          this.showNsfw,
-      @required
-          this.theme,
-      @required
-      @JsonKey(fromJson: SortType.tryParse)
-          this.defaultSortType,
-      @required
-      @JsonKey(fromJson: PostListingType.tryParse)
-          this.defaultListingType,
-      @required
-          this.lang,
-      @required
-          this.showAvatars,
-      @required
-          this.sendNotificationsToEmail,
+      @required this.showNsfw,
+      @required this.theme,
+      @required this.defaultSortType,
+      @required this.defaultListingType,
+      @required this.lang,
+      @required this.showAvatars,
+      @required this.sendNotificationsToEmail,
       this.matrixUserId,
-      @required
-          this.actorId,
+      @required this.actorId,
       this.bio,
-      @required
-          this.local,
+      @required this.local,
       this.privateKey,
       this.publicKey,
-      @required
-          this.lastRefreshedAt,
+      @required this.lastRefreshedAt,
       this.banner})
       : assert(id != null),
         assert(name != null),
@@ -982,10 +940,8 @@ class _$_User extends _User {
   @override
   final String theme;
   @override
-  @JsonKey(fromJson: SortType.tryParse)
   final SortType defaultSortType;
   @override
-  @JsonKey(fromJson: PostListingType.tryParse)
   final PostListingType defaultListingType;
   @override
   final String lang;
@@ -1128,48 +1084,30 @@ class _$_User extends _User {
 abstract class _User extends User {
   _User._() : super._();
   factory _User(
-      {@required
-          int id,
-      @required
-          String name,
+      {@required int id,
+      @required String name,
       String preferredUsername,
-      @required
-          String passwordEncrypted,
+      @required String passwordEncrypted,
       String email,
       String avatar,
-      @required
-          bool admin,
-      @required
-          bool banned,
-      @required
-          DateTime published,
+      @required bool admin,
+      @required bool banned,
+      @required DateTime published,
       DateTime updated,
-      @required
-          bool showNsfw,
-      @required
-          String theme,
-      @required
-      @JsonKey(fromJson: SortType.tryParse)
-          SortType defaultSortType,
-      @required
-      @JsonKey(fromJson: PostListingType.tryParse)
-          PostListingType defaultListingType,
-      @required
-          String lang,
-      @required
-          bool showAvatars,
-      @required
-          bool sendNotificationsToEmail,
+      @required bool showNsfw,
+      @required String theme,
+      @required SortType defaultSortType,
+      @required PostListingType defaultListingType,
+      @required String lang,
+      @required bool showAvatars,
+      @required bool sendNotificationsToEmail,
       String matrixUserId,
-      @required
-          String actorId,
+      @required String actorId,
       String bio,
-      @required
-          bool local,
+      @required bool local,
       String privateKey,
       String publicKey,
-      @required
-          DateTime lastRefreshedAt,
+      @required DateTime lastRefreshedAt,
       String banner}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -1199,10 +1137,8 @@ abstract class _User extends User {
   @override
   String get theme;
   @override
-  @JsonKey(fromJson: SortType.tryParse)
   SortType get defaultSortType;
   @override
-  @JsonKey(fromJson: PostListingType.tryParse)
   PostListingType get defaultListingType;
   @override
   String get lang;
@@ -1270,7 +1206,7 @@ class _$UserMentionViewTearOff {
       @required int hotRank,
       @required int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool saved,
       @required int recipientId,
       @required String recipientActorId,
@@ -1356,7 +1292,6 @@ mixin _$UserMentionView {
   int get hotRank;
   int get hotRankActive;
   int get userId;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   bool get saved;
   int get recipientId;
@@ -1403,7 +1338,7 @@ abstract class $UserMentionViewCopyWith<$Res> {
       int hotRank,
       int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool saved,
       int recipientId,
       String recipientActorId,
@@ -1564,7 +1499,7 @@ abstract class _$UserMentionViewCopyWith<$Res>
       int hotRank,
       int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool saved,
       int recipientId,
       String recipientActorId,
@@ -1724,7 +1659,7 @@ class _$_UserMentionView extends _UserMentionView {
       @required this.hotRank,
       @required this.hotRankActive,
       this.userId,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote,
+      this.myVote,
       this.saved,
       @required this.recipientId,
       @required this.recipientActorId,
@@ -1822,7 +1757,6 @@ class _$_UserMentionView extends _UserMentionView {
   @override
   final int userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
   @override
   final bool saved;
@@ -2004,7 +1938,7 @@ abstract class _UserMentionView extends UserMentionView {
       @required int hotRank,
       @required int hotRankActive,
       int userId,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+      VoteType myVote,
       bool saved,
       @required int recipientId,
       @required String recipientActorId,
@@ -2074,7 +2008,6 @@ abstract class _UserMentionView extends UserMentionView {
   @override
   int get userId;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   bool get saved;

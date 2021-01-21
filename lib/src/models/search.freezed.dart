@@ -18,17 +18,11 @@ class _$SearchTearOff {
 
 // ignore: unused_element
   _Search call(
-      {@required
-      @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
-          SearchType type,
-      @required
-          List<CommentView> comments,
-      @required
-          List<PostView> posts,
-      @required
-          List<CommunityView> communities,
-      @required
-          List<UserView> users}) {
+      {@required @JsonKey(name: 'type_') SearchType type,
+      @required List<CommentView> comments,
+      @required List<PostView> posts,
+      @required List<CommunityView> communities,
+      @required List<UserView> users}) {
     return _Search(
       type: type,
       comments: comments,
@@ -50,7 +44,7 @@ const $Search = _$SearchTearOff();
 
 /// @nodoc
 mixin _$Search {
-  @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
+  @JsonKey(name: 'type_')
   SearchType get type;
   List<CommentView> get comments;
   List<PostView> get posts;
@@ -66,7 +60,7 @@ abstract class $SearchCopyWith<$Res> {
   factory $SearchCopyWith(Search value, $Res Function(Search) then) =
       _$SearchCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'type_', fromJson: SearchType.tryParse) SearchType type,
+      {@JsonKey(name: 'type_') SearchType type,
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityView> communities,
@@ -108,7 +102,7 @@ abstract class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
       __$SearchCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'type_', fromJson: SearchType.tryParse) SearchType type,
+      {@JsonKey(name: 'type_') SearchType type,
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityView> communities,
@@ -150,17 +144,11 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
 /// @nodoc
 class _$_Search extends _Search {
   _$_Search(
-      {@required
-      @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
-          this.type,
-      @required
-          this.comments,
-      @required
-          this.posts,
-      @required
-          this.communities,
-      @required
-          this.users})
+      {@required @JsonKey(name: 'type_') this.type,
+      @required this.comments,
+      @required this.posts,
+      @required this.communities,
+      @required this.users})
       : assert(type != null),
         assert(comments != null),
         assert(posts != null),
@@ -172,7 +160,7 @@ class _$_Search extends _Search {
       _$_$_SearchFromJson(json);
 
   @override
-  @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
+  @JsonKey(name: 'type_')
   final SearchType type;
   @override
   final List<CommentView> comments;
@@ -228,22 +216,16 @@ class _$_Search extends _Search {
 abstract class _Search extends Search {
   _Search._() : super._();
   factory _Search(
-      {@required
-      @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
-          SearchType type,
-      @required
-          List<CommentView> comments,
-      @required
-          List<PostView> posts,
-      @required
-          List<CommunityView> communities,
-      @required
-          List<UserView> users}) = _$_Search;
+      {@required @JsonKey(name: 'type_') SearchType type,
+      @required List<CommentView> comments,
+      @required List<PostView> posts,
+      @required List<CommunityView> communities,
+      @required List<UserView> users}) = _$_Search;
 
   factory _Search.fromJson(Map<String, dynamic> json) = _$_Search.fromJson;
 
   @override
-  @JsonKey(name: 'type_', fromJson: SearchType.tryParse)
+  @JsonKey(name: 'type_')
   SearchType get type;
   @override
   List<CommentView> get comments;

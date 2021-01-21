@@ -59,10 +59,8 @@ abstract class User extends WithInstanceHost implements _$User {
     DateTime updated,
     @required bool showNsfw,
     @required String theme,
-    @JsonKey(fromJson: SortType.tryParse) @required SortType defaultSortType,
-    @JsonKey(fromJson: PostListingType.tryParse)
-    @required
-        PostListingType defaultListingType,
+    @required SortType defaultSortType,
+    @required PostListingType defaultListingType,
     @required String lang,
     @required bool showAvatars,
     @required bool sendNotificationsToEmail,
@@ -116,7 +114,7 @@ abstract class UserMentionView extends WithInstanceHost
     @required int hotRank,
     @required int hotRankActive,
     int userId,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
     bool saved,
     @required int recipientId,
     @required String recipientActorId,

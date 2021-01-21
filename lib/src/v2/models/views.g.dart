@@ -49,7 +49,9 @@ _$_UserMentionView _$_$_UserMentionViewFromJson(Map<String, dynamic> json) {
     creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
   );
 }
 
@@ -131,7 +133,9 @@ _$_PostView _$_$_PostViewFromJson(Map<String, dynamic> json) {
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
     read: json['read'] as bool,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
   );
 }
 
@@ -204,7 +208,9 @@ _$_CommentView _$_$_CommentViewFromJson(Map<String, dynamic> json) {
     creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
   );
 }
 

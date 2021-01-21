@@ -74,9 +74,12 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
         : DateTime.parse(json['updated'] as String),
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
-    defaultSortType: SortType.tryParse(json['default_sort_type'] as int),
-    defaultListingType:
-        PostListingType.tryParse(json['default_listing_type'] as int),
+    defaultSortType: json['default_sort_type'] == null
+        ? null
+        : SortType.fromJson(json['default_sort_type'] as int),
+    defaultListingType: json['default_listing_type'] == null
+        ? null
+        : PostListingType.fromJson(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
@@ -158,7 +161,9 @@ _$_UserMentionView _$_$_UserMentionViewFromJson(Map<String, dynamic> json) {
     hotRank: json['hot_rank'] as int,
     hotRankActive: json['hot_rank_active'] as int,
     userId: json['user_id'] as int,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
     saved: json['saved'] as bool,
     recipientId: json['recipient_id'] as int,
     recipientActorId: json['recipient_actor_id'] as String,

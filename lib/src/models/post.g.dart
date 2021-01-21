@@ -58,7 +58,9 @@ _$_PostView _$_$_PostViewFromJson(Map<String, dynamic> json) {
         ? null
         : DateTime.parse(json['newest_activity_time'] as String),
     userId: json['user_id'] as int,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
     subscribed: json['subscribed'] as bool,
     read: json['read'] as bool,
     saved: json['saved'] as bool,

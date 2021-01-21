@@ -46,7 +46,9 @@ _$_CommentView _$_$_CommentViewFromJson(Map<String, dynamic> json) {
     hotRank: json['hot_rank'] as int,
     hotRankActive: json['hot_rank_active'] as int,
     userId: json['user_id'] as int,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
   )..instanceHost = json['instance_host'] as String;
@@ -132,7 +134,9 @@ _$_ReplyView _$_$_ReplyViewFromJson(Map<String, dynamic> json) {
     hotRank: json['hot_rank'] as int,
     hotRankActive: json['hot_rank_active'] as int,
     userId: json['user_id'] as int,
-    myVote: VoteType.tryParse(json['my_vote'] as int),
+    myVote: json['my_vote'] == null
+        ? null
+        : VoteType.fromJson(json['my_vote'] as int),
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
     recipientId: json['recipient_id'] as int,

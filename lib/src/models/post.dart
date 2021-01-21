@@ -56,7 +56,7 @@ abstract class PostView extends WithInstanceHost implements _$PostView {
     @required int hotRankActive,
     @required DateTime newestActivityTime,
     int userId,
-    @JsonKey(fromJson: VoteType.tryParse) VoteType myVote,
+    VoteType myVote,
     bool subscribed,
     bool read,
     bool saved,

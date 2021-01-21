@@ -217,7 +217,7 @@ class _$UserMentionViewTearOff {
       @required bool creatorBannedFromCommunity,
       @required bool subscribed,
       @required bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote}) {
+      VoteType myVote}) {
     return _UserMentionView(
       userMention: userMention,
       comment: comment,
@@ -255,7 +255,6 @@ mixin _$UserMentionView {
   bool get creatorBannedFromCommunity;
   bool get subscribed;
   bool get saved;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
 
   Map<String, dynamic> toJson();
@@ -278,7 +277,7 @@ abstract class $UserMentionViewCopyWith<$Res> {
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote});
+      VoteType myVote});
 
   $UserMentionCopyWith<$Res> get userMention;
   $CommentCopyWith<$Res> get comment;
@@ -423,7 +422,7 @@ abstract class _$UserMentionViewCopyWith<$Res>
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote});
+      VoteType myVote});
 
   @override
   $UserMentionCopyWith<$Res> get userMention;
@@ -504,7 +503,7 @@ class _$_UserMentionView extends _UserMentionView {
       @required this.creatorBannedFromCommunity,
       @required this.subscribed,
       @required this.saved,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote})
+      this.myVote})
       : assert(userMention != null),
         assert(comment != null),
         assert(creator != null),
@@ -541,7 +540,6 @@ class _$_UserMentionView extends _UserMentionView {
   @override
   final bool saved;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
 
   @override
@@ -614,18 +612,17 @@ class _$_UserMentionView extends _UserMentionView {
 abstract class _UserMentionView extends UserMentionView {
   _UserMentionView._() : super._();
   factory _UserMentionView(
-          {@required UserMention userMention,
-          @required Comment comment,
-          @required UserSafe creator,
-          @required Post post,
-          @required CommunitySafe community,
-          @required UserSafe recipient,
-          @required CommentAggregates counts,
-          @required bool creatorBannedFromCommunity,
-          @required bool subscribed,
-          @required bool saved,
-          @JsonKey(fromJson: VoteType.tryParse) VoteType myVote}) =
-      _$_UserMentionView;
+      {@required UserMention userMention,
+      @required Comment comment,
+      @required UserSafe creator,
+      @required Post post,
+      @required CommunitySafe community,
+      @required UserSafe recipient,
+      @required CommentAggregates counts,
+      @required bool creatorBannedFromCommunity,
+      @required bool subscribed,
+      @required bool saved,
+      VoteType myVote}) = _$_UserMentionView;
 
   factory _UserMentionView.fromJson(Map<String, dynamic> json) =
       _$_UserMentionView.fromJson;
@@ -651,7 +648,6 @@ abstract class _UserMentionView extends UserMentionView {
   @override
   bool get saved;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   _$UserMentionViewCopyWith<_UserMentionView> get copyWith;
@@ -1126,7 +1122,7 @@ class _$PostViewTearOff {
       @required bool subscribed,
       @required bool saved,
       @required bool read,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote}) {
+      VoteType myVote}) {
     return _PostView(
       post: post,
       creator: creator,
@@ -1160,7 +1156,6 @@ mixin _$PostView {
   bool get subscribed;
   bool get saved;
   bool get read;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
 
   Map<String, dynamic> toJson();
@@ -1180,7 +1175,7 @@ abstract class $PostViewCopyWith<$Res> {
       bool subscribed,
       bool saved,
       bool read,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote});
+      VoteType myVote});
 
   $PostCopyWith<$Res> get post;
   $UserSafeCopyWith<$Res> get creator;
@@ -1280,7 +1275,7 @@ abstract class _$PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
       bool subscribed,
       bool saved,
       bool read,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote});
+      VoteType myVote});
 
   @override
   $PostCopyWith<$Res> get post;
@@ -1344,7 +1339,7 @@ class _$_PostView extends _PostView {
       @required this.subscribed,
       @required this.saved,
       @required this.read,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote})
+      this.myVote})
       : assert(post != null),
         assert(creator != null),
         assert(community != null),
@@ -1375,7 +1370,6 @@ class _$_PostView extends _PostView {
   @override
   final bool read;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
 
   @override
@@ -1447,7 +1441,7 @@ abstract class _PostView extends PostView {
       @required bool subscribed,
       @required bool saved,
       @required bool read,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote}) = _$_PostView;
+      VoteType myVote}) = _$_PostView;
 
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
@@ -1468,7 +1462,6 @@ abstract class _PostView extends PostView {
   @override
   bool get read;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   _$PostViewCopyWith<_PostView> get copyWith;
@@ -1829,7 +1822,7 @@ class _$CommentViewTearOff {
       @required bool creatorBannedFromCommunity,
       @required bool subscribed,
       @required bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote}) {
+      VoteType myVote}) {
     return _CommentView(
       comment: comment,
       creator: creator,
@@ -1865,7 +1858,6 @@ mixin _$CommentView {
   bool get creatorBannedFromCommunity;
   bool get subscribed;
   bool get saved;
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
 
   Map<String, dynamic> toJson();
@@ -1887,7 +1879,7 @@ abstract class $CommentViewCopyWith<$Res> {
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote});
+      VoteType myVote});
 
   $CommentCopyWith<$Res> get comment;
   $UserSafeCopyWith<$Res> get creator;
@@ -2015,7 +2007,7 @@ abstract class _$CommentViewCopyWith<$Res>
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote});
+      VoteType myVote});
 
   @override
   $CommentCopyWith<$Res> get comment;
@@ -2088,7 +2080,7 @@ class _$_CommentView extends _CommentView {
       @required this.creatorBannedFromCommunity,
       @required this.subscribed,
       @required this.saved,
-      @JsonKey(fromJson: VoteType.tryParse) this.myVote})
+      this.myVote})
       : assert(comment != null),
         assert(creator != null),
         assert(post != null),
@@ -2121,7 +2113,6 @@ class _$_CommentView extends _CommentView {
   @override
   final bool saved;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   final VoteType myVote;
 
   @override
@@ -2199,7 +2190,7 @@ abstract class _CommentView extends CommentView {
       @required bool creatorBannedFromCommunity,
       @required bool subscribed,
       @required bool saved,
-      @JsonKey(fromJson: VoteType.tryParse) VoteType myVote}) = _$_CommentView;
+      VoteType myVote}) = _$_CommentView;
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
       _$_CommentView.fromJson;
@@ -2223,7 +2214,6 @@ abstract class _CommentView extends CommentView {
   @override
   bool get saved;
   @override
-  @JsonKey(fromJson: VoteType.tryParse)
   VoteType get myVote;
   @override
   _$CommentViewCopyWith<_CommentView> get copyWith;

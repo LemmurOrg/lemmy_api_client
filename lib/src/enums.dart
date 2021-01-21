@@ -5,7 +5,7 @@ class VoteType {
 
   int get value => _value;
 
-  static VoteType tryParse(int value) {
+  factory VoteType.fromJson(int value) {
     switch (value) {
       case 1:
         return up;
@@ -18,7 +18,7 @@ class VoteType {
     }
   }
 
-  static int toJson([VoteType vote]) => vote?.value;
+  int toJson() => value;
 
   static const VoteType up = VoteType._(1);
   static const VoteType none = VoteType._(0);
@@ -32,12 +32,12 @@ class PostListingType {
 
   String get value => _value;
 
-  static PostListingType tryParse(int index) =>
+  factory PostListingType.fromJson(int index) =>
       index >= values.length ? null : values[index];
 
   int get index => values.indexOf(this);
 
-  static int toJson([PostListingType postListing]) => postListing?.index;
+  int toJson() => index;
 
   static const PostListingType all = PostListingType._('All');
   static const PostListingType local = PostListingType._('Local');
@@ -62,12 +62,12 @@ class SortType {
 
   String get value => _value;
 
-  static SortType tryParse(int index) =>
+  factory SortType.fromJson(int index) =>
       index >= values.length ? null : values[index];
 
   int get index => values.indexOf(this);
 
-  static int toJson([SortType sort]) => sort?.index;
+  int toJson() => index;
 
   static const SortType active = SortType._('Active');
   static const SortType hot = SortType._('Hot');
@@ -101,10 +101,10 @@ class SearchType {
 
   String get value => _value;
 
-  static SearchType tryParse(String value) =>
+  factory SearchType.fromJson(String value) =>
       values.firstWhere((e) => e.value == value, orElse: () => null);
 
-  static String toJson([SearchType search]) => search?.value;
+  String toJson() => value;
 
   static const SearchType all = SearchType._('All');
   static const SearchType comments = SearchType._('Comments');
