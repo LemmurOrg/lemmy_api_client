@@ -102,98 +102,267 @@ abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
       (json['posts'] as List).map((e) => PostView.fromJson(e)).toList();
 }
 
-/*
+@freezed
+abstract class CreatePostLike
+    implements _$CreatePostLike, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory CreatePostLike({
+    @required int postId,
+    @required VoteType score,
+    @required String auth,
+  }) = _CreatePostLike;
 
- 
+  CreatePostLike._();
+  factory CreatePostLike.fromJson(Map<String, dynamic> json) =>
+      _$CreatePostLikeFromJson(json);
 
+  @override
+  String path() => '/post/like';
 
-/**
- * `score` can be 0, -1, or 1
- */
-export interface CreatePostLike {
-  post_id: number;
-  score: number;
-  auth: string;
+  @override
+  HttpMethod httpMethod() => HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-export interface EditPost {
-  post_id: number;
-  name: string;
-  url?: string;
-  body?: string;
-  nsfw: boolean;
-  auth: string;
+@freezed
+abstract class EditPost implements _$EditPost, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory EditPost({
+    @required int postId,
+    @required String name,
+    String url,
+    String body,
+    @required bool nsfw,
+    @required String auth,
+  }) = _EditPost;
+
+  EditPost._();
+  factory EditPost.fromJson(Map<String, dynamic> json) =>
+      _$EditPostFromJson(json);
+
+  @override
+  String path() => '/post';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.put;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-export interface DeletePost {
-  post_id: number;
-  deleted: boolean;
-  auth: string;
+@freezed
+abstract class DeletePost implements _$DeletePost, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory DeletePost({
+    @required int postId,
+    @required bool deleted,
+    @required String auth,
+  }) = _DeletePost;
+
+  DeletePost._();
+  factory DeletePost.fromJson(Map<String, dynamic> json) =>
+      _$DeletePostFromJson(json);
+
+  @override
+  String path() => '/post/delete';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-/**
- * Only admins and mods can remove a post.
- */
-export interface RemovePost {
-  post_id: number;
-  removed: boolean;
-  reason?: string;
-  auth: string;
+@freezed
+abstract class RemovePost implements _$RemovePost, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory RemovePost({
+    @required int postId,
+    @required bool removed,
+    String reason,
+    @required String auth,
+  }) = _RemovePost;
+
+  RemovePost._();
+  factory RemovePost.fromJson(Map<String, dynamic> json) =>
+      _$RemovePostFromJson(json);
+
+  @override
+  String path() => '/post/remove';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-/**
- * Only admins and mods can lock a post.
- */
-export interface LockPost {
-  post_id: number;
-  locked: boolean;
-  auth: string;
+@freezed
+abstract class LockPost implements _$LockPost, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory LockPost({
+    @required int postId,
+    @required bool locked,
+    @required String auth,
+  }) = _LockPost;
+
+  LockPost._();
+  factory LockPost.fromJson(Map<String, dynamic> json) =>
+      _$LockPostFromJson(json);
+
+  @override
+  String path() => '/post/lock';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-/**
- * Only admins and mods can sticky a post.
- */
-export interface StickyPost {
-  post_id: number;
-  stickied: boolean;
-  auth: string;
+@freezed
+abstract class StickyPost implements _$StickyPost, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory StickyPost({
+    @required int postId,
+    @required bool stickied,
+    @required String auth,
+  }) = _StickyPost;
+
+  StickyPost._();
+  factory StickyPost.fromJson(Map<String, dynamic> json) =>
+      _$StickyPostFromJson(json);
+
+  @override
+  String path() => '/post/sticky';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.post;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-export interface SavePost {
-  post_id: number;
-  save: boolean;
-  auth: string;
+@freezed
+abstract class SavePost implements _$SavePost, LemmyApiQuery<PostView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory SavePost({
+    @required int postId,
+    @required bool save,
+    @required String auth,
+  }) = _SavePost;
+
+  SavePost._();
+  factory SavePost.fromJson(Map<String, dynamic> json) =>
+      _$SavePostFromJson(json);
+
+  @override
+  String path() => '/post/save';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.put;
+
+  @override
+  PostView responseFactory(Map<String, dynamic> json) =>
+      PostView.fromJson(json['post_view']);
 }
 
-export interface CreatePostReport {
-  post_id: number;
-  reason: string;
-  auth: string;
+// TODO: this does not seem to exist yet
+@freezed
+abstract class CreatePostReport
+    implements _$CreatePostReport, LemmyApiQuery<bool> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory CreatePostReport({
+    @required int postId,
+    @required String reason,
+    @required String auth,
+  }) = _CreatePostReport;
+
+  CreatePostReport._();
+  factory CreatePostReport.fromJson(Map<String, dynamic> json) =>
+      _$CreatePostReportFromJson(json);
+
+// @override
+// String path() => '';
+
+// @override
+// HttpMethod httpMethod() => HttpMethod.;
+
+  @override
+  bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
 }
 
-export interface CreatePostReportResponse {
-  success: boolean;
+// TODO: this does not seem to exist yet
+@freezed
+abstract class ResolvePostReport
+    implements _$ResolvePostReport, LemmyApiQuery<ResolvePostReportResponse> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory ResolvePostReport({
+    @required int reportId,
+    @required bool resolved,
+    @required String auth,
+  }) = _ResolvePostReport;
+
+  ResolvePostReport._();
+  factory ResolvePostReport.fromJson(Map<String, dynamic> json) =>
+      _$ResolvePostReportFromJson(json);
+
+// @override
+// String path() => '';
+
+// @override
+// HttpMethod httpMethod() => HttpMethod.;
+
+  @override
+  ResolvePostReportResponse responseFactory(Map<String, dynamic> json) =>
+      ResolvePostReportResponse.fromJson(json);
 }
 
-export interface ResolvePostReport {
-  report_id: number;
-  resolved: boolean;
-  auth: string;
+@freezed
+abstract class ResolvePostReportResponse
+    implements _$ResolvePostReportResponse {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory ResolvePostReportResponse({
+    @required int reportId,
+    @required bool resolved,
+  }) = _ResolvePostReportResponse;
+
+  ResolvePostReportResponse._();
+  factory ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =>
+      _$ResolvePostReportResponseFromJson(json);
 }
 
-export interface ResolvePostReportResponse {
-  report_id: number;
-  resolved: boolean;
-}
+// TODO: this does not seem to exist yet
+@freezed
+abstract class ListPostReports
+    implements _$ListPostReports, LemmyApiQuery<List<PostReportView>> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  factory ListPostReports({
+    int page,
+    int limit,
+    int community,
+    @required String auth,
+  }) = _ListPostReports;
 
-export interface ListPostReports {
-  page?: number;
-  limit?: number;
-  community?: number;
-  auth: string;
-}
+  ListPostReports._();
+  factory ListPostReports.fromJson(Map<String, dynamic> json) =>
+      _$ListPostReportsFromJson(json);
 
-export interface ListPostReportsResponse {
-  posts: PostReportView[];
+// @override
+// String path() => '';
+
+// @override
+// HttpMethod httpMethod() => HttpMethod.;
+
+  @override
+  List<PostReportView> responseFactory(Map<String, dynamic> json) =>
+      (json as List).map((e) => PostReportView.fromJson(json)).toList();
 }
-*/
