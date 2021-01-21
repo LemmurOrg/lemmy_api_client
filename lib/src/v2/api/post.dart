@@ -290,11 +290,11 @@ abstract class CreatePostReport
   factory CreatePostReport.fromJson(Map<String, dynamic> json) =>
       _$CreatePostReportFromJson(json);
 
-// @override
-// String path() => '';
+  @override
+  String path() => null;
 
-// @override
-// HttpMethod httpMethod() => HttpMethod.;
+  @override
+  HttpMethod httpMethod() => null;
 
   @override
   bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
@@ -315,11 +315,11 @@ abstract class ResolvePostReport
   factory ResolvePostReport.fromJson(Map<String, dynamic> json) =>
       _$ResolvePostReportFromJson(json);
 
-// @override
-// String path() => '';
+  @override
+  String path() => null;
 
-// @override
-// HttpMethod httpMethod() => HttpMethod.;
+  @override
+  HttpMethod httpMethod() => null;
 
   @override
   ResolvePostReportResponse responseFactory(Map<String, dynamic> json) =>
@@ -356,11 +356,11 @@ abstract class ListPostReports
   factory ListPostReports.fromJson(Map<String, dynamic> json) =>
       _$ListPostReportsFromJson(json);
 
-// @override
-// String path() => '';
+  @override
+  String path() => null;
 
-// @override
-// HttpMethod httpMethod() => HttpMethod.;
+  @override
+  HttpMethod httpMethod() => null;
 
   @override
   List<PostReportView> responseFactory(Map<String, dynamic> json) =>

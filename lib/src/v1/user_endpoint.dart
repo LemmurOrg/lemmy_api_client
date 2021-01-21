@@ -1,13 +1,13 @@
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
-import '../models/captcha.dart';
-import '../models/comment.dart';
-import '../models/jwt.dart';
-import '../models/private_message.dart';
-import '../models/user.dart';
 import '../utils/augmenter.dart';
 import 'main.dart';
+import 'models/captcha.dart';
+import 'models/comment.dart';
+import 'models/jwt.dart';
+import 'models/private_message.dart';
+import 'models/user.dart';
 
 extension UserEndpoint on V1 {
   /// POST /user/login

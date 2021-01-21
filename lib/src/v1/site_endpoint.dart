@@ -1,8 +1,8 @@
 import 'package:meta/meta.dart';
 
-import '../models/site.dart';
 import '../utils/augmenter.dart';
 import 'main.dart';
+import 'models/site.dart';
 
 extension SiteEndpoint on V1 {
   /// PUT /site/config

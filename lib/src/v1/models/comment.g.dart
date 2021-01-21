@@ -51,12 +51,11 @@ _$_CommentView _$_$_CommentViewFromJson(Map<String, dynamic> json) {
         : VoteType.fromJson(json['my_vote'] as int),
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
-  )..instanceHost = json['instance_host'] as String;
+  );
 }
 
 Map<String, dynamic> _$_$_CommentViewToJson(_$_CommentView instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'id': instance.id,
       'creator_id': instance.creatorId,
       'post_id': instance.postId,
@@ -140,12 +139,11 @@ _$_ReplyView _$_$_ReplyViewFromJson(Map<String, dynamic> json) {
     subscribed: json['subscribed'] as bool,
     saved: json['saved'] as bool,
     recipientId: json['recipient_id'] as int,
-  )..instanceHost = json['instance_host'] as String;
+  );
 }
 
 Map<String, dynamic> _$_$_ReplyViewToJson(_$_ReplyView instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'id': instance.id,
       'creator_id': instance.creatorId,
       'post_id': instance.postId,

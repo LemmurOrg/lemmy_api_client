@@ -30,12 +30,11 @@ _$_SiteView _$_$_SiteViewFromJson(Map<String, dynamic> json) {
     numberOfPosts: json['number_of_posts'] as int,
     numberOfComments: json['number_of_comments'] as int,
     numberOfCommunities: json['number_of_communities'] as int,
-  )..instanceHost = json['instance_host'] as String;
+  );
 }
 
 Map<String, dynamic> _$_$_SiteViewToJson(_$_SiteView instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'id': instance.id,
       'name': instance.name,
       'description': instance.description,
@@ -74,12 +73,11 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
     myUser: json['my_user'] == null
         ? null
         : User.fromJson(json['my_user'] as Map<String, dynamic>),
-  )..instanceHost = json['instance_host'] as String;
+  );
 }
 
 Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'site': instance.site,
       'admins': instance.admins,
       'banned': instance.banned,
@@ -101,12 +99,11 @@ _$_TransferredSite _$_$_TransferredSiteFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  )..instanceHost = json['instance_host'] as String;
+  );
 }
 
 Map<String, dynamic> _$_$_TransferredSiteToJson(_$_TransferredSite instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'site': instance.site,
       'admins': instance.admins,
       'banned': instance.banned,

@@ -2,11 +2,11 @@ import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
 import '../http_helper.dart';
-import '../models/category.dart';
-import '../models/mod.dart';
-import '../models/search.dart';
-import '../models/user.dart';
 import '../utils/augmenter.dart';
+import 'models/category.dart';
+import 'models/mod.dart';
+import 'models/search.dart';
+import 'models/user.dart';
 
 export 'comment_endpoint.dart';
 export 'community_endpoint.dart';

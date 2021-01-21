@@ -2,10 +2,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
-import './comment.dart';
-import './community.dart';
-import './post.dart';
-import '../enums.dart';
+import '../../enums.dart';
+import 'comment.dart';
+import 'community.dart';
+import 'post.dart';
 import 'with_instance_host.dart';
 
 part 'user.freezed.dart';

@@ -1,8 +1,8 @@
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
-import '../models/comment.dart';
 import 'main.dart';
+import 'models/comment.dart';
 
 extension CommentEndpoint on V1 {
   /// POST /comment

@@ -1,9 +1,9 @@
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
-import '../models/post.dart';
 import '../utils/augmenter.dart';
 import 'main.dart';
+import 'models/post.dart';
 
 extension PostEndpoint on V1 {
   /// POST /post

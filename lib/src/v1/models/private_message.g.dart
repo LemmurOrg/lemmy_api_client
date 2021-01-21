@@ -33,13 +33,12 @@ _$_PrivateMessageView _$_$_PrivateMessageViewFromJson(
     recipientAvatar: json['recipient_avatar'] as String,
     recipientActorId: json['recipient_actor_id'] as String,
     recipientLocal: json['recipient_local'] as bool,
-  )..instanceHost = json['instance_host'] as String;
+  );
 }
 
 Map<String, dynamic> _$_$_PrivateMessageViewToJson(
         _$_PrivateMessageView instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'id': instance.id,
       'creator_id': instance.creatorId,
       'recipient_id': instance.recipientId,
