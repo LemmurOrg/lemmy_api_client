@@ -79,7 +79,6 @@ abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
   factory GetPosts({
     @required @JsonKey(name: 'type_') PostListingType type,
     @required SortType sort,
-    // TODO: move to Paginated class?
     int page,
     int limit,
     int communityId,

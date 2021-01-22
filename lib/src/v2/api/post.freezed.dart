@@ -708,7 +708,7 @@ const $GetPosts = _$GetPostsTearOff();
 mixin _$GetPosts {
   @JsonKey(name: 'type_')
   PostListingType get type;
-  SortType get sort; // TODO: move to Paginated class?
+  SortType get sort;
   int get page;
   int get limit;
   int get communityId;
@@ -839,7 +839,7 @@ class _$_GetPosts extends _GetPosts {
   final PostListingType type;
   @override
   final SortType sort;
-  @override // TODO: move to Paginated class?
+  @override
   final int page;
   @override
   final int limit;
@@ -916,7 +916,7 @@ abstract class _GetPosts extends GetPosts {
   PostListingType get type;
   @override
   SortType get sort;
-  @override // TODO: move to Paginated class?
+  @override
   int get page;
   @override
   int get limit;

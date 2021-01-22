@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:lemmy_api_client/lemmy_api_client.dart';
+import 'package:lemmy_api_client/v1_models.dart';
 import 'package:test/test.dart';
 
 void main() {

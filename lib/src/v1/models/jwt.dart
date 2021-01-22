@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'with_instance_host.dart';
-
 part 'jwt.freezed.dart';
 part 'jwt.g.dart';
 
@@ -28,7 +26,7 @@ class Jwt {
 }
 
 @freezed
-abstract class JwtPayload extends WithInstanceHost implements _$JwtPayload {
+abstract class JwtPayload implements _$JwtPayload {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory JwtPayload({
     @required int id,
