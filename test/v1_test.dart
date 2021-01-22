@@ -386,11 +386,11 @@ void main() {
     //   });
     // });
 
-    // group('getCaptcha', () {
-    //   test('correctly fetches', () async {
-    //     await lemmy.getCaptcha();
-    //   });
-    // });
+    group('getCaptcha', () {
+      test('correctly fetches', () async {
+        await lemmy.getCaptcha();
+      });
+    });
 
     group('getUserDetails', () {
       test('correctly fetches', () async {

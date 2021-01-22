@@ -67,8 +67,6 @@ extension UserEndpoint on V1 {
   //   return res['jwt'];
   // }
 
-  // TODO(shilangyu): this seems broken on lemmy's end, returns
-  // status code 400 with no body
   /// GET /user/get_captcha
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
   Future<Captcha> getCaptcha() async {
