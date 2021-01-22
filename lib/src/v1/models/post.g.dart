@@ -64,11 +64,12 @@ _$_PostView _$_$_PostViewFromJson(Map<String, dynamic> json) {
     subscribed: json['subscribed'] as bool,
     read: json['read'] as bool,
     saved: json['saved'] as bool,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_PostViewToJson(_$_PostView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'id': instance.id,
       'name': instance.name,
       'url': instance.url,
@@ -134,11 +135,12 @@ _$_FullPostView _$_$_FullPostViewFromJson(Map<String, dynamic> json) {
             ? null
             : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullPostViewToJson(_$_FullPostView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'post': instance.post,
       'comments': instance.comments,
       'community': instance.community,

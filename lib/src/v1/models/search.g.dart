@@ -28,10 +28,11 @@ _$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) => <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'type_': instance.type,
       'comments': instance.comments,
       'posts': instance.posts,

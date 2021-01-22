@@ -42,11 +42,12 @@ _$_CommunityView _$_$_CommunityViewFromJson(Map<String, dynamic> json) {
     hotRank: json['hot_rank'] as int,
     userId: json['user_id'] as int,
     subscribed: json['subscribed'] as bool,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_CommunityViewToJson(_$_CommunityView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'id': instance.id,
       'name': instance.name,
       'title': instance.title,
@@ -95,12 +96,13 @@ _$_CommunityFollowerView _$_$_CommunityFollowerViewFromJson(
     communityLocal: json['community_local'] as bool,
     communityName: json['community_name'] as String,
     communityIcon: json['community_icon'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_CommunityFollowerViewToJson(
         _$_CommunityFollowerView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'id': instance.id,
       'community_id': instance.communityId,
       'user_id': instance.userId,
@@ -134,12 +136,13 @@ _$_CommunityModeratorView _$_$_CommunityModeratorViewFromJson(
     communityLocal: json['community_local'] as bool,
     communityName: json['community_name'] as String,
     communityIcon: json['community_icon'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_CommunityModeratorViewToJson(
         _$_CommunityModeratorView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'id': instance.id,
       'community_id': instance.communityId,
       'user_id': instance.userId,
@@ -165,12 +168,13 @@ _$_FullCommunityView _$_$_FullCommunityViewFromJson(Map<String, dynamic> json) {
             ? null
             : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullCommunityViewToJson(
         _$_FullCommunityView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'community': instance.community,
       'moderators': instance.moderators,
     };
@@ -190,12 +194,13 @@ _$_TransferredCommunity _$_$_TransferredCommunityFromJson(
         ?.map((e) =>
             e == null ? null : UserView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_TransferredCommunityToJson(
         _$_TransferredCommunity instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'community': instance.community,
       'moderators': instance.moderators,
       'admins': instance.admins,
