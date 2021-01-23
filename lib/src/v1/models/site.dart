@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../utils/with_instance_host.dart';
 import 'user.dart';
-import 'with_instance_host.dart';
 
 part 'site.freezed.dart';
 part 'site.g.dart';

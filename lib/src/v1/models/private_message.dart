@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-import 'with_instance_host.dart';
+import '../../utils/with_instance_host.dart';
 
 part 'private_message.freezed.dart';
 part 'private_message.g.dart';

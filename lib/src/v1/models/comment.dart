@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../enums.dart';
-import 'with_instance_host.dart';
+import '../../utils/with_instance_host.dart';
 
 part 'comment.freezed.dart';
 part 'comment.g.dart';

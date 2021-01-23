@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:lemmy_api_client/src/v1/models/with_instance_host.dart';
+
+import '../../utils/with_instance_host.dart';
 
 part 'source.freezed.dart';
 part 'source.g.dart';

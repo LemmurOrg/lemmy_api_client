@@ -3,10 +3,10 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 
 import '../../enums.dart';
+import '../../utils/with_instance_host.dart';
 import 'comment.dart';
 import 'community.dart';
 import 'post.dart';
-import 'with_instance_host.dart';
 
 part 'user.freezed.dart';
 part 'user.g.dart';

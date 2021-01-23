@@ -1,8 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:lemmy_api_client/src/v1/models/with_instance_host.dart';
 
 import '../../enums.dart';
+import '../../utils/with_instance_host.dart';
 import 'aggregates.dart';
 import 'source.dart';
 
