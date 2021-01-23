@@ -42,7 +42,7 @@ class V2 {
   }
 }
 
-void main(List<String> args) async {
+Future<void> main(List<String> args) async {
   final lac = V2('enterprise.lemmy.ml');
   print(await lac.run(GetPost(id: 157)));
 }
