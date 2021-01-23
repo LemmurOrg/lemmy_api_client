@@ -6,7 +6,8 @@
 
 ### Breaking change
 
-- To get v1 models you now need to import `package:lemmy_api_client/v1_models.dart`, this was done to prevent collisions with v2 models
+- Clients are now split between v1 (`package:lemmy_api_client/v1.dart`) and v2 (`package:lemmy_api_client/v2.dart`)
+- `Pictrs` is now in `package:lemmy_api_client/pictrs.dart`
 
 ## 0.9.1 - 2021-01-07
 
