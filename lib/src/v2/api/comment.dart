@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
 
@@ -8,22 +9,8 @@ part 'comment.freezed.dart';
 part 'comment.g.dart';
 
 @freezed
-abstract class CommentResponse implements _$CommentResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommentResponse({
-    @required CommentView commentView,
-    @required List<int> recipientIds,
-    String formId,
-  }) = _CommentResponse;
-
-  CommentResponse._();
-  factory CommentResponse.fromJson(Map<String, dynamic> json) =>
-      _$CommentResponseFromJson(json);
-}
-
-@freezed
 abstract class CreateComment
-    implements _$CreateComment, LemmyApiQuery<CommentResponse> {
+    implements _$CreateComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory CreateComment({
     @required String content,
@@ -44,13 +31,13 @@ abstract class CreateComment
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
 abstract class EditComment
-    implements _$EditComment, LemmyApiQuery<CommentResponse> {
+    implements _$EditComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory EditComment({
     @required String content,
@@ -70,13 +57,13 @@ abstract class EditComment
   HttpMethod httpMethod() => HttpMethod.put;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
 abstract class DeleteComment
-    implements _$DeleteComment, LemmyApiQuery<CommentResponse> {
+    implements _$DeleteComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory DeleteComment({
     @required int commentId,
@@ -95,13 +82,13 @@ abstract class DeleteComment
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
 abstract class RemoveComment
-    implements _$RemoveComment, LemmyApiQuery<CommentResponse> {
+    implements _$RemoveComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory RemoveComment({
     @required int commentId,
@@ -121,13 +108,13 @@ abstract class RemoveComment
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
 abstract class MarkCommentAsRead
-    implements _$MarkCommentAsRead, LemmyApiQuery<CommentResponse> {
+    implements _$MarkCommentAsRead, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory MarkCommentAsRead({
     @required int commentId,
@@ -146,13 +133,13 @@ abstract class MarkCommentAsRead
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
 abstract class SaveComment
-    implements _$SaveComment, LemmyApiQuery<CommentResponse> {
+    implements _$SaveComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory SaveComment({
     @required int commentId,
@@ -171,13 +158,13 @@ abstract class SaveComment
   HttpMethod httpMethod() => HttpMethod.put;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
 abstract class CreateCommentLike
-    implements _$CreateCommentLike, LemmyApiQuery<CommentResponse> {
+    implements _$CreateCommentLike, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory CreateCommentLike({
     @required int commentId,
@@ -196,8 +183,8 @@ abstract class CreateCommentLike
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  CommentResponse responseFactory(Map<String, dynamic> json) =>
-      CommentResponse.fromJson(json);
+  FullCommentView responseFactory(Map<String, dynamic> json) =>
+      FullCommentView.fromJson(json);
 }
 
 @freezed
@@ -280,21 +267,6 @@ abstract class ResolveCommentReport
   @override
   ResolveCommentReportResponse responseFactory(Map<String, dynamic> json) =>
       ResolveCommentReportResponse.fromJson(json);
-}
-
-// TODO: this does not seem to exist yet
-@freezed
-abstract class ResolveCommentReportResponse
-    implements _$ResolveCommentReportResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ResolveCommentReportResponse({
-    @required int reportId,
-    @required bool resolved,
-  }) = _ResolveCommentReportResponse;
-
-  ResolveCommentReportResponse._();
-  factory ResolveCommentReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$ResolveCommentReportResponseFromJson(json);
 }
 
 // TODO: this does not seem to exist yet

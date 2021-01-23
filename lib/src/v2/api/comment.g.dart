@@ -6,24 +6,6 @@ part of 'comment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CommentResponse _$_$_CommentResponseFromJson(Map<String, dynamic> json) {
-  return _$_CommentResponse(
-    commentView: json['comment_view'] == null
-        ? null
-        : CommentView.fromJson(json['comment_view'] as Map<String, dynamic>),
-    recipientIds:
-        (json['recipient_ids'] as List)?.map((e) => e as int)?.toList(),
-    formId: json['form_id'] as String,
-  );
-}
-
-Map<String, dynamic> _$_$_CommentResponseToJson(_$_CommentResponse instance) =>
-    <String, dynamic>{
-      'comment_view': instance.commentView,
-      'recipient_ids': instance.recipientIds,
-      'form_id': instance.formId,
-    };
-
 _$_CreateComment _$_$_CreateCommentFromJson(Map<String, dynamic> json) {
   return _$_CreateComment(
     content: json['content'] as String,
@@ -278,21 +260,6 @@ Map<String, dynamic> _$_$_ResolveCommentReportToJson(
   writeNotNull('auth', instance.auth);
   return val;
 }
-
-_$_ResolveCommentReportResponse _$_$_ResolveCommentReportResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_ResolveCommentReportResponse(
-    reportId: json['report_id'] as int,
-    resolved: json['resolved'] as bool,
-  );
-}
-
-Map<String, dynamic> _$_$_ResolveCommentReportResponseToJson(
-        _$_ResolveCommentReportResponse instance) =>
-    <String, dynamic>{
-      'report_id': instance.reportId,
-      'resolved': instance.resolved,
-    };
 
 _$_ListCommentReports _$_$_ListCommentReportsFromJson(
     Map<String, dynamic> json) {

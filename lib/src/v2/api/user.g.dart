@@ -6,34 +6,6 @@ part of 'user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_JwtPayload _$_$_JwtPayloadFromJson(Map<String, dynamic> json) {
-  return _$_JwtPayload(
-    id: json['id'] as int,
-    iss: json['iss'] as String,
-  );
-}
-
-Map<String, dynamic> _$_$_JwtPayloadToJson(_$_JwtPayload instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'iss': instance.iss,
-    };
-
-_$_Captcha _$_$_CaptchaFromJson(Map<String, dynamic> json) {
-  return _$_Captcha(
-    png: json['png'] as String,
-    wav: json['wav'] as String,
-    uuid: json['uuid'] as String,
-  );
-}
-
-Map<String, dynamic> _$_$_CaptchaToJson(_$_Captcha instance) =>
-    <String, dynamic>{
-      'png': instance.png,
-      'wav': instance.wav,
-      'uuid': instance.uuid,
-    };
-
 _$_Login _$_$_LoginFromJson(Map<String, dynamic> json) {
   return _$_Login(
     usernameOrEmail: json['username_or_email'] as String,
@@ -178,43 +150,6 @@ Map<String, dynamic> _$_$_GetUserDetailsToJson(_$_GetUserDetails instance) {
   return val;
 }
 
-_$_GetUserDetailsResponse _$_$_GetUserDetailsResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetUserDetailsResponse(
-    userView: json['user_view'] == null
-        ? null
-        : UserViewSafe.fromJson(json['user_view'] as Map<String, dynamic>),
-    follows: (json['follows'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CommunityFollowerView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    moderates: (json['moderates'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    comments: (json['comments'] as List)
-        ?.map((e) =>
-            e == null ? null : CommentView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    posts: (json['posts'] as List)
-        ?.map((e) =>
-            e == null ? null : PostView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-  );
-}
-
-Map<String, dynamic> _$_$_GetUserDetailsResponseToJson(
-        _$_GetUserDetailsResponse instance) =>
-    <String, dynamic>{
-      'user_view': instance.userView,
-      'follows': instance.follows,
-      'moderates': instance.moderates,
-      'comments': instance.comments,
-      'posts': instance.posts,
-    };
-
 _$_MarkAllAsRead _$_$_MarkAllAsReadFromJson(Map<String, dynamic> json) {
   return _$_MarkAllAsRead(
     auth: json['auth'] as String,
@@ -285,21 +220,6 @@ Map<String, dynamic> _$_$_BanUserToJson(_$_BanUser instance) {
   writeNotNull('auth', instance.auth);
   return val;
 }
-
-_$_BanUserResponse _$_$_BanUserResponseFromJson(Map<String, dynamic> json) {
-  return _$_BanUserResponse(
-    userView: json['user_view'] == null
-        ? null
-        : UserViewSafe.fromJson(json['user_view'] as Map<String, dynamic>),
-    banned: json['banned'] as bool,
-  );
-}
-
-Map<String, dynamic> _$_$_BanUserResponseToJson(_$_BanUserResponse instance) =>
-    <String, dynamic>{
-      'user_view': instance.userView,
-      'banned': instance.banned,
-    };
 
 _$_GetReplies _$_$_GetRepliesFromJson(Map<String, dynamic> json) {
   return _$_GetReplies(
@@ -590,20 +510,3 @@ Map<String, dynamic> _$_$_GetReportCountToJson(_$_GetReportCount instance) {
   writeNotNull('auth', instance.auth);
   return val;
 }
-
-_$_GetReportCountResponse _$_$_GetReportCountResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetReportCountResponse(
-    community: json['community'] as int,
-    commentReports: json['comment_reports'] as int,
-    postReports: json['post_reports'] as int,
-  );
-}
-
-Map<String, dynamic> _$_$_GetReportCountResponseToJson(
-        _$_GetReportCountResponse instance) =>
-    <String, dynamic>{
-      'community': instance.community,
-      'comment_reports': instance.commentReports,
-      'post_reports': instance.postReports,
-    };

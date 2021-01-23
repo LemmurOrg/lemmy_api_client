@@ -1,62 +1,13 @@
-import 'dart:convert';
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../../v1/models/jwt.dart';
+import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
 
 part 'user.freezed.dart';
 part 'user.g.dart';
-
-Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
-      utf8.decode(
-        base64.decode(
-          base64.normalize(
-            token.split('.')[1],
-          ),
-        ),
-      ),
-    );
-
-class Jwt {
-  final String raw;
-  final JwtPayload payload;
-
-  Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
-
-  Map<String, dynamic> toJson() => {'raw': raw, 'payload': payload};
-}
-
-@freezed
-abstract class JwtPayload implements _$JwtPayload {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory JwtPayload({
-    @required int id,
-    @required String iss,
-  }) = _JwtPayload;
-
-  JwtPayload._();
-  factory JwtPayload.fromJson(Map<String, dynamic> json) =>
-      _$JwtPayloadFromJson(json);
-}
-
-@freezed
-abstract class Captcha implements _$Captcha {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Captcha({
-    /// A Base64 encoded png
-    @required String png,
-
-    /// A Base64 encoded wav audio file
-    String wav,
-    @required String uuid,
-  }) = _Captcha;
-
-  Captcha._();
-  factory Captcha.fromJson(Map<String, dynamic> json) =>
-      _$CaptchaFromJson(json);
-}
 
 @freezed
 abstract class Login implements _$Login, LemmyApiQuery<Jwt> {
@@ -166,7 +117,7 @@ abstract class SaveUserSettings
 
 @freezed
 abstract class GetUserDetails
-    implements _$GetUserDetails, LemmyApiQuery<GetUserDetailsResponse> {
+    implements _$GetUserDetails, LemmyApiQuery<FullUserView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetUserDetails({
     int userId,
@@ -190,24 +141,8 @@ abstract class GetUserDetails
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  GetUserDetailsResponse responseFactory(Map<String, dynamic> json) =>
-      GetUserDetailsResponse.fromJson(json);
-}
-
-@freezed
-abstract class GetUserDetailsResponse implements _$GetUserDetailsResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory GetUserDetailsResponse({
-    @required UserViewSafe userView,
-    @required List<CommunityFollowerView> follows,
-    @required List<CommunityModeratorView> moderates,
-    @required List<CommentView> comments,
-    @required List<PostView> posts,
-  }) = _GetUserDetailsResponse;
-
-  GetUserDetailsResponse._();
-  factory GetUserDetailsResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetUserDetailsResponseFromJson(json);
+  FullUserView responseFactory(Map<String, dynamic> json) =>
+      FullUserView.fromJson(json);
 }
 
 @freezed
@@ -257,7 +192,7 @@ abstract class AddAdmin
 }
 
 @freezed
-abstract class BanUser implements _$BanUser, LemmyApiQuery<BanUserResponse> {
+abstract class BanUser implements _$BanUser, LemmyApiQuery<BannedUser> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory BanUser({
     @required int userId,
@@ -279,21 +214,8 @@ abstract class BanUser implements _$BanUser, LemmyApiQuery<BanUserResponse> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  BanUserResponse responseFactory(Map<String, dynamic> json) =>
-      BanUserResponse.fromJson(json);
-}
-
-@freezed
-abstract class BanUserResponse implements _$BanUserResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BanUserResponse({
-    @required UserViewSafe userView,
-    @required bool banned,
-  }) = _BanUserResponse;
-
-  BanUserResponse._();
-  factory BanUserResponse.fromJson(Map<String, dynamic> json) =>
-      _$BanUserResponseFromJson(json);
+  BannedUser responseFactory(Map<String, dynamic> json) =>
+      BannedUser.fromJson(json);
 }
 
 @freezed
@@ -594,19 +516,4 @@ abstract class GetReportCount
   @override
   GetReportCountResponse responseFactory(Map<String, dynamic> json) =>
       GetReportCountResponse.fromJson(json);
-}
-
-// TODO: this does not seem to exist yet
-@freezed
-abstract class GetReportCountResponse implements _$GetReportCountResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory GetReportCountResponse({
-    int community,
-    @required int commentReports,
-    @required int postReports,
-  }) = _GetReportCountResponse;
-
-  GetReportCountResponse._();
-  factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetReportCountResponseFromJson(json);
 }

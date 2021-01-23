@@ -6,37 +6,6 @@ part of 'post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FullPost _$_$_FullPostFromJson(Map<String, dynamic> json) {
-  return _$_FullPost(
-    postView: json['post_view'] == null
-        ? null
-        : PostView.fromJson(json['post_view'] as Map<String, dynamic>),
-    communityView: json['community_view'] == null
-        ? null
-        : CommunityView.fromJson(
-            json['community_view'] as Map<String, dynamic>),
-    comments: (json['comments'] as List)
-        ?.map((e) =>
-            e == null ? null : CommentView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    moderators: (json['moderators'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    online: json['online'] as int,
-  );
-}
-
-Map<String, dynamic> _$_$_FullPostToJson(_$_FullPost instance) =>
-    <String, dynamic>{
-      'post_view': instance.postView,
-      'community_view': instance.communityView,
-      'comments': instance.comments,
-      'moderators': instance.moderators,
-      'online': instance.online,
-    };
-
 _$_GetPost _$_$_GetPostFromJson(Map<String, dynamic> json) {
   return _$_GetPost(
     id: json['id'] as int,
@@ -336,21 +305,6 @@ Map<String, dynamic> _$_$_ResolvePostReportToJson(
   writeNotNull('auth', instance.auth);
   return val;
 }
-
-_$_ResolvePostReportResponse _$_$_ResolvePostReportResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_ResolvePostReportResponse(
-    reportId: json['report_id'] as int,
-    resolved: json['resolved'] as bool,
-  );
-}
-
-Map<String, dynamic> _$_$_ResolvePostReportResponseToJson(
-        _$_ResolvePostReportResponse instance) =>
-    <String, dynamic>{
-      'report_id': instance.reportId,
-      'resolved': instance.resolved,
-    };
 
 _$_ListPostReports _$_$_ListPostReportsFromJson(Map<String, dynamic> json) {
   return _$_ListPostReports(

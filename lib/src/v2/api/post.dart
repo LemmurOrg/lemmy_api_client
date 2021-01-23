@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
 
@@ -8,23 +9,7 @@ part 'post.freezed.dart';
 part 'post.g.dart';
 
 @freezed
-abstract class FullPost implements _$FullPost {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullPost({
-    @required PostView postView,
-    @required CommunityView communityView,
-    @required List<CommentView> comments,
-    @required List<CommunityModeratorView> moderators,
-    @required int online,
-  }) = _FullPost;
-
-  FullPost._();
-  factory FullPost.fromJson(Map<String, dynamic> json) =>
-      _$FullPostFromJson(json);
-}
-
-@freezed
-abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPost> {
+abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetPost({
     @required int id,
@@ -42,8 +27,8 @@ abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPost> {
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  FullPost responseFactory(Map<String, dynamic> json) =>
-      FullPost.fromJson(json);
+  FullPostView responseFactory(Map<String, dynamic> json) =>
+      FullPostView.fromJson(json);
 }
 
 @freezed
@@ -323,20 +308,6 @@ abstract class ResolvePostReport
   @override
   ResolvePostReportResponse responseFactory(Map<String, dynamic> json) =>
       ResolvePostReportResponse.fromJson(json);
-}
-
-@freezed
-abstract class ResolvePostReportResponse
-    implements _$ResolvePostReportResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ResolvePostReportResponse({
-    @required int reportId,
-    @required bool resolved,
-  }) = _ResolvePostReportResponse;
-
-  ResolvePostReportResponse._();
-  factory ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$ResolvePostReportResponseFromJson(json);
 }
 
 // TODO: this does not seem to exist yet

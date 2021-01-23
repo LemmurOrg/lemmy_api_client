@@ -29,30 +29,6 @@ Map<String, dynamic> _$_$_GetCommunityToJson(_$_GetCommunity instance) {
   return val;
 }
 
-_$_GetCommunityResponse _$_$_GetCommunityResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetCommunityResponse(
-    communityView: json['community_view'] == null
-        ? null
-        : CommunityView.fromJson(
-            json['community_view'] as Map<String, dynamic>),
-    moderators: (json['moderators'] as List)
-        ?.map((e) => e == null
-            ? null
-            : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
-    online: json['online'] as int,
-  );
-}
-
-Map<String, dynamic> _$_$_GetCommunityResponseToJson(
-        _$_GetCommunityResponse instance) =>
-    <String, dynamic>{
-      'community_view': instance.communityView,
-      'moderators': instance.moderators,
-      'online': instance.online,
-    };
-
 _$_CreateCommunity _$_$_CreateCommunityFromJson(Map<String, dynamic> json) {
   return _$_CreateCommunity(
     name: json['name'] as String,
@@ -141,23 +117,6 @@ Map<String, dynamic> _$_$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
   writeNotNull('auth', instance.auth);
   return val;
 }
-
-_$_BanFromCommunityResponse _$_$_BanFromCommunityResponseFromJson(
-    Map<String, dynamic> json) {
-  return _$_BanFromCommunityResponse(
-    userView: json['user_view'] == null
-        ? null
-        : UserViewSafe.fromJson(json['user_view'] as Map<String, dynamic>),
-    banned: json['banned'] as bool,
-  );
-}
-
-Map<String, dynamic> _$_$_BanFromCommunityResponseToJson(
-        _$_BanFromCommunityResponse instance) =>
-    <String, dynamic>{
-      'user_view': instance.userView,
-      'banned': instance.banned,
-    };
 
 _$_AddModToCommunity _$_$_AddModToCommunityFromJson(Map<String, dynamic> json) {
   return _$_AddModToCommunity(

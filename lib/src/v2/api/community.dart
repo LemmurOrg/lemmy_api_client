@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
 
@@ -9,7 +10,7 @@ part 'community.g.dart';
 
 @freezed
 abstract class GetCommunity
-    implements _$GetCommunity, LemmyApiQuery<GetCommunityResponse> {
+    implements _$GetCommunity, LemmyApiQuery<FullCommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetCommunity({
     int id,
@@ -29,23 +30,8 @@ abstract class GetCommunity
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  GetCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      GetCommunityResponse.fromJson(json);
-}
-
-@freezed
-abstract class GetCommunityResponse implements _$GetCommunityResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory GetCommunityResponse({
-    @required CommunityView communityView,
-    @required List<CommunityModeratorView> moderators,
-    @required int online,
-  }) = _GetCommunityResponse;
-
-  GetCommunityResponse._();
-
-  factory GetCommunityResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetCommunityResponseFromJson(json);
+  FullCommunityView responseFactory(Map<String, dynamic> json) =>
+      FullCommunityView.fromJson(json);
 }
 
 @freezed
@@ -110,7 +96,7 @@ abstract class ListCommunities
 
 @freezed
 abstract class BanFromCommunity
-    implements _$BanFromCommunity, LemmyApiQuery<BanFromCommunityResponse> {
+    implements _$BanFromCommunity, LemmyApiQuery<BannedCommunityUser> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory BanFromCommunity({
     @required int communityId,
@@ -134,22 +120,8 @@ abstract class BanFromCommunity
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  BanFromCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      BanFromCommunityResponse.fromJson(json);
-}
-
-@freezed
-abstract class BanFromCommunityResponse implements _$BanFromCommunityResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BanFromCommunityResponse({
-    @required UserViewSafe userView,
-    @required bool banned,
-  }) = _BanFromCommunityResponse;
-
-  BanFromCommunityResponse._();
-
-  factory BanFromCommunityResponse.fromJson(Map<String, dynamic> json) =>
-      _$BanFromCommunityResponseFromJson(json);
+  BannedCommunityUser responseFactory(Map<String, dynamic> json) =>
+      BannedCommunityUser.fromJson(json);
 }
 
 @freezed
@@ -324,7 +296,7 @@ abstract class GetFollowedCommunities
 
 @freezed
 abstract class TransferCommunity
-    implements _$TransferCommunity, LemmyApiQuery<GetCommunityResponse> {
+    implements _$TransferCommunity, LemmyApiQuery<FullCommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory TransferCommunity({
     @required int communityId,
@@ -344,6 +316,6 @@ abstract class TransferCommunity
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  GetCommunityResponse responseFactory(Map<String, dynamic> json) =>
-      GetCommunityResponse.fromJson(json);
+  FullCommunityView responseFactory(Map<String, dynamic> json) =>
+      FullCommunityView.fromJson(json);
 }

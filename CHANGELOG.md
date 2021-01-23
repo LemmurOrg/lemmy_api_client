@@ -1,3 +1,13 @@
+## Unreleased
+
+### Added
+
+- V2 Lemmy api is now available. The use has changed to make `lemmy_api_client` much easier and less tedious to maintain.
+
+### Breaking change
+
+- To get v1 models you now need to import `package:lemmy_api_client/v1_models.dart`, this was done to prevent collisions with v2 models
+
 ## 0.9.1 - 2021-01-07
 
 ### Changed

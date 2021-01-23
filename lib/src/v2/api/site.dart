@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../models/api.dart';
 import '../models/source.dart';
 import '../models/views.dart';
 import '../query.dart';
@@ -31,7 +32,7 @@ abstract class ListCategories
 }
 
 @freezed
-abstract class Search implements _$Search, LemmyApiQuery<SearchResponse> {
+abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory Search({
     @required String q,
@@ -55,30 +56,12 @@ abstract class Search implements _$Search, LemmyApiQuery<SearchResponse> {
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  SearchResponse responseFactory(Map<String, dynamic> json) =>
-      SearchResponse.fromJson(json);
+  SearchResults responseFactory(Map<String, dynamic> json) =>
+      SearchResults.fromJson(json);
 }
 
 @freezed
-abstract class SearchResponse implements _$SearchResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory SearchResponse({
-    @required @JsonKey(name: 'type_') SearchType type,
-    @required List<CommentView> comments,
-    @required List<PostView> posts,
-    @required List<CommunityView> communities,
-    @required List<UserViewSafe> users,
-  }) = _SearchResponse;
-
-  SearchResponse._();
-
-  factory SearchResponse.fromJson(Map<String, dynamic> json) =>
-      _$SearchResponseFromJson(json);
-}
-
-@freezed
-abstract class GetModlog
-    implements _$GetModlog, LemmyApiQuery<GetModlogResponse> {
+abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetModlog({
     int modUserId,
@@ -99,29 +82,7 @@ abstract class GetModlog
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  GetModlogResponse responseFactory(Map<String, dynamic> json) =>
-      GetModlogResponse.fromJson(json);
-}
-
-@freezed
-abstract class GetModlogResponse implements _$GetModlogResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory GetModlogResponse({
-    @required List<ModRemovePostView> removedPosts,
-    @required List<ModLockPostView> lockedPosts,
-    @required List<ModStickyPostView> stickiedPosts,
-    @required List<ModRemoveCommentView> removedComments,
-    @required List<ModRemoveCommunityView> removedCommunities,
-    @required List<ModBanFromCommunityView> bannedFromCommunity,
-    @required List<ModBanView> banned,
-    @required List<ModAddCommunityView> addedToCommunity,
-    @required List<ModAddView> added,
-  }) = _GetModlogResponse;
-
-  GetModlogResponse._();
-
-  factory GetModlogResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetModlogResponseFromJson(json);
+  Modlog responseFactory(Map<String, dynamic> json) => Modlog.fromJson(json);
 }
 
 @freezed
@@ -185,7 +146,7 @@ abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
 }
 
 @freezed
-abstract class GetSite implements _$GetSite, LemmyApiQuery<GetSiteResponse> {
+abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetSite({
     String auth,
@@ -203,32 +164,13 @@ abstract class GetSite implements _$GetSite, LemmyApiQuery<GetSiteResponse> {
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  GetSiteResponse responseFactory(Map<String, dynamic> json) =>
-      GetSiteResponse.fromJson(json);
-}
-
-@freezed
-abstract class GetSiteResponse implements _$GetSiteResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory GetSiteResponse({
-    SiteView siteView,
-    @required List<UserViewSafe> admins,
-    @required List<UserViewSafe> banned,
-    @required int online,
-    @required String version,
-    UserSafeSettings myMser,
-    @required List<String> federatedInstances,
-  }) = _GetSiteResponse;
-
-  GetSiteResponse._();
-
-  factory GetSiteResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetSiteResponseFromJson(json);
+  FullSiteView responseFactory(Map<String, dynamic> json) =>
+      FullSiteView.fromJson(json);
 }
 
 @freezed
 abstract class TransferSite
-    implements _$TransferSite, LemmyApiQuery<GetSiteResponse> {
+    implements _$TransferSite, LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory TransferSite({
     @required int userId,
@@ -247,8 +189,8 @@ abstract class TransferSite
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  GetSiteResponse responseFactory(Map<String, dynamic> json) =>
-      GetSiteResponse.fromJson(json);
+  FullSiteView responseFactory(Map<String, dynamic> json) =>
+      FullSiteView.fromJson(json);
 }
 
 @freezed
