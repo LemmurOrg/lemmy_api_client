@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+import '../exceptions.dart';
 import 'query.dart';
 
 class LemmyApiV2 {
@@ -25,17 +26,30 @@ class LemmyApiV2 {
         case HttpMethod.post:
           return http.post(
             Uri.https(host, '$extraPath${query.path()}'),
-            body: query.toJson(),
+            body: jsonEncode(query.toJson()),
             headers: {'Content-Type': 'application/json'},
           );
         case HttpMethod.put:
           return http.put(
             Uri.https(host, '$extraPath${query.path()}'),
-            body: query.toJson(),
+            body: jsonEncode(query.toJson()),
             headers: {'Content-Type': 'application/json'},
           );
       }
     }();
+
+    if (res.statusCode < 200 || res.statusCode >= 300) {
+      final String errorMessage = () {
+        try {
+          final Map<String, dynamic> json = jsonDecode(res.body);
+          return json['error'];
+        } on FormatException {
+          return res.body;
+        }
+      }();
+
+      throw LemmyApiException(errorMessage);
+    }
 
     return query.responseFactory(jsonDecode(utf8.decode(res.bodyBytes)));
   }
