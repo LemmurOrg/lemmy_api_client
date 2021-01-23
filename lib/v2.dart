@@ -1,5 +1,6 @@
 export 'src/enums.dart';
 export 'src/exceptions.dart';
+export 'src/v1/models/jwt.dart';
 export 'src/v2/api/comment.dart';
 export 'src/v2/api/community.dart';
 export 'src/v2/api/post.dart';
