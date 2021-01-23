@@ -103,7 +103,7 @@ abstract class FullSiteView extends WithInstanceHost implements _$FullSiteView {
     @required List<UserViewSafe> banned,
     @required int online,
     @required String version,
-    UserSafeSettings myMser,
+    UserSafeSettings myUser,
     @required List<String> federatedInstances,
   }) = _FullSiteView;
 

@@ -1278,7 +1278,7 @@ class _$FullSiteViewTearOff {
       @required List<UserViewSafe> banned,
       @required int online,
       @required String version,
-      UserSafeSettings myMser,
+      UserSafeSettings myUser,
       @required List<String> federatedInstances}) {
     return _FullSiteView(
       siteView: siteView,
@@ -1286,7 +1286,7 @@ class _$FullSiteViewTearOff {
       banned: banned,
       online: online,
       version: version,
-      myMser: myMser,
+      myUser: myUser,
       federatedInstances: federatedInstances,
     );
   }
@@ -1308,7 +1308,7 @@ mixin _$FullSiteView {
   List<UserViewSafe> get banned;
   int get online;
   String get version;
-  UserSafeSettings get myMser;
+  UserSafeSettings get myUser;
   List<String> get federatedInstances;
 
   Map<String, dynamic> toJson();
@@ -1326,11 +1326,11 @@ abstract class $FullSiteViewCopyWith<$Res> {
       List<UserViewSafe> banned,
       int online,
       String version,
-      UserSafeSettings myMser,
+      UserSafeSettings myUser,
       List<String> federatedInstances});
 
   $SiteViewCopyWith<$Res> get siteView;
-  $UserSafeSettingsCopyWith<$Res> get myMser;
+  $UserSafeSettingsCopyWith<$Res> get myUser;
 }
 
 /// @nodoc
@@ -1348,7 +1348,7 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
     Object banned = freezed,
     Object online = freezed,
     Object version = freezed,
-    Object myMser = freezed,
+    Object myUser = freezed,
     Object federatedInstances = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1357,7 +1357,7 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       banned: banned == freezed ? _value.banned : banned as List<UserViewSafe>,
       online: online == freezed ? _value.online : online as int,
       version: version == freezed ? _value.version : version as String,
-      myMser: myMser == freezed ? _value.myMser : myMser as UserSafeSettings,
+      myUser: myUser == freezed ? _value.myUser : myUser as UserSafeSettings,
       federatedInstances: federatedInstances == freezed
           ? _value.federatedInstances
           : federatedInstances as List<String>,
@@ -1375,12 +1375,12 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
   }
 
   @override
-  $UserSafeSettingsCopyWith<$Res> get myMser {
-    if (_value.myMser == null) {
+  $UserSafeSettingsCopyWith<$Res> get myUser {
+    if (_value.myUser == null) {
       return null;
     }
-    return $UserSafeSettingsCopyWith<$Res>(_value.myMser, (value) {
-      return _then(_value.copyWith(myMser: value));
+    return $UserSafeSettingsCopyWith<$Res>(_value.myUser, (value) {
+      return _then(_value.copyWith(myUser: value));
     });
   }
 }
@@ -1398,13 +1398,13 @@ abstract class _$FullSiteViewCopyWith<$Res>
       List<UserViewSafe> banned,
       int online,
       String version,
-      UserSafeSettings myMser,
+      UserSafeSettings myUser,
       List<String> federatedInstances});
 
   @override
   $SiteViewCopyWith<$Res> get siteView;
   @override
-  $UserSafeSettingsCopyWith<$Res> get myMser;
+  $UserSafeSettingsCopyWith<$Res> get myUser;
 }
 
 /// @nodoc
@@ -1424,7 +1424,7 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
     Object banned = freezed,
     Object online = freezed,
     Object version = freezed,
-    Object myMser = freezed,
+    Object myUser = freezed,
     Object federatedInstances = freezed,
   }) {
     return _then(_FullSiteView(
@@ -1433,7 +1433,7 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
       banned: banned == freezed ? _value.banned : banned as List<UserViewSafe>,
       online: online == freezed ? _value.online : online as int,
       version: version == freezed ? _value.version : version as String,
-      myMser: myMser == freezed ? _value.myMser : myMser as UserSafeSettings,
+      myUser: myUser == freezed ? _value.myUser : myUser as UserSafeSettings,
       federatedInstances: federatedInstances == freezed
           ? _value.federatedInstances
           : federatedInstances as List<String>,
@@ -1451,7 +1451,7 @@ class _$_FullSiteView extends _FullSiteView {
       @required this.banned,
       @required this.online,
       @required this.version,
-      this.myMser,
+      this.myUser,
       @required this.federatedInstances})
       : assert(admins != null),
         assert(banned != null),
@@ -1474,13 +1474,13 @@ class _$_FullSiteView extends _FullSiteView {
   @override
   final String version;
   @override
-  final UserSafeSettings myMser;
+  final UserSafeSettings myUser;
   @override
   final List<String> federatedInstances;
 
   @override
   String toString() {
-    return 'FullSiteView(siteView: $siteView, admins: $admins, banned: $banned, online: $online, version: $version, myMser: $myMser, federatedInstances: $federatedInstances)';
+    return 'FullSiteView(siteView: $siteView, admins: $admins, banned: $banned, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances)';
   }
 
   @override
@@ -1499,8 +1499,8 @@ class _$_FullSiteView extends _FullSiteView {
             (identical(other.version, version) ||
                 const DeepCollectionEquality()
                     .equals(other.version, version)) &&
-            (identical(other.myMser, myMser) ||
-                const DeepCollectionEquality().equals(other.myMser, myMser)) &&
+            (identical(other.myUser, myUser) ||
+                const DeepCollectionEquality().equals(other.myUser, myUser)) &&
             (identical(other.federatedInstances, federatedInstances) ||
                 const DeepCollectionEquality()
                     .equals(other.federatedInstances, federatedInstances)));
@@ -1514,7 +1514,7 @@ class _$_FullSiteView extends _FullSiteView {
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(online) ^
       const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(myMser) ^
+      const DeepCollectionEquality().hash(myUser) ^
       const DeepCollectionEquality().hash(federatedInstances);
 
   @override
@@ -1535,7 +1535,7 @@ abstract class _FullSiteView extends FullSiteView {
       @required List<UserViewSafe> banned,
       @required int online,
       @required String version,
-      UserSafeSettings myMser,
+      UserSafeSettings myUser,
       @required List<String> federatedInstances}) = _$_FullSiteView;
 
   factory _FullSiteView.fromJson(Map<String, dynamic> json) =
@@ -1552,7 +1552,7 @@ abstract class _FullSiteView extends FullSiteView {
   @override
   String get version;
   @override
-  UserSafeSettings get myMser;
+  UserSafeSettings get myUser;
   @override
   List<String> get federatedInstances;
   @override

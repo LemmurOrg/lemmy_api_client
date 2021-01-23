@@ -192,9 +192,9 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
         ?.toList(),
     online: json['online'] as int,
     version: json['version'] as String,
-    myMser: json['my_mser'] == null
+    myUser: json['my_user'] == null
         ? null
-        : UserSafeSettings.fromJson(json['my_mser'] as Map<String, dynamic>),
+        : UserSafeSettings.fromJson(json['my_user'] as Map<String, dynamic>),
     federatedInstances: (json['federated_instances'] as List)
         ?.map((e) => e as String)
         ?.toList(),
@@ -209,7 +209,7 @@ Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
       'banned': instance.banned,
       'online': instance.online,
       'version': instance.version,
-      'my_mser': instance.myMser,
+      'my_user': instance.myUser,
       'federated_instances': instance.federatedInstances,
     };
 
