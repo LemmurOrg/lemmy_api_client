@@ -14,13 +14,13 @@ export 'post_endpoint.dart';
 export 'site_endpoint.dart';
 export 'user_endpoint.dart';
 
-class V1 with HttpHelper {
+class LemmyApiV1 with HttpHelper {
   @override
   final String host;
   @override
   final String extraPath = '/api/v1';
 
-  V1(this.host);
+  LemmyApiV1(this.host);
 
   /// GET /categories
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#list-categories

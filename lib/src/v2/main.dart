@@ -2,14 +2,13 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import 'api/post.dart';
 import 'query.dart';
 
-class V2 {
+class LemmyApiV2 {
   final String host;
   static const extraPath = '/api/v2';
 
-  V2(this.host);
+  const LemmyApiV2(this.host);
 
   Future<T> run<T>(LemmyApiQuery<T> query) async {
     final res = await () {
@@ -40,9 +39,4 @@ class V2 {
 
     return query.responseFactory(jsonDecode(utf8.decode(res.bodyBytes)));
   }
-}
-
-Future<void> main(List<String> args) async {
-  final lac = V2('enterprise.lemmy.ml');
-  print(await lac.run(GetPost(id: 157)));
 }

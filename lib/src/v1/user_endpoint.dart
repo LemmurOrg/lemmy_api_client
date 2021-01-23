@@ -9,7 +9,7 @@ import 'models/jwt.dart';
 import 'models/private_message.dart';
 import 'models/user.dart';
 
-extension UserEndpoint on V1 {
+extension UserEndpoint on LemmyApiV1 {
   /// POST /user/login
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#login
   Future<Jwt> login({

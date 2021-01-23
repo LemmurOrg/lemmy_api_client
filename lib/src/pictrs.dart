@@ -7,11 +7,11 @@ import 'exceptions.dart';
 import 'utils/http_helper.dart';
 import 'v1/models/pictrs.dart';
 
-class Pictrs {
+class PictrsApi {
   final String host;
   final String extraPath = '/pictrs/image';
 
-  const Pictrs(this.host);
+  const PictrsApi(this.host);
 
   Future<PictrsUpload> upload({
     @required String filePath,

@@ -5,7 +5,7 @@ import '../utils/augmenter.dart';
 import 'main.dart';
 import 'models/post.dart';
 
-extension PostEndpoint on V1 {
+extension PostEndpoint on LemmyApiV1 {
   /// POST /post
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#create-post
   Future<PostView> createPost({

@@ -1,9 +1,9 @@
-import 'package:lemmy_api_client/lemmy_api_client.dart';
+import 'package:lemmy_api_client/v1.dart';
 import 'package:test/test.dart';
 
 void main() {
   group('lemmy API v1', () {
-    final lemmy = LemmyApi('lemmygrad.ml').v1;
+    final lemmy = LemmyApiV1('lemmygrad.ml');
 
     group('listCategories', () {
       test('correctly fetches', () async {

@@ -4,7 +4,7 @@ import '../utils/augmenter.dart';
 import 'main.dart';
 import 'models/site.dart';
 
-extension SiteEndpoint on V1 {
+extension SiteEndpoint on LemmyApiV1 {
   /// PUT /site/config
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#save-site-config
   Future<String> saveSiteConfig({

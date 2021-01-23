@@ -4,7 +4,7 @@ import '../enums.dart';
 import 'main.dart';
 import 'models/comment.dart';
 
-extension CommentEndpoint on V1 {
+extension CommentEndpoint on LemmyApiV1 {
   /// POST /comment
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#create-comment
   Future<CommentView> createComment({

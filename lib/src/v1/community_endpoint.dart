@@ -6,7 +6,7 @@ import 'main.dart';
 import 'models/community.dart';
 import 'models/user.dart';
 
-extension CommunityEndpoint on V1 {
+extension CommunityEndpoint on LemmyApiV1 {
   /// GET /community
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-community
   Future<FullCommunityView> getCommunity({
