@@ -1,8 +1,8 @@
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
-import '../http_helper.dart';
 import '../utils/augmenter.dart';
+import '../utils/http_helper.dart';
 import 'models/category.dart';
 import 'models/mod.dart';
 import 'models/search.dart';

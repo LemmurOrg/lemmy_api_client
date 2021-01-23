@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart' show alwaysThrows;
 
-import './exceptions.dart';
+import '../exceptions.dart';
 
 extension OkHttpResponse on http.Response {
   bool get ok => statusCode >= 200 && statusCode < 300;
