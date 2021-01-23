@@ -123,22 +123,26 @@ class SearchType {
   ];
 }
 
-enum CommentListingType {
-  all,
-  subscribed,
-  community,
-}
+class CommentListingType {
+  final String _value;
 
-extension CommentListingTypeValue on CommentListingType {
-  String get value {
-    switch (this) {
-      case CommentListingType.all:
-        return 'All';
-      case CommentListingType.subscribed:
-        return 'Subscribed';
-      case CommentListingType.community:
-        return 'Community';
-    }
-    throw Exception('unreachable');
-  }
+  const CommentListingType._(this._value);
+
+  String get value => _value;
+
+  factory CommentListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
+
+  String toJson() => value;
+
+  static const CommentListingType all = CommentListingType._('All');
+  static const CommentListingType subscribed =
+      CommentListingType._('Subscribed');
+  static const CommentListingType community = CommentListingType._('Community');
+
+  static const List<CommentListingType> values = [
+    all,
+    subscribed,
+    community,
+  ];
 }
