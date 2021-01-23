@@ -18,12 +18,13 @@ _$_FullCommunityView _$_$_FullCommunityViewFromJson(Map<String, dynamic> json) {
             : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     online: json['online'] as int,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullCommunityViewToJson(
         _$_FullCommunityView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'community_view': instance.communityView,
       'moderators': instance.moderators,
       'online': instance.online,
@@ -48,11 +49,12 @@ _$_FullPostView _$_$_FullPostViewFromJson(Map<String, dynamic> json) {
             : CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     online: json['online'] as int,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullPostViewToJson(_$_FullPostView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'post_view': instance.postView,
       'community_view': instance.communityView,
       'comments': instance.comments,
@@ -82,11 +84,12 @@ _$_SearchResults _$_$_SearchResultsFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : UserViewSafe.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_SearchResultsToJson(_$_SearchResults instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'type_': instance.type,
       'comments': instance.comments,
       'posts': instance.posts,
@@ -139,10 +142,11 @@ _$_Modlog _$_$_ModlogFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : ModAddView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'removed_posts': instance.removedPosts,
       'locked_posts': instance.lockedPosts,
       'stickied_posts': instance.stickiedPosts,
@@ -162,11 +166,12 @@ _$_FullCommentView _$_$_FullCommentViewFromJson(Map<String, dynamic> json) {
     recipientIds:
         (json['recipient_ids'] as List)?.map((e) => e as int)?.toList(),
     formId: json['form_id'] as String,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullCommentViewToJson(_$_FullCommentView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'comment_view': instance.commentView,
       'recipient_ids': instance.recipientIds,
       'form_id': instance.formId,
@@ -193,11 +198,12 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
     federatedInstances: (json['federated_instances'] as List)
         ?.map((e) => e as String)
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'site_view': instance.siteView,
       'admins': instance.admins,
       'banned': instance.banned,
@@ -245,11 +251,12 @@ _$_FullUserView _$_$_FullUserViewFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : PostView.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_FullUserViewToJson(_$_FullUserView instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'user_view': instance.userView,
       'follows': instance.follows,
       'moderates': instance.moderates,
@@ -264,12 +271,13 @@ _$_BannedCommunityUser _$_$_BannedCommunityUserFromJson(
         ? null
         : UserViewSafe.fromJson(json['user_view'] as Map<String, dynamic>),
     banned: json['banned'] as bool,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_BannedCommunityUserToJson(
         _$_BannedCommunityUser instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'user_view': instance.userView,
       'banned': instance.banned,
     };
@@ -280,11 +288,12 @@ _$_BannedUser _$_$_BannedUserFromJson(Map<String, dynamic> json) {
         ? null
         : UserViewSafe.fromJson(json['user_view'] as Map<String, dynamic>),
     banned: json['banned'] as bool,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_BannedUserToJson(_$_BannedUser instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'user_view': instance.userView,
       'banned': instance.banned,
     };
@@ -295,12 +304,13 @@ _$_GetReportCountResponse _$_$_GetReportCountResponseFromJson(
     community: json['community'] as int,
     commentReports: json['comment_reports'] as int,
     postReports: json['post_reports'] as int,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_GetReportCountResponseToJson(
         _$_GetReportCountResponse instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'community': instance.community,
       'comment_reports': instance.commentReports,
       'post_reports': instance.postReports,
@@ -311,12 +321,13 @@ _$_ResolveCommentReportResponse _$_$_ResolveCommentReportResponseFromJson(
   return _$_ResolveCommentReportResponse(
     reportId: json['report_id'] as int,
     resolved: json['resolved'] as bool,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_ResolveCommentReportResponseToJson(
         _$_ResolveCommentReportResponse instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'report_id': instance.reportId,
       'resolved': instance.resolved,
     };
@@ -326,12 +337,13 @@ _$_ResolvePostReportResponse _$_$_ResolvePostReportResponseFromJson(
   return _$_ResolvePostReportResponse(
     reportId: json['report_id'] as int,
     resolved: json['resolved'] as bool,
-  );
+  )..instanceHost = json['instance_host'] as String;
 }
 
 Map<String, dynamic> _$_$_ResolvePostReportResponseToJson(
         _$_ResolvePostReportResponse instance) =>
     <String, dynamic>{
+      'instance_host': instance.instanceHost,
       'report_id': instance.reportId,
       'resolved': instance.resolved,
     };

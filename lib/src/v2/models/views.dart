@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:lemmy_api_client/src/v1/models/with_instance_host.dart';
 
 import '../../enums.dart';
 import 'aggregates.dart';
@@ -9,7 +10,7 @@ part 'views.freezed.dart';
 part 'views.g.dart';
 
 @freezed
-abstract class UserViewSafe implements _$UserViewSafe {
+abstract class UserViewSafe extends WithInstanceHost implements _$UserViewSafe {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserViewSafe({
     @required UserSafe user,
@@ -22,7 +23,8 @@ abstract class UserViewSafe implements _$UserViewSafe {
 }
 
 @freezed
-abstract class UserMentionView implements _$UserMentionView {
+abstract class UserMentionView extends WithInstanceHost
+    implements _$UserMentionView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMentionView({
     @required UserMention userMention,
@@ -44,7 +46,7 @@ abstract class UserMentionView implements _$UserMentionView {
 }
 
 @freezed
-abstract class SiteView implements _$SiteView {
+abstract class SiteView extends WithInstanceHost implements _$SiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SiteView({
     @required Site site,
@@ -58,7 +60,8 @@ abstract class SiteView implements _$SiteView {
 }
 
 @freezed
-abstract class PrivateMessageView implements _$PrivateMessageView {
+abstract class PrivateMessageView extends WithInstanceHost
+    implements _$PrivateMessageView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessageView({
     @required PrivateMessage privateMessage,
@@ -72,7 +75,7 @@ abstract class PrivateMessageView implements _$PrivateMessageView {
 }
 
 @freezed
-abstract class PostView implements _$PostView {
+abstract class PostView extends WithInstanceHost implements _$PostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostView({
     @required Post post,
@@ -92,7 +95,8 @@ abstract class PostView implements _$PostView {
 }
 
 @freezed
-abstract class PostReportView implements _$PostReportView {
+abstract class PostReportView extends WithInstanceHost
+    implements _$PostReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReportView({
     @required PostReport postReport,
@@ -109,7 +113,7 @@ abstract class PostReportView implements _$PostReportView {
 }
 
 @freezed
-abstract class CommentView implements _$CommentView {
+abstract class CommentView extends WithInstanceHost implements _$CommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentView({
     @required Comment comment,
@@ -130,7 +134,8 @@ abstract class CommentView implements _$CommentView {
 }
 
 @freezed
-abstract class CommentReportView implements _$CommentReportView {
+abstract class CommentReportView extends WithInstanceHost
+    implements _$CommentReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReportView({
     @required CommentReport commentReport,
@@ -148,7 +153,8 @@ abstract class CommentReportView implements _$CommentReportView {
 }
 
 @freezed
-abstract class ModAddCommunityView implements _$ModAddCommunityView {
+abstract class ModAddCommunityView extends WithInstanceHost
+    implements _$ModAddCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunityView({
     @required ModAddCommunity modAddCommunity,
@@ -163,7 +169,7 @@ abstract class ModAddCommunityView implements _$ModAddCommunityView {
 }
 
 @freezed
-abstract class ModAddView implements _$ModAddView {
+abstract class ModAddView extends WithInstanceHost implements _$ModAddView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddView({
     @required ModAdd modAdd,
@@ -177,7 +183,8 @@ abstract class ModAddView implements _$ModAddView {
 }
 
 @freezed
-abstract class ModBanFromCommunityView implements _$ModBanFromCommunityView {
+abstract class ModBanFromCommunityView extends WithInstanceHost
+    implements _$ModBanFromCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunityView({
     @required ModBanFromCommunity modBanFromCommunity,
@@ -192,7 +199,7 @@ abstract class ModBanFromCommunityView implements _$ModBanFromCommunityView {
 }
 
 @freezed
-abstract class ModBanView implements _$ModBanView {
+abstract class ModBanView extends WithInstanceHost implements _$ModBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanView({
     @required ModBan modBan,
@@ -206,7 +213,8 @@ abstract class ModBanView implements _$ModBanView {
 }
 
 @freezed
-abstract class ModLockPostView implements _$ModLockPostView {
+abstract class ModLockPostView extends WithInstanceHost
+    implements _$ModLockPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPostView({
     @required ModLockPost modLockPost,
@@ -221,7 +229,8 @@ abstract class ModLockPostView implements _$ModLockPostView {
 }
 
 @freezed
-abstract class ModRemoveCommentView implements _$ModRemoveCommentView {
+abstract class ModRemoveCommentView extends WithInstanceHost
+    implements _$ModRemoveCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommentView({
     @required ModRemoveComment modRemoveComment,
@@ -238,7 +247,8 @@ abstract class ModRemoveCommentView implements _$ModRemoveCommentView {
 }
 
 @freezed
-abstract class ModRemoveCommunityView implements _$ModRemoveCommunityView {
+abstract class ModRemoveCommunityView extends WithInstanceHost
+    implements _$ModRemoveCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunityView({
     @required ModRemoveCommunity modRemoveCommunity,
@@ -252,7 +262,8 @@ abstract class ModRemoveCommunityView implements _$ModRemoveCommunityView {
 }
 
 @freezed
-abstract class ModRemovePostView implements _$ModRemovePostView {
+abstract class ModRemovePostView extends WithInstanceHost
+    implements _$ModRemovePostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePostView({
     @required ModRemovePost modRemovePost,
@@ -267,7 +278,8 @@ abstract class ModRemovePostView implements _$ModRemovePostView {
 }
 
 @freezed
-abstract class ModStickyPostView implements _$ModStickyPostView {
+abstract class ModStickyPostView extends WithInstanceHost
+    implements _$ModStickyPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPostView({
     @required ModStickyPost modStickyPost,
@@ -282,7 +294,8 @@ abstract class ModStickyPostView implements _$ModStickyPostView {
 }
 
 @freezed
-abstract class CommunityFollowerView implements _$CommunityFollowerView {
+abstract class CommunityFollowerView extends WithInstanceHost
+    implements _$CommunityFollowerView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityFollowerView({
     @required CommunitySafe community,
@@ -295,7 +308,8 @@ abstract class CommunityFollowerView implements _$CommunityFollowerView {
 }
 
 @freezed
-abstract class CommunityModeratorView implements _$CommunityModeratorView {
+abstract class CommunityModeratorView extends WithInstanceHost
+    implements _$CommunityModeratorView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityModeratorView({
     @required CommunitySafe community,
@@ -308,7 +322,8 @@ abstract class CommunityModeratorView implements _$CommunityModeratorView {
 }
 
 @freezed
-abstract class CommunityUserBanView implements _$CommunityUserBanView {
+abstract class CommunityUserBanView extends WithInstanceHost
+    implements _$CommunityUserBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityUserBanView({
     @required CommunitySafe community,
@@ -321,7 +336,8 @@ abstract class CommunityUserBanView implements _$CommunityUserBanView {
 }
 
 @freezed
-abstract class CommunityView implements _$CommunityView {
+abstract class CommunityView extends WithInstanceHost
+    implements _$CommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityView({
     @required CommunitySafe community,

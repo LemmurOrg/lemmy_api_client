@@ -1,10 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:lemmy_api_client/src/v1/models/with_instance_host.dart';
 
 part 'source.freezed.dart';
 part 'source.g.dart';
 
 @freezed
-abstract class UserSafe implements _$UserSafe {
+abstract class UserSafe extends WithInstanceHost implements _$UserSafe {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafe({
     @required int id,
@@ -29,7 +30,8 @@ abstract class UserSafe implements _$UserSafe {
 }
 
 @freezed
-abstract class UserSafeSettings implements _$UserSafeSettings {
+abstract class UserSafeSettings extends WithInstanceHost
+    implements _$UserSafeSettings {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafeSettings({
     @required int id,
@@ -63,7 +65,7 @@ abstract class UserSafeSettings implements _$UserSafeSettings {
 }
 
 @freezed
-abstract class Site implements _$Site {
+abstract class Site extends WithInstanceHost implements _$Site {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Site({
     @required int id,
@@ -84,7 +86,8 @@ abstract class Site implements _$Site {
 }
 
 @freezed
-abstract class PrivateMessage implements _$PrivateMessage {
+abstract class PrivateMessage extends WithInstanceHost
+    implements _$PrivateMessage {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessage({
     @required int id,
@@ -105,7 +108,7 @@ abstract class PrivateMessage implements _$PrivateMessage {
 }
 
 @freezed
-abstract class PostReport implements _$PostReport {
+abstract class PostReport extends WithInstanceHost implements _$PostReport {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReport({
     @required int id,
@@ -127,7 +130,7 @@ abstract class PostReport implements _$PostReport {
 }
 
 @freezed
-abstract class Post implements _$Post {
+abstract class Post extends WithInstanceHost implements _$Post {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Post({
     @required int id,
@@ -156,7 +159,8 @@ abstract class Post implements _$Post {
 }
 
 @freezed
-abstract class PasswordResetRequest implements _$PasswordResetRequest {
+abstract class PasswordResetRequest extends WithInstanceHost
+    implements _$PasswordResetRequest {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PasswordResetRequest({
     @required int id,
@@ -171,7 +175,8 @@ abstract class PasswordResetRequest implements _$PasswordResetRequest {
 }
 
 @freezed
-abstract class ModRemovePost implements _$ModRemovePost {
+abstract class ModRemovePost extends WithInstanceHost
+    implements _$ModRemovePost {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePost({
     @required int id,
@@ -188,7 +193,7 @@ abstract class ModRemovePost implements _$ModRemovePost {
 }
 
 @freezed
-abstract class ModLockPost implements _$ModLockPost {
+abstract class ModLockPost extends WithInstanceHost implements _$ModLockPost {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPost({
     @required int id,
@@ -204,7 +209,8 @@ abstract class ModLockPost implements _$ModLockPost {
 }
 
 @freezed
-abstract class ModStickyPost implements _$ModStickyPost {
+abstract class ModStickyPost extends WithInstanceHost
+    implements _$ModStickyPost {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPost({
     @required int id,
@@ -220,7 +226,8 @@ abstract class ModStickyPost implements _$ModStickyPost {
 }
 
 @freezed
-abstract class ModRemoveComment implements _$ModRemoveComment {
+abstract class ModRemoveComment extends WithInstanceHost
+    implements _$ModRemoveComment {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveComment({
     @required int id,
@@ -237,7 +244,8 @@ abstract class ModRemoveComment implements _$ModRemoveComment {
 }
 
 @freezed
-abstract class ModRemoveCommunity implements _$ModRemoveCommunity {
+abstract class ModRemoveCommunity extends WithInstanceHost
+    implements _$ModRemoveCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunity({
     @required int id,
@@ -255,7 +263,8 @@ abstract class ModRemoveCommunity implements _$ModRemoveCommunity {
 }
 
 @freezed
-abstract class ModBanFromCommunity implements _$ModBanFromCommunity {
+abstract class ModBanFromCommunity extends WithInstanceHost
+    implements _$ModBanFromCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunity({
     @required int id,
@@ -274,7 +283,7 @@ abstract class ModBanFromCommunity implements _$ModBanFromCommunity {
 }
 
 @freezed
-abstract class ModBan implements _$ModBan {
+abstract class ModBan extends WithInstanceHost implements _$ModBan {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBan({
     @required int id,
@@ -291,7 +300,8 @@ abstract class ModBan implements _$ModBan {
 }
 
 @freezed
-abstract class ModAddCommunity implements _$ModAddCommunity {
+abstract class ModAddCommunity extends WithInstanceHost
+    implements _$ModAddCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunity({
     @required int id,
@@ -308,7 +318,7 @@ abstract class ModAddCommunity implements _$ModAddCommunity {
 }
 
 @freezed
-abstract class ModAdd implements _$ModAdd {
+abstract class ModAdd extends WithInstanceHost implements _$ModAdd {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAdd({
     @required int id,
@@ -323,7 +333,8 @@ abstract class ModAdd implements _$ModAdd {
 }
 
 @freezed
-abstract class CommunitySafe implements _$CommunitySafe {
+abstract class CommunitySafe extends WithInstanceHost
+    implements _$CommunitySafe {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunitySafe({
     @required int id,
@@ -349,7 +360,8 @@ abstract class CommunitySafe implements _$CommunitySafe {
 }
 
 @freezed
-abstract class CommentReport implements _$CommentReport {
+abstract class CommentReport extends WithInstanceHost
+    implements _$CommentReport {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReport({
     @required int id,
@@ -369,7 +381,7 @@ abstract class CommentReport implements _$CommentReport {
 }
 
 @freezed
-abstract class Comment implements _$Comment {
+abstract class Comment extends WithInstanceHost implements _$Comment {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Comment({
     @required int id,
@@ -392,7 +404,7 @@ abstract class Comment implements _$Comment {
 }
 
 @freezed
-abstract class Category implements _$Category {
+abstract class Category extends WithInstanceHost implements _$Category {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Category({
     @required int id,
@@ -405,7 +417,7 @@ abstract class Category implements _$Category {
 }
 
 @freezed
-abstract class UserMention implements _$UserMention {
+abstract class UserMention extends WithInstanceHost implements _$UserMention {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMention({
     @required int id,
