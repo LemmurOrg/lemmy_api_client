@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../enums.dart';
 import '../../utils/with_instance_host.dart';
 
 part 'source.freezed.dart';
@@ -46,8 +47,8 @@ abstract class UserSafeSettings extends WithInstanceHost
     DateTime updated,
     @required bool showNsfw,
     @required String theme,
-    @required int defaultSortType,
-    @required int defaultListingType,
+    @required SortType defaultSortType,
+    @required PostListingType defaultListingType,
     @required String lang,
     @required bool showAvatars,
     @required bool sendNotificationsToEmail,

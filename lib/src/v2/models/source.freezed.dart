@@ -429,8 +429,8 @@ class _$UserSafeSettingsTearOff {
       DateTime updated,
       @required bool showNsfw,
       @required String theme,
-      @required int defaultSortType,
-      @required int defaultListingType,
+      @required SortType defaultSortType,
+      @required PostListingType defaultListingType,
       @required String lang,
       @required bool showAvatars,
       @required bool sendNotificationsToEmail,
@@ -491,8 +491,8 @@ mixin _$UserSafeSettings {
   DateTime get updated;
   bool get showNsfw;
   String get theme;
-  int get defaultSortType;
-  int get defaultListingType;
+  SortType get defaultSortType;
+  PostListingType get defaultListingType;
   String get lang;
   bool get showAvatars;
   bool get sendNotificationsToEmail;
@@ -525,8 +525,8 @@ abstract class $UserSafeSettingsCopyWith<$Res> {
       DateTime updated,
       bool showNsfw,
       String theme,
-      int defaultSortType,
-      int defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -591,10 +591,10 @@ class _$UserSafeSettingsCopyWithImpl<$Res>
       theme: theme == freezed ? _value.theme : theme as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as int,
+          : defaultSortType as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as int,
+          : defaultListingType as PostListingType,
       lang: lang == freezed ? _value.lang : lang as String,
       showAvatars:
           showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
@@ -635,8 +635,8 @@ abstract class _$UserSafeSettingsCopyWith<$Res>
       DateTime updated,
       bool showNsfw,
       String theme,
-      int defaultSortType,
-      int defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -703,10 +703,10 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
       theme: theme == freezed ? _value.theme : theme as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as int,
+          : defaultSortType as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as int,
+          : defaultListingType as PostListingType,
       lang: lang == freezed ? _value.lang : lang as String,
       showAvatars:
           showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
@@ -800,9 +800,9 @@ class _$_UserSafeSettings extends _UserSafeSettings {
   @override
   final String theme;
   @override
-  final int defaultSortType;
+  final SortType defaultSortType;
   @override
-  final int defaultListingType;
+  final PostListingType defaultListingType;
   @override
   final String lang;
   @override
@@ -945,8 +945,8 @@ abstract class _UserSafeSettings extends UserSafeSettings {
       DateTime updated,
       @required bool showNsfw,
       @required String theme,
-      @required int defaultSortType,
-      @required int defaultListingType,
+      @required SortType defaultSortType,
+      @required PostListingType defaultListingType,
       @required String lang,
       @required bool showAvatars,
       @required bool sendNotificationsToEmail,
@@ -984,9 +984,9 @@ abstract class _UserSafeSettings extends UserSafeSettings {
   @override
   String get theme;
   @override
-  int get defaultSortType;
+  SortType get defaultSortType;
   @override
-  int get defaultListingType;
+  PostListingType get defaultListingType;
   @override
   String get lang;
   @override

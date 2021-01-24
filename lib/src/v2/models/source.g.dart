@@ -65,8 +65,12 @@ _$_UserSafeSettings _$_$_UserSafeSettingsFromJson(Map<String, dynamic> json) {
         : DateTime.parse(json['updated'] as String),
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
-    defaultSortType: json['default_sort_type'] as int,
-    defaultListingType: json['default_listing_type'] as int,
+    defaultSortType: json['default_sort_type'] == null
+        ? null
+        : SortType.fromJson(json['default_sort_type'] as int),
+    defaultListingType: json['default_listing_type'] == null
+        ? null
+        : PostListingType.fromJson(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
