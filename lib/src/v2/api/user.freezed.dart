@@ -549,8 +549,8 @@ class _$SaveUserSettingsTearOff {
   _SaveUserSettings call(
       {@required bool showNsfw,
       @required String theme,
-      @required int defaultSortType,
-      @required int defaultListingType,
+      @required SortType defaultSortType,
+      @required PostListingType defaultListingType,
       @required String lang,
       String avatar,
       String banner,
@@ -599,8 +599,8 @@ const $SaveUserSettings = _$SaveUserSettingsTearOff();
 mixin _$SaveUserSettings {
   bool get showNsfw;
   String get theme;
-  int get defaultSortType;
-  int get defaultListingType;
+  SortType get defaultSortType;
+  PostListingType get defaultListingType;
   String get lang;
   String get avatar;
   String get banner;
@@ -627,8 +627,8 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
   $Res call(
       {bool showNsfw,
       String theme,
-      int defaultSortType,
-      int defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String lang,
       String avatar,
       String banner,
@@ -678,10 +678,10 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
       theme: theme == freezed ? _value.theme : theme as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as int,
+          : defaultSortType as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as int,
+          : defaultListingType as PostListingType,
       lang: lang == freezed ? _value.lang : lang as String,
       avatar: avatar == freezed ? _value.avatar : avatar as String,
       banner: banner == freezed ? _value.banner : banner as String,
@@ -720,8 +720,8 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
   $Res call(
       {bool showNsfw,
       String theme,
-      int defaultSortType,
-      int defaultListingType,
+      SortType defaultSortType,
+      PostListingType defaultListingType,
       String lang,
       String avatar,
       String banner,
@@ -773,10 +773,10 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
       theme: theme == freezed ? _value.theme : theme as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as int,
+          : defaultSortType as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as int,
+          : defaultListingType as PostListingType,
       lang: lang == freezed ? _value.lang : lang as String,
       avatar: avatar == freezed ? _value.avatar : avatar as String,
       banner: banner == freezed ? _value.banner : banner as String,
@@ -845,9 +845,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String theme;
   @override
-  final int defaultSortType;
+  final SortType defaultSortType;
   @override
-  final int defaultListingType;
+  final PostListingType defaultListingType;
   @override
   final String lang;
   @override
@@ -968,8 +968,8 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   factory _SaveUserSettings(
       {@required bool showNsfw,
       @required String theme,
-      @required int defaultSortType,
-      @required int defaultListingType,
+      @required SortType defaultSortType,
+      @required PostListingType defaultListingType,
       @required String lang,
       String avatar,
       String banner,
@@ -992,9 +992,9 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   String get theme;
   @override
-  int get defaultSortType;
+  SortType get defaultSortType;
   @override
-  int get defaultListingType;
+  PostListingType get defaultListingType;
   @override
   String get lang;
   @override

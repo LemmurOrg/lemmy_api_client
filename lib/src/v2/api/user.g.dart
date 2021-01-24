@@ -69,8 +69,12 @@ _$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
   return _$_SaveUserSettings(
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
-    defaultSortType: json['default_sort_type'] as int,
-    defaultListingType: json['default_listing_type'] as int,
+    defaultSortType: json['default_sort_type'] == null
+        ? null
+        : SortType.fromJson(json['default_sort_type'] as int),
+    defaultListingType: json['default_listing_type'] == null
+        ? null
+        : PostListingType.fromJson(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     avatar: json['avatar'] as String,
     banner: json['banner'] as String,

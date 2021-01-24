@@ -84,8 +84,8 @@ abstract class SaveUserSettings
   factory SaveUserSettings({
     @required bool showNsfw,
     @required String theme,
-    @required int defaultSortType,
-    @required int defaultListingType,
+    @required SortType defaultSortType,
+    @required PostListingType defaultListingType,
     @required String lang,
     String avatar,
     String banner,
