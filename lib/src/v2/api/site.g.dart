@@ -21,7 +21,8 @@ _$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
         : SearchType.fromJson(json['type_'] as String),
     communityId: json['community_id'] as int,
     communityName: json['community_name'] as String,
-    sort: json['sort'] == null ? null : SortType.fromJson(json['sort'] as int),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int,
     limit: json['limit'] as int,
     auth: json['auth'] as String,

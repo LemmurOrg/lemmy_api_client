@@ -418,29 +418,47 @@ class _$UserSafeSettingsTearOff {
 
 // ignore: unused_element
   _UserSafeSettings call(
-      {@required int id,
-      @required String name,
+      {@required
+          int id,
+      @required
+          String name,
       String preferredUsername,
       String email,
       String avatar,
-      @required bool admin,
-      @required bool banned,
-      @required DateTime published,
+      @required
+          bool admin,
+      @required
+          bool banned,
+      @required
+          DateTime published,
       DateTime updated,
-      @required bool showNsfw,
-      @required String theme,
-      @required SortType defaultSortType,
-      @required PostListingType defaultListingType,
-      @required String lang,
-      @required bool showAvatars,
-      @required bool sendNotificationsToEmail,
+      @required
+          bool showNsfw,
+      @required
+          String theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
+      @required
+          String lang,
+      @required
+          bool showAvatars,
+      @required
+          bool sendNotificationsToEmail,
       String matrixUserId,
-      @required String actorId,
+      @required
+          String actorId,
       String bio,
-      @required bool local,
-      @required DateTime lastRefreshedAt,
+      @required
+          bool local,
+      @required
+          DateTime lastRefreshedAt,
       String banner,
-      @required bool deleted}) {
+      @required
+          bool deleted}) {
     return _UserSafeSettings(
       id: id,
       name: name,
@@ -491,7 +509,9 @@ mixin _$UserSafeSettings {
   DateTime get updated;
   bool get showNsfw;
   String get theme;
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   String get lang;
   bool get showAvatars;
@@ -525,8 +545,10 @@ abstract class $UserSafeSettingsCopyWith<$Res> {
       DateTime updated,
       bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -635,8 +657,10 @@ abstract class _$UserSafeSettingsCopyWith<$Res>
       DateTime updated,
       bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -733,29 +757,47 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserSafeSettings extends _UserSafeSettings {
   _$_UserSafeSettings(
-      {@required this.id,
-      @required this.name,
+      {@required
+          this.id,
+      @required
+          this.name,
       this.preferredUsername,
       this.email,
       this.avatar,
-      @required this.admin,
-      @required this.banned,
-      @required this.published,
+      @required
+          this.admin,
+      @required
+          this.banned,
+      @required
+          this.published,
       this.updated,
-      @required this.showNsfw,
-      @required this.theme,
-      @required this.defaultSortType,
-      @required this.defaultListingType,
-      @required this.lang,
-      @required this.showAvatars,
-      @required this.sendNotificationsToEmail,
+      @required
+          this.showNsfw,
+      @required
+          this.theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          this.defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          this.defaultListingType,
+      @required
+          this.lang,
+      @required
+          this.showAvatars,
+      @required
+          this.sendNotificationsToEmail,
       this.matrixUserId,
-      @required this.actorId,
+      @required
+          this.actorId,
       this.bio,
-      @required this.local,
-      @required this.lastRefreshedAt,
+      @required
+          this.local,
+      @required
+          this.lastRefreshedAt,
       this.banner,
-      @required this.deleted})
+      @required
+          this.deleted})
       : assert(id != null),
         assert(name != null),
         assert(admin != null),
@@ -800,8 +842,10 @@ class _$_UserSafeSettings extends _UserSafeSettings {
   @override
   final String theme;
   @override
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   final SortType defaultSortType;
   @override
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType defaultListingType;
   @override
   final String lang;
@@ -934,29 +978,47 @@ class _$_UserSafeSettings extends _UserSafeSettings {
 abstract class _UserSafeSettings extends UserSafeSettings {
   _UserSafeSettings._() : super._();
   factory _UserSafeSettings(
-      {@required int id,
-      @required String name,
+      {@required
+          int id,
+      @required
+          String name,
       String preferredUsername,
       String email,
       String avatar,
-      @required bool admin,
-      @required bool banned,
-      @required DateTime published,
+      @required
+          bool admin,
+      @required
+          bool banned,
+      @required
+          DateTime published,
       DateTime updated,
-      @required bool showNsfw,
-      @required String theme,
-      @required SortType defaultSortType,
-      @required PostListingType defaultListingType,
-      @required String lang,
-      @required bool showAvatars,
-      @required bool sendNotificationsToEmail,
+      @required
+          bool showNsfw,
+      @required
+          String theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
+      @required
+          String lang,
+      @required
+          bool showAvatars,
+      @required
+          bool sendNotificationsToEmail,
       String matrixUserId,
-      @required String actorId,
+      @required
+          String actorId,
       String bio,
-      @required bool local,
-      @required DateTime lastRefreshedAt,
+      @required
+          bool local,
+      @required
+          DateTime lastRefreshedAt,
       String banner,
-      @required bool deleted}) = _$_UserSafeSettings;
+      @required
+          bool deleted}) = _$_UserSafeSettings;
 
   factory _UserSafeSettings.fromJson(Map<String, dynamic> json) =
       _$_UserSafeSettings.fromJson;
@@ -984,8 +1046,10 @@ abstract class _UserSafeSettings extends UserSafeSettings {
   @override
   String get theme;
   @override
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
   @override
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   @override
   String get lang;

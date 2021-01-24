@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../../utils/workaround_settings_index.dart';
 import '../../v1/models/jwt.dart';
 import '../models/api.dart';
 import '../models/views.dart';
@@ -84,8 +85,12 @@ abstract class SaveUserSettings
   factory SaveUserSettings({
     @required bool showNsfw,
     @required String theme,
-    @required SortType defaultSortType,
-    @required PostListingType defaultListingType,
+    @required
+    @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+        SortType defaultSortType,
+    @required
+    @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+        PostListingType defaultListingType,
     @required String lang,
     String avatar,
     String banner,

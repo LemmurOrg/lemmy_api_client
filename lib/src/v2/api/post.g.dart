@@ -60,8 +60,9 @@ _$_GetPosts _$_$_GetPostsFromJson(Map<String, dynamic> json) {
   return _$_GetPosts(
     type: json['type_'] == null
         ? null
-        : PostListingType.fromJson(json['type_'] as int),
-    sort: json['sort'] == null ? null : SortType.fromJson(json['sort'] as int),
+        : PostListingType.fromJson(json['type_'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int,
     limit: json['limit'] as int,
     communityId: json['community_id'] as int,

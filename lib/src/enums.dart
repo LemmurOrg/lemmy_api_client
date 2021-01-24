@@ -32,12 +32,10 @@ class PostListingType {
 
   String get value => _value;
 
-  factory PostListingType.fromJson(int index) =>
-      index >= values.length ? null : values[index];
+  factory PostListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
 
-  int get index => values.indexOf(this);
-
-  int toJson() => index;
+  String toJson() => value;
 
   static const PostListingType all = PostListingType._('All');
   static const PostListingType local = PostListingType._('Local');
@@ -62,12 +60,10 @@ class SortType {
 
   String get value => _value;
 
-  factory SortType.fromJson(int index) =>
-      index >= values.length ? null : values[index];
+  factory SortType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
 
-  int get index => values.indexOf(this);
-
-  int toJson() => index;
+  String toJson() => value;
 
   static const SortType active = SortType._('Active');
   static const SortType hot = SortType._('Hot');
@@ -113,6 +109,9 @@ class SearchType {
   static const SearchType users = SearchType._('Users');
   static const SearchType url = SearchType._('Url');
 
+  @override
+  String toString() => value;
+
   static const List<SearchType> values = [
     all,
     comments,
@@ -139,6 +138,9 @@ class CommentListingType {
   static const CommentListingType subscribed =
       CommentListingType._('Subscribed');
   static const CommentListingType community = CommentListingType._('Community');
+
+  @override
+  String toString() => value;
 
   static const List<CommentListingType> values = [
     all,

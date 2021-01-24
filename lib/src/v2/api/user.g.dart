@@ -69,12 +69,9 @@ _$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
   return _$_SaveUserSettings(
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
-    defaultSortType: json['default_sort_type'] == null
-        ? null
-        : SortType.fromJson(json['default_sort_type'] as int),
-    defaultListingType: json['default_listing_type'] == null
-        ? null
-        : PostListingType.fromJson(json['default_listing_type'] as int),
+    defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
+    defaultListingType:
+        postListingTypeFromIndex(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     avatar: json['avatar'] as String,
     banner: json['banner'] as String,
@@ -102,8 +99,9 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
 
   writeNotNull('show_nsfw', instance.showNsfw);
   writeNotNull('theme', instance.theme);
-  writeNotNull('default_sort_type', instance.defaultSortType);
-  writeNotNull('default_listing_type', instance.defaultListingType);
+  writeNotNull('default_sort_type', sortTypeToIndex(instance.defaultSortType));
+  writeNotNull('default_listing_type',
+      postListingTypeToIndex(instance.defaultListingType));
   writeNotNull('lang', instance.lang);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('banner', instance.banner);
@@ -125,7 +123,8 @@ _$_GetUserDetails _$_$_GetUserDetailsFromJson(Map<String, dynamic> json) {
   return _$_GetUserDetails(
     userId: json['user_id'] as int,
     username: json['username'] as String,
-    sort: json['sort'] == null ? null : SortType.fromJson(json['sort'] as int),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int,
     limit: json['limit'] as int,
     communityId: json['community_id'] as int,
@@ -254,7 +253,8 @@ Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
 
 _$_GetUserMentions _$_$_GetUserMentionsFromJson(Map<String, dynamic> json) {
   return _$_GetUserMentions(
-    sort: json['sort'] == null ? null : SortType.fromJson(json['sort'] as int),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int,
     limit: json['limit'] as int,
     unreadOnly: json['unread_only'] as bool,

@@ -547,11 +547,18 @@ class _$SaveUserSettingsTearOff {
 
 // ignore: unused_element
   _SaveUserSettings call(
-      {@required bool showNsfw,
-      @required String theme,
-      @required SortType defaultSortType,
-      @required PostListingType defaultListingType,
-      @required String lang,
+      {@required
+          bool showNsfw,
+      @required
+          String theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
+      @required
+          String lang,
       String avatar,
       String banner,
       String preferredUsername,
@@ -561,9 +568,12 @@ class _$SaveUserSettingsTearOff {
       String newPassword,
       String newPasswordVerify,
       String oldPassword,
-      @required bool showAvatars,
-      @required bool sendNotificationsToEmail,
-      @required String auth}) {
+      @required
+          bool showAvatars,
+      @required
+          bool sendNotificationsToEmail,
+      @required
+          String auth}) {
     return _SaveUserSettings(
       showNsfw: showNsfw,
       theme: theme,
@@ -599,7 +609,9 @@ const $SaveUserSettings = _$SaveUserSettingsTearOff();
 mixin _$SaveUserSettings {
   bool get showNsfw;
   String get theme;
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   String get lang;
   String get avatar;
@@ -627,8 +639,10 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
   $Res call(
       {bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
       String lang,
       String avatar,
       String banner,
@@ -720,8 +734,10 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
   $Res call(
       {bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
       String lang,
       String avatar,
       String banner,
@@ -810,11 +826,18 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_SaveUserSettings extends _SaveUserSettings {
   _$_SaveUserSettings(
-      {@required this.showNsfw,
-      @required this.theme,
-      @required this.defaultSortType,
-      @required this.defaultListingType,
-      @required this.lang,
+      {@required
+          this.showNsfw,
+      @required
+          this.theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          this.defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          this.defaultListingType,
+      @required
+          this.lang,
       this.avatar,
       this.banner,
       this.preferredUsername,
@@ -824,9 +847,12 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       this.newPassword,
       this.newPasswordVerify,
       this.oldPassword,
-      @required this.showAvatars,
-      @required this.sendNotificationsToEmail,
-      @required this.auth})
+      @required
+          this.showAvatars,
+      @required
+          this.sendNotificationsToEmail,
+      @required
+          this.auth})
       : assert(showNsfw != null),
         assert(theme != null),
         assert(defaultSortType != null),
@@ -845,8 +871,10 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String theme;
   @override
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   final SortType defaultSortType;
   @override
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType defaultListingType;
   @override
   final String lang;
@@ -966,11 +994,18 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 abstract class _SaveUserSettings extends SaveUserSettings {
   _SaveUserSettings._() : super._();
   factory _SaveUserSettings(
-      {@required bool showNsfw,
-      @required String theme,
-      @required SortType defaultSortType,
-      @required PostListingType defaultListingType,
-      @required String lang,
+      {@required
+          bool showNsfw,
+      @required
+          String theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
+      @required
+          String lang,
       String avatar,
       String banner,
       String preferredUsername,
@@ -980,9 +1015,12 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       String newPassword,
       String newPasswordVerify,
       String oldPassword,
-      @required bool showAvatars,
-      @required bool sendNotificationsToEmail,
-      @required String auth}) = _$_SaveUserSettings;
+      @required
+          bool showAvatars,
+      @required
+          bool sendNotificationsToEmail,
+      @required
+          String auth}) = _$_SaveUserSettings;
 
   factory _SaveUserSettings.fromJson(Map<String, dynamic> json) =
       _$_SaveUserSettings.fromJson;
@@ -992,8 +1030,10 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   String get theme;
   @override
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
   @override
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   @override
   String get lang;

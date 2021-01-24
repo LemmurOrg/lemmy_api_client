@@ -65,12 +65,9 @@ _$_UserSafeSettings _$_$_UserSafeSettingsFromJson(Map<String, dynamic> json) {
         : DateTime.parse(json['updated'] as String),
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
-    defaultSortType: json['default_sort_type'] == null
-        ? null
-        : SortType.fromJson(json['default_sort_type'] as int),
-    defaultListingType: json['default_listing_type'] == null
-        ? null
-        : PostListingType.fromJson(json['default_listing_type'] as int),
+    defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
+    defaultListingType:
+        postListingTypeFromIndex(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
@@ -101,8 +98,9 @@ Map<String, dynamic> _$_$_UserSafeSettingsToJson(
       'updated': instance.updated?.toIso8601String(),
       'show_nsfw': instance.showNsfw,
       'theme': instance.theme,
-      'default_sort_type': instance.defaultSortType,
-      'default_listing_type': instance.defaultListingType,
+      'default_sort_type': sortTypeToIndex(instance.defaultSortType),
+      'default_listing_type':
+          postListingTypeToIndex(instance.defaultListingType),
       'lang': instance.lang,
       'show_avatars': instance.showAvatars,
       'send_notifications_to_email': instance.sendNotificationsToEmail,

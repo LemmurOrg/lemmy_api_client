@@ -536,30 +536,48 @@ class _$UserTearOff {
 
 // ignore: unused_element
   _User call(
-      {@required int id,
-      @required String name,
+      {@required
+          int id,
+      @required
+          String name,
       String preferredUsername,
-      @required String passwordEncrypted,
+      @required
+          String passwordEncrypted,
       String email,
       String avatar,
-      @required bool admin,
-      @required bool banned,
-      @required DateTime published,
+      @required
+          bool admin,
+      @required
+          bool banned,
+      @required
+          DateTime published,
       DateTime updated,
-      @required bool showNsfw,
-      @required String theme,
-      @required SortType defaultSortType,
-      @required PostListingType defaultListingType,
-      @required String lang,
-      @required bool showAvatars,
-      @required bool sendNotificationsToEmail,
+      @required
+          bool showNsfw,
+      @required
+          String theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
+      @required
+          String lang,
+      @required
+          bool showAvatars,
+      @required
+          bool sendNotificationsToEmail,
       String matrixUserId,
-      @required String actorId,
+      @required
+          String actorId,
       String bio,
-      @required bool local,
+      @required
+          bool local,
       String privateKey,
       String publicKey,
-      @required DateTime lastRefreshedAt,
+      @required
+          DateTime lastRefreshedAt,
       String banner}) {
     return _User(
       id: id,
@@ -614,7 +632,9 @@ mixin _$User {
   DateTime get updated;
   bool get showNsfw;
   String get theme;
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   String get lang;
   bool get showAvatars;
@@ -649,8 +669,10 @@ abstract class $UserCopyWith<$Res> {
       DateTime updated,
       bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -765,8 +787,10 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       DateTime updated,
       bool showNsfw,
       String theme,
-      SortType defaultSortType,
-      PostListingType defaultListingType,
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
@@ -869,30 +893,48 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 class _$_User extends _User {
   _$_User(
-      {@required this.id,
-      @required this.name,
+      {@required
+          this.id,
+      @required
+          this.name,
       this.preferredUsername,
-      @required this.passwordEncrypted,
+      @required
+          this.passwordEncrypted,
       this.email,
       this.avatar,
-      @required this.admin,
-      @required this.banned,
-      @required this.published,
+      @required
+          this.admin,
+      @required
+          this.banned,
+      @required
+          this.published,
       this.updated,
-      @required this.showNsfw,
-      @required this.theme,
-      @required this.defaultSortType,
-      @required this.defaultListingType,
-      @required this.lang,
-      @required this.showAvatars,
-      @required this.sendNotificationsToEmail,
+      @required
+          this.showNsfw,
+      @required
+          this.theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          this.defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          this.defaultListingType,
+      @required
+          this.lang,
+      @required
+          this.showAvatars,
+      @required
+          this.sendNotificationsToEmail,
       this.matrixUserId,
-      @required this.actorId,
+      @required
+          this.actorId,
       this.bio,
-      @required this.local,
+      @required
+          this.local,
       this.privateKey,
       this.publicKey,
-      @required this.lastRefreshedAt,
+      @required
+          this.lastRefreshedAt,
       this.banner})
       : assert(id != null),
         assert(name != null),
@@ -940,8 +982,10 @@ class _$_User extends _User {
   @override
   final String theme;
   @override
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   final SortType defaultSortType;
   @override
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   final PostListingType defaultListingType;
   @override
   final String lang;
@@ -1084,30 +1128,48 @@ class _$_User extends _User {
 abstract class _User extends User {
   _User._() : super._();
   factory _User(
-      {@required int id,
-      @required String name,
+      {@required
+          int id,
+      @required
+          String name,
       String preferredUsername,
-      @required String passwordEncrypted,
+      @required
+          String passwordEncrypted,
       String email,
       String avatar,
-      @required bool admin,
-      @required bool banned,
-      @required DateTime published,
+      @required
+          bool admin,
+      @required
+          bool banned,
+      @required
+          DateTime published,
       DateTime updated,
-      @required bool showNsfw,
-      @required String theme,
-      @required SortType defaultSortType,
-      @required PostListingType defaultListingType,
-      @required String lang,
-      @required bool showAvatars,
-      @required bool sendNotificationsToEmail,
+      @required
+          bool showNsfw,
+      @required
+          String theme,
+      @required
+      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
+          SortType defaultSortType,
+      @required
+      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
+          PostListingType defaultListingType,
+      @required
+          String lang,
+      @required
+          bool showAvatars,
+      @required
+          bool sendNotificationsToEmail,
       String matrixUserId,
-      @required String actorId,
+      @required
+          String actorId,
       String bio,
-      @required bool local,
+      @required
+          bool local,
       String privateKey,
       String publicKey,
-      @required DateTime lastRefreshedAt,
+      @required
+          DateTime lastRefreshedAt,
       String banner}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -1137,8 +1199,10 @@ abstract class _User extends User {
   @override
   String get theme;
   @override
+  @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
   SortType get defaultSortType;
   @override
+  @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
   PostListingType get defaultListingType;
   @override
   String get lang;
