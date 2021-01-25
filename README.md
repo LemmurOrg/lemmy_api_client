@@ -8,7 +8,7 @@
 [![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
 [![](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 
-A Dart client for the Lemmy API
+A Dart client for the [Lemmy API](https://lemmy.ml/docs/en/contributing/websocket_http_api.html)
 
 </div>
 
@@ -20,7 +20,7 @@ A Dart client for the Lemmy API
 - Http and [~~websocket~~](https://github.com/krawieck/lemmy_api_client/issues/4) interface
 - Pictrs endpoints
 - API `v1` and `v2` support
-- Models have a `.instanceHost` property that indicates the instance that returned a given object
+- Models have a `.instanceHost` property that indicate the instance that returned this model
 
 ## Example
 
