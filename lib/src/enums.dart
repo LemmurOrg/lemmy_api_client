@@ -5,7 +5,7 @@ class VoteType {
 
   int get value => _value;
 
-  static VoteType tryParse(int value) {
+  factory VoteType.fromJson(int value) {
     switch (value) {
       case 1:
         return up;
@@ -18,7 +18,7 @@ class VoteType {
     }
   }
 
-  static int toJson([VoteType vote]) => vote?.value;
+  int toJson() => value;
 
   static const VoteType up = VoteType._(1);
   static const VoteType none = VoteType._(0);
@@ -32,17 +32,18 @@ class PostListingType {
 
   String get value => _value;
 
-  static PostListingType tryParse(int index) =>
-      index >= values.length ? null : values[index];
+  factory PostListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
 
-  int get index => values.indexOf(this);
-
-  static int toJson([PostListingType postListing]) => postListing?.index;
+  String toJson() => value;
 
   static const PostListingType all = PostListingType._('All');
   static const PostListingType local = PostListingType._('Local');
   static const PostListingType subscribed = PostListingType._('Subscribed');
   static const PostListingType community = PostListingType._('Community');
+
+  @override
+  String toString() => value;
 
   static const List<PostListingType> values = [
     all,
@@ -59,12 +60,10 @@ class SortType {
 
   String get value => _value;
 
-  static SortType tryParse(int index) =>
-      index >= values.length ? null : values[index];
+  factory SortType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
 
-  int get index => values.indexOf(this);
-
-  static int toJson([SortType sort]) => sort?.index;
+  String toJson() => value;
 
   static const SortType active = SortType._('Active');
   static const SortType hot = SortType._('Hot');
@@ -75,6 +74,9 @@ class SortType {
   static const SortType topMonth = SortType._('TopMonth');
   static const SortType topYear = SortType._('TopYear');
   static const SortType topAll = SortType._('TopAll');
+
+  @override
+  String toString() => value;
 
   static const List<SortType> values = [
     active,
@@ -95,10 +97,10 @@ class SearchType {
 
   String get value => _value;
 
-  static SearchType tryParse(String value) =>
+  factory SearchType.fromJson(String value) =>
       values.firstWhere((e) => e.value == value, orElse: () => null);
 
-  static String toJson([SearchType search]) => search?.value;
+  String toJson() => value;
 
   static const SearchType all = SearchType._('All');
   static const SearchType comments = SearchType._('Comments');
@@ -106,6 +108,9 @@ class SearchType {
   static const SearchType communities = SearchType._('Communities');
   static const SearchType users = SearchType._('Users');
   static const SearchType url = SearchType._('Url');
+
+  @override
+  String toString() => value;
 
   static const List<SearchType> values = [
     all,
@@ -117,22 +122,29 @@ class SearchType {
   ];
 }
 
-enum CommentListingType {
-  all,
-  subscribed,
-  community,
-}
+class CommentListingType {
+  final String _value;
 
-extension CommentListingTypeValue on CommentListingType {
-  String get value {
-    switch (this) {
-      case CommentListingType.all:
-        return 'All';
-      case CommentListingType.subscribed:
-        return 'Subscribed';
-      case CommentListingType.community:
-        return 'Community';
-    }
-    throw Exception('unreachable');
-  }
+  const CommentListingType._(this._value);
+
+  String get value => _value;
+
+  factory CommentListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value, orElse: () => null);
+
+  String toJson() => value;
+
+  static const CommentListingType all = CommentListingType._('All');
+  static const CommentListingType subscribed =
+      CommentListingType._('Subscribed');
+  static const CommentListingType community = CommentListingType._('Community');
+
+  @override
+  String toString() => value;
+
+  static const List<CommentListingType> values = [
+    all,
+    subscribed,
+    community,
+  ];
 }

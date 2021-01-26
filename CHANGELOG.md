@@ -1,3 +1,14 @@
+## Unreleased
+
+### Added
+
+- V2 Lemmy api is now available. The use has changed to make `lemmy_api_client` much easier and less tedious to maintain.
+
+### Breaking change
+
+- Clients are now split between v1 (`package:lemmy_api_client/v1.dart`) and v2 (`package:lemmy_api_client/v2.dart`)
+- `Pictrs` is now in `package:lemmy_api_client/pictrs.dart`
+
 ## 0.9.1 - 2021-01-07
 
 ### Changed

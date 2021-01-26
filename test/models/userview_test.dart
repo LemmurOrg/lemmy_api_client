@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:lemmy_api_client/src/models/user.dart';
+import 'package:lemmy_api_client/src/v1/models/user.dart';
 import 'package:test/test.dart';
 
 void main() {

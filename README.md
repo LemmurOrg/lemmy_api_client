@@ -8,7 +8,7 @@
 [![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
 [![](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 
-A Dart client for the Lemmy API
+A Dart client for the [Lemmy API](https://lemmy.ml/docs/en/contributing/websocket_http_api.html)
 
 </div>
 
@@ -16,26 +16,25 @@ A Dart client for the Lemmy API
 
 - Future-based
 - Works both for Web and Native environments
-- Simple 1:1 translation of the [Lemmy API docs](https://dev.lemmy.ml/docs/contributing_websocket_http_api.html)
 - Strictly typed responses
 - Http and [~~websocket~~](https://github.com/krawieck/lemmy_api_client/issues/4) interface
 - Pictrs endpoints
-- Models have a `.instanceHost` property that indicates the instance that returned a given object
+- API `v1` and `v2` support
+- Models have a `.instanceHost` property that indicate the instance that returned this model
 
 ## Example
 
 ```dart
-import 'package:lemmy_api_client/lemmy_api_client.dart';
+import 'package:lemmy_api_client/v2.dart';
 
-void main() async {
-  // instantiate your lemmy instance with
-  // the host uri and choose the API version
-  var lemmy = LemmyApi('dev.lemmy.ml').v1;
+Future<void> main() async {
+  // instantiate your lemmy instance with the host uri
+  const lemmy = LemmyApiV2('lemmy.ml');
 
   // call methods that are named after op codes from the lemmy docs
-  var token = await lemmy.login(usernameOrEmail: 'asd', password: 'ads');
-  var messages =
-      await lemmy.getPrivateMessages(unreadOnly: true, auth: token.raw);
+  final token = await lemmy.run(Login(usernameOrEmail: 'asd', password: 'ads'));
+  final messages =
+      await lemmy.run(GetPrivateMessages(unreadOnly: true, auth: token.raw));
 
   print(messages);
 }

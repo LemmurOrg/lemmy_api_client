@@ -1,7 +1,6 @@
 import 'dart:convert';
 
-import 'package:lemmy_api_client/lemmy_api_client.dart';
-import 'package:lemmy_api_client/src/models/post.dart';
+import 'package:lemmy_api_client/v1.dart';
 import 'package:test/test.dart';
 
 void main() {

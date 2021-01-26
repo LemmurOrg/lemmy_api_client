@@ -1,15 +1,16 @@
 import 'package:meta/meta.dart' show required;
 
 import '../enums.dart';
-import '../models/captcha.dart';
-import '../models/comment.dart';
-import '../models/jwt.dart';
-import '../models/private_message.dart';
-import '../models/user.dart';
 import '../utils/augmenter.dart';
+import '../utils/workaround_settings_index.dart';
 import 'main.dart';
+import 'models/captcha.dart';
+import 'models/comment.dart';
+import 'models/jwt.dart';
+import 'models/private_message.dart';
+import 'models/user.dart';
 
-extension UserEndpoint on V1 {
+extension UserEndpoint on LemmyApiV1 {
   /// POST /user/login
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#login
   Future<Jwt> login({
@@ -67,8 +68,6 @@ extension UserEndpoint on V1 {
   //   return res['jwt'];
   // }
 
-  // TODO(shilangyu): this seems broken on lemmy's end, returns
-  // status code 400 with no body
   /// GET /user/get_captcha
   /// https://dev.lemmy.ml/docs/contributing_websocket_http_api.html#get-captcha
   Future<Captcha> getCaptcha() async {
@@ -161,8 +160,8 @@ extension UserEndpoint on V1 {
     final res = await put('/user/save_user_settings', {
       'show_nsfw': showNsfw,
       'theme': theme,
-      'default_sort_type': defaultSortType.index,
-      'default_listing_type': defaultListingType.index,
+      'default_sort_type': sortTypeToIndex(defaultSortType),
+      'default_listing_type': postListingTypeToIndex(defaultListingType),
       'lang': lang,
       if (avatar != null) 'avatar': avatar,
       if (banner != null) 'banner': banner,
