@@ -7,6 +7,7 @@ void main() {
   // all together since __no one runs API v1__
   return;
 
+  // ignore: dead_code
   group('lemmy API v1', () {
     final lemmy = LemmyApiV1('lemmygrad.ml');
 
