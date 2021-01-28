@@ -1,0 +1,27 @@
+name: cd
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cedx/setup-dart@v2
+        with:
+          release-channel: stable
+
+      - uses: actions/checkout@v2
+
+      - name: Inject pub.dev credentials
+        env:
+          PUB_CREDENTIALS: ${{ secrets.PUB_CREDENTIALS }}
+        run: |
+          mkdir -p ~/.pub-cache
+          echo $PUB_CREDENTIALS > ~/.pub-cache/credentials.json
+
+      - name: Publish to pub.dev
+        run: dart pub publish -f
