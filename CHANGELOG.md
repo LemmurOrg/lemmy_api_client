@@ -1,8 +1,14 @@
+## 0.10.1 - 2021-01-31
+
+### Added
+
+- Added new Lemmy `v0.9.1` fields
+
 ## 0.10.0 - 2021-01-26
 
 ### Added
 
-- V2 Lemmy api is now available. The use has changed to make `lemmy_api_client` much easier and less tedious to maintain.
+- V2 Lemmy api is now available. The use has changed to make `lemmy_api_client` much easier and less tedious to maintain
 
 ### Breaking change
 

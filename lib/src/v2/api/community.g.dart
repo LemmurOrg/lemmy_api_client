@@ -64,6 +64,9 @@ Map<String, dynamic> _$_$_CreateCommunityToJson(_$_CreateCommunity instance) {
 
 _$_ListCommunities _$_$_ListCommunitiesFromJson(Map<String, dynamic> json) {
   return _$_ListCommunities(
+    type: json['type_'] == null
+        ? null
+        : PostListingType.fromJson(json['type_'] as String),
     sort:
         json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int,
@@ -81,6 +84,7 @@ Map<String, dynamic> _$_$_ListCommunitiesToJson(_$_ListCommunities instance) {
     }
   }
 
+  writeNotNull('type_', instance.type);
   writeNotNull('sort', instance.sort);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);

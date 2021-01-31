@@ -277,7 +277,11 @@ class _$SiteAggregatesTearOff {
       @required int users,
       @required int posts,
       @required int comments,
-      @required int communities}) {
+      @required int communities,
+      @required int usersActiveDay,
+      @required int usersActiveWeek,
+      @required int usersActiveMonth,
+      @required int usersActiveHalfYear}) {
     return _SiteAggregates(
       id: id,
       siteId: siteId,
@@ -285,6 +289,10 @@ class _$SiteAggregatesTearOff {
       posts: posts,
       comments: comments,
       communities: communities,
+      usersActiveDay: usersActiveDay,
+      usersActiveWeek: usersActiveWeek,
+      usersActiveMonth: usersActiveMonth,
+      usersActiveHalfYear: usersActiveHalfYear,
     );
   }
 
@@ -306,6 +314,10 @@ mixin _$SiteAggregates {
   int get posts;
   int get comments;
   int get communities;
+  int get usersActiveDay;
+  int get usersActiveWeek;
+  int get usersActiveMonth;
+  int get usersActiveHalfYear;
 
   Map<String, dynamic> toJson();
   $SiteAggregatesCopyWith<SiteAggregates> get copyWith;
@@ -322,7 +334,11 @@ abstract class $SiteAggregatesCopyWith<$Res> {
       int users,
       int posts,
       int comments,
-      int communities});
+      int communities,
+      int usersActiveDay,
+      int usersActiveWeek,
+      int usersActiveMonth,
+      int usersActiveHalfYear});
 }
 
 /// @nodoc
@@ -342,6 +358,10 @@ class _$SiteAggregatesCopyWithImpl<$Res>
     Object posts = freezed,
     Object comments = freezed,
     Object communities = freezed,
+    Object usersActiveDay = freezed,
+    Object usersActiveWeek = freezed,
+    Object usersActiveMonth = freezed,
+    Object usersActiveHalfYear = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -351,6 +371,18 @@ class _$SiteAggregatesCopyWithImpl<$Res>
       comments: comments == freezed ? _value.comments : comments as int,
       communities:
           communities == freezed ? _value.communities : communities as int,
+      usersActiveDay: usersActiveDay == freezed
+          ? _value.usersActiveDay
+          : usersActiveDay as int,
+      usersActiveWeek: usersActiveWeek == freezed
+          ? _value.usersActiveWeek
+          : usersActiveWeek as int,
+      usersActiveMonth: usersActiveMonth == freezed
+          ? _value.usersActiveMonth
+          : usersActiveMonth as int,
+      usersActiveHalfYear: usersActiveHalfYear == freezed
+          ? _value.usersActiveHalfYear
+          : usersActiveHalfYear as int,
     ));
   }
 }
@@ -368,7 +400,11 @@ abstract class _$SiteAggregatesCopyWith<$Res>
       int users,
       int posts,
       int comments,
-      int communities});
+      int communities,
+      int usersActiveDay,
+      int usersActiveWeek,
+      int usersActiveMonth,
+      int usersActiveHalfYear});
 }
 
 /// @nodoc
@@ -390,6 +426,10 @@ class __$SiteAggregatesCopyWithImpl<$Res>
     Object posts = freezed,
     Object comments = freezed,
     Object communities = freezed,
+    Object usersActiveDay = freezed,
+    Object usersActiveWeek = freezed,
+    Object usersActiveMonth = freezed,
+    Object usersActiveHalfYear = freezed,
   }) {
     return _then(_SiteAggregates(
       id: id == freezed ? _value.id : id as int,
@@ -399,6 +439,18 @@ class __$SiteAggregatesCopyWithImpl<$Res>
       comments: comments == freezed ? _value.comments : comments as int,
       communities:
           communities == freezed ? _value.communities : communities as int,
+      usersActiveDay: usersActiveDay == freezed
+          ? _value.usersActiveDay
+          : usersActiveDay as int,
+      usersActiveWeek: usersActiveWeek == freezed
+          ? _value.usersActiveWeek
+          : usersActiveWeek as int,
+      usersActiveMonth: usersActiveMonth == freezed
+          ? _value.usersActiveMonth
+          : usersActiveMonth as int,
+      usersActiveHalfYear: usersActiveHalfYear == freezed
+          ? _value.usersActiveHalfYear
+          : usersActiveHalfYear as int,
     ));
   }
 }
@@ -413,13 +465,21 @@ class _$_SiteAggregates extends _SiteAggregates {
       @required this.users,
       @required this.posts,
       @required this.comments,
-      @required this.communities})
+      @required this.communities,
+      @required this.usersActiveDay,
+      @required this.usersActiveWeek,
+      @required this.usersActiveMonth,
+      @required this.usersActiveHalfYear})
       : assert(id != null),
         assert(siteId != null),
         assert(users != null),
         assert(posts != null),
         assert(comments != null),
         assert(communities != null),
+        assert(usersActiveDay != null),
+        assert(usersActiveWeek != null),
+        assert(usersActiveMonth != null),
+        assert(usersActiveHalfYear != null),
         super._();
 
   factory _$_SiteAggregates.fromJson(Map<String, dynamic> json) =>
@@ -437,10 +497,18 @@ class _$_SiteAggregates extends _SiteAggregates {
   final int comments;
   @override
   final int communities;
+  @override
+  final int usersActiveDay;
+  @override
+  final int usersActiveWeek;
+  @override
+  final int usersActiveMonth;
+  @override
+  final int usersActiveHalfYear;
 
   @override
   String toString() {
-    return 'SiteAggregates(id: $id, siteId: $siteId, users: $users, posts: $posts, comments: $comments, communities: $communities)';
+    return 'SiteAggregates(id: $id, siteId: $siteId, users: $users, posts: $posts, comments: $comments, communities: $communities, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear)';
   }
 
   @override
@@ -460,7 +528,19 @@ class _$_SiteAggregates extends _SiteAggregates {
                     .equals(other.comments, comments)) &&
             (identical(other.communities, communities) ||
                 const DeepCollectionEquality()
-                    .equals(other.communities, communities)));
+                    .equals(other.communities, communities)) &&
+            (identical(other.usersActiveDay, usersActiveDay) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveDay, usersActiveDay)) &&
+            (identical(other.usersActiveWeek, usersActiveWeek) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveWeek, usersActiveWeek)) &&
+            (identical(other.usersActiveMonth, usersActiveMonth) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveMonth, usersActiveMonth)) &&
+            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveHalfYear, usersActiveHalfYear)));
   }
 
   @override
@@ -471,7 +551,11 @@ class _$_SiteAggregates extends _SiteAggregates {
       const DeepCollectionEquality().hash(users) ^
       const DeepCollectionEquality().hash(posts) ^
       const DeepCollectionEquality().hash(comments) ^
-      const DeepCollectionEquality().hash(communities);
+      const DeepCollectionEquality().hash(communities) ^
+      const DeepCollectionEquality().hash(usersActiveDay) ^
+      const DeepCollectionEquality().hash(usersActiveWeek) ^
+      const DeepCollectionEquality().hash(usersActiveMonth) ^
+      const DeepCollectionEquality().hash(usersActiveHalfYear);
 
   @override
   _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
@@ -491,7 +575,11 @@ abstract class _SiteAggregates extends SiteAggregates {
       @required int users,
       @required int posts,
       @required int comments,
-      @required int communities}) = _$_SiteAggregates;
+      @required int communities,
+      @required int usersActiveDay,
+      @required int usersActiveWeek,
+      @required int usersActiveMonth,
+      @required int usersActiveHalfYear}) = _$_SiteAggregates;
 
   factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
       _$_SiteAggregates.fromJson;
@@ -508,6 +596,14 @@ abstract class _SiteAggregates extends SiteAggregates {
   int get comments;
   @override
   int get communities;
+  @override
+  int get usersActiveDay;
+  @override
+  int get usersActiveWeek;
+  @override
+  int get usersActiveMonth;
+  @override
+  int get usersActiveHalfYear;
   @override
   _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith;
 }
@@ -799,13 +895,21 @@ class _$CommunityAggregatesTearOff {
       @required int communityId,
       @required int subscribers,
       @required int posts,
-      @required int comments}) {
+      @required int comments,
+      @required int usersActiveDay,
+      @required int usersActiveWeek,
+      @required int usersActiveMonth,
+      @required int usersActiveHalfYear}) {
     return _CommunityAggregates(
       id: id,
       communityId: communityId,
       subscribers: subscribers,
       posts: posts,
       comments: comments,
+      usersActiveDay: usersActiveDay,
+      usersActiveWeek: usersActiveWeek,
+      usersActiveMonth: usersActiveMonth,
+      usersActiveHalfYear: usersActiveHalfYear,
     );
   }
 
@@ -826,6 +930,10 @@ mixin _$CommunityAggregates {
   int get subscribers;
   int get posts;
   int get comments;
+  int get usersActiveDay;
+  int get usersActiveWeek;
+  int get usersActiveMonth;
+  int get usersActiveHalfYear;
 
   Map<String, dynamic> toJson();
   $CommunityAggregatesCopyWith<CommunityAggregates> get copyWith;
@@ -837,7 +945,15 @@ abstract class $CommunityAggregatesCopyWith<$Res> {
           CommunityAggregates value, $Res Function(CommunityAggregates) then) =
       _$CommunityAggregatesCopyWithImpl<$Res>;
   $Res call(
-      {int id, int communityId, int subscribers, int posts, int comments});
+      {int id,
+      int communityId,
+      int subscribers,
+      int posts,
+      int comments,
+      int usersActiveDay,
+      int usersActiveWeek,
+      int usersActiveMonth,
+      int usersActiveHalfYear});
 }
 
 /// @nodoc
@@ -856,6 +972,10 @@ class _$CommunityAggregatesCopyWithImpl<$Res>
     Object subscribers = freezed,
     Object posts = freezed,
     Object comments = freezed,
+    Object usersActiveDay = freezed,
+    Object usersActiveWeek = freezed,
+    Object usersActiveMonth = freezed,
+    Object usersActiveHalfYear = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -865,6 +985,18 @@ class _$CommunityAggregatesCopyWithImpl<$Res>
           subscribers == freezed ? _value.subscribers : subscribers as int,
       posts: posts == freezed ? _value.posts : posts as int,
       comments: comments == freezed ? _value.comments : comments as int,
+      usersActiveDay: usersActiveDay == freezed
+          ? _value.usersActiveDay
+          : usersActiveDay as int,
+      usersActiveWeek: usersActiveWeek == freezed
+          ? _value.usersActiveWeek
+          : usersActiveWeek as int,
+      usersActiveMonth: usersActiveMonth == freezed
+          ? _value.usersActiveMonth
+          : usersActiveMonth as int,
+      usersActiveHalfYear: usersActiveHalfYear == freezed
+          ? _value.usersActiveHalfYear
+          : usersActiveHalfYear as int,
     ));
   }
 }
@@ -877,7 +1009,15 @@ abstract class _$CommunityAggregatesCopyWith<$Res>
       __$CommunityAggregatesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id, int communityId, int subscribers, int posts, int comments});
+      {int id,
+      int communityId,
+      int subscribers,
+      int posts,
+      int comments,
+      int usersActiveDay,
+      int usersActiveWeek,
+      int usersActiveMonth,
+      int usersActiveHalfYear});
 }
 
 /// @nodoc
@@ -898,6 +1038,10 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
     Object subscribers = freezed,
     Object posts = freezed,
     Object comments = freezed,
+    Object usersActiveDay = freezed,
+    Object usersActiveWeek = freezed,
+    Object usersActiveMonth = freezed,
+    Object usersActiveHalfYear = freezed,
   }) {
     return _then(_CommunityAggregates(
       id: id == freezed ? _value.id : id as int,
@@ -907,6 +1051,18 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
           subscribers == freezed ? _value.subscribers : subscribers as int,
       posts: posts == freezed ? _value.posts : posts as int,
       comments: comments == freezed ? _value.comments : comments as int,
+      usersActiveDay: usersActiveDay == freezed
+          ? _value.usersActiveDay
+          : usersActiveDay as int,
+      usersActiveWeek: usersActiveWeek == freezed
+          ? _value.usersActiveWeek
+          : usersActiveWeek as int,
+      usersActiveMonth: usersActiveMonth == freezed
+          ? _value.usersActiveMonth
+          : usersActiveMonth as int,
+      usersActiveHalfYear: usersActiveHalfYear == freezed
+          ? _value.usersActiveHalfYear
+          : usersActiveHalfYear as int,
     ));
   }
 }
@@ -920,12 +1076,20 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       @required this.communityId,
       @required this.subscribers,
       @required this.posts,
-      @required this.comments})
+      @required this.comments,
+      @required this.usersActiveDay,
+      @required this.usersActiveWeek,
+      @required this.usersActiveMonth,
+      @required this.usersActiveHalfYear})
       : assert(id != null),
         assert(communityId != null),
         assert(subscribers != null),
         assert(posts != null),
         assert(comments != null),
+        assert(usersActiveDay != null),
+        assert(usersActiveWeek != null),
+        assert(usersActiveMonth != null),
+        assert(usersActiveHalfYear != null),
         super._();
 
   factory _$_CommunityAggregates.fromJson(Map<String, dynamic> json) =>
@@ -941,10 +1105,18 @@ class _$_CommunityAggregates extends _CommunityAggregates {
   final int posts;
   @override
   final int comments;
+  @override
+  final int usersActiveDay;
+  @override
+  final int usersActiveWeek;
+  @override
+  final int usersActiveMonth;
+  @override
+  final int usersActiveHalfYear;
 
   @override
   String toString() {
-    return 'CommunityAggregates(id: $id, communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments)';
+    return 'CommunityAggregates(id: $id, communityId: $communityId, subscribers: $subscribers, posts: $posts, comments: $comments, usersActiveDay: $usersActiveDay, usersActiveWeek: $usersActiveWeek, usersActiveMonth: $usersActiveMonth, usersActiveHalfYear: $usersActiveHalfYear)';
   }
 
   @override
@@ -963,7 +1135,19 @@ class _$_CommunityAggregates extends _CommunityAggregates {
                 const DeepCollectionEquality().equals(other.posts, posts)) &&
             (identical(other.comments, comments) ||
                 const DeepCollectionEquality()
-                    .equals(other.comments, comments)));
+                    .equals(other.comments, comments)) &&
+            (identical(other.usersActiveDay, usersActiveDay) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveDay, usersActiveDay)) &&
+            (identical(other.usersActiveWeek, usersActiveWeek) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveWeek, usersActiveWeek)) &&
+            (identical(other.usersActiveMonth, usersActiveMonth) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveMonth, usersActiveMonth)) &&
+            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
+                const DeepCollectionEquality()
+                    .equals(other.usersActiveHalfYear, usersActiveHalfYear)));
   }
 
   @override
@@ -973,7 +1157,11 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(subscribers) ^
       const DeepCollectionEquality().hash(posts) ^
-      const DeepCollectionEquality().hash(comments);
+      const DeepCollectionEquality().hash(comments) ^
+      const DeepCollectionEquality().hash(usersActiveDay) ^
+      const DeepCollectionEquality().hash(usersActiveWeek) ^
+      const DeepCollectionEquality().hash(usersActiveMonth) ^
+      const DeepCollectionEquality().hash(usersActiveHalfYear);
 
   @override
   _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
@@ -993,7 +1181,11 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       @required int communityId,
       @required int subscribers,
       @required int posts,
-      @required int comments}) = _$_CommunityAggregates;
+      @required int comments,
+      @required int usersActiveDay,
+      @required int usersActiveWeek,
+      @required int usersActiveMonth,
+      @required int usersActiveHalfYear}) = _$_CommunityAggregates;
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommunityAggregates.fromJson;
@@ -1008,6 +1200,14 @@ abstract class _CommunityAggregates extends CommunityAggregates {
   int get posts;
   @override
   int get comments;
+  @override
+  int get usersActiveDay;
+  @override
+  int get usersActiveWeek;
+  @override
+  int get usersActiveMonth;
+  @override
+  int get usersActiveHalfYear;
   @override
   _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith;
 }

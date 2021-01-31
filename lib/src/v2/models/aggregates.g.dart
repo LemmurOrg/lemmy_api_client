@@ -35,6 +35,10 @@ _$_SiteAggregates _$_$_SiteAggregatesFromJson(Map<String, dynamic> json) {
     posts: json['posts'] as int,
     comments: json['comments'] as int,
     communities: json['communities'] as int,
+    usersActiveDay: json['users_active_day'] as int,
+    usersActiveWeek: json['users_active_week'] as int,
+    usersActiveMonth: json['users_active_month'] as int,
+    usersActiveHalfYear: json['users_active_half_year'] as int,
   );
 }
 
@@ -46,6 +50,10 @@ Map<String, dynamic> _$_$_SiteAggregatesToJson(_$_SiteAggregates instance) =>
       'posts': instance.posts,
       'comments': instance.comments,
       'communities': instance.communities,
+      'users_active_day': instance.usersActiveDay,
+      'users_active_week': instance.usersActiveWeek,
+      'users_active_month': instance.usersActiveMonth,
+      'users_active_half_year': instance.usersActiveHalfYear,
     };
 
 _$_PostAggregates _$_$_PostAggregatesFromJson(Map<String, dynamic> json) {
@@ -79,6 +87,10 @@ _$_CommunityAggregates _$_$_CommunityAggregatesFromJson(
     subscribers: json['subscribers'] as int,
     posts: json['posts'] as int,
     comments: json['comments'] as int,
+    usersActiveDay: json['users_active_day'] as int,
+    usersActiveWeek: json['users_active_week'] as int,
+    usersActiveMonth: json['users_active_month'] as int,
+    usersActiveHalfYear: json['users_active_half_year'] as int,
   );
 }
 
@@ -90,6 +102,10 @@ Map<String, dynamic> _$_$_CommunityAggregatesToJson(
       'subscribers': instance.subscribers,
       'posts': instance.posts,
       'comments': instance.comments,
+      'users_active_day': instance.usersActiveDay,
+      'users_active_week': instance.usersActiveWeek,
+      'users_active_month': instance.usersActiveMonth,
+      'users_active_half_year': instance.usersActiveHalfYear,
     };
 
 _$_CommentAggregates _$_$_CommentAggregatesFromJson(Map<String, dynamic> json) {

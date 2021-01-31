@@ -31,6 +31,10 @@ abstract class SiteAggregates implements _$SiteAggregates {
     @required int posts,
     @required int comments,
     @required int communities,
+    @required int usersActiveDay,
+    @required int usersActiveWeek,
+    @required int usersActiveMonth,
+    @required int usersActiveHalfYear,
   }) = _SiteAggregates;
 
   SiteAggregates._();
@@ -65,6 +69,10 @@ abstract class CommunityAggregates implements _$CommunityAggregates {
     @required int subscribers,
     @required int posts,
     @required int comments,
+    @required int usersActiveDay,
+    @required int usersActiveWeek,
+    @required int usersActiveMonth,
+    @required int usersActiveHalfYear,
   }) = _CommunityAggregates;
 
   CommunityAggregates._();

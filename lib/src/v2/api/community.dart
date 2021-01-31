@@ -70,6 +70,7 @@ abstract class ListCommunities
     implements _$ListCommunities, LemmyApiQuery<List<CommunityView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory ListCommunities({
+    @required @JsonKey(name: 'type_') PostListingType type,
     @required SortType sort,
     int page,
     int limit,

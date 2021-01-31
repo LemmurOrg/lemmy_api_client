@@ -471,8 +471,13 @@ class _$ListCommunitiesTearOff {
 
 // ignore: unused_element
   _ListCommunities call(
-      {@required SortType sort, int page, int limit, String auth}) {
+      {@required @JsonKey(name: 'type_') PostListingType type,
+      @required SortType sort,
+      int page,
+      int limit,
+      String auth}) {
     return _ListCommunities(
+      type: type,
       sort: sort,
       page: page,
       limit: limit,
@@ -492,6 +497,8 @@ const $ListCommunities = _$ListCommunitiesTearOff();
 
 /// @nodoc
 mixin _$ListCommunities {
+  @JsonKey(name: 'type_')
+  PostListingType get type;
   SortType get sort;
   int get page;
   int get limit;
@@ -506,7 +513,12 @@ abstract class $ListCommunitiesCopyWith<$Res> {
   factory $ListCommunitiesCopyWith(
           ListCommunities value, $Res Function(ListCommunities) then) =
       _$ListCommunitiesCopyWithImpl<$Res>;
-  $Res call({SortType sort, int page, int limit, String auth});
+  $Res call(
+      {@JsonKey(name: 'type_') PostListingType type,
+      SortType sort,
+      int page,
+      int limit,
+      String auth});
 }
 
 /// @nodoc
@@ -520,12 +532,14 @@ class _$ListCommunitiesCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object type = freezed,
     Object sort = freezed,
     Object page = freezed,
     Object limit = freezed,
     Object auth = freezed,
   }) {
     return _then(_value.copyWith(
+      type: type == freezed ? _value.type : type as PostListingType,
       sort: sort == freezed ? _value.sort : sort as SortType,
       page: page == freezed ? _value.page : page as int,
       limit: limit == freezed ? _value.limit : limit as int,
@@ -541,7 +555,12 @@ abstract class _$ListCommunitiesCopyWith<$Res>
           _ListCommunities value, $Res Function(_ListCommunities) then) =
       __$ListCommunitiesCopyWithImpl<$Res>;
   @override
-  $Res call({SortType sort, int page, int limit, String auth});
+  $Res call(
+      {@JsonKey(name: 'type_') PostListingType type,
+      SortType sort,
+      int page,
+      int limit,
+      String auth});
 }
 
 /// @nodoc
@@ -557,12 +576,14 @@ class __$ListCommunitiesCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object type = freezed,
     Object sort = freezed,
     Object page = freezed,
     Object limit = freezed,
     Object auth = freezed,
   }) {
     return _then(_ListCommunities(
+      type: type == freezed ? _value.type : type as PostListingType,
       sort: sort == freezed ? _value.sort : sort as SortType,
       page: page == freezed ? _value.page : page as int,
       limit: limit == freezed ? _value.limit : limit as int,
@@ -575,13 +596,22 @@ class __$ListCommunitiesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ListCommunities extends _ListCommunities {
-  _$_ListCommunities({@required this.sort, this.page, this.limit, this.auth})
-      : assert(sort != null),
+  _$_ListCommunities(
+      {@required @JsonKey(name: 'type_') this.type,
+      @required this.sort,
+      this.page,
+      this.limit,
+      this.auth})
+      : assert(type != null),
+        assert(sort != null),
         super._();
 
   factory _$_ListCommunities.fromJson(Map<String, dynamic> json) =>
       _$_$_ListCommunitiesFromJson(json);
 
+  @override
+  @JsonKey(name: 'type_')
+  final PostListingType type;
   @override
   final SortType sort;
   @override
@@ -593,13 +623,15 @@ class _$_ListCommunities extends _ListCommunities {
 
   @override
   String toString() {
-    return 'ListCommunities(sort: $sort, page: $page, limit: $limit, auth: $auth)';
+    return 'ListCommunities(type: $type, sort: $sort, page: $page, limit: $limit, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _ListCommunities &&
+            (identical(other.type, type) ||
+                const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.sort, sort) ||
                 const DeepCollectionEquality().equals(other.sort, sort)) &&
             (identical(other.page, page) ||
@@ -613,6 +645,7 @@ class _$_ListCommunities extends _ListCommunities {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(sort) ^
       const DeepCollectionEquality().hash(page) ^
       const DeepCollectionEquality().hash(limit) ^
@@ -631,7 +664,8 @@ class _$_ListCommunities extends _ListCommunities {
 abstract class _ListCommunities extends ListCommunities {
   _ListCommunities._() : super._();
   factory _ListCommunities(
-      {@required SortType sort,
+      {@required @JsonKey(name: 'type_') PostListingType type,
+      @required SortType sort,
       int page,
       int limit,
       String auth}) = _$_ListCommunities;
@@ -639,6 +673,9 @@ abstract class _ListCommunities extends ListCommunities {
   factory _ListCommunities.fromJson(Map<String, dynamic> json) =
       _$_ListCommunities.fromJson;
 
+  @override
+  @JsonKey(name: 'type_')
+  PostListingType get type;
   @override
   SortType get sort;
   @override
