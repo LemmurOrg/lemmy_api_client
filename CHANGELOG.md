@@ -1,3 +1,13 @@
+## 0.10.2 - 2021-02-02
+
+### Changed
+
+- `FullSiteView.federatedInstances` now has a different structure
+
+### Added
+
+- Added `MostComments` to `SortType`
+
 ## 0.10.1 - 2021-01-31
 
 ### Added
