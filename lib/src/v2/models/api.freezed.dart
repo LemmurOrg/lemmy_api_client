@@ -1279,7 +1279,7 @@ class _$FullSiteViewTearOff {
       @required int online,
       @required String version,
       UserSafeSettings myUser,
-      @required List<String> federatedInstances}) {
+      FederatedInstances federatedInstances}) {
     return _FullSiteView(
       siteView: siteView,
       admins: admins,
@@ -1309,7 +1309,7 @@ mixin _$FullSiteView {
   int get online;
   String get version;
   UserSafeSettings get myUser;
-  List<String> get federatedInstances;
+  FederatedInstances get federatedInstances;
 
   Map<String, dynamic> toJson();
   $FullSiteViewCopyWith<FullSiteView> get copyWith;
@@ -1327,10 +1327,11 @@ abstract class $FullSiteViewCopyWith<$Res> {
       int online,
       String version,
       UserSafeSettings myUser,
-      List<String> federatedInstances});
+      FederatedInstances federatedInstances});
 
   $SiteViewCopyWith<$Res> get siteView;
   $UserSafeSettingsCopyWith<$Res> get myUser;
+  $FederatedInstancesCopyWith<$Res> get federatedInstances;
 }
 
 /// @nodoc
@@ -1360,7 +1361,7 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       myUser: myUser == freezed ? _value.myUser : myUser as UserSafeSettings,
       federatedInstances: federatedInstances == freezed
           ? _value.federatedInstances
-          : federatedInstances as List<String>,
+          : federatedInstances as FederatedInstances,
     ));
   }
 
@@ -1383,6 +1384,17 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       return _then(_value.copyWith(myUser: value));
     });
   }
+
+  @override
+  $FederatedInstancesCopyWith<$Res> get federatedInstances {
+    if (_value.federatedInstances == null) {
+      return null;
+    }
+    return $FederatedInstancesCopyWith<$Res>(_value.federatedInstances,
+        (value) {
+      return _then(_value.copyWith(federatedInstances: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -1399,12 +1411,14 @@ abstract class _$FullSiteViewCopyWith<$Res>
       int online,
       String version,
       UserSafeSettings myUser,
-      List<String> federatedInstances});
+      FederatedInstances federatedInstances});
 
   @override
   $SiteViewCopyWith<$Res> get siteView;
   @override
   $UserSafeSettingsCopyWith<$Res> get myUser;
+  @override
+  $FederatedInstancesCopyWith<$Res> get federatedInstances;
 }
 
 /// @nodoc
@@ -1436,7 +1450,7 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
       myUser: myUser == freezed ? _value.myUser : myUser as UserSafeSettings,
       federatedInstances: federatedInstances == freezed
           ? _value.federatedInstances
-          : federatedInstances as List<String>,
+          : federatedInstances as FederatedInstances,
     ));
   }
 }
@@ -1452,12 +1466,11 @@ class _$_FullSiteView extends _FullSiteView {
       @required this.online,
       @required this.version,
       this.myUser,
-      @required this.federatedInstances})
+      this.federatedInstances})
       : assert(admins != null),
         assert(banned != null),
         assert(online != null),
         assert(version != null),
-        assert(federatedInstances != null),
         super._();
 
   factory _$_FullSiteView.fromJson(Map<String, dynamic> json) =>
@@ -1476,7 +1489,7 @@ class _$_FullSiteView extends _FullSiteView {
   @override
   final UserSafeSettings myUser;
   @override
-  final List<String> federatedInstances;
+  final FederatedInstances federatedInstances;
 
   @override
   String toString() {
@@ -1536,7 +1549,7 @@ abstract class _FullSiteView extends FullSiteView {
       @required int online,
       @required String version,
       UserSafeSettings myUser,
-      @required List<String> federatedInstances}) = _$_FullSiteView;
+      FederatedInstances federatedInstances}) = _$_FullSiteView;
 
   factory _FullSiteView.fromJson(Map<String, dynamic> json) =
       _$_FullSiteView.fromJson;
@@ -1554,9 +1567,191 @@ abstract class _FullSiteView extends FullSiteView {
   @override
   UserSafeSettings get myUser;
   @override
-  List<String> get federatedInstances;
+  FederatedInstances get federatedInstances;
   @override
   _$FullSiteViewCopyWith<_FullSiteView> get copyWith;
+}
+
+FederatedInstances _$FederatedInstancesFromJson(Map<String, dynamic> json) {
+  return _FederatedInstances.fromJson(json);
+}
+
+/// @nodoc
+class _$FederatedInstancesTearOff {
+  const _$FederatedInstancesTearOff();
+
+// ignore: unused_element
+  _FederatedInstances call(
+      {@required List<String> linked,
+      @required List<String> allowed,
+      @required List<String> blocked}) {
+    return _FederatedInstances(
+      linked: linked,
+      allowed: allowed,
+      blocked: blocked,
+    );
+  }
+
+// ignore: unused_element
+  FederatedInstances fromJson(Map<String, Object> json) {
+    return FederatedInstances.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $FederatedInstances = _$FederatedInstancesTearOff();
+
+/// @nodoc
+mixin _$FederatedInstances {
+  List<String> get linked;
+  List<String> get allowed;
+  List<String> get blocked;
+
+  Map<String, dynamic> toJson();
+  $FederatedInstancesCopyWith<FederatedInstances> get copyWith;
+}
+
+/// @nodoc
+abstract class $FederatedInstancesCopyWith<$Res> {
+  factory $FederatedInstancesCopyWith(
+          FederatedInstances value, $Res Function(FederatedInstances) then) =
+      _$FederatedInstancesCopyWithImpl<$Res>;
+  $Res call({List<String> linked, List<String> allowed, List<String> blocked});
+}
+
+/// @nodoc
+class _$FederatedInstancesCopyWithImpl<$Res>
+    implements $FederatedInstancesCopyWith<$Res> {
+  _$FederatedInstancesCopyWithImpl(this._value, this._then);
+
+  final FederatedInstances _value;
+  // ignore: unused_field
+  final $Res Function(FederatedInstances) _then;
+
+  @override
+  $Res call({
+    Object linked = freezed,
+    Object allowed = freezed,
+    Object blocked = freezed,
+  }) {
+    return _then(_value.copyWith(
+      linked: linked == freezed ? _value.linked : linked as List<String>,
+      allowed: allowed == freezed ? _value.allowed : allowed as List<String>,
+      blocked: blocked == freezed ? _value.blocked : blocked as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$FederatedInstancesCopyWith<$Res>
+    implements $FederatedInstancesCopyWith<$Res> {
+  factory _$FederatedInstancesCopyWith(
+          _FederatedInstances value, $Res Function(_FederatedInstances) then) =
+      __$FederatedInstancesCopyWithImpl<$Res>;
+  @override
+  $Res call({List<String> linked, List<String> allowed, List<String> blocked});
+}
+
+/// @nodoc
+class __$FederatedInstancesCopyWithImpl<$Res>
+    extends _$FederatedInstancesCopyWithImpl<$Res>
+    implements _$FederatedInstancesCopyWith<$Res> {
+  __$FederatedInstancesCopyWithImpl(
+      _FederatedInstances _value, $Res Function(_FederatedInstances) _then)
+      : super(_value, (v) => _then(v as _FederatedInstances));
+
+  @override
+  _FederatedInstances get _value => super._value as _FederatedInstances;
+
+  @override
+  $Res call({
+    Object linked = freezed,
+    Object allowed = freezed,
+    Object blocked = freezed,
+  }) {
+    return _then(_FederatedInstances(
+      linked: linked == freezed ? _value.linked : linked as List<String>,
+      allowed: allowed == freezed ? _value.allowed : allowed as List<String>,
+      blocked: blocked == freezed ? _value.blocked : blocked as List<String>,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_FederatedInstances extends _FederatedInstances {
+  _$_FederatedInstances(
+      {@required this.linked, @required this.allowed, @required this.blocked})
+      : assert(linked != null),
+        assert(allowed != null),
+        assert(blocked != null),
+        super._();
+
+  factory _$_FederatedInstances.fromJson(Map<String, dynamic> json) =>
+      _$_$_FederatedInstancesFromJson(json);
+
+  @override
+  final List<String> linked;
+  @override
+  final List<String> allowed;
+  @override
+  final List<String> blocked;
+
+  @override
+  String toString() {
+    return 'FederatedInstances(linked: $linked, allowed: $allowed, blocked: $blocked)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _FederatedInstances &&
+            (identical(other.linked, linked) ||
+                const DeepCollectionEquality().equals(other.linked, linked)) &&
+            (identical(other.allowed, allowed) ||
+                const DeepCollectionEquality()
+                    .equals(other.allowed, allowed)) &&
+            (identical(other.blocked, blocked) ||
+                const DeepCollectionEquality().equals(other.blocked, blocked)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(linked) ^
+      const DeepCollectionEquality().hash(allowed) ^
+      const DeepCollectionEquality().hash(blocked);
+
+  @override
+  _$FederatedInstancesCopyWith<_FederatedInstances> get copyWith =>
+      __$FederatedInstancesCopyWithImpl<_FederatedInstances>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_FederatedInstancesToJson(this);
+  }
+}
+
+abstract class _FederatedInstances extends FederatedInstances {
+  _FederatedInstances._() : super._();
+  factory _FederatedInstances(
+      {@required List<String> linked,
+      @required List<String> allowed,
+      @required List<String> blocked}) = _$_FederatedInstances;
+
+  factory _FederatedInstances.fromJson(Map<String, dynamic> json) =
+      _$_FederatedInstances.fromJson;
+
+  @override
+  List<String> get linked;
+  @override
+  List<String> get allowed;
+  @override
+  List<String> get blocked;
+  @override
+  _$FederatedInstancesCopyWith<_FederatedInstances> get copyWith;
 }
 
 Captcha _$CaptchaFromJson(Map<String, dynamic> json) {

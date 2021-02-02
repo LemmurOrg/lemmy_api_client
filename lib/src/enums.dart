@@ -74,6 +74,7 @@ class SortType {
   static const SortType topMonth = SortType._('TopMonth');
   static const SortType topYear = SortType._('TopYear');
   static const SortType topAll = SortType._('TopAll');
+  static const SortType mostComments = SortType._('MostComments');
 
   @override
   String toString() => value;
@@ -87,6 +88,7 @@ class SortType {
     topMonth,
     topYear,
     topAll,
+    mostComments,
   ];
 }
 

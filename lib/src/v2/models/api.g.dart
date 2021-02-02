@@ -195,9 +195,10 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
     myUser: json['my_user'] == null
         ? null
         : UserSafeSettings.fromJson(json['my_user'] as Map<String, dynamic>),
-    federatedInstances: (json['federated_instances'] as List)
-        ?.map((e) => e as String)
-        ?.toList(),
+    federatedInstances: json['federated_instances'] == null
+        ? null
+        : FederatedInstances.fromJson(
+            json['federated_instances'] as Map<String, dynamic>),
   )..instanceHost = json['instance_host'] as String;
 }
 
@@ -211,6 +212,24 @@ Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
       'version': instance.version,
       'my_user': instance.myUser,
       'federated_instances': instance.federatedInstances,
+    };
+
+_$_FederatedInstances _$_$_FederatedInstancesFromJson(
+    Map<String, dynamic> json) {
+  return _$_FederatedInstances(
+    linked: (json['linked'] as List)?.map((e) => e as String)?.toList(),
+    allowed: (json['allowed'] as List)?.map((e) => e as String)?.toList(),
+    blocked: (json['blocked'] as List)?.map((e) => e as String)?.toList(),
+  )..instanceHost = json['instance_host'] as String;
+}
+
+Map<String, dynamic> _$_$_FederatedInstancesToJson(
+        _$_FederatedInstances instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'linked': instance.linked,
+      'allowed': instance.allowed,
+      'blocked': instance.blocked,
     };
 
 _$_Captcha _$_$_CaptchaFromJson(Map<String, dynamic> json) {

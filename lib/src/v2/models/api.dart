@@ -104,13 +104,29 @@ abstract class FullSiteView extends WithInstanceHost implements _$FullSiteView {
     @required int online,
     @required String version,
     UserSafeSettings myUser,
-    @required List<String> federatedInstances,
+    FederatedInstances federatedInstances,
   }) = _FullSiteView;
 
   FullSiteView._();
 
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
+}
+
+@freezed
+abstract class FederatedInstances extends WithInstanceHost
+    implements _$FederatedInstances {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory FederatedInstances({
+    @required List<String> linked,
+    @required List<String> allowed,
+    @required List<String> blocked,
+  }) = _FederatedInstances;
+
+  FederatedInstances._();
+
+  factory FederatedInstances.fromJson(Map<String, dynamic> json) =>
+      _$FederatedInstancesFromJson(json);
 }
 
 @freezed
