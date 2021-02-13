@@ -10,7 +10,7 @@ import 'user.dart';
 
 // ignore_for_file: missing_required_param
 
-final wsDeserializer = {
+final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'CreateComment': (json) =>
       WsEventCreateComment(CreateComment().responseFactory(json)),
   'EditComment': (json) =>
