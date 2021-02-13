@@ -3,7 +3,12 @@
 ### Changed
 
 - All `DateTime` objects are now explicitly UTC time
+- All queries have now constant constructors
+
+### Fixed
+
 - `GetReplies.sort` is now of `SortType` type
+- `showNsfw` from `Register` query is now correctly a boolean instead of a string
 
 ## 0.10.2 - 2021-02-02
 
