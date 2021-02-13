@@ -1916,7 +1916,7 @@ class _$GetRepliesTearOff {
 
 // ignore: unused_element
   _GetReplies call(
-      {@required String sort,
+      {@required SortType sort,
       int page,
       int limit,
       @required bool unreadOnly,
@@ -1942,7 +1942,7 @@ const $GetReplies = _$GetRepliesTearOff();
 
 /// @nodoc
 mixin _$GetReplies {
-  String get sort;
+  SortType get sort;
   int get page;
   int get limit;
   bool get unreadOnly;
@@ -1957,7 +1957,7 @@ abstract class $GetRepliesCopyWith<$Res> {
   factory $GetRepliesCopyWith(
           GetReplies value, $Res Function(GetReplies) then) =
       _$GetRepliesCopyWithImpl<$Res>;
-  $Res call({String sort, int page, int limit, bool unreadOnly, String auth});
+  $Res call({SortType sort, int page, int limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -1977,7 +1977,7 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
     Object auth = freezed,
   }) {
     return _then(_value.copyWith(
-      sort: sort == freezed ? _value.sort : sort as String,
+      sort: sort == freezed ? _value.sort : sort as SortType,
       page: page == freezed ? _value.page : page as int,
       limit: limit == freezed ? _value.limit : limit as int,
       unreadOnly:
@@ -1993,7 +1993,7 @@ abstract class _$GetRepliesCopyWith<$Res> implements $GetRepliesCopyWith<$Res> {
           _GetReplies value, $Res Function(_GetReplies) then) =
       __$GetRepliesCopyWithImpl<$Res>;
   @override
-  $Res call({String sort, int page, int limit, bool unreadOnly, String auth});
+  $Res call({SortType sort, int page, int limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2015,7 +2015,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
     Object auth = freezed,
   }) {
     return _then(_GetReplies(
-      sort: sort == freezed ? _value.sort : sort as String,
+      sort: sort == freezed ? _value.sort : sort as SortType,
       page: page == freezed ? _value.page : page as int,
       limit: limit == freezed ? _value.limit : limit as int,
       unreadOnly:
@@ -2044,7 +2044,7 @@ class _$_GetReplies extends _GetReplies {
       _$_$_GetRepliesFromJson(json);
 
   @override
-  final String sort;
+  final SortType sort;
   @override
   final int page;
   @override
@@ -2098,7 +2098,7 @@ class _$_GetReplies extends _GetReplies {
 abstract class _GetReplies extends GetReplies {
   _GetReplies._() : super._();
   factory _GetReplies(
-      {@required String sort,
+      {@required SortType sort,
       int page,
       int limit,
       @required bool unreadOnly,
@@ -2108,7 +2108,7 @@ abstract class _GetReplies extends GetReplies {
       _$_GetReplies.fromJson;
 
   @override
-  String get sort;
+  SortType get sort;
   @override
   int get page;
   @override

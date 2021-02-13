@@ -226,7 +226,8 @@ Map<String, dynamic> _$_$_BanUserToJson(_$_BanUser instance) {
 
 _$_GetReplies _$_$_GetRepliesFromJson(Map<String, dynamic> json) {
   return _$_GetReplies(
-    sort: json['sort'] as String,
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int,
     limit: json['limit'] as int,
     unreadOnly: json['unread_only'] as bool,
