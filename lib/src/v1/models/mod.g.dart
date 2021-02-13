@@ -310,12 +310,16 @@ _$_Modlog _$_$_ModlogFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'removed_posts': instance.removedPosts,
-      'locked_posts': instance.lockedPosts,
-      'removed_comments': instance.removedComments,
-      'removed_communities': instance.removedCommunities,
-      'banned_from_community': instance.bannedFromCommunity,
-      'banned': instance.banned,
-      'added_to_community': instance.addedToCommunity,
-      'added': instance.added,
+      'removed_posts': instance.removedPosts?.map((e) => e?.toJson())?.toList(),
+      'locked_posts': instance.lockedPosts?.map((e) => e?.toJson())?.toList(),
+      'removed_comments':
+          instance.removedComments?.map((e) => e?.toJson())?.toList(),
+      'removed_communities':
+          instance.removedCommunities?.map((e) => e?.toJson())?.toList(),
+      'banned_from_community':
+          instance.bannedFromCommunity?.map((e) => e?.toJson())?.toList(),
+      'banned': instance.banned?.map((e) => e?.toJson())?.toList(),
+      'added_to_community':
+          instance.addedToCommunity?.map((e) => e?.toJson())?.toList(),
+      'added': instance.added?.map((e) => e?.toJson())?.toList(),
     };

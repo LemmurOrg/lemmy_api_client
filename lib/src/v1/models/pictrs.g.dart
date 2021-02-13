@@ -35,5 +35,5 @@ Map<String, dynamic> _$_$_PictrsUploadToJson(_$_PictrsUpload instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'msg': instance.msg,
-      'files': instance.files,
+      'files': instance.files?.map((e) => e?.toJson())?.toList(),
     };

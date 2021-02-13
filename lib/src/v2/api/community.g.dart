@@ -84,8 +84,8 @@ Map<String, dynamic> _$_$_ListCommunitiesToJson(_$_ListCommunities instance) {
     }
   }
 
-  writeNotNull('type_', instance.type);
-  writeNotNull('sort', instance.sort);
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('auth', instance.auth);

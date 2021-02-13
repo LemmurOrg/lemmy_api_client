@@ -175,8 +175,8 @@ Map<String, dynamic> _$_$_FullCommunityViewToJson(
         _$_FullCommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community': instance.community,
-      'moderators': instance.moderators,
+      'community': instance.community?.toJson(),
+      'moderators': instance.moderators?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_TransferredCommunity _$_$_TransferredCommunityFromJson(
@@ -201,7 +201,7 @@ Map<String, dynamic> _$_$_TransferredCommunityToJson(
         _$_TransferredCommunity instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community': instance.community,
-      'moderators': instance.moderators,
-      'admins': instance.admins,
+      'community': instance.community?.toJson(),
+      'moderators': instance.moderators?.map((e) => e?.toJson())?.toList(),
+      'admins': instance.admins?.map((e) => e?.toJson())?.toList(),
     };

@@ -25,8 +25,8 @@ Map<String, dynamic> _$_$_FullCommunityViewToJson(
         _$_FullCommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community_view': instance.communityView,
-      'moderators': instance.moderators,
+      'community_view': instance.communityView?.toJson(),
+      'moderators': instance.moderators?.map((e) => e?.toJson())?.toList(),
       'online': instance.online,
     };
 
@@ -55,10 +55,10 @@ _$_FullPostView _$_$_FullPostViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullPostViewToJson(_$_FullPostView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'post_view': instance.postView,
-      'community_view': instance.communityView,
-      'comments': instance.comments,
-      'moderators': instance.moderators,
+      'post_view': instance.postView?.toJson(),
+      'community_view': instance.communityView?.toJson(),
+      'comments': instance.comments?.map((e) => e?.toJson())?.toList(),
+      'moderators': instance.moderators?.map((e) => e?.toJson())?.toList(),
       'online': instance.online,
     };
 
@@ -90,11 +90,11 @@ _$_SearchResults _$_$_SearchResultsFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_SearchResultsToJson(_$_SearchResults instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'type_': instance.type,
-      'comments': instance.comments,
-      'posts': instance.posts,
-      'communities': instance.communities,
-      'users': instance.users,
+      'type_': instance.type?.toJson(),
+      'comments': instance.comments?.map((e) => e?.toJson())?.toList(),
+      'posts': instance.posts?.map((e) => e?.toJson())?.toList(),
+      'communities': instance.communities?.map((e) => e?.toJson())?.toList(),
+      'users': instance.users?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_Modlog _$_$_ModlogFromJson(Map<String, dynamic> json) {
@@ -147,15 +147,20 @@ _$_Modlog _$_$_ModlogFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'removed_posts': instance.removedPosts,
-      'locked_posts': instance.lockedPosts,
-      'stickied_posts': instance.stickiedPosts,
-      'removed_comments': instance.removedComments,
-      'removed_communities': instance.removedCommunities,
-      'banned_from_community': instance.bannedFromCommunity,
-      'banned': instance.banned,
-      'added_to_community': instance.addedToCommunity,
-      'added': instance.added,
+      'removed_posts': instance.removedPosts?.map((e) => e?.toJson())?.toList(),
+      'locked_posts': instance.lockedPosts?.map((e) => e?.toJson())?.toList(),
+      'stickied_posts':
+          instance.stickiedPosts?.map((e) => e?.toJson())?.toList(),
+      'removed_comments':
+          instance.removedComments?.map((e) => e?.toJson())?.toList(),
+      'removed_communities':
+          instance.removedCommunities?.map((e) => e?.toJson())?.toList(),
+      'banned_from_community':
+          instance.bannedFromCommunity?.map((e) => e?.toJson())?.toList(),
+      'banned': instance.banned?.map((e) => e?.toJson())?.toList(),
+      'added_to_community':
+          instance.addedToCommunity?.map((e) => e?.toJson())?.toList(),
+      'added': instance.added?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_FullCommentView _$_$_FullCommentViewFromJson(Map<String, dynamic> json) {
@@ -172,7 +177,7 @@ _$_FullCommentView _$_$_FullCommentViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullCommentViewToJson(_$_FullCommentView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'comment_view': instance.commentView,
+      'comment_view': instance.commentView?.toJson(),
       'recipient_ids': instance.recipientIds,
       'form_id': instance.formId,
     };
@@ -205,13 +210,13 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'site_view': instance.siteView,
-      'admins': instance.admins,
-      'banned': instance.banned,
+      'site_view': instance.siteView?.toJson(),
+      'admins': instance.admins?.map((e) => e?.toJson())?.toList(),
+      'banned': instance.banned?.map((e) => e?.toJson())?.toList(),
       'online': instance.online,
       'version': instance.version,
-      'my_user': instance.myUser,
-      'federated_instances': instance.federatedInstances,
+      'my_user': instance.myUser?.toJson(),
+      'federated_instances': instance.federatedInstances?.toJson(),
     };
 
 _$_FederatedInstances _$_$_FederatedInstancesFromJson(
@@ -276,11 +281,11 @@ _$_FullUserView _$_$_FullUserViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullUserViewToJson(_$_FullUserView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user_view': instance.userView,
-      'follows': instance.follows,
-      'moderates': instance.moderates,
-      'comments': instance.comments,
-      'posts': instance.posts,
+      'user_view': instance.userView?.toJson(),
+      'follows': instance.follows?.map((e) => e?.toJson())?.toList(),
+      'moderates': instance.moderates?.map((e) => e?.toJson())?.toList(),
+      'comments': instance.comments?.map((e) => e?.toJson())?.toList(),
+      'posts': instance.posts?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_BannedCommunityUser _$_$_BannedCommunityUserFromJson(
@@ -297,7 +302,7 @@ Map<String, dynamic> _$_$_BannedCommunityUserToJson(
         _$_BannedCommunityUser instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user_view': instance.userView,
+      'user_view': instance.userView?.toJson(),
       'banned': instance.banned,
     };
 
@@ -313,7 +318,7 @@ _$_BannedUser _$_$_BannedUserFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_BannedUserToJson(_$_BannedUser instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user_view': instance.userView,
+      'user_view': instance.userView?.toJson(),
       'banned': instance.banned,
     };
 

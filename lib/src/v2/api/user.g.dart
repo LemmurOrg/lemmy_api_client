@@ -144,7 +144,7 @@ Map<String, dynamic> _$_$_GetUserDetailsToJson(_$_GetUserDetails instance) {
 
   writeNotNull('user_id', instance.userId);
   writeNotNull('username', instance.username);
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
@@ -244,7 +244,7 @@ Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
     }
   }
 
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('unread_only', instance.unreadOnly);
@@ -272,7 +272,7 @@ Map<String, dynamic> _$_$_GetUserMentionsToJson(_$_GetUserMentions instance) {
     }
   }
 
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('unread_only', instance.unreadOnly);

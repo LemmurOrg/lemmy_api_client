@@ -20,8 +20,8 @@ _$_UserViewSafe _$_$_UserViewSafeFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_UserViewSafeToJson(_$_UserViewSafe instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user': instance.user,
-      'counts': instance.counts,
+      'user': instance.user?.toJson(),
+      'counts': instance.counts?.toJson(),
     };
 
 _$_UserMentionView _$_$_UserMentionViewFromJson(Map<String, dynamic> json) {
@@ -59,17 +59,17 @@ _$_UserMentionView _$_$_UserMentionViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_UserMentionViewToJson(_$_UserMentionView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user_mention': instance.userMention,
-      'comment': instance.comment,
-      'creator': instance.creator,
-      'post': instance.post,
-      'community': instance.community,
-      'recipient': instance.recipient,
-      'counts': instance.counts,
+      'user_mention': instance.userMention?.toJson(),
+      'comment': instance.comment?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
+      'recipient': instance.recipient?.toJson(),
+      'counts': instance.counts?.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
       'subscribed': instance.subscribed,
       'saved': instance.saved,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
     };
 
 _$_SiteView _$_$_SiteViewFromJson(Map<String, dynamic> json) {
@@ -89,9 +89,9 @@ _$_SiteView _$_$_SiteViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_SiteViewToJson(_$_SiteView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'site': instance.site,
-      'creator': instance.creator,
-      'counts': instance.counts,
+      'site': instance.site?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'counts': instance.counts?.toJson(),
     };
 
 _$_PrivateMessageView _$_$_PrivateMessageViewFromJson(
@@ -114,9 +114,9 @@ Map<String, dynamic> _$_$_PrivateMessageViewToJson(
         _$_PrivateMessageView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'private_message': instance.privateMessage,
-      'creator': instance.creator,
-      'recipient': instance.recipient,
+      'private_message': instance.privateMessage?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'recipient': instance.recipient?.toJson(),
     };
 
 _$_PostView _$_$_PostViewFromJson(Map<String, dynamic> json) {
@@ -146,15 +146,15 @@ _$_PostView _$_$_PostViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_PostViewToJson(_$_PostView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'post': instance.post,
-      'creator': instance.creator,
-      'community': instance.community,
+      'post': instance.post?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'community': instance.community?.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
-      'counts': instance.counts,
+      'counts': instance.counts?.toJson(),
       'subscribed': instance.subscribed,
       'saved': instance.saved,
       'read': instance.read,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
     };
 
 _$_PostReportView _$_$_PostReportViewFromJson(Map<String, dynamic> json) {
@@ -183,12 +183,12 @@ _$_PostReportView _$_$_PostReportViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_PostReportViewToJson(_$_PostReportView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'post_report': instance.postReport,
-      'post': instance.post,
-      'community': instance.community,
-      'creator': instance.creator,
-      'post_creator': instance.postCreator,
-      'resolver': instance.resolver,
+      'post_report': instance.postReport?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'post_creator': instance.postCreator?.toJson(),
+      'resolver': instance.resolver?.toJson(),
     };
 
 _$_CommentView _$_$_CommentViewFromJson(Map<String, dynamic> json) {
@@ -223,16 +223,16 @@ _$_CommentView _$_$_CommentViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_CommentViewToJson(_$_CommentView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'comment': instance.comment,
-      'creator': instance.creator,
-      'recipient': instance.recipient,
-      'post': instance.post,
-      'community': instance.community,
-      'counts': instance.counts,
+      'comment': instance.comment?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'recipient': instance.recipient?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
+      'counts': instance.counts?.toJson(),
       'creator_banned_from_community': instance.creatorBannedFromCommunity,
       'subscribed': instance.subscribed,
       'saved': instance.saved,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
     };
 
 _$_CommentReportView _$_$_CommentReportViewFromJson(Map<String, dynamic> json) {
@@ -266,13 +266,13 @@ Map<String, dynamic> _$_$_CommentReportViewToJson(
         _$_CommentReportView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'comment_report': instance.commentReport,
-      'comment': instance.comment,
-      'post': instance.post,
-      'community': instance.community,
-      'creator': instance.creator,
-      'comment_creator': instance.commentCreator,
-      'resolver': instance.resolver,
+      'comment_report': instance.commentReport?.toJson(),
+      'comment': instance.comment?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'comment_creator': instance.commentCreator?.toJson(),
+      'resolver': instance.resolver?.toJson(),
     };
 
 _$_ModAddCommunityView _$_$_ModAddCommunityViewFromJson(
@@ -298,10 +298,10 @@ Map<String, dynamic> _$_$_ModAddCommunityViewToJson(
         _$_ModAddCommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_add_community': instance.modAddCommunity,
-      'moderator': instance.moderator,
-      'community': instance.community,
-      'modded_user': instance.moddedUser,
+      'mod_add_community': instance.modAddCommunity?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'community': instance.community?.toJson(),
+      'modded_user': instance.moddedUser?.toJson(),
     };
 
 _$_ModAddView _$_$_ModAddViewFromJson(Map<String, dynamic> json) {
@@ -321,9 +321,9 @@ _$_ModAddView _$_$_ModAddViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_ModAddViewToJson(_$_ModAddView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_add': instance.modAdd,
-      'moderator': instance.moderator,
-      'modded_user': instance.moddedUser,
+      'mod_add': instance.modAdd?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'modded_user': instance.moddedUser?.toJson(),
     };
 
 _$_ModBanFromCommunityView _$_$_ModBanFromCommunityViewFromJson(
@@ -349,10 +349,10 @@ Map<String, dynamic> _$_$_ModBanFromCommunityViewToJson(
         _$_ModBanFromCommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_ban_from_community': instance.modBanFromCommunity,
-      'moderator': instance.moderator,
-      'community': instance.community,
-      'banned_user': instance.bannedUser,
+      'mod_ban_from_community': instance.modBanFromCommunity?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'community': instance.community?.toJson(),
+      'banned_user': instance.bannedUser?.toJson(),
     };
 
 _$_ModBanView _$_$_ModBanViewFromJson(Map<String, dynamic> json) {
@@ -372,9 +372,9 @@ _$_ModBanView _$_$_ModBanViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_ModBanViewToJson(_$_ModBanView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_ban': instance.modBan,
-      'moderator': instance.moderator,
-      'banned_user': instance.bannedUser,
+      'mod_ban': instance.modBan?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'banned_user': instance.bannedUser?.toJson(),
     };
 
 _$_ModLockPostView _$_$_ModLockPostViewFromJson(Map<String, dynamic> json) {
@@ -397,10 +397,10 @@ _$_ModLockPostView _$_$_ModLockPostViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_ModLockPostViewToJson(_$_ModLockPostView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_lock_post': instance.modLockPost,
-      'moderator': instance.moderator,
-      'post': instance.post,
-      'community': instance.community,
+      'mod_lock_post': instance.modLockPost?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
     };
 
 _$_ModRemoveCommentView _$_$_ModRemoveCommentViewFromJson(
@@ -432,12 +432,12 @@ Map<String, dynamic> _$_$_ModRemoveCommentViewToJson(
         _$_ModRemoveCommentView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_remove_comment': instance.modRemoveComment,
-      'moderator': instance.moderator,
-      'comment': instance.comment,
-      'commenter': instance.commenter,
-      'post': instance.post,
-      'community': instance.community,
+      'mod_remove_comment': instance.modRemoveComment?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'comment': instance.comment?.toJson(),
+      'commenter': instance.commenter?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
     };
 
 _$_ModRemoveCommunityView _$_$_ModRemoveCommunityViewFromJson(
@@ -460,9 +460,9 @@ Map<String, dynamic> _$_$_ModRemoveCommunityViewToJson(
         _$_ModRemoveCommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_remove_community': instance.modRemoveCommunity,
-      'moderator': instance.moderator,
-      'community': instance.community,
+      'mod_remove_community': instance.modRemoveCommunity?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'community': instance.community?.toJson(),
     };
 
 _$_ModRemovePostView _$_$_ModRemovePostViewFromJson(Map<String, dynamic> json) {
@@ -487,10 +487,10 @@ Map<String, dynamic> _$_$_ModRemovePostViewToJson(
         _$_ModRemovePostView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_remove_post': instance.modRemovePost,
-      'moderator': instance.moderator,
-      'post': instance.post,
-      'community': instance.community,
+      'mod_remove_post': instance.modRemovePost?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
     };
 
 _$_ModStickyPostView _$_$_ModStickyPostViewFromJson(Map<String, dynamic> json) {
@@ -515,10 +515,10 @@ Map<String, dynamic> _$_$_ModStickyPostViewToJson(
         _$_ModStickyPostView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'mod_sticky_post': instance.modStickyPost,
-      'moderator': instance.moderator,
-      'post': instance.post,
-      'community': instance.community,
+      'mod_sticky_post': instance.modStickyPost?.toJson(),
+      'moderator': instance.moderator?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
     };
 
 _$_CommunityFollowerView _$_$_CommunityFollowerViewFromJson(
@@ -537,8 +537,8 @@ Map<String, dynamic> _$_$_CommunityFollowerViewToJson(
         _$_CommunityFollowerView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community': instance.community,
-      'follower': instance.follower,
+      'community': instance.community?.toJson(),
+      'follower': instance.follower?.toJson(),
     };
 
 _$_CommunityModeratorView _$_$_CommunityModeratorViewFromJson(
@@ -557,8 +557,8 @@ Map<String, dynamic> _$_$_CommunityModeratorViewToJson(
         _$_CommunityModeratorView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community': instance.community,
-      'moderator': instance.moderator,
+      'community': instance.community?.toJson(),
+      'moderator': instance.moderator?.toJson(),
     };
 
 _$_CommunityUserBanView _$_$_CommunityUserBanViewFromJson(
@@ -577,8 +577,8 @@ Map<String, dynamic> _$_$_CommunityUserBanViewToJson(
         _$_CommunityUserBanView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community': instance.community,
-      'user': instance.user,
+      'community': instance.community?.toJson(),
+      'user': instance.user?.toJson(),
     };
 
 _$_CommunityView _$_$_CommunityViewFromJson(Map<String, dynamic> json) {
@@ -602,9 +602,9 @@ _$_CommunityView _$_$_CommunityViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_CommunityViewToJson(_$_CommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'community': instance.community,
-      'creator': instance.creator,
-      'category': instance.category,
+      'community': instance.community?.toJson(),
+      'creator': instance.creator?.toJson(),
+      'category': instance.category?.toJson(),
       'subscribed': instance.subscribed,
-      'counts': instance.counts,
+      'counts': instance.counts?.toJson(),
     };

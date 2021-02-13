@@ -80,8 +80,8 @@ Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
     }
   }
 
-  writeNotNull('type_', instance.type);
-  writeNotNull('sort', instance.sort);
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
@@ -109,7 +109,7 @@ Map<String, dynamic> _$_$_CreatePostLikeToJson(_$_CreatePostLike instance) {
   }
 
   writeNotNull('post_id', instance.postId);
-  writeNotNull('score', instance.score);
+  writeNotNull('score', instance.score?.toJson());
   writeNotNull('auth', instance.auth);
   return val;
 }
