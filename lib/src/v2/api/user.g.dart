@@ -33,7 +33,7 @@ _$_Register _$_$_RegisterFromJson(Map<String, dynamic> json) {
     email: json['email'] as String,
     password: json['password'] as String,
     passwordVerify: json['password_verify'] as String,
-    showNsfw: json['show_nsfw'] as String,
+    showNsfw: json['show_nsfw'] as bool,
     captchaUuid: json['captcha_uuid'] as String,
     captchaAnswer: json['captcha_answer'] as String,
   );

@@ -39,7 +39,7 @@ abstract class Register implements _$Register, LemmyApiQuery<Jwt> {
     String email,
     @required String password,
     @required String passwordVerify,
-    @required String showNsfw,
+    @required bool showNsfw,
     String captchaUuid,
     String captchaAnswer,
   }) = _Register;

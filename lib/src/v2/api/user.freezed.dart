@@ -182,7 +182,7 @@ class _$RegisterTearOff {
       String email,
       @required String password,
       @required String passwordVerify,
-      @required String showNsfw,
+      @required bool showNsfw,
       String captchaUuid,
       String captchaAnswer}) {
     return _Register(
@@ -212,7 +212,7 @@ mixin _$Register {
   String get email;
   String get password;
   String get passwordVerify;
-  String get showNsfw;
+  bool get showNsfw;
   String get captchaUuid;
   String get captchaAnswer;
 
@@ -229,7 +229,7 @@ abstract class $RegisterCopyWith<$Res> {
       String email,
       String password,
       String passwordVerify,
-      String showNsfw,
+      bool showNsfw,
       String captchaUuid,
       String captchaAnswer});
 }
@@ -259,7 +259,7 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
           : passwordVerify as String,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as String,
+      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       captchaUuid:
           captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String,
       captchaAnswer: captchaAnswer == freezed
@@ -279,7 +279,7 @@ abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
       String email,
       String password,
       String passwordVerify,
-      String showNsfw,
+      bool showNsfw,
       String captchaUuid,
       String captchaAnswer});
 }
@@ -310,7 +310,7 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
           : passwordVerify as String,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as String,
+      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       captchaUuid:
           captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String,
       captchaAnswer: captchaAnswer == freezed
@@ -350,7 +350,7 @@ class _$_Register extends _Register {
   @override
   final String passwordVerify;
   @override
-  final String showNsfw;
+  final bool showNsfw;
   @override
   final String captchaUuid;
   @override
@@ -415,7 +415,7 @@ abstract class _Register extends Register {
       String email,
       @required String password,
       @required String passwordVerify,
-      @required String showNsfw,
+      @required bool showNsfw,
       String captchaUuid,
       String captchaAnswer}) = _$_Register;
 
@@ -430,7 +430,7 @@ abstract class _Register extends Register {
   @override
   String get passwordVerify;
   @override
-  String get showNsfw;
+  bool get showNsfw;
   @override
   String get captchaUuid;
   @override
