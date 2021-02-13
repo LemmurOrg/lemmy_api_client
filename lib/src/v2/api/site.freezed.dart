@@ -18,7 +18,7 @@ class _$ListCategoriesTearOff {
 
 // ignore: unused_element
   _ListCategories call() {
-    return _ListCategories();
+    return const _ListCategories();
   }
 
 // ignore: unused_element
@@ -76,7 +76,7 @@ class __$ListCategoriesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ListCategories extends _ListCategories {
-  _$_ListCategories() : super._();
+  const _$_ListCategories() : super._();
 
   factory _$_ListCategories.fromJson(Map<String, dynamic> json) =>
       _$_$_ListCategoriesFromJson(json);
@@ -101,8 +101,8 @@ class _$_ListCategories extends _ListCategories {
 }
 
 abstract class _ListCategories extends ListCategories {
-  _ListCategories._() : super._();
-  factory _ListCategories() = _$_ListCategories;
+  const _ListCategories._() : super._();
+  const factory _ListCategories() = _$_ListCategories;
 
   factory _ListCategories.fromJson(Map<String, dynamic> json) =
       _$_ListCategories.fromJson;
@@ -270,7 +270,7 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Search extends _Search {
-  _$_Search(
+  const _$_Search(
       {@required this.q,
       @required @JsonKey(name: 'type_') this.type,
       this.communityId,
@@ -357,8 +357,8 @@ class _$_Search extends _Search {
 }
 
 abstract class _Search extends Search {
-  _Search._() : super._();
-  factory _Search(
+  const _Search._() : super._();
+  const factory _Search(
       {@required String q,
       @required @JsonKey(name: 'type_') SearchType type,
       int communityId,
@@ -501,7 +501,7 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetModlog extends _GetModlog {
-  _$_GetModlog({this.modUserId, this.communityId, this.page, this.limit})
+  const _$_GetModlog({this.modUserId, this.communityId, this.page, this.limit})
       : super._();
 
   factory _$_GetModlog.fromJson(Map<String, dynamic> json) =>
@@ -556,9 +556,9 @@ class _$_GetModlog extends _GetModlog {
 }
 
 abstract class _GetModlog extends GetModlog {
-  _GetModlog._() : super._();
-  factory _GetModlog({int modUserId, int communityId, int page, int limit}) =
-      _$_GetModlog;
+  const _GetModlog._() : super._();
+  const factory _GetModlog(
+      {int modUserId, int communityId, int page, int limit}) = _$_GetModlog;
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
       _$_GetModlog.fromJson;
@@ -745,7 +745,7 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreateSite extends _CreateSite {
-  _$_CreateSite(
+  const _$_CreateSite(
       {@required this.name,
       this.description,
       this.icon,
@@ -835,8 +835,8 @@ class _$_CreateSite extends _CreateSite {
 }
 
 abstract class _CreateSite extends CreateSite {
-  _CreateSite._() : super._();
-  factory _CreateSite(
+  const _CreateSite._() : super._();
+  const factory _CreateSite(
       {@required String name,
       String description,
       String icon,
@@ -1036,7 +1036,7 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_EditSite extends _EditSite {
-  _$_EditSite(
+  const _$_EditSite(
       {@required this.name,
       this.description,
       this.icon,
@@ -1126,8 +1126,8 @@ class _$_EditSite extends _EditSite {
 }
 
 abstract class _EditSite extends EditSite {
-  _EditSite._() : super._();
-  factory _EditSite(
+  const _EditSite._() : super._();
+  const factory _EditSite(
       {@required String name,
       String description,
       String icon,
@@ -1248,7 +1248,7 @@ class __$GetSiteCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetSite extends _GetSite {
-  _$_GetSite({this.auth}) : super._();
+  const _$_GetSite({this.auth}) : super._();
 
   factory _$_GetSite.fromJson(Map<String, dynamic> json) =>
       _$_$_GetSiteFromJson(json);
@@ -1284,8 +1284,8 @@ class _$_GetSite extends _GetSite {
 }
 
 abstract class _GetSite extends GetSite {
-  _GetSite._() : super._();
-  factory _GetSite({String auth}) = _$_GetSite;
+  const _GetSite._() : super._();
+  const factory _GetSite({String auth}) = _$_GetSite;
 
   factory _GetSite.fromJson(Map<String, dynamic> json) = _$_GetSite.fromJson;
 
@@ -1394,7 +1394,7 @@ class __$TransferSiteCopyWithImpl<$Res> extends _$TransferSiteCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_TransferSite extends _TransferSite {
-  _$_TransferSite({@required this.userId, @required this.auth})
+  const _$_TransferSite({@required this.userId, @required this.auth})
       : assert(userId != null),
         assert(auth != null),
         super._();
@@ -1439,8 +1439,8 @@ class _$_TransferSite extends _TransferSite {
 }
 
 abstract class _TransferSite extends TransferSite {
-  _TransferSite._() : super._();
-  factory _TransferSite({@required int userId, @required String auth}) =
+  const _TransferSite._() : super._();
+  const factory _TransferSite({@required int userId, @required String auth}) =
       _$_TransferSite;
 
   factory _TransferSite.fromJson(Map<String, dynamic> json) =
@@ -1549,7 +1549,7 @@ class __$GetSiteConfigCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetSiteConfig extends _GetSiteConfig {
-  _$_GetSiteConfig({@required this.auth})
+  const _$_GetSiteConfig({@required this.auth})
       : assert(auth != null),
         super._();
 
@@ -1587,8 +1587,8 @@ class _$_GetSiteConfig extends _GetSiteConfig {
 }
 
 abstract class _GetSiteConfig extends GetSiteConfig {
-  _GetSiteConfig._() : super._();
-  factory _GetSiteConfig({@required String auth}) = _$_GetSiteConfig;
+  const _GetSiteConfig._() : super._();
+  const factory _GetSiteConfig({@required String auth}) = _$_GetSiteConfig;
 
   factory _GetSiteConfig.fromJson(Map<String, dynamic> json) =
       _$_GetSiteConfig.fromJson;
@@ -1702,7 +1702,7 @@ class __$SaveSiteConfigCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SaveSiteConfig extends _SaveSiteConfig {
-  _$_SaveSiteConfig({@required this.configHjson, @required this.auth})
+  const _$_SaveSiteConfig({@required this.configHjson, @required this.auth})
       : assert(configHjson != null),
         assert(auth != null),
         super._();
@@ -1748,8 +1748,8 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
 }
 
 abstract class _SaveSiteConfig extends SaveSiteConfig {
-  _SaveSiteConfig._() : super._();
-  factory _SaveSiteConfig(
+  const _SaveSiteConfig._() : super._();
+  const factory _SaveSiteConfig(
       {@required String configHjson,
       @required String auth}) = _$_SaveSiteConfig;
 

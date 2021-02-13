@@ -12,7 +12,7 @@ part 'community.g.dart';
 abstract class GetCommunity
     implements _$GetCommunity, LemmyApiQuery<FullCommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetCommunity({
+  const factory GetCommunity({
     int id,
     String name,
     String auth,
@@ -38,7 +38,7 @@ abstract class GetCommunity
 abstract class CreateCommunity
     implements _$CreateCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreateCommunity({
+  const factory CreateCommunity({
     @required String name,
     @required String title,
     String description,
@@ -69,7 +69,7 @@ abstract class CreateCommunity
 abstract class ListCommunities
     implements _$ListCommunities, LemmyApiQuery<List<CommunityView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory ListCommunities({
+  const factory ListCommunities({
     @required @JsonKey(name: 'type_') PostListingType type,
     @required SortType sort,
     int page,
@@ -99,7 +99,7 @@ abstract class ListCommunities
 abstract class BanFromCommunity
     implements _$BanFromCommunity, LemmyApiQuery<BannedCommunityUser> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory BanFromCommunity({
+  const factory BanFromCommunity({
     @required int communityId,
     @required int userId,
     @required bool ban,
@@ -131,7 +131,7 @@ abstract class AddModToCommunity
         _$AddModToCommunity,
         LemmyApiQuery<List<CommunityModeratorView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory AddModToCommunity({
+  const factory AddModToCommunity({
     @required int communityId,
     @required int userId,
     @required bool added,
@@ -160,7 +160,7 @@ abstract class AddModToCommunity
 abstract class EditCommunity
     implements _$EditCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory EditCommunity({
+  const factory EditCommunity({
     @required int communityId,
     @required String title,
     String description,
@@ -191,7 +191,7 @@ abstract class EditCommunity
 abstract class DeleteCommunity
     implements _$DeleteCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory DeleteCommunity({
+  const factory DeleteCommunity({
     @required int communityId,
     @required bool deleted,
     @required String auth,
@@ -217,7 +217,7 @@ abstract class DeleteCommunity
 abstract class RemoveCommunity
     implements _$RemoveCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory RemoveCommunity({
+  const factory RemoveCommunity({
     @required int communityId,
     @required bool removed,
     String reason,
@@ -245,7 +245,7 @@ abstract class RemoveCommunity
 abstract class FollowCommunity
     implements _$FollowCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory FollowCommunity({
+  const factory FollowCommunity({
     @required int communityId,
     @required bool follow,
     @required String auth,
@@ -273,7 +273,7 @@ abstract class GetFollowedCommunities
         _$GetFollowedCommunities,
         LemmyApiQuery<List<CommunityFollowerView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetFollowedCommunities({
+  const factory GetFollowedCommunities({
     @required String auth,
   }) = _GetFollowedCommunities;
 
@@ -299,7 +299,7 @@ abstract class GetFollowedCommunities
 abstract class TransferCommunity
     implements _$TransferCommunity, LemmyApiQuery<FullCommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory TransferCommunity({
+  const factory TransferCommunity({
     @required int communityId,
     @required int userId,
     @required String auth,

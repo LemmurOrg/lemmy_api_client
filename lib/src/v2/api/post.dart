@@ -11,7 +11,7 @@ part 'post.g.dart';
 @freezed
 abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetPost({
+  const factory GetPost({
     @required int id,
     String auth,
   }) = _GetPost;
@@ -34,7 +34,7 @@ abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPostView> {
 @freezed
 abstract class CreatePost implements _$CreatePost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreatePost({
+  const factory CreatePost({
     @required String name,
     String url,
     String body,
@@ -61,7 +61,7 @@ abstract class CreatePost implements _$CreatePost, LemmyApiQuery<PostView> {
 @freezed
 abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetPosts({
+  const factory GetPosts({
     @required @JsonKey(name: 'type_') PostListingType type,
     @required SortType sort,
     int page,
@@ -90,7 +90,7 @@ abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
 abstract class CreatePostLike
     implements _$CreatePostLike, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreatePostLike({
+  const factory CreatePostLike({
     @required int postId,
     @required VoteType score,
     @required String auth,
@@ -114,7 +114,7 @@ abstract class CreatePostLike
 @freezed
 abstract class EditPost implements _$EditPost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory EditPost({
+  const factory EditPost({
     @required int postId,
     @required String name,
     String url,
@@ -141,7 +141,7 @@ abstract class EditPost implements _$EditPost, LemmyApiQuery<PostView> {
 @freezed
 abstract class DeletePost implements _$DeletePost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory DeletePost({
+  const factory DeletePost({
     @required int postId,
     @required bool deleted,
     @required String auth,
@@ -165,7 +165,7 @@ abstract class DeletePost implements _$DeletePost, LemmyApiQuery<PostView> {
 @freezed
 abstract class RemovePost implements _$RemovePost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory RemovePost({
+  const factory RemovePost({
     @required int postId,
     @required bool removed,
     String reason,
@@ -190,7 +190,7 @@ abstract class RemovePost implements _$RemovePost, LemmyApiQuery<PostView> {
 @freezed
 abstract class LockPost implements _$LockPost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory LockPost({
+  const factory LockPost({
     @required int postId,
     @required bool locked,
     @required String auth,
@@ -214,7 +214,7 @@ abstract class LockPost implements _$LockPost, LemmyApiQuery<PostView> {
 @freezed
 abstract class StickyPost implements _$StickyPost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory StickyPost({
+  const factory StickyPost({
     @required int postId,
     @required bool stickied,
     @required String auth,
@@ -238,7 +238,7 @@ abstract class StickyPost implements _$StickyPost, LemmyApiQuery<PostView> {
 @freezed
 abstract class SavePost implements _$SavePost, LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory SavePost({
+  const factory SavePost({
     @required int postId,
     @required bool save,
     @required String auth,
@@ -264,7 +264,7 @@ abstract class SavePost implements _$SavePost, LemmyApiQuery<PostView> {
 abstract class CreatePostReport
     implements _$CreatePostReport, LemmyApiQuery<bool> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreatePostReport({
+  const factory CreatePostReport({
     @required int postId,
     @required String reason,
     @required String auth,
@@ -289,7 +289,7 @@ abstract class CreatePostReport
 abstract class ResolvePostReport
     implements _$ResolvePostReport, LemmyApiQuery<ResolvePostReportResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory ResolvePostReport({
+  const factory ResolvePostReport({
     @required int reportId,
     @required bool resolved,
     @required String auth,
@@ -315,7 +315,7 @@ abstract class ResolvePostReport
 abstract class ListPostReports
     implements _$ListPostReports, LemmyApiQuery<List<PostReportView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory ListPostReports({
+  const factory ListPostReports({
     int page,
     int limit,
     int community,
