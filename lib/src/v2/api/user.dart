@@ -18,7 +18,7 @@ abstract class Login implements _$Login, LemmyApiQuery<Jwt> {
     @required String password,
   }) = _Login;
 
-  Login._();
+  const Login._();
   factory Login.fromJson(Map<String, dynamic> json) => _$LoginFromJson(json);
 
   @override
@@ -44,7 +44,7 @@ abstract class Register implements _$Register, LemmyApiQuery<Jwt> {
     String captchaAnswer,
   }) = _Register;
 
-  Register._();
+  const Register._();
   factory Register.fromJson(Map<String, dynamic> json) =>
       _$RegisterFromJson(json);
 
@@ -63,7 +63,7 @@ abstract class GetCaptcha implements _$GetCaptcha, LemmyApiQuery<Captcha> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetCaptcha() = _GetCaptcha;
 
-  GetCaptcha._();
+  const GetCaptcha._();
   factory GetCaptcha.fromJson(Map<String, dynamic> json) =>
       _$GetCaptchaFromJson(json);
 
@@ -106,7 +106,7 @@ abstract class SaveUserSettings
     @required String auth,
   }) = _SaveUserSettings;
 
-  SaveUserSettings._();
+  const SaveUserSettings._();
   factory SaveUserSettings.fromJson(Map<String, dynamic> json) =>
       _$SaveUserSettingsFromJson(json);
 
@@ -135,7 +135,7 @@ abstract class GetUserDetails
     String auth,
   }) = _GetUserDetails;
 
-  GetUserDetails._();
+  const GetUserDetails._();
   factory GetUserDetails.fromJson(Map<String, dynamic> json) =>
       _$GetUserDetailsFromJson(json);
 
@@ -157,7 +157,7 @@ abstract class MarkAllAsRead implements _$MarkAllAsRead, LemmyApiQuery<Jwt> {
     @required String auth,
   }) = _MarkAllAsRead;
 
-  MarkAllAsRead._();
+  const MarkAllAsRead._();
   factory MarkAllAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkAllAsReadFromJson(json);
 
@@ -181,7 +181,7 @@ abstract class AddAdmin
     @required String auth,
   }) = _AddAdmin;
 
-  AddAdmin._();
+  const AddAdmin._();
   factory AddAdmin.fromJson(Map<String, dynamic> json) =>
       _$AddAdminFromJson(json);
 
@@ -208,7 +208,7 @@ abstract class BanUser implements _$BanUser, LemmyApiQuery<BannedUser> {
     @required String auth,
   }) = _BanUser;
 
-  BanUser._();
+  const BanUser._();
   factory BanUser.fromJson(Map<String, dynamic> json) =>
       _$BanUserFromJson(json);
 
@@ -235,7 +235,7 @@ abstract class GetReplies
     @required String auth,
   }) = _GetReplies;
 
-  GetReplies._();
+  const GetReplies._();
   factory GetReplies.fromJson(Map<String, dynamic> json) =>
       _$GetRepliesFromJson(json);
 
@@ -262,7 +262,7 @@ abstract class GetUserMentions
     @required String auth,
   }) = _GetUserMentions;
 
-  GetUserMentions._();
+  const GetUserMentions._();
   factory GetUserMentions.fromJson(Map<String, dynamic> json) =>
       _$GetUserMentionsFromJson(json);
 
@@ -289,7 +289,7 @@ abstract class MarkUserMentionAsRead
     @required String auth,
   }) = _MarkUserMentionAsRead;
 
-  MarkUserMentionAsRead._();
+  const MarkUserMentionAsRead._();
   factory MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkUserMentionAsReadFromJson(json);
 
@@ -312,7 +312,7 @@ abstract class DeleteAccount implements _$DeleteAccount, LemmyApiQuery<Jwt> {
     @required String auth,
   }) = _DeleteAccount;
 
-  DeleteAccount._();
+  const DeleteAccount._();
   factory DeleteAccount.fromJson(Map<String, dynamic> json) =>
       _$DeleteAccountFromJson(json);
 
@@ -333,7 +333,7 @@ abstract class PasswordReset implements _$PasswordReset, LemmyApiQuery<Null> {
     @required String email,
   }) = _PasswordReset;
 
-  PasswordReset._();
+  const PasswordReset._();
   factory PasswordReset.fromJson(Map<String, dynamic> json) =>
       _$PasswordResetFromJson(json);
 
@@ -356,7 +356,7 @@ abstract class PasswordChange implements _$PasswordChange, LemmyApiQuery<Jwt> {
     @required String passwordVerify,
   }) = _PasswordChange;
 
-  PasswordChange._();
+  const PasswordChange._();
   factory PasswordChange.fromJson(Map<String, dynamic> json) =>
       _$PasswordChangeFromJson(json);
 
@@ -380,7 +380,7 @@ abstract class CreatePrivateMessage
     @required String auth,
   }) = _CreatePrivateMessage;
 
-  CreatePrivateMessage._();
+  const CreatePrivateMessage._();
   factory CreatePrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$CreatePrivateMessageFromJson(json);
 
@@ -405,7 +405,7 @@ abstract class EditPrivateMessage
     @required String auth,
   }) = _EditPrivateMessage;
 
-  EditPrivateMessage._();
+  const EditPrivateMessage._();
   factory EditPrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$EditPrivateMessageFromJson(json);
 
@@ -430,7 +430,7 @@ abstract class DeletePrivateMessage
     @required String auth,
   }) = _DeletePrivateMessage;
 
-  DeletePrivateMessage._();
+  const DeletePrivateMessage._();
   factory DeletePrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$DeletePrivateMessageFromJson(json);
 
@@ -455,7 +455,7 @@ abstract class MarkPrivateMessageAsRead
     @required String auth,
   }) = _MarkPrivateMessageAsRead;
 
-  MarkPrivateMessageAsRead._();
+  const MarkPrivateMessageAsRead._();
   factory MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkPrivateMessageAsReadFromJson(json);
 
@@ -481,7 +481,7 @@ abstract class GetPrivateMessages
     @required String auth,
   }) = _GetPrivateMessages;
 
-  GetPrivateMessages._();
+  const GetPrivateMessages._();
   factory GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
       _$GetPrivateMessagesFromJson(json);
 
@@ -508,7 +508,7 @@ abstract class GetReportCount
     @required String auth,
   }) = _GetReportCount;
 
-  GetReportCount._();
+  const GetReportCount._();
   factory GetReportCount.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountFromJson(json);
 

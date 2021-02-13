@@ -16,7 +16,7 @@ abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPostView> {
     String auth,
   }) = _GetPost;
 
-  GetPost._();
+  const GetPost._();
   factory GetPost.fromJson(Map<String, dynamic> json) =>
       _$GetPostFromJson(json);
 
@@ -43,7 +43,7 @@ abstract class CreatePost implements _$CreatePost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _CreatePost;
 
-  CreatePost._();
+  const CreatePost._();
   factory CreatePost.fromJson(Map<String, dynamic> json) =>
       _$CreatePostFromJson(json);
 
@@ -71,7 +71,7 @@ abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
     String auth,
   }) = _GetPosts;
 
-  GetPosts._();
+  const GetPosts._();
   factory GetPosts.fromJson(Map<String, dynamic> json) =>
       _$GetPostsFromJson(json);
 
@@ -96,7 +96,7 @@ abstract class CreatePostLike
     @required String auth,
   }) = _CreatePostLike;
 
-  CreatePostLike._();
+  const CreatePostLike._();
   factory CreatePostLike.fromJson(Map<String, dynamic> json) =>
       _$CreatePostLikeFromJson(json);
 
@@ -123,7 +123,7 @@ abstract class EditPost implements _$EditPost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _EditPost;
 
-  EditPost._();
+  const EditPost._();
   factory EditPost.fromJson(Map<String, dynamic> json) =>
       _$EditPostFromJson(json);
 
@@ -147,7 +147,7 @@ abstract class DeletePost implements _$DeletePost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _DeletePost;
 
-  DeletePost._();
+  const DeletePost._();
   factory DeletePost.fromJson(Map<String, dynamic> json) =>
       _$DeletePostFromJson(json);
 
@@ -172,7 +172,7 @@ abstract class RemovePost implements _$RemovePost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _RemovePost;
 
-  RemovePost._();
+  const RemovePost._();
   factory RemovePost.fromJson(Map<String, dynamic> json) =>
       _$RemovePostFromJson(json);
 
@@ -196,7 +196,7 @@ abstract class LockPost implements _$LockPost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _LockPost;
 
-  LockPost._();
+  const LockPost._();
   factory LockPost.fromJson(Map<String, dynamic> json) =>
       _$LockPostFromJson(json);
 
@@ -220,7 +220,7 @@ abstract class StickyPost implements _$StickyPost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _StickyPost;
 
-  StickyPost._();
+  const StickyPost._();
   factory StickyPost.fromJson(Map<String, dynamic> json) =>
       _$StickyPostFromJson(json);
 
@@ -244,7 +244,7 @@ abstract class SavePost implements _$SavePost, LemmyApiQuery<PostView> {
     @required String auth,
   }) = _SavePost;
 
-  SavePost._();
+  const SavePost._();
   factory SavePost.fromJson(Map<String, dynamic> json) =>
       _$SavePostFromJson(json);
 
@@ -270,7 +270,7 @@ abstract class CreatePostReport
     @required String auth,
   }) = _CreatePostReport;
 
-  CreatePostReport._();
+  const CreatePostReport._();
   factory CreatePostReport.fromJson(Map<String, dynamic> json) =>
       _$CreatePostReportFromJson(json);
 
@@ -295,7 +295,7 @@ abstract class ResolvePostReport
     @required String auth,
   }) = _ResolvePostReport;
 
-  ResolvePostReport._();
+  const ResolvePostReport._();
   factory ResolvePostReport.fromJson(Map<String, dynamic> json) =>
       _$ResolvePostReportFromJson(json);
 
@@ -322,7 +322,7 @@ abstract class ListPostReports
     @required String auth,
   }) = _ListPostReports;
 
-  ListPostReports._();
+  const ListPostReports._();
   factory ListPostReports.fromJson(Map<String, dynamic> json) =>
       _$ListPostReportsFromJson(json);
 

@@ -15,7 +15,7 @@ abstract class ListCategories
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCategories() = _ListCategories;
 
-  ListCategories._();
+  const ListCategories._();
 
   factory ListCategories.fromJson(Map<String, dynamic> json) =>
       _$ListCategoriesFromJson(json);
@@ -45,7 +45,7 @@ abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
     String auth,
   }) = _Search;
 
-  Search._();
+  const Search._();
 
   factory Search.fromJson(Map<String, dynamic> json) => _$SearchFromJson(json);
 
@@ -70,7 +70,7 @@ abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
     int limit,
   }) = _GetModlog;
 
-  GetModlog._();
+  const GetModlog._();
 
   factory GetModlog.fromJson(Map<String, dynamic> json) =>
       _$GetModlogFromJson(json);
@@ -99,7 +99,7 @@ abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
     @required String auth,
   }) = _CreateSite;
 
-  CreateSite._();
+  const CreateSite._();
 
   factory CreateSite.fromJson(Map<String, dynamic> json) =>
       _$CreateSiteFromJson(json);
@@ -129,7 +129,7 @@ abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
     @required String auth,
   }) = _EditSite;
 
-  EditSite._();
+  const EditSite._();
 
   factory EditSite.fromJson(Map<String, dynamic> json) =>
       _$EditSiteFromJson(json);
@@ -152,7 +152,7 @@ abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
     String auth,
   }) = _GetSite;
 
-  GetSite._();
+  const GetSite._();
 
   factory GetSite.fromJson(Map<String, dynamic> json) =>
       _$GetSiteFromJson(json);
@@ -177,7 +177,7 @@ abstract class TransferSite
     @required String auth,
   }) = _TransferSite;
 
-  TransferSite._();
+  const TransferSite._();
 
   factory TransferSite.fromJson(Map<String, dynamic> json) =>
       _$TransferSiteFromJson(json);
@@ -200,7 +200,7 @@ abstract class GetSiteConfig implements _$GetSiteConfig, LemmyApiQuery<String> {
     @required String auth,
   }) = _GetSiteConfig;
 
-  GetSiteConfig._();
+  const GetSiteConfig._();
 
   factory GetSiteConfig.fromJson(Map<String, dynamic> json) =>
       _$GetSiteConfigFromJson(json);
@@ -225,7 +225,7 @@ abstract class SaveSiteConfig
     @required String auth,
   }) = _SaveSiteConfig;
 
-  SaveSiteConfig._();
+  const SaveSiteConfig._();
 
   factory SaveSiteConfig.fromJson(Map<String, dynamic> json) =>
       _$SaveSiteConfigFromJson(json);

@@ -18,7 +18,7 @@ abstract class GetCommunity
     String auth,
   }) = _GetCommunity;
 
-  GetCommunity._();
+  const GetCommunity._();
 
   factory GetCommunity.fromJson(Map<String, dynamic> json) =>
       _$GetCommunityFromJson(json);
@@ -49,7 +49,7 @@ abstract class CreateCommunity
     @required String auth,
   }) = _CreateCommunity;
 
-  CreateCommunity._();
+  const CreateCommunity._();
 
   factory CreateCommunity.fromJson(Map<String, dynamic> json) =>
       _$CreateCommunityFromJson(json);
@@ -77,7 +77,7 @@ abstract class ListCommunities
     String auth,
   }) = _ListCommunities;
 
-  ListCommunities._();
+  const ListCommunities._();
 
   factory ListCommunities.fromJson(Map<String, dynamic> json) =>
       _$ListCommunitiesFromJson(json);
@@ -109,7 +109,7 @@ abstract class BanFromCommunity
     @required String auth,
   }) = _BanFromCommunity;
 
-  BanFromCommunity._();
+  const BanFromCommunity._();
 
   factory BanFromCommunity.fromJson(Map<String, dynamic> json) =>
       _$BanFromCommunityFromJson(json);
@@ -138,7 +138,7 @@ abstract class AddModToCommunity
     @required String auth,
   }) = _AddModToCommunity;
 
-  AddModToCommunity._();
+  const AddModToCommunity._();
 
   factory AddModToCommunity.fromJson(Map<String, dynamic> json) =>
       _$AddModToCommunityFromJson(json);
@@ -171,7 +171,7 @@ abstract class EditCommunity
     @required String auth,
   }) = _EditCommunity;
 
-  EditCommunity._();
+  const EditCommunity._();
 
   factory EditCommunity.fromJson(Map<String, dynamic> json) =>
       _$EditCommunityFromJson(json);
@@ -197,7 +197,7 @@ abstract class DeleteCommunity
     @required String auth,
   }) = _DeleteCommunity;
 
-  DeleteCommunity._();
+  const DeleteCommunity._();
 
   factory DeleteCommunity.fromJson(Map<String, dynamic> json) =>
       _$DeleteCommunityFromJson(json);
@@ -225,7 +225,7 @@ abstract class RemoveCommunity
     @required String auth,
   }) = _RemoveCommunity;
 
-  RemoveCommunity._();
+  const RemoveCommunity._();
 
   factory RemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$RemoveCommunityFromJson(json);
@@ -251,7 +251,7 @@ abstract class FollowCommunity
     @required String auth,
   }) = _FollowCommunity;
 
-  FollowCommunity._();
+  const FollowCommunity._();
 
   factory FollowCommunity.fromJson(Map<String, dynamic> json) =>
       _$FollowCommunityFromJson(json);
@@ -277,7 +277,7 @@ abstract class GetFollowedCommunities
     @required String auth,
   }) = _GetFollowedCommunities;
 
-  GetFollowedCommunities._();
+  const GetFollowedCommunities._();
 
   factory GetFollowedCommunities.fromJson(Map<String, dynamic> json) =>
       _$GetFollowedCommunitiesFromJson(json);
@@ -305,7 +305,7 @@ abstract class TransferCommunity
     @required String auth,
   }) = _TransferCommunity;
 
-  TransferCommunity._();
+  const TransferCommunity._();
 
   factory TransferCommunity.fromJson(Map<String, dynamic> json) =>
       _$TransferCommunityFromJson(json);

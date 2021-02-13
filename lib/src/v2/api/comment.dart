@@ -20,7 +20,7 @@ abstract class CreateComment
     @required String auth,
   }) = _CreateComment;
 
-  CreateComment._();
+  const CreateComment._();
   factory CreateComment.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentFromJson(json);
 
@@ -46,7 +46,7 @@ abstract class EditComment
     @required String auth,
   }) = _EditComment;
 
-  EditComment._();
+  const EditComment._();
   factory EditComment.fromJson(Map<String, dynamic> json) =>
       _$EditCommentFromJson(json);
 
@@ -71,7 +71,7 @@ abstract class DeleteComment
     @required String auth,
   }) = _DeleteComment;
 
-  DeleteComment._();
+  const DeleteComment._();
   factory DeleteComment.fromJson(Map<String, dynamic> json) =>
       _$DeleteCommentFromJson(json);
 
@@ -97,7 +97,7 @@ abstract class RemoveComment
     @required String auth,
   }) = _RemoveComment;
 
-  RemoveComment._();
+  const RemoveComment._();
   factory RemoveComment.fromJson(Map<String, dynamic> json) =>
       _$RemoveCommentFromJson(json);
 
@@ -122,7 +122,7 @@ abstract class MarkCommentAsRead
     @required String auth,
   }) = _MarkCommentAsRead;
 
-  MarkCommentAsRead._();
+  const MarkCommentAsRead._();
   factory MarkCommentAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkCommentAsReadFromJson(json);
 
@@ -147,7 +147,7 @@ abstract class SaveComment
     @required String auth,
   }) = _SaveComment;
 
-  SaveComment._();
+  const SaveComment._();
   factory SaveComment.fromJson(Map<String, dynamic> json) =>
       _$SaveCommentFromJson(json);
 
@@ -172,7 +172,7 @@ abstract class CreateCommentLike
     @required String auth,
   }) = _CreateCommentLike;
 
-  CreateCommentLike._();
+  const CreateCommentLike._();
   factory CreateCommentLike.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentLikeFromJson(json);
 
@@ -201,7 +201,7 @@ abstract class GetComments
     String auth,
   }) = _GetComments;
 
-  GetComments._();
+  const GetComments._();
   factory GetComments.fromJson(Map<String, dynamic> json) =>
       _$GetCommentsFromJson(json);
 
@@ -227,7 +227,7 @@ abstract class CreateCommentReport
     @required String auth,
   }) = _CreateCommentReport;
 
-  CreateCommentReport._();
+  const CreateCommentReport._();
   factory CreateCommentReport.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentReportFromJson(json);
 
@@ -254,7 +254,7 @@ abstract class ResolveCommentReport
     @required String auth,
   }) = _ResolveCommentReport;
 
-  ResolveCommentReport._();
+  const ResolveCommentReport._();
   factory ResolveCommentReport.fromJson(Map<String, dynamic> json) =>
       _$ResolveCommentReportFromJson(json);
 
@@ -281,7 +281,7 @@ abstract class ListCommentReports
     @required String auth,
   }) = _ListCommentReports;
 
-  ListCommentReports._();
+  const ListCommentReports._();
   factory ListCommentReports.fromJson(Map<String, dynamic> json) =>
       _$ListCommentReportsFromJson(json);
 
