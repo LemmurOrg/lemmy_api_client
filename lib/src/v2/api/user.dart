@@ -228,7 +228,7 @@ abstract class GetReplies
     implements _$GetReplies, LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   factory GetReplies({
-    @required String sort,
+    @required SortType sort,
     int page,
     int limit,
     @required bool unreadOnly,
