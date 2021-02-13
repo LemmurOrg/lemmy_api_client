@@ -1,3 +1,4 @@
+import '../../enums.dart';
 import '../../v1/models/jwt.dart';
 import '../models/api.dart';
 import '../models/source.dart';
@@ -8,117 +9,196 @@ import 'post.dart';
 import 'site.dart';
 import 'user.dart';
 
-// ignore_for_file: missing_required_param
+// You might think, oh wow that is pretty stupid! To what I say: Yes!
+// Trust me, I tried, dart is such a constraining language
 
 final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
-  'CreateComment': (json) =>
-      WsEventCreateComment(CreateComment().responseFactory(json)),
-  'EditComment': (json) =>
-      WsEventEditComment(EditComment().responseFactory(json)),
-  'DeleteComment': (json) =>
-      WsEventDeleteComment(DeleteComment().responseFactory(json)),
-  'RemoveComment': (json) =>
-      WsEventRemoveComment(RemoveComment().responseFactory(json)),
-  'MarkCommentAsRead': (json) =>
-      WsEventMarkCommentAsRead(MarkCommentAsRead().responseFactory(json)),
-  'SaveComment': (json) =>
-      WsEventSaveComment(SaveComment().responseFactory(json)),
-  'CreateCommentLike': (json) =>
-      WsEventCreateCommentLike(CreateCommentLike().responseFactory(json)),
-  'GetComments': (json) =>
-      WsEventGetComments(GetComments().responseFactory(json)),
-  'CreateCommentReport': (json) =>
-      WsEventCreateCommentReport(CreateCommentReport().responseFactory(json)),
-  'ResolveCommentReport': (json) =>
-      WsEventResolveCommentReport(ResolveCommentReport().responseFactory(json)),
-  'ListCommentReports': (json) =>
-      WsEventListCommentReports(ListCommentReports().responseFactory(json)),
+  'CreateComment': (json) => WsEventCreateComment(
+      const CreateComment(content: '', postId: 0, auth: '')
+          .responseFactory(json)),
+  'EditComment': (json) => WsEventEditComment(
+      const EditComment(content: '', commentId: 0, auth: '')
+          .responseFactory(json)),
+  'DeleteComment': (json) => WsEventDeleteComment(
+      const DeleteComment(commentId: 0, deleted: true, auth: '')
+          .responseFactory(json)),
+  'RemoveComment': (json) => WsEventRemoveComment(
+      const RemoveComment(commentId: 0, removed: true, auth: '')
+          .responseFactory(json)),
+  'MarkCommentAsRead': (json) => WsEventMarkCommentAsRead(
+      const MarkCommentAsRead(commentId: 0, read: true, auth: '')
+          .responseFactory(json)),
+  'SaveComment': (json) => WsEventSaveComment(
+      const SaveComment(commentId: 0, save: true, auth: '')
+          .responseFactory(json)),
+  'CreateCommentLike': (json) => WsEventCreateCommentLike(
+      const CreateCommentLike(commentId: 0, score: VoteType.none, auth: '')
+          .responseFactory(json)),
+  'GetComments': (json) => WsEventGetComments(
+      const GetComments(type: CommentListingType.all, sort: SortType.hot)
+          .responseFactory(json)),
+  'CreateCommentReport': (json) => WsEventCreateCommentReport(
+      const CreateCommentReport(commentId: 0, reason: '', auth: '')
+          .responseFactory(json)),
+  'ResolveCommentReport': (json) => WsEventResolveCommentReport(
+      const ResolveCommentReport(reportId: 0, resolved: true, auth: '')
+          .responseFactory(json)),
+  'ListCommentReports': (json) => WsEventListCommentReports(
+      const ListCommentReports(auth: '').responseFactory(json)),
   'GetCommunity': (json) =>
-      WsEventGetCommunity(GetCommunity().responseFactory(json)),
-  'CreateCommunity': (json) =>
-      WsEventCreateCommunity(CreateCommunity().responseFactory(json)),
-  'ListCommunities': (json) =>
-      WsEventListCommunities(ListCommunities().responseFactory(json)),
-  'BanFromCommunity': (json) =>
-      WsEventBanFromCommunity(BanFromCommunity().responseFactory(json)),
-  'AddModToCommunity': (json) =>
-      WsEventAddModToCommunity(AddModToCommunity().responseFactory(json)),
-  'EditCommunity': (json) =>
-      WsEventEditCommunity(EditCommunity().responseFactory(json)),
-  'DeleteCommunity': (json) =>
-      WsEventDeleteCommunity(DeleteCommunity().responseFactory(json)),
-  'RemoveCommunity': (json) =>
-      WsEventRemoveCommunity(RemoveCommunity().responseFactory(json)),
-  'FollowCommunity': (json) =>
-      WsEventFollowCommunity(FollowCommunity().responseFactory(json)),
+      WsEventGetCommunity(const GetCommunity().responseFactory(json)),
+  'CreateCommunity': (json) => WsEventCreateCommunity(const CreateCommunity(
+          name: '', title: '', categoryId: 0, nsfw: true, auth: '')
+      .responseFactory(json)),
+  'ListCommunities': (json) => WsEventListCommunities(
+      const ListCommunities(type: PostListingType.all, sort: SortType.hot)
+          .responseFactory(json)),
+  'BanFromCommunity': (json) => WsEventBanFromCommunity(const BanFromCommunity(
+          communityId: 0, userId: 0, ban: true, removeData: true, auth: '')
+      .responseFactory(json)),
+  'AddModToCommunity': (json) => WsEventAddModToCommunity(
+      const AddModToCommunity(communityId: 0, userId: 0, added: true, auth: '')
+          .responseFactory(json)),
+  'EditCommunity': (json) => WsEventEditCommunity(const EditCommunity(
+          communityId: 0, title: '', categoryId: 0, nsfw: true, auth: '')
+      .responseFactory(json)),
+  'DeleteCommunity': (json) => WsEventDeleteCommunity(
+      const DeleteCommunity(communityId: 0, deleted: true, auth: '')
+          .responseFactory(json)),
+  'RemoveCommunity': (json) => WsEventRemoveCommunity(
+      const RemoveCommunity(communityId: 0, removed: true, auth: '')
+          .responseFactory(json)),
+  'FollowCommunity': (json) => WsEventFollowCommunity(
+      const FollowCommunity(communityId: 0, follow: true, auth: '')
+          .responseFactory(json)),
   'GetFollowedCommunities': (json) => WsEventGetFollowedCommunities(
-      GetFollowedCommunities().responseFactory(json)),
-  'TransferCommunity': (json) =>
-      WsEventTransferCommunity(TransferCommunity().responseFactory(json)),
-  'GetPost': (json) => WsEventGetPost(GetPost().responseFactory(json)),
-  'CreatePost': (json) => WsEventCreatePost(CreatePost().responseFactory(json)),
-  'GetPosts': (json) => WsEventGetPosts(GetPosts().responseFactory(json)),
-  'CreatePostLike': (json) =>
-      WsEventCreatePostLike(CreatePostLike().responseFactory(json)),
-  'EditPost': (json) => WsEventEditPost(EditPost().responseFactory(json)),
-  'DeletePost': (json) => WsEventDeletePost(DeletePost().responseFactory(json)),
-  'RemovePost': (json) => WsEventRemovePost(RemovePost().responseFactory(json)),
-  'LockPost': (json) => WsEventLockPost(LockPost().responseFactory(json)),
-  'StickyPost': (json) => WsEventStickyPost(StickyPost().responseFactory(json)),
-  'SavePost': (json) => WsEventSavePost(SavePost().responseFactory(json)),
-  'CreatePostReport': (json) =>
-      WsEventCreatePostReport(CreatePostReport().responseFactory(json)),
-  'ResolvePostReport': (json) =>
-      WsEventResolvePostReport(ResolvePostReport().responseFactory(json)),
-  'ListPostReports': (json) =>
-      WsEventListPostReports(ListPostReports().responseFactory(json)),
+      const GetFollowedCommunities(auth: '').responseFactory(json)),
+  'TransferCommunity': (json) => WsEventTransferCommunity(
+      const TransferCommunity(communityId: 0, userId: 0, auth: '')
+          .responseFactory(json)),
+  'GetPost': (json) =>
+      WsEventGetPost(const GetPost(id: 0).responseFactory(json)),
+  'CreatePost': (json) => WsEventCreatePost(
+      const CreatePost(name: '', nsfw: true, communityId: 0, auth: '')
+          .responseFactory(json)),
+  'GetPosts': (json) => WsEventGetPosts(
+      const GetPosts(type: PostListingType.all, sort: SortType.hot)
+          .responseFactory(json)),
+  'CreatePostLike': (json) => WsEventCreatePostLike(
+      const CreatePostLike(postId: 0, score: VoteType.none, auth: '')
+          .responseFactory(json)),
+  'EditPost': (json) => WsEventEditPost(
+      const EditPost(postId: 0, name: '', nsfw: true, auth: '')
+          .responseFactory(json)),
+  'DeletePost': (json) => WsEventDeletePost(
+      const DeletePost(postId: 0, deleted: true, auth: '')
+          .responseFactory(json)),
+  'RemovePost': (json) => WsEventRemovePost(
+      const RemovePost(postId: 0, removed: true, auth: '')
+          .responseFactory(json)),
+  'LockPost': (json) => WsEventLockPost(
+      const LockPost(postId: 0, locked: true, auth: '').responseFactory(json)),
+  'StickyPost': (json) => WsEventStickyPost(
+      const StickyPost(postId: 0, stickied: true, auth: '')
+          .responseFactory(json)),
+  'SavePost': (json) => WsEventSavePost(
+      const SavePost(postId: 0, save: true, auth: '').responseFactory(json)),
+  'CreatePostReport': (json) => WsEventCreatePostReport(
+      const CreatePostReport(postId: 0, reason: '', auth: '')
+          .responseFactory(json)),
+  'ResolvePostReport': (json) => WsEventResolvePostReport(
+      const ResolvePostReport(reportId: 0, resolved: true, auth: '')
+          .responseFactory(json)),
+  'ListPostReports': (json) => WsEventListPostReports(
+      const ListPostReports(auth: '').responseFactory(json)),
   'ListCategories': (json) =>
-      WsEventListCategories(ListCategories().responseFactory(json)),
-  'Search': (json) => WsEventSearch(Search().responseFactory(json)),
-  'GetModlog': (json) => WsEventGetModlog(GetModlog().responseFactory(json)),
-  'CreateSite': (json) => WsEventCreateSite(CreateSite().responseFactory(json)),
-  'EditSite': (json) => WsEventEditSite(EditSite().responseFactory(json)),
-  'GetSite': (json) => WsEventGetSite(GetSite().responseFactory(json)),
-  'TransferSite': (json) =>
-      WsEventTransferSite(TransferSite().responseFactory(json)),
+      WsEventListCategories(const ListCategories().responseFactory(json)),
+  'Search': (json) => WsEventSearch(
+      const Search(q: '', type: SearchType.all, sort: SortType.hot)
+          .responseFactory(json)),
+  'GetModlog': (json) =>
+      WsEventGetModlog(const GetModlog().responseFactory(json)),
+  'CreateSite': (json) => WsEventCreateSite(const CreateSite(
+          name: '',
+          enableDownvotes: true,
+          openRegistration: true,
+          enableNsfw: true,
+          auth: '')
+      .responseFactory(json)),
+  'EditSite': (json) => WsEventEditSite(const EditSite(
+          name: '',
+          enableDownvotes: true,
+          openRegistration: true,
+          enableNsfw: true,
+          auth: '')
+      .responseFactory(json)),
+  'GetSite': (json) => WsEventGetSite(const GetSite().responseFactory(json)),
+  'TransferSite': (json) => WsEventTransferSite(
+      const TransferSite(userId: 0, auth: '').responseFactory(json)),
   'GetSiteConfig': (json) =>
-      WsEventGetSiteConfig(GetSiteConfig().responseFactory(json)),
-  'SaveSiteConfig': (json) =>
-      WsEventSaveSiteConfig(SaveSiteConfig().responseFactory(json)),
-  'Login': (json) => WsEventLogin(Login().responseFactory(json)),
-  'Register': (json) => WsEventRegister(Register().responseFactory(json)),
-  'GetCaptcha': (json) => WsEventGetCaptcha(GetCaptcha().responseFactory(json)),
-  'SaveUserSettings': (json) =>
-      WsEventSaveUserSettings(SaveUserSettings().responseFactory(json)),
-  'GetUserDetails': (json) =>
-      WsEventGetUserDetails(GetUserDetails().responseFactory(json)),
+      WsEventGetSiteConfig(const GetSiteConfig(auth: '').responseFactory(json)),
+  'SaveSiteConfig': (json) => WsEventSaveSiteConfig(
+      const SaveSiteConfig(configHjson: '', auth: '').responseFactory(json)),
+  'Login': (json) => WsEventLogin(
+      const Login(usernameOrEmail: '', password: '').responseFactory(json)),
+  'Register': (json) => WsEventRegister(const Register(
+          username: '', password: '', passwordVerify: '', showNsfw: true)
+      .responseFactory(json)),
+  'GetCaptcha': (json) =>
+      WsEventGetCaptcha(const GetCaptcha().responseFactory(json)),
+  'SaveUserSettings': (json) => WsEventSaveUserSettings(const SaveUserSettings(
+          showNsfw: true,
+          theme: '',
+          defaultSortType: SortType.hot,
+          defaultListingType: PostListingType.all,
+          lang: '',
+          showAvatars: true,
+          sendNotificationsToEmail: true,
+          auth: '')
+      .responseFactory(json)),
+  'GetUserDetails': (json) => WsEventGetUserDetails(
+      const GetUserDetails(sort: SortType.hot, savedOnly: true)
+          .responseFactory(json)),
   'MarkAllAsRead': (json) =>
-      WsEventMarkAllAsRead(MarkAllAsRead().responseFactory(json)),
-  'AddAdmin': (json) => WsEventAddAdmin(AddAdmin().responseFactory(json)),
-  'BanUser': (json) => WsEventBanUser(BanUser().responseFactory(json)),
-  'GetReplies': (json) => WsEventGetReplies(GetReplies().responseFactory(json)),
-  'GetUserMentions': (json) =>
-      WsEventGetUserMentions(GetUserMentions().responseFactory(json)),
+      WsEventMarkAllAsRead(const MarkAllAsRead(auth: '').responseFactory(json)),
+  'AddAdmin': (json) => WsEventAddAdmin(
+      const AddAdmin(userId: 0, added: true, auth: '').responseFactory(json)),
+  'BanUser': (json) => WsEventBanUser(
+      const BanUser(userId: 0, ban: true, removeData: true, auth: '')
+          .responseFactory(json)),
+  'GetReplies': (json) => WsEventGetReplies(
+      const GetReplies(sort: SortType.hot, unreadOnly: true, auth: '')
+          .responseFactory(json)),
+  'GetUserMentions': (json) => WsEventGetUserMentions(
+      const GetUserMentions(sort: SortType.hot, unreadOnly: true, auth: '')
+          .responseFactory(json)),
   'MarkUserMentionAsRead': (json) => WsEventMarkUserMentionAsRead(
-      MarkUserMentionAsRead().responseFactory(json)),
-  'DeleteAccount': (json) =>
-      WsEventDeleteAccount(DeleteAccount().responseFactory(json)),
-  'PasswordReset': (json) =>
-      WsEventPasswordReset(PasswordReset().responseFactory(json)),
-  'PasswordChange': (json) =>
-      WsEventPasswordChange(PasswordChange().responseFactory(json)),
-  'CreatePrivateMessage': (json) =>
-      WsEventCreatePrivateMessage(CreatePrivateMessage().responseFactory(json)),
-  'EditPrivateMessage': (json) =>
-      WsEventEditPrivateMessage(EditPrivateMessage().responseFactory(json)),
-  'DeletePrivateMessage': (json) =>
-      WsEventDeletePrivateMessage(DeletePrivateMessage().responseFactory(json)),
+      const MarkUserMentionAsRead(userMentionId: 0, read: true, auth: '')
+          .responseFactory(json)),
+  'DeleteAccount': (json) => WsEventDeleteAccount(
+      const DeleteAccount(password: '', auth: '').responseFactory(json)),
+  'PasswordReset': (json) => WsEventPasswordReset(
+      const PasswordReset(email: '').responseFactory(json)),
+  'PasswordChange': (json) => WsEventPasswordChange(
+      const PasswordChange(token: '', password: '', passwordVerify: '')
+          .responseFactory(json)),
+  'CreatePrivateMessage': (json) => WsEventCreatePrivateMessage(
+      const CreatePrivateMessage(content: '', recipientId: 0, auth: '')
+          .responseFactory(json)),
+  'EditPrivateMessage': (json) => WsEventEditPrivateMessage(
+      const EditPrivateMessage(privateMessageId: 0, content: '', auth: '')
+          .responseFactory(json)),
+  'DeletePrivateMessage': (json) => WsEventDeletePrivateMessage(
+      const DeletePrivateMessage(privateMessageId: 0, deleted: true, auth: '')
+          .responseFactory(json)),
   'MarkPrivateMessageAsRead': (json) => WsEventMarkPrivateMessageAsRead(
-      MarkPrivateMessageAsRead().responseFactory(json)),
-  'GetPrivateMessages': (json) =>
-      WsEventGetPrivateMessages(GetPrivateMessages().responseFactory(json)),
-  'GetReportCount': (json) =>
-      WsEventGetReportCount(GetReportCount().responseFactory(json)),
+      const MarkPrivateMessageAsRead(privateMessageId: 0, read: true, auth: '')
+          .responseFactory(json)),
+  'GetPrivateMessages': (json) => WsEventGetPrivateMessages(
+      const GetPrivateMessages(unreadOnly: true, auth: '')
+          .responseFactory(json)),
+  'GetReportCount': (json) => WsEventGetReportCount(
+      const GetReportCount(auth: '').responseFactory(json)),
 };
 
 class WsEvent<T> {
