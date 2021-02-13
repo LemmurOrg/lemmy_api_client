@@ -1,8 +1,8 @@
-## Unreleased
+## 0.11.0 - 2021-02-13
 
 ### Changed
 
-- All `DateTime` objects now are now explicitly UTC time
+- All `DateTime` objects are now explicitly UTC time
 - `GetReplies.sort` is now of `SortType` type
 
 ## 0.10.2 - 2021-02-02
