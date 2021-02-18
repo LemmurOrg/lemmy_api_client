@@ -155,7 +155,7 @@ class __$UserAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_UserAggregates extends _UserAggregates {
-  _$_UserAggregates(
+  const _$_UserAggregates(
       {@required this.id,
       @required this.userId,
       @required this.postCount,
@@ -234,8 +234,8 @@ class _$_UserAggregates extends _UserAggregates {
 }
 
 abstract class _UserAggregates extends UserAggregates {
-  _UserAggregates._() : super._();
-  factory _UserAggregates(
+  const _UserAggregates._() : super._();
+  const factory _UserAggregates(
       {@required int id,
       @required int userId,
       @required int postCount,
@@ -459,7 +459,7 @@ class __$SiteAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SiteAggregates extends _SiteAggregates {
-  _$_SiteAggregates(
+  const _$_SiteAggregates(
       {@required this.id,
       @required this.siteId,
       @required this.users,
@@ -568,8 +568,8 @@ class _$_SiteAggregates extends _SiteAggregates {
 }
 
 abstract class _SiteAggregates extends SiteAggregates {
-  _SiteAggregates._() : super._();
-  factory _SiteAggregates(
+  const _SiteAggregates._() : super._();
+  const factory _SiteAggregates(
       {@required int id,
       @required int siteId,
       @required int users,
@@ -624,7 +624,8 @@ class _$PostAggregatesTearOff {
       @required int score,
       @required int upvotes,
       @required int downvotes,
-      @required String newestCommentTime}) {
+      @required DateTime newestCommentTime,
+      @required DateTime newestCommentTimeNecro}) {
     return _PostAggregates(
       id: id,
       postId: postId,
@@ -633,6 +634,7 @@ class _$PostAggregatesTearOff {
       upvotes: upvotes,
       downvotes: downvotes,
       newestCommentTime: newestCommentTime,
+      newestCommentTimeNecro: newestCommentTimeNecro,
     );
   }
 
@@ -654,7 +656,8 @@ mixin _$PostAggregates {
   int get score;
   int get upvotes;
   int get downvotes;
-  String get newestCommentTime;
+  DateTime get newestCommentTime;
+  DateTime get newestCommentTimeNecro;
 
   Map<String, dynamic> toJson();
   $PostAggregatesCopyWith<PostAggregates> get copyWith;
@@ -672,7 +675,8 @@ abstract class $PostAggregatesCopyWith<$Res> {
       int score,
       int upvotes,
       int downvotes,
-      String newestCommentTime});
+      DateTime newestCommentTime,
+      DateTime newestCommentTimeNecro});
 }
 
 /// @nodoc
@@ -693,6 +697,7 @@ class _$PostAggregatesCopyWithImpl<$Res>
     Object upvotes = freezed,
     Object downvotes = freezed,
     Object newestCommentTime = freezed,
+    Object newestCommentTimeNecro = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -703,7 +708,10 @@ class _$PostAggregatesCopyWithImpl<$Res>
       downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
       newestCommentTime: newestCommentTime == freezed
           ? _value.newestCommentTime
-          : newestCommentTime as String,
+          : newestCommentTime as DateTime,
+      newestCommentTimeNecro: newestCommentTimeNecro == freezed
+          ? _value.newestCommentTimeNecro
+          : newestCommentTimeNecro as DateTime,
     ));
   }
 }
@@ -722,7 +730,8 @@ abstract class _$PostAggregatesCopyWith<$Res>
       int score,
       int upvotes,
       int downvotes,
-      String newestCommentTime});
+      DateTime newestCommentTime,
+      DateTime newestCommentTimeNecro});
 }
 
 /// @nodoc
@@ -745,6 +754,7 @@ class __$PostAggregatesCopyWithImpl<$Res>
     Object upvotes = freezed,
     Object downvotes = freezed,
     Object newestCommentTime = freezed,
+    Object newestCommentTimeNecro = freezed,
   }) {
     return _then(_PostAggregates(
       id: id == freezed ? _value.id : id as int,
@@ -755,23 +765,28 @@ class __$PostAggregatesCopyWithImpl<$Res>
       downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
       newestCommentTime: newestCommentTime == freezed
           ? _value.newestCommentTime
-          : newestCommentTime as String,
+          : newestCommentTime as DateTime,
+      newestCommentTimeNecro: newestCommentTimeNecro == freezed
+          ? _value.newestCommentTimeNecro
+          : newestCommentTimeNecro as DateTime,
     ));
   }
 }
 
+@ForceUtcDateTime()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_PostAggregates extends _PostAggregates {
-  _$_PostAggregates(
+  const _$_PostAggregates(
       {@required this.id,
       @required this.postId,
       @required this.comments,
       @required this.score,
       @required this.upvotes,
       @required this.downvotes,
-      @required this.newestCommentTime})
+      @required this.newestCommentTime,
+      @required this.newestCommentTimeNecro})
       : assert(id != null),
         assert(postId != null),
         assert(comments != null),
@@ -779,6 +794,7 @@ class _$_PostAggregates extends _PostAggregates {
         assert(upvotes != null),
         assert(downvotes != null),
         assert(newestCommentTime != null),
+        assert(newestCommentTimeNecro != null),
         super._();
 
   factory _$_PostAggregates.fromJson(Map<String, dynamic> json) =>
@@ -797,11 +813,13 @@ class _$_PostAggregates extends _PostAggregates {
   @override
   final int downvotes;
   @override
-  final String newestCommentTime;
+  final DateTime newestCommentTime;
+  @override
+  final DateTime newestCommentTimeNecro;
 
   @override
   String toString() {
-    return 'PostAggregates(id: $id, postId: $postId, comments: $comments, score: $score, upvotes: $upvotes, downvotes: $downvotes, newestCommentTime: $newestCommentTime)';
+    return 'PostAggregates(id: $id, postId: $postId, comments: $comments, score: $score, upvotes: $upvotes, downvotes: $downvotes, newestCommentTime: $newestCommentTime, newestCommentTimeNecro: $newestCommentTimeNecro)';
   }
 
   @override
@@ -825,7 +843,10 @@ class _$_PostAggregates extends _PostAggregates {
                     .equals(other.downvotes, downvotes)) &&
             (identical(other.newestCommentTime, newestCommentTime) ||
                 const DeepCollectionEquality()
-                    .equals(other.newestCommentTime, newestCommentTime)));
+                    .equals(other.newestCommentTime, newestCommentTime)) &&
+            (identical(other.newestCommentTimeNecro, newestCommentTimeNecro) ||
+                const DeepCollectionEquality().equals(
+                    other.newestCommentTimeNecro, newestCommentTimeNecro)));
   }
 
   @override
@@ -837,7 +858,8 @@ class _$_PostAggregates extends _PostAggregates {
       const DeepCollectionEquality().hash(score) ^
       const DeepCollectionEquality().hash(upvotes) ^
       const DeepCollectionEquality().hash(downvotes) ^
-      const DeepCollectionEquality().hash(newestCommentTime);
+      const DeepCollectionEquality().hash(newestCommentTime) ^
+      const DeepCollectionEquality().hash(newestCommentTimeNecro);
 
   @override
   _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
@@ -850,15 +872,16 @@ class _$_PostAggregates extends _PostAggregates {
 }
 
 abstract class _PostAggregates extends PostAggregates {
-  _PostAggregates._() : super._();
-  factory _PostAggregates(
+  const _PostAggregates._() : super._();
+  const factory _PostAggregates(
       {@required int id,
       @required int postId,
       @required int comments,
       @required int score,
       @required int upvotes,
       @required int downvotes,
-      @required String newestCommentTime}) = _$_PostAggregates;
+      @required DateTime newestCommentTime,
+      @required DateTime newestCommentTimeNecro}) = _$_PostAggregates;
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
       _$_PostAggregates.fromJson;
@@ -876,7 +899,9 @@ abstract class _PostAggregates extends PostAggregates {
   @override
   int get downvotes;
   @override
-  String get newestCommentTime;
+  DateTime get newestCommentTime;
+  @override
+  DateTime get newestCommentTimeNecro;
   @override
   _$PostAggregatesCopyWith<_PostAggregates> get copyWith;
 }
@@ -1071,7 +1096,7 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityAggregates extends _CommunityAggregates {
-  _$_CommunityAggregates(
+  const _$_CommunityAggregates(
       {@required this.id,
       @required this.communityId,
       @required this.subscribers,
@@ -1175,8 +1200,8 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 }
 
 abstract class _CommunityAggregates extends CommunityAggregates {
-  _CommunityAggregates._() : super._();
-  factory _CommunityAggregates(
+  const _CommunityAggregates._() : super._();
+  const factory _CommunityAggregates(
       {@required int id,
       @required int communityId,
       @required int subscribers,
@@ -1336,7 +1361,7 @@ class __$CommentAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommentAggregates extends _CommentAggregates {
-  _$_CommentAggregates(
+  const _$_CommentAggregates(
       {@required this.id,
       @required this.commentId,
       @required this.score,
@@ -1407,8 +1432,8 @@ class _$_CommentAggregates extends _CommentAggregates {
 }
 
 abstract class _CommentAggregates extends CommentAggregates {
-  _CommentAggregates._() : super._();
-  factory _CommentAggregates(
+  const _CommentAggregates._() : super._();
+  const factory _CommentAggregates(
       {@required int id,
       @required int commentId,
       @required int score,

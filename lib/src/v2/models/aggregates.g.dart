@@ -64,7 +64,10 @@ _$_PostAggregates _$_$_PostAggregatesFromJson(Map<String, dynamic> json) {
     score: json['score'] as int,
     upvotes: json['upvotes'] as int,
     downvotes: json['downvotes'] as int,
-    newestCommentTime: json['newest_comment_time'] as String,
+    newestCommentTime: const ForceUtcDateTime()
+        .fromJson(json['newest_comment_time'] as String),
+    newestCommentTimeNecro: const ForceUtcDateTime()
+        .fromJson(json['newest_comment_time_necro'] as String),
   );
 }
 
@@ -76,7 +79,10 @@ Map<String, dynamic> _$_$_PostAggregatesToJson(_$_PostAggregates instance) =>
       'score': instance.score,
       'upvotes': instance.upvotes,
       'downvotes': instance.downvotes,
-      'newest_comment_time': instance.newestCommentTime,
+      'newest_comment_time':
+          const ForceUtcDateTime().toJson(instance.newestCommentTime),
+      'newest_comment_time_necro':
+          const ForceUtcDateTime().toJson(instance.newestCommentTimeNecro),
     };
 
 _$_CommunityAggregates _$_$_CommunityAggregatesFromJson(

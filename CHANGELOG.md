@@ -1,3 +1,11 @@
+## Unreleased
+
+### Added
+
+- Websocket joins! `communityJoin`, `userJoin`, `postJoin`, and `modJoin` can be used to listen to particular events
+- `SortType` has now a `newComments` sort
+- `PostAggregates` has now a `newestCommentTimeNecro` property and has correctly `DateTime` types instead of `String`
+
 ## 0.11.0 - 2021-02-13
 
 ### Changed
