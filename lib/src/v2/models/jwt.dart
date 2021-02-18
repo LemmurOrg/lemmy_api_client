@@ -22,7 +22,8 @@ class Jwt {
 
   Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
 
-  Map<String, dynamic> toJson() => {'raw': raw, 'payload': payload};
+  factory Jwt.fromJson(String json) => Jwt(json);
+  String toJson() => raw;
 }
 
 @freezed
