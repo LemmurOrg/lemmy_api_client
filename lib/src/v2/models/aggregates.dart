@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:lemmy_api_client/src/utils/force_utc_datetime.dart';
 
 part 'aggregates.freezed.dart';
 part 'aggregates.g.dart';
@@ -44,6 +45,7 @@ abstract class SiteAggregates implements _$SiteAggregates {
 
 @freezed
 abstract class PostAggregates implements _$PostAggregates {
+  @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostAggregates({
     @required int id,
@@ -52,7 +54,8 @@ abstract class PostAggregates implements _$PostAggregates {
     @required int score,
     @required int upvotes,
     @required int downvotes,
-    @required String newestCommentTime,
+    @required DateTime newestCommentTime,
+    @required DateTime newestCommentTimeNecro,
   }) = _PostAggregates;
 
   PostAggregates._();
