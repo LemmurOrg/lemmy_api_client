@@ -6,7 +6,6 @@ import 'package:meta/meta.dart';
 import 'package:web_socket_channel/status.dart' as status;
 import 'package:web_socket_channel/web_socket_channel.dart';
 
-import '../../v1.dart';
 import '../exceptions.dart';
 import 'api/websockets.dart';
 import 'query.dart';

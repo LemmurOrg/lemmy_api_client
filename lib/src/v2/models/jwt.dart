@@ -28,12 +28,12 @@ class Jwt {
 @freezed
 abstract class JwtPayload implements _$JwtPayload {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory JwtPayload({
+  const factory JwtPayload({
     @required int id,
     @required String iss,
   }) = _JwtPayload;
 
-  JwtPayload._();
+  const JwtPayload._();
   factory JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$JwtPayloadFromJson(json);
 }

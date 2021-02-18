@@ -1,6 +1,6 @@
 import '../../enums.dart';
-import '../../v1/models/jwt.dart';
 import '../models/api.dart';
+import '../models/jwt.dart';
 import '../models/source.dart';
 import '../models/views.dart';
 import 'comment.dart';

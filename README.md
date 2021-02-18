@@ -18,8 +18,8 @@ A Dart client for the [Lemmy API](https://join.lemmy.ml/docs/en/contributing/web
 - Works both for Web and Native environments
 - Strictly typed responses
 - Http and [~~websocket~~](https://github.com/krawieck/lemmy_api_client/issues/4) interface
+- Room websocket joins
 - Pictrs endpoints
-- API `v1` and `v2` support
 - Models have a `.instanceHost` property that indicate the instance that returned this model
 
 ## Example

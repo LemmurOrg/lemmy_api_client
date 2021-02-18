@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Breaking change
+
+- Removed API v1. It didn't even work properly and lemmy completely removed thus no point in keeping
+
 ### Added
 
 - Websocket joins! `communityJoin`, `userJoin`, `postJoin`, and `modJoin` can be used to listen to particular events
