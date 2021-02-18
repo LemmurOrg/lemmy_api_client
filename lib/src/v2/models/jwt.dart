@@ -22,18 +22,19 @@ class Jwt {
 
   Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
 
-  Map<String, dynamic> toJson() => {'raw': raw, 'payload': payload};
+  factory Jwt.fromJson(String json) => Jwt(json);
+  String toJson() => raw;
 }
 
 @freezed
 abstract class JwtPayload implements _$JwtPayload {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory JwtPayload({
+  const factory JwtPayload({
     @required int id,
     @required String iss,
   }) = _JwtPayload;
 
-  JwtPayload._();
+  const JwtPayload._();
   factory JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$JwtPayloadFromJson(json);
 }

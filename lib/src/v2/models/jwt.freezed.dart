@@ -106,7 +106,7 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_JwtPayload extends _JwtPayload {
-  _$_JwtPayload({@required this.id, @required this.iss})
+  const _$_JwtPayload({@required this.id, @required this.iss})
       : assert(id != null),
         assert(iss != null),
         super._();
@@ -151,8 +151,9 @@ class _$_JwtPayload extends _JwtPayload {
 }
 
 abstract class _JwtPayload extends JwtPayload {
-  _JwtPayload._() : super._();
-  factory _JwtPayload({@required int id, @required String iss}) = _$_JwtPayload;
+  const _JwtPayload._() : super._();
+  const factory _JwtPayload({@required int id, @required String iss}) =
+      _$_JwtPayload;
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =
       _$_JwtPayload.fromJson;

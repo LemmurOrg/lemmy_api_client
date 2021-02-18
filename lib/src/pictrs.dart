@@ -1,11 +1,18 @@
 import 'dart:convert';
 
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
 import 'exceptions.dart';
-import 'utils/http_helper.dart';
-import 'v1/models/pictrs.dart';
+import 'utils/with_instance_host.dart';
+
+part 'pictrs.freezed.dart';
+part 'pictrs.g.dart';
+
+extension on http.Response {
+  bool get ok => statusCode >= 200 && statusCode < 300;
+}
 
 class PictrsApi {
   final String host;
@@ -47,4 +54,32 @@ class PictrsApi {
       }
     }
   }
+}
+
+/// Based on https://git.asonix.dog/asonix/pict-rs/
+
+@freezed
+abstract class PictrsUploadFile implements _$PictrsUploadFile {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory PictrsUploadFile({
+    @required String deleteToken,
+    @required String file,
+  }) = _PictrsUploadFile;
+
+  const PictrsUploadFile._();
+  factory PictrsUploadFile.fromJson(Map<String, dynamic> json) =>
+      _$PictrsUploadFileFromJson(json);
+}
+
+@freezed
+abstract class PictrsUpload extends WithInstanceHost implements _$PictrsUpload {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory PictrsUpload({
+    @required String msg,
+    @required List<PictrsUploadFile> files,
+  }) = _PictrsUpload;
+
+  PictrsUpload._();
+  factory PictrsUpload.fromJson(Map<String, dynamic> json) =>
+      _$PictrsUploadFromJson(json);
 }
