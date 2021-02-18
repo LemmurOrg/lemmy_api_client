@@ -155,7 +155,7 @@ class __$UserAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_UserAggregates extends _UserAggregates {
-  _$_UserAggregates(
+  const _$_UserAggregates(
       {@required this.id,
       @required this.userId,
       @required this.postCount,
@@ -234,8 +234,8 @@ class _$_UserAggregates extends _UserAggregates {
 }
 
 abstract class _UserAggregates extends UserAggregates {
-  _UserAggregates._() : super._();
-  factory _UserAggregates(
+  const _UserAggregates._() : super._();
+  const factory _UserAggregates(
       {@required int id,
       @required int userId,
       @required int postCount,
@@ -459,7 +459,7 @@ class __$SiteAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SiteAggregates extends _SiteAggregates {
-  _$_SiteAggregates(
+  const _$_SiteAggregates(
       {@required this.id,
       @required this.siteId,
       @required this.users,
@@ -568,8 +568,8 @@ class _$_SiteAggregates extends _SiteAggregates {
 }
 
 abstract class _SiteAggregates extends SiteAggregates {
-  _SiteAggregates._() : super._();
-  factory _SiteAggregates(
+  const _SiteAggregates._() : super._();
+  const factory _SiteAggregates(
       {@required int id,
       @required int siteId,
       @required int users,
@@ -778,7 +778,7 @@ class __$PostAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PostAggregates extends _PostAggregates {
-  _$_PostAggregates(
+  const _$_PostAggregates(
       {@required this.id,
       @required this.postId,
       @required this.comments,
@@ -872,8 +872,8 @@ class _$_PostAggregates extends _PostAggregates {
 }
 
 abstract class _PostAggregates extends PostAggregates {
-  _PostAggregates._() : super._();
-  factory _PostAggregates(
+  const _PostAggregates._() : super._();
+  const factory _PostAggregates(
       {@required int id,
       @required int postId,
       @required int comments,
@@ -1096,7 +1096,7 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityAggregates extends _CommunityAggregates {
-  _$_CommunityAggregates(
+  const _$_CommunityAggregates(
       {@required this.id,
       @required this.communityId,
       @required this.subscribers,
@@ -1200,8 +1200,8 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 }
 
 abstract class _CommunityAggregates extends CommunityAggregates {
-  _CommunityAggregates._() : super._();
-  factory _CommunityAggregates(
+  const _CommunityAggregates._() : super._();
+  const factory _CommunityAggregates(
       {@required int id,
       @required int communityId,
       @required int subscribers,
@@ -1361,7 +1361,7 @@ class __$CommentAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommentAggregates extends _CommentAggregates {
-  _$_CommentAggregates(
+  const _$_CommentAggregates(
       {@required this.id,
       @required this.commentId,
       @required this.score,
@@ -1432,8 +1432,8 @@ class _$_CommentAggregates extends _CommentAggregates {
 }
 
 abstract class _CommentAggregates extends CommentAggregates {
-  _CommentAggregates._() : super._();
-  factory _CommentAggregates(
+  const _CommentAggregates._() : super._();
+  const factory _CommentAggregates(
       {@required int id,
       @required int commentId,
       @required int score,

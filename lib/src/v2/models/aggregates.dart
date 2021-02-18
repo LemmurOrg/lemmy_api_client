@@ -9,7 +9,7 @@ part 'aggregates.g.dart';
 @freezed
 abstract class UserAggregates implements _$UserAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory UserAggregates({
+  const factory UserAggregates({
     @required int id,
     @required int userId,
     @required int postCount,
@@ -18,7 +18,7 @@ abstract class UserAggregates implements _$UserAggregates {
     @required int commentScore,
   }) = _UserAggregates;
 
-  UserAggregates._();
+  const UserAggregates._();
   factory UserAggregates.fromJson(Map<String, dynamic> json) =>
       _$UserAggregatesFromJson(json);
 }
@@ -26,7 +26,7 @@ abstract class UserAggregates implements _$UserAggregates {
 @freezed
 abstract class SiteAggregates implements _$SiteAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory SiteAggregates({
+  const factory SiteAggregates({
     @required int id,
     @required int siteId,
     @required int users,
@@ -39,7 +39,7 @@ abstract class SiteAggregates implements _$SiteAggregates {
     @required int usersActiveHalfYear,
   }) = _SiteAggregates;
 
-  SiteAggregates._();
+  const SiteAggregates._();
   factory SiteAggregates.fromJson(Map<String, dynamic> json) =>
       _$SiteAggregatesFromJson(json);
 }
@@ -48,7 +48,7 @@ abstract class SiteAggregates implements _$SiteAggregates {
 abstract class PostAggregates implements _$PostAggregates {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PostAggregates({
+  const factory PostAggregates({
     @required int id,
     @required int postId,
     @required int comments,
@@ -59,7 +59,7 @@ abstract class PostAggregates implements _$PostAggregates {
     @required DateTime newestCommentTimeNecro,
   }) = _PostAggregates;
 
-  PostAggregates._();
+  const PostAggregates._();
   factory PostAggregates.fromJson(Map<String, dynamic> json) =>
       _$PostAggregatesFromJson(json);
 }
@@ -67,7 +67,7 @@ abstract class PostAggregates implements _$PostAggregates {
 @freezed
 abstract class CommunityAggregates implements _$CommunityAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunityAggregates({
+  const factory CommunityAggregates({
     @required int id,
     @required int communityId,
     @required int subscribers,
@@ -79,7 +79,7 @@ abstract class CommunityAggregates implements _$CommunityAggregates {
     @required int usersActiveHalfYear,
   }) = _CommunityAggregates;
 
-  CommunityAggregates._();
+  const CommunityAggregates._();
   factory CommunityAggregates.fromJson(Map<String, dynamic> json) =>
       _$CommunityAggregatesFromJson(json);
 }
@@ -87,7 +87,7 @@ abstract class CommunityAggregates implements _$CommunityAggregates {
 @freezed
 abstract class CommentAggregates implements _$CommentAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommentAggregates({
+  const factory CommentAggregates({
     @required int id,
     @required int commentId,
     @required int score,
@@ -95,7 +95,7 @@ abstract class CommentAggregates implements _$CommentAggregates {
     @required int downvotes,
   }) = _CommentAggregates;
 
-  CommentAggregates._();
+  const CommentAggregates._();
   factory CommentAggregates.fromJson(Map<String, dynamic> json) =>
       _$CommentAggregatesFromJson(json);
 }
