@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:lemmy_api_client/src/utils/force_utc_datetime.dart';
+
+import '../../utils/force_utc_datetime.dart';
 
 part 'aggregates.freezed.dart';
 part 'aggregates.g.dart';
