@@ -6,7 +6,7 @@ export 'src/v2/api/community.dart';
 export 'src/v2/api/post.dart';
 export 'src/v2/api/site.dart';
 export 'src/v2/api/user.dart';
-export 'src/v2/main.dart';
+export 'src/v2/api/websockets.dart';
 export 'src/v2/main.dart';
 export 'src/v2/models/aggregates.dart';
 export 'src/v2/models/api.dart';

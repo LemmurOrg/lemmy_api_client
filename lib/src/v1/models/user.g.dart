@@ -202,7 +202,7 @@ Map<String, dynamic> _$_$_UserMentionViewToJson(_$_UserMentionView instance) =>
       'hot_rank': instance.hotRank,
       'hot_rank_active': instance.hotRankActive,
       'user_id': instance.userId,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
       'saved': instance.saved,
       'recipient_id': instance.recipientId,
       'recipient_actor_id': instance.recipientActorId,
@@ -238,11 +238,11 @@ _$_UserDetails _$_$_UserDetailsFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_UserDetailsToJson(_$_UserDetails instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user': instance.user,
-      'follows': instance.follows,
-      'moderates': instance.moderates,
-      'comments': instance.comments,
-      'posts': instance.posts,
+      'user': instance.user?.toJson(),
+      'follows': instance.follows?.map((e) => e?.toJson())?.toList(),
+      'moderates': instance.moderates?.map((e) => e?.toJson())?.toList(),
+      'comments': instance.comments?.map((e) => e?.toJson())?.toList(),
+      'posts': instance.posts?.map((e) => e?.toJson())?.toList(),
     };
 
 _$_BannedUser _$_$_BannedUserFromJson(Map<String, dynamic> json) {
@@ -257,6 +257,6 @@ _$_BannedUser _$_$_BannedUserFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_BannedUserToJson(_$_BannedUser instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'user': instance.user,
+      'user': instance.user?.toJson(),
       'banned': instance.banned,
     };

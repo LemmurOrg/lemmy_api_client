@@ -107,7 +107,7 @@ class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Login extends _Login {
-  _$_Login({@required this.usernameOrEmail, @required this.password})
+  const _$_Login({@required this.usernameOrEmail, @required this.password})
       : assert(usernameOrEmail != null),
         assert(password != null),
         super._();
@@ -154,8 +154,8 @@ class _$_Login extends _Login {
 }
 
 abstract class _Login extends Login {
-  _Login._() : super._();
-  factory _Login(
+  const _Login._() : super._();
+  const factory _Login(
       {@required String usernameOrEmail, @required String password}) = _$_Login;
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
@@ -182,7 +182,7 @@ class _$RegisterTearOff {
       String email,
       @required String password,
       @required String passwordVerify,
-      @required String showNsfw,
+      @required bool showNsfw,
       String captchaUuid,
       String captchaAnswer}) {
     return _Register(
@@ -212,7 +212,7 @@ mixin _$Register {
   String get email;
   String get password;
   String get passwordVerify;
-  String get showNsfw;
+  bool get showNsfw;
   String get captchaUuid;
   String get captchaAnswer;
 
@@ -229,7 +229,7 @@ abstract class $RegisterCopyWith<$Res> {
       String email,
       String password,
       String passwordVerify,
-      String showNsfw,
+      bool showNsfw,
       String captchaUuid,
       String captchaAnswer});
 }
@@ -259,7 +259,7 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
           : passwordVerify as String,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as String,
+      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       captchaUuid:
           captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String,
       captchaAnswer: captchaAnswer == freezed
@@ -279,7 +279,7 @@ abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
       String email,
       String password,
       String passwordVerify,
-      String showNsfw,
+      bool showNsfw,
       String captchaUuid,
       String captchaAnswer});
 }
@@ -310,7 +310,7 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
           : passwordVerify as String,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as String,
+      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       captchaUuid:
           captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String,
       captchaAnswer: captchaAnswer == freezed
@@ -324,7 +324,7 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Register extends _Register {
-  _$_Register(
+  const _$_Register(
       {@required this.username,
       this.email,
       @required this.password,
@@ -350,7 +350,7 @@ class _$_Register extends _Register {
   @override
   final String passwordVerify;
   @override
-  final String showNsfw;
+  final bool showNsfw;
   @override
   final String captchaUuid;
   @override
@@ -409,13 +409,13 @@ class _$_Register extends _Register {
 }
 
 abstract class _Register extends Register {
-  _Register._() : super._();
-  factory _Register(
+  const _Register._() : super._();
+  const factory _Register(
       {@required String username,
       String email,
       @required String password,
       @required String passwordVerify,
-      @required String showNsfw,
+      @required bool showNsfw,
       String captchaUuid,
       String captchaAnswer}) = _$_Register;
 
@@ -430,7 +430,7 @@ abstract class _Register extends Register {
   @override
   String get passwordVerify;
   @override
-  String get showNsfw;
+  bool get showNsfw;
   @override
   String get captchaUuid;
   @override
@@ -449,7 +449,7 @@ class _$GetCaptchaTearOff {
 
 // ignore: unused_element
   _GetCaptcha call() {
-    return _GetCaptcha();
+    return const _GetCaptcha();
   }
 
 // ignore: unused_element
@@ -505,7 +505,7 @@ class __$GetCaptchaCopyWithImpl<$Res> extends _$GetCaptchaCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetCaptcha extends _GetCaptcha {
-  _$_GetCaptcha() : super._();
+  const _$_GetCaptcha() : super._();
 
   factory _$_GetCaptcha.fromJson(Map<String, dynamic> json) =>
       _$_$_GetCaptchaFromJson(json);
@@ -530,8 +530,8 @@ class _$_GetCaptcha extends _GetCaptcha {
 }
 
 abstract class _GetCaptcha extends GetCaptcha {
-  _GetCaptcha._() : super._();
-  factory _GetCaptcha() = _$_GetCaptcha;
+  const _GetCaptcha._() : super._();
+  const factory _GetCaptcha() = _$_GetCaptcha;
 
   factory _GetCaptcha.fromJson(Map<String, dynamic> json) =
       _$_GetCaptcha.fromJson;
@@ -825,7 +825,7 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SaveUserSettings extends _SaveUserSettings {
-  _$_SaveUserSettings(
+  const _$_SaveUserSettings(
       {@required
           this.showNsfw,
       @required
@@ -992,8 +992,8 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 }
 
 abstract class _SaveUserSettings extends SaveUserSettings {
-  _SaveUserSettings._() : super._();
-  factory _SaveUserSettings(
+  const _SaveUserSettings._() : super._();
+  const factory _SaveUserSettings(
       {@required
           bool showNsfw,
       @required
@@ -1228,7 +1228,7 @@ class __$GetUserDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetUserDetails extends _GetUserDetails {
-  _$_GetUserDetails(
+  const _$_GetUserDetails(
       {this.userId,
       this.username,
       @required this.sort,
@@ -1314,8 +1314,8 @@ class _$_GetUserDetails extends _GetUserDetails {
 }
 
 abstract class _GetUserDetails extends GetUserDetails {
-  _GetUserDetails._() : super._();
-  factory _GetUserDetails(
+  const _GetUserDetails._() : super._();
+  const factory _GetUserDetails(
       {int userId,
       String username,
       @required SortType sort,
@@ -1443,7 +1443,7 @@ class __$MarkAllAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MarkAllAsRead extends _MarkAllAsRead {
-  _$_MarkAllAsRead({@required this.auth})
+  const _$_MarkAllAsRead({@required this.auth})
       : assert(auth != null),
         super._();
 
@@ -1481,8 +1481,8 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
 }
 
 abstract class _MarkAllAsRead extends MarkAllAsRead {
-  _MarkAllAsRead._() : super._();
-  factory _MarkAllAsRead({@required String auth}) = _$_MarkAllAsRead;
+  const _MarkAllAsRead._() : super._();
+  const factory _MarkAllAsRead({@required String auth}) = _$_MarkAllAsRead;
 
   factory _MarkAllAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkAllAsRead.fromJson;
@@ -1595,7 +1595,7 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_AddAdmin extends _AddAdmin {
-  _$_AddAdmin(
+  const _$_AddAdmin(
       {@required this.userId, @required this.added, @required this.auth})
       : assert(userId != null),
         assert(added != null),
@@ -1647,8 +1647,8 @@ class _$_AddAdmin extends _AddAdmin {
 }
 
 abstract class _AddAdmin extends AddAdmin {
-  _AddAdmin._() : super._();
-  factory _AddAdmin(
+  const _AddAdmin._() : super._();
+  const factory _AddAdmin(
       {@required int userId,
       @required bool added,
       @required String auth}) = _$_AddAdmin;
@@ -1804,7 +1804,7 @@ class __$BanUserCopyWithImpl<$Res> extends _$BanUserCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_BanUser extends _BanUser {
-  _$_BanUser(
+  const _$_BanUser(
       {@required this.userId,
       @required this.ban,
       @required this.removeData,
@@ -1879,8 +1879,8 @@ class _$_BanUser extends _BanUser {
 }
 
 abstract class _BanUser extends BanUser {
-  _BanUser._() : super._();
-  factory _BanUser(
+  const _BanUser._() : super._();
+  const factory _BanUser(
       {@required int userId,
       @required bool ban,
       @required bool removeData,
@@ -2029,7 +2029,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetReplies extends _GetReplies {
-  _$_GetReplies(
+  const _$_GetReplies(
       {@required this.sort,
       this.page,
       this.limit,
@@ -2096,8 +2096,8 @@ class _$_GetReplies extends _GetReplies {
 }
 
 abstract class _GetReplies extends GetReplies {
-  _GetReplies._() : super._();
-  factory _GetReplies(
+  const _GetReplies._() : super._();
+  const factory _GetReplies(
       {@required SortType sort,
       int page,
       int limit,
@@ -2247,7 +2247,7 @@ class __$GetUserMentionsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetUserMentions extends _GetUserMentions {
-  _$_GetUserMentions(
+  const _$_GetUserMentions(
       {@required this.sort,
       this.page,
       this.limit,
@@ -2314,8 +2314,8 @@ class _$_GetUserMentions extends _GetUserMentions {
 }
 
 abstract class _GetUserMentions extends GetUserMentions {
-  _GetUserMentions._() : super._();
-  factory _GetUserMentions(
+  const _GetUserMentions._() : super._();
+  const factory _GetUserMentions(
       {@required SortType sort,
       int page,
       int limit,
@@ -2454,7 +2454,7 @@ class __$MarkUserMentionAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
-  _$_MarkUserMentionAsRead(
+  const _$_MarkUserMentionAsRead(
       {@required this.userMentionId, @required this.read, @required this.auth})
       : assert(userMentionId != null),
         assert(read != null),
@@ -2508,8 +2508,8 @@ class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
 }
 
 abstract class _MarkUserMentionAsRead extends MarkUserMentionAsRead {
-  _MarkUserMentionAsRead._() : super._();
-  factory _MarkUserMentionAsRead(
+  const _MarkUserMentionAsRead._() : super._();
+  const factory _MarkUserMentionAsRead(
       {@required int userMentionId,
       @required bool read,
       @required String auth}) = _$_MarkUserMentionAsRead;
@@ -2628,7 +2628,7 @@ class __$DeleteAccountCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeleteAccount extends _DeleteAccount {
-  _$_DeleteAccount({@required this.password, @required this.auth})
+  const _$_DeleteAccount({@required this.password, @required this.auth})
       : assert(password != null),
         assert(auth != null),
         super._();
@@ -2674,9 +2674,9 @@ class _$_DeleteAccount extends _DeleteAccount {
 }
 
 abstract class _DeleteAccount extends DeleteAccount {
-  _DeleteAccount._() : super._();
-  factory _DeleteAccount({@required String password, @required String auth}) =
-      _$_DeleteAccount;
+  const _DeleteAccount._() : super._();
+  const factory _DeleteAccount(
+      {@required String password, @required String auth}) = _$_DeleteAccount;
 
   factory _DeleteAccount.fromJson(Map<String, dynamic> json) =
       _$_DeleteAccount.fromJson;
@@ -2784,7 +2784,7 @@ class __$PasswordResetCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PasswordReset extends _PasswordReset {
-  _$_PasswordReset({@required this.email})
+  const _$_PasswordReset({@required this.email})
       : assert(email != null),
         super._();
 
@@ -2822,8 +2822,8 @@ class _$_PasswordReset extends _PasswordReset {
 }
 
 abstract class _PasswordReset extends PasswordReset {
-  _PasswordReset._() : super._();
-  factory _PasswordReset({@required String email}) = _$_PasswordReset;
+  const _PasswordReset._() : super._();
+  const factory _PasswordReset({@required String email}) = _$_PasswordReset;
 
   factory _PasswordReset.fromJson(Map<String, dynamic> json) =
       _$_PasswordReset.fromJson;
@@ -2948,7 +2948,7 @@ class __$PasswordChangeCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PasswordChange extends _PasswordChange {
-  _$_PasswordChange(
+  const _$_PasswordChange(
       {@required this.token,
       @required this.password,
       @required this.passwordVerify})
@@ -3004,8 +3004,8 @@ class _$_PasswordChange extends _PasswordChange {
 }
 
 abstract class _PasswordChange extends PasswordChange {
-  _PasswordChange._() : super._();
-  factory _PasswordChange(
+  const _PasswordChange._() : super._();
+  const factory _PasswordChange(
       {@required String token,
       @required String password,
       @required String passwordVerify}) = _$_PasswordChange;
@@ -3135,7 +3135,7 @@ class __$CreatePrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreatePrivateMessage extends _CreatePrivateMessage {
-  _$_CreatePrivateMessage(
+  const _$_CreatePrivateMessage(
       {@required this.content, @required this.recipientId, @required this.auth})
       : assert(content != null),
         assert(recipientId != null),
@@ -3190,8 +3190,8 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
 }
 
 abstract class _CreatePrivateMessage extends CreatePrivateMessage {
-  _CreatePrivateMessage._() : super._();
-  factory _CreatePrivateMessage(
+  const _CreatePrivateMessage._() : super._();
+  const factory _CreatePrivateMessage(
       {@required String content,
       @required int recipientId,
       @required String auth}) = _$_CreatePrivateMessage;
@@ -3323,7 +3323,7 @@ class __$EditPrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_EditPrivateMessage extends _EditPrivateMessage {
-  _$_EditPrivateMessage(
+  const _$_EditPrivateMessage(
       {@required this.privateMessageId,
       @required this.content,
       @required this.auth})
@@ -3379,8 +3379,8 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
 }
 
 abstract class _EditPrivateMessage extends EditPrivateMessage {
-  _EditPrivateMessage._() : super._();
-  factory _EditPrivateMessage(
+  const _EditPrivateMessage._() : super._();
+  const factory _EditPrivateMessage(
       {@required int privateMessageId,
       @required String content,
       @required String auth}) = _$_EditPrivateMessage;
@@ -3512,7 +3512,7 @@ class __$DeletePrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeletePrivateMessage extends _DeletePrivateMessage {
-  _$_DeletePrivateMessage(
+  const _$_DeletePrivateMessage(
       {@required this.privateMessageId,
       @required this.deleted,
       @required this.auth})
@@ -3569,8 +3569,8 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
 }
 
 abstract class _DeletePrivateMessage extends DeletePrivateMessage {
-  _DeletePrivateMessage._() : super._();
-  factory _DeletePrivateMessage(
+  const _DeletePrivateMessage._() : super._();
+  const factory _DeletePrivateMessage(
       {@required int privateMessageId,
       @required bool deleted,
       @required String auth}) = _$_DeletePrivateMessage;
@@ -3704,7 +3704,7 @@ class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
-  _$_MarkPrivateMessageAsRead(
+  const _$_MarkPrivateMessageAsRead(
       {@required this.privateMessageId,
       @required this.read,
       @required this.auth})
@@ -3760,8 +3760,8 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
 }
 
 abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
-  _MarkPrivateMessageAsRead._() : super._();
-  factory _MarkPrivateMessageAsRead(
+  const _MarkPrivateMessageAsRead._() : super._();
+  const factory _MarkPrivateMessageAsRead(
       {@required int privateMessageId,
       @required bool read,
       @required String auth}) = _$_MarkPrivateMessageAsRead;
@@ -3895,7 +3895,7 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetPrivateMessages extends _GetPrivateMessages {
-  _$_GetPrivateMessages(
+  const _$_GetPrivateMessages(
       {@required this.unreadOnly, this.page, this.limit, @required this.auth})
       : assert(unreadOnly != null),
         assert(auth != null),
@@ -3952,8 +3952,8 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 }
 
 abstract class _GetPrivateMessages extends GetPrivateMessages {
-  _GetPrivateMessages._() : super._();
-  factory _GetPrivateMessages(
+  const _GetPrivateMessages._() : super._();
+  const factory _GetPrivateMessages(
       {@required bool unreadOnly,
       int page,
       int limit,
@@ -4075,7 +4075,7 @@ class __$GetReportCountCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetReportCount extends _GetReportCount {
-  _$_GetReportCount({this.community, @required this.auth})
+  const _$_GetReportCount({this.community, @required this.auth})
       : assert(auth != null),
         super._();
 
@@ -4120,8 +4120,8 @@ class _$_GetReportCount extends _GetReportCount {
 }
 
 abstract class _GetReportCount extends GetReportCount {
-  _GetReportCount._() : super._();
-  factory _GetReportCount({int community, @required String auth}) =
+  const _GetReportCount._() : super._();
+  const factory _GetReportCount({int community, @required String auth}) =
       _$_GetReportCount;
 
   factory _GetReportCount.fromJson(Map<String, dynamic> json) =

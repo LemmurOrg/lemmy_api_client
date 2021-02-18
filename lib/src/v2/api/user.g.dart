@@ -33,7 +33,7 @@ _$_Register _$_$_RegisterFromJson(Map<String, dynamic> json) {
     email: json['email'] as String,
     password: json['password'] as String,
     passwordVerify: json['password_verify'] as String,
-    showNsfw: json['show_nsfw'] as String,
+    showNsfw: json['show_nsfw'] as bool,
     captchaUuid: json['captcha_uuid'] as String,
     captchaAnswer: json['captcha_answer'] as String,
   );
@@ -144,7 +144,7 @@ Map<String, dynamic> _$_$_GetUserDetailsToJson(_$_GetUserDetails instance) {
 
   writeNotNull('user_id', instance.userId);
   writeNotNull('username', instance.username);
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
@@ -244,7 +244,7 @@ Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
     }
   }
 
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('unread_only', instance.unreadOnly);
@@ -272,7 +272,7 @@ Map<String, dynamic> _$_$_GetUserMentionsToJson(_$_GetUserMentions instance) {
     }
   }
 
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('unread_only', instance.unreadOnly);

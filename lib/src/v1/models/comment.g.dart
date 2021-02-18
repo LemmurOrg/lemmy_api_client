@@ -89,7 +89,7 @@ Map<String, dynamic> _$_$_CommentViewToJson(_$_CommentView instance) =>
       'hot_rank': instance.hotRank,
       'hot_rank_active': instance.hotRankActive,
       'user_id': instance.userId,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
       'subscribed': instance.subscribed,
       'saved': instance.saved,
     };
@@ -178,7 +178,7 @@ Map<String, dynamic> _$_$_ReplyViewToJson(_$_ReplyView instance) =>
       'hot_rank': instance.hotRank,
       'hot_rank_active': instance.hotRankActive,
       'user_id': instance.userId,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
       'subscribed': instance.subscribed,
       'saved': instance.saved,
       'recipient_id': instance.recipientId,

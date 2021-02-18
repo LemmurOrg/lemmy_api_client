@@ -112,7 +112,7 @@ Map<String, dynamic> _$_$_PostViewToJson(_$_PostView instance) =>
       'hot_rank_active': instance.hotRankActive,
       'newest_activity_time': instance.newestActivityTime?.toIso8601String(),
       'user_id': instance.userId,
-      'my_vote': instance.myVote,
+      'my_vote': instance.myVote?.toJson(),
       'subscribed': instance.subscribed,
       'read': instance.read,
       'saved': instance.saved,
@@ -141,8 +141,8 @@ _$_FullPostView _$_$_FullPostViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullPostViewToJson(_$_FullPostView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'post': instance.post,
-      'comments': instance.comments,
-      'community': instance.community,
-      'moderators': instance.moderators,
+      'post': instance.post?.toJson(),
+      'comments': instance.comments?.map((e) => e?.toJson())?.toList(),
+      'community': instance.community?.toJson(),
+      'moderators': instance.moderators?.map((e) => e?.toJson())?.toList(),
     };

@@ -12,13 +12,13 @@ part 'community.g.dart';
 abstract class GetCommunity
     implements _$GetCommunity, LemmyApiQuery<FullCommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetCommunity({
+  const factory GetCommunity({
     int id,
     String name,
     String auth,
   }) = _GetCommunity;
 
-  GetCommunity._();
+  const GetCommunity._();
 
   factory GetCommunity.fromJson(Map<String, dynamic> json) =>
       _$GetCommunityFromJson(json);
@@ -38,7 +38,7 @@ abstract class GetCommunity
 abstract class CreateCommunity
     implements _$CreateCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreateCommunity({
+  const factory CreateCommunity({
     @required String name,
     @required String title,
     String description,
@@ -49,7 +49,7 @@ abstract class CreateCommunity
     @required String auth,
   }) = _CreateCommunity;
 
-  CreateCommunity._();
+  const CreateCommunity._();
 
   factory CreateCommunity.fromJson(Map<String, dynamic> json) =>
       _$CreateCommunityFromJson(json);
@@ -69,7 +69,7 @@ abstract class CreateCommunity
 abstract class ListCommunities
     implements _$ListCommunities, LemmyApiQuery<List<CommunityView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory ListCommunities({
+  const factory ListCommunities({
     @required @JsonKey(name: 'type_') PostListingType type,
     @required SortType sort,
     int page,
@@ -77,7 +77,7 @@ abstract class ListCommunities
     String auth,
   }) = _ListCommunities;
 
-  ListCommunities._();
+  const ListCommunities._();
 
   factory ListCommunities.fromJson(Map<String, dynamic> json) =>
       _$ListCommunitiesFromJson(json);
@@ -99,7 +99,7 @@ abstract class ListCommunities
 abstract class BanFromCommunity
     implements _$BanFromCommunity, LemmyApiQuery<BannedCommunityUser> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory BanFromCommunity({
+  const factory BanFromCommunity({
     @required int communityId,
     @required int userId,
     @required bool ban,
@@ -109,7 +109,7 @@ abstract class BanFromCommunity
     @required String auth,
   }) = _BanFromCommunity;
 
-  BanFromCommunity._();
+  const BanFromCommunity._();
 
   factory BanFromCommunity.fromJson(Map<String, dynamic> json) =>
       _$BanFromCommunityFromJson(json);
@@ -131,14 +131,14 @@ abstract class AddModToCommunity
         _$AddModToCommunity,
         LemmyApiQuery<List<CommunityModeratorView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory AddModToCommunity({
+  const factory AddModToCommunity({
     @required int communityId,
     @required int userId,
     @required bool added,
     @required String auth,
   }) = _AddModToCommunity;
 
-  AddModToCommunity._();
+  const AddModToCommunity._();
 
   factory AddModToCommunity.fromJson(Map<String, dynamic> json) =>
       _$AddModToCommunityFromJson(json);
@@ -160,7 +160,7 @@ abstract class AddModToCommunity
 abstract class EditCommunity
     implements _$EditCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory EditCommunity({
+  const factory EditCommunity({
     @required int communityId,
     @required String title,
     String description,
@@ -171,7 +171,7 @@ abstract class EditCommunity
     @required String auth,
   }) = _EditCommunity;
 
-  EditCommunity._();
+  const EditCommunity._();
 
   factory EditCommunity.fromJson(Map<String, dynamic> json) =>
       _$EditCommunityFromJson(json);
@@ -191,13 +191,13 @@ abstract class EditCommunity
 abstract class DeleteCommunity
     implements _$DeleteCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory DeleteCommunity({
+  const factory DeleteCommunity({
     @required int communityId,
     @required bool deleted,
     @required String auth,
   }) = _DeleteCommunity;
 
-  DeleteCommunity._();
+  const DeleteCommunity._();
 
   factory DeleteCommunity.fromJson(Map<String, dynamic> json) =>
       _$DeleteCommunityFromJson(json);
@@ -217,7 +217,7 @@ abstract class DeleteCommunity
 abstract class RemoveCommunity
     implements _$RemoveCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory RemoveCommunity({
+  const factory RemoveCommunity({
     @required int communityId,
     @required bool removed,
     String reason,
@@ -225,7 +225,7 @@ abstract class RemoveCommunity
     @required String auth,
   }) = _RemoveCommunity;
 
-  RemoveCommunity._();
+  const RemoveCommunity._();
 
   factory RemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$RemoveCommunityFromJson(json);
@@ -245,13 +245,13 @@ abstract class RemoveCommunity
 abstract class FollowCommunity
     implements _$FollowCommunity, LemmyApiQuery<CommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory FollowCommunity({
+  const factory FollowCommunity({
     @required int communityId,
     @required bool follow,
     @required String auth,
   }) = _FollowCommunity;
 
-  FollowCommunity._();
+  const FollowCommunity._();
 
   factory FollowCommunity.fromJson(Map<String, dynamic> json) =>
       _$FollowCommunityFromJson(json);
@@ -273,11 +273,11 @@ abstract class GetFollowedCommunities
         _$GetFollowedCommunities,
         LemmyApiQuery<List<CommunityFollowerView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetFollowedCommunities({
+  const factory GetFollowedCommunities({
     @required String auth,
   }) = _GetFollowedCommunities;
 
-  GetFollowedCommunities._();
+  const GetFollowedCommunities._();
 
   factory GetFollowedCommunities.fromJson(Map<String, dynamic> json) =>
       _$GetFollowedCommunitiesFromJson(json);
@@ -299,13 +299,13 @@ abstract class GetFollowedCommunities
 abstract class TransferCommunity
     implements _$TransferCommunity, LemmyApiQuery<FullCommunityView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory TransferCommunity({
+  const factory TransferCommunity({
     @required int communityId,
     @required int userId,
     @required String auth,
   }) = _TransferCommunity;
 
-  TransferCommunity._();
+  const TransferCommunity._();
 
   factory TransferCommunity.fromJson(Map<String, dynamic> json) =>
       _$TransferCommunityFromJson(json);

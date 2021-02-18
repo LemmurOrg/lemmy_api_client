@@ -8,7 +8,7 @@
 [![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
 [![](https://img.shields.io/badge/style-effective_dart-40c4ff.svg)](https://pub.dev/packages/effective_dart)
 
-A Dart client for the [Lemmy API](https://lemmy.ml/docs/en/contributing/websocket_http_api.html)
+A Dart client for the [Lemmy API](https://join.lemmy.ml/docs/en/contributing/websocket_http_api.html)
 
 </div>
 
@@ -32,12 +32,14 @@ Future<void> main() async {
   const lemmy = LemmyApiV2('lemmy.ml');
 
   // call methods that are named after op codes from the lemmy docs
-  final token = await lemmy.run(Login(usernameOrEmail: 'asd', password: 'ads'));
+  final token =
+      await lemmy.run(const Login(usernameOrEmail: 'asd', password: 'ads'));
   final messages =
       await lemmy.run(GetPrivateMessages(unreadOnly: true, auth: token.raw));
 
   print(messages);
 }
+
 ```
 
 _check out [Lemmur](https://github.com/krawieck/lemmur), a mobile Lemmy client in Flutter_

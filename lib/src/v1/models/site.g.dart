@@ -80,12 +80,12 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'site': instance.site,
-      'admins': instance.admins,
-      'banned': instance.banned,
+      'site': instance.site?.toJson(),
+      'admins': instance.admins?.map((e) => e?.toJson())?.toList(),
+      'banned': instance.banned?.map((e) => e?.toJson())?.toList(),
       'online': instance.online,
       'version': instance.version,
-      'my_user': instance.myUser,
+      'my_user': instance.myUser?.toJson(),
     };
 
 _$_TransferredSite _$_$_TransferredSiteFromJson(Map<String, dynamic> json) {
@@ -107,7 +107,7 @@ _$_TransferredSite _$_$_TransferredSiteFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_TransferredSiteToJson(_$_TransferredSite instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'site': instance.site,
-      'admins': instance.admins,
-      'banned': instance.banned,
+      'site': instance.site?.toJson(),
+      'admins': instance.admins?.map((e) => e?.toJson())?.toList(),
+      'banned': instance.banned?.map((e) => e?.toJson())?.toList(),
     };

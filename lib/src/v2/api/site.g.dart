@@ -39,10 +39,10 @@ Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) {
   }
 
   writeNotNull('q', instance.q);
-  writeNotNull('type_', instance.type);
+  writeNotNull('type_', instance.type?.toJson());
   writeNotNull('community_id', instance.communityId);
   writeNotNull('community_name', instance.communityName);
-  writeNotNull('sort', instance.sort);
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('auth', instance.auth);

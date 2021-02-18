@@ -12,7 +12,7 @@ part 'comment.g.dart';
 abstract class CreateComment
     implements _$CreateComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreateComment({
+  const factory CreateComment({
     @required String content,
     int parentId,
     @required int postId,
@@ -20,7 +20,7 @@ abstract class CreateComment
     @required String auth,
   }) = _CreateComment;
 
-  CreateComment._();
+  const CreateComment._();
   factory CreateComment.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentFromJson(json);
 
@@ -39,14 +39,14 @@ abstract class CreateComment
 abstract class EditComment
     implements _$EditComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory EditComment({
+  const factory EditComment({
     @required String content,
     @required int commentId,
     String formId,
     @required String auth,
   }) = _EditComment;
 
-  EditComment._();
+  const EditComment._();
   factory EditComment.fromJson(Map<String, dynamic> json) =>
       _$EditCommentFromJson(json);
 
@@ -65,13 +65,13 @@ abstract class EditComment
 abstract class DeleteComment
     implements _$DeleteComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory DeleteComment({
+  const factory DeleteComment({
     @required int commentId,
     @required bool deleted,
     @required String auth,
   }) = _DeleteComment;
 
-  DeleteComment._();
+  const DeleteComment._();
   factory DeleteComment.fromJson(Map<String, dynamic> json) =>
       _$DeleteCommentFromJson(json);
 
@@ -90,14 +90,14 @@ abstract class DeleteComment
 abstract class RemoveComment
     implements _$RemoveComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory RemoveComment({
+  const factory RemoveComment({
     @required int commentId,
     @required bool removed,
     String reason,
     @required String auth,
   }) = _RemoveComment;
 
-  RemoveComment._();
+  const RemoveComment._();
   factory RemoveComment.fromJson(Map<String, dynamic> json) =>
       _$RemoveCommentFromJson(json);
 
@@ -116,13 +116,13 @@ abstract class RemoveComment
 abstract class MarkCommentAsRead
     implements _$MarkCommentAsRead, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory MarkCommentAsRead({
+  const factory MarkCommentAsRead({
     @required int commentId,
     @required bool read,
     @required String auth,
   }) = _MarkCommentAsRead;
 
-  MarkCommentAsRead._();
+  const MarkCommentAsRead._();
   factory MarkCommentAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkCommentAsReadFromJson(json);
 
@@ -141,13 +141,13 @@ abstract class MarkCommentAsRead
 abstract class SaveComment
     implements _$SaveComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory SaveComment({
+  const factory SaveComment({
     @required int commentId,
     @required bool save,
     @required String auth,
   }) = _SaveComment;
 
-  SaveComment._();
+  const SaveComment._();
   factory SaveComment.fromJson(Map<String, dynamic> json) =>
       _$SaveCommentFromJson(json);
 
@@ -166,13 +166,13 @@ abstract class SaveComment
 abstract class CreateCommentLike
     implements _$CreateCommentLike, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreateCommentLike({
+  const factory CreateCommentLike({
     @required int commentId,
     @required VoteType score,
     @required String auth,
   }) = _CreateCommentLike;
 
-  CreateCommentLike._();
+  const CreateCommentLike._();
   factory CreateCommentLike.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentLikeFromJson(json);
 
@@ -191,7 +191,7 @@ abstract class CreateCommentLike
 abstract class GetComments
     implements _$GetComments, LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory GetComments({
+  const factory GetComments({
     @required @JsonKey(name: 'type_') CommentListingType type,
     @required SortType sort,
     int page,
@@ -201,7 +201,7 @@ abstract class GetComments
     String auth,
   }) = _GetComments;
 
-  GetComments._();
+  const GetComments._();
   factory GetComments.fromJson(Map<String, dynamic> json) =>
       _$GetCommentsFromJson(json);
 
@@ -221,13 +221,13 @@ abstract class GetComments
 abstract class CreateCommentReport
     implements _$CreateCommentReport, LemmyApiQuery<bool> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory CreateCommentReport({
+  const factory CreateCommentReport({
     @required int commentId,
     @required String reason,
     @required String auth,
   }) = _CreateCommentReport;
 
-  CreateCommentReport._();
+  const CreateCommentReport._();
   factory CreateCommentReport.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentReportFromJson(json);
 
@@ -248,13 +248,13 @@ abstract class ResolveCommentReport
         _$ResolveCommentReport,
         LemmyApiQuery<ResolveCommentReportResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory ResolveCommentReport({
+  const factory ResolveCommentReport({
     @required int reportId,
     @required bool resolved,
     @required String auth,
   }) = _ResolveCommentReport;
 
-  ResolveCommentReport._();
+  const ResolveCommentReport._();
   factory ResolveCommentReport.fromJson(Map<String, dynamic> json) =>
       _$ResolveCommentReportFromJson(json);
 
@@ -274,14 +274,14 @@ abstract class ResolveCommentReport
 abstract class ListCommentReports
     implements _$ListCommentReports, LemmyApiQuery<List<CommentReportView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  factory ListCommentReports({
+  const factory ListCommentReports({
     int page,
     int limit,
     int community,
     @required String auth,
   }) = _ListCommentReports;
 
-  ListCommentReports._();
+  const ListCommentReports._();
   factory ListCommentReports.fromJson(Map<String, dynamic> json) =>
       _$ListCommentReportsFromJson(json);
 

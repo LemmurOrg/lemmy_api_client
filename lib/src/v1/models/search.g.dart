@@ -33,9 +33,9 @@ _$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
-      'type_': instance.type,
-      'comments': instance.comments,
-      'posts': instance.posts,
-      'communities': instance.communities,
-      'users': instance.users,
+      'type_': instance.type?.toJson(),
+      'comments': instance.comments?.map((e) => e?.toJson())?.toList(),
+      'posts': instance.posts?.map((e) => e?.toJson())?.toList(),
+      'communities': instance.communities?.map((e) => e?.toJson())?.toList(),
+      'users': instance.users?.map((e) => e?.toJson())?.toList(),
     };

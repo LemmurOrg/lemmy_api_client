@@ -113,7 +113,7 @@ class __$GetCommunityCopyWithImpl<$Res> extends _$GetCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetCommunity extends _GetCommunity {
-  _$_GetCommunity({this.id, this.name, this.auth}) : super._();
+  const _$_GetCommunity({this.id, this.name, this.auth}) : super._();
 
   factory _$_GetCommunity.fromJson(Map<String, dynamic> json) =>
       _$_$_GetCommunityFromJson(json);
@@ -160,8 +160,9 @@ class _$_GetCommunity extends _GetCommunity {
 }
 
 abstract class _GetCommunity extends GetCommunity {
-  _GetCommunity._() : super._();
-  factory _GetCommunity({int id, String name, String auth}) = _$_GetCommunity;
+  const _GetCommunity._() : super._();
+  const factory _GetCommunity({int id, String name, String auth}) =
+      _$_GetCommunity;
 
   factory _GetCommunity.fromJson(Map<String, dynamic> json) =
       _$_GetCommunity.fromJson;
@@ -339,7 +340,7 @@ class __$CreateCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreateCommunity extends _CreateCommunity {
-  _$_CreateCommunity(
+  const _$_CreateCommunity(
       {@required this.name,
       @required this.title,
       this.description,
@@ -427,8 +428,8 @@ class _$_CreateCommunity extends _CreateCommunity {
 }
 
 abstract class _CreateCommunity extends CreateCommunity {
-  _CreateCommunity._() : super._();
-  factory _CreateCommunity(
+  const _CreateCommunity._() : super._();
+  const factory _CreateCommunity(
       {@required String name,
       @required String title,
       String description,
@@ -596,7 +597,7 @@ class __$ListCommunitiesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ListCommunities extends _ListCommunities {
-  _$_ListCommunities(
+  const _$_ListCommunities(
       {@required @JsonKey(name: 'type_') this.type,
       @required this.sort,
       this.page,
@@ -662,8 +663,8 @@ class _$_ListCommunities extends _ListCommunities {
 }
 
 abstract class _ListCommunities extends ListCommunities {
-  _ListCommunities._() : super._();
-  factory _ListCommunities(
+  const _ListCommunities._() : super._();
+  const factory _ListCommunities(
       {@required @JsonKey(name: 'type_') PostListingType type,
       @required SortType sort,
       int page,
@@ -844,7 +845,7 @@ class __$BanFromCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_BanFromCommunity extends _BanFromCommunity {
-  _$_BanFromCommunity(
+  const _$_BanFromCommunity(
       {@required this.communityId,
       @required this.userId,
       @required this.ban,
@@ -927,8 +928,8 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 }
 
 abstract class _BanFromCommunity extends BanFromCommunity {
-  _BanFromCommunity._() : super._();
-  factory _BanFromCommunity(
+  const _BanFromCommunity._() : super._();
+  const factory _BanFromCommunity(
       {@required int communityId,
       @required int userId,
       @required bool ban,
@@ -1077,7 +1078,7 @@ class __$AddModToCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_AddModToCommunity extends _AddModToCommunity {
-  _$_AddModToCommunity(
+  const _$_AddModToCommunity(
       {@required this.communityId,
       @required this.userId,
       @required this.added,
@@ -1139,8 +1140,8 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 }
 
 abstract class _AddModToCommunity extends AddModToCommunity {
-  _AddModToCommunity._() : super._();
-  factory _AddModToCommunity(
+  const _AddModToCommunity._() : super._();
+  const factory _AddModToCommunity(
       {@required int communityId,
       @required int userId,
       @required bool added,
@@ -1326,7 +1327,7 @@ class __$EditCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_EditCommunity extends _EditCommunity {
-  _$_EditCommunity(
+  const _$_EditCommunity(
       {@required this.communityId,
       @required this.title,
       this.description,
@@ -1415,8 +1416,8 @@ class _$_EditCommunity extends _EditCommunity {
 }
 
 abstract class _EditCommunity extends EditCommunity {
-  _EditCommunity._() : super._();
-  factory _EditCommunity(
+  const _EditCommunity._() : super._();
+  const factory _EditCommunity(
       {@required int communityId,
       @required String title,
       String description,
@@ -1561,7 +1562,7 @@ class __$DeleteCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeleteCommunity extends _DeleteCommunity {
-  _$_DeleteCommunity(
+  const _$_DeleteCommunity(
       {@required this.communityId, @required this.deleted, @required this.auth})
       : assert(communityId != null),
         assert(deleted != null),
@@ -1615,8 +1616,8 @@ class _$_DeleteCommunity extends _DeleteCommunity {
 }
 
 abstract class _DeleteCommunity extends DeleteCommunity {
-  _DeleteCommunity._() : super._();
-  factory _DeleteCommunity(
+  const _DeleteCommunity._() : super._();
+  const factory _DeleteCommunity(
       {@required int communityId,
       @required bool deleted,
       @required String auth}) = _$_DeleteCommunity;
@@ -1762,7 +1763,7 @@ class __$RemoveCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_RemoveCommunity extends _RemoveCommunity {
-  _$_RemoveCommunity(
+  const _$_RemoveCommunity(
       {@required this.communityId,
       @required this.removed,
       this.reason,
@@ -1831,8 +1832,8 @@ class _$_RemoveCommunity extends _RemoveCommunity {
 }
 
 abstract class _RemoveCommunity extends RemoveCommunity {
-  _RemoveCommunity._() : super._();
-  factory _RemoveCommunity(
+  const _RemoveCommunity._() : super._();
+  const factory _RemoveCommunity(
       {@required int communityId,
       @required bool removed,
       String reason,
@@ -1968,7 +1969,7 @@ class __$FollowCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_FollowCommunity extends _FollowCommunity {
-  _$_FollowCommunity(
+  const _$_FollowCommunity(
       {@required this.communityId, @required this.follow, @required this.auth})
       : assert(communityId != null),
         assert(follow != null),
@@ -2021,8 +2022,8 @@ class _$_FollowCommunity extends _FollowCommunity {
 }
 
 abstract class _FollowCommunity extends FollowCommunity {
-  _FollowCommunity._() : super._();
-  factory _FollowCommunity(
+  const _FollowCommunity._() : super._();
+  const factory _FollowCommunity(
       {@required int communityId,
       @required bool follow,
       @required String auth}) = _$_FollowCommunity;
@@ -2136,7 +2137,7 @@ class __$GetFollowedCommunitiesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetFollowedCommunities extends _GetFollowedCommunities {
-  _$_GetFollowedCommunities({@required this.auth})
+  const _$_GetFollowedCommunities({@required this.auth})
       : assert(auth != null),
         super._();
 
@@ -2175,8 +2176,8 @@ class _$_GetFollowedCommunities extends _GetFollowedCommunities {
 }
 
 abstract class _GetFollowedCommunities extends GetFollowedCommunities {
-  _GetFollowedCommunities._() : super._();
-  factory _GetFollowedCommunities({@required String auth}) =
+  const _GetFollowedCommunities._() : super._();
+  const factory _GetFollowedCommunities({@required String auth}) =
       _$_GetFollowedCommunities;
 
   factory _GetFollowedCommunities.fromJson(Map<String, dynamic> json) =
@@ -2300,7 +2301,7 @@ class __$TransferCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_TransferCommunity extends _TransferCommunity {
-  _$_TransferCommunity(
+  const _$_TransferCommunity(
       {@required this.communityId, @required this.userId, @required this.auth})
       : assert(communityId != null),
         assert(userId != null),
@@ -2353,8 +2354,8 @@ class _$_TransferCommunity extends _TransferCommunity {
 }
 
 abstract class _TransferCommunity extends TransferCommunity {
-  _TransferCommunity._() : super._();
-  factory _TransferCommunity(
+  const _TransferCommunity._() : super._();
+  const factory _TransferCommunity(
       {@required int communityId,
       @required int userId,
       @required String auth}) = _$_TransferCommunity;

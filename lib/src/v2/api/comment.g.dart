@@ -173,7 +173,7 @@ Map<String, dynamic> _$_$_CreateCommentLikeToJson(
   }
 
   writeNotNull('comment_id', instance.commentId);
-  writeNotNull('score', instance.score);
+  writeNotNull('score', instance.score?.toJson());
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -202,8 +202,8 @@ Map<String, dynamic> _$_$_GetCommentsToJson(_$_GetComments instance) {
     }
   }
 
-  writeNotNull('type_', instance.type);
-  writeNotNull('sort', instance.sort);
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);

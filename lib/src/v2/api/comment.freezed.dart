@@ -134,7 +134,7 @@ class __$CreateCommentCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreateComment extends _CreateComment {
-  _$_CreateComment(
+  const _$_CreateComment(
       {@required this.content,
       this.parentId,
       @required this.postId,
@@ -202,8 +202,8 @@ class _$_CreateComment extends _CreateComment {
 }
 
 abstract class _CreateComment extends CreateComment {
-  _CreateComment._() : super._();
-  factory _CreateComment(
+  const _CreateComment._() : super._();
+  const factory _CreateComment(
       {@required String content,
       int parentId,
       @required int postId,
@@ -342,7 +342,7 @@ class __$EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_EditComment extends _EditComment {
-  _$_EditComment(
+  const _$_EditComment(
       {@required this.content,
       @required this.commentId,
       this.formId,
@@ -404,8 +404,8 @@ class _$_EditComment extends _EditComment {
 }
 
 abstract class _EditComment extends EditComment {
-  _EditComment._() : super._();
-  factory _EditComment(
+  const _EditComment._() : super._();
+  const factory _EditComment(
       {@required String content,
       @required int commentId,
       String formId,
@@ -536,7 +536,7 @@ class __$DeleteCommentCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeleteComment extends _DeleteComment {
-  _$_DeleteComment(
+  const _$_DeleteComment(
       {@required this.commentId, @required this.deleted, @required this.auth})
       : assert(commentId != null),
         assert(deleted != null),
@@ -590,8 +590,8 @@ class _$_DeleteComment extends _DeleteComment {
 }
 
 abstract class _DeleteComment extends DeleteComment {
-  _DeleteComment._() : super._();
-  factory _DeleteComment(
+  const _DeleteComment._() : super._();
+  const factory _DeleteComment(
       {@required int commentId,
       @required bool deleted,
       @required String auth}) = _$_DeleteComment;
@@ -726,7 +726,7 @@ class __$RemoveCommentCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_RemoveComment extends _RemoveComment {
-  _$_RemoveComment(
+  const _$_RemoveComment(
       {@required this.commentId,
       @required this.removed,
       this.reason,
@@ -788,8 +788,8 @@ class _$_RemoveComment extends _RemoveComment {
 }
 
 abstract class _RemoveComment extends RemoveComment {
-  _RemoveComment._() : super._();
-  factory _RemoveComment(
+  const _RemoveComment._() : super._();
+  const factory _RemoveComment(
       {@required int commentId,
       @required bool removed,
       String reason,
@@ -918,7 +918,7 @@ class __$MarkCommentAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MarkCommentAsRead extends _MarkCommentAsRead {
-  _$_MarkCommentAsRead(
+  const _$_MarkCommentAsRead(
       {@required this.commentId, @required this.read, @required this.auth})
       : assert(commentId != null),
         assert(read != null),
@@ -971,8 +971,8 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
 }
 
 abstract class _MarkCommentAsRead extends MarkCommentAsRead {
-  _MarkCommentAsRead._() : super._();
-  factory _MarkCommentAsRead(
+  const _MarkCommentAsRead._() : super._();
+  const factory _MarkCommentAsRead(
       {@required int commentId,
       @required bool read,
       @required String auth}) = _$_MarkCommentAsRead;
@@ -1096,7 +1096,7 @@ class __$SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SaveComment extends _SaveComment {
-  _$_SaveComment(
+  const _$_SaveComment(
       {@required this.commentId, @required this.save, @required this.auth})
       : assert(commentId != null),
         assert(save != null),
@@ -1149,8 +1149,8 @@ class _$_SaveComment extends _SaveComment {
 }
 
 abstract class _SaveComment extends SaveComment {
-  _SaveComment._() : super._();
-  factory _SaveComment(
+  const _SaveComment._() : super._();
+  const factory _SaveComment(
       {@required int commentId,
       @required bool save,
       @required String auth}) = _$_SaveComment;
@@ -1278,7 +1278,7 @@ class __$CreateCommentLikeCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreateCommentLike extends _CreateCommentLike {
-  _$_CreateCommentLike(
+  const _$_CreateCommentLike(
       {@required this.commentId, @required this.score, @required this.auth})
       : assert(commentId != null),
         assert(score != null),
@@ -1331,8 +1331,8 @@ class _$_CreateCommentLike extends _CreateCommentLike {
 }
 
 abstract class _CreateCommentLike extends CreateCommentLike {
-  _CreateCommentLike._() : super._();
-  factory _CreateCommentLike(
+  const _CreateCommentLike._() : super._();
+  const factory _CreateCommentLike(
       {@required int commentId,
       @required VoteType score,
       @required String auth}) = _$_CreateCommentLike;
@@ -1507,7 +1507,7 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetComments extends _GetComments {
-  _$_GetComments(
+  const _$_GetComments(
       {@required @JsonKey(name: 'type_') this.type,
       @required this.sort,
       this.page,
@@ -1587,8 +1587,8 @@ class _$_GetComments extends _GetComments {
 }
 
 abstract class _GetComments extends GetComments {
-  _GetComments._() : super._();
-  factory _GetComments(
+  const _GetComments._() : super._();
+  const factory _GetComments(
       {@required @JsonKey(name: 'type_') CommentListingType type,
       @required SortType sort,
       int page,
@@ -1729,7 +1729,7 @@ class __$CreateCommentReportCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreateCommentReport extends _CreateCommentReport {
-  _$_CreateCommentReport(
+  const _$_CreateCommentReport(
       {@required this.commentId, @required this.reason, @required this.auth})
       : assert(commentId != null),
         assert(reason != null),
@@ -1783,8 +1783,8 @@ class _$_CreateCommentReport extends _CreateCommentReport {
 }
 
 abstract class _CreateCommentReport extends CreateCommentReport {
-  _CreateCommentReport._() : super._();
-  factory _CreateCommentReport(
+  const _CreateCommentReport._() : super._();
+  const factory _CreateCommentReport(
       {@required int commentId,
       @required String reason,
       @required String auth}) = _$_CreateCommentReport;
@@ -1912,7 +1912,7 @@ class __$ResolveCommentReportCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ResolveCommentReport extends _ResolveCommentReport {
-  _$_ResolveCommentReport(
+  const _$_ResolveCommentReport(
       {@required this.reportId, @required this.resolved, @required this.auth})
       : assert(reportId != null),
         assert(resolved != null),
@@ -1967,8 +1967,8 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
 }
 
 abstract class _ResolveCommentReport extends ResolveCommentReport {
-  _ResolveCommentReport._() : super._();
-  factory _ResolveCommentReport(
+  const _ResolveCommentReport._() : super._();
+  const factory _ResolveCommentReport(
       {@required int reportId,
       @required bool resolved,
       @required String auth}) = _$_ResolveCommentReport;
@@ -2100,7 +2100,7 @@ class __$ListCommentReportsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ListCommentReports extends _ListCommentReports {
-  _$_ListCommentReports(
+  const _$_ListCommentReports(
       {this.page, this.limit, this.community, @required this.auth})
       : assert(auth != null),
         super._();
@@ -2156,8 +2156,8 @@ class _$_ListCommentReports extends _ListCommentReports {
 }
 
 abstract class _ListCommentReports extends ListCommentReports {
-  _ListCommentReports._() : super._();
-  factory _ListCommentReports(
+  const _ListCommentReports._() : super._();
+  const factory _ListCommentReports(
       {int page,
       int limit,
       int community,

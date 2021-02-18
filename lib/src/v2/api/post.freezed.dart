@@ -103,7 +103,7 @@ class __$GetPostCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetPost extends _GetPost {
-  _$_GetPost({@required this.id, this.auth})
+  const _$_GetPost({@required this.id, this.auth})
       : assert(id != null),
         super._();
 
@@ -147,8 +147,8 @@ class _$_GetPost extends _GetPost {
 }
 
 abstract class _GetPost extends GetPost {
-  _GetPost._() : super._();
-  factory _GetPost({@required int id, String auth}) = _$_GetPost;
+  const _GetPost._() : super._();
+  const factory _GetPost({@required int id, String auth}) = _$_GetPost;
 
   factory _GetPost.fromJson(Map<String, dynamic> json) = _$_GetPost.fromJson;
 
@@ -302,7 +302,7 @@ class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreatePost extends _CreatePost {
-  _$_CreatePost(
+  const _$_CreatePost(
       {@required this.name,
       this.url,
       this.body,
@@ -376,8 +376,8 @@ class _$_CreatePost extends _CreatePost {
 }
 
 abstract class _CreatePost extends CreatePost {
-  _CreatePost._() : super._();
-  factory _CreatePost(
+  const _CreatePost._() : super._();
+  const factory _CreatePost(
       {@required String name,
       String url,
       String body,
@@ -557,7 +557,7 @@ class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetPosts extends _GetPosts {
-  _$_GetPosts(
+  const _$_GetPosts(
       {@required @JsonKey(name: 'type_') this.type,
       @required this.sort,
       this.page,
@@ -637,8 +637,8 @@ class _$_GetPosts extends _GetPosts {
 }
 
 abstract class _GetPosts extends GetPosts {
-  _GetPosts._() : super._();
-  factory _GetPosts(
+  const _GetPosts._() : super._();
+  const factory _GetPosts(
       {@required @JsonKey(name: 'type_') PostListingType type,
       @required SortType sort,
       int page,
@@ -776,7 +776,7 @@ class __$CreatePostLikeCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreatePostLike extends _CreatePostLike {
-  _$_CreatePostLike(
+  const _$_CreatePostLike(
       {@required this.postId, @required this.score, @required this.auth})
       : assert(postId != null),
         assert(score != null),
@@ -828,8 +828,8 @@ class _$_CreatePostLike extends _CreatePostLike {
 }
 
 abstract class _CreatePostLike extends CreatePostLike {
-  _CreatePostLike._() : super._();
-  factory _CreatePostLike(
+  const _CreatePostLike._() : super._();
+  const factory _CreatePostLike(
       {@required int postId,
       @required VoteType score,
       @required String auth}) = _$_CreatePostLike;
@@ -984,7 +984,7 @@ class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_EditPost extends _EditPost {
-  _$_EditPost(
+  const _$_EditPost(
       {@required this.postId,
       @required this.name,
       this.url,
@@ -1057,8 +1057,8 @@ class _$_EditPost extends _EditPost {
 }
 
 abstract class _EditPost extends EditPost {
-  _EditPost._() : super._();
-  factory _EditPost(
+  const _EditPost._() : super._();
+  const factory _EditPost(
       {@required int postId,
       @required String name,
       String url,
@@ -1189,7 +1189,7 @@ class __$DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeletePost extends _DeletePost {
-  _$_DeletePost(
+  const _$_DeletePost(
       {@required this.postId, @required this.deleted, @required this.auth})
       : assert(postId != null),
         assert(deleted != null),
@@ -1242,8 +1242,8 @@ class _$_DeletePost extends _DeletePost {
 }
 
 abstract class _DeletePost extends DeletePost {
-  _DeletePost._() : super._();
-  factory _DeletePost(
+  const _DeletePost._() : super._();
+  const factory _DeletePost(
       {@required int postId,
       @required bool deleted,
       @required String auth}) = _$_DeletePost;
@@ -1375,7 +1375,7 @@ class __$RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_RemovePost extends _RemovePost {
-  _$_RemovePost(
+  const _$_RemovePost(
       {@required this.postId,
       @required this.removed,
       this.reason,
@@ -1436,8 +1436,8 @@ class _$_RemovePost extends _RemovePost {
 }
 
 abstract class _RemovePost extends RemovePost {
-  _RemovePost._() : super._();
-  factory _RemovePost(
+  const _RemovePost._() : super._();
+  const factory _RemovePost(
       {@required int postId,
       @required bool removed,
       String reason,
@@ -1560,7 +1560,7 @@ class __$LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_LockPost extends _LockPost {
-  _$_LockPost(
+  const _$_LockPost(
       {@required this.postId, @required this.locked, @required this.auth})
       : assert(postId != null),
         assert(locked != null),
@@ -1612,8 +1612,8 @@ class _$_LockPost extends _LockPost {
 }
 
 abstract class _LockPost extends LockPost {
-  _LockPost._() : super._();
-  factory _LockPost(
+  const _LockPost._() : super._();
+  const factory _LockPost(
       {@required int postId,
       @required bool locked,
       @required String auth}) = _$_LockPost;
@@ -1735,7 +1735,7 @@ class __$StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_StickyPost extends _StickyPost {
-  _$_StickyPost(
+  const _$_StickyPost(
       {@required this.postId, @required this.stickied, @required this.auth})
       : assert(postId != null),
         assert(stickied != null),
@@ -1788,8 +1788,8 @@ class _$_StickyPost extends _StickyPost {
 }
 
 abstract class _StickyPost extends StickyPost {
-  _StickyPost._() : super._();
-  factory _StickyPost(
+  const _StickyPost._() : super._();
+  const factory _StickyPost(
       {@required int postId,
       @required bool stickied,
       @required String auth}) = _$_StickyPost;
@@ -1909,7 +1909,8 @@ class __$SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SavePost extends _SavePost {
-  _$_SavePost({@required this.postId, @required this.save, @required this.auth})
+  const _$_SavePost(
+      {@required this.postId, @required this.save, @required this.auth})
       : assert(postId != null),
         assert(save != null),
         assert(auth != null),
@@ -1960,8 +1961,8 @@ class _$_SavePost extends _SavePost {
 }
 
 abstract class _SavePost extends SavePost {
-  _SavePost._() : super._();
-  factory _SavePost(
+  const _SavePost._() : super._();
+  const factory _SavePost(
       {@required int postId,
       @required bool save,
       @required String auth}) = _$_SavePost;
@@ -2086,7 +2087,7 @@ class __$CreatePostReportCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CreatePostReport extends _CreatePostReport {
-  _$_CreatePostReport(
+  const _$_CreatePostReport(
       {@required this.postId, @required this.reason, @required this.auth})
       : assert(postId != null),
         assert(reason != null),
@@ -2138,8 +2139,8 @@ class _$_CreatePostReport extends _CreatePostReport {
 }
 
 abstract class _CreatePostReport extends CreatePostReport {
-  _CreatePostReport._() : super._();
-  factory _CreatePostReport(
+  const _CreatePostReport._() : super._();
+  const factory _CreatePostReport(
       {@required int postId,
       @required String reason,
       @required String auth}) = _$_CreatePostReport;
@@ -2267,7 +2268,7 @@ class __$ResolvePostReportCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ResolvePostReport extends _ResolvePostReport {
-  _$_ResolvePostReport(
+  const _$_ResolvePostReport(
       {@required this.reportId, @required this.resolved, @required this.auth})
       : assert(reportId != null),
         assert(resolved != null),
@@ -2321,8 +2322,8 @@ class _$_ResolvePostReport extends _ResolvePostReport {
 }
 
 abstract class _ResolvePostReport extends ResolvePostReport {
-  _ResolvePostReport._() : super._();
-  factory _ResolvePostReport(
+  const _ResolvePostReport._() : super._();
+  const factory _ResolvePostReport(
       {@required int reportId,
       @required bool resolved,
       @required String auth}) = _$_ResolvePostReport;
@@ -2454,7 +2455,7 @@ class __$ListPostReportsCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ListPostReports extends _ListPostReports {
-  _$_ListPostReports(
+  const _$_ListPostReports(
       {this.page, this.limit, this.community, @required this.auth})
       : assert(auth != null),
         super._();
@@ -2510,8 +2511,8 @@ class _$_ListPostReports extends _ListPostReports {
 }
 
 abstract class _ListPostReports extends ListPostReports {
-  _ListPostReports._() : super._();
-  factory _ListPostReports(
+  const _ListPostReports._() : super._();
+  const factory _ListPostReports(
       {int page,
       int limit,
       int community,
