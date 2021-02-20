@@ -31,8 +31,7 @@ Future<void> assertNoStagedGit() async {
 }
 
 class Version {
-  int major, minor, patch, code;
-  String toString() => '$major.$minor.$patch+$code';
+  int major, minor, patch;
   String toStringNoCode() => '$major.$minor.$patch';
 }
 
@@ -46,7 +45,6 @@ Future<Version> bumpedVersion(String versionBumpType) async {
   var major = int.parse(versionMatch.group(1));
   var minor = int.parse(versionMatch.group(2));
   var patch = int.parse(versionMatch.group(3));
-  var code = int.parse(versionMatch.group(4));
 
   switch (versionBumpType) {
     case 'patch':
@@ -62,13 +60,11 @@ Future<Version> bumpedVersion(String versionBumpType) async {
       major++;
       break;
   }
-  code++;
 
   return Version()
     ..major = major
     ..minor = minor
-    ..patch = patch
-    ..code = code;
+    ..patch = patch;
 }
 
 Future<void> updatePubspec(Version version) async {
@@ -110,7 +106,6 @@ Future<void> runGitCommands(Version version) async {
     'add',
     'CHANGELOG.md',
     'pubspec.yaml',
-    'fastlane/metadata/android/en-US/changelogs/${version.code}.txt'
   ]);
   print('done');
 
