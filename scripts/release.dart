@@ -32,15 +32,15 @@ Future<void> assertNoStagedGit() async {
 
 class Version {
   int major, minor, patch;
-  String toStringNoCode() => '$major.$minor.$patch';
+  String toString() => '$major.$minor.$patch';
 }
 
 Future<Version> bumpedVersion(String versionBumpType) async {
   final pubspecFile = File('pubspec.yaml');
   final pubspecContents = await pubspecFile.readAsString();
 
-  final versionMatch = RegExp(r'version: (\d+)\.(\d+)\.(\d+)\+(\d+)')
-      .firstMatch(pubspecContents);
+  final versionMatch =
+      RegExp(r'version: (\d+)\.(\d+)\.(\d+)').firstMatch(pubspecContents);
 
   var major = int.parse(versionMatch.group(1));
   var minor = int.parse(versionMatch.group(2));
@@ -91,13 +91,13 @@ Future<void> updateChangelog(Version version) async {
   final dateString = '${date.year}-${date.month.toString().padLeft(2, '0')}'
       '-${date.day.toString().padLeft(2, '0')}';
 
-  currentChangelog = currentChangelog.replaceFirst(
-      'Unreleased', 'v${version.toStringNoCode()} - $dateString');
+  currentChangelog =
+      currentChangelog.replaceFirst('Unreleased', 'v$version - $dateString');
 
   confirm('Changelog looks good?\n$currentChangelog\n');
 
-  await changelogFile.writeAsString(changelogContents.replaceFirst(
-      'Unreleased', 'v${version.toStringNoCode()} - $dateString'));
+  await changelogFile.writeAsString(
+      changelogContents.replaceFirst('Unreleased', 'v$version - $dateString'));
 }
 
 Future<void> runGitCommands(Version version) async {
@@ -110,12 +110,11 @@ Future<void> runGitCommands(Version version) async {
   print('done');
 
   stdout.write('Running git commit... ');
-  await Process.run(
-      'git', ['commit', '-m', 'Release v${version.toStringNoCode()}']);
+  await Process.run('git', ['commit', '-m', 'Release v$version']);
   print('done');
 
   stdout.write('Running git tag... ');
-  await Process.run('git', ['tag', 'v${version.toStringNoCode()}']);
+  await Process.run('git', ['tag', 'v$version']);
   print('done');
 }
 
