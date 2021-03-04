@@ -49,6 +49,11 @@ linter:
     - prefer_const_literals_to_create_immutables
     - prefer_const_constructors_in_immutables
     - prefer_final_locals
+    - cast_nullable_to_non_nullable
+    - tighten_type_of_initializing_formals
+    - unnecessary_null_checks
+    - avoid_type_to_string
+    - null_check_on_nullable_type_parameter
 
     # STYLE
     - camel_case_types
