@@ -10,8 +10,7 @@ part 'api.freezed.dart';
 part 'api.g.dart';
 
 @freezed
-abstract class FullCommunityView extends WithInstanceHost
-    implements _$FullCommunityView {
+class FullCommunityView extends WithInstanceHost with _$FullCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullCommunityView({
     required CommunityView communityView,
@@ -26,7 +25,7 @@ abstract class FullCommunityView extends WithInstanceHost
 }
 
 @freezed
-abstract class FullPostView extends WithInstanceHost implements _$FullPostView {
+class FullPostView extends WithInstanceHost with _$FullPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullPostView({
     required PostView postView,
@@ -42,8 +41,7 @@ abstract class FullPostView extends WithInstanceHost implements _$FullPostView {
 }
 
 @freezed
-abstract class SearchResults extends WithInstanceHost
-    implements _$SearchResults {
+class SearchResults extends WithInstanceHost with _$SearchResults {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SearchResults({
     @JsonKey(name: 'type_') required SearchType type,
@@ -60,7 +58,7 @@ abstract class SearchResults extends WithInstanceHost
 }
 
 @freezed
-abstract class Modlog extends WithInstanceHost implements _$Modlog {
+class Modlog extends WithInstanceHost with _$Modlog {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Modlog({
     required List<ModRemovePostView> removedPosts,
@@ -80,8 +78,7 @@ abstract class Modlog extends WithInstanceHost implements _$Modlog {
 }
 
 @freezed
-abstract class FullCommentView extends WithInstanceHost
-    implements _$FullCommentView {
+class FullCommentView extends WithInstanceHost with _$FullCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullCommentView({
     required CommentView commentView,
@@ -95,7 +92,7 @@ abstract class FullCommentView extends WithInstanceHost
 }
 
 @freezed
-abstract class FullSiteView extends WithInstanceHost implements _$FullSiteView {
+class FullSiteView extends WithInstanceHost with _$FullSiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullSiteView({
     SiteView? siteView,
@@ -114,8 +111,7 @@ abstract class FullSiteView extends WithInstanceHost implements _$FullSiteView {
 }
 
 @freezed
-abstract class FederatedInstances extends WithInstanceHost
-    implements _$FederatedInstances {
+class FederatedInstances extends WithInstanceHost with _$FederatedInstances {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FederatedInstances({
     required List<String> linked,
@@ -130,7 +126,7 @@ abstract class FederatedInstances extends WithInstanceHost
 }
 
 @freezed
-abstract class Captcha implements _$Captcha {
+class Captcha with _$Captcha {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Captcha({
     /// A Base64 encoded png
@@ -147,7 +143,7 @@ abstract class Captcha implements _$Captcha {
 }
 
 @freezed
-abstract class FullUserView extends WithInstanceHost implements _$FullUserView {
+class FullUserView extends WithInstanceHost with _$FullUserView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullUserView({
     required UserViewSafe userView,
@@ -163,8 +159,7 @@ abstract class FullUserView extends WithInstanceHost implements _$FullUserView {
 }
 
 @freezed
-abstract class BannedCommunityUser extends WithInstanceHost
-    implements _$BannedCommunityUser {
+class BannedCommunityUser extends WithInstanceHost with _$BannedCommunityUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedCommunityUser({
     required UserViewSafe userView,
@@ -178,7 +173,7 @@ abstract class BannedCommunityUser extends WithInstanceHost
 }
 
 @freezed
-abstract class BannedUser extends WithInstanceHost implements _$BannedUser {
+class BannedUser extends WithInstanceHost with _$BannedUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedUser({
     required UserViewSafe userView,
@@ -192,8 +187,8 @@ abstract class BannedUser extends WithInstanceHost implements _$BannedUser {
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class GetReportCountResponse extends WithInstanceHost
-    implements _$GetReportCountResponse {
+class GetReportCountResponse extends WithInstanceHost
+    with _$GetReportCountResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory GetReportCountResponse({
     int? community,
@@ -208,8 +203,8 @@ abstract class GetReportCountResponse extends WithInstanceHost
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class ResolveCommentReportResponse extends WithInstanceHost
-    implements _$ResolveCommentReportResponse {
+class ResolveCommentReportResponse extends WithInstanceHost
+    with _$ResolveCommentReportResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolveCommentReportResponse({
     required int reportId,
@@ -223,8 +218,8 @@ abstract class ResolveCommentReportResponse extends WithInstanceHost
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class ResolvePostReportResponse extends WithInstanceHost
-    implements _$ResolvePostReportResponse {
+class ResolvePostReportResponse extends WithInstanceHost
+    with _$ResolvePostReportResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolvePostReportResponse({
     required int reportId,

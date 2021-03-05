@@ -53,7 +53,7 @@ class PictrsApi {
 /// Based on https://git.asonix.dog/asonix/pict-rs/
 
 @freezed
-abstract class PictrsUploadFile implements _$PictrsUploadFile {
+class PictrsUploadFile with _$PictrsUploadFile {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory PictrsUploadFile({
     required String deleteToken,
@@ -66,7 +66,7 @@ abstract class PictrsUploadFile implements _$PictrsUploadFile {
 }
 
 @freezed
-abstract class PictrsUpload extends WithInstanceHost implements _$PictrsUpload {
+class PictrsUpload extends WithInstanceHost with _$PictrsUpload {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PictrsUpload({
     required String msg,

@@ -9,7 +9,7 @@ part 'source.freezed.dart';
 part 'source.g.dart';
 
 @freezed
-abstract class UserSafe extends WithInstanceHost implements _$UserSafe {
+class UserSafe extends WithInstanceHost with _$UserSafe {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafe({
@@ -35,8 +35,7 @@ abstract class UserSafe extends WithInstanceHost implements _$UserSafe {
 }
 
 @freezed
-abstract class UserSafeSettings extends WithInstanceHost
-    implements _$UserSafeSettings {
+class UserSafeSettings extends WithInstanceHost with _$UserSafeSettings {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafeSettings({
@@ -73,7 +72,7 @@ abstract class UserSafeSettings extends WithInstanceHost
 }
 
 @freezed
-abstract class Site extends WithInstanceHost implements _$Site {
+class Site extends WithInstanceHost with _$Site {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Site({
@@ -95,8 +94,7 @@ abstract class Site extends WithInstanceHost implements _$Site {
 }
 
 @freezed
-abstract class PrivateMessage extends WithInstanceHost
-    implements _$PrivateMessage {
+class PrivateMessage extends WithInstanceHost with _$PrivateMessage {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessage({
@@ -118,7 +116,7 @@ abstract class PrivateMessage extends WithInstanceHost
 }
 
 @freezed
-abstract class PostReport extends WithInstanceHost implements _$PostReport {
+class PostReport extends WithInstanceHost with _$PostReport {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReport({
@@ -141,7 +139,7 @@ abstract class PostReport extends WithInstanceHost implements _$PostReport {
 }
 
 @freezed
-abstract class Post extends WithInstanceHost implements _$Post {
+class Post extends WithInstanceHost with _$Post {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Post({
@@ -171,8 +169,8 @@ abstract class Post extends WithInstanceHost implements _$Post {
 }
 
 @freezed
-abstract class PasswordResetRequest extends WithInstanceHost
-    implements _$PasswordResetRequest {
+class PasswordResetRequest extends WithInstanceHost
+    with _$PasswordResetRequest {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PasswordResetRequest({
@@ -188,8 +186,7 @@ abstract class PasswordResetRequest extends WithInstanceHost
 }
 
 @freezed
-abstract class ModRemovePost extends WithInstanceHost
-    implements _$ModRemovePost {
+class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePost({
@@ -207,7 +204,7 @@ abstract class ModRemovePost extends WithInstanceHost
 }
 
 @freezed
-abstract class ModLockPost extends WithInstanceHost implements _$ModLockPost {
+class ModLockPost extends WithInstanceHost with _$ModLockPost {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPost({
@@ -224,8 +221,7 @@ abstract class ModLockPost extends WithInstanceHost implements _$ModLockPost {
 }
 
 @freezed
-abstract class ModStickyPost extends WithInstanceHost
-    implements _$ModStickyPost {
+class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPost({
@@ -242,8 +238,7 @@ abstract class ModStickyPost extends WithInstanceHost
 }
 
 @freezed
-abstract class ModRemoveComment extends WithInstanceHost
-    implements _$ModRemoveComment {
+class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveComment({
@@ -261,8 +256,7 @@ abstract class ModRemoveComment extends WithInstanceHost
 }
 
 @freezed
-abstract class ModRemoveCommunity extends WithInstanceHost
-    implements _$ModRemoveCommunity {
+class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunity({
@@ -281,8 +275,7 @@ abstract class ModRemoveCommunity extends WithInstanceHost
 }
 
 @freezed
-abstract class ModBanFromCommunity extends WithInstanceHost
-    implements _$ModBanFromCommunity {
+class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunity({
@@ -302,7 +295,7 @@ abstract class ModBanFromCommunity extends WithInstanceHost
 }
 
 @freezed
-abstract class ModBan extends WithInstanceHost implements _$ModBan {
+class ModBan extends WithInstanceHost with _$ModBan {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBan({
@@ -320,8 +313,7 @@ abstract class ModBan extends WithInstanceHost implements _$ModBan {
 }
 
 @freezed
-abstract class ModAddCommunity extends WithInstanceHost
-    implements _$ModAddCommunity {
+class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunity({
@@ -339,7 +331,7 @@ abstract class ModAddCommunity extends WithInstanceHost
 }
 
 @freezed
-abstract class ModAdd extends WithInstanceHost implements _$ModAdd {
+class ModAdd extends WithInstanceHost with _$ModAdd {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAdd({
@@ -355,8 +347,7 @@ abstract class ModAdd extends WithInstanceHost implements _$ModAdd {
 }
 
 @freezed
-abstract class CommunitySafe extends WithInstanceHost
-    implements _$CommunitySafe {
+class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunitySafe({
@@ -383,8 +374,7 @@ abstract class CommunitySafe extends WithInstanceHost
 }
 
 @freezed
-abstract class CommentReport extends WithInstanceHost
-    implements _$CommentReport {
+class CommentReport extends WithInstanceHost with _$CommentReport {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReport({
@@ -405,7 +395,7 @@ abstract class CommentReport extends WithInstanceHost
 }
 
 @freezed
-abstract class Comment extends WithInstanceHost implements _$Comment {
+class Comment extends WithInstanceHost with _$Comment {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Comment({
@@ -429,7 +419,7 @@ abstract class Comment extends WithInstanceHost implements _$Comment {
 }
 
 @freezed
-abstract class Category extends WithInstanceHost implements _$Category {
+class Category extends WithInstanceHost with _$Category {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Category({
@@ -443,7 +433,7 @@ abstract class Category extends WithInstanceHost implements _$Category {
 }
 
 @freezed
-abstract class UserMention extends WithInstanceHost implements _$UserMention {
+class UserMention extends WithInstanceHost with _$UserMention {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMention({

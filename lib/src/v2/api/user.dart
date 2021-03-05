@@ -11,7 +11,7 @@ part 'user.freezed.dart';
 part 'user.g.dart';
 
 @freezed
-abstract class Login implements _$Login, LemmyApiQuery<Jwt> {
+class Login with _$Login implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Login({
     required String usernameOrEmail,
@@ -32,7 +32,7 @@ abstract class Login implements _$Login, LemmyApiQuery<Jwt> {
 }
 
 @freezed
-abstract class Register implements _$Register, LemmyApiQuery<Jwt> {
+class Register with _$Register implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Register({
     required String username,
@@ -59,7 +59,7 @@ abstract class Register implements _$Register, LemmyApiQuery<Jwt> {
 }
 
 @freezed
-abstract class GetCaptcha implements _$GetCaptcha, LemmyApiQuery<Captcha> {
+class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetCaptcha() = _GetCaptcha;
 
@@ -79,8 +79,7 @@ abstract class GetCaptcha implements _$GetCaptcha, LemmyApiQuery<Captcha> {
 }
 
 @freezed
-abstract class SaveUserSettings
-    implements _$SaveUserSettings, LemmyApiQuery<Jwt> {
+class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveUserSettings({
     required bool showNsfw,
@@ -119,8 +118,9 @@ abstract class SaveUserSettings
 }
 
 @freezed
-abstract class GetUserDetails
-    implements _$GetUserDetails, LemmyApiQuery<FullUserView> {
+class GetUserDetails
+    with _$GetUserDetails
+    implements LemmyApiQuery<FullUserView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetUserDetails({
     int? userId,
@@ -149,7 +149,7 @@ abstract class GetUserDetails
 }
 
 @freezed
-abstract class MarkAllAsRead implements _$MarkAllAsRead, LemmyApiQuery<Jwt> {
+class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory MarkAllAsRead({
     required String auth,
@@ -170,8 +170,7 @@ abstract class MarkAllAsRead implements _$MarkAllAsRead, LemmyApiQuery<Jwt> {
 }
 
 @freezed
-abstract class AddAdmin
-    implements _$AddAdmin, LemmyApiQuery<List<UserViewSafe>> {
+class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<UserViewSafe>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory AddAdmin({
     required int userId,
@@ -195,7 +194,7 @@ abstract class AddAdmin
 }
 
 @freezed
-abstract class BanUser implements _$BanUser, LemmyApiQuery<BannedUser> {
+class BanUser with _$BanUser implements LemmyApiQuery<BannedUser> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory BanUser({
     required int userId,
@@ -222,8 +221,7 @@ abstract class BanUser implements _$BanUser, LemmyApiQuery<BannedUser> {
 }
 
 @freezed
-abstract class GetReplies
-    implements _$GetReplies, LemmyApiQuery<List<CommentView>> {
+class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReplies({
     required SortType sort,
@@ -249,8 +247,9 @@ abstract class GetReplies
 }
 
 @freezed
-abstract class GetUserMentions
-    implements _$GetUserMentions, LemmyApiQuery<List<UserMentionView>> {
+class GetUserMentions
+    with _$GetUserMentions
+    implements LemmyApiQuery<List<UserMentionView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetUserMentions({
     required SortType sort,
@@ -278,8 +277,9 @@ abstract class GetUserMentions
 }
 
 @freezed
-abstract class MarkUserMentionAsRead
-    implements _$MarkUserMentionAsRead, LemmyApiQuery<UserMentionView> {
+class MarkUserMentionAsRead
+    with _$MarkUserMentionAsRead
+    implements LemmyApiQuery<UserMentionView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory MarkUserMentionAsRead({
     required int userMentionId,
@@ -303,7 +303,7 @@ abstract class MarkUserMentionAsRead
 }
 
 @freezed
-abstract class DeleteAccount implements _$DeleteAccount, LemmyApiQuery<Jwt> {
+class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory DeleteAccount({
     required String password,
@@ -325,7 +325,7 @@ abstract class DeleteAccount implements _$DeleteAccount, LemmyApiQuery<Jwt> {
 }
 
 @freezed
-abstract class PasswordReset implements _$PasswordReset, LemmyApiQuery<Null> {
+class PasswordReset with _$PasswordReset implements LemmyApiQuery<Null> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory PasswordReset({
     required String email,
@@ -346,7 +346,7 @@ abstract class PasswordReset implements _$PasswordReset, LemmyApiQuery<Null> {
 }
 
 @freezed
-abstract class PasswordChange implements _$PasswordChange, LemmyApiQuery<Jwt> {
+class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory PasswordChange({
     required String token,
@@ -369,8 +369,9 @@ abstract class PasswordChange implements _$PasswordChange, LemmyApiQuery<Jwt> {
 }
 
 @freezed
-abstract class CreatePrivateMessage
-    implements _$CreatePrivateMessage, LemmyApiQuery<PrivateMessageView> {
+class CreatePrivateMessage
+    with _$CreatePrivateMessage
+    implements LemmyApiQuery<PrivateMessageView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreatePrivateMessage({
     required String content,
@@ -394,8 +395,9 @@ abstract class CreatePrivateMessage
 }
 
 @freezed
-abstract class EditPrivateMessage
-    implements _$EditPrivateMessage, LemmyApiQuery<PrivateMessageView> {
+class EditPrivateMessage
+    with _$EditPrivateMessage
+    implements LemmyApiQuery<PrivateMessageView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditPrivateMessage({
     required int privateMessageId,
@@ -419,8 +421,9 @@ abstract class EditPrivateMessage
 }
 
 @freezed
-abstract class DeletePrivateMessage
-    implements _$DeletePrivateMessage, LemmyApiQuery<PrivateMessageView> {
+class DeletePrivateMessage
+    with _$DeletePrivateMessage
+    implements LemmyApiQuery<PrivateMessageView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory DeletePrivateMessage({
     required int privateMessageId,
@@ -444,8 +447,9 @@ abstract class DeletePrivateMessage
 }
 
 @freezed
-abstract class MarkPrivateMessageAsRead
-    implements _$MarkPrivateMessageAsRead, LemmyApiQuery<PrivateMessageView> {
+class MarkPrivateMessageAsRead
+    with _$MarkPrivateMessageAsRead
+    implements LemmyApiQuery<PrivateMessageView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory MarkPrivateMessageAsRead({
     required int privateMessageId,
@@ -469,8 +473,9 @@ abstract class MarkPrivateMessageAsRead
 }
 
 @freezed
-abstract class GetPrivateMessages
-    implements _$GetPrivateMessages, LemmyApiQuery<List<PrivateMessageView>> {
+class GetPrivateMessages
+    with _$GetPrivateMessages
+    implements LemmyApiQuery<List<PrivateMessageView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPrivateMessages({
     required bool unreadOnly,
@@ -498,8 +503,9 @@ abstract class GetPrivateMessages
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class GetReportCount
-    implements _$GetReportCount, LemmyApiQuery<GetReportCountResponse> {
+class GetReportCount
+    with _$GetReportCount
+    implements LemmyApiQuery<GetReportCountResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReportCount({
     int? community,

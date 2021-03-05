@@ -9,8 +9,9 @@ part 'comment.freezed.dart';
 part 'comment.g.dart';
 
 @freezed
-abstract class CreateComment
-    implements _$CreateComment, LemmyApiQuery<FullCommentView> {
+class CreateComment
+    with _$CreateComment
+    implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateComment({
     required String content,
@@ -36,8 +37,7 @@ abstract class CreateComment
 }
 
 @freezed
-abstract class EditComment
-    implements _$EditComment, LemmyApiQuery<FullCommentView> {
+class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditComment({
     required String content,
@@ -62,8 +62,9 @@ abstract class EditComment
 }
 
 @freezed
-abstract class DeleteComment
-    implements _$DeleteComment, LemmyApiQuery<FullCommentView> {
+class DeleteComment
+    with _$DeleteComment
+    implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory DeleteComment({
     required int commentId,
@@ -87,8 +88,9 @@ abstract class DeleteComment
 }
 
 @freezed
-abstract class RemoveComment
-    implements _$RemoveComment, LemmyApiQuery<FullCommentView> {
+class RemoveComment
+    with _$RemoveComment
+    implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory RemoveComment({
     required int commentId,
@@ -113,8 +115,9 @@ abstract class RemoveComment
 }
 
 @freezed
-abstract class MarkCommentAsRead
-    implements _$MarkCommentAsRead, LemmyApiQuery<FullCommentView> {
+class MarkCommentAsRead
+    with _$MarkCommentAsRead
+    implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory MarkCommentAsRead({
     required int commentId,
@@ -138,8 +141,7 @@ abstract class MarkCommentAsRead
 }
 
 @freezed
-abstract class SaveComment
-    implements _$SaveComment, LemmyApiQuery<FullCommentView> {
+class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveComment({
     required int commentId,
@@ -163,8 +165,9 @@ abstract class SaveComment
 }
 
 @freezed
-abstract class CreateCommentLike
-    implements _$CreateCommentLike, LemmyApiQuery<FullCommentView> {
+class CreateCommentLike
+    with _$CreateCommentLike
+    implements LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateCommentLike({
     required int commentId,
@@ -188,8 +191,9 @@ abstract class CreateCommentLike
 }
 
 @freezed
-abstract class GetComments
-    implements _$GetComments, LemmyApiQuery<List<CommentView>> {
+class GetComments
+    with _$GetComments
+    implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetComments({
     @JsonKey(name: 'type_') required CommentListingType type,
@@ -218,8 +222,9 @@ abstract class GetComments
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class CreateCommentReport
-    implements _$CreateCommentReport, LemmyApiQuery<bool> {
+class CreateCommentReport
+    with _$CreateCommentReport
+    implements LemmyApiQuery<bool> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateCommentReport({
     required int commentId,
@@ -243,10 +248,9 @@ abstract class CreateCommentReport
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class ResolveCommentReport
-    implements
-        _$ResolveCommentReport,
-        LemmyApiQuery<ResolveCommentReportResponse> {
+class ResolveCommentReport
+    with _$ResolveCommentReport
+    implements LemmyApiQuery<ResolveCommentReportResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ResolveCommentReport({
     required int reportId,
@@ -271,8 +275,9 @@ abstract class ResolveCommentReport
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class ListCommentReports
-    implements _$ListCommentReports, LemmyApiQuery<List<CommentReportView>> {
+class ListCommentReports
+    with _$ListCommentReports
+    implements LemmyApiQuery<List<CommentReportView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCommentReports({
     int? page,

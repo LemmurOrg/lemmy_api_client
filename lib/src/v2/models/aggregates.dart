@@ -7,7 +7,7 @@ part 'aggregates.freezed.dart';
 part 'aggregates.g.dart';
 
 @freezed
-abstract class UserAggregates implements _$UserAggregates {
+class UserAggregates with _$UserAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory UserAggregates({
     required int id,
@@ -24,7 +24,7 @@ abstract class UserAggregates implements _$UserAggregates {
 }
 
 @freezed
-abstract class SiteAggregates implements _$SiteAggregates {
+class SiteAggregates with _$SiteAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory SiteAggregates({
     required int id,
@@ -45,7 +45,7 @@ abstract class SiteAggregates implements _$SiteAggregates {
 }
 
 @freezed
-abstract class PostAggregates implements _$PostAggregates {
+class PostAggregates with _$PostAggregates {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory PostAggregates({
@@ -65,7 +65,7 @@ abstract class PostAggregates implements _$PostAggregates {
 }
 
 @freezed
-abstract class CommunityAggregates implements _$CommunityAggregates {
+class CommunityAggregates with _$CommunityAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory CommunityAggregates({
     required int id,
@@ -85,7 +85,7 @@ abstract class CommunityAggregates implements _$CommunityAggregates {
 }
 
 @freezed
-abstract class CommentAggregates implements _$CommentAggregates {
+class CommentAggregates with _$CommentAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory CommentAggregates({
     required int id,

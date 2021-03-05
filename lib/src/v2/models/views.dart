@@ -10,7 +10,7 @@ part 'views.freezed.dart';
 part 'views.g.dart';
 
 @freezed
-abstract class UserViewSafe extends WithInstanceHost implements _$UserViewSafe {
+class UserViewSafe extends WithInstanceHost with _$UserViewSafe {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserViewSafe({
     required UserSafe user,
@@ -23,8 +23,7 @@ abstract class UserViewSafe extends WithInstanceHost implements _$UserViewSafe {
 }
 
 @freezed
-abstract class UserMentionView extends WithInstanceHost
-    implements _$UserMentionView {
+class UserMentionView extends WithInstanceHost with _$UserMentionView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMentionView({
     required UserMention userMention,
@@ -46,7 +45,7 @@ abstract class UserMentionView extends WithInstanceHost
 }
 
 @freezed
-abstract class SiteView extends WithInstanceHost implements _$SiteView {
+class SiteView extends WithInstanceHost with _$SiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SiteView({
     required Site site,
@@ -60,8 +59,7 @@ abstract class SiteView extends WithInstanceHost implements _$SiteView {
 }
 
 @freezed
-abstract class PrivateMessageView extends WithInstanceHost
-    implements _$PrivateMessageView {
+class PrivateMessageView extends WithInstanceHost with _$PrivateMessageView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessageView({
     required PrivateMessage privateMessage,
@@ -75,7 +73,7 @@ abstract class PrivateMessageView extends WithInstanceHost
 }
 
 @freezed
-abstract class PostView extends WithInstanceHost implements _$PostView {
+class PostView extends WithInstanceHost with _$PostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostView({
     required Post post,
@@ -95,8 +93,7 @@ abstract class PostView extends WithInstanceHost implements _$PostView {
 }
 
 @freezed
-abstract class PostReportView extends WithInstanceHost
-    implements _$PostReportView {
+class PostReportView extends WithInstanceHost with _$PostReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReportView({
     required PostReport postReport,
@@ -113,7 +110,7 @@ abstract class PostReportView extends WithInstanceHost
 }
 
 @freezed
-abstract class CommentView extends WithInstanceHost implements _$CommentView {
+class CommentView extends WithInstanceHost with _$CommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentView({
     required Comment comment,
@@ -134,8 +131,7 @@ abstract class CommentView extends WithInstanceHost implements _$CommentView {
 }
 
 @freezed
-abstract class CommentReportView extends WithInstanceHost
-    implements _$CommentReportView {
+class CommentReportView extends WithInstanceHost with _$CommentReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReportView({
     required CommentReport commentReport,
@@ -153,8 +149,7 @@ abstract class CommentReportView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModAddCommunityView extends WithInstanceHost
-    implements _$ModAddCommunityView {
+class ModAddCommunityView extends WithInstanceHost with _$ModAddCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunityView({
     required ModAddCommunity modAddCommunity,
@@ -169,7 +164,7 @@ abstract class ModAddCommunityView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModAddView extends WithInstanceHost implements _$ModAddView {
+class ModAddView extends WithInstanceHost with _$ModAddView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddView({
     required ModAdd modAdd,
@@ -183,8 +178,8 @@ abstract class ModAddView extends WithInstanceHost implements _$ModAddView {
 }
 
 @freezed
-abstract class ModBanFromCommunityView extends WithInstanceHost
-    implements _$ModBanFromCommunityView {
+class ModBanFromCommunityView extends WithInstanceHost
+    with _$ModBanFromCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
@@ -199,7 +194,7 @@ abstract class ModBanFromCommunityView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModBanView extends WithInstanceHost implements _$ModBanView {
+class ModBanView extends WithInstanceHost with _$ModBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanView({
     required ModBan modBan,
@@ -213,8 +208,7 @@ abstract class ModBanView extends WithInstanceHost implements _$ModBanView {
 }
 
 @freezed
-abstract class ModLockPostView extends WithInstanceHost
-    implements _$ModLockPostView {
+class ModLockPostView extends WithInstanceHost with _$ModLockPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPostView({
     required ModLockPost modLockPost,
@@ -229,8 +223,8 @@ abstract class ModLockPostView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModRemoveCommentView extends WithInstanceHost
-    implements _$ModRemoveCommentView {
+class ModRemoveCommentView extends WithInstanceHost
+    with _$ModRemoveCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
@@ -247,8 +241,8 @@ abstract class ModRemoveCommentView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModRemoveCommunityView extends WithInstanceHost
-    implements _$ModRemoveCommunityView {
+class ModRemoveCommunityView extends WithInstanceHost
+    with _$ModRemoveCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunityView({
     required ModRemoveCommunity modRemoveCommunity,
@@ -262,8 +256,7 @@ abstract class ModRemoveCommunityView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModRemovePostView extends WithInstanceHost
-    implements _$ModRemovePostView {
+class ModRemovePostView extends WithInstanceHost with _$ModRemovePostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePostView({
     required ModRemovePost modRemovePost,
@@ -278,8 +271,7 @@ abstract class ModRemovePostView extends WithInstanceHost
 }
 
 @freezed
-abstract class ModStickyPostView extends WithInstanceHost
-    implements _$ModStickyPostView {
+class ModStickyPostView extends WithInstanceHost with _$ModStickyPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPostView({
     required ModStickyPost modStickyPost,
@@ -294,8 +286,8 @@ abstract class ModStickyPostView extends WithInstanceHost
 }
 
 @freezed
-abstract class CommunityFollowerView extends WithInstanceHost
-    implements _$CommunityFollowerView {
+class CommunityFollowerView extends WithInstanceHost
+    with _$CommunityFollowerView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityFollowerView({
     required CommunitySafe community,
@@ -308,8 +300,8 @@ abstract class CommunityFollowerView extends WithInstanceHost
 }
 
 @freezed
-abstract class CommunityModeratorView extends WithInstanceHost
-    implements _$CommunityModeratorView {
+class CommunityModeratorView extends WithInstanceHost
+    with _$CommunityModeratorView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityModeratorView({
     required CommunitySafe community,
@@ -322,8 +314,8 @@ abstract class CommunityModeratorView extends WithInstanceHost
 }
 
 @freezed
-abstract class CommunityUserBanView extends WithInstanceHost
-    implements _$CommunityUserBanView {
+class CommunityUserBanView extends WithInstanceHost
+    with _$CommunityUserBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityUserBanView({
     required CommunitySafe community,
@@ -336,8 +328,7 @@ abstract class CommunityUserBanView extends WithInstanceHost
 }
 
 @freezed
-abstract class CommunityView extends WithInstanceHost
-    implements _$CommunityView {
+class CommunityView extends WithInstanceHost with _$CommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityView({
     required CommunitySafe community,

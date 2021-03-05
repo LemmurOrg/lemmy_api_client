@@ -10,8 +10,9 @@ part 'site.freezed.dart';
 part 'site.g.dart';
 
 @freezed
-abstract class ListCategories
-    implements _$ListCategories, LemmyApiQuery<List<Category>> {
+class ListCategories
+    with _$ListCategories
+    implements LemmyApiQuery<List<Category>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCategories() = _ListCategories;
 
@@ -32,7 +33,7 @@ abstract class ListCategories
 }
 
 @freezed
-abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
+class Search with _$Search implements LemmyApiQuery<SearchResults> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Search({
     required String q,
@@ -61,7 +62,7 @@ abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
 }
 
 @freezed
-abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
+class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetModlog({
     int? modUserId,
@@ -86,7 +87,7 @@ abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
 }
 
 @freezed
-abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
+class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateSite({
     required String name,
@@ -116,7 +117,7 @@ abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
 }
 
 @freezed
-abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
+class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditSite({
     required String name,
@@ -146,7 +147,7 @@ abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
 }
 
 @freezed
-abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
+class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSite({
     String? auth,
@@ -169,8 +170,7 @@ abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
 }
 
 @freezed
-abstract class TransferSite
-    implements _$TransferSite, LemmyApiQuery<FullSiteView> {
+class TransferSite with _$TransferSite implements LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory TransferSite({
     required int userId,
@@ -194,7 +194,7 @@ abstract class TransferSite
 }
 
 @freezed
-abstract class GetSiteConfig implements _$GetSiteConfig, LemmyApiQuery<String> {
+class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSiteConfig({
     required String auth,
@@ -217,8 +217,7 @@ abstract class GetSiteConfig implements _$GetSiteConfig, LemmyApiQuery<String> {
 }
 
 @freezed
-abstract class SaveSiteConfig
-    implements _$SaveSiteConfig, LemmyApiQuery<String> {
+class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveSiteConfig({
     required String configHjson,
