@@ -63,7 +63,6 @@ linter:
     - library_prefixes
     - non_constant_identifier_names
     - constant_identifier_names # prefer
-    - lines_longer_than_80_chars # avoid
     - curly_braces_in_flow_control_structures
 
     # DOCUMENTATION

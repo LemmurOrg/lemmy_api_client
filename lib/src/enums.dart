@@ -1,4 +1,4 @@
-import 'package:collection/collection.dart';
+import 'package:lemmy_api_client/pictrs.dart';
 
 class VoteType {
   final int _value;
@@ -7,7 +7,7 @@ class VoteType {
 
   int get value => _value;
 
-  static VoteType? fromJson(int? value) {
+  factory VoteType.fromJson(int value) {
     switch (value) {
       case 1:
         return up;
@@ -16,7 +16,8 @@ class VoteType {
       case -1:
         return down;
       default:
-        return null;
+        throw LemmyApiException(
+            'Unexpected VoteType value "$value", this is likely a LemmyApiClient error, please open an issue');
     }
   }
 
@@ -34,8 +35,8 @@ class PostListingType {
 
   String get value => _value;
 
-  static PostListingType? fromJson(String? value) =>
-      values.firstWhereOrNull((e) => e.value == value);
+  factory PostListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
@@ -62,8 +63,8 @@ class SortType {
 
   String get value => _value;
 
-  static SortType? fromJson(String? value) =>
-      values.firstWhereOrNull((e) => e.value == value);
+  factory SortType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
@@ -103,8 +104,8 @@ class SearchType {
 
   String get value => _value;
 
-  static SearchType? fromJson(String? value) =>
-      values.firstWhereOrNull((e) => e.value == value);
+  factory SearchType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
@@ -135,8 +136,8 @@ class CommentListingType {
 
   String get value => _value;
 
-  static CommentListingType? fromJson(String? value) =>
-      values.firstWhereOrNull((e) => e.value == value);
+  factory CommentListingType.fromJson(String value) =>
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
