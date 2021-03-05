@@ -4,7 +4,7 @@ homepage: https://github.com/krawieck/lemmy_api_client
 description: Future-based http client for the Lemmy API. Provides an easy interface and statically typed responses.
 
 environment:
-  sdk: ">=2.6.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   json_annotation: ^4.0.0

@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 class VoteType {
   final int _value;
 
@@ -5,7 +7,7 @@ class VoteType {
 
   int get value => _value;
 
-  factory VoteType.fromJson(int value) {
+  static VoteType? fromJson(int? value) {
     switch (value) {
       case 1:
         return up;
@@ -32,8 +34,8 @@ class PostListingType {
 
   String get value => _value;
 
-  factory PostListingType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+  static PostListingType? fromJson(String? value) =>
+      values.firstWhereOrNull((e) => e.value == value);
 
   String toJson() => value;
 
@@ -60,8 +62,8 @@ class SortType {
 
   String get value => _value;
 
-  factory SortType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+  static SortType? fromJson(String? value) =>
+      values.firstWhereOrNull((e) => e.value == value);
 
   String toJson() => value;
 
@@ -101,8 +103,8 @@ class SearchType {
 
   String get value => _value;
 
-  factory SearchType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+  static SearchType? fromJson(String? value) =>
+      values.firstWhereOrNull((e) => e.value == value);
 
   String toJson() => value;
 
@@ -133,8 +135,8 @@ class CommentListingType {
 
   String get value => _value;
 
-  factory CommentListingType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+  static CommentListingType? fromJson(String? value) =>
+      values.firstWhereOrNull((e) => e.value == value);
 
   String toJson() => value;
 

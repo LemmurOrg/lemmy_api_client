@@ -31,7 +31,8 @@ Future<void> assertNoStagedGit() async {
 }
 
 class Version {
-  int major, minor, patch;
+  final int major, minor, patch;
+  const Version(this.major, this.minor, this.patch);
   String toString() => '$major.$minor.$patch';
 }
 
@@ -42,9 +43,11 @@ Future<Version> bumpedVersion(String versionBumpType) async {
   final versionMatch =
       RegExp(r'version: (\d+)\.(\d+)\.(\d+)').firstMatch(pubspecContents);
 
-  var major = int.parse(versionMatch.group(1));
-  var minor = int.parse(versionMatch.group(2));
-  var patch = int.parse(versionMatch.group(3));
+  if (versionMatch == null) throw Exception('Failed to find pubspec version');
+
+  var major = int.parse(versionMatch.group(1)!);
+  var minor = int.parse(versionMatch.group(2)!);
+  var patch = int.parse(versionMatch.group(3)!);
 
   switch (versionBumpType) {
     case 'patch':
@@ -61,10 +64,7 @@ Future<Version> bumpedVersion(String versionBumpType) async {
       break;
   }
 
-  return Version()
-    ..major = major
-    ..minor = minor
-    ..patch = patch;
+  return Version(major, minor, patch);
 }
 
 Future<void> updatePubspec(Version version) async {
@@ -85,6 +85,10 @@ Future<void> updateChangelog(Version version) async {
   var currentChangelog =
       RegExp(r'^## Unreleased$.+?^##[^#]', multiLine: true, dotAll: true)
           .stringMatch(changelogContents);
+  if (currentChangelog == null) {
+    throw Exception('Failed to find changelog');
+  }
+
   currentChangelog = currentChangelog.substring(0, currentChangelog.length - 4);
 
   final date = DateTime.now();

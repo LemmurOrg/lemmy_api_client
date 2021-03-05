@@ -35,14 +35,14 @@ abstract class ListCategories
 abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Search({
-    @required String q,
-    @required @JsonKey(name: 'type_') SearchType type,
-    int communityId,
-    String communityName,
-    @required SortType sort,
-    int page,
-    int limit,
-    String auth,
+    required String q,
+    @JsonKey(name: 'type_') required SearchType type,
+    int? communityId,
+    String? communityName,
+    required SortType sort,
+    int? page,
+    int? limit,
+    String? auth,
   }) = _Search;
 
   const Search._();
@@ -64,10 +64,10 @@ abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
 abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetModlog({
-    int modUserId,
-    int communityId,
-    int page,
-    int limit,
+    int? modUserId,
+    int? communityId,
+    int? page,
+    int? limit,
   }) = _GetModlog;
 
   const GetModlog._();
@@ -89,14 +89,14 @@ abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
 abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateSite({
-    @required String name,
-    String description,
-    String icon,
-    String banner,
-    @required bool enableDownvotes,
-    @required bool openRegistration,
-    @required bool enableNsfw,
-    @required String auth,
+    required String name,
+    String? description,
+    String? icon,
+    String? banner,
+    required bool enableDownvotes,
+    required bool openRegistration,
+    required bool enableNsfw,
+    required String auth,
   }) = _CreateSite;
 
   const CreateSite._();
@@ -119,14 +119,14 @@ abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
 abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditSite({
-    @required String name,
-    String description,
-    String icon,
-    String banner,
-    @required bool enableDownvotes,
-    @required bool openRegistration,
-    @required bool enableNsfw,
-    @required String auth,
+    required String name,
+    String? description,
+    String? icon,
+    String? banner,
+    required bool enableDownvotes,
+    required bool openRegistration,
+    required bool enableNsfw,
+    required String auth,
   }) = _EditSite;
 
   const EditSite._();
@@ -149,7 +149,7 @@ abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
 abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSite({
-    String auth,
+    String? auth,
   }) = _GetSite;
 
   const GetSite._();
@@ -173,8 +173,8 @@ abstract class TransferSite
     implements _$TransferSite, LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory TransferSite({
-    @required int userId,
-    @required String auth,
+    required int userId,
+    required String auth,
   }) = _TransferSite;
 
   const TransferSite._();
@@ -197,7 +197,7 @@ abstract class TransferSite
 abstract class GetSiteConfig implements _$GetSiteConfig, LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSiteConfig({
-    @required String auth,
+    required String auth,
   }) = _GetSiteConfig;
 
   const GetSiteConfig._();
@@ -221,8 +221,8 @@ abstract class SaveSiteConfig
     implements _$SaveSiteConfig, LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveSiteConfig({
-    @required String configHjson,
-    @required String auth,
+    required String configHjson,
+    required String auth,
   }) = _SaveSiteConfig;
 
   const SaveSiteConfig._();

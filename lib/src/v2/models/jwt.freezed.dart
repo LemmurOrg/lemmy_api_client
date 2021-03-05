@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'jwt.dart';
 
@@ -8,6 +8,10 @@ part of 'jwt.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
   return _JwtPayload.fromJson(json);
 }
@@ -16,31 +20,30 @@ JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
 class _$JwtPayloadTearOff {
   const _$JwtPayloadTearOff();
 
-// ignore: unused_element
-  _JwtPayload call({@required int id, @required String iss}) {
+  _JwtPayload call({required int id, required String iss}) {
     return _JwtPayload(
       id: id,
       iss: iss,
     );
   }
 
-// ignore: unused_element
   JwtPayload fromJson(Map<String, Object> json) {
     return JwtPayload.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $JwtPayload = _$JwtPayloadTearOff();
 
 /// @nodoc
 mixin _$JwtPayload {
-  int get id;
-  String get iss;
+  int get id => throw _privateConstructorUsedError;
+  String get iss => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $JwtPayloadCopyWith<JwtPayload> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $JwtPayloadCopyWith<JwtPayload> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -61,8 +64,8 @@ class _$JwtPayloadCopyWithImpl<$Res> implements $JwtPayloadCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object iss = freezed,
+    Object? id = freezed,
+    Object? iss = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -92,8 +95,8 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object iss = freezed,
+    Object? id = freezed,
+    Object? iss = freezed,
   }) {
     return _then(_JwtPayload(
       id: id == freezed ? _value.id : id as int,
@@ -106,10 +109,7 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_JwtPayload extends _JwtPayload {
-  const _$_JwtPayload({@required this.id, @required this.iss})
-      : assert(id != null),
-        assert(iss != null),
-        super._();
+  const _$_JwtPayload({required this.id, required this.iss}) : super._();
 
   factory _$_JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$_$_JwtPayloadFromJson(json);
@@ -140,6 +140,7 @@ class _$_JwtPayload extends _JwtPayload {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(iss);
 
+  @JsonKey(ignore: true)
   @override
   _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>
       __$JwtPayloadCopyWithImpl<_JwtPayload>(this, _$identity);
@@ -152,16 +153,18 @@ class _$_JwtPayload extends _JwtPayload {
 
 abstract class _JwtPayload extends JwtPayload {
   const _JwtPayload._() : super._();
-  const factory _JwtPayload({@required int id, @required String iss}) =
+  const factory _JwtPayload({required int id, required String iss}) =
       _$_JwtPayload;
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =
       _$_JwtPayload.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get iss;
+  String get iss => throw _privateConstructorUsedError;
   @override
-  _$JwtPayloadCopyWith<_JwtPayload> get copyWith;
+  @JsonKey(ignore: true)
+  _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>
+      throw _privateConstructorUsedError;
 }

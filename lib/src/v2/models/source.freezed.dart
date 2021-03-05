@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'source.dart';
 
@@ -8,6 +8,10 @@ part of 'source.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 UserSafe _$UserSafeFromJson(Map<String, dynamic> json) {
   return _UserSafe.fromJson(json);
 }
@@ -16,22 +20,21 @@ UserSafe _$UserSafeFromJson(Map<String, dynamic> json) {
 class _$UserSafeTearOff {
   const _$UserSafeTearOff();
 
-// ignore: unused_element
   _UserSafe call(
-      {@required int id,
-      @required String name,
-      String preferredUsername,
-      String avatar,
-      @required bool admin,
-      @required bool banned,
-      @required DateTime published,
-      DateTime updated,
-      String matrixUserId,
-      @required String actorId,
-      String bio,
-      @required bool local,
-      String banner,
-      @required bool deleted}) {
+      {required int id,
+      required String name,
+      String? preferredUsername,
+      String? avatar,
+      required bool admin,
+      required bool banned,
+      required DateTime published,
+      DateTime? updated,
+      String? matrixUserId,
+      required String actorId,
+      String? bio,
+      required bool local,
+      String? banner,
+      required bool deleted}) {
     return _UserSafe(
       id: id,
       name: name,
@@ -50,35 +53,35 @@ class _$UserSafeTearOff {
     );
   }
 
-// ignore: unused_element
   UserSafe fromJson(Map<String, Object> json) {
     return UserSafe.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserSafe = _$UserSafeTearOff();
 
 /// @nodoc
 mixin _$UserSafe {
-  int get id;
-  String get name;
-  String get preferredUsername;
-  String get avatar;
-  bool get admin;
-  bool get banned;
-  DateTime get published;
-  DateTime get updated;
-  String get matrixUserId;
-  String get actorId;
-  String get bio;
-  bool get local;
-  String get banner;
-  bool get deleted;
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get avatar => throw _privateConstructorUsedError;
+  bool get admin => throw _privateConstructorUsedError;
+  bool get banned => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  String? get matrixUserId => throw _privateConstructorUsedError;
+  String get actorId => throw _privateConstructorUsedError;
+  String? get bio => throw _privateConstructorUsedError;
+  bool get local => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserSafeCopyWith<UserSafe> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserSafeCopyWith<UserSafe> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -88,17 +91,17 @@ abstract class $UserSafeCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String preferredUsername,
-      String avatar,
+      String? preferredUsername,
+      String? avatar,
       bool admin,
       bool banned,
       DateTime published,
-      DateTime updated,
-      String matrixUserId,
+      DateTime? updated,
+      String? matrixUserId,
       String actorId,
-      String bio,
+      String? bio,
       bool local,
-      String banner,
+      String? banner,
       bool deleted});
 }
 
@@ -112,40 +115,40 @@ class _$UserSafeCopyWithImpl<$Res> implements $UserSafeCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object preferredUsername = freezed,
-    Object avatar = freezed,
-    Object admin = freezed,
-    Object banned = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object matrixUserId = freezed,
-    Object actorId = freezed,
-    Object bio = freezed,
-    Object local = freezed,
-    Object banner = freezed,
-    Object deleted = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? preferredUsername = freezed,
+    Object? avatar = freezed,
+    Object? admin = freezed,
+    Object? banned = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? matrixUserId = freezed,
+    Object? actorId = freezed,
+    Object? bio = freezed,
+    Object? local = freezed,
+    Object? banner = freezed,
+    Object? deleted = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String,
+          : preferredUsername as String?,
+      avatar: avatar == freezed ? _value.avatar : avatar as String?,
       admin: admin == freezed ? _value.admin : admin as bool,
       banned: banned == freezed ? _value.banned : banned as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String,
+          : matrixUserId as String?,
       actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String,
+      bio: bio == freezed ? _value.bio : bio as String?,
       local: local == freezed ? _value.local : local as bool,
-      banner: banner == freezed ? _value.banner : banner as String,
+      banner: banner == freezed ? _value.banner : banner as String?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
     ));
   }
@@ -159,17 +162,17 @@ abstract class _$UserSafeCopyWith<$Res> implements $UserSafeCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String preferredUsername,
-      String avatar,
+      String? preferredUsername,
+      String? avatar,
       bool admin,
       bool banned,
       DateTime published,
-      DateTime updated,
-      String matrixUserId,
+      DateTime? updated,
+      String? matrixUserId,
       String actorId,
-      String bio,
+      String? bio,
       bool local,
-      String banner,
+      String? banner,
       bool deleted});
 }
 
@@ -184,40 +187,40 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object preferredUsername = freezed,
-    Object avatar = freezed,
-    Object admin = freezed,
-    Object banned = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object matrixUserId = freezed,
-    Object actorId = freezed,
-    Object bio = freezed,
-    Object local = freezed,
-    Object banner = freezed,
-    Object deleted = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? preferredUsername = freezed,
+    Object? avatar = freezed,
+    Object? admin = freezed,
+    Object? banned = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? matrixUserId = freezed,
+    Object? actorId = freezed,
+    Object? bio = freezed,
+    Object? local = freezed,
+    Object? banner = freezed,
+    Object? deleted = freezed,
   }) {
     return _then(_UserSafe(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String,
+          : preferredUsername as String?,
+      avatar: avatar == freezed ? _value.avatar : avatar as String?,
       admin: admin == freezed ? _value.admin : admin as bool,
       banned: banned == freezed ? _value.banned : banned as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String,
+          : matrixUserId as String?,
       actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String,
+      bio: bio == freezed ? _value.bio : bio as String?,
       local: local == freezed ? _value.local : local as bool,
-      banner: banner == freezed ? _value.banner : banner as String,
+      banner: banner == freezed ? _value.banner : banner as String?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
     ));
   }
@@ -229,29 +232,21 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserSafe extends _UserSafe {
   _$_UserSafe(
-      {@required this.id,
-      @required this.name,
+      {required this.id,
+      required this.name,
       this.preferredUsername,
       this.avatar,
-      @required this.admin,
-      @required this.banned,
-      @required this.published,
+      required this.admin,
+      required this.banned,
+      required this.published,
       this.updated,
       this.matrixUserId,
-      @required this.actorId,
+      required this.actorId,
       this.bio,
-      @required this.local,
+      required this.local,
       this.banner,
-      @required this.deleted})
-      : assert(id != null),
-        assert(name != null),
-        assert(admin != null),
-        assert(banned != null),
-        assert(published != null),
-        assert(actorId != null),
-        assert(local != null),
-        assert(deleted != null),
-        super._();
+      required this.deleted})
+      : super._();
 
   factory _$_UserSafe.fromJson(Map<String, dynamic> json) =>
       _$_$_UserSafeFromJson(json);
@@ -261,9 +256,9 @@ class _$_UserSafe extends _UserSafe {
   @override
   final String name;
   @override
-  final String preferredUsername;
+  final String? preferredUsername;
   @override
-  final String avatar;
+  final String? avatar;
   @override
   final bool admin;
   @override
@@ -271,17 +266,17 @@ class _$_UserSafe extends _UserSafe {
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
-  final String matrixUserId;
+  final String? matrixUserId;
   @override
   final String actorId;
   @override
-  final String bio;
+  final String? bio;
   @override
   final bool local;
   @override
-  final String banner;
+  final String? banner;
   @override
   final bool deleted;
 
@@ -347,6 +342,7 @@ class _$_UserSafe extends _UserSafe {
       const DeepCollectionEquality().hash(banner) ^
       const DeepCollectionEquality().hash(deleted);
 
+  @JsonKey(ignore: true)
   @override
   _$UserSafeCopyWith<_UserSafe> get copyWith =>
       __$UserSafeCopyWithImpl<_UserSafe>(this, _$identity);
@@ -360,53 +356,55 @@ class _$_UserSafe extends _UserSafe {
 abstract class _UserSafe extends UserSafe {
   _UserSafe._() : super._();
   factory _UserSafe(
-      {@required int id,
-      @required String name,
-      String preferredUsername,
-      String avatar,
-      @required bool admin,
-      @required bool banned,
-      @required DateTime published,
-      DateTime updated,
-      String matrixUserId,
-      @required String actorId,
-      String bio,
-      @required bool local,
-      String banner,
-      @required bool deleted}) = _$_UserSafe;
+      {required int id,
+      required String name,
+      String? preferredUsername,
+      String? avatar,
+      required bool admin,
+      required bool banned,
+      required DateTime published,
+      DateTime? updated,
+      String? matrixUserId,
+      required String actorId,
+      String? bio,
+      required bool local,
+      String? banner,
+      required bool deleted}) = _$_UserSafe;
 
   factory _UserSafe.fromJson(Map<String, dynamic> json) = _$_UserSafe.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get preferredUsername;
+  String? get preferredUsername => throw _privateConstructorUsedError;
   @override
-  String get avatar;
+  String? get avatar => throw _privateConstructorUsedError;
   @override
-  bool get admin;
+  bool get admin => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool get banned => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  String get matrixUserId;
+  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  String get actorId;
+  String get actorId => throw _privateConstructorUsedError;
   @override
-  String get bio;
+  String? get bio => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  _$UserSafeCopyWith<_UserSafe> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserSafeCopyWith<_UserSafe> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 UserSafeSettings _$UserSafeSettingsFromJson(Map<String, dynamic> json) {
@@ -417,49 +415,32 @@ UserSafeSettings _$UserSafeSettingsFromJson(Map<String, dynamic> json) {
 class _$UserSafeSettingsTearOff {
   const _$UserSafeSettingsTearOff();
 
-// ignore: unused_element
   _UserSafeSettings call(
-      {@required
-          int id,
-      @required
-          String name,
-      String preferredUsername,
-      String email,
-      String avatar,
-      @required
-          bool admin,
-      @required
-          bool banned,
-      @required
-          DateTime published,
-      DateTime updated,
-      @required
-          bool showNsfw,
-      @required
-          String theme,
-      @required
+      {required int id,
+      required String name,
+      String? preferredUsername,
+      String? email,
+      String? avatar,
+      required bool admin,
+      required bool banned,
+      required DateTime published,
+      DateTime? updated,
+      required bool showNsfw,
+      required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
-      @required
+          required SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      @required
-          String lang,
-      @required
-          bool showAvatars,
-      @required
-          bool sendNotificationsToEmail,
-      String matrixUserId,
-      @required
-          String actorId,
-      String bio,
-      @required
-          bool local,
-      @required
-          DateTime lastRefreshedAt,
-      String banner,
-      @required
-          bool deleted}) {
+          required PostListingType defaultListingType,
+      required String lang,
+      required bool showAvatars,
+      required bool sendNotificationsToEmail,
+      String? matrixUserId,
+      required String actorId,
+      String? bio,
+      required bool local,
+      required DateTime lastRefreshedAt,
+      String? banner,
+      required bool deleted}) {
     return _UserSafeSettings(
       id: id,
       name: name,
@@ -487,46 +468,46 @@ class _$UserSafeSettingsTearOff {
     );
   }
 
-// ignore: unused_element
   UserSafeSettings fromJson(Map<String, Object> json) {
     return UserSafeSettings.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserSafeSettings = _$UserSafeSettingsTearOff();
 
 /// @nodoc
 mixin _$UserSafeSettings {
-  int get id;
-  String get name;
-  String get preferredUsername;
-  String get email;
-  String get avatar;
-  bool get admin;
-  bool get banned;
-  DateTime get published;
-  DateTime get updated;
-  bool get showNsfw;
-  String get theme;
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get avatar => throw _privateConstructorUsedError;
+  bool get admin => throw _privateConstructorUsedError;
+  bool get banned => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  bool get showNsfw => throw _privateConstructorUsedError;
+  String get theme => throw _privateConstructorUsedError;
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType;
+  SortType get defaultSortType => throw _privateConstructorUsedError;
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType;
-  String get lang;
-  bool get showAvatars;
-  bool get sendNotificationsToEmail;
-  String get matrixUserId;
-  String get actorId;
-  String get bio;
-  bool get local;
-  DateTime get lastRefreshedAt;
-  String get banner;
-  bool get deleted;
+  PostListingType get defaultListingType => throw _privateConstructorUsedError;
+  String get lang => throw _privateConstructorUsedError;
+  bool get showAvatars => throw _privateConstructorUsedError;
+  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  String? get matrixUserId => throw _privateConstructorUsedError;
+  String get actorId => throw _privateConstructorUsedError;
+  String? get bio => throw _privateConstructorUsedError;
+  bool get local => throw _privateConstructorUsedError;
+  DateTime get lastRefreshedAt => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserSafeSettingsCopyWith<UserSafeSettings> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserSafeSettingsCopyWith<UserSafeSettings> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -537,13 +518,13 @@ abstract class $UserSafeSettingsCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String preferredUsername,
-      String email,
-      String avatar,
+      String? preferredUsername,
+      String? email,
+      String? avatar,
       bool admin,
       bool banned,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool showNsfw,
       String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -553,12 +534,12 @@ abstract class $UserSafeSettingsCopyWith<$Res> {
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
-      String matrixUserId,
+      String? matrixUserId,
       String actorId,
-      String bio,
+      String? bio,
       bool local,
       DateTime lastRefreshedAt,
-      String banner,
+      String? banner,
       bool deleted});
 }
 
@@ -573,43 +554,43 @@ class _$UserSafeSettingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object preferredUsername = freezed,
-    Object email = freezed,
-    Object avatar = freezed,
-    Object admin = freezed,
-    Object banned = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object showNsfw = freezed,
-    Object theme = freezed,
-    Object defaultSortType = freezed,
-    Object defaultListingType = freezed,
-    Object lang = freezed,
-    Object showAvatars = freezed,
-    Object sendNotificationsToEmail = freezed,
-    Object matrixUserId = freezed,
-    Object actorId = freezed,
-    Object bio = freezed,
-    Object local = freezed,
-    Object lastRefreshedAt = freezed,
-    Object banner = freezed,
-    Object deleted = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? preferredUsername = freezed,
+    Object? email = freezed,
+    Object? avatar = freezed,
+    Object? admin = freezed,
+    Object? banned = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? showNsfw = freezed,
+    Object? theme = freezed,
+    Object? defaultSortType = freezed,
+    Object? defaultListingType = freezed,
+    Object? lang = freezed,
+    Object? showAvatars = freezed,
+    Object? sendNotificationsToEmail = freezed,
+    Object? matrixUserId = freezed,
+    Object? actorId = freezed,
+    Object? bio = freezed,
+    Object? local = freezed,
+    Object? lastRefreshedAt = freezed,
+    Object? banner = freezed,
+    Object? deleted = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String,
-      email: email == freezed ? _value.email : email as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String,
+          : preferredUsername as String?,
+      email: email == freezed ? _value.email : email as String?,
+      avatar: avatar == freezed ? _value.avatar : avatar as String?,
       admin: admin == freezed ? _value.admin : admin as bool,
       banned: banned == freezed ? _value.banned : banned as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       theme: theme == freezed ? _value.theme : theme as String,
       defaultSortType: defaultSortType == freezed
@@ -626,14 +607,14 @@ class _$UserSafeSettingsCopyWithImpl<$Res>
           : sendNotificationsToEmail as bool,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String,
+          : matrixUserId as String?,
       actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String,
+      bio: bio == freezed ? _value.bio : bio as String?,
       local: local == freezed ? _value.local : local as bool,
       lastRefreshedAt: lastRefreshedAt == freezed
           ? _value.lastRefreshedAt
           : lastRefreshedAt as DateTime,
-      banner: banner == freezed ? _value.banner : banner as String,
+      banner: banner == freezed ? _value.banner : banner as String?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
     ));
   }
@@ -649,13 +630,13 @@ abstract class _$UserSafeSettingsCopyWith<$Res>
   $Res call(
       {int id,
       String name,
-      String preferredUsername,
-      String email,
-      String avatar,
+      String? preferredUsername,
+      String? email,
+      String? avatar,
       bool admin,
       bool banned,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool showNsfw,
       String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -665,12 +646,12 @@ abstract class _$UserSafeSettingsCopyWith<$Res>
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
-      String matrixUserId,
+      String? matrixUserId,
       String actorId,
-      String bio,
+      String? bio,
       bool local,
       DateTime lastRefreshedAt,
-      String banner,
+      String? banner,
       bool deleted});
 }
 
@@ -687,43 +668,43 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object preferredUsername = freezed,
-    Object email = freezed,
-    Object avatar = freezed,
-    Object admin = freezed,
-    Object banned = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object showNsfw = freezed,
-    Object theme = freezed,
-    Object defaultSortType = freezed,
-    Object defaultListingType = freezed,
-    Object lang = freezed,
-    Object showAvatars = freezed,
-    Object sendNotificationsToEmail = freezed,
-    Object matrixUserId = freezed,
-    Object actorId = freezed,
-    Object bio = freezed,
-    Object local = freezed,
-    Object lastRefreshedAt = freezed,
-    Object banner = freezed,
-    Object deleted = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? preferredUsername = freezed,
+    Object? email = freezed,
+    Object? avatar = freezed,
+    Object? admin = freezed,
+    Object? banned = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? showNsfw = freezed,
+    Object? theme = freezed,
+    Object? defaultSortType = freezed,
+    Object? defaultListingType = freezed,
+    Object? lang = freezed,
+    Object? showAvatars = freezed,
+    Object? sendNotificationsToEmail = freezed,
+    Object? matrixUserId = freezed,
+    Object? actorId = freezed,
+    Object? bio = freezed,
+    Object? local = freezed,
+    Object? lastRefreshedAt = freezed,
+    Object? banner = freezed,
+    Object? deleted = freezed,
   }) {
     return _then(_UserSafeSettings(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String,
-      email: email == freezed ? _value.email : email as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String,
+          : preferredUsername as String?,
+      email: email == freezed ? _value.email : email as String?,
+      avatar: avatar == freezed ? _value.avatar : avatar as String?,
       admin: admin == freezed ? _value.admin : admin as bool,
       banned: banned == freezed ? _value.banned : banned as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       theme: theme == freezed ? _value.theme : theme as String,
       defaultSortType: defaultSortType == freezed
@@ -740,14 +721,14 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
           : sendNotificationsToEmail as bool,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String,
+          : matrixUserId as String?,
       actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String,
+      bio: bio == freezed ? _value.bio : bio as String?,
       local: local == freezed ? _value.local : local as bool,
       lastRefreshedAt: lastRefreshedAt == freezed
           ? _value.lastRefreshedAt
           : lastRefreshedAt as DateTime,
-      banner: banner == freezed ? _value.banner : banner as String,
+      banner: banner == freezed ? _value.banner : banner as String?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
     ));
   }
@@ -759,64 +740,32 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserSafeSettings extends _UserSafeSettings {
   _$_UserSafeSettings(
-      {@required
-          this.id,
-      @required
-          this.name,
+      {required this.id,
+      required this.name,
       this.preferredUsername,
       this.email,
       this.avatar,
-      @required
-          this.admin,
-      @required
-          this.banned,
-      @required
-          this.published,
+      required this.admin,
+      required this.banned,
+      required this.published,
       this.updated,
-      @required
-          this.showNsfw,
-      @required
-          this.theme,
-      @required
+      required this.showNsfw,
+      required this.theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          this.defaultSortType,
-      @required
+          required this.defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          this.defaultListingType,
-      @required
-          this.lang,
-      @required
-          this.showAvatars,
-      @required
-          this.sendNotificationsToEmail,
+          required this.defaultListingType,
+      required this.lang,
+      required this.showAvatars,
+      required this.sendNotificationsToEmail,
       this.matrixUserId,
-      @required
-          this.actorId,
+      required this.actorId,
       this.bio,
-      @required
-          this.local,
-      @required
-          this.lastRefreshedAt,
+      required this.local,
+      required this.lastRefreshedAt,
       this.banner,
-      @required
-          this.deleted})
-      : assert(id != null),
-        assert(name != null),
-        assert(admin != null),
-        assert(banned != null),
-        assert(published != null),
-        assert(showNsfw != null),
-        assert(theme != null),
-        assert(defaultSortType != null),
-        assert(defaultListingType != null),
-        assert(lang != null),
-        assert(showAvatars != null),
-        assert(sendNotificationsToEmail != null),
-        assert(actorId != null),
-        assert(local != null),
-        assert(lastRefreshedAt != null),
-        assert(deleted != null),
-        super._();
+      required this.deleted})
+      : super._();
 
   factory _$_UserSafeSettings.fromJson(Map<String, dynamic> json) =>
       _$_$_UserSafeSettingsFromJson(json);
@@ -826,11 +775,11 @@ class _$_UserSafeSettings extends _UserSafeSettings {
   @override
   final String name;
   @override
-  final String preferredUsername;
+  final String? preferredUsername;
   @override
-  final String email;
+  final String? email;
   @override
-  final String avatar;
+  final String? avatar;
   @override
   final bool admin;
   @override
@@ -838,7 +787,7 @@ class _$_UserSafeSettings extends _UserSafeSettings {
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
   final bool showNsfw;
   @override
@@ -856,17 +805,17 @@ class _$_UserSafeSettings extends _UserSafeSettings {
   @override
   final bool sendNotificationsToEmail;
   @override
-  final String matrixUserId;
+  final String? matrixUserId;
   @override
   final String actorId;
   @override
-  final String bio;
+  final String? bio;
   @override
   final bool local;
   @override
   final DateTime lastRefreshedAt;
   @override
-  final String banner;
+  final String? banner;
   @override
   final bool deleted;
 
@@ -967,6 +916,7 @@ class _$_UserSafeSettings extends _UserSafeSettings {
       const DeepCollectionEquality().hash(banner) ^
       const DeepCollectionEquality().hash(deleted);
 
+  @JsonKey(ignore: true)
   @override
   _$UserSafeSettingsCopyWith<_UserSafeSettings> get copyWith =>
       __$UserSafeSettingsCopyWithImpl<_UserSafeSettings>(this, _$identity);
@@ -980,101 +930,87 @@ class _$_UserSafeSettings extends _UserSafeSettings {
 abstract class _UserSafeSettings extends UserSafeSettings {
   _UserSafeSettings._() : super._();
   factory _UserSafeSettings(
-      {@required
-          int id,
-      @required
-          String name,
-      String preferredUsername,
-      String email,
-      String avatar,
-      @required
-          bool admin,
-      @required
-          bool banned,
-      @required
-          DateTime published,
-      DateTime updated,
-      @required
-          bool showNsfw,
-      @required
-          String theme,
-      @required
+      {required int id,
+      required String name,
+      String? preferredUsername,
+      String? email,
+      String? avatar,
+      required bool admin,
+      required bool banned,
+      required DateTime published,
+      DateTime? updated,
+      required bool showNsfw,
+      required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
-      @required
+          required SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      @required
-          String lang,
-      @required
-          bool showAvatars,
-      @required
-          bool sendNotificationsToEmail,
-      String matrixUserId,
-      @required
-          String actorId,
-      String bio,
-      @required
-          bool local,
-      @required
-          DateTime lastRefreshedAt,
-      String banner,
-      @required
-          bool deleted}) = _$_UserSafeSettings;
+          required PostListingType defaultListingType,
+      required String lang,
+      required bool showAvatars,
+      required bool sendNotificationsToEmail,
+      String? matrixUserId,
+      required String actorId,
+      String? bio,
+      required bool local,
+      required DateTime lastRefreshedAt,
+      String? banner,
+      required bool deleted}) = _$_UserSafeSettings;
 
   factory _UserSafeSettings.fromJson(Map<String, dynamic> json) =
       _$_UserSafeSettings.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get preferredUsername;
+  String? get preferredUsername => throw _privateConstructorUsedError;
   @override
-  String get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  String get avatar;
+  String? get avatar => throw _privateConstructorUsedError;
   @override
-  bool get admin;
+  bool get admin => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool get banned => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get showNsfw;
+  bool get showNsfw => throw _privateConstructorUsedError;
   @override
-  String get theme;
+  String get theme => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType;
+  SortType get defaultSortType => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType;
+  PostListingType get defaultListingType => throw _privateConstructorUsedError;
   @override
-  String get lang;
+  String get lang => throw _privateConstructorUsedError;
   @override
-  bool get showAvatars;
+  bool get showAvatars => throw _privateConstructorUsedError;
   @override
-  bool get sendNotificationsToEmail;
+  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override
-  String get matrixUserId;
+  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  String get actorId;
+  String get actorId => throw _privateConstructorUsedError;
   @override
-  String get bio;
+  String? get bio => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  DateTime get lastRefreshedAt;
+  DateTime get lastRefreshedAt => throw _privateConstructorUsedError;
   @override
-  String get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  _$UserSafeSettingsCopyWith<_UserSafeSettings> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserSafeSettingsCopyWith<_UserSafeSettings> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Site _$SiteFromJson(Map<String, dynamic> json) {
@@ -1085,19 +1021,18 @@ Site _$SiteFromJson(Map<String, dynamic> json) {
 class _$SiteTearOff {
   const _$SiteTearOff();
 
-// ignore: unused_element
   _Site call(
-      {@required int id,
-      @required String name,
-      String description,
-      @required int creatorId,
-      @required DateTime published,
-      DateTime updated,
-      @required bool enableDownvotes,
-      @required bool openRegistration,
-      @required bool enableNsfw,
-      String icon,
-      String banner}) {
+      {required int id,
+      required String name,
+      String? description,
+      required int creatorId,
+      required DateTime published,
+      DateTime? updated,
+      required bool enableDownvotes,
+      required bool openRegistration,
+      required bool enableNsfw,
+      String? icon,
+      String? banner}) {
     return _Site(
       id: id,
       name: name,
@@ -1113,32 +1048,31 @@ class _$SiteTearOff {
     );
   }
 
-// ignore: unused_element
   Site fromJson(Map<String, Object> json) {
     return Site.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Site = _$SiteTearOff();
 
 /// @nodoc
 mixin _$Site {
-  int get id;
-  String get name;
-  String get description;
-  int get creatorId;
-  DateTime get published;
-  DateTime get updated;
-  bool get enableDownvotes;
-  bool get openRegistration;
-  bool get enableNsfw;
-  String get icon;
-  String get banner;
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  bool get enableDownvotes => throw _privateConstructorUsedError;
+  bool get openRegistration => throw _privateConstructorUsedError;
+  bool get enableNsfw => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SiteCopyWith<Site> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SiteCopyWith<Site> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1148,15 +1082,15 @@ abstract class $SiteCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String description,
+      String? description,
       int creatorId,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool enableDownvotes,
       bool openRegistration,
       bool enableNsfw,
-      String icon,
-      String banner});
+      String? icon,
+      String? banner});
 }
 
 /// @nodoc
@@ -1169,27 +1103,27 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object description = freezed,
-    Object creatorId = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object enableDownvotes = freezed,
-    Object openRegistration = freezed,
-    Object enableNsfw = freezed,
-    Object icon = freezed,
-    Object banner = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? description = freezed,
+    Object? creatorId = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? enableDownvotes = freezed,
+    Object? openRegistration = freezed,
+    Object? enableNsfw = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
           : enableDownvotes as bool,
@@ -1198,8 +1132,8 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           : openRegistration as bool,
       enableNsfw:
           enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      icon: icon == freezed ? _value.icon : icon as String,
-      banner: banner == freezed ? _value.banner : banner as String,
+      icon: icon == freezed ? _value.icon : icon as String?,
+      banner: banner == freezed ? _value.banner : banner as String?,
     ));
   }
 }
@@ -1212,15 +1146,15 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String description,
+      String? description,
       int creatorId,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool enableDownvotes,
       bool openRegistration,
       bool enableNsfw,
-      String icon,
-      String banner});
+      String? icon,
+      String? banner});
 }
 
 /// @nodoc
@@ -1234,27 +1168,27 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object description = freezed,
-    Object creatorId = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object enableDownvotes = freezed,
-    Object openRegistration = freezed,
-    Object enableNsfw = freezed,
-    Object icon = freezed,
-    Object banner = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? description = freezed,
+    Object? creatorId = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? enableDownvotes = freezed,
+    Object? openRegistration = freezed,
+    Object? enableNsfw = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
   }) {
     return _then(_Site(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
           : enableDownvotes as bool,
@@ -1263,8 +1197,8 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           : openRegistration as bool,
       enableNsfw:
           enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      icon: icon == freezed ? _value.icon : icon as String,
-      banner: banner == freezed ? _value.banner : banner as String,
+      icon: icon == freezed ? _value.icon : icon as String?,
+      banner: banner == freezed ? _value.banner : banner as String?,
     ));
   }
 }
@@ -1275,25 +1209,18 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
 /// @nodoc
 class _$_Site extends _Site {
   _$_Site(
-      {@required this.id,
-      @required this.name,
+      {required this.id,
+      required this.name,
       this.description,
-      @required this.creatorId,
-      @required this.published,
+      required this.creatorId,
+      required this.published,
       this.updated,
-      @required this.enableDownvotes,
-      @required this.openRegistration,
-      @required this.enableNsfw,
+      required this.enableDownvotes,
+      required this.openRegistration,
+      required this.enableNsfw,
       this.icon,
       this.banner})
-      : assert(id != null),
-        assert(name != null),
-        assert(creatorId != null),
-        assert(published != null),
-        assert(enableDownvotes != null),
-        assert(openRegistration != null),
-        assert(enableNsfw != null),
-        super._();
+      : super._();
 
   factory _$_Site.fromJson(Map<String, dynamic> json) =>
       _$_$_SiteFromJson(json);
@@ -1303,13 +1230,13 @@ class _$_Site extends _Site {
   @override
   final String name;
   @override
-  final String description;
+  final String? description;
   @override
   final int creatorId;
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
   final bool enableDownvotes;
   @override
@@ -1317,9 +1244,9 @@ class _$_Site extends _Site {
   @override
   final bool enableNsfw;
   @override
-  final String icon;
+  final String? icon;
   @override
-  final String banner;
+  final String? banner;
 
   @override
   String toString() {
@@ -1376,6 +1303,7 @@ class _$_Site extends _Site {
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner);
 
+  @JsonKey(ignore: true)
   @override
   _$SiteCopyWith<_Site> get copyWith =>
       __$SiteCopyWithImpl<_Site>(this, _$identity);
@@ -1389,44 +1317,45 @@ class _$_Site extends _Site {
 abstract class _Site extends Site {
   _Site._() : super._();
   factory _Site(
-      {@required int id,
-      @required String name,
-      String description,
-      @required int creatorId,
-      @required DateTime published,
-      DateTime updated,
-      @required bool enableDownvotes,
-      @required bool openRegistration,
-      @required bool enableNsfw,
-      String icon,
-      String banner}) = _$_Site;
+      {required int id,
+      required String name,
+      String? description,
+      required int creatorId,
+      required DateTime published,
+      DateTime? updated,
+      required bool enableDownvotes,
+      required bool openRegistration,
+      required bool enableNsfw,
+      String? icon,
+      String? banner}) = _$_Site;
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get enableDownvotes;
+  bool get enableDownvotes => throw _privateConstructorUsedError;
   @override
-  bool get openRegistration;
+  bool get openRegistration => throw _privateConstructorUsedError;
   @override
-  bool get enableNsfw;
+  bool get enableNsfw => throw _privateConstructorUsedError;
   @override
-  String get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  _$SiteCopyWith<_Site> get copyWith;
+  @JsonKey(ignore: true)
+  _$SiteCopyWith<_Site> get copyWith => throw _privateConstructorUsedError;
 }
 
 PrivateMessage _$PrivateMessageFromJson(Map<String, dynamic> json) {
@@ -1437,18 +1366,17 @@ PrivateMessage _$PrivateMessageFromJson(Map<String, dynamic> json) {
 class _$PrivateMessageTearOff {
   const _$PrivateMessageTearOff();
 
-// ignore: unused_element
   _PrivateMessage call(
-      {@required int id,
-      @required int creatorId,
-      @required int recipientId,
-      @required String content,
-      @required bool deleted,
-      @required bool read,
-      @required DateTime published,
-      DateTime updated,
-      @required String apId,
-      @required bool local}) {
+      {required int id,
+      required int creatorId,
+      required int recipientId,
+      required String content,
+      required bool deleted,
+      required bool read,
+      required DateTime published,
+      DateTime? updated,
+      required String apId,
+      required bool local}) {
     return _PrivateMessage(
       id: id,
       creatorId: creatorId,
@@ -1463,31 +1391,31 @@ class _$PrivateMessageTearOff {
     );
   }
 
-// ignore: unused_element
   PrivateMessage fromJson(Map<String, Object> json) {
     return PrivateMessage.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PrivateMessage = _$PrivateMessageTearOff();
 
 /// @nodoc
 mixin _$PrivateMessage {
-  int get id;
-  int get creatorId;
-  int get recipientId;
-  String get content;
-  bool get deleted;
-  bool get read;
-  DateTime get published;
-  DateTime get updated;
-  String get apId;
-  bool get local;
+  int get id => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  int get recipientId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  String get apId => throw _privateConstructorUsedError;
+  bool get local => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PrivateMessageCopyWith<PrivateMessage> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PrivateMessageCopyWith<PrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1503,7 +1431,7 @@ abstract class $PrivateMessageCopyWith<$Res> {
       bool deleted,
       bool read,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       String apId,
       bool local});
 }
@@ -1519,16 +1447,16 @@ class _$PrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object recipientId = freezed,
-    Object content = freezed,
-    Object deleted = freezed,
-    Object read = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object apId = freezed,
-    Object local = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? recipientId = freezed,
+    Object? content = freezed,
+    Object? deleted = freezed,
+    Object? read = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? apId = freezed,
+    Object? local = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -1540,7 +1468,7 @@ class _$PrivateMessageCopyWithImpl<$Res>
       read: read == freezed ? _value.read : read as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       apId: apId == freezed ? _value.apId : apId as String,
       local: local == freezed ? _value.local : local as bool,
     ));
@@ -1562,7 +1490,7 @@ abstract class _$PrivateMessageCopyWith<$Res>
       bool deleted,
       bool read,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       String apId,
       bool local});
 }
@@ -1580,16 +1508,16 @@ class __$PrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object recipientId = freezed,
-    Object content = freezed,
-    Object deleted = freezed,
-    Object read = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object apId = freezed,
-    Object local = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? recipientId = freezed,
+    Object? content = freezed,
+    Object? deleted = freezed,
+    Object? read = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? apId = freezed,
+    Object? local = freezed,
   }) {
     return _then(_PrivateMessage(
       id: id == freezed ? _value.id : id as int,
@@ -1601,7 +1529,7 @@ class __$PrivateMessageCopyWithImpl<$Res>
       read: read == freezed ? _value.read : read as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       apId: apId == freezed ? _value.apId : apId as String,
       local: local == freezed ? _value.local : local as bool,
     ));
@@ -1614,26 +1542,17 @@ class __$PrivateMessageCopyWithImpl<$Res>
 /// @nodoc
 class _$_PrivateMessage extends _PrivateMessage {
   _$_PrivateMessage(
-      {@required this.id,
-      @required this.creatorId,
-      @required this.recipientId,
-      @required this.content,
-      @required this.deleted,
-      @required this.read,
-      @required this.published,
+      {required this.id,
+      required this.creatorId,
+      required this.recipientId,
+      required this.content,
+      required this.deleted,
+      required this.read,
+      required this.published,
       this.updated,
-      @required this.apId,
-      @required this.local})
-      : assert(id != null),
-        assert(creatorId != null),
-        assert(recipientId != null),
-        assert(content != null),
-        assert(deleted != null),
-        assert(read != null),
-        assert(published != null),
-        assert(apId != null),
-        assert(local != null),
-        super._();
+      required this.apId,
+      required this.local})
+      : super._();
 
   factory _$_PrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$_$_PrivateMessageFromJson(json);
@@ -1653,7 +1572,7 @@ class _$_PrivateMessage extends _PrivateMessage {
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
   final String apId;
   @override
@@ -1710,6 +1629,7 @@ class _$_PrivateMessage extends _PrivateMessage {
       const DeepCollectionEquality().hash(apId) ^
       const DeepCollectionEquality().hash(local);
 
+  @JsonKey(ignore: true)
   @override
   _$PrivateMessageCopyWith<_PrivateMessage> get copyWith =>
       __$PrivateMessageCopyWithImpl<_PrivateMessage>(this, _$identity);
@@ -1723,42 +1643,44 @@ class _$_PrivateMessage extends _PrivateMessage {
 abstract class _PrivateMessage extends PrivateMessage {
   _PrivateMessage._() : super._();
   factory _PrivateMessage(
-      {@required int id,
-      @required int creatorId,
-      @required int recipientId,
-      @required String content,
-      @required bool deleted,
-      @required bool read,
-      @required DateTime published,
-      DateTime updated,
-      @required String apId,
-      @required bool local}) = _$_PrivateMessage;
+      {required int id,
+      required int creatorId,
+      required int recipientId,
+      required String content,
+      required bool deleted,
+      required bool read,
+      required DateTime published,
+      DateTime? updated,
+      required String apId,
+      required bool local}) = _$_PrivateMessage;
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessage.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get recipientId;
+  int get recipientId => throw _privateConstructorUsedError;
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  String get apId;
+  String get apId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  _$PrivateMessageCopyWith<_PrivateMessage> get copyWith;
+  @JsonKey(ignore: true)
+  _$PrivateMessageCopyWith<_PrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PostReport _$PostReportFromJson(Map<String, dynamic> json) {
@@ -1769,19 +1691,18 @@ PostReport _$PostReportFromJson(Map<String, dynamic> json) {
 class _$PostReportTearOff {
   const _$PostReportTearOff();
 
-// ignore: unused_element
   _PostReport call(
-      {@required int id,
-      @required int creatorId,
-      @required int postId,
-      @required String originalPostName,
-      String originalPostUrl,
-      String originalPostBody,
-      @required String reason,
-      @required bool resolved,
-      int resolverId,
-      @required DateTime published,
-      DateTime updated}) {
+      {required int id,
+      required int creatorId,
+      required int postId,
+      required String originalPostName,
+      String? originalPostUrl,
+      String? originalPostBody,
+      required String reason,
+      required bool resolved,
+      int? resolverId,
+      required DateTime published,
+      DateTime? updated}) {
     return _PostReport(
       id: id,
       creatorId: creatorId,
@@ -1797,32 +1718,32 @@ class _$PostReportTearOff {
     );
   }
 
-// ignore: unused_element
   PostReport fromJson(Map<String, Object> json) {
     return PostReport.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PostReport = _$PostReportTearOff();
 
 /// @nodoc
 mixin _$PostReport {
-  int get id;
-  int get creatorId;
-  int get postId;
-  String get originalPostName;
-  String get originalPostUrl;
-  String get originalPostBody;
-  String get reason;
-  bool get resolved;
-  int get resolverId;
-  DateTime get published;
-  DateTime get updated;
+  int get id => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  String get originalPostName => throw _privateConstructorUsedError;
+  String? get originalPostUrl => throw _privateConstructorUsedError;
+  String? get originalPostBody => throw _privateConstructorUsedError;
+  String get reason => throw _privateConstructorUsedError;
+  bool get resolved => throw _privateConstructorUsedError;
+  int? get resolverId => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PostReportCopyWith<PostReport> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PostReportCopyWith<PostReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1835,13 +1756,13 @@ abstract class $PostReportCopyWith<$Res> {
       int creatorId,
       int postId,
       String originalPostName,
-      String originalPostUrl,
-      String originalPostBody,
+      String? originalPostUrl,
+      String? originalPostBody,
       String reason,
       bool resolved,
-      int resolverId,
+      int? resolverId,
       DateTime published,
-      DateTime updated});
+      DateTime? updated});
 }
 
 /// @nodoc
@@ -1854,17 +1775,17 @@ class _$PostReportCopyWithImpl<$Res> implements $PostReportCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object postId = freezed,
-    Object originalPostName = freezed,
-    Object originalPostUrl = freezed,
-    Object originalPostBody = freezed,
-    Object reason = freezed,
-    Object resolved = freezed,
-    Object resolverId = freezed,
-    Object published = freezed,
-    Object updated = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? postId = freezed,
+    Object? originalPostName = freezed,
+    Object? originalPostUrl = freezed,
+    Object? originalPostBody = freezed,
+    Object? reason = freezed,
+    Object? resolved = freezed,
+    Object? resolverId = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -1875,16 +1796,17 @@ class _$PostReportCopyWithImpl<$Res> implements $PostReportCopyWith<$Res> {
           : originalPostName as String,
       originalPostUrl: originalPostUrl == freezed
           ? _value.originalPostUrl
-          : originalPostUrl as String,
+          : originalPostUrl as String?,
       originalPostBody: originalPostBody == freezed
           ? _value.originalPostBody
-          : originalPostBody as String,
+          : originalPostBody as String?,
       reason: reason == freezed ? _value.reason : reason as String,
       resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId: resolverId == freezed ? _value.resolverId : resolverId as int,
+      resolverId:
+          resolverId == freezed ? _value.resolverId : resolverId as int?,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
     ));
   }
 }
@@ -1900,13 +1822,13 @@ abstract class _$PostReportCopyWith<$Res> implements $PostReportCopyWith<$Res> {
       int creatorId,
       int postId,
       String originalPostName,
-      String originalPostUrl,
-      String originalPostBody,
+      String? originalPostUrl,
+      String? originalPostBody,
       String reason,
       bool resolved,
-      int resolverId,
+      int? resolverId,
       DateTime published,
-      DateTime updated});
+      DateTime? updated});
 }
 
 /// @nodoc
@@ -1921,17 +1843,17 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object postId = freezed,
-    Object originalPostName = freezed,
-    Object originalPostUrl = freezed,
-    Object originalPostBody = freezed,
-    Object reason = freezed,
-    Object resolved = freezed,
-    Object resolverId = freezed,
-    Object published = freezed,
-    Object updated = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? postId = freezed,
+    Object? originalPostName = freezed,
+    Object? originalPostUrl = freezed,
+    Object? originalPostBody = freezed,
+    Object? reason = freezed,
+    Object? resolved = freezed,
+    Object? resolverId = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
   }) {
     return _then(_PostReport(
       id: id == freezed ? _value.id : id as int,
@@ -1942,16 +1864,17 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
           : originalPostName as String,
       originalPostUrl: originalPostUrl == freezed
           ? _value.originalPostUrl
-          : originalPostUrl as String,
+          : originalPostUrl as String?,
       originalPostBody: originalPostBody == freezed
           ? _value.originalPostBody
-          : originalPostBody as String,
+          : originalPostBody as String?,
       reason: reason == freezed ? _value.reason : reason as String,
       resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId: resolverId == freezed ? _value.resolverId : resolverId as int,
+      resolverId:
+          resolverId == freezed ? _value.resolverId : resolverId as int?,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
     ));
   }
 }
@@ -1962,25 +1885,18 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_PostReport extends _PostReport {
   _$_PostReport(
-      {@required this.id,
-      @required this.creatorId,
-      @required this.postId,
-      @required this.originalPostName,
+      {required this.id,
+      required this.creatorId,
+      required this.postId,
+      required this.originalPostName,
       this.originalPostUrl,
       this.originalPostBody,
-      @required this.reason,
-      @required this.resolved,
+      required this.reason,
+      required this.resolved,
       this.resolverId,
-      @required this.published,
+      required this.published,
       this.updated})
-      : assert(id != null),
-        assert(creatorId != null),
-        assert(postId != null),
-        assert(originalPostName != null),
-        assert(reason != null),
-        assert(resolved != null),
-        assert(published != null),
-        super._();
+      : super._();
 
   factory _$_PostReport.fromJson(Map<String, dynamic> json) =>
       _$_$_PostReportFromJson(json);
@@ -1994,19 +1910,19 @@ class _$_PostReport extends _PostReport {
   @override
   final String originalPostName;
   @override
-  final String originalPostUrl;
+  final String? originalPostUrl;
   @override
-  final String originalPostBody;
+  final String? originalPostBody;
   @override
   final String reason;
   @override
   final bool resolved;
   @override
-  final int resolverId;
+  final int? resolverId;
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
 
   @override
   String toString() {
@@ -2063,6 +1979,7 @@ class _$_PostReport extends _PostReport {
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated);
 
+  @JsonKey(ignore: true)
   @override
   _$PostReportCopyWith<_PostReport> get copyWith =>
       __$PostReportCopyWithImpl<_PostReport>(this, _$identity);
@@ -2076,45 +1993,47 @@ class _$_PostReport extends _PostReport {
 abstract class _PostReport extends PostReport {
   _PostReport._() : super._();
   factory _PostReport(
-      {@required int id,
-      @required int creatorId,
-      @required int postId,
-      @required String originalPostName,
-      String originalPostUrl,
-      String originalPostBody,
-      @required String reason,
-      @required bool resolved,
-      int resolverId,
-      @required DateTime published,
-      DateTime updated}) = _$_PostReport;
+      {required int id,
+      required int creatorId,
+      required int postId,
+      required String originalPostName,
+      String? originalPostUrl,
+      String? originalPostBody,
+      required String reason,
+      required bool resolved,
+      int? resolverId,
+      required DateTime published,
+      DateTime? updated}) = _$_PostReport;
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
       _$_PostReport.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String get originalPostName;
+  String get originalPostName => throw _privateConstructorUsedError;
   @override
-  String get originalPostUrl;
+  String? get originalPostUrl => throw _privateConstructorUsedError;
   @override
-  String get originalPostBody;
+  String? get originalPostBody => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
-  bool get resolved;
+  bool get resolved => throw _privateConstructorUsedError;
   @override
-  int get resolverId;
+  int? get resolverId => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  _$PostReportCopyWith<_PostReport> get copyWith;
+  @JsonKey(ignore: true)
+  _$PostReportCopyWith<_PostReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Post _$PostFromJson(Map<String, dynamic> json) {
@@ -2125,27 +2044,26 @@ Post _$PostFromJson(Map<String, dynamic> json) {
 class _$PostTearOff {
   const _$PostTearOff();
 
-// ignore: unused_element
   _Post call(
-      {@required int id,
-      @required String name,
-      String url,
-      String body,
-      @required int creatorId,
-      @required int communityId,
-      @required bool removed,
-      @required bool locked,
-      @required DateTime published,
-      DateTime updated,
-      @required bool deleted,
-      @required bool nsfw,
-      @required bool stickied,
-      String embedTitle,
-      String embedDescription,
-      String embedHtml,
-      String thumbnailUrl,
-      @required String apId,
-      @required bool local}) {
+      {required int id,
+      required String name,
+      String? url,
+      String? body,
+      required int creatorId,
+      required int communityId,
+      required bool removed,
+      required bool locked,
+      required DateTime published,
+      DateTime? updated,
+      required bool deleted,
+      required bool nsfw,
+      required bool stickied,
+      String? embedTitle,
+      String? embedDescription,
+      String? embedHtml,
+      String? thumbnailUrl,
+      required String apId,
+      required bool local}) {
     return _Post(
       id: id,
       name: name,
@@ -2169,40 +2087,39 @@ class _$PostTearOff {
     );
   }
 
-// ignore: unused_element
   Post fromJson(Map<String, Object> json) {
     return Post.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Post = _$PostTearOff();
 
 /// @nodoc
 mixin _$Post {
-  int get id;
-  String get name;
-  String get url;
-  String get body;
-  int get creatorId;
-  int get communityId;
-  bool get removed;
-  bool get locked;
-  DateTime get published;
-  DateTime get updated;
-  bool get deleted;
-  bool get nsfw;
-  bool get stickied;
-  String get embedTitle;
-  String get embedDescription;
-  String get embedHtml;
-  String get thumbnailUrl;
-  String get apId;
-  bool get local;
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
+  String? get body => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  bool get removed => throw _privateConstructorUsedError;
+  bool get locked => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  bool get nsfw => throw _privateConstructorUsedError;
+  bool get stickied => throw _privateConstructorUsedError;
+  String? get embedTitle => throw _privateConstructorUsedError;
+  String? get embedDescription => throw _privateConstructorUsedError;
+  String? get embedHtml => throw _privateConstructorUsedError;
+  String? get thumbnailUrl => throw _privateConstructorUsedError;
+  String get apId => throw _privateConstructorUsedError;
+  bool get local => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PostCopyWith<Post> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PostCopyWith<Post> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2212,21 +2129,21 @@ abstract class $PostCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String url,
-      String body,
+      String? url,
+      String? body,
       int creatorId,
       int communityId,
       bool removed,
       bool locked,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool deleted,
       bool nsfw,
       bool stickied,
-      String embedTitle,
-      String embedDescription,
-      String embedHtml,
-      String thumbnailUrl,
+      String? embedTitle,
+      String? embedDescription,
+      String? embedHtml,
+      String? thumbnailUrl,
       String apId,
       bool local});
 }
@@ -2241,31 +2158,31 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object url = freezed,
-    Object body = freezed,
-    Object creatorId = freezed,
-    Object communityId = freezed,
-    Object removed = freezed,
-    Object locked = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object deleted = freezed,
-    Object nsfw = freezed,
-    Object stickied = freezed,
-    Object embedTitle = freezed,
-    Object embedDescription = freezed,
-    Object embedHtml = freezed,
-    Object thumbnailUrl = freezed,
-    Object apId = freezed,
-    Object local = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? url = freezed,
+    Object? body = freezed,
+    Object? creatorId = freezed,
+    Object? communityId = freezed,
+    Object? removed = freezed,
+    Object? locked = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? deleted = freezed,
+    Object? nsfw = freezed,
+    Object? stickied = freezed,
+    Object? embedTitle = freezed,
+    Object? embedDescription = freezed,
+    Object? embedHtml = freezed,
+    Object? thumbnailUrl = freezed,
+    Object? apId = freezed,
+    Object? local = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String,
-      body: body == freezed ? _value.body : body as String,
+      url: url == freezed ? _value.url : url as String?,
+      body: body == freezed ? _value.body : body as String?,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
@@ -2273,19 +2190,19 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
       locked: locked == freezed ? _value.locked : locked as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
       stickied: stickied == freezed ? _value.stickied : stickied as bool,
       embedTitle:
-          embedTitle == freezed ? _value.embedTitle : embedTitle as String,
+          embedTitle == freezed ? _value.embedTitle : embedTitle as String?,
       embedDescription: embedDescription == freezed
           ? _value.embedDescription
-          : embedDescription as String,
-      embedHtml: embedHtml == freezed ? _value.embedHtml : embedHtml as String,
+          : embedDescription as String?,
+      embedHtml: embedHtml == freezed ? _value.embedHtml : embedHtml as String?,
       thumbnailUrl: thumbnailUrl == freezed
           ? _value.thumbnailUrl
-          : thumbnailUrl as String,
+          : thumbnailUrl as String?,
       apId: apId == freezed ? _value.apId : apId as String,
       local: local == freezed ? _value.local : local as bool,
     ));
@@ -2300,21 +2217,21 @@ abstract class _$PostCopyWith<$Res> implements $PostCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String url,
-      String body,
+      String? url,
+      String? body,
       int creatorId,
       int communityId,
       bool removed,
       bool locked,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool deleted,
       bool nsfw,
       bool stickied,
-      String embedTitle,
-      String embedDescription,
-      String embedHtml,
-      String thumbnailUrl,
+      String? embedTitle,
+      String? embedDescription,
+      String? embedHtml,
+      String? thumbnailUrl,
       String apId,
       bool local});
 }
@@ -2330,31 +2247,31 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object url = freezed,
-    Object body = freezed,
-    Object creatorId = freezed,
-    Object communityId = freezed,
-    Object removed = freezed,
-    Object locked = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object deleted = freezed,
-    Object nsfw = freezed,
-    Object stickied = freezed,
-    Object embedTitle = freezed,
-    Object embedDescription = freezed,
-    Object embedHtml = freezed,
-    Object thumbnailUrl = freezed,
-    Object apId = freezed,
-    Object local = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? url = freezed,
+    Object? body = freezed,
+    Object? creatorId = freezed,
+    Object? communityId = freezed,
+    Object? removed = freezed,
+    Object? locked = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? deleted = freezed,
+    Object? nsfw = freezed,
+    Object? stickied = freezed,
+    Object? embedTitle = freezed,
+    Object? embedDescription = freezed,
+    Object? embedHtml = freezed,
+    Object? thumbnailUrl = freezed,
+    Object? apId = freezed,
+    Object? local = freezed,
   }) {
     return _then(_Post(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String,
-      body: body == freezed ? _value.body : body as String,
+      url: url == freezed ? _value.url : url as String?,
+      body: body == freezed ? _value.body : body as String?,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
@@ -2362,19 +2279,19 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
       locked: locked == freezed ? _value.locked : locked as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
       stickied: stickied == freezed ? _value.stickied : stickied as bool,
       embedTitle:
-          embedTitle == freezed ? _value.embedTitle : embedTitle as String,
+          embedTitle == freezed ? _value.embedTitle : embedTitle as String?,
       embedDescription: embedDescription == freezed
           ? _value.embedDescription
-          : embedDescription as String,
-      embedHtml: embedHtml == freezed ? _value.embedHtml : embedHtml as String,
+          : embedDescription as String?,
+      embedHtml: embedHtml == freezed ? _value.embedHtml : embedHtml as String?,
       thumbnailUrl: thumbnailUrl == freezed
           ? _value.thumbnailUrl
-          : thumbnailUrl as String,
+          : thumbnailUrl as String?,
       apId: apId == freezed ? _value.apId : apId as String,
       local: local == freezed ? _value.local : local as bool,
     ));
@@ -2387,38 +2304,26 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 /// @nodoc
 class _$_Post extends _Post {
   _$_Post(
-      {@required this.id,
-      @required this.name,
+      {required this.id,
+      required this.name,
       this.url,
       this.body,
-      @required this.creatorId,
-      @required this.communityId,
-      @required this.removed,
-      @required this.locked,
-      @required this.published,
+      required this.creatorId,
+      required this.communityId,
+      required this.removed,
+      required this.locked,
+      required this.published,
       this.updated,
-      @required this.deleted,
-      @required this.nsfw,
-      @required this.stickied,
+      required this.deleted,
+      required this.nsfw,
+      required this.stickied,
       this.embedTitle,
       this.embedDescription,
       this.embedHtml,
       this.thumbnailUrl,
-      @required this.apId,
-      @required this.local})
-      : assert(id != null),
-        assert(name != null),
-        assert(creatorId != null),
-        assert(communityId != null),
-        assert(removed != null),
-        assert(locked != null),
-        assert(published != null),
-        assert(deleted != null),
-        assert(nsfw != null),
-        assert(stickied != null),
-        assert(apId != null),
-        assert(local != null),
-        super._();
+      required this.apId,
+      required this.local})
+      : super._();
 
   factory _$_Post.fromJson(Map<String, dynamic> json) =>
       _$_$_PostFromJson(json);
@@ -2428,9 +2333,9 @@ class _$_Post extends _Post {
   @override
   final String name;
   @override
-  final String url;
+  final String? url;
   @override
-  final String body;
+  final String? body;
   @override
   final int creatorId;
   @override
@@ -2442,7 +2347,7 @@ class _$_Post extends _Post {
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
   final bool deleted;
   @override
@@ -2450,13 +2355,13 @@ class _$_Post extends _Post {
   @override
   final bool stickied;
   @override
-  final String embedTitle;
+  final String? embedTitle;
   @override
-  final String embedDescription;
+  final String? embedDescription;
   @override
-  final String embedHtml;
+  final String? embedHtml;
   @override
-  final String thumbnailUrl;
+  final String? thumbnailUrl;
   @override
   final String apId;
   @override
@@ -2545,6 +2450,7 @@ class _$_Post extends _Post {
       const DeepCollectionEquality().hash(apId) ^
       const DeepCollectionEquality().hash(local);
 
+  @JsonKey(ignore: true)
   @override
   _$PostCopyWith<_Post> get copyWith =>
       __$PostCopyWithImpl<_Post>(this, _$identity);
@@ -2558,68 +2464,69 @@ class _$_Post extends _Post {
 abstract class _Post extends Post {
   _Post._() : super._();
   factory _Post(
-      {@required int id,
-      @required String name,
-      String url,
-      String body,
-      @required int creatorId,
-      @required int communityId,
-      @required bool removed,
-      @required bool locked,
-      @required DateTime published,
-      DateTime updated,
-      @required bool deleted,
-      @required bool nsfw,
-      @required bool stickied,
-      String embedTitle,
-      String embedDescription,
-      String embedHtml,
-      String thumbnailUrl,
-      @required String apId,
-      @required bool local}) = _$_Post;
+      {required int id,
+      required String name,
+      String? url,
+      String? body,
+      required int creatorId,
+      required int communityId,
+      required bool removed,
+      required bool locked,
+      required DateTime published,
+      DateTime? updated,
+      required bool deleted,
+      required bool nsfw,
+      required bool stickied,
+      String? embedTitle,
+      String? embedDescription,
+      String? embedHtml,
+      String? thumbnailUrl,
+      required String apId,
+      required bool local}) = _$_Post;
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
-  String get body;
+  String? get body => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  bool get locked;
+  bool get locked => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  bool get nsfw;
+  bool get nsfw => throw _privateConstructorUsedError;
   @override
-  bool get stickied;
+  bool get stickied => throw _privateConstructorUsedError;
   @override
-  String get embedTitle;
+  String? get embedTitle => throw _privateConstructorUsedError;
   @override
-  String get embedDescription;
+  String? get embedDescription => throw _privateConstructorUsedError;
   @override
-  String get embedHtml;
+  String? get embedHtml => throw _privateConstructorUsedError;
   @override
-  String get thumbnailUrl;
+  String? get thumbnailUrl => throw _privateConstructorUsedError;
   @override
-  String get apId;
+  String get apId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  _$PostCopyWith<_Post> get copyWith;
+  @JsonKey(ignore: true)
+  _$PostCopyWith<_Post> get copyWith => throw _privateConstructorUsedError;
 }
 
 PasswordResetRequest _$PasswordResetRequestFromJson(Map<String, dynamic> json) {
@@ -2630,12 +2537,11 @@ PasswordResetRequest _$PasswordResetRequestFromJson(Map<String, dynamic> json) {
 class _$PasswordResetRequestTearOff {
   const _$PasswordResetRequestTearOff();
 
-// ignore: unused_element
   _PasswordResetRequest call(
-      {@required int id,
-      @required int userId,
-      @required String tokenEncrypted,
-      @required DateTime published}) {
+      {required int id,
+      required int userId,
+      required String tokenEncrypted,
+      required DateTime published}) {
     return _PasswordResetRequest(
       id: id,
       userId: userId,
@@ -2644,25 +2550,25 @@ class _$PasswordResetRequestTearOff {
     );
   }
 
-// ignore: unused_element
   PasswordResetRequest fromJson(Map<String, Object> json) {
     return PasswordResetRequest.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PasswordResetRequest = _$PasswordResetRequestTearOff();
 
 /// @nodoc
 mixin _$PasswordResetRequest {
-  int get id;
-  int get userId;
-  String get tokenEncrypted;
-  DateTime get published;
+  int get id => throw _privateConstructorUsedError;
+  int get userId => throw _privateConstructorUsedError;
+  String get tokenEncrypted => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PasswordResetRequestCopyWith<PasswordResetRequest> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PasswordResetRequestCopyWith<PasswordResetRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2684,10 +2590,10 @@ class _$PasswordResetRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object userId = freezed,
-    Object tokenEncrypted = freezed,
-    Object published = freezed,
+    Object? id = freezed,
+    Object? userId = freezed,
+    Object? tokenEncrypted = freezed,
+    Object? published = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -2724,10 +2630,10 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object userId = freezed,
-    Object tokenEncrypted = freezed,
-    Object published = freezed,
+    Object? id = freezed,
+    Object? userId = freezed,
+    Object? tokenEncrypted = freezed,
+    Object? published = freezed,
   }) {
     return _then(_PasswordResetRequest(
       id: id == freezed ? _value.id : id as int,
@@ -2747,15 +2653,11 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
 /// @nodoc
 class _$_PasswordResetRequest extends _PasswordResetRequest {
   _$_PasswordResetRequest(
-      {@required this.id,
-      @required this.userId,
-      @required this.tokenEncrypted,
-      @required this.published})
-      : assert(id != null),
-        assert(userId != null),
-        assert(tokenEncrypted != null),
-        assert(published != null),
-        super._();
+      {required this.id,
+      required this.userId,
+      required this.tokenEncrypted,
+      required this.published})
+      : super._();
 
   factory _$_PasswordResetRequest.fromJson(Map<String, dynamic> json) =>
       _$_$_PasswordResetRequestFromJson(json);
@@ -2798,6 +2700,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
       const DeepCollectionEquality().hash(tokenEncrypted) ^
       const DeepCollectionEquality().hash(published);
 
+  @JsonKey(ignore: true)
   @override
   _$PasswordResetRequestCopyWith<_PasswordResetRequest> get copyWith =>
       __$PasswordResetRequestCopyWithImpl<_PasswordResetRequest>(
@@ -2812,24 +2715,26 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 abstract class _PasswordResetRequest extends PasswordResetRequest {
   _PasswordResetRequest._() : super._();
   factory _PasswordResetRequest(
-      {@required int id,
-      @required int userId,
-      @required String tokenEncrypted,
-      @required DateTime published}) = _$_PasswordResetRequest;
+      {required int id,
+      required int userId,
+      required String tokenEncrypted,
+      required DateTime published}) = _$_PasswordResetRequest;
 
   factory _PasswordResetRequest.fromJson(Map<String, dynamic> json) =
       _$_PasswordResetRequest.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get userId;
+  int get userId => throw _privateConstructorUsedError;
   @override
-  String get tokenEncrypted;
+  String get tokenEncrypted => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  _$PasswordResetRequestCopyWith<_PasswordResetRequest> get copyWith;
+  @JsonKey(ignore: true)
+  _$PasswordResetRequestCopyWith<_PasswordResetRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModRemovePost _$ModRemovePostFromJson(Map<String, dynamic> json) {
@@ -2840,14 +2745,13 @@ ModRemovePost _$ModRemovePostFromJson(Map<String, dynamic> json) {
 class _$ModRemovePostTearOff {
   const _$ModRemovePostTearOff();
 
-// ignore: unused_element
   _ModRemovePost call(
-      {@required int id,
-      @required int modUserId,
-      @required int postId,
-      String reason,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int postId,
+      String? reason,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModRemovePost(
       id: id,
       modUserId: modUserId,
@@ -2858,28 +2762,28 @@ class _$ModRemovePostTearOff {
     );
   }
 
-// ignore: unused_element
   ModRemovePost fromJson(Map<String, Object> json) {
     return ModRemovePost.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModRemovePost = _$ModRemovePostTearOff();
 
 /// @nodoc
 mixin _$ModRemovePost {
-  int get id;
-  int get modUserId;
-  int get postId;
-  String get reason;
-  bool get removed;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModRemovePostCopyWith<ModRemovePost> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModRemovePostCopyWith<ModRemovePost> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2891,8 +2795,8 @@ abstract class $ModRemovePostCopyWith<$Res> {
       {int id,
       int modUserId,
       int postId,
-      String reason,
-      bool removed,
+      String? reason,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -2907,19 +2811,19 @@ class _$ModRemovePostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object postId = freezed,
-    Object reason = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? postId = freezed,
+    Object? reason = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -2936,8 +2840,8 @@ abstract class _$ModRemovePostCopyWith<$Res>
       {int id,
       int modUserId,
       int postId,
-      String reason,
-      bool removed,
+      String? reason,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -2954,19 +2858,19 @@ class __$ModRemovePostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object postId = freezed,
-    Object reason = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? postId = freezed,
+    Object? reason = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModRemovePost(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -2978,17 +2882,13 @@ class __$ModRemovePostCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModRemovePost extends _ModRemovePost {
   _$_ModRemovePost(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.postId,
+      {required this.id,
+      required this.modUserId,
+      required this.postId,
       this.reason,
       this.removed,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(postId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModRemovePost.fromJson(Map<String, dynamic> json) =>
       _$_$_ModRemovePostFromJson(json);
@@ -3000,9 +2900,9 @@ class _$_ModRemovePost extends _ModRemovePost {
   @override
   final int postId;
   @override
-  final String reason;
+  final String? reason;
   @override
-  final bool removed;
+  final bool? removed;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -3042,6 +2942,7 @@ class _$_ModRemovePost extends _ModRemovePost {
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModRemovePostCopyWith<_ModRemovePost> get copyWith =>
       __$ModRemovePostCopyWithImpl<_ModRemovePost>(this, _$identity);
@@ -3055,31 +2956,33 @@ class _$_ModRemovePost extends _ModRemovePost {
 abstract class _ModRemovePost extends ModRemovePost {
   _ModRemovePost._() : super._();
   factory _ModRemovePost(
-      {@required int id,
-      @required int modUserId,
-      @required int postId,
-      String reason,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModRemovePost;
+      {required int id,
+      required int modUserId,
+      required int postId,
+      String? reason,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemovePost;
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModRemovePostCopyWith<_ModRemovePost> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModRemovePostCopyWith<_ModRemovePost> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModLockPost _$ModLockPostFromJson(Map<String, dynamic> json) {
@@ -3090,13 +2993,12 @@ ModLockPost _$ModLockPostFromJson(Map<String, dynamic> json) {
 class _$ModLockPostTearOff {
   const _$ModLockPostTearOff();
 
-// ignore: unused_element
   _ModLockPost call(
-      {@required int id,
-      @required int modUserId,
-      @required int postId,
-      bool locked,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int postId,
+      bool? locked,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModLockPost(
       id: id,
       modUserId: modUserId,
@@ -3106,27 +3008,27 @@ class _$ModLockPostTearOff {
     );
   }
 
-// ignore: unused_element
   ModLockPost fromJson(Map<String, Object> json) {
     return ModLockPost.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModLockPost = _$ModLockPostTearOff();
 
 /// @nodoc
 mixin _$ModLockPost {
-  int get id;
-  int get modUserId;
-  int get postId;
-  bool get locked;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  bool? get locked => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModLockPostCopyWith<ModLockPost> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModLockPostCopyWith<ModLockPost> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3138,7 +3040,7 @@ abstract class $ModLockPostCopyWith<$Res> {
       {int id,
       int modUserId,
       int postId,
-      bool locked,
+      bool? locked,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3152,17 +3054,17 @@ class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object postId = freezed,
-    Object locked = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? postId = freezed,
+    Object? locked = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      locked: locked == freezed ? _value.locked : locked as bool,
+      locked: locked == freezed ? _value.locked : locked as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3179,7 +3081,7 @@ abstract class _$ModLockPostCopyWith<$Res>
       {int id,
       int modUserId,
       int postId,
-      bool locked,
+      bool? locked,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3195,17 +3097,17 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object postId = freezed,
-    Object locked = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? postId = freezed,
+    Object? locked = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModLockPost(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      locked: locked == freezed ? _value.locked : locked as bool,
+      locked: locked == freezed ? _value.locked : locked as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3217,16 +3119,12 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModLockPost extends _ModLockPost {
   _$_ModLockPost(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.postId,
+      {required this.id,
+      required this.modUserId,
+      required this.postId,
       this.locked,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(postId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModLockPost.fromJson(Map<String, dynamic> json) =>
       _$_$_ModLockPostFromJson(json);
@@ -3238,7 +3136,7 @@ class _$_ModLockPost extends _ModLockPost {
   @override
   final int postId;
   @override
-  final bool locked;
+  final bool? locked;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -3274,6 +3172,7 @@ class _$_ModLockPost extends _ModLockPost {
       const DeepCollectionEquality().hash(locked) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModLockPostCopyWith<_ModLockPost> get copyWith =>
       __$ModLockPostCopyWithImpl<_ModLockPost>(this, _$identity);
@@ -3287,28 +3186,30 @@ class _$_ModLockPost extends _ModLockPost {
 abstract class _ModLockPost extends ModLockPost {
   _ModLockPost._() : super._();
   factory _ModLockPost(
-      {@required int id,
-      @required int modUserId,
-      @required int postId,
-      bool locked,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModLockPost;
+      {required int id,
+      required int modUserId,
+      required int postId,
+      bool? locked,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModLockPost;
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
       _$_ModLockPost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get locked;
+  bool? get locked => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModLockPostCopyWith<_ModLockPost> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModLockPostCopyWith<_ModLockPost> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModStickyPost _$ModStickyPostFromJson(Map<String, dynamic> json) {
@@ -3319,13 +3220,12 @@ ModStickyPost _$ModStickyPostFromJson(Map<String, dynamic> json) {
 class _$ModStickyPostTearOff {
   const _$ModStickyPostTearOff();
 
-// ignore: unused_element
   _ModStickyPost call(
-      {@required int id,
-      @required int modUserId,
-      @required int postId,
-      bool stickied,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int postId,
+      bool? stickied,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModStickyPost(
       id: id,
       modUserId: modUserId,
@@ -3335,27 +3235,27 @@ class _$ModStickyPostTearOff {
     );
   }
 
-// ignore: unused_element
   ModStickyPost fromJson(Map<String, Object> json) {
     return ModStickyPost.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModStickyPost = _$ModStickyPostTearOff();
 
 /// @nodoc
 mixin _$ModStickyPost {
-  int get id;
-  int get modUserId;
-  int get postId;
-  bool get stickied;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  bool? get stickied => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModStickyPostCopyWith<ModStickyPost> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModStickyPostCopyWith<ModStickyPost> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3367,7 +3267,7 @@ abstract class $ModStickyPostCopyWith<$Res> {
       {int id,
       int modUserId,
       int postId,
-      bool stickied,
+      bool? stickied,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3382,17 +3282,17 @@ class _$ModStickyPostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object postId = freezed,
-    Object stickied = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? postId = freezed,
+    Object? stickied = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      stickied: stickied == freezed ? _value.stickied : stickied as bool,
+      stickied: stickied == freezed ? _value.stickied : stickied as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3409,7 +3309,7 @@ abstract class _$ModStickyPostCopyWith<$Res>
       {int id,
       int modUserId,
       int postId,
-      bool stickied,
+      bool? stickied,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3426,17 +3326,17 @@ class __$ModStickyPostCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object postId = freezed,
-    Object stickied = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? postId = freezed,
+    Object? stickied = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModStickyPost(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      stickied: stickied == freezed ? _value.stickied : stickied as bool,
+      stickied: stickied == freezed ? _value.stickied : stickied as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3448,16 +3348,12 @@ class __$ModStickyPostCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModStickyPost extends _ModStickyPost {
   _$_ModStickyPost(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.postId,
+      {required this.id,
+      required this.modUserId,
+      required this.postId,
       this.stickied,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(postId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModStickyPost.fromJson(Map<String, dynamic> json) =>
       _$_$_ModStickyPostFromJson(json);
@@ -3469,7 +3365,7 @@ class _$_ModStickyPost extends _ModStickyPost {
   @override
   final int postId;
   @override
-  final bool stickied;
+  final bool? stickied;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -3506,6 +3402,7 @@ class _$_ModStickyPost extends _ModStickyPost {
       const DeepCollectionEquality().hash(stickied) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModStickyPostCopyWith<_ModStickyPost> get copyWith =>
       __$ModStickyPostCopyWithImpl<_ModStickyPost>(this, _$identity);
@@ -3519,28 +3416,30 @@ class _$_ModStickyPost extends _ModStickyPost {
 abstract class _ModStickyPost extends ModStickyPost {
   _ModStickyPost._() : super._();
   factory _ModStickyPost(
-      {@required int id,
-      @required int modUserId,
-      @required int postId,
-      bool stickied,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModStickyPost;
+      {required int id,
+      required int modUserId,
+      required int postId,
+      bool? stickied,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModStickyPost;
 
   factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get stickied;
+  bool? get stickied => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModStickyPostCopyWith<_ModStickyPost> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModStickyPostCopyWith<_ModStickyPost> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModRemoveComment _$ModRemoveCommentFromJson(Map<String, dynamic> json) {
@@ -3551,14 +3450,13 @@ ModRemoveComment _$ModRemoveCommentFromJson(Map<String, dynamic> json) {
 class _$ModRemoveCommentTearOff {
   const _$ModRemoveCommentTearOff();
 
-// ignore: unused_element
   _ModRemoveComment call(
-      {@required int id,
-      @required int modUserId,
-      @required int commentId,
-      String reason,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int commentId,
+      String? reason,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModRemoveComment(
       id: id,
       modUserId: modUserId,
@@ -3569,28 +3467,28 @@ class _$ModRemoveCommentTearOff {
     );
   }
 
-// ignore: unused_element
   ModRemoveComment fromJson(Map<String, Object> json) {
     return ModRemoveComment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModRemoveComment = _$ModRemoveCommentTearOff();
 
 /// @nodoc
 mixin _$ModRemoveComment {
-  int get id;
-  int get modUserId;
-  int get commentId;
-  String get reason;
-  bool get removed;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModRemoveCommentCopyWith<ModRemoveComment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModRemoveCommentCopyWith<ModRemoveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3602,8 +3500,8 @@ abstract class $ModRemoveCommentCopyWith<$Res> {
       {int id,
       int modUserId,
       int commentId,
-      String reason,
-      bool removed,
+      String? reason,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3618,19 +3516,19 @@ class _$ModRemoveCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object commentId = freezed,
-    Object reason = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? commentId = freezed,
+    Object? reason = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3647,8 +3545,8 @@ abstract class _$ModRemoveCommentCopyWith<$Res>
       {int id,
       int modUserId,
       int commentId,
-      String reason,
-      bool removed,
+      String? reason,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3665,19 +3563,19 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object commentId = freezed,
-    Object reason = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? commentId = freezed,
+    Object? reason = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModRemoveComment(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3689,17 +3587,13 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModRemoveComment extends _ModRemoveComment {
   _$_ModRemoveComment(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.commentId,
+      {required this.id,
+      required this.modUserId,
+      required this.commentId,
       this.reason,
       this.removed,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(commentId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModRemoveComment.fromJson(Map<String, dynamic> json) =>
       _$_$_ModRemoveCommentFromJson(json);
@@ -3711,9 +3605,9 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   @override
   final int commentId;
   @override
-  final String reason;
+  final String? reason;
   @override
-  final bool removed;
+  final bool? removed;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -3754,6 +3648,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModRemoveCommentCopyWith<_ModRemoveComment> get copyWith =>
       __$ModRemoveCommentCopyWithImpl<_ModRemoveComment>(this, _$identity);
@@ -3767,31 +3662,33 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 abstract class _ModRemoveComment extends ModRemoveComment {
   _ModRemoveComment._() : super._();
   factory _ModRemoveComment(
-      {@required int id,
-      @required int modUserId,
-      @required int commentId,
-      String reason,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModRemoveComment;
+      {required int id,
+      required int modUserId,
+      required int commentId,
+      String? reason,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemoveComment;
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveComment.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModRemoveCommentCopyWith<_ModRemoveComment> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModRemoveCommentCopyWith<_ModRemoveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModRemoveCommunity _$ModRemoveCommunityFromJson(Map<String, dynamic> json) {
@@ -3802,15 +3699,14 @@ ModRemoveCommunity _$ModRemoveCommunityFromJson(Map<String, dynamic> json) {
 class _$ModRemoveCommunityTearOff {
   const _$ModRemoveCommunityTearOff();
 
-// ignore: unused_element
   _ModRemoveCommunity call(
-      {@required int id,
-      @required int modUserId,
-      @required int communityId,
-      String reason,
-      bool removed,
-      DateTime expires,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int communityId,
+      String? reason,
+      bool? removed,
+      DateTime? expires,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModRemoveCommunity(
       id: id,
       modUserId: modUserId,
@@ -3822,29 +3718,29 @@ class _$ModRemoveCommunityTearOff {
     );
   }
 
-// ignore: unused_element
   ModRemoveCommunity fromJson(Map<String, Object> json) {
     return ModRemoveCommunity.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModRemoveCommunity = _$ModRemoveCommunityTearOff();
 
 /// @nodoc
 mixin _$ModRemoveCommunity {
-  int get id;
-  int get modUserId;
-  int get communityId;
-  String get reason;
-  bool get removed;
-  DateTime get expires;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  bool? get removed => throw _privateConstructorUsedError;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModRemoveCommunityCopyWith<ModRemoveCommunity> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModRemoveCommunityCopyWith<ModRemoveCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3856,9 +3752,9 @@ abstract class $ModRemoveCommunityCopyWith<$Res> {
       {int id,
       int modUserId,
       int communityId,
-      String reason,
-      bool removed,
-      DateTime expires,
+      String? reason,
+      bool? removed,
+      DateTime? expires,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3873,22 +3769,22 @@ class _$ModRemoveCommunityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object communityId = freezed,
-    Object reason = freezed,
-    Object removed = freezed,
-    Object expires = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? communityId = freezed,
+    Object? reason = freezed,
+    Object? removed = freezed,
+    Object? expires = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      expires: expires == freezed ? _value.expires : expires as DateTime,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      removed: removed == freezed ? _value.removed : removed as bool?,
+      expires: expires == freezed ? _value.expires : expires as DateTime?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3905,9 +3801,9 @@ abstract class _$ModRemoveCommunityCopyWith<$Res>
       {int id,
       int modUserId,
       int communityId,
-      String reason,
-      bool removed,
-      DateTime expires,
+      String? reason,
+      bool? removed,
+      DateTime? expires,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -3924,22 +3820,22 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object communityId = freezed,
-    Object reason = freezed,
-    Object removed = freezed,
-    Object expires = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? communityId = freezed,
+    Object? reason = freezed,
+    Object? removed = freezed,
+    Object? expires = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModRemoveCommunity(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      expires: expires == freezed ? _value.expires : expires as DateTime,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      removed: removed == freezed ? _value.removed : removed as bool?,
+      expires: expires == freezed ? _value.expires : expires as DateTime?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -3951,18 +3847,14 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   _$_ModRemoveCommunity(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.communityId,
+      {required this.id,
+      required this.modUserId,
+      required this.communityId,
       this.reason,
       this.removed,
       this.expires,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(communityId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$_$_ModRemoveCommunityFromJson(json);
@@ -3974,11 +3866,11 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   @override
   final int communityId;
   @override
-  final String reason;
+  final String? reason;
   @override
-  final bool removed;
+  final bool? removed;
   @override
-  final DateTime expires;
+  final DateTime? expires;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -4023,6 +3915,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
       const DeepCollectionEquality().hash(expires) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModRemoveCommunityCopyWith<_ModRemoveCommunity> get copyWith =>
       __$ModRemoveCommunityCopyWithImpl<_ModRemoveCommunity>(this, _$identity);
@@ -4036,34 +3929,36 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   _ModRemoveCommunity._() : super._();
   factory _ModRemoveCommunity(
-      {@required int id,
-      @required int modUserId,
-      @required int communityId,
-      String reason,
-      bool removed,
-      DateTime expires,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModRemoveCommunity;
+      {required int id,
+      required int modUserId,
+      required int communityId,
+      String? reason,
+      bool? removed,
+      DateTime? expires,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemoveCommunity;
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
-  DateTime get expires;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModRemoveCommunityCopyWith<_ModRemoveCommunity> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModRemoveCommunityCopyWith<_ModRemoveCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModBanFromCommunity _$ModBanFromCommunityFromJson(Map<String, dynamic> json) {
@@ -4074,16 +3969,15 @@ ModBanFromCommunity _$ModBanFromCommunityFromJson(Map<String, dynamic> json) {
 class _$ModBanFromCommunityTearOff {
   const _$ModBanFromCommunityTearOff();
 
-// ignore: unused_element
   _ModBanFromCommunity call(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      @required int communityId,
-      String reason,
-      bool banned,
-      DateTime expires,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      required int communityId,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModBanFromCommunity(
       id: id,
       modUserId: modUserId,
@@ -4096,30 +3990,30 @@ class _$ModBanFromCommunityTearOff {
     );
   }
 
-// ignore: unused_element
   ModBanFromCommunity fromJson(Map<String, Object> json) {
     return ModBanFromCommunity.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModBanFromCommunity = _$ModBanFromCommunityTearOff();
 
 /// @nodoc
 mixin _$ModBanFromCommunity {
-  int get id;
-  int get modUserId;
-  int get otherUserId;
-  int get communityId;
-  String get reason;
-  bool get banned;
-  DateTime get expires;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get otherUserId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  bool? get banned => throw _privateConstructorUsedError;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModBanFromCommunityCopyWith<ModBanFromCommunity> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModBanFromCommunityCopyWith<ModBanFromCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4132,9 +4026,9 @@ abstract class $ModBanFromCommunityCopyWith<$Res> {
       int modUserId,
       int otherUserId,
       int communityId,
-      String reason,
-      bool banned,
-      DateTime expires,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4149,14 +4043,14 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object communityId = freezed,
-    Object reason = freezed,
-    Object banned = freezed,
-    Object expires = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? communityId = freezed,
+    Object? reason = freezed,
+    Object? banned = freezed,
+    Object? expires = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -4165,9 +4059,9 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      expires: expires == freezed ? _value.expires : expires as DateTime,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      banned: banned == freezed ? _value.banned : banned as bool?,
+      expires: expires == freezed ? _value.expires : expires as DateTime?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4185,9 +4079,9 @@ abstract class _$ModBanFromCommunityCopyWith<$Res>
       int modUserId,
       int otherUserId,
       int communityId,
-      String reason,
-      bool banned,
-      DateTime expires,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4204,14 +4098,14 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object communityId = freezed,
-    Object reason = freezed,
-    Object banned = freezed,
-    Object expires = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? communityId = freezed,
+    Object? reason = freezed,
+    Object? banned = freezed,
+    Object? expires = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModBanFromCommunity(
       id: id == freezed ? _value.id : id as int,
@@ -4220,9 +4114,9 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      expires: expires == freezed ? _value.expires : expires as DateTime,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      banned: banned == freezed ? _value.banned : banned as bool?,
+      expires: expires == freezed ? _value.expires : expires as DateTime?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4234,20 +4128,15 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   _$_ModBanFromCommunity(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.otherUserId,
-      @required this.communityId,
+      {required this.id,
+      required this.modUserId,
+      required this.otherUserId,
+      required this.communityId,
       this.reason,
       this.banned,
       this.expires,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(otherUserId != null),
-        assert(communityId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
       _$_$_ModBanFromCommunityFromJson(json);
@@ -4261,11 +4150,11 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   @override
   final int communityId;
   @override
-  final String reason;
+  final String? reason;
   @override
-  final bool banned;
+  final bool? banned;
   @override
-  final DateTime expires;
+  final DateTime? expires;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -4313,6 +4202,7 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
       const DeepCollectionEquality().hash(expires) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModBanFromCommunityCopyWith<_ModBanFromCommunity> get copyWith =>
       __$ModBanFromCommunityCopyWithImpl<_ModBanFromCommunity>(
@@ -4327,38 +4217,39 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   _ModBanFromCommunity._() : super._();
   factory _ModBanFromCommunity(
-          {@required int id,
-          @required int modUserId,
-          @required int otherUserId,
-          @required int communityId,
-          String reason,
-          bool banned,
-          DateTime expires,
-          @required @JsonKey(name: 'when_') DateTime when}) =
-      _$_ModBanFromCommunity;
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      required int communityId,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModBanFromCommunity;
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId;
+  int get otherUserId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool? get banned => throw _privateConstructorUsedError;
   @override
-  DateTime get expires;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModBanFromCommunityCopyWith<_ModBanFromCommunity> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModBanFromCommunityCopyWith<_ModBanFromCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModBan _$ModBanFromJson(Map<String, dynamic> json) {
@@ -4369,15 +4260,14 @@ ModBan _$ModBanFromJson(Map<String, dynamic> json) {
 class _$ModBanTearOff {
   const _$ModBanTearOff();
 
-// ignore: unused_element
   _ModBan call(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      String reason,
-      bool banned,
-      DateTime expires,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModBan(
       id: id,
       modUserId: modUserId,
@@ -4389,29 +4279,28 @@ class _$ModBanTearOff {
     );
   }
 
-// ignore: unused_element
   ModBan fromJson(Map<String, Object> json) {
     return ModBan.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModBan = _$ModBanTearOff();
 
 /// @nodoc
 mixin _$ModBan {
-  int get id;
-  int get modUserId;
-  int get otherUserId;
-  String get reason;
-  bool get banned;
-  DateTime get expires;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get otherUserId => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  bool? get banned => throw _privateConstructorUsedError;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModBanCopyWith<ModBan> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModBanCopyWith<ModBan> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4422,9 +4311,9 @@ abstract class $ModBanCopyWith<$Res> {
       {int id,
       int modUserId,
       int otherUserId,
-      String reason,
-      bool banned,
-      DateTime expires,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4438,22 +4327,22 @@ class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object reason = freezed,
-    Object banned = freezed,
-    Object expires = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? reason = freezed,
+    Object? banned = freezed,
+    Object? expires = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       otherUserId:
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      expires: expires == freezed ? _value.expires : expires as DateTime,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      banned: banned == freezed ? _value.banned : banned as bool?,
+      expires: expires == freezed ? _value.expires : expires as DateTime?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4468,9 +4357,9 @@ abstract class _$ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
       {int id,
       int modUserId,
       int otherUserId,
-      String reason,
-      bool banned,
-      DateTime expires,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4485,22 +4374,22 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object reason = freezed,
-    Object banned = freezed,
-    Object expires = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? reason = freezed,
+    Object? banned = freezed,
+    Object? expires = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModBan(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       otherUserId:
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      expires: expires == freezed ? _value.expires : expires as DateTime,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      banned: banned == freezed ? _value.banned : banned as bool?,
+      expires: expires == freezed ? _value.expires : expires as DateTime?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4512,18 +4401,14 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModBan extends _ModBan {
   _$_ModBan(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.otherUserId,
+      {required this.id,
+      required this.modUserId,
+      required this.otherUserId,
       this.reason,
       this.banned,
       this.expires,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(otherUserId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModBan.fromJson(Map<String, dynamic> json) =>
       _$_$_ModBanFromJson(json);
@@ -4535,11 +4420,11 @@ class _$_ModBan extends _ModBan {
   @override
   final int otherUserId;
   @override
-  final String reason;
+  final String? reason;
   @override
-  final bool banned;
+  final bool? banned;
   @override
-  final DateTime expires;
+  final DateTime? expires;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -4583,6 +4468,7 @@ class _$_ModBan extends _ModBan {
       const DeepCollectionEquality().hash(expires) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModBanCopyWith<_ModBan> get copyWith =>
       __$ModBanCopyWithImpl<_ModBan>(this, _$identity);
@@ -4596,33 +4482,34 @@ class _$_ModBan extends _ModBan {
 abstract class _ModBan extends ModBan {
   _ModBan._() : super._();
   factory _ModBan(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      String reason,
-      bool banned,
-      DateTime expires,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModBan;
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      String? reason,
+      bool? banned,
+      DateTime? expires,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModBan;
 
   factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId;
+  int get otherUserId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool? get banned => throw _privateConstructorUsedError;
   @override
-  DateTime get expires;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModBanCopyWith<_ModBan> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModBanCopyWith<_ModBan> get copyWith => throw _privateConstructorUsedError;
 }
 
 ModAddCommunity _$ModAddCommunityFromJson(Map<String, dynamic> json) {
@@ -4633,14 +4520,13 @@ ModAddCommunity _$ModAddCommunityFromJson(Map<String, dynamic> json) {
 class _$ModAddCommunityTearOff {
   const _$ModAddCommunityTearOff();
 
-// ignore: unused_element
   _ModAddCommunity call(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      @required int communityId,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      required int communityId,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModAddCommunity(
       id: id,
       modUserId: modUserId,
@@ -4651,28 +4537,28 @@ class _$ModAddCommunityTearOff {
     );
   }
 
-// ignore: unused_element
   ModAddCommunity fromJson(Map<String, Object> json) {
     return ModAddCommunity.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModAddCommunity = _$ModAddCommunityTearOff();
 
 /// @nodoc
 mixin _$ModAddCommunity {
-  int get id;
-  int get modUserId;
-  int get otherUserId;
-  int get communityId;
-  bool get removed;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get otherUserId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModAddCommunityCopyWith<ModAddCommunity> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModAddCommunityCopyWith<ModAddCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4685,7 +4571,7 @@ abstract class $ModAddCommunityCopyWith<$Res> {
       int modUserId,
       int otherUserId,
       int communityId,
-      bool removed,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4700,12 +4586,12 @@ class _$ModAddCommunityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object communityId = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? communityId = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -4714,7 +4600,7 @@ class _$ModAddCommunityCopyWithImpl<$Res>
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4732,7 +4618,7 @@ abstract class _$ModAddCommunityCopyWith<$Res>
       int modUserId,
       int otherUserId,
       int communityId,
-      bool removed,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4749,12 +4635,12 @@ class __$ModAddCommunityCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object communityId = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? communityId = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModAddCommunity(
       id: id == freezed ? _value.id : id as int,
@@ -4763,7 +4649,7 @@ class __$ModAddCommunityCopyWithImpl<$Res>
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
       communityId:
           communityId == freezed ? _value.communityId : communityId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4775,18 +4661,13 @@ class __$ModAddCommunityCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModAddCommunity extends _ModAddCommunity {
   _$_ModAddCommunity(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.otherUserId,
-      @required this.communityId,
+      {required this.id,
+      required this.modUserId,
+      required this.otherUserId,
+      required this.communityId,
       this.removed,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(otherUserId != null),
-        assert(communityId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModAddCommunity.fromJson(Map<String, dynamic> json) =>
       _$_$_ModAddCommunityFromJson(json);
@@ -4800,7 +4681,7 @@ class _$_ModAddCommunity extends _ModAddCommunity {
   @override
   final int communityId;
   @override
-  final bool removed;
+  final bool? removed;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -4842,6 +4723,7 @@ class _$_ModAddCommunity extends _ModAddCommunity {
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModAddCommunityCopyWith<_ModAddCommunity> get copyWith =>
       __$ModAddCommunityCopyWithImpl<_ModAddCommunity>(this, _$identity);
@@ -4855,31 +4737,33 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 abstract class _ModAddCommunity extends ModAddCommunity {
   _ModAddCommunity._() : super._();
   factory _ModAddCommunity(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      @required int communityId,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModAddCommunity;
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      required int communityId,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModAddCommunity;
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId;
+  int get otherUserId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModAddCommunityCopyWith<_ModAddCommunity> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModAddCommunityCopyWith<_ModAddCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModAdd _$ModAddFromJson(Map<String, dynamic> json) {
@@ -4890,13 +4774,12 @@ ModAdd _$ModAddFromJson(Map<String, dynamic> json) {
 class _$ModAddTearOff {
   const _$ModAddTearOff();
 
-// ignore: unused_element
   _ModAdd call(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) {
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) {
     return _ModAdd(
       id: id,
       modUserId: modUserId,
@@ -4906,27 +4789,26 @@ class _$ModAddTearOff {
     );
   }
 
-// ignore: unused_element
   ModAdd fromJson(Map<String, Object> json) {
     return ModAdd.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModAdd = _$ModAddTearOff();
 
 /// @nodoc
 mixin _$ModAdd {
-  int get id;
-  int get modUserId;
-  int get otherUserId;
-  bool get removed;
+  int get id => throw _privateConstructorUsedError;
+  int get modUserId => throw _privateConstructorUsedError;
+  int get otherUserId => throw _privateConstructorUsedError;
+  bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModAddCopyWith<ModAdd> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModAddCopyWith<ModAdd> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4937,7 +4819,7 @@ abstract class $ModAddCopyWith<$Res> {
       {int id,
       int modUserId,
       int otherUserId,
-      bool removed,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4951,18 +4833,18 @@ class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       otherUserId:
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -4977,7 +4859,7 @@ abstract class _$ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
       {int id,
       int modUserId,
       int otherUserId,
-      bool removed,
+      bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
 
@@ -4992,18 +4874,18 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object modUserId = freezed,
-    Object otherUserId = freezed,
-    Object removed = freezed,
-    Object when = freezed,
+    Object? id = freezed,
+    Object? modUserId = freezed,
+    Object? otherUserId = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
   }) {
     return _then(_ModAdd(
       id: id == freezed ? _value.id : id as int,
       modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
       otherUserId:
           otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
+      removed: removed == freezed ? _value.removed : removed as bool?,
       when: when == freezed ? _value.when : when as DateTime,
     ));
   }
@@ -5015,16 +4897,12 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModAdd extends _ModAdd {
   _$_ModAdd(
-      {@required this.id,
-      @required this.modUserId,
-      @required this.otherUserId,
+      {required this.id,
+      required this.modUserId,
+      required this.otherUserId,
       this.removed,
-      @required @JsonKey(name: 'when_') this.when})
-      : assert(id != null),
-        assert(modUserId != null),
-        assert(otherUserId != null),
-        assert(when != null),
-        super._();
+      @JsonKey(name: 'when_') required this.when})
+      : super._();
 
   factory _$_ModAdd.fromJson(Map<String, dynamic> json) =>
       _$_$_ModAddFromJson(json);
@@ -5036,7 +4914,7 @@ class _$_ModAdd extends _ModAdd {
   @override
   final int otherUserId;
   @override
-  final bool removed;
+  final bool? removed;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -5074,6 +4952,7 @@ class _$_ModAdd extends _ModAdd {
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(when);
 
+  @JsonKey(ignore: true)
   @override
   _$ModAddCopyWith<_ModAdd> get copyWith =>
       __$ModAddCopyWithImpl<_ModAdd>(this, _$identity);
@@ -5087,27 +4966,28 @@ class _$_ModAdd extends _ModAdd {
 abstract class _ModAdd extends ModAdd {
   _ModAdd._() : super._();
   factory _ModAdd(
-      {@required int id,
-      @required int modUserId,
-      @required int otherUserId,
-      bool removed,
-      @required @JsonKey(name: 'when_') DateTime when}) = _$_ModAdd;
+      {required int id,
+      required int modUserId,
+      required int otherUserId,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when}) = _$_ModAdd;
 
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId;
+  int get modUserId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId;
+  int get otherUserId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  _$ModAddCopyWith<_ModAdd> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModAddCopyWith<_ModAdd> get copyWith => throw _privateConstructorUsedError;
 }
 
 CommunitySafe _$CommunitySafeFromJson(Map<String, dynamic> json) {
@@ -5118,23 +4998,22 @@ CommunitySafe _$CommunitySafeFromJson(Map<String, dynamic> json) {
 class _$CommunitySafeTearOff {
   const _$CommunitySafeTearOff();
 
-// ignore: unused_element
   _CommunitySafe call(
-      {@required int id,
-      @required String name,
-      @required String title,
-      String description,
-      @required int categoryId,
-      @required int creatorId,
-      @required bool removed,
-      @required DateTime published,
-      DateTime updated,
-      @required bool deleted,
-      @required bool nsfw,
-      @required String actorId,
-      @required bool local,
-      String icon,
-      String banner}) {
+      {required int id,
+      required String name,
+      required String title,
+      String? description,
+      required int categoryId,
+      required int creatorId,
+      required bool removed,
+      required DateTime published,
+      DateTime? updated,
+      required bool deleted,
+      required bool nsfw,
+      required String actorId,
+      required bool local,
+      String? icon,
+      String? banner}) {
     return _CommunitySafe(
       id: id,
       name: name,
@@ -5154,36 +5033,36 @@ class _$CommunitySafeTearOff {
     );
   }
 
-// ignore: unused_element
   CommunitySafe fromJson(Map<String, Object> json) {
     return CommunitySafe.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommunitySafe = _$CommunitySafeTearOff();
 
 /// @nodoc
 mixin _$CommunitySafe {
-  int get id;
-  String get name;
-  String get title;
-  String get description;
-  int get categoryId;
-  int get creatorId;
-  bool get removed;
-  DateTime get published;
-  DateTime get updated;
-  bool get deleted;
-  bool get nsfw;
-  String get actorId;
-  bool get local;
-  String get icon;
-  String get banner;
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  int get categoryId => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  bool get removed => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  bool get nsfw => throw _privateConstructorUsedError;
+  String get actorId => throw _privateConstructorUsedError;
+  bool get local => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommunitySafeCopyWith<CommunitySafe> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunitySafeCopyWith<CommunitySafe> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5195,18 +5074,18 @@ abstract class $CommunitySafeCopyWith<$Res> {
       {int id,
       String name,
       String title,
-      String description,
+      String? description,
       int categoryId,
       int creatorId,
       bool removed,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool deleted,
       bool nsfw,
       String actorId,
       bool local,
-      String icon,
-      String banner});
+      String? icon,
+      String? banner});
 }
 
 /// @nodoc
@@ -5220,40 +5099,40 @@ class _$CommunitySafeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object title = freezed,
-    Object description = freezed,
-    Object categoryId = freezed,
-    Object creatorId = freezed,
-    Object removed = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object deleted = freezed,
-    Object nsfw = freezed,
-    Object actorId = freezed,
-    Object local = freezed,
-    Object icon = freezed,
-    Object banner = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? categoryId = freezed,
+    Object? creatorId = freezed,
+    Object? removed = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? deleted = freezed,
+    Object? nsfw = freezed,
+    Object? actorId = freezed,
+    Object? local = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       categoryId: categoryId == freezed ? _value.categoryId : categoryId as int,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       removed: removed == freezed ? _value.removed : removed as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
       actorId: actorId == freezed ? _value.actorId : actorId as String,
       local: local == freezed ? _value.local : local as bool,
-      icon: icon == freezed ? _value.icon : icon as String,
-      banner: banner == freezed ? _value.banner : banner as String,
+      icon: icon == freezed ? _value.icon : icon as String?,
+      banner: banner == freezed ? _value.banner : banner as String?,
     ));
   }
 }
@@ -5269,18 +5148,18 @@ abstract class _$CommunitySafeCopyWith<$Res>
       {int id,
       String name,
       String title,
-      String description,
+      String? description,
       int categoryId,
       int creatorId,
       bool removed,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool deleted,
       bool nsfw,
       String actorId,
       bool local,
-      String icon,
-      String banner});
+      String? icon,
+      String? banner});
 }
 
 /// @nodoc
@@ -5296,40 +5175,40 @@ class __$CommunitySafeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
-    Object title = freezed,
-    Object description = freezed,
-    Object categoryId = freezed,
-    Object creatorId = freezed,
-    Object removed = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object deleted = freezed,
-    Object nsfw = freezed,
-    Object actorId = freezed,
-    Object local = freezed,
-    Object icon = freezed,
-    Object banner = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? title = freezed,
+    Object? description = freezed,
+    Object? categoryId = freezed,
+    Object? creatorId = freezed,
+    Object? removed = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? deleted = freezed,
+    Object? nsfw = freezed,
+    Object? actorId = freezed,
+    Object? local = freezed,
+    Object? icon = freezed,
+    Object? banner = freezed,
   }) {
     return _then(_CommunitySafe(
       id: id == freezed ? _value.id : id as int,
       name: name == freezed ? _value.name : name as String,
       title: title == freezed ? _value.title : title as String,
       description:
-          description == freezed ? _value.description : description as String,
+          description == freezed ? _value.description : description as String?,
       categoryId: categoryId == freezed ? _value.categoryId : categoryId as int,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       removed: removed == freezed ? _value.removed : removed as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
       actorId: actorId == freezed ? _value.actorId : actorId as String,
       local: local == freezed ? _value.local : local as bool,
-      icon: icon == freezed ? _value.icon : icon as String,
-      banner: banner == freezed ? _value.banner : banner as String,
+      icon: icon == freezed ? _value.icon : icon as String?,
+      banner: banner == freezed ? _value.banner : banner as String?,
     ));
   }
 }
@@ -5340,33 +5219,22 @@ class __$CommunitySafeCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunitySafe extends _CommunitySafe {
   _$_CommunitySafe(
-      {@required this.id,
-      @required this.name,
-      @required this.title,
+      {required this.id,
+      required this.name,
+      required this.title,
       this.description,
-      @required this.categoryId,
-      @required this.creatorId,
-      @required this.removed,
-      @required this.published,
+      required this.categoryId,
+      required this.creatorId,
+      required this.removed,
+      required this.published,
       this.updated,
-      @required this.deleted,
-      @required this.nsfw,
-      @required this.actorId,
-      @required this.local,
+      required this.deleted,
+      required this.nsfw,
+      required this.actorId,
+      required this.local,
       this.icon,
       this.banner})
-      : assert(id != null),
-        assert(name != null),
-        assert(title != null),
-        assert(categoryId != null),
-        assert(creatorId != null),
-        assert(removed != null),
-        assert(published != null),
-        assert(deleted != null),
-        assert(nsfw != null),
-        assert(actorId != null),
-        assert(local != null),
-        super._();
+      : super._();
 
   factory _$_CommunitySafe.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunitySafeFromJson(json);
@@ -5378,7 +5246,7 @@ class _$_CommunitySafe extends _CommunitySafe {
   @override
   final String title;
   @override
-  final String description;
+  final String? description;
   @override
   final int categoryId;
   @override
@@ -5388,7 +5256,7 @@ class _$_CommunitySafe extends _CommunitySafe {
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
   final bool deleted;
   @override
@@ -5398,9 +5266,9 @@ class _$_CommunitySafe extends _CommunitySafe {
   @override
   final bool local;
   @override
-  final String icon;
+  final String? icon;
   @override
-  final String banner;
+  final String? banner;
 
   @override
   String toString() {
@@ -5470,6 +5338,7 @@ class _$_CommunitySafe extends _CommunitySafe {
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunitySafeCopyWith<_CommunitySafe> get copyWith =>
       __$CommunitySafeCopyWithImpl<_CommunitySafe>(this, _$identity);
@@ -5483,57 +5352,59 @@ class _$_CommunitySafe extends _CommunitySafe {
 abstract class _CommunitySafe extends CommunitySafe {
   _CommunitySafe._() : super._();
   factory _CommunitySafe(
-      {@required int id,
-      @required String name,
-      @required String title,
-      String description,
-      @required int categoryId,
-      @required int creatorId,
-      @required bool removed,
-      @required DateTime published,
-      DateTime updated,
-      @required bool deleted,
-      @required bool nsfw,
-      @required String actorId,
-      @required bool local,
-      String icon,
-      String banner}) = _$_CommunitySafe;
+      {required int id,
+      required String name,
+      required String title,
+      String? description,
+      required int categoryId,
+      required int creatorId,
+      required bool removed,
+      required DateTime published,
+      DateTime? updated,
+      required bool deleted,
+      required bool nsfw,
+      required String actorId,
+      required bool local,
+      String? icon,
+      String? banner}) = _$_CommunitySafe;
 
   factory _CommunitySafe.fromJson(Map<String, dynamic> json) =
       _$_CommunitySafe.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  int get categoryId;
+  int get categoryId => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  bool get nsfw;
+  bool get nsfw => throw _privateConstructorUsedError;
   @override
-  String get actorId;
+  String get actorId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  _$CommunitySafeCopyWith<_CommunitySafe> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommunitySafeCopyWith<_CommunitySafe> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommentReport _$CommentReportFromJson(Map<String, dynamic> json) {
@@ -5544,17 +5415,16 @@ CommentReport _$CommentReportFromJson(Map<String, dynamic> json) {
 class _$CommentReportTearOff {
   const _$CommentReportTearOff();
 
-// ignore: unused_element
   _CommentReport call(
-      {@required int id,
-      @required int creatorId,
-      @required int commentId,
-      @required String originalCommentText,
-      @required String reason,
-      @required bool resolved,
-      int resolverId,
-      @required DateTime published,
-      DateTime updated}) {
+      {required int id,
+      required int creatorId,
+      required int commentId,
+      required String originalCommentText,
+      required String reason,
+      required bool resolved,
+      int? resolverId,
+      required DateTime published,
+      DateTime? updated}) {
     return _CommentReport(
       id: id,
       creatorId: creatorId,
@@ -5568,30 +5438,30 @@ class _$CommentReportTearOff {
     );
   }
 
-// ignore: unused_element
   CommentReport fromJson(Map<String, Object> json) {
     return CommentReport.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommentReport = _$CommentReportTearOff();
 
 /// @nodoc
 mixin _$CommentReport {
-  int get id;
-  int get creatorId;
-  int get commentId;
-  String get originalCommentText;
-  String get reason;
-  bool get resolved;
-  int get resolverId;
-  DateTime get published;
-  DateTime get updated;
+  int get id => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  String get originalCommentText => throw _privateConstructorUsedError;
+  String get reason => throw _privateConstructorUsedError;
+  bool get resolved => throw _privateConstructorUsedError;
+  int? get resolverId => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommentReportCopyWith<CommentReport> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentReportCopyWith<CommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5606,9 +5476,9 @@ abstract class $CommentReportCopyWith<$Res> {
       String originalCommentText,
       String reason,
       bool resolved,
-      int resolverId,
+      int? resolverId,
       DateTime published,
-      DateTime updated});
+      DateTime? updated});
 }
 
 /// @nodoc
@@ -5622,15 +5492,15 @@ class _$CommentReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object commentId = freezed,
-    Object originalCommentText = freezed,
-    Object reason = freezed,
-    Object resolved = freezed,
-    Object resolverId = freezed,
-    Object published = freezed,
-    Object updated = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? commentId = freezed,
+    Object? originalCommentText = freezed,
+    Object? reason = freezed,
+    Object? resolved = freezed,
+    Object? resolverId = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -5641,10 +5511,11 @@ class _$CommentReportCopyWithImpl<$Res>
           : originalCommentText as String,
       reason: reason == freezed ? _value.reason : reason as String,
       resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId: resolverId == freezed ? _value.resolverId : resolverId as int,
+      resolverId:
+          resolverId == freezed ? _value.resolverId : resolverId as int?,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
     ));
   }
 }
@@ -5663,9 +5534,9 @@ abstract class _$CommentReportCopyWith<$Res>
       String originalCommentText,
       String reason,
       bool resolved,
-      int resolverId,
+      int? resolverId,
       DateTime published,
-      DateTime updated});
+      DateTime? updated});
 }
 
 /// @nodoc
@@ -5681,15 +5552,15 @@ class __$CommentReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object commentId = freezed,
-    Object originalCommentText = freezed,
-    Object reason = freezed,
-    Object resolved = freezed,
-    Object resolverId = freezed,
-    Object published = freezed,
-    Object updated = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? commentId = freezed,
+    Object? originalCommentText = freezed,
+    Object? reason = freezed,
+    Object? resolved = freezed,
+    Object? resolverId = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
   }) {
     return _then(_CommentReport(
       id: id == freezed ? _value.id : id as int,
@@ -5700,10 +5571,11 @@ class __$CommentReportCopyWithImpl<$Res>
           : originalCommentText as String,
       reason: reason == freezed ? _value.reason : reason as String,
       resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId: resolverId == freezed ? _value.resolverId : resolverId as int,
+      resolverId:
+          resolverId == freezed ? _value.resolverId : resolverId as int?,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
     ));
   }
 }
@@ -5714,23 +5586,16 @@ class __$CommentReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommentReport extends _CommentReport {
   _$_CommentReport(
-      {@required this.id,
-      @required this.creatorId,
-      @required this.commentId,
-      @required this.originalCommentText,
-      @required this.reason,
-      @required this.resolved,
+      {required this.id,
+      required this.creatorId,
+      required this.commentId,
+      required this.originalCommentText,
+      required this.reason,
+      required this.resolved,
       this.resolverId,
-      @required this.published,
+      required this.published,
       this.updated})
-      : assert(id != null),
-        assert(creatorId != null),
-        assert(commentId != null),
-        assert(originalCommentText != null),
-        assert(reason != null),
-        assert(resolved != null),
-        assert(published != null),
-        super._();
+      : super._();
 
   factory _$_CommentReport.fromJson(Map<String, dynamic> json) =>
       _$_$_CommentReportFromJson(json);
@@ -5748,11 +5613,11 @@ class _$_CommentReport extends _CommentReport {
   @override
   final bool resolved;
   @override
-  final int resolverId;
+  final int? resolverId;
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
 
   @override
   String toString() {
@@ -5802,6 +5667,7 @@ class _$_CommentReport extends _CommentReport {
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated);
 
+  @JsonKey(ignore: true)
   @override
   _$CommentReportCopyWith<_CommentReport> get copyWith =>
       __$CommentReportCopyWithImpl<_CommentReport>(this, _$identity);
@@ -5815,39 +5681,41 @@ class _$_CommentReport extends _CommentReport {
 abstract class _CommentReport extends CommentReport {
   _CommentReport._() : super._();
   factory _CommentReport(
-      {@required int id,
-      @required int creatorId,
-      @required int commentId,
-      @required String originalCommentText,
-      @required String reason,
-      @required bool resolved,
-      int resolverId,
-      @required DateTime published,
-      DateTime updated}) = _$_CommentReport;
+      {required int id,
+      required int creatorId,
+      required int commentId,
+      required String originalCommentText,
+      required String reason,
+      required bool resolved,
+      int? resolverId,
+      required DateTime published,
+      DateTime? updated}) = _$_CommentReport;
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
       _$_CommentReport.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  String get originalCommentText;
+  String get originalCommentText => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
-  bool get resolved;
+  bool get resolved => throw _privateConstructorUsedError;
   @override
-  int get resolverId;
+  int? get resolverId => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  _$CommentReportCopyWith<_CommentReport> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommentReportCopyWith<_CommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Comment _$CommentFromJson(Map<String, dynamic> json) {
@@ -5858,20 +5726,19 @@ Comment _$CommentFromJson(Map<String, dynamic> json) {
 class _$CommentTearOff {
   const _$CommentTearOff();
 
-// ignore: unused_element
   _Comment call(
-      {@required int id,
-      @required int creatorId,
-      @required int postId,
-      int parentId,
-      @required String content,
-      @required bool removed,
-      @required bool read,
-      @required DateTime published,
-      DateTime updated,
-      @required bool deleted,
-      @required String apId,
-      @required bool local}) {
+      {required int id,
+      required int creatorId,
+      required int postId,
+      int? parentId,
+      required String content,
+      required bool removed,
+      required bool read,
+      required DateTime published,
+      DateTime? updated,
+      required bool deleted,
+      required String apId,
+      required bool local}) {
     return _Comment(
       id: id,
       creatorId: creatorId,
@@ -5888,33 +5755,32 @@ class _$CommentTearOff {
     );
   }
 
-// ignore: unused_element
   Comment fromJson(Map<String, Object> json) {
     return Comment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Comment = _$CommentTearOff();
 
 /// @nodoc
 mixin _$Comment {
-  int get id;
-  int get creatorId;
-  int get postId;
-  int get parentId;
-  String get content;
-  bool get removed;
-  bool get read;
-  DateTime get published;
-  DateTime get updated;
-  bool get deleted;
-  String get apId;
-  bool get local;
+  int get id => throw _privateConstructorUsedError;
+  int get creatorId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  int? get parentId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+  bool get removed => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  DateTime? get updated => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  String get apId => throw _privateConstructorUsedError;
+  bool get local => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommentCopyWith<Comment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentCopyWith<Comment> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5925,12 +5791,12 @@ abstract class $CommentCopyWith<$Res> {
       {int id,
       int creatorId,
       int postId,
-      int parentId,
+      int? parentId,
       String content,
       bool removed,
       bool read,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool deleted,
       String apId,
       bool local});
@@ -5946,30 +5812,30 @@ class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object postId = freezed,
-    Object parentId = freezed,
-    Object content = freezed,
-    Object removed = freezed,
-    Object read = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object deleted = freezed,
-    Object apId = freezed,
-    Object local = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? postId = freezed,
+    Object? parentId = freezed,
+    Object? content = freezed,
+    Object? removed = freezed,
+    Object? read = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? deleted = freezed,
+    Object? apId = freezed,
+    Object? local = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      parentId: parentId == freezed ? _value.parentId : parentId as int,
+      parentId: parentId == freezed ? _value.parentId : parentId as int?,
       content: content == freezed ? _value.content : content as String,
       removed: removed == freezed ? _value.removed : removed as bool,
       read: read == freezed ? _value.read : read as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       apId: apId == freezed ? _value.apId : apId as String,
       local: local == freezed ? _value.local : local as bool,
@@ -5986,12 +5852,12 @@ abstract class _$CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
       {int id,
       int creatorId,
       int postId,
-      int parentId,
+      int? parentId,
       String content,
       bool removed,
       bool read,
       DateTime published,
-      DateTime updated,
+      DateTime? updated,
       bool deleted,
       String apId,
       bool local});
@@ -6008,30 +5874,30 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object creatorId = freezed,
-    Object postId = freezed,
-    Object parentId = freezed,
-    Object content = freezed,
-    Object removed = freezed,
-    Object read = freezed,
-    Object published = freezed,
-    Object updated = freezed,
-    Object deleted = freezed,
-    Object apId = freezed,
-    Object local = freezed,
+    Object? id = freezed,
+    Object? creatorId = freezed,
+    Object? postId = freezed,
+    Object? parentId = freezed,
+    Object? content = freezed,
+    Object? removed = freezed,
+    Object? read = freezed,
+    Object? published = freezed,
+    Object? updated = freezed,
+    Object? deleted = freezed,
+    Object? apId = freezed,
+    Object? local = freezed,
   }) {
     return _then(_Comment(
       id: id == freezed ? _value.id : id as int,
       creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
       postId: postId == freezed ? _value.postId : postId as int,
-      parentId: parentId == freezed ? _value.parentId : parentId as int,
+      parentId: parentId == freezed ? _value.parentId : parentId as int?,
       content: content == freezed ? _value.content : content as String,
       removed: removed == freezed ? _value.removed : removed as bool,
       read: read == freezed ? _value.read : read as bool,
       published:
           published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime,
+      updated: updated == freezed ? _value.updated : updated as DateTime?,
       deleted: deleted == freezed ? _value.deleted : deleted as bool,
       apId: apId == freezed ? _value.apId : apId as String,
       local: local == freezed ? _value.local : local as bool,
@@ -6045,29 +5911,19 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_Comment extends _Comment {
   _$_Comment(
-      {@required this.id,
-      @required this.creatorId,
-      @required this.postId,
+      {required this.id,
+      required this.creatorId,
+      required this.postId,
       this.parentId,
-      @required this.content,
-      @required this.removed,
-      @required this.read,
-      @required this.published,
+      required this.content,
+      required this.removed,
+      required this.read,
+      required this.published,
       this.updated,
-      @required this.deleted,
-      @required this.apId,
-      @required this.local})
-      : assert(id != null),
-        assert(creatorId != null),
-        assert(postId != null),
-        assert(content != null),
-        assert(removed != null),
-        assert(read != null),
-        assert(published != null),
-        assert(deleted != null),
-        assert(apId != null),
-        assert(local != null),
-        super._();
+      required this.deleted,
+      required this.apId,
+      required this.local})
+      : super._();
 
   factory _$_Comment.fromJson(Map<String, dynamic> json) =>
       _$_$_CommentFromJson(json);
@@ -6079,7 +5935,7 @@ class _$_Comment extends _Comment {
   @override
   final int postId;
   @override
-  final int parentId;
+  final int? parentId;
   @override
   final String content;
   @override
@@ -6089,7 +5945,7 @@ class _$_Comment extends _Comment {
   @override
   final DateTime published;
   @override
-  final DateTime updated;
+  final DateTime? updated;
   @override
   final bool deleted;
   @override
@@ -6155,6 +6011,7 @@ class _$_Comment extends _Comment {
       const DeepCollectionEquality().hash(apId) ^
       const DeepCollectionEquality().hash(local);
 
+  @JsonKey(ignore: true)
   @override
   _$CommentCopyWith<_Comment> get copyWith =>
       __$CommentCopyWithImpl<_Comment>(this, _$identity);
@@ -6168,47 +6025,49 @@ class _$_Comment extends _Comment {
 abstract class _Comment extends Comment {
   _Comment._() : super._();
   factory _Comment(
-      {@required int id,
-      @required int creatorId,
-      @required int postId,
-      int parentId,
-      @required String content,
-      @required bool removed,
-      @required bool read,
-      @required DateTime published,
-      DateTime updated,
-      @required bool deleted,
-      @required String apId,
-      @required bool local}) = _$_Comment;
+      {required int id,
+      required int creatorId,
+      required int postId,
+      int? parentId,
+      required String content,
+      required bool removed,
+      required bool read,
+      required DateTime published,
+      DateTime? updated,
+      required bool deleted,
+      required String apId,
+      required bool local}) = _$_Comment;
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  int get parentId;
+  int? get parentId => throw _privateConstructorUsedError;
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get apId;
+  String get apId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  _$CommentCopyWith<_Comment> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommentCopyWith<_Comment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Category _$CategoryFromJson(Map<String, dynamic> json) {
@@ -6219,31 +6078,30 @@ Category _$CategoryFromJson(Map<String, dynamic> json) {
 class _$CategoryTearOff {
   const _$CategoryTearOff();
 
-// ignore: unused_element
-  _Category call({@required int id, @required String name}) {
+  _Category call({required int id, required String name}) {
     return _Category(
       id: id,
       name: name,
     );
   }
 
-// ignore: unused_element
   Category fromJson(Map<String, Object> json) {
     return Category.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Category = _$CategoryTearOff();
 
 /// @nodoc
 mixin _$Category {
-  int get id;
-  String get name;
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CategoryCopyWith<Category> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CategoryCopyWith<Category> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6263,8 +6121,8 @@ class _$CategoryCopyWithImpl<$Res> implements $CategoryCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -6292,8 +6150,8 @@ class __$CategoryCopyWithImpl<$Res> extends _$CategoryCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object name = freezed,
+    Object? id = freezed,
+    Object? name = freezed,
   }) {
     return _then(_Category(
       id: id == freezed ? _value.id : id as int,
@@ -6307,10 +6165,7 @@ class __$CategoryCopyWithImpl<$Res> extends _$CategoryCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Category extends _Category {
-  _$_Category({@required this.id, @required this.name})
-      : assert(id != null),
-        assert(name != null),
-        super._();
+  _$_Category({required this.id, required this.name}) : super._();
 
   factory _$_Category.fromJson(Map<String, dynamic> json) =>
       _$_$_CategoryFromJson(json);
@@ -6341,6 +6196,7 @@ class _$_Category extends _Category {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name);
 
+  @JsonKey(ignore: true)
   @override
   _$CategoryCopyWith<_Category> get copyWith =>
       __$CategoryCopyWithImpl<_Category>(this, _$identity);
@@ -6353,16 +6209,18 @@ class _$_Category extends _Category {
 
 abstract class _Category extends Category {
   _Category._() : super._();
-  factory _Category({@required int id, @required String name}) = _$_Category;
+  factory _Category({required int id, required String name}) = _$_Category;
 
   factory _Category.fromJson(Map<String, dynamic> json) = _$_Category.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  _$CategoryCopyWith<_Category> get copyWith;
+  @JsonKey(ignore: true)
+  _$CategoryCopyWith<_Category> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 UserMention _$UserMentionFromJson(Map<String, dynamic> json) {
@@ -6373,13 +6231,12 @@ UserMention _$UserMentionFromJson(Map<String, dynamic> json) {
 class _$UserMentionTearOff {
   const _$UserMentionTearOff();
 
-// ignore: unused_element
   _UserMention call(
-      {@required int id,
-      @required int recipientId,
-      @required int commentId,
-      @required bool read,
-      @required DateTime published}) {
+      {required int id,
+      required int recipientId,
+      required int commentId,
+      required bool read,
+      required DateTime published}) {
     return _UserMention(
       id: id,
       recipientId: recipientId,
@@ -6389,26 +6246,26 @@ class _$UserMentionTearOff {
     );
   }
 
-// ignore: unused_element
   UserMention fromJson(Map<String, Object> json) {
     return UserMention.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserMention = _$UserMentionTearOff();
 
 /// @nodoc
 mixin _$UserMention {
-  int get id;
-  int get recipientId;
-  int get commentId;
-  bool get read;
-  DateTime get published;
+  int get id => throw _privateConstructorUsedError;
+  int get recipientId => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserMentionCopyWith<UserMention> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserMentionCopyWith<UserMention> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6430,11 +6287,11 @@ class _$UserMentionCopyWithImpl<$Res> implements $UserMentionCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object recipientId = freezed,
-    Object commentId = freezed,
-    Object read = freezed,
-    Object published = freezed,
+    Object? id = freezed,
+    Object? recipientId = freezed,
+    Object? commentId = freezed,
+    Object? read = freezed,
+    Object? published = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as int,
@@ -6471,11 +6328,11 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object recipientId = freezed,
-    Object commentId = freezed,
-    Object read = freezed,
-    Object published = freezed,
+    Object? id = freezed,
+    Object? recipientId = freezed,
+    Object? commentId = freezed,
+    Object? read = freezed,
+    Object? published = freezed,
   }) {
     return _then(_UserMention(
       id: id == freezed ? _value.id : id as int,
@@ -6495,17 +6352,12 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserMention extends _UserMention {
   _$_UserMention(
-      {@required this.id,
-      @required this.recipientId,
-      @required this.commentId,
-      @required this.read,
-      @required this.published})
-      : assert(id != null),
-        assert(recipientId != null),
-        assert(commentId != null),
-        assert(read != null),
-        assert(published != null),
-        super._();
+      {required this.id,
+      required this.recipientId,
+      required this.commentId,
+      required this.read,
+      required this.published})
+      : super._();
 
   factory _$_UserMention.fromJson(Map<String, dynamic> json) =>
       _$_$_UserMentionFromJson(json);
@@ -6554,6 +6406,7 @@ class _$_UserMention extends _UserMention {
       const DeepCollectionEquality().hash(read) ^
       const DeepCollectionEquality().hash(published);
 
+  @JsonKey(ignore: true)
   @override
   _$UserMentionCopyWith<_UserMention> get copyWith =>
       __$UserMentionCopyWithImpl<_UserMention>(this, _$identity);
@@ -6567,25 +6420,27 @@ class _$_UserMention extends _UserMention {
 abstract class _UserMention extends UserMention {
   _UserMention._() : super._();
   factory _UserMention(
-      {@required int id,
-      @required int recipientId,
-      @required int commentId,
-      @required bool read,
-      @required DateTime published}) = _$_UserMention;
+      {required int id,
+      required int recipientId,
+      required int commentId,
+      required bool read,
+      required DateTime published}) = _$_UserMention;
 
   factory _UserMention.fromJson(Map<String, dynamic> json) =
       _$_UserMention.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get recipientId;
+  int get recipientId => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  _$UserMentionCopyWith<_UserMention> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserMentionCopyWith<_UserMention> get copyWith =>
+      throw _privateConstructorUsedError;
 }

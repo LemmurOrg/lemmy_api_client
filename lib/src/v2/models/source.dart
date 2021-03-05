@@ -13,20 +13,20 @@ abstract class UserSafe extends WithInstanceHost implements _$UserSafe {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafe({
-    @required int id,
-    @required String name,
-    String preferredUsername,
-    String avatar,
-    @required bool admin,
-    @required bool banned,
-    @required DateTime published,
-    DateTime updated,
-    String matrixUserId,
-    @required String actorId,
-    String bio,
-    @required bool local,
-    String banner,
-    @required bool deleted,
+    required int id,
+    required String name,
+    String? preferredUsername,
+    String? avatar,
+    required bool admin,
+    required bool banned,
+    required DateTime published,
+    DateTime? updated,
+    String? matrixUserId,
+    required String actorId,
+    String? bio,
+    required bool local,
+    String? banner,
+    required bool deleted,
   }) = _UserSafe;
 
   UserSafe._();
@@ -40,33 +40,31 @@ abstract class UserSafeSettings extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafeSettings({
-    @required int id,
-    @required String name,
-    String preferredUsername,
-    String email,
-    String avatar,
-    @required bool admin,
-    @required bool banned,
-    @required DateTime published,
-    DateTime updated,
-    @required bool showNsfw,
-    @required String theme,
-    @required
+    required int id,
+    required String name,
+    String? preferredUsername,
+    String? email,
+    String? avatar,
+    required bool admin,
+    required bool banned,
+    required DateTime published,
+    DateTime? updated,
+    required bool showNsfw,
+    required String theme,
     @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-        SortType defaultSortType,
-    @required
+        required SortType defaultSortType,
     @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-        PostListingType defaultListingType,
-    @required String lang,
-    @required bool showAvatars,
-    @required bool sendNotificationsToEmail,
-    String matrixUserId,
-    @required String actorId,
-    String bio,
-    @required bool local,
-    @required DateTime lastRefreshedAt,
-    String banner,
-    @required bool deleted,
+        required PostListingType defaultListingType,
+    required String lang,
+    required bool showAvatars,
+    required bool sendNotificationsToEmail,
+    String? matrixUserId,
+    required String actorId,
+    String? bio,
+    required bool local,
+    required DateTime lastRefreshedAt,
+    String? banner,
+    required bool deleted,
   }) = _UserSafeSettings;
 
   UserSafeSettings._();
@@ -79,17 +77,17 @@ abstract class Site extends WithInstanceHost implements _$Site {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Site({
-    @required int id,
-    @required String name,
-    String description,
-    @required int creatorId,
-    @required DateTime published,
-    DateTime updated,
-    @required bool enableDownvotes,
-    @required bool openRegistration,
-    @required bool enableNsfw,
-    String icon,
-    String banner,
+    required int id,
+    required String name,
+    String? description,
+    required int creatorId,
+    required DateTime published,
+    DateTime? updated,
+    required bool enableDownvotes,
+    required bool openRegistration,
+    required bool enableNsfw,
+    String? icon,
+    String? banner,
   }) = _Site;
 
   Site._();
@@ -102,16 +100,16 @@ abstract class PrivateMessage extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessage({
-    @required int id,
-    @required int creatorId,
-    @required int recipientId,
-    @required String content,
-    @required bool deleted,
-    @required bool read,
-    @required DateTime published,
-    DateTime updated,
-    @required String apId,
-    @required bool local,
+    required int id,
+    required int creatorId,
+    required int recipientId,
+    required String content,
+    required bool deleted,
+    required bool read,
+    required DateTime published,
+    DateTime? updated,
+    required String apId,
+    required bool local,
   }) = _PrivateMessage;
 
   PrivateMessage._();
@@ -124,17 +122,17 @@ abstract class PostReport extends WithInstanceHost implements _$PostReport {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReport({
-    @required int id,
-    @required int creatorId,
-    @required int postId,
-    @required String originalPostName,
-    String originalPostUrl,
-    String originalPostBody,
-    @required String reason,
-    @required bool resolved,
-    int resolverId,
-    @required DateTime published,
-    DateTime updated,
+    required int id,
+    required int creatorId,
+    required int postId,
+    required String originalPostName,
+    String? originalPostUrl,
+    String? originalPostBody,
+    required String reason,
+    required bool resolved,
+    int? resolverId,
+    required DateTime published,
+    DateTime? updated,
   }) = _PostReport;
 
   PostReport._();
@@ -147,25 +145,25 @@ abstract class Post extends WithInstanceHost implements _$Post {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Post({
-    @required int id,
-    @required String name,
-    String url,
-    String body,
-    @required int creatorId,
-    @required int communityId,
-    @required bool removed,
-    @required bool locked,
-    @required DateTime published,
-    DateTime updated,
-    @required bool deleted,
-    @required bool nsfw,
-    @required bool stickied,
-    String embedTitle,
-    String embedDescription,
-    String embedHtml,
-    String thumbnailUrl,
-    @required String apId,
-    @required bool local,
+    required int id,
+    required String name,
+    String? url,
+    String? body,
+    required int creatorId,
+    required int communityId,
+    required bool removed,
+    required bool locked,
+    required DateTime published,
+    DateTime? updated,
+    required bool deleted,
+    required bool nsfw,
+    required bool stickied,
+    String? embedTitle,
+    String? embedDescription,
+    String? embedHtml,
+    String? thumbnailUrl,
+    required String apId,
+    required bool local,
   }) = _Post;
 
   Post._();
@@ -178,10 +176,10 @@ abstract class PasswordResetRequest extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PasswordResetRequest({
-    @required int id,
-    @required int userId,
-    @required String tokenEncrypted,
-    @required DateTime published,
+    required int id,
+    required int userId,
+    required String tokenEncrypted,
+    required DateTime published,
   }) = _PasswordResetRequest;
 
   PasswordResetRequest._();
@@ -195,12 +193,12 @@ abstract class ModRemovePost extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePost({
-    @required int id,
-    @required int modUserId,
-    @required int postId,
-    String reason,
-    bool removed,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int postId,
+    String? reason,
+    bool? removed,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModRemovePost;
 
   ModRemovePost._();
@@ -213,11 +211,11 @@ abstract class ModLockPost extends WithInstanceHost implements _$ModLockPost {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPost({
-    @required int id,
-    @required int modUserId,
-    @required int postId,
-    bool locked,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int postId,
+    bool? locked,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModLockPost;
 
   ModLockPost._();
@@ -231,11 +229,11 @@ abstract class ModStickyPost extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPost({
-    @required int id,
-    @required int modUserId,
-    @required int postId,
-    bool stickied,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int postId,
+    bool? stickied,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModStickyPost;
 
   ModStickyPost._();
@@ -249,12 +247,12 @@ abstract class ModRemoveComment extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveComment({
-    @required int id,
-    @required int modUserId,
-    @required int commentId,
-    String reason,
-    bool removed,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int commentId,
+    String? reason,
+    bool? removed,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModRemoveComment;
 
   ModRemoveComment._();
@@ -268,13 +266,13 @@ abstract class ModRemoveCommunity extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunity({
-    @required int id,
-    @required int modUserId,
-    @required int communityId,
-    String reason,
-    bool removed,
-    DateTime expires,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int communityId,
+    String? reason,
+    bool? removed,
+    DateTime? expires,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModRemoveCommunity;
 
   ModRemoveCommunity._();
@@ -288,14 +286,14 @@ abstract class ModBanFromCommunity extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunity({
-    @required int id,
-    @required int modUserId,
-    @required int otherUserId,
-    @required int communityId,
-    String reason,
-    bool banned,
-    DateTime expires,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int otherUserId,
+    required int communityId,
+    String? reason,
+    bool? banned,
+    DateTime? expires,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModBanFromCommunity;
 
   ModBanFromCommunity._();
@@ -308,13 +306,13 @@ abstract class ModBan extends WithInstanceHost implements _$ModBan {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBan({
-    @required int id,
-    @required int modUserId,
-    @required int otherUserId,
-    String reason,
-    bool banned,
-    DateTime expires,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int otherUserId,
+    String? reason,
+    bool? banned,
+    DateTime? expires,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModBan;
 
   ModBan._();
@@ -327,12 +325,12 @@ abstract class ModAddCommunity extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunity({
-    @required int id,
-    @required int modUserId,
-    @required int otherUserId,
-    @required int communityId,
-    bool removed,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int otherUserId,
+    required int communityId,
+    bool? removed,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModAddCommunity;
 
   ModAddCommunity._();
@@ -345,11 +343,11 @@ abstract class ModAdd extends WithInstanceHost implements _$ModAdd {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAdd({
-    @required int id,
-    @required int modUserId,
-    @required int otherUserId,
-    bool removed,
-    @required @JsonKey(name: 'when_') DateTime when,
+    required int id,
+    required int modUserId,
+    required int otherUserId,
+    bool? removed,
+    @JsonKey(name: 'when_') required DateTime when,
   }) = _ModAdd;
 
   ModAdd._();
@@ -362,21 +360,21 @@ abstract class CommunitySafe extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunitySafe({
-    @required int id,
-    @required String name,
-    @required String title,
-    String description,
-    @required int categoryId,
-    @required int creatorId,
-    @required bool removed,
-    @required DateTime published,
-    DateTime updated,
-    @required bool deleted,
-    @required bool nsfw,
-    @required String actorId,
-    @required bool local,
-    String icon,
-    String banner,
+    required int id,
+    required String name,
+    required String title,
+    String? description,
+    required int categoryId,
+    required int creatorId,
+    required bool removed,
+    required DateTime published,
+    DateTime? updated,
+    required bool deleted,
+    required bool nsfw,
+    required String actorId,
+    required bool local,
+    String? icon,
+    String? banner,
   }) = _CommunitySafe;
 
   CommunitySafe._();
@@ -390,15 +388,15 @@ abstract class CommentReport extends WithInstanceHost
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReport({
-    @required int id,
-    @required int creatorId,
-    @required int commentId,
-    @required String originalCommentText,
-    @required String reason,
-    @required bool resolved,
-    int resolverId,
-    @required DateTime published,
-    DateTime updated,
+    required int id,
+    required int creatorId,
+    required int commentId,
+    required String originalCommentText,
+    required String reason,
+    required bool resolved,
+    int? resolverId,
+    required DateTime published,
+    DateTime? updated,
   }) = _CommentReport;
 
   CommentReport._();
@@ -411,18 +409,18 @@ abstract class Comment extends WithInstanceHost implements _$Comment {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Comment({
-    @required int id,
-    @required int creatorId,
-    @required int postId,
-    int parentId,
-    @required String content,
-    @required bool removed,
-    @required bool read,
-    @required DateTime published,
-    DateTime updated,
-    @required bool deleted,
-    @required String apId,
-    @required bool local,
+    required int id,
+    required int creatorId,
+    required int postId,
+    int? parentId,
+    required String content,
+    required bool removed,
+    required bool read,
+    required DateTime published,
+    DateTime? updated,
+    required bool deleted,
+    required String apId,
+    required bool local,
   }) = _Comment;
 
   Comment._();
@@ -435,8 +433,8 @@ abstract class Category extends WithInstanceHost implements _$Category {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Category({
-    @required int id,
-    @required String name,
+    required int id,
+    required String name,
   }) = _Category;
 
   Category._();
@@ -449,11 +447,11 @@ abstract class UserMention extends WithInstanceHost implements _$UserMention {
   @ForceUtcDateTime()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMention({
-    @required int id,
-    @required int recipientId,
-    @required int commentId,
-    @required bool read,
-    @required DateTime published,
+    required int id,
+    required int recipientId,
+    required int commentId,
+    required bool read,
+    required DateTime published,
   }) = _UserMention;
 
   UserMention._();

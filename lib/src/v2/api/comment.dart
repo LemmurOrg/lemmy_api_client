@@ -13,11 +13,11 @@ abstract class CreateComment
     implements _$CreateComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateComment({
-    @required String content,
-    int parentId,
-    @required int postId,
-    String formId,
-    @required String auth,
+    required String content,
+    int? parentId,
+    required int postId,
+    String? formId,
+    required String auth,
   }) = _CreateComment;
 
   const CreateComment._();
@@ -40,10 +40,10 @@ abstract class EditComment
     implements _$EditComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditComment({
-    @required String content,
-    @required int commentId,
-    String formId,
-    @required String auth,
+    required String content,
+    required int commentId,
+    String? formId,
+    required String auth,
   }) = _EditComment;
 
   const EditComment._();
@@ -66,9 +66,9 @@ abstract class DeleteComment
     implements _$DeleteComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory DeleteComment({
-    @required int commentId,
-    @required bool deleted,
-    @required String auth,
+    required int commentId,
+    required bool deleted,
+    required String auth,
   }) = _DeleteComment;
 
   const DeleteComment._();
@@ -91,10 +91,10 @@ abstract class RemoveComment
     implements _$RemoveComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory RemoveComment({
-    @required int commentId,
-    @required bool removed,
-    String reason,
-    @required String auth,
+    required int commentId,
+    required bool removed,
+    String? reason,
+    required String auth,
   }) = _RemoveComment;
 
   const RemoveComment._();
@@ -117,9 +117,9 @@ abstract class MarkCommentAsRead
     implements _$MarkCommentAsRead, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory MarkCommentAsRead({
-    @required int commentId,
-    @required bool read,
-    @required String auth,
+    required int commentId,
+    required bool read,
+    required String auth,
   }) = _MarkCommentAsRead;
 
   const MarkCommentAsRead._();
@@ -142,9 +142,9 @@ abstract class SaveComment
     implements _$SaveComment, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveComment({
-    @required int commentId,
-    @required bool save,
-    @required String auth,
+    required int commentId,
+    required bool save,
+    required String auth,
   }) = _SaveComment;
 
   const SaveComment._();
@@ -167,9 +167,9 @@ abstract class CreateCommentLike
     implements _$CreateCommentLike, LemmyApiQuery<FullCommentView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateCommentLike({
-    @required int commentId,
-    @required VoteType score,
-    @required String auth,
+    required int commentId,
+    required VoteType score,
+    required String auth,
   }) = _CreateCommentLike;
 
   const CreateCommentLike._();
@@ -192,13 +192,13 @@ abstract class GetComments
     implements _$GetComments, LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetComments({
-    @required @JsonKey(name: 'type_') CommentListingType type,
-    @required SortType sort,
-    int page,
-    int limit,
-    int communityId,
-    String communityName,
-    String auth,
+    @JsonKey(name: 'type_') required CommentListingType type,
+    required SortType sort,
+    int? page,
+    int? limit,
+    int? communityId,
+    String? communityName,
+    String? auth,
   }) = _GetComments;
 
   const GetComments._();
@@ -222,9 +222,9 @@ abstract class CreateCommentReport
     implements _$CreateCommentReport, LemmyApiQuery<bool> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateCommentReport({
-    @required int commentId,
-    @required String reason,
-    @required String auth,
+    required int commentId,
+    required String reason,
+    required String auth,
   }) = _CreateCommentReport;
 
   const CreateCommentReport._();
@@ -232,10 +232,10 @@ abstract class CreateCommentReport
       _$CreateCommentReportFromJson(json);
 
   @override
-  String path() => null;
+  String path() => 'xyz';
 
   @override
-  HttpMethod httpMethod() => null;
+  HttpMethod httpMethod() => HttpMethod.get;
 
   @override
   bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
@@ -249,9 +249,9 @@ abstract class ResolveCommentReport
         LemmyApiQuery<ResolveCommentReportResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ResolveCommentReport({
-    @required int reportId,
-    @required bool resolved,
-    @required String auth,
+    required int reportId,
+    required bool resolved,
+    required String auth,
   }) = _ResolveCommentReport;
 
   const ResolveCommentReport._();
@@ -259,10 +259,10 @@ abstract class ResolveCommentReport
       _$ResolveCommentReportFromJson(json);
 
   @override
-  String path() => null;
+  String path() => 'xyz';
 
   @override
-  HttpMethod httpMethod() => null;
+  HttpMethod httpMethod() => HttpMethod.get;
 
   @override
   ResolveCommentReportResponse responseFactory(Map<String, dynamic> json) =>
@@ -275,10 +275,10 @@ abstract class ListCommentReports
     implements _$ListCommentReports, LemmyApiQuery<List<CommentReportView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCommentReports({
-    int page,
-    int limit,
-    int community,
-    @required String auth,
+    int? page,
+    int? limit,
+    int? community,
+    required String auth,
   }) = _ListCommentReports;
 
   const ListCommentReports._();
@@ -286,10 +286,10 @@ abstract class ListCommentReports
       _$ListCommentReportsFromJson(json);
 
   @override
-  String path() => null;
+  String path() => 'xyz';
 
   @override
-  HttpMethod httpMethod() => null;
+  HttpMethod httpMethod() => HttpMethod.get;
 
   @override
   List<CommentReportView> responseFactory(Map<String, dynamic> json) =>

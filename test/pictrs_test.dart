@@ -9,7 +9,7 @@ void main() {
 
     test('successful upload and delete', () async {
       final res = await pictrs.upload(
-          filePath: 'test/test.png', auth: Platform.environment['TEST_JWT']);
+          filePath: 'test/test.png', auth: Platform.environment['TEST_JWT']!);
       await pictrs.delete(res.files[0]);
     });
 

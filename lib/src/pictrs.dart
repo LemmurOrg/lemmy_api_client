@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
 
 import 'exceptions.dart';
 import 'utils/with_instance_host.dart';
@@ -21,12 +20,9 @@ class PictrsApi {
   const PictrsApi(this.host);
 
   Future<PictrsUpload> upload({
-    @required String filePath,
-    @required String auth,
+    required String filePath,
+    required String auth,
   }) async {
-    assert(filePath != null);
-    assert(auth != null);
-
     final req = http.MultipartRequest('POST', Uri.https(host, extraPath))
       ..files.add(await http.MultipartFile.fromPath('images[]', filePath));
     req.headers['Cookie'] = 'jwt=$auth';
@@ -45,10 +41,8 @@ class PictrsApi {
       switch (res.statusCode) {
         case 403:
           throw const LemmyApiException('pictrs_wrong_delete_token');
-          break;
         case 404:
           throw const LemmyApiException('pictrs_not_found');
-          break;
         default:
           throw const LemmyApiException('pictrs_unknown_error');
       }
@@ -62,8 +56,8 @@ class PictrsApi {
 abstract class PictrsUploadFile implements _$PictrsUploadFile {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory PictrsUploadFile({
-    @required String deleteToken,
-    @required String file,
+    required String deleteToken,
+    required String file,
   }) = _PictrsUploadFile;
 
   const PictrsUploadFile._();
@@ -75,8 +69,8 @@ abstract class PictrsUploadFile implements _$PictrsUploadFile {
 abstract class PictrsUpload extends WithInstanceHost implements _$PictrsUpload {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PictrsUpload({
-    @required String msg,
-    @required List<PictrsUploadFile> files,
+    required String msg,
+    required List<PictrsUploadFile> files,
   }) = _PictrsUpload;
 
   PictrsUpload._();

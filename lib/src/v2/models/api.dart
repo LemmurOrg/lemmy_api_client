@@ -14,9 +14,9 @@ abstract class FullCommunityView extends WithInstanceHost
     implements _$FullCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullCommunityView({
-    @required CommunityView communityView,
-    @required List<CommunityModeratorView> moderators,
-    @required int online,
+    required CommunityView communityView,
+    required List<CommunityModeratorView> moderators,
+    required int online,
   }) = _FullCommunityView;
 
   FullCommunityView._();
@@ -29,11 +29,11 @@ abstract class FullCommunityView extends WithInstanceHost
 abstract class FullPostView extends WithInstanceHost implements _$FullPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullPostView({
-    @required PostView postView,
-    @required CommunityView communityView,
-    @required List<CommentView> comments,
-    @required List<CommunityModeratorView> moderators,
-    @required int online,
+    required PostView postView,
+    required CommunityView communityView,
+    required List<CommentView> comments,
+    required List<CommunityModeratorView> moderators,
+    required int online,
   }) = _FullPostView;
 
   FullPostView._();
@@ -46,11 +46,11 @@ abstract class SearchResults extends WithInstanceHost
     implements _$SearchResults {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SearchResults({
-    @required @JsonKey(name: 'type_') SearchType type,
-    @required List<CommentView> comments,
-    @required List<PostView> posts,
-    @required List<CommunityView> communities,
-    @required List<UserViewSafe> users,
+    @JsonKey(name: 'type_') required SearchType type,
+    required List<CommentView> comments,
+    required List<PostView> posts,
+    required List<CommunityView> communities,
+    required List<UserViewSafe> users,
   }) = _SearchResults;
 
   SearchResults._();
@@ -63,15 +63,15 @@ abstract class SearchResults extends WithInstanceHost
 abstract class Modlog extends WithInstanceHost implements _$Modlog {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Modlog({
-    @required List<ModRemovePostView> removedPosts,
-    @required List<ModLockPostView> lockedPosts,
-    @required List<ModStickyPostView> stickiedPosts,
-    @required List<ModRemoveCommentView> removedComments,
-    @required List<ModRemoveCommunityView> removedCommunities,
-    @required List<ModBanFromCommunityView> bannedFromCommunity,
-    @required List<ModBanView> banned,
-    @required List<ModAddCommunityView> addedToCommunity,
-    @required List<ModAddView> added,
+    required List<ModRemovePostView> removedPosts,
+    required List<ModLockPostView> lockedPosts,
+    required List<ModStickyPostView> stickiedPosts,
+    required List<ModRemoveCommentView> removedComments,
+    required List<ModRemoveCommunityView> removedCommunities,
+    required List<ModBanFromCommunityView> bannedFromCommunity,
+    required List<ModBanView> banned,
+    required List<ModAddCommunityView> addedToCommunity,
+    required List<ModAddView> added,
   }) = _Modlog;
 
   Modlog._();
@@ -84,9 +84,9 @@ abstract class FullCommentView extends WithInstanceHost
     implements _$FullCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullCommentView({
-    @required CommentView commentView,
-    @required List<int> recipientIds,
-    String formId,
+    required CommentView commentView,
+    required List<int> recipientIds,
+    String? formId,
   }) = _FullCommentView;
 
   FullCommentView._();
@@ -98,13 +98,13 @@ abstract class FullCommentView extends WithInstanceHost
 abstract class FullSiteView extends WithInstanceHost implements _$FullSiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullSiteView({
-    SiteView siteView,
-    @required List<UserViewSafe> admins,
-    @required List<UserViewSafe> banned,
-    @required int online,
-    @required String version,
-    UserSafeSettings myUser,
-    FederatedInstances federatedInstances,
+    SiteView? siteView,
+    required List<UserViewSafe> admins,
+    required List<UserViewSafe> banned,
+    required int online,
+    required String version,
+    UserSafeSettings? myUser,
+    FederatedInstances? federatedInstances,
   }) = _FullSiteView;
 
   FullSiteView._();
@@ -118,9 +118,9 @@ abstract class FederatedInstances extends WithInstanceHost
     implements _$FederatedInstances {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FederatedInstances({
-    @required List<String> linked,
-    @required List<String> allowed,
-    @required List<String> blocked,
+    required List<String> linked,
+    required List<String> allowed,
+    required List<String> blocked,
   }) = _FederatedInstances;
 
   FederatedInstances._();
@@ -134,11 +134,11 @@ abstract class Captcha implements _$Captcha {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Captcha({
     /// A Base64 encoded png
-    @required String png,
+    required String png,
 
     /// A Base64 encoded wav audio file
-    String wav,
-    @required String uuid,
+    String? wav,
+    required String uuid,
   }) = _Captcha;
 
   Captcha._();
@@ -150,11 +150,11 @@ abstract class Captcha implements _$Captcha {
 abstract class FullUserView extends WithInstanceHost implements _$FullUserView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullUserView({
-    @required UserViewSafe userView,
-    @required List<CommunityFollowerView> follows,
-    @required List<CommunityModeratorView> moderates,
-    @required List<CommentView> comments,
-    @required List<PostView> posts,
+    required UserViewSafe userView,
+    required List<CommunityFollowerView> follows,
+    required List<CommunityModeratorView> moderates,
+    required List<CommentView> comments,
+    required List<PostView> posts,
   }) = _FullUserView;
 
   FullUserView._();
@@ -167,8 +167,8 @@ abstract class BannedCommunityUser extends WithInstanceHost
     implements _$BannedCommunityUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedCommunityUser({
-    @required UserViewSafe userView,
-    @required bool banned,
+    required UserViewSafe userView,
+    required bool banned,
   }) = _BannedCommunityUser;
 
   BannedCommunityUser._();
@@ -181,8 +181,8 @@ abstract class BannedCommunityUser extends WithInstanceHost
 abstract class BannedUser extends WithInstanceHost implements _$BannedUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedUser({
-    @required UserViewSafe userView,
-    @required bool banned,
+    required UserViewSafe userView,
+    required bool banned,
   }) = _BannedUser;
 
   BannedUser._();
@@ -196,9 +196,9 @@ abstract class GetReportCountResponse extends WithInstanceHost
     implements _$GetReportCountResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory GetReportCountResponse({
-    int community,
-    @required int commentReports,
-    @required int postReports,
+    int? community,
+    required int commentReports,
+    required int postReports,
   }) = _GetReportCountResponse;
 
   GetReportCountResponse._();
@@ -212,8 +212,8 @@ abstract class ResolveCommentReportResponse extends WithInstanceHost
     implements _$ResolveCommentReportResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolveCommentReportResponse({
-    @required int reportId,
-    @required bool resolved,
+    required int reportId,
+    required bool resolved,
   }) = _ResolveCommentReportResponse;
 
   ResolveCommentReportResponse._();
@@ -227,8 +227,8 @@ abstract class ResolvePostReportResponse extends WithInstanceHost
     implements _$ResolvePostReportResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolvePostReportResponse({
-    @required int reportId,
-    @required bool resolved,
+    required int reportId,
+    required bool resolved,
   }) = _ResolvePostReportResponse;
 
   ResolvePostReportResponse._();

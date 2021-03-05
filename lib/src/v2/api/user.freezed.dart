@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'user.dart';
 
@@ -8,6 +8,10 @@ part of 'user.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Login _$LoginFromJson(Map<String, dynamic> json) {
   return _Login.fromJson(json);
 }
@@ -16,31 +20,29 @@ Login _$LoginFromJson(Map<String, dynamic> json) {
 class _$LoginTearOff {
   const _$LoginTearOff();
 
-// ignore: unused_element
-  _Login call({@required String usernameOrEmail, @required String password}) {
+  _Login call({required String usernameOrEmail, required String password}) {
     return _Login(
       usernameOrEmail: usernameOrEmail,
       password: password,
     );
   }
 
-// ignore: unused_element
   Login fromJson(Map<String, Object> json) {
     return Login.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Login = _$LoginTearOff();
 
 /// @nodoc
 mixin _$Login {
-  String get usernameOrEmail;
-  String get password;
+  String get usernameOrEmail => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $LoginCopyWith<Login> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LoginCopyWith<Login> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -60,8 +62,8 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
 
   @override
   $Res call({
-    Object usernameOrEmail = freezed,
-    Object password = freezed,
+    Object? usernameOrEmail = freezed,
+    Object? password = freezed,
   }) {
     return _then(_value.copyWith(
       usernameOrEmail: usernameOrEmail == freezed
@@ -91,8 +93,8 @@ class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object usernameOrEmail = freezed,
-    Object password = freezed,
+    Object? usernameOrEmail = freezed,
+    Object? password = freezed,
   }) {
     return _then(_Login(
       usernameOrEmail: usernameOrEmail == freezed
@@ -107,10 +109,8 @@ class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_Login extends _Login {
-  const _$_Login({@required this.usernameOrEmail, @required this.password})
-      : assert(usernameOrEmail != null),
-        assert(password != null),
-        super._();
+  const _$_Login({required this.usernameOrEmail, required this.password})
+      : super._();
 
   factory _$_Login.fromJson(Map<String, dynamic> json) =>
       _$_$_LoginFromJson(json);
@@ -143,6 +143,7 @@ class _$_Login extends _Login {
       const DeepCollectionEquality().hash(usernameOrEmail) ^
       const DeepCollectionEquality().hash(password);
 
+  @JsonKey(ignore: true)
   @override
   _$LoginCopyWith<_Login> get copyWith =>
       __$LoginCopyWithImpl<_Login>(this, _$identity);
@@ -156,16 +157,17 @@ class _$_Login extends _Login {
 abstract class _Login extends Login {
   const _Login._() : super._();
   const factory _Login(
-      {@required String usernameOrEmail, @required String password}) = _$_Login;
+      {required String usernameOrEmail, required String password}) = _$_Login;
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
 
   @override
-  String get usernameOrEmail;
+  String get usernameOrEmail => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  _$LoginCopyWith<_Login> get copyWith;
+  @JsonKey(ignore: true)
+  _$LoginCopyWith<_Login> get copyWith => throw _privateConstructorUsedError;
 }
 
 Register _$RegisterFromJson(Map<String, dynamic> json) {
@@ -176,15 +178,14 @@ Register _$RegisterFromJson(Map<String, dynamic> json) {
 class _$RegisterTearOff {
   const _$RegisterTearOff();
 
-// ignore: unused_element
   _Register call(
-      {@required String username,
-      String email,
-      @required String password,
-      @required String passwordVerify,
-      @required bool showNsfw,
-      String captchaUuid,
-      String captchaAnswer}) {
+      {required String username,
+      String? email,
+      required String password,
+      required String passwordVerify,
+      required bool showNsfw,
+      String? captchaUuid,
+      String? captchaAnswer}) {
     return _Register(
       username: username,
       email: email,
@@ -196,28 +197,28 @@ class _$RegisterTearOff {
     );
   }
 
-// ignore: unused_element
   Register fromJson(Map<String, Object> json) {
     return Register.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Register = _$RegisterTearOff();
 
 /// @nodoc
 mixin _$Register {
-  String get username;
-  String get email;
-  String get password;
-  String get passwordVerify;
-  bool get showNsfw;
-  String get captchaUuid;
-  String get captchaAnswer;
+  String get username => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
+  String get passwordVerify => throw _privateConstructorUsedError;
+  bool get showNsfw => throw _privateConstructorUsedError;
+  String? get captchaUuid => throw _privateConstructorUsedError;
+  String? get captchaAnswer => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $RegisterCopyWith<Register> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RegisterCopyWith<Register> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -226,12 +227,12 @@ abstract class $RegisterCopyWith<$Res> {
       _$RegisterCopyWithImpl<$Res>;
   $Res call(
       {String username,
-      String email,
+      String? email,
       String password,
       String passwordVerify,
       bool showNsfw,
-      String captchaUuid,
-      String captchaAnswer});
+      String? captchaUuid,
+      String? captchaAnswer});
 }
 
 /// @nodoc
@@ -244,27 +245,27 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
 
   @override
   $Res call({
-    Object username = freezed,
-    Object email = freezed,
-    Object password = freezed,
-    Object passwordVerify = freezed,
-    Object showNsfw = freezed,
-    Object captchaUuid = freezed,
-    Object captchaAnswer = freezed,
+    Object? username = freezed,
+    Object? email = freezed,
+    Object? password = freezed,
+    Object? passwordVerify = freezed,
+    Object? showNsfw = freezed,
+    Object? captchaUuid = freezed,
+    Object? captchaAnswer = freezed,
   }) {
     return _then(_value.copyWith(
       username: username == freezed ? _value.username : username as String,
-      email: email == freezed ? _value.email : email as String,
+      email: email == freezed ? _value.email : email as String?,
       password: password == freezed ? _value.password : password as String,
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
           : passwordVerify as String,
       showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       captchaUuid:
-          captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String,
+          captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String?,
       captchaAnswer: captchaAnswer == freezed
           ? _value.captchaAnswer
-          : captchaAnswer as String,
+          : captchaAnswer as String?,
     ));
   }
 }
@@ -276,12 +277,12 @@ abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
   @override
   $Res call(
       {String username,
-      String email,
+      String? email,
       String password,
       String passwordVerify,
       bool showNsfw,
-      String captchaUuid,
-      String captchaAnswer});
+      String? captchaUuid,
+      String? captchaAnswer});
 }
 
 /// @nodoc
@@ -295,27 +296,27 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object username = freezed,
-    Object email = freezed,
-    Object password = freezed,
-    Object passwordVerify = freezed,
-    Object showNsfw = freezed,
-    Object captchaUuid = freezed,
-    Object captchaAnswer = freezed,
+    Object? username = freezed,
+    Object? email = freezed,
+    Object? password = freezed,
+    Object? passwordVerify = freezed,
+    Object? showNsfw = freezed,
+    Object? captchaUuid = freezed,
+    Object? captchaAnswer = freezed,
   }) {
     return _then(_Register(
       username: username == freezed ? _value.username : username as String,
-      email: email == freezed ? _value.email : email as String,
+      email: email == freezed ? _value.email : email as String?,
       password: password == freezed ? _value.password : password as String,
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
           : passwordVerify as String,
       showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
       captchaUuid:
-          captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String,
+          captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String?,
       captchaAnswer: captchaAnswer == freezed
           ? _value.captchaAnswer
-          : captchaAnswer as String,
+          : captchaAnswer as String?,
     ));
   }
 }
@@ -325,18 +326,14 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
 /// @nodoc
 class _$_Register extends _Register {
   const _$_Register(
-      {@required this.username,
+      {required this.username,
       this.email,
-      @required this.password,
-      @required this.passwordVerify,
-      @required this.showNsfw,
+      required this.password,
+      required this.passwordVerify,
+      required this.showNsfw,
       this.captchaUuid,
       this.captchaAnswer})
-      : assert(username != null),
-        assert(password != null),
-        assert(passwordVerify != null),
-        assert(showNsfw != null),
-        super._();
+      : super._();
 
   factory _$_Register.fromJson(Map<String, dynamic> json) =>
       _$_$_RegisterFromJson(json);
@@ -344,7 +341,7 @@ class _$_Register extends _Register {
   @override
   final String username;
   @override
-  final String email;
+  final String? email;
   @override
   final String password;
   @override
@@ -352,9 +349,9 @@ class _$_Register extends _Register {
   @override
   final bool showNsfw;
   @override
-  final String captchaUuid;
+  final String? captchaUuid;
   @override
-  final String captchaAnswer;
+  final String? captchaAnswer;
 
   @override
   String toString() {
@@ -398,6 +395,7 @@ class _$_Register extends _Register {
       const DeepCollectionEquality().hash(captchaUuid) ^
       const DeepCollectionEquality().hash(captchaAnswer);
 
+  @JsonKey(ignore: true)
   @override
   _$RegisterCopyWith<_Register> get copyWith =>
       __$RegisterCopyWithImpl<_Register>(this, _$identity);
@@ -411,32 +409,34 @@ class _$_Register extends _Register {
 abstract class _Register extends Register {
   const _Register._() : super._();
   const factory _Register(
-      {@required String username,
-      String email,
-      @required String password,
-      @required String passwordVerify,
-      @required bool showNsfw,
-      String captchaUuid,
-      String captchaAnswer}) = _$_Register;
+      {required String username,
+      String? email,
+      required String password,
+      required String passwordVerify,
+      required bool showNsfw,
+      String? captchaUuid,
+      String? captchaAnswer}) = _$_Register;
 
   factory _Register.fromJson(Map<String, dynamic> json) = _$_Register.fromJson;
 
   @override
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @override
-  String get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  String get passwordVerify;
+  String get passwordVerify => throw _privateConstructorUsedError;
   @override
-  bool get showNsfw;
+  bool get showNsfw => throw _privateConstructorUsedError;
   @override
-  String get captchaUuid;
+  String? get captchaUuid => throw _privateConstructorUsedError;
   @override
-  String get captchaAnswer;
+  String? get captchaAnswer => throw _privateConstructorUsedError;
   @override
-  _$RegisterCopyWith<_Register> get copyWith;
+  @JsonKey(ignore: true)
+  _$RegisterCopyWith<_Register> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetCaptcha _$GetCaptchaFromJson(Map<String, dynamic> json) {
@@ -447,24 +447,21 @@ GetCaptcha _$GetCaptchaFromJson(Map<String, dynamic> json) {
 class _$GetCaptchaTearOff {
   const _$GetCaptchaTearOff();
 
-// ignore: unused_element
   _GetCaptcha call() {
     return const _GetCaptcha();
   }
 
-// ignore: unused_element
   GetCaptcha fromJson(Map<String, Object> json) {
     return GetCaptcha.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetCaptcha = _$GetCaptchaTearOff();
 
 /// @nodoc
 mixin _$GetCaptcha {
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -545,35 +542,26 @@ SaveUserSettings _$SaveUserSettingsFromJson(Map<String, dynamic> json) {
 class _$SaveUserSettingsTearOff {
   const _$SaveUserSettingsTearOff();
 
-// ignore: unused_element
   _SaveUserSettings call(
-      {@required
-          bool showNsfw,
-      @required
-          String theme,
-      @required
+      {required bool showNsfw,
+      required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
-      @required
+          required SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      @required
-          String lang,
-      String avatar,
-      String banner,
-      String preferredUsername,
-      String email,
-      String bio,
-      String matrixUserId,
-      String newPassword,
-      String newPasswordVerify,
-      String oldPassword,
-      @required
-          bool showAvatars,
-      @required
-          bool sendNotificationsToEmail,
-      @required
-          String auth}) {
+          required PostListingType defaultListingType,
+      required String lang,
+      String? avatar,
+      String? banner,
+      String? preferredUsername,
+      String? email,
+      String? bio,
+      String? matrixUserId,
+      String? newPassword,
+      String? newPasswordVerify,
+      String? oldPassword,
+      required bool showAvatars,
+      required bool sendNotificationsToEmail,
+      required String auth}) {
     return _SaveUserSettings(
       showNsfw: showNsfw,
       theme: theme,
@@ -595,40 +583,40 @@ class _$SaveUserSettingsTearOff {
     );
   }
 
-// ignore: unused_element
   SaveUserSettings fromJson(Map<String, Object> json) {
     return SaveUserSettings.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SaveUserSettings = _$SaveUserSettingsTearOff();
 
 /// @nodoc
 mixin _$SaveUserSettings {
-  bool get showNsfw;
-  String get theme;
+  bool get showNsfw => throw _privateConstructorUsedError;
+  String get theme => throw _privateConstructorUsedError;
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType;
+  SortType get defaultSortType => throw _privateConstructorUsedError;
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType;
-  String get lang;
-  String get avatar;
-  String get banner;
-  String get preferredUsername;
-  String get email;
-  String get bio;
-  String get matrixUserId;
-  String get newPassword;
-  String get newPasswordVerify;
-  String get oldPassword;
-  bool get showAvatars;
-  bool get sendNotificationsToEmail;
-  String get auth;
+  PostListingType get defaultListingType => throw _privateConstructorUsedError;
+  String get lang => throw _privateConstructorUsedError;
+  String? get avatar => throw _privateConstructorUsedError;
+  String? get banner => throw _privateConstructorUsedError;
+  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get email => throw _privateConstructorUsedError;
+  String? get bio => throw _privateConstructorUsedError;
+  String? get matrixUserId => throw _privateConstructorUsedError;
+  String? get newPassword => throw _privateConstructorUsedError;
+  String? get newPasswordVerify => throw _privateConstructorUsedError;
+  String? get oldPassword => throw _privateConstructorUsedError;
+  bool get showAvatars => throw _privateConstructorUsedError;
+  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SaveUserSettingsCopyWith<SaveUserSettings> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SaveUserSettingsCopyWith<SaveUserSettings> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -644,15 +632,15 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           PostListingType defaultListingType,
       String lang,
-      String avatar,
-      String banner,
-      String preferredUsername,
-      String email,
-      String bio,
-      String matrixUserId,
-      String newPassword,
-      String newPasswordVerify,
-      String oldPassword,
+      String? avatar,
+      String? banner,
+      String? preferredUsername,
+      String? email,
+      String? bio,
+      String? matrixUserId,
+      String? newPassword,
+      String? newPasswordVerify,
+      String? oldPassword,
       bool showAvatars,
       bool sendNotificationsToEmail,
       String auth});
@@ -669,23 +657,23 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object showNsfw = freezed,
-    Object theme = freezed,
-    Object defaultSortType = freezed,
-    Object defaultListingType = freezed,
-    Object lang = freezed,
-    Object avatar = freezed,
-    Object banner = freezed,
-    Object preferredUsername = freezed,
-    Object email = freezed,
-    Object bio = freezed,
-    Object matrixUserId = freezed,
-    Object newPassword = freezed,
-    Object newPasswordVerify = freezed,
-    Object oldPassword = freezed,
-    Object showAvatars = freezed,
-    Object sendNotificationsToEmail = freezed,
-    Object auth = freezed,
+    Object? showNsfw = freezed,
+    Object? theme = freezed,
+    Object? defaultSortType = freezed,
+    Object? defaultListingType = freezed,
+    Object? lang = freezed,
+    Object? avatar = freezed,
+    Object? banner = freezed,
+    Object? preferredUsername = freezed,
+    Object? email = freezed,
+    Object? bio = freezed,
+    Object? matrixUserId = freezed,
+    Object? newPassword = freezed,
+    Object? newPasswordVerify = freezed,
+    Object? oldPassword = freezed,
+    Object? showAvatars = freezed,
+    Object? sendNotificationsToEmail = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
@@ -697,23 +685,23 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.defaultListingType
           : defaultListingType as PostListingType,
       lang: lang == freezed ? _value.lang : lang as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String,
-      banner: banner == freezed ? _value.banner : banner as String,
+      avatar: avatar == freezed ? _value.avatar : avatar as String?,
+      banner: banner == freezed ? _value.banner : banner as String?,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String,
-      email: email == freezed ? _value.email : email as String,
-      bio: bio == freezed ? _value.bio : bio as String,
+          : preferredUsername as String?,
+      email: email == freezed ? _value.email : email as String?,
+      bio: bio == freezed ? _value.bio : bio as String?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String,
+          : matrixUserId as String?,
       newPassword:
-          newPassword == freezed ? _value.newPassword : newPassword as String,
+          newPassword == freezed ? _value.newPassword : newPassword as String?,
       newPasswordVerify: newPasswordVerify == freezed
           ? _value.newPasswordVerify
-          : newPasswordVerify as String,
+          : newPasswordVerify as String?,
       oldPassword:
-          oldPassword == freezed ? _value.oldPassword : oldPassword as String,
+          oldPassword == freezed ? _value.oldPassword : oldPassword as String?,
       showAvatars:
           showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
@@ -739,15 +727,15 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
           PostListingType defaultListingType,
       String lang,
-      String avatar,
-      String banner,
-      String preferredUsername,
-      String email,
-      String bio,
-      String matrixUserId,
-      String newPassword,
-      String newPasswordVerify,
-      String oldPassword,
+      String? avatar,
+      String? banner,
+      String? preferredUsername,
+      String? email,
+      String? bio,
+      String? matrixUserId,
+      String? newPassword,
+      String? newPasswordVerify,
+      String? oldPassword,
       bool showAvatars,
       bool sendNotificationsToEmail,
       String auth});
@@ -766,23 +754,23 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object showNsfw = freezed,
-    Object theme = freezed,
-    Object defaultSortType = freezed,
-    Object defaultListingType = freezed,
-    Object lang = freezed,
-    Object avatar = freezed,
-    Object banner = freezed,
-    Object preferredUsername = freezed,
-    Object email = freezed,
-    Object bio = freezed,
-    Object matrixUserId = freezed,
-    Object newPassword = freezed,
-    Object newPasswordVerify = freezed,
-    Object oldPassword = freezed,
-    Object showAvatars = freezed,
-    Object sendNotificationsToEmail = freezed,
-    Object auth = freezed,
+    Object? showNsfw = freezed,
+    Object? theme = freezed,
+    Object? defaultSortType = freezed,
+    Object? defaultListingType = freezed,
+    Object? lang = freezed,
+    Object? avatar = freezed,
+    Object? banner = freezed,
+    Object? preferredUsername = freezed,
+    Object? email = freezed,
+    Object? bio = freezed,
+    Object? matrixUserId = freezed,
+    Object? newPassword = freezed,
+    Object? newPasswordVerify = freezed,
+    Object? oldPassword = freezed,
+    Object? showAvatars = freezed,
+    Object? sendNotificationsToEmail = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_SaveUserSettings(
       showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
@@ -794,23 +782,23 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.defaultListingType
           : defaultListingType as PostListingType,
       lang: lang == freezed ? _value.lang : lang as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String,
-      banner: banner == freezed ? _value.banner : banner as String,
+      avatar: avatar == freezed ? _value.avatar : avatar as String?,
+      banner: banner == freezed ? _value.banner : banner as String?,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String,
-      email: email == freezed ? _value.email : email as String,
-      bio: bio == freezed ? _value.bio : bio as String,
+          : preferredUsername as String?,
+      email: email == freezed ? _value.email : email as String?,
+      bio: bio == freezed ? _value.bio : bio as String?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String,
+          : matrixUserId as String?,
       newPassword:
-          newPassword == freezed ? _value.newPassword : newPassword as String,
+          newPassword == freezed ? _value.newPassword : newPassword as String?,
       newPasswordVerify: newPasswordVerify == freezed
           ? _value.newPasswordVerify
-          : newPasswordVerify as String,
+          : newPasswordVerify as String?,
       oldPassword:
-          oldPassword == freezed ? _value.oldPassword : oldPassword as String,
+          oldPassword == freezed ? _value.oldPassword : oldPassword as String?,
       showAvatars:
           showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
@@ -826,18 +814,13 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_SaveUserSettings extends _SaveUserSettings {
   const _$_SaveUserSettings(
-      {@required
-          this.showNsfw,
-      @required
-          this.theme,
-      @required
+      {required this.showNsfw,
+      required this.theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          this.defaultSortType,
-      @required
+          required this.defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          this.defaultListingType,
-      @required
-          this.lang,
+          required this.defaultListingType,
+      required this.lang,
       this.avatar,
       this.banner,
       this.preferredUsername,
@@ -847,21 +830,10 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       this.newPassword,
       this.newPasswordVerify,
       this.oldPassword,
-      @required
-          this.showAvatars,
-      @required
-          this.sendNotificationsToEmail,
-      @required
-          this.auth})
-      : assert(showNsfw != null),
-        assert(theme != null),
-        assert(defaultSortType != null),
-        assert(defaultListingType != null),
-        assert(lang != null),
-        assert(showAvatars != null),
-        assert(sendNotificationsToEmail != null),
-        assert(auth != null),
-        super._();
+      required this.showAvatars,
+      required this.sendNotificationsToEmail,
+      required this.auth})
+      : super._();
 
   factory _$_SaveUserSettings.fromJson(Map<String, dynamic> json) =>
       _$_$_SaveUserSettingsFromJson(json);
@@ -879,23 +851,23 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String lang;
   @override
-  final String avatar;
+  final String? avatar;
   @override
-  final String banner;
+  final String? banner;
   @override
-  final String preferredUsername;
+  final String? preferredUsername;
   @override
-  final String email;
+  final String? email;
   @override
-  final String bio;
+  final String? bio;
   @override
-  final String matrixUserId;
+  final String? matrixUserId;
   @override
-  final String newPassword;
+  final String? newPassword;
   @override
-  final String newPasswordVerify;
+  final String? newPasswordVerify;
   @override
-  final String oldPassword;
+  final String? oldPassword;
   @override
   final bool showAvatars;
   @override
@@ -981,6 +953,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
       __$SaveUserSettingsCopyWithImpl<_SaveUserSettings>(this, _$identity);
@@ -994,75 +967,69 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 abstract class _SaveUserSettings extends SaveUserSettings {
   const _SaveUserSettings._() : super._();
   const factory _SaveUserSettings(
-      {@required
-          bool showNsfw,
-      @required
-          String theme,
-      @required
+      {required bool showNsfw,
+      required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
-      @required
+          required SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      @required
-          String lang,
-      String avatar,
-      String banner,
-      String preferredUsername,
-      String email,
-      String bio,
-      String matrixUserId,
-      String newPassword,
-      String newPasswordVerify,
-      String oldPassword,
-      @required
-          bool showAvatars,
-      @required
-          bool sendNotificationsToEmail,
-      @required
-          String auth}) = _$_SaveUserSettings;
+          required PostListingType defaultListingType,
+      required String lang,
+      String? avatar,
+      String? banner,
+      String? preferredUsername,
+      String? email,
+      String? bio,
+      String? matrixUserId,
+      String? newPassword,
+      String? newPasswordVerify,
+      String? oldPassword,
+      required bool showAvatars,
+      required bool sendNotificationsToEmail,
+      required String auth}) = _$_SaveUserSettings;
 
   factory _SaveUserSettings.fromJson(Map<String, dynamic> json) =
       _$_SaveUserSettings.fromJson;
 
   @override
-  bool get showNsfw;
+  bool get showNsfw => throw _privateConstructorUsedError;
   @override
-  String get theme;
+  String get theme => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType;
+  SortType get defaultSortType => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType;
+  PostListingType get defaultListingType => throw _privateConstructorUsedError;
   @override
-  String get lang;
+  String get lang => throw _privateConstructorUsedError;
   @override
-  String get avatar;
+  String? get avatar => throw _privateConstructorUsedError;
   @override
-  String get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  String get preferredUsername;
+  String? get preferredUsername => throw _privateConstructorUsedError;
   @override
-  String get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  String get bio;
+  String? get bio => throw _privateConstructorUsedError;
   @override
-  String get matrixUserId;
+  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  String get newPassword;
+  String? get newPassword => throw _privateConstructorUsedError;
   @override
-  String get newPasswordVerify;
+  String? get newPasswordVerify => throw _privateConstructorUsedError;
   @override
-  String get oldPassword;
+  String? get oldPassword => throw _privateConstructorUsedError;
   @override
-  bool get showAvatars;
+  bool get showAvatars => throw _privateConstructorUsedError;
   @override
-  bool get sendNotificationsToEmail;
+  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith;
+  @JsonKey(ignore: true)
+  _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetUserDetails _$GetUserDetailsFromJson(Map<String, dynamic> json) {
@@ -1073,16 +1040,15 @@ GetUserDetails _$GetUserDetailsFromJson(Map<String, dynamic> json) {
 class _$GetUserDetailsTearOff {
   const _$GetUserDetailsTearOff();
 
-// ignore: unused_element
   _GetUserDetails call(
-      {int userId,
-      String username,
-      @required SortType sort,
-      int page,
-      int limit,
-      int communityId,
-      @required bool savedOnly,
-      String auth}) {
+      {int? userId,
+      String? username,
+      required SortType sort,
+      int? page,
+      int? limit,
+      int? communityId,
+      required bool savedOnly,
+      String? auth}) {
     return _GetUserDetails(
       userId: userId,
       username: username,
@@ -1095,29 +1061,29 @@ class _$GetUserDetailsTearOff {
     );
   }
 
-// ignore: unused_element
   GetUserDetails fromJson(Map<String, Object> json) {
     return GetUserDetails.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetUserDetails = _$GetUserDetailsTearOff();
 
 /// @nodoc
 mixin _$GetUserDetails {
-  int get userId;
-  String get username;
-  SortType get sort;
-  int get page;
-  int get limit;
-  int get communityId;
-  bool get savedOnly;
-  String get auth;
+  int? get userId => throw _privateConstructorUsedError;
+  String? get username => throw _privateConstructorUsedError;
+  SortType get sort => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
+  bool get savedOnly => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GetUserDetailsCopyWith<GetUserDetails> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetUserDetailsCopyWith<GetUserDetails> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1126,14 +1092,14 @@ abstract class $GetUserDetailsCopyWith<$Res> {
           GetUserDetails value, $Res Function(GetUserDetails) then) =
       _$GetUserDetailsCopyWithImpl<$Res>;
   $Res call(
-      {int userId,
-      String username,
+      {int? userId,
+      String? username,
       SortType sort,
-      int page,
-      int limit,
-      int communityId,
+      int? page,
+      int? limit,
+      int? communityId,
       bool savedOnly,
-      String auth});
+      String? auth});
 }
 
 /// @nodoc
@@ -1147,25 +1113,25 @@ class _$GetUserDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object username = freezed,
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object communityId = freezed,
-    Object savedOnly = freezed,
-    Object auth = freezed,
+    Object? userId = freezed,
+    Object? username = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? savedOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as int,
-      username: username == freezed ? _value.username : username as String,
+      userId: userId == freezed ? _value.userId : userId as int?,
+      username: username == freezed ? _value.username : username as String?,
       sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
+          communityId == freezed ? _value.communityId : communityId as int?,
       savedOnly: savedOnly == freezed ? _value.savedOnly : savedOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      auth: auth == freezed ? _value.auth : auth as String?,
     ));
   }
 }
@@ -1178,14 +1144,14 @@ abstract class _$GetUserDetailsCopyWith<$Res>
       __$GetUserDetailsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int userId,
-      String username,
+      {int? userId,
+      String? username,
       SortType sort,
-      int page,
-      int limit,
-      int communityId,
+      int? page,
+      int? limit,
+      int? communityId,
       bool savedOnly,
-      String auth});
+      String? auth});
 }
 
 /// @nodoc
@@ -1201,25 +1167,25 @@ class __$GetUserDetailsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object username = freezed,
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object communityId = freezed,
-    Object savedOnly = freezed,
-    Object auth = freezed,
+    Object? userId = freezed,
+    Object? username = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? savedOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetUserDetails(
-      userId: userId == freezed ? _value.userId : userId as int,
-      username: username == freezed ? _value.username : username as String,
+      userId: userId == freezed ? _value.userId : userId as int?,
+      username: username == freezed ? _value.username : username as String?,
       sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
+          communityId == freezed ? _value.communityId : communityId as int?,
       savedOnly: savedOnly == freezed ? _value.savedOnly : savedOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      auth: auth == freezed ? _value.auth : auth as String?,
     ));
   }
 }
@@ -1231,35 +1197,33 @@ class _$_GetUserDetails extends _GetUserDetails {
   const _$_GetUserDetails(
       {this.userId,
       this.username,
-      @required this.sort,
+      required this.sort,
       this.page,
       this.limit,
       this.communityId,
-      @required this.savedOnly,
+      required this.savedOnly,
       this.auth})
-      : assert(sort != null),
-        assert(savedOnly != null),
-        super._();
+      : super._();
 
   factory _$_GetUserDetails.fromJson(Map<String, dynamic> json) =>
       _$_$_GetUserDetailsFromJson(json);
 
   @override
-  final int userId;
+  final int? userId;
   @override
-  final String username;
+  final String? username;
   @override
   final SortType sort;
   @override
-  final int page;
+  final int? page;
   @override
-  final int limit;
+  final int? limit;
   @override
-  final int communityId;
+  final int? communityId;
   @override
   final bool savedOnly;
   @override
-  final String auth;
+  final String? auth;
 
   @override
   String toString() {
@@ -1303,6 +1267,7 @@ class _$_GetUserDetails extends _GetUserDetails {
       const DeepCollectionEquality().hash(savedOnly) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$GetUserDetailsCopyWith<_GetUserDetails> get copyWith =>
       __$GetUserDetailsCopyWithImpl<_GetUserDetails>(this, _$identity);
@@ -1316,36 +1281,38 @@ class _$_GetUserDetails extends _GetUserDetails {
 abstract class _GetUserDetails extends GetUserDetails {
   const _GetUserDetails._() : super._();
   const factory _GetUserDetails(
-      {int userId,
-      String username,
-      @required SortType sort,
-      int page,
-      int limit,
-      int communityId,
-      @required bool savedOnly,
-      String auth}) = _$_GetUserDetails;
+      {int? userId,
+      String? username,
+      required SortType sort,
+      int? page,
+      int? limit,
+      int? communityId,
+      required bool savedOnly,
+      String? auth}) = _$_GetUserDetails;
 
   factory _GetUserDetails.fromJson(Map<String, dynamic> json) =
       _$_GetUserDetails.fromJson;
 
   @override
-  int get userId;
+  int? get userId => throw _privateConstructorUsedError;
   @override
-  String get username;
+  String? get username => throw _privateConstructorUsedError;
   @override
-  SortType get sort;
+  SortType get sort => throw _privateConstructorUsedError;
   @override
-  int get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  bool get savedOnly;
+  bool get savedOnly => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
-  _$GetUserDetailsCopyWith<_GetUserDetails> get copyWith;
+  @JsonKey(ignore: true)
+  _$GetUserDetailsCopyWith<_GetUserDetails> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MarkAllAsRead _$MarkAllAsReadFromJson(Map<String, dynamic> json) {
@@ -1356,29 +1323,28 @@ MarkAllAsRead _$MarkAllAsReadFromJson(Map<String, dynamic> json) {
 class _$MarkAllAsReadTearOff {
   const _$MarkAllAsReadTearOff();
 
-// ignore: unused_element
-  _MarkAllAsRead call({@required String auth}) {
+  _MarkAllAsRead call({required String auth}) {
     return _MarkAllAsRead(
       auth: auth,
     );
   }
 
-// ignore: unused_element
   MarkAllAsRead fromJson(Map<String, Object> json) {
     return MarkAllAsRead.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MarkAllAsRead = _$MarkAllAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkAllAsRead {
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $MarkAllAsReadCopyWith<MarkAllAsRead> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MarkAllAsReadCopyWith<MarkAllAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1400,7 +1366,7 @@ class _$MarkAllAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object auth = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       auth: auth == freezed ? _value.auth : auth as String,
@@ -1431,7 +1397,7 @@ class __$MarkAllAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object auth = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_MarkAllAsRead(
       auth: auth == freezed ? _value.auth : auth as String,
@@ -1443,9 +1409,7 @@ class __$MarkAllAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MarkAllAsRead extends _MarkAllAsRead {
-  const _$_MarkAllAsRead({@required this.auth})
-      : assert(auth != null),
-        super._();
+  const _$_MarkAllAsRead({required this.auth}) : super._();
 
   factory _$_MarkAllAsRead.fromJson(Map<String, dynamic> json) =>
       _$_$_MarkAllAsReadFromJson(json);
@@ -1470,6 +1434,7 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$MarkAllAsReadCopyWith<_MarkAllAsRead> get copyWith =>
       __$MarkAllAsReadCopyWithImpl<_MarkAllAsRead>(this, _$identity);
@@ -1482,15 +1447,17 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
 
 abstract class _MarkAllAsRead extends MarkAllAsRead {
   const _MarkAllAsRead._() : super._();
-  const factory _MarkAllAsRead({@required String auth}) = _$_MarkAllAsRead;
+  const factory _MarkAllAsRead({required String auth}) = _$_MarkAllAsRead;
 
   factory _MarkAllAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkAllAsRead.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$MarkAllAsReadCopyWith<_MarkAllAsRead> get copyWith;
+  @JsonKey(ignore: true)
+  _$MarkAllAsReadCopyWith<_MarkAllAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 AddAdmin _$AddAdminFromJson(Map<String, dynamic> json) {
@@ -1501,9 +1468,8 @@ AddAdmin _$AddAdminFromJson(Map<String, dynamic> json) {
 class _$AddAdminTearOff {
   const _$AddAdminTearOff();
 
-// ignore: unused_element
   _AddAdmin call(
-      {@required int userId, @required bool added, @required String auth}) {
+      {required int userId, required bool added, required String auth}) {
     return _AddAdmin(
       userId: userId,
       added: added,
@@ -1511,24 +1477,24 @@ class _$AddAdminTearOff {
     );
   }
 
-// ignore: unused_element
   AddAdmin fromJson(Map<String, Object> json) {
     return AddAdmin.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $AddAdmin = _$AddAdminTearOff();
 
 /// @nodoc
 mixin _$AddAdmin {
-  int get userId;
-  bool get added;
-  String get auth;
+  int get userId => throw _privateConstructorUsedError;
+  bool get added => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $AddAdminCopyWith<AddAdmin> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AddAdminCopyWith<AddAdmin> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1548,9 +1514,9 @@ class _$AddAdminCopyWithImpl<$Res> implements $AddAdminCopyWith<$Res> {
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object added = freezed,
-    Object auth = freezed,
+    Object? userId = freezed,
+    Object? added = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       userId: userId == freezed ? _value.userId : userId as int,
@@ -1579,9 +1545,9 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object added = freezed,
-    Object auth = freezed,
+    Object? userId = freezed,
+    Object? added = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_AddAdmin(
       userId: userId == freezed ? _value.userId : userId as int,
@@ -1596,11 +1562,8 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
 /// @nodoc
 class _$_AddAdmin extends _AddAdmin {
   const _$_AddAdmin(
-      {@required this.userId, @required this.added, @required this.auth})
-      : assert(userId != null),
-        assert(added != null),
-        assert(auth != null),
-        super._();
+      {required this.userId, required this.added, required this.auth})
+      : super._();
 
   factory _$_AddAdmin.fromJson(Map<String, dynamic> json) =>
       _$_$_AddAdminFromJson(json);
@@ -1636,6 +1599,7 @@ class _$_AddAdmin extends _AddAdmin {
       const DeepCollectionEquality().hash(added) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$AddAdminCopyWith<_AddAdmin> get copyWith =>
       __$AddAdminCopyWithImpl<_AddAdmin>(this, _$identity);
@@ -1649,20 +1613,22 @@ class _$_AddAdmin extends _AddAdmin {
 abstract class _AddAdmin extends AddAdmin {
   const _AddAdmin._() : super._();
   const factory _AddAdmin(
-      {@required int userId,
-      @required bool added,
-      @required String auth}) = _$_AddAdmin;
+      {required int userId,
+      required bool added,
+      required String auth}) = _$_AddAdmin;
 
   factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$_AddAdmin.fromJson;
 
   @override
-  int get userId;
+  int get userId => throw _privateConstructorUsedError;
   @override
-  bool get added;
+  bool get added => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$AddAdminCopyWith<_AddAdmin> get copyWith;
+  @JsonKey(ignore: true)
+  _$AddAdminCopyWith<_AddAdmin> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 BanUser _$BanUserFromJson(Map<String, dynamic> json) {
@@ -1673,14 +1639,13 @@ BanUser _$BanUserFromJson(Map<String, dynamic> json) {
 class _$BanUserTearOff {
   const _$BanUserTearOff();
 
-// ignore: unused_element
   _BanUser call(
-      {@required int userId,
-      @required bool ban,
-      @required bool removeData,
-      String reason,
-      int expires,
-      @required String auth}) {
+      {required int userId,
+      required bool ban,
+      required bool removeData,
+      String? reason,
+      int? expires,
+      required String auth}) {
     return _BanUser(
       userId: userId,
       ban: ban,
@@ -1691,27 +1656,26 @@ class _$BanUserTearOff {
     );
   }
 
-// ignore: unused_element
   BanUser fromJson(Map<String, Object> json) {
     return BanUser.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $BanUser = _$BanUserTearOff();
 
 /// @nodoc
 mixin _$BanUser {
-  int get userId;
-  bool get ban;
-  bool get removeData;
-  String get reason;
-  int get expires;
-  String get auth;
+  int get userId => throw _privateConstructorUsedError;
+  bool get ban => throw _privateConstructorUsedError;
+  bool get removeData => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  int? get expires => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $BanUserCopyWith<BanUser> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BanUserCopyWith<BanUser> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1722,8 +1686,8 @@ abstract class $BanUserCopyWith<$Res> {
       {int userId,
       bool ban,
       bool removeData,
-      String reason,
-      int expires,
+      String? reason,
+      int? expires,
       String auth});
 }
 
@@ -1737,20 +1701,20 @@ class _$BanUserCopyWithImpl<$Res> implements $BanUserCopyWith<$Res> {
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object ban = freezed,
-    Object removeData = freezed,
-    Object reason = freezed,
-    Object expires = freezed,
-    Object auth = freezed,
+    Object? userId = freezed,
+    Object? ban = freezed,
+    Object? removeData = freezed,
+    Object? reason = freezed,
+    Object? expires = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       userId: userId == freezed ? _value.userId : userId as int,
       ban: ban == freezed ? _value.ban : ban as bool,
       removeData:
           removeData == freezed ? _value.removeData : removeData as bool,
-      reason: reason == freezed ? _value.reason : reason as String,
-      expires: expires == freezed ? _value.expires : expires as int,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      expires: expires == freezed ? _value.expires : expires as int?,
       auth: auth == freezed ? _value.auth : auth as String,
     ));
   }
@@ -1765,8 +1729,8 @@ abstract class _$BanUserCopyWith<$Res> implements $BanUserCopyWith<$Res> {
       {int userId,
       bool ban,
       bool removeData,
-      String reason,
-      int expires,
+      String? reason,
+      int? expires,
       String auth});
 }
 
@@ -1781,20 +1745,20 @@ class __$BanUserCopyWithImpl<$Res> extends _$BanUserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userId = freezed,
-    Object ban = freezed,
-    Object removeData = freezed,
-    Object reason = freezed,
-    Object expires = freezed,
-    Object auth = freezed,
+    Object? userId = freezed,
+    Object? ban = freezed,
+    Object? removeData = freezed,
+    Object? reason = freezed,
+    Object? expires = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_BanUser(
       userId: userId == freezed ? _value.userId : userId as int,
       ban: ban == freezed ? _value.ban : ban as bool,
       removeData:
           removeData == freezed ? _value.removeData : removeData as bool,
-      reason: reason == freezed ? _value.reason : reason as String,
-      expires: expires == freezed ? _value.expires : expires as int,
+      reason: reason == freezed ? _value.reason : reason as String?,
+      expires: expires == freezed ? _value.expires : expires as int?,
       auth: auth == freezed ? _value.auth : auth as String,
     ));
   }
@@ -1805,17 +1769,13 @@ class __$BanUserCopyWithImpl<$Res> extends _$BanUserCopyWithImpl<$Res>
 /// @nodoc
 class _$_BanUser extends _BanUser {
   const _$_BanUser(
-      {@required this.userId,
-      @required this.ban,
-      @required this.removeData,
+      {required this.userId,
+      required this.ban,
+      required this.removeData,
       this.reason,
       this.expires,
-      @required this.auth})
-      : assert(userId != null),
-        assert(ban != null),
-        assert(removeData != null),
-        assert(auth != null),
-        super._();
+      required this.auth})
+      : super._();
 
   factory _$_BanUser.fromJson(Map<String, dynamic> json) =>
       _$_$_BanUserFromJson(json);
@@ -1827,9 +1787,9 @@ class _$_BanUser extends _BanUser {
   @override
   final bool removeData;
   @override
-  final String reason;
+  final String? reason;
   @override
-  final int expires;
+  final int? expires;
   @override
   final String auth;
 
@@ -1868,6 +1828,7 @@ class _$_BanUser extends _BanUser {
       const DeepCollectionEquality().hash(expires) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$BanUserCopyWith<_BanUser> get copyWith =>
       __$BanUserCopyWithImpl<_BanUser>(this, _$identity);
@@ -1881,29 +1842,31 @@ class _$_BanUser extends _BanUser {
 abstract class _BanUser extends BanUser {
   const _BanUser._() : super._();
   const factory _BanUser(
-      {@required int userId,
-      @required bool ban,
-      @required bool removeData,
-      String reason,
-      int expires,
-      @required String auth}) = _$_BanUser;
+      {required int userId,
+      required bool ban,
+      required bool removeData,
+      String? reason,
+      int? expires,
+      required String auth}) = _$_BanUser;
 
   factory _BanUser.fromJson(Map<String, dynamic> json) = _$_BanUser.fromJson;
 
   @override
-  int get userId;
+  int get userId => throw _privateConstructorUsedError;
   @override
-  bool get ban;
+  bool get ban => throw _privateConstructorUsedError;
   @override
-  bool get removeData;
+  bool get removeData => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  int get expires;
+  int? get expires => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$BanUserCopyWith<_BanUser> get copyWith;
+  @JsonKey(ignore: true)
+  _$BanUserCopyWith<_BanUser> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetReplies _$GetRepliesFromJson(Map<String, dynamic> json) {
@@ -1914,13 +1877,12 @@ GetReplies _$GetRepliesFromJson(Map<String, dynamic> json) {
 class _$GetRepliesTearOff {
   const _$GetRepliesTearOff();
 
-// ignore: unused_element
   _GetReplies call(
-      {@required SortType sort,
-      int page,
-      int limit,
-      @required bool unreadOnly,
-      @required String auth}) {
+      {required SortType sort,
+      int? page,
+      int? limit,
+      required bool unreadOnly,
+      required String auth}) {
     return _GetReplies(
       sort: sort,
       page: page,
@@ -1930,26 +1892,26 @@ class _$GetRepliesTearOff {
     );
   }
 
-// ignore: unused_element
   GetReplies fromJson(Map<String, Object> json) {
     return GetReplies.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetReplies = _$GetRepliesTearOff();
 
 /// @nodoc
 mixin _$GetReplies {
-  SortType get sort;
-  int get page;
-  int get limit;
-  bool get unreadOnly;
-  String get auth;
+  SortType get sort => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  bool get unreadOnly => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GetRepliesCopyWith<GetReplies> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetRepliesCopyWith<GetReplies> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1957,7 +1919,8 @@ abstract class $GetRepliesCopyWith<$Res> {
   factory $GetRepliesCopyWith(
           GetReplies value, $Res Function(GetReplies) then) =
       _$GetRepliesCopyWithImpl<$Res>;
-  $Res call({SortType sort, int page, int limit, bool unreadOnly, String auth});
+  $Res call(
+      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -1970,16 +1933,16 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
 
   @override
   $Res call({
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object unreadOnly = freezed,
-    Object auth = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? unreadOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       unreadOnly:
           unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
       auth: auth == freezed ? _value.auth : auth as String,
@@ -1993,7 +1956,8 @@ abstract class _$GetRepliesCopyWith<$Res> implements $GetRepliesCopyWith<$Res> {
           _GetReplies value, $Res Function(_GetReplies) then) =
       __$GetRepliesCopyWithImpl<$Res>;
   @override
-  $Res call({SortType sort, int page, int limit, bool unreadOnly, String auth});
+  $Res call(
+      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2008,16 +1972,16 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object unreadOnly = freezed,
-    Object auth = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? unreadOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetReplies(
       sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       unreadOnly:
           unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
       auth: auth == freezed ? _value.auth : auth as String,
@@ -2030,15 +1994,12 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetReplies extends _GetReplies {
   const _$_GetReplies(
-      {@required this.sort,
+      {required this.sort,
       this.page,
       this.limit,
-      @required this.unreadOnly,
-      @required this.auth})
-      : assert(sort != null),
-        assert(unreadOnly != null),
-        assert(auth != null),
-        super._();
+      required this.unreadOnly,
+      required this.auth})
+      : super._();
 
   factory _$_GetReplies.fromJson(Map<String, dynamic> json) =>
       _$_$_GetRepliesFromJson(json);
@@ -2046,9 +2007,9 @@ class _$_GetReplies extends _GetReplies {
   @override
   final SortType sort;
   @override
-  final int page;
+  final int? page;
   @override
-  final int limit;
+  final int? limit;
   @override
   final bool unreadOnly;
   @override
@@ -2085,6 +2046,7 @@ class _$_GetReplies extends _GetReplies {
       const DeepCollectionEquality().hash(unreadOnly) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$GetRepliesCopyWith<_GetReplies> get copyWith =>
       __$GetRepliesCopyWithImpl<_GetReplies>(this, _$identity);
@@ -2098,27 +2060,29 @@ class _$_GetReplies extends _GetReplies {
 abstract class _GetReplies extends GetReplies {
   const _GetReplies._() : super._();
   const factory _GetReplies(
-      {@required SortType sort,
-      int page,
-      int limit,
-      @required bool unreadOnly,
-      @required String auth}) = _$_GetReplies;
+      {required SortType sort,
+      int? page,
+      int? limit,
+      required bool unreadOnly,
+      required String auth}) = _$_GetReplies;
 
   factory _GetReplies.fromJson(Map<String, dynamic> json) =
       _$_GetReplies.fromJson;
 
   @override
-  SortType get sort;
+  SortType get sort => throw _privateConstructorUsedError;
   @override
-  int get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  bool get unreadOnly;
+  bool get unreadOnly => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$GetRepliesCopyWith<_GetReplies> get copyWith;
+  @JsonKey(ignore: true)
+  _$GetRepliesCopyWith<_GetReplies> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetUserMentions _$GetUserMentionsFromJson(Map<String, dynamic> json) {
@@ -2129,13 +2093,12 @@ GetUserMentions _$GetUserMentionsFromJson(Map<String, dynamic> json) {
 class _$GetUserMentionsTearOff {
   const _$GetUserMentionsTearOff();
 
-// ignore: unused_element
   _GetUserMentions call(
-      {@required SortType sort,
-      int page,
-      int limit,
-      @required bool unreadOnly,
-      @required String auth}) {
+      {required SortType sort,
+      int? page,
+      int? limit,
+      required bool unreadOnly,
+      required String auth}) {
     return _GetUserMentions(
       sort: sort,
       page: page,
@@ -2145,26 +2108,26 @@ class _$GetUserMentionsTearOff {
     );
   }
 
-// ignore: unused_element
   GetUserMentions fromJson(Map<String, Object> json) {
     return GetUserMentions.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetUserMentions = _$GetUserMentionsTearOff();
 
 /// @nodoc
 mixin _$GetUserMentions {
-  SortType get sort;
-  int get page;
-  int get limit;
-  bool get unreadOnly;
-  String get auth;
+  SortType get sort => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  bool get unreadOnly => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GetUserMentionsCopyWith<GetUserMentions> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetUserMentionsCopyWith<GetUserMentions> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2172,7 +2135,8 @@ abstract class $GetUserMentionsCopyWith<$Res> {
   factory $GetUserMentionsCopyWith(
           GetUserMentions value, $Res Function(GetUserMentions) then) =
       _$GetUserMentionsCopyWithImpl<$Res>;
-  $Res call({SortType sort, int page, int limit, bool unreadOnly, String auth});
+  $Res call(
+      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2186,16 +2150,16 @@ class _$GetUserMentionsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object unreadOnly = freezed,
-    Object auth = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? unreadOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       unreadOnly:
           unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
       auth: auth == freezed ? _value.auth : auth as String,
@@ -2210,7 +2174,8 @@ abstract class _$GetUserMentionsCopyWith<$Res>
           _GetUserMentions value, $Res Function(_GetUserMentions) then) =
       __$GetUserMentionsCopyWithImpl<$Res>;
   @override
-  $Res call({SortType sort, int page, int limit, bool unreadOnly, String auth});
+  $Res call(
+      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2226,16 +2191,16 @@ class __$GetUserMentionsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object unreadOnly = freezed,
-    Object auth = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? unreadOnly = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetUserMentions(
       sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       unreadOnly:
           unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
       auth: auth == freezed ? _value.auth : auth as String,
@@ -2248,15 +2213,12 @@ class __$GetUserMentionsCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetUserMentions extends _GetUserMentions {
   const _$_GetUserMentions(
-      {@required this.sort,
+      {required this.sort,
       this.page,
       this.limit,
-      @required this.unreadOnly,
-      @required this.auth})
-      : assert(sort != null),
-        assert(unreadOnly != null),
-        assert(auth != null),
-        super._();
+      required this.unreadOnly,
+      required this.auth})
+      : super._();
 
   factory _$_GetUserMentions.fromJson(Map<String, dynamic> json) =>
       _$_$_GetUserMentionsFromJson(json);
@@ -2264,9 +2226,9 @@ class _$_GetUserMentions extends _GetUserMentions {
   @override
   final SortType sort;
   @override
-  final int page;
+  final int? page;
   @override
-  final int limit;
+  final int? limit;
   @override
   final bool unreadOnly;
   @override
@@ -2303,6 +2265,7 @@ class _$_GetUserMentions extends _GetUserMentions {
       const DeepCollectionEquality().hash(unreadOnly) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$GetUserMentionsCopyWith<_GetUserMentions> get copyWith =>
       __$GetUserMentionsCopyWithImpl<_GetUserMentions>(this, _$identity);
@@ -2316,27 +2279,29 @@ class _$_GetUserMentions extends _GetUserMentions {
 abstract class _GetUserMentions extends GetUserMentions {
   const _GetUserMentions._() : super._();
   const factory _GetUserMentions(
-      {@required SortType sort,
-      int page,
-      int limit,
-      @required bool unreadOnly,
-      @required String auth}) = _$_GetUserMentions;
+      {required SortType sort,
+      int? page,
+      int? limit,
+      required bool unreadOnly,
+      required String auth}) = _$_GetUserMentions;
 
   factory _GetUserMentions.fromJson(Map<String, dynamic> json) =
       _$_GetUserMentions.fromJson;
 
   @override
-  SortType get sort;
+  SortType get sort => throw _privateConstructorUsedError;
   @override
-  int get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  bool get unreadOnly;
+  bool get unreadOnly => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$GetUserMentionsCopyWith<_GetUserMentions> get copyWith;
+  @JsonKey(ignore: true)
+  _$GetUserMentionsCopyWith<_GetUserMentions> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MarkUserMentionAsRead _$MarkUserMentionAsReadFromJson(
@@ -2348,11 +2313,8 @@ MarkUserMentionAsRead _$MarkUserMentionAsReadFromJson(
 class _$MarkUserMentionAsReadTearOff {
   const _$MarkUserMentionAsReadTearOff();
 
-// ignore: unused_element
   _MarkUserMentionAsRead call(
-      {@required int userMentionId,
-      @required bool read,
-      @required String auth}) {
+      {required int userMentionId, required bool read, required String auth}) {
     return _MarkUserMentionAsRead(
       userMentionId: userMentionId,
       read: read,
@@ -2360,24 +2322,24 @@ class _$MarkUserMentionAsReadTearOff {
     );
   }
 
-// ignore: unused_element
   MarkUserMentionAsRead fromJson(Map<String, Object> json) {
     return MarkUserMentionAsRead.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MarkUserMentionAsRead = _$MarkUserMentionAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkUserMentionAsRead {
-  int get userMentionId;
-  bool get read;
-  String get auth;
+  int get userMentionId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $MarkUserMentionAsReadCopyWith<MarkUserMentionAsRead> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MarkUserMentionAsReadCopyWith<MarkUserMentionAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2399,9 +2361,9 @@ class _$MarkUserMentionAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userMentionId = freezed,
-    Object read = freezed,
-    Object auth = freezed,
+    Object? userMentionId = freezed,
+    Object? read = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       userMentionId: userMentionId == freezed
@@ -2436,9 +2398,9 @@ class __$MarkUserMentionAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userMentionId = freezed,
-    Object read = freezed,
-    Object auth = freezed,
+    Object? userMentionId = freezed,
+    Object? read = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_MarkUserMentionAsRead(
       userMentionId: userMentionId == freezed
@@ -2455,11 +2417,8 @@ class __$MarkUserMentionAsReadCopyWithImpl<$Res>
 /// @nodoc
 class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
   const _$_MarkUserMentionAsRead(
-      {@required this.userMentionId, @required this.read, @required this.auth})
-      : assert(userMentionId != null),
-        assert(read != null),
-        assert(auth != null),
-        super._();
+      {required this.userMentionId, required this.read, required this.auth})
+      : super._();
 
   factory _$_MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =>
       _$_$_MarkUserMentionAsReadFromJson(json);
@@ -2496,6 +2455,7 @@ class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
       const DeepCollectionEquality().hash(read) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$MarkUserMentionAsReadCopyWith<_MarkUserMentionAsRead> get copyWith =>
       __$MarkUserMentionAsReadCopyWithImpl<_MarkUserMentionAsRead>(
@@ -2510,21 +2470,23 @@ class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
 abstract class _MarkUserMentionAsRead extends MarkUserMentionAsRead {
   const _MarkUserMentionAsRead._() : super._();
   const factory _MarkUserMentionAsRead(
-      {@required int userMentionId,
-      @required bool read,
-      @required String auth}) = _$_MarkUserMentionAsRead;
+      {required int userMentionId,
+      required bool read,
+      required String auth}) = _$_MarkUserMentionAsRead;
 
   factory _MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkUserMentionAsRead.fromJson;
 
   @override
-  int get userMentionId;
+  int get userMentionId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$MarkUserMentionAsReadCopyWith<_MarkUserMentionAsRead> get copyWith;
+  @JsonKey(ignore: true)
+  _$MarkUserMentionAsReadCopyWith<_MarkUserMentionAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DeleteAccount _$DeleteAccountFromJson(Map<String, dynamic> json) {
@@ -2535,31 +2497,30 @@ DeleteAccount _$DeleteAccountFromJson(Map<String, dynamic> json) {
 class _$DeleteAccountTearOff {
   const _$DeleteAccountTearOff();
 
-// ignore: unused_element
-  _DeleteAccount call({@required String password, @required String auth}) {
+  _DeleteAccount call({required String password, required String auth}) {
     return _DeleteAccount(
       password: password,
       auth: auth,
     );
   }
 
-// ignore: unused_element
   DeleteAccount fromJson(Map<String, Object> json) {
     return DeleteAccount.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DeleteAccount = _$DeleteAccountTearOff();
 
 /// @nodoc
 mixin _$DeleteAccount {
-  String get password;
-  String get auth;
+  String get password => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DeleteAccountCopyWith<DeleteAccount> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeleteAccountCopyWith<DeleteAccount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2581,8 +2542,8 @@ class _$DeleteAccountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object password = freezed,
-    Object auth = freezed,
+    Object? password = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       password: password == freezed ? _value.password : password as String,
@@ -2614,8 +2575,8 @@ class __$DeleteAccountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object password = freezed,
-    Object auth = freezed,
+    Object? password = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_DeleteAccount(
       password: password == freezed ? _value.password : password as String,
@@ -2628,10 +2589,8 @@ class __$DeleteAccountCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DeleteAccount extends _DeleteAccount {
-  const _$_DeleteAccount({@required this.password, @required this.auth})
-      : assert(password != null),
-        assert(auth != null),
-        super._();
+  const _$_DeleteAccount({required this.password, required this.auth})
+      : super._();
 
   factory _$_DeleteAccount.fromJson(Map<String, dynamic> json) =>
       _$_$_DeleteAccountFromJson(json);
@@ -2663,6 +2622,7 @@ class _$_DeleteAccount extends _DeleteAccount {
       const DeepCollectionEquality().hash(password) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$DeleteAccountCopyWith<_DeleteAccount> get copyWith =>
       __$DeleteAccountCopyWithImpl<_DeleteAccount>(this, _$identity);
@@ -2676,17 +2636,19 @@ class _$_DeleteAccount extends _DeleteAccount {
 abstract class _DeleteAccount extends DeleteAccount {
   const _DeleteAccount._() : super._();
   const factory _DeleteAccount(
-      {@required String password, @required String auth}) = _$_DeleteAccount;
+      {required String password, required String auth}) = _$_DeleteAccount;
 
   factory _DeleteAccount.fromJson(Map<String, dynamic> json) =
       _$_DeleteAccount.fromJson;
 
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$DeleteAccountCopyWith<_DeleteAccount> get copyWith;
+  @JsonKey(ignore: true)
+  _$DeleteAccountCopyWith<_DeleteAccount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PasswordReset _$PasswordResetFromJson(Map<String, dynamic> json) {
@@ -2697,29 +2659,28 @@ PasswordReset _$PasswordResetFromJson(Map<String, dynamic> json) {
 class _$PasswordResetTearOff {
   const _$PasswordResetTearOff();
 
-// ignore: unused_element
-  _PasswordReset call({@required String email}) {
+  _PasswordReset call({required String email}) {
     return _PasswordReset(
       email: email,
     );
   }
 
-// ignore: unused_element
   PasswordReset fromJson(Map<String, Object> json) {
     return PasswordReset.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PasswordReset = _$PasswordResetTearOff();
 
 /// @nodoc
 mixin _$PasswordReset {
-  String get email;
+  String get email => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PasswordResetCopyWith<PasswordReset> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PasswordResetCopyWith<PasswordReset> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2741,7 +2702,7 @@ class _$PasswordResetCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object email = freezed,
+    Object? email = freezed,
   }) {
     return _then(_value.copyWith(
       email: email == freezed ? _value.email : email as String,
@@ -2772,7 +2733,7 @@ class __$PasswordResetCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object email = freezed,
+    Object? email = freezed,
   }) {
     return _then(_PasswordReset(
       email: email == freezed ? _value.email : email as String,
@@ -2784,9 +2745,7 @@ class __$PasswordResetCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PasswordReset extends _PasswordReset {
-  const _$_PasswordReset({@required this.email})
-      : assert(email != null),
-        super._();
+  const _$_PasswordReset({required this.email}) : super._();
 
   factory _$_PasswordReset.fromJson(Map<String, dynamic> json) =>
       _$_$_PasswordResetFromJson(json);
@@ -2811,6 +2770,7 @@ class _$_PasswordReset extends _PasswordReset {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(email);
 
+  @JsonKey(ignore: true)
   @override
   _$PasswordResetCopyWith<_PasswordReset> get copyWith =>
       __$PasswordResetCopyWithImpl<_PasswordReset>(this, _$identity);
@@ -2823,15 +2783,17 @@ class _$_PasswordReset extends _PasswordReset {
 
 abstract class _PasswordReset extends PasswordReset {
   const _PasswordReset._() : super._();
-  const factory _PasswordReset({@required String email}) = _$_PasswordReset;
+  const factory _PasswordReset({required String email}) = _$_PasswordReset;
 
   factory _PasswordReset.fromJson(Map<String, dynamic> json) =
       _$_PasswordReset.fromJson;
 
   @override
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @override
-  _$PasswordResetCopyWith<_PasswordReset> get copyWith;
+  @JsonKey(ignore: true)
+  _$PasswordResetCopyWith<_PasswordReset> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PasswordChange _$PasswordChangeFromJson(Map<String, dynamic> json) {
@@ -2842,11 +2804,10 @@ PasswordChange _$PasswordChangeFromJson(Map<String, dynamic> json) {
 class _$PasswordChangeTearOff {
   const _$PasswordChangeTearOff();
 
-// ignore: unused_element
   _PasswordChange call(
-      {@required String token,
-      @required String password,
-      @required String passwordVerify}) {
+      {required String token,
+      required String password,
+      required String passwordVerify}) {
     return _PasswordChange(
       token: token,
       password: password,
@@ -2854,24 +2815,24 @@ class _$PasswordChangeTearOff {
     );
   }
 
-// ignore: unused_element
   PasswordChange fromJson(Map<String, Object> json) {
     return PasswordChange.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PasswordChange = _$PasswordChangeTearOff();
 
 /// @nodoc
 mixin _$PasswordChange {
-  String get token;
-  String get password;
-  String get passwordVerify;
+  String get token => throw _privateConstructorUsedError;
+  String get password => throw _privateConstructorUsedError;
+  String get passwordVerify => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PasswordChangeCopyWith<PasswordChange> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PasswordChangeCopyWith<PasswordChange> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2893,9 +2854,9 @@ class _$PasswordChangeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object token = freezed,
-    Object password = freezed,
-    Object passwordVerify = freezed,
+    Object? token = freezed,
+    Object? password = freezed,
+    Object? passwordVerify = freezed,
   }) {
     return _then(_value.copyWith(
       token: token == freezed ? _value.token : token as String,
@@ -2930,9 +2891,9 @@ class __$PasswordChangeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object token = freezed,
-    Object password = freezed,
-    Object passwordVerify = freezed,
+    Object? token = freezed,
+    Object? password = freezed,
+    Object? passwordVerify = freezed,
   }) {
     return _then(_PasswordChange(
       token: token == freezed ? _value.token : token as String,
@@ -2949,13 +2910,10 @@ class __$PasswordChangeCopyWithImpl<$Res>
 /// @nodoc
 class _$_PasswordChange extends _PasswordChange {
   const _$_PasswordChange(
-      {@required this.token,
-      @required this.password,
-      @required this.passwordVerify})
-      : assert(token != null),
-        assert(password != null),
-        assert(passwordVerify != null),
-        super._();
+      {required this.token,
+      required this.password,
+      required this.passwordVerify})
+      : super._();
 
   factory _$_PasswordChange.fromJson(Map<String, dynamic> json) =>
       _$_$_PasswordChangeFromJson(json);
@@ -2993,6 +2951,7 @@ class _$_PasswordChange extends _PasswordChange {
       const DeepCollectionEquality().hash(password) ^
       const DeepCollectionEquality().hash(passwordVerify);
 
+  @JsonKey(ignore: true)
   @override
   _$PasswordChangeCopyWith<_PasswordChange> get copyWith =>
       __$PasswordChangeCopyWithImpl<_PasswordChange>(this, _$identity);
@@ -3006,21 +2965,23 @@ class _$_PasswordChange extends _PasswordChange {
 abstract class _PasswordChange extends PasswordChange {
   const _PasswordChange._() : super._();
   const factory _PasswordChange(
-      {@required String token,
-      @required String password,
-      @required String passwordVerify}) = _$_PasswordChange;
+      {required String token,
+      required String password,
+      required String passwordVerify}) = _$_PasswordChange;
 
   factory _PasswordChange.fromJson(Map<String, dynamic> json) =
       _$_PasswordChange.fromJson;
 
   @override
-  String get token;
+  String get token => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  String get passwordVerify;
+  String get passwordVerify => throw _privateConstructorUsedError;
   @override
-  _$PasswordChangeCopyWith<_PasswordChange> get copyWith;
+  @JsonKey(ignore: true)
+  _$PasswordChangeCopyWith<_PasswordChange> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CreatePrivateMessage _$CreatePrivateMessageFromJson(Map<String, dynamic> json) {
@@ -3031,11 +2992,10 @@ CreatePrivateMessage _$CreatePrivateMessageFromJson(Map<String, dynamic> json) {
 class _$CreatePrivateMessageTearOff {
   const _$CreatePrivateMessageTearOff();
 
-// ignore: unused_element
   _CreatePrivateMessage call(
-      {@required String content,
-      @required int recipientId,
-      @required String auth}) {
+      {required String content,
+      required int recipientId,
+      required String auth}) {
     return _CreatePrivateMessage(
       content: content,
       recipientId: recipientId,
@@ -3043,24 +3003,24 @@ class _$CreatePrivateMessageTearOff {
     );
   }
 
-// ignore: unused_element
   CreatePrivateMessage fromJson(Map<String, Object> json) {
     return CreatePrivateMessage.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CreatePrivateMessage = _$CreatePrivateMessageTearOff();
 
 /// @nodoc
 mixin _$CreatePrivateMessage {
-  String get content;
-  int get recipientId;
-  String get auth;
+  String get content => throw _privateConstructorUsedError;
+  int get recipientId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CreatePrivateMessageCopyWith<CreatePrivateMessage> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreatePrivateMessageCopyWith<CreatePrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3082,9 +3042,9 @@ class _$CreatePrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object content = freezed,
-    Object recipientId = freezed,
-    Object auth = freezed,
+    Object? content = freezed,
+    Object? recipientId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       content: content == freezed ? _value.content : content as String,
@@ -3118,9 +3078,9 @@ class __$CreatePrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object content = freezed,
-    Object recipientId = freezed,
-    Object auth = freezed,
+    Object? content = freezed,
+    Object? recipientId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_CreatePrivateMessage(
       content: content == freezed ? _value.content : content as String,
@@ -3136,11 +3096,8 @@ class __$CreatePrivateMessageCopyWithImpl<$Res>
 /// @nodoc
 class _$_CreatePrivateMessage extends _CreatePrivateMessage {
   const _$_CreatePrivateMessage(
-      {@required this.content, @required this.recipientId, @required this.auth})
-      : assert(content != null),
-        assert(recipientId != null),
-        assert(auth != null),
-        super._();
+      {required this.content, required this.recipientId, required this.auth})
+      : super._();
 
   factory _$_CreatePrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$_$_CreatePrivateMessageFromJson(json);
@@ -3178,6 +3135,7 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
       const DeepCollectionEquality().hash(recipientId) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith =>
       __$CreatePrivateMessageCopyWithImpl<_CreatePrivateMessage>(
@@ -3192,21 +3150,23 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
 abstract class _CreatePrivateMessage extends CreatePrivateMessage {
   const _CreatePrivateMessage._() : super._();
   const factory _CreatePrivateMessage(
-      {@required String content,
-      @required int recipientId,
-      @required String auth}) = _$_CreatePrivateMessage;
+      {required String content,
+      required int recipientId,
+      required String auth}) = _$_CreatePrivateMessage;
 
   factory _CreatePrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_CreatePrivateMessage.fromJson;
 
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  int get recipientId;
+  int get recipientId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith;
+  @JsonKey(ignore: true)
+  _$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EditPrivateMessage _$EditPrivateMessageFromJson(Map<String, dynamic> json) {
@@ -3217,11 +3177,10 @@ EditPrivateMessage _$EditPrivateMessageFromJson(Map<String, dynamic> json) {
 class _$EditPrivateMessageTearOff {
   const _$EditPrivateMessageTearOff();
 
-// ignore: unused_element
   _EditPrivateMessage call(
-      {@required int privateMessageId,
-      @required String content,
-      @required String auth}) {
+      {required int privateMessageId,
+      required String content,
+      required String auth}) {
     return _EditPrivateMessage(
       privateMessageId: privateMessageId,
       content: content,
@@ -3229,24 +3188,24 @@ class _$EditPrivateMessageTearOff {
     );
   }
 
-// ignore: unused_element
   EditPrivateMessage fromJson(Map<String, Object> json) {
     return EditPrivateMessage.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $EditPrivateMessage = _$EditPrivateMessageTearOff();
 
 /// @nodoc
 mixin _$EditPrivateMessage {
-  int get privateMessageId;
-  String get content;
-  String get auth;
+  int get privateMessageId => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $EditPrivateMessageCopyWith<EditPrivateMessage> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EditPrivateMessageCopyWith<EditPrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3268,9 +3227,9 @@ class _$EditPrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessageId = freezed,
-    Object content = freezed,
-    Object auth = freezed,
+    Object? privateMessageId = freezed,
+    Object? content = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       privateMessageId: privateMessageId == freezed
@@ -3305,9 +3264,9 @@ class __$EditPrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessageId = freezed,
-    Object content = freezed,
-    Object auth = freezed,
+    Object? privateMessageId = freezed,
+    Object? content = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_EditPrivateMessage(
       privateMessageId: privateMessageId == freezed
@@ -3324,13 +3283,10 @@ class __$EditPrivateMessageCopyWithImpl<$Res>
 /// @nodoc
 class _$_EditPrivateMessage extends _EditPrivateMessage {
   const _$_EditPrivateMessage(
-      {@required this.privateMessageId,
-      @required this.content,
-      @required this.auth})
-      : assert(privateMessageId != null),
-        assert(content != null),
-        assert(auth != null),
-        super._();
+      {required this.privateMessageId,
+      required this.content,
+      required this.auth})
+      : super._();
 
   factory _$_EditPrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$_$_EditPrivateMessageFromJson(json);
@@ -3368,6 +3324,7 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
       const DeepCollectionEquality().hash(content) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith =>
       __$EditPrivateMessageCopyWithImpl<_EditPrivateMessage>(this, _$identity);
@@ -3381,21 +3338,23 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
 abstract class _EditPrivateMessage extends EditPrivateMessage {
   const _EditPrivateMessage._() : super._();
   const factory _EditPrivateMessage(
-      {@required int privateMessageId,
-      @required String content,
-      @required String auth}) = _$_EditPrivateMessage;
+      {required int privateMessageId,
+      required String content,
+      required String auth}) = _$_EditPrivateMessage;
 
   factory _EditPrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_EditPrivateMessage.fromJson;
 
   @override
-  int get privateMessageId;
+  int get privateMessageId => throw _privateConstructorUsedError;
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith;
+  @JsonKey(ignore: true)
+  _$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DeletePrivateMessage _$DeletePrivateMessageFromJson(Map<String, dynamic> json) {
@@ -3406,11 +3365,10 @@ DeletePrivateMessage _$DeletePrivateMessageFromJson(Map<String, dynamic> json) {
 class _$DeletePrivateMessageTearOff {
   const _$DeletePrivateMessageTearOff();
 
-// ignore: unused_element
   _DeletePrivateMessage call(
-      {@required int privateMessageId,
-      @required bool deleted,
-      @required String auth}) {
+      {required int privateMessageId,
+      required bool deleted,
+      required String auth}) {
     return _DeletePrivateMessage(
       privateMessageId: privateMessageId,
       deleted: deleted,
@@ -3418,24 +3376,24 @@ class _$DeletePrivateMessageTearOff {
     );
   }
 
-// ignore: unused_element
   DeletePrivateMessage fromJson(Map<String, Object> json) {
     return DeletePrivateMessage.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DeletePrivateMessage = _$DeletePrivateMessageTearOff();
 
 /// @nodoc
 mixin _$DeletePrivateMessage {
-  int get privateMessageId;
-  bool get deleted;
-  String get auth;
+  int get privateMessageId => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DeletePrivateMessageCopyWith<DeletePrivateMessage> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeletePrivateMessageCopyWith<DeletePrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3457,9 +3415,9 @@ class _$DeletePrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessageId = freezed,
-    Object deleted = freezed,
-    Object auth = freezed,
+    Object? privateMessageId = freezed,
+    Object? deleted = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       privateMessageId: privateMessageId == freezed
@@ -3494,9 +3452,9 @@ class __$DeletePrivateMessageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessageId = freezed,
-    Object deleted = freezed,
-    Object auth = freezed,
+    Object? privateMessageId = freezed,
+    Object? deleted = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_DeletePrivateMessage(
       privateMessageId: privateMessageId == freezed
@@ -3513,13 +3471,10 @@ class __$DeletePrivateMessageCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeletePrivateMessage extends _DeletePrivateMessage {
   const _$_DeletePrivateMessage(
-      {@required this.privateMessageId,
-      @required this.deleted,
-      @required this.auth})
-      : assert(privateMessageId != null),
-        assert(deleted != null),
-        assert(auth != null),
-        super._();
+      {required this.privateMessageId,
+      required this.deleted,
+      required this.auth})
+      : super._();
 
   factory _$_DeletePrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$_$_DeletePrivateMessageFromJson(json);
@@ -3557,6 +3512,7 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
       const DeepCollectionEquality().hash(deleted) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith =>
       __$DeletePrivateMessageCopyWithImpl<_DeletePrivateMessage>(
@@ -3571,21 +3527,23 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
 abstract class _DeletePrivateMessage extends DeletePrivateMessage {
   const _DeletePrivateMessage._() : super._();
   const factory _DeletePrivateMessage(
-      {@required int privateMessageId,
-      @required bool deleted,
-      @required String auth}) = _$_DeletePrivateMessage;
+      {required int privateMessageId,
+      required bool deleted,
+      required String auth}) = _$_DeletePrivateMessage;
 
   factory _DeletePrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_DeletePrivateMessage.fromJson;
 
   @override
-  int get privateMessageId;
+  int get privateMessageId => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith;
+  @JsonKey(ignore: true)
+  _$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MarkPrivateMessageAsRead _$MarkPrivateMessageAsReadFromJson(
@@ -3597,11 +3555,10 @@ MarkPrivateMessageAsRead _$MarkPrivateMessageAsReadFromJson(
 class _$MarkPrivateMessageAsReadTearOff {
   const _$MarkPrivateMessageAsReadTearOff();
 
-// ignore: unused_element
   _MarkPrivateMessageAsRead call(
-      {@required int privateMessageId,
-      @required bool read,
-      @required String auth}) {
+      {required int privateMessageId,
+      required bool read,
+      required String auth}) {
     return _MarkPrivateMessageAsRead(
       privateMessageId: privateMessageId,
       read: read,
@@ -3609,24 +3566,24 @@ class _$MarkPrivateMessageAsReadTearOff {
     );
   }
 
-// ignore: unused_element
   MarkPrivateMessageAsRead fromJson(Map<String, Object> json) {
     return MarkPrivateMessageAsRead.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MarkPrivateMessageAsRead = _$MarkPrivateMessageAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkPrivateMessageAsRead {
-  int get privateMessageId;
-  bool get read;
-  String get auth;
+  int get privateMessageId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $MarkPrivateMessageAsReadCopyWith<MarkPrivateMessageAsRead> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MarkPrivateMessageAsReadCopyWith<MarkPrivateMessageAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3648,9 +3605,9 @@ class _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessageId = freezed,
-    Object read = freezed,
-    Object auth = freezed,
+    Object? privateMessageId = freezed,
+    Object? read = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       privateMessageId: privateMessageId == freezed
@@ -3686,9 +3643,9 @@ class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessageId = freezed,
-    Object read = freezed,
-    Object auth = freezed,
+    Object? privateMessageId = freezed,
+    Object? read = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_MarkPrivateMessageAsRead(
       privateMessageId: privateMessageId == freezed
@@ -3705,13 +3662,8 @@ class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
 /// @nodoc
 class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
   const _$_MarkPrivateMessageAsRead(
-      {@required this.privateMessageId,
-      @required this.read,
-      @required this.auth})
-      : assert(privateMessageId != null),
-        assert(read != null),
-        assert(auth != null),
-        super._();
+      {required this.privateMessageId, required this.read, required this.auth})
+      : super._();
 
   factory _$_MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =>
       _$_$_MarkPrivateMessageAsReadFromJson(json);
@@ -3748,6 +3700,7 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
       const DeepCollectionEquality().hash(read) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith =>
       __$MarkPrivateMessageAsReadCopyWithImpl<_MarkPrivateMessageAsRead>(
@@ -3762,21 +3715,23 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
 abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
   const _MarkPrivateMessageAsRead._() : super._();
   const factory _MarkPrivateMessageAsRead(
-      {@required int privateMessageId,
-      @required bool read,
-      @required String auth}) = _$_MarkPrivateMessageAsRead;
+      {required int privateMessageId,
+      required bool read,
+      required String auth}) = _$_MarkPrivateMessageAsRead;
 
   factory _MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkPrivateMessageAsRead.fromJson;
 
   @override
-  int get privateMessageId;
+  int get privateMessageId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith;
+  @JsonKey(ignore: true)
+  _$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
@@ -3787,9 +3742,8 @@ GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
 class _$GetPrivateMessagesTearOff {
   const _$GetPrivateMessagesTearOff();
 
-// ignore: unused_element
   _GetPrivateMessages call(
-      {@required bool unreadOnly, int page, int limit, @required String auth}) {
+      {required bool unreadOnly, int? page, int? limit, required String auth}) {
     return _GetPrivateMessages(
       unreadOnly: unreadOnly,
       page: page,
@@ -3798,25 +3752,25 @@ class _$GetPrivateMessagesTearOff {
     );
   }
 
-// ignore: unused_element
   GetPrivateMessages fromJson(Map<String, Object> json) {
     return GetPrivateMessages.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetPrivateMessages = _$GetPrivateMessagesTearOff();
 
 /// @nodoc
 mixin _$GetPrivateMessages {
-  bool get unreadOnly;
-  int get page;
-  int get limit;
-  String get auth;
+  bool get unreadOnly => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GetPrivateMessagesCopyWith<GetPrivateMessages> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetPrivateMessagesCopyWith<GetPrivateMessages> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3824,7 +3778,7 @@ abstract class $GetPrivateMessagesCopyWith<$Res> {
   factory $GetPrivateMessagesCopyWith(
           GetPrivateMessages value, $Res Function(GetPrivateMessages) then) =
       _$GetPrivateMessagesCopyWithImpl<$Res>;
-  $Res call({bool unreadOnly, int page, int limit, String auth});
+  $Res call({bool unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
@@ -3838,16 +3792,16 @@ class _$GetPrivateMessagesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object unreadOnly = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object auth = freezed,
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       unreadOnly:
           unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       auth: auth == freezed ? _value.auth : auth as String,
     ));
   }
@@ -3860,7 +3814,7 @@ abstract class _$GetPrivateMessagesCopyWith<$Res>
           _GetPrivateMessages value, $Res Function(_GetPrivateMessages) then) =
       __$GetPrivateMessagesCopyWithImpl<$Res>;
   @override
-  $Res call({bool unreadOnly, int page, int limit, String auth});
+  $Res call({bool unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
@@ -3876,16 +3830,16 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object unreadOnly = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object auth = freezed,
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetPrivateMessages(
       unreadOnly:
           unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
+      page: page == freezed ? _value.page : page as int?,
+      limit: limit == freezed ? _value.limit : limit as int?,
       auth: auth == freezed ? _value.auth : auth as String,
     ));
   }
@@ -3896,10 +3850,8 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetPrivateMessages extends _GetPrivateMessages {
   const _$_GetPrivateMessages(
-      {@required this.unreadOnly, this.page, this.limit, @required this.auth})
-      : assert(unreadOnly != null),
-        assert(auth != null),
-        super._();
+      {required this.unreadOnly, this.page, this.limit, required this.auth})
+      : super._();
 
   factory _$_GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
       _$_$_GetPrivateMessagesFromJson(json);
@@ -3907,9 +3859,9 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
   @override
   final bool unreadOnly;
   @override
-  final int page;
+  final int? page;
   @override
-  final int limit;
+  final int? limit;
   @override
   final String auth;
 
@@ -3941,6 +3893,7 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
       const DeepCollectionEquality().hash(limit) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith =>
       __$GetPrivateMessagesCopyWithImpl<_GetPrivateMessages>(this, _$identity);
@@ -3954,24 +3907,26 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 abstract class _GetPrivateMessages extends GetPrivateMessages {
   const _GetPrivateMessages._() : super._();
   const factory _GetPrivateMessages(
-      {@required bool unreadOnly,
-      int page,
-      int limit,
-      @required String auth}) = _$_GetPrivateMessages;
+      {required bool unreadOnly,
+      int? page,
+      int? limit,
+      required String auth}) = _$_GetPrivateMessages;
 
   factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) =
       _$_GetPrivateMessages.fromJson;
 
   @override
-  bool get unreadOnly;
+  bool get unreadOnly => throw _privateConstructorUsedError;
   @override
-  int get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith;
+  @JsonKey(ignore: true)
+  _$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
@@ -3982,31 +3937,30 @@ GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
 class _$GetReportCountTearOff {
   const _$GetReportCountTearOff();
 
-// ignore: unused_element
-  _GetReportCount call({int community, @required String auth}) {
+  _GetReportCount call({int? community, required String auth}) {
     return _GetReportCount(
       community: community,
       auth: auth,
     );
   }
 
-// ignore: unused_element
   GetReportCount fromJson(Map<String, Object> json) {
     return GetReportCount.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetReportCount = _$GetReportCountTearOff();
 
 /// @nodoc
 mixin _$GetReportCount {
-  int get community;
-  String get auth;
+  int? get community => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GetReportCountCopyWith<GetReportCount> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetReportCountCopyWith<GetReportCount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4014,7 +3968,7 @@ abstract class $GetReportCountCopyWith<$Res> {
   factory $GetReportCountCopyWith(
           GetReportCount value, $Res Function(GetReportCount) then) =
       _$GetReportCountCopyWithImpl<$Res>;
-  $Res call({int community, String auth});
+  $Res call({int? community, String auth});
 }
 
 /// @nodoc
@@ -4028,11 +3982,11 @@ class _$GetReportCountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object auth = freezed,
+    Object? community = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      community: community == freezed ? _value.community : community as int,
+      community: community == freezed ? _value.community : community as int?,
       auth: auth == freezed ? _value.auth : auth as String,
     ));
   }
@@ -4045,7 +3999,7 @@ abstract class _$GetReportCountCopyWith<$Res>
           _GetReportCount value, $Res Function(_GetReportCount) then) =
       __$GetReportCountCopyWithImpl<$Res>;
   @override
-  $Res call({int community, String auth});
+  $Res call({int? community, String auth});
 }
 
 /// @nodoc
@@ -4061,11 +4015,11 @@ class __$GetReportCountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object auth = freezed,
+    Object? community = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetReportCount(
-      community: community == freezed ? _value.community : community as int,
+      community: community == freezed ? _value.community : community as int?,
       auth: auth == freezed ? _value.auth : auth as String,
     ));
   }
@@ -4075,15 +4029,13 @@ class __$GetReportCountCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetReportCount extends _GetReportCount {
-  const _$_GetReportCount({this.community, @required this.auth})
-      : assert(auth != null),
-        super._();
+  const _$_GetReportCount({this.community, required this.auth}) : super._();
 
   factory _$_GetReportCount.fromJson(Map<String, dynamic> json) =>
       _$_$_GetReportCountFromJson(json);
 
   @override
-  final int community;
+  final int? community;
   @override
   final String auth;
 
@@ -4109,6 +4061,7 @@ class _$_GetReportCount extends _GetReportCount {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
       __$GetReportCountCopyWithImpl<_GetReportCount>(this, _$identity);
@@ -4121,16 +4074,18 @@ class _$_GetReportCount extends _GetReportCount {
 
 abstract class _GetReportCount extends GetReportCount {
   const _GetReportCount._() : super._();
-  const factory _GetReportCount({int community, @required String auth}) =
+  const factory _GetReportCount({int? community, required String auth}) =
       _$_GetReportCount;
 
   factory _GetReportCount.fromJson(Map<String, dynamic> json) =
       _$_GetReportCount.fromJson;
 
   @override
-  int get community;
+  int? get community => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$GetReportCountCopyWith<_GetReportCount> get copyWith;
+  @JsonKey(ignore: true)
+  _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
+      throw _privateConstructorUsedError;
 }

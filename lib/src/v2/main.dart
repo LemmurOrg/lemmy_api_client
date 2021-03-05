@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
 import 'package:web_socket_channel/status.dart' as status;
 import 'package:web_socket_channel/web_socket_channel.dart';
 
@@ -124,47 +123,35 @@ class LemmyApiV2 {
   /// Receives community actions.
   /// When `communityId` is 0, front page is listened
   StreamController<WsEvent> communityJoin({
-    @required int communityId,
-  }) {
-    assert(communityId != null);
-
-    return _persistantStream('CommunityJoin', {
-      'community_id': communityId,
-    });
-  }
+    required int communityId,
+  }) =>
+      _persistantStream('CommunityJoin', {
+        'community_id': communityId,
+      });
 
   /// Receives replies, private messages, etc.
   StreamController<WsEvent> userJoin({
-    @required String auth,
-  }) {
-    assert(auth != null);
-
-    return _persistantStream('UserJoin', {
-      'auth': auth,
-    });
-  }
+    required String auth,
+  }) =>
+      _persistantStream('UserJoin', {
+        'auth': auth,
+      });
 
   /// Receives new comments on a post
   StreamController<WsEvent> postJoin({
-    @required int postId,
-  }) {
-    assert(postId != null);
-
-    return _persistantStream('PostJoin', {
-      'post_id': postId,
-    });
-  }
+    required int postId,
+  }) =>
+      _persistantStream('PostJoin', {
+        'post_id': postId,
+      });
 
   /// Receives community moderator updates like reports
   StreamController<WsEvent> modJoin({
-    @required int communityId,
-  }) {
-    assert(communityId != null);
-
-    return _persistantStream('ModJoin', {
-      'community_id': communityId,
-    });
-  }
+    required int communityId,
+  }) =>
+      _persistantStream('ModJoin', {
+        'community_id': communityId,
+      });
 }
 
 /// Deeply augments the whole json with `instance_host`.
