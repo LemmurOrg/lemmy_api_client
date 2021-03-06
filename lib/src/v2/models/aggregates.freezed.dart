@@ -765,6 +765,7 @@ class __$PostAggregatesCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc

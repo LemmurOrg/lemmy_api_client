@@ -227,6 +227,7 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -735,6 +736,7 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -1204,6 +1206,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -1537,6 +1540,7 @@ class __$PrivateMessageCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -1880,6 +1884,7 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -2299,6 +2304,7 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -2648,6 +2654,7 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -2877,6 +2884,7 @@ class __$ModRemovePostCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -3114,6 +3122,7 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -3343,6 +3352,7 @@ class __$ModStickyPostCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -3582,6 +3592,7 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -3842,6 +3853,7 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -4123,6 +4135,7 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -4396,6 +4409,7 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -4656,6 +4670,7 @@ class __$ModAddCommunityCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -4892,6 +4907,7 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -5214,6 +5230,7 @@ class __$CommunitySafeCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -5581,6 +5598,7 @@ class __$CommentReportCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -5906,6 +5924,7 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -6161,6 +6180,7 @@ class __$CategoryCopyWithImpl<$Res> extends _$CategoryCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
@@ -6347,6 +6367,7 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc

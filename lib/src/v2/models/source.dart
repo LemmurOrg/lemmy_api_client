@@ -11,6 +11,7 @@ part 'source.g.dart';
 @freezed
 class UserSafe extends WithInstanceHost with _$UserSafe {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafe({
     required int id,
@@ -37,6 +38,7 @@ class UserSafe extends WithInstanceHost with _$UserSafe {
 @freezed
 class UserSafeSettings extends WithInstanceHost with _$UserSafeSettings {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserSafeSettings({
     required int id,
@@ -74,6 +76,7 @@ class UserSafeSettings extends WithInstanceHost with _$UserSafeSettings {
 @freezed
 class Site extends WithInstanceHost with _$Site {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Site({
     required int id,
@@ -96,6 +99,7 @@ class Site extends WithInstanceHost with _$Site {
 @freezed
 class PrivateMessage extends WithInstanceHost with _$PrivateMessage {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessage({
     required int id,
@@ -118,6 +122,7 @@ class PrivateMessage extends WithInstanceHost with _$PrivateMessage {
 @freezed
 class PostReport extends WithInstanceHost with _$PostReport {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReport({
     required int id,
@@ -141,6 +146,7 @@ class PostReport extends WithInstanceHost with _$PostReport {
 @freezed
 class Post extends WithInstanceHost with _$Post {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Post({
     required int id,
@@ -172,6 +178,7 @@ class Post extends WithInstanceHost with _$Post {
 class PasswordResetRequest extends WithInstanceHost
     with _$PasswordResetRequest {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PasswordResetRequest({
     required int id,
@@ -188,6 +195,7 @@ class PasswordResetRequest extends WithInstanceHost
 @freezed
 class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePost({
     required int id,
@@ -206,6 +214,7 @@ class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
 @freezed
 class ModLockPost extends WithInstanceHost with _$ModLockPost {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPost({
     required int id,
@@ -223,6 +232,7 @@ class ModLockPost extends WithInstanceHost with _$ModLockPost {
 @freezed
 class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPost({
     required int id,
@@ -240,6 +250,7 @@ class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
 @freezed
 class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveComment({
     required int id,
@@ -258,6 +269,7 @@ class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
 @freezed
 class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunity({
     required int id,
@@ -277,6 +289,7 @@ class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
 @freezed
 class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunity({
     required int id,
@@ -297,6 +310,7 @@ class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
 @freezed
 class ModBan extends WithInstanceHost with _$ModBan {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBan({
     required int id,
@@ -315,6 +329,7 @@ class ModBan extends WithInstanceHost with _$ModBan {
 @freezed
 class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunity({
     required int id,
@@ -333,6 +348,7 @@ class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
 @freezed
 class ModAdd extends WithInstanceHost with _$ModAdd {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAdd({
     required int id,
@@ -349,6 +365,7 @@ class ModAdd extends WithInstanceHost with _$ModAdd {
 @freezed
 class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunitySafe({
     required int id,
@@ -376,6 +393,7 @@ class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
 @freezed
 class CommentReport extends WithInstanceHost with _$CommentReport {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReport({
     required int id,
@@ -397,6 +415,7 @@ class CommentReport extends WithInstanceHost with _$CommentReport {
 @freezed
 class Comment extends WithInstanceHost with _$Comment {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Comment({
     required int id,
@@ -421,6 +440,7 @@ class Comment extends WithInstanceHost with _$Comment {
 @freezed
 class Category extends WithInstanceHost with _$Category {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Category({
     required int id,
@@ -435,6 +455,7 @@ class Category extends WithInstanceHost with _$Category {
 @freezed
 class UserMention extends WithInstanceHost with _$UserMention {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory UserMention({
     required int id,

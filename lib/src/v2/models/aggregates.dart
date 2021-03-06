@@ -47,6 +47,7 @@ class SiteAggregates with _$SiteAggregates {
 @freezed
 class PostAggregates with _$PostAggregates {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory PostAggregates({
     required int id,
