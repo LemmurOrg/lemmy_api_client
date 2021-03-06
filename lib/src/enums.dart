@@ -1,4 +1,4 @@
-import 'package:lemmy_api_client/pictrs.dart';
+import 'exceptions.dart';
 
 class VoteType {
   final int _value;

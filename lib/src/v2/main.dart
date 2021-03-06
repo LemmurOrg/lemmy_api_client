@@ -72,7 +72,7 @@ class LemmyApiV2 {
     String op,
     Map<String, dynamic> data,
   ) {
-    WebSocketChannel ws;
+    late WebSocketChannel ws;
 
     var isDone = false;
     final controller = StreamController<WsEvent>(
@@ -102,8 +102,9 @@ class LemmyApiV2 {
           // the connection was successful
           if (message['op'] == op) return;
 
-          if (wsDeserializer.containsKey(message['op'])) {
-            final data = wsDeserializer[message['op']](message['data']);
+          final deser = wsDeserializer[message['op']];
+          if (deser != null) {
+            final data = deser(message['data']);
             controller.add(data);
             return;
           }
@@ -162,11 +163,11 @@ void _augmentInstanceHost(String instanceHost, Map<String, dynamic> json) {
   json['instance_host'] = instanceHost;
 
   for (final value in json.values) {
-    if (value is Map) {
+    if (value is Map<String, dynamic>) {
       _augmentInstanceHost(instanceHost, value);
     } else if (value is List) {
       for (final subvalue in value) {
-        if (subvalue is Map) {
+        if (subvalue is Map<String, dynamic>) {
           _augmentInstanceHost(instanceHost, subvalue);
         }
       }
