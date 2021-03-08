@@ -9,7 +9,6 @@ environment:
 dependencies:
   json_annotation: ^4.0.0
   http: ^0.13.0
-  meta: ^1.3.0
   freezed_annotation: ^0.14.0
   web_socket_channel: ^1.2.0
 
