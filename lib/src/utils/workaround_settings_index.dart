@@ -11,9 +11,6 @@ int? postListingTypeToIndex([PostListingType? postListingType]) =>
         ? null
         : PostListingType.values.indexOf(postListingType);
 
-SortType? sortTypeFromIndex(int index) =>
-    index >= SortType.values.length ? null : SortType.values[index];
-PostListingType? postListingTypeFromIndex(int index) =>
-    index >= PostListingType.values.length
-        ? null
-        : PostListingType.values[index];
+SortType sortTypeFromIndex(int index) => SortType.values[index];
+PostListingType postListingTypeFromIndex(int index) =>
+    PostListingType.values[index];
