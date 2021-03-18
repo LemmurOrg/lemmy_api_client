@@ -94,7 +94,7 @@ class ListCommunities
   @override
   List<CommunityView> responseFactory(Map<String, dynamic> json) =>
       (json['communities'] as List)
-          .map((e) => CommunityView.fromJson(e))
+          .map((dynamic e) => CommunityView.fromJson(e))
           .toList();
 }
 
@@ -155,7 +155,7 @@ class AddModToCommunity
   @override
   List<CommunityModeratorView> responseFactory(Map<String, dynamic> json) =>
       (json['moderators'] as List)
-          .map((e) => CommunityModeratorView.fromJson(e))
+          .map((dynamic e) => CommunityModeratorView.fromJson(e))
           .toList();
 }
 
@@ -297,7 +297,7 @@ class GetFollowedCommunities
   @override
   List<CommunityFollowerView> responseFactory(Map<String, dynamic> json) =>
       (json['communities'] as List)
-          .map((e) => CommunityFollowerView.fromJson(e))
+          .map((dynamic e) => CommunityFollowerView.fromJson(e))
           .toList();
 }
 

@@ -28,7 +28,8 @@ class PictrsApi {
     req.headers['Cookie'] = 'jwt=$auth';
 
     final res = await req.send();
-    final body = jsonDecode(utf8.decode(await res.stream.toBytes()));
+    final Map<String, dynamic> body =
+        jsonDecode(utf8.decode(await res.stream.toBytes()));
 
     return PictrsUpload.fromJson(body)..instanceHost = host;
   }

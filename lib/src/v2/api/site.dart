@@ -29,7 +29,9 @@ class ListCategories
 
   @override
   List<Category> responseFactory(Map<String, dynamic> json) =>
-      (json['categories'] as List).map((e) => Category.fromJson(e)).toList();
+      (json['categories'] as List)
+          .map((dynamic e) => Category.fromJson(e))
+          .toList();
 }
 
 @freezed

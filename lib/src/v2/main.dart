@@ -25,7 +25,7 @@ class LemmyApiV2 {
           return http.get(Uri.https(
             host,
             '$extraPath${query.path()}',
-            {
+            <String, String>{
               for (final entry in query.toJson().entries)
                 entry.key: entry.value.toString()
             },
@@ -60,7 +60,7 @@ class LemmyApiV2 {
     }
 
     // augment responses with `instance_host`
-    final json = jsonDecode(utf8.decode(res.bodyBytes));
+    final Map<String, dynamic> json = jsonDecode(utf8.decode(res.bodyBytes));
     _augmentInstanceHost(host, json);
 
     return query.responseFactory(json);
@@ -95,7 +95,7 @@ class LemmyApiV2 {
       ws = WebSocketChannel.connect(uri);
 
       ws.stream.listen(
-        (data) {
+        (dynamic data) {
           final message = jsonDecode(data) as Map<String, dynamic>;
 
           // skip first message which is just a confirmation that
@@ -109,7 +109,7 @@ class LemmyApiV2 {
             return;
           }
         },
-        onError: (_) => reconnect(),
+        onError: (dynamic _) => reconnect(),
         onDone: reconnect,
       );
 
@@ -126,7 +126,7 @@ class LemmyApiV2 {
   StreamController<WsEvent> communityJoin({
     required int communityId,
   }) =>
-      _persistantStream('CommunityJoin', {
+      _persistantStream('CommunityJoin', <String, dynamic>{
         'community_id': communityId,
       });
 
@@ -134,7 +134,7 @@ class LemmyApiV2 {
   StreamController<WsEvent> userJoin({
     required String auth,
   }) =>
-      _persistantStream('UserJoin', {
+      _persistantStream('UserJoin', <String, dynamic>{
         'auth': auth,
       });
 
@@ -142,7 +142,7 @@ class LemmyApiV2 {
   StreamController<WsEvent> postJoin({
     required int postId,
   }) =>
-      _persistantStream('PostJoin', {
+      _persistantStream('PostJoin', <String, dynamic>{
         'post_id': postId,
       });
 
@@ -150,7 +150,7 @@ class LemmyApiV2 {
   StreamController<WsEvent> modJoin({
     required int communityId,
   }) =>
-      _persistantStream('ModJoin', {
+      _persistantStream('ModJoin', <String, dynamic>{
         'community_id': communityId,
       });
 }

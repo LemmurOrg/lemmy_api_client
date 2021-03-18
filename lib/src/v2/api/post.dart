@@ -83,7 +83,7 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
 
   @override
   List<PostView> responseFactory(Map<String, dynamic> json) =>
-      (json['posts'] as List).map((e) => PostView.fromJson(e)).toList();
+      (json['posts'] as List).map((dynamic e) => PostView.fromJson(e)).toList();
 }
 
 @freezed
@@ -334,5 +334,5 @@ class ListPostReports
 
   @override
   List<PostReportView> responseFactory(Map<String, dynamic> json) =>
-      (json as List).map((e) => PostReportView.fromJson(json)).toList();
+      (json as List).map((dynamic e) => PostReportView.fromJson(json)).toList();
 }

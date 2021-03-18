@@ -217,7 +217,9 @@ class GetComments
 
   @override
   List<CommentView> responseFactory(Map<String, dynamic> json) =>
-      (json['comments'] as List).map((e) => CommentView.fromJson(e)).toList();
+      (json['comments'] as List)
+          .map((dynamic e) => CommentView.fromJson(e))
+          .toList();
 }
 
 // TODO: this does not seem to exist yet
@@ -299,6 +301,6 @@ class ListCommentReports
   @override
   List<CommentReportView> responseFactory(Map<String, dynamic> json) =>
       (json['comments'] as List)
-          .map((e) => CommentReportView.fromJson(e))
+          .map((dynamic e) => CommentReportView.fromJson(e))
           .toList();
 }

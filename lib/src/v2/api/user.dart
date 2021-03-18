@@ -190,7 +190,9 @@ class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<UserViewSafe>> {
 
   @override
   List<UserViewSafe> responseFactory(Map<String, dynamic> json) =>
-      (json['admins'] as List).map((e) => UserViewSafe.fromJson(e)).toList();
+      (json['admins'] as List)
+          .map((dynamic e) => UserViewSafe.fromJson(e))
+          .toList();
 }
 
 @freezed
@@ -243,7 +245,9 @@ class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
 
   @override
   List<CommentView> responseFactory(Map<String, dynamic> json) =>
-      (json['replies'] as List).map((e) => CommentView.fromJson(e)).toList();
+      (json['replies'] as List)
+          .map((dynamic e) => CommentView.fromJson(e))
+          .toList();
 }
 
 @freezed
@@ -272,7 +276,7 @@ class GetUserMentions
   @override
   List<UserMentionView> responseFactory(Map<String, dynamic> json) =>
       (json['mentions'] as List)
-          .map((e) => UserMentionView.fromJson(e))
+          .map((dynamic e) => UserMentionView.fromJson(e))
           .toList();
 }
 
@@ -497,7 +501,7 @@ class GetPrivateMessages
   @override
   List<PrivateMessageView> responseFactory(Map<String, dynamic> json) =>
       (json['private_messages'] as List)
-          .map((e) => PrivateMessageView.fromJson(e))
+          .map((dynamic e) => PrivateMessageView.fromJson(e))
           .toList();
 }
 
