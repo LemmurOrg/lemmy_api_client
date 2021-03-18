@@ -32,6 +32,7 @@ linter:
     - cast_nullable_to_non_nullable
     - constant_identifier_names
     - curly_braces_in_flow_control_structures
+    - directives_ordering
     - empty_catches
     - empty_constructor_bodies
     - exhaustive_cases
