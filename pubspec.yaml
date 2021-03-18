@@ -9,11 +9,11 @@ environment:
 dependencies:
   json_annotation: ^4.0.0
   http: ^0.13.0
-  freezed_annotation: ^0.14.0
+  freezed_annotation: ^0.14.1
   web_socket_channel: ^1.2.0
 
 dev_dependencies:
   test: ^1.16.5
   json_serializable: ^4.0.2
   build_runner: ^1.11.5
-  freezed: ^0.14.0
+  freezed: ^0.14.1
