@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'views.dart';
 
@@ -8,6 +8,10 @@ part of 'views.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 UserViewSafe _$UserViewSafeFromJson(Map<String, dynamic> json) {
   return _UserViewSafe.fromJson(json);
 }
@@ -16,32 +20,30 @@ UserViewSafe _$UserViewSafeFromJson(Map<String, dynamic> json) {
 class _$UserViewSafeTearOff {
   const _$UserViewSafeTearOff();
 
-// ignore: unused_element
-  _UserViewSafe call(
-      {@required UserSafe user, @required UserAggregates counts}) {
+  _UserViewSafe call({required UserSafe user, required UserAggregates counts}) {
     return _UserViewSafe(
       user: user,
       counts: counts,
     );
   }
 
-// ignore: unused_element
   UserViewSafe fromJson(Map<String, Object> json) {
     return UserViewSafe.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserViewSafe = _$UserViewSafeTearOff();
 
 /// @nodoc
 mixin _$UserViewSafe {
-  UserSafe get user;
-  UserAggregates get counts;
+  UserSafe get user => throw _privateConstructorUsedError;
+  UserAggregates get counts => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserViewSafeCopyWith<UserViewSafe> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserViewSafeCopyWith<UserViewSafe> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -65,20 +67,23 @@ class _$UserViewSafeCopyWithImpl<$Res> implements $UserViewSafeCopyWith<$Res> {
 
   @override
   $Res call({
-    Object user = freezed,
-    Object counts = freezed,
+    Object? user = freezed,
+    Object? counts = freezed,
   }) {
     return _then(_value.copyWith(
-      user: user == freezed ? _value.user : user as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as UserAggregates,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as UserAggregates,
     ));
   }
 
   @override
   $UserSafeCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -86,9 +91,6 @@ class _$UserViewSafeCopyWithImpl<$Res> implements $UserViewSafeCopyWith<$Res> {
 
   @override
   $UserAggregatesCopyWith<$Res> get counts {
-    if (_value.counts == null) {
-      return null;
-    }
     return $UserAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
     });
@@ -122,12 +124,18 @@ class __$UserViewSafeCopyWithImpl<$Res> extends _$UserViewSafeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object user = freezed,
-    Object counts = freezed,
+    Object? user = freezed,
+    Object? counts = freezed,
   }) {
     return _then(_UserViewSafe(
-      user: user == freezed ? _value.user : user as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as UserAggregates,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as UserAggregates,
     ));
   }
 }
@@ -136,10 +144,7 @@ class __$UserViewSafeCopyWithImpl<$Res> extends _$UserViewSafeCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_UserViewSafe extends _UserViewSafe {
-  _$_UserViewSafe({@required this.user, @required this.counts})
-      : assert(user != null),
-        assert(counts != null),
-        super._();
+  _$_UserViewSafe({required this.user, required this.counts}) : super._();
 
   factory _$_UserViewSafe.fromJson(Map<String, dynamic> json) =>
       _$_$_UserViewSafeFromJson(json);
@@ -170,6 +175,7 @@ class _$_UserViewSafe extends _UserViewSafe {
       const DeepCollectionEquality().hash(user) ^
       const DeepCollectionEquality().hash(counts);
 
+  @JsonKey(ignore: true)
   @override
   _$UserViewSafeCopyWith<_UserViewSafe> get copyWith =>
       __$UserViewSafeCopyWithImpl<_UserViewSafe>(this, _$identity);
@@ -181,20 +187,22 @@ class _$_UserViewSafe extends _UserViewSafe {
 }
 
 abstract class _UserViewSafe extends UserViewSafe {
-  _UserViewSafe._() : super._();
   factory _UserViewSafe(
-      {@required UserSafe user,
-      @required UserAggregates counts}) = _$_UserViewSafe;
+      {required UserSafe user,
+      required UserAggregates counts}) = _$_UserViewSafe;
+  _UserViewSafe._() : super._();
 
   factory _UserViewSafe.fromJson(Map<String, dynamic> json) =
       _$_UserViewSafe.fromJson;
 
   @override
-  UserSafe get user;
+  UserSafe get user => throw _privateConstructorUsedError;
   @override
-  UserAggregates get counts;
+  UserAggregates get counts => throw _privateConstructorUsedError;
   @override
-  _$UserViewSafeCopyWith<_UserViewSafe> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserViewSafeCopyWith<_UserViewSafe> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
@@ -205,19 +213,18 @@ UserMentionView _$UserMentionViewFromJson(Map<String, dynamic> json) {
 class _$UserMentionViewTearOff {
   const _$UserMentionViewTearOff();
 
-// ignore: unused_element
   _UserMentionView call(
-      {@required UserMention userMention,
-      @required Comment comment,
-      @required UserSafe creator,
-      @required Post post,
-      @required CommunitySafe community,
-      @required UserSafe recipient,
-      @required CommentAggregates counts,
-      @required bool creatorBannedFromCommunity,
-      @required bool subscribed,
-      @required bool saved,
-      VoteType myVote}) {
+      {required UserMention userMention,
+      required Comment comment,
+      required UserSafe creator,
+      required Post post,
+      required CommunitySafe community,
+      required UserSafe recipient,
+      required CommentAggregates counts,
+      required bool creatorBannedFromCommunity,
+      required bool subscribed,
+      required bool saved,
+      VoteType? myVote}) {
     return _UserMentionView(
       userMention: userMention,
       comment: comment,
@@ -233,32 +240,32 @@ class _$UserMentionViewTearOff {
     );
   }
 
-// ignore: unused_element
   UserMentionView fromJson(Map<String, Object> json) {
     return UserMentionView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserMentionView = _$UserMentionViewTearOff();
 
 /// @nodoc
 mixin _$UserMentionView {
-  UserMention get userMention;
-  Comment get comment;
-  UserSafe get creator;
-  Post get post;
-  CommunitySafe get community;
-  UserSafe get recipient;
-  CommentAggregates get counts;
-  bool get creatorBannedFromCommunity;
-  bool get subscribed;
-  bool get saved;
-  VoteType get myVote;
+  UserMention get userMention => throw _privateConstructorUsedError;
+  Comment get comment => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get recipient => throw _privateConstructorUsedError;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get subscribed => throw _privateConstructorUsedError;
+  bool get saved => throw _privateConstructorUsedError;
+  VoteType? get myVote => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserMentionViewCopyWith<UserMentionView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserMentionViewCopyWith<UserMentionView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -277,7 +284,7 @@ abstract class $UserMentionViewCopyWith<$Res> {
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType myVote});
+      VoteType? myVote});
 
   $UserMentionCopyWith<$Res> get userMention;
   $CommentCopyWith<$Res> get comment;
@@ -299,45 +306,68 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userMention = freezed,
-    Object comment = freezed,
-    Object creator = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object recipient = freezed,
-    Object counts = freezed,
-    Object creatorBannedFromCommunity = freezed,
-    Object subscribed = freezed,
-    Object saved = freezed,
-    Object myVote = freezed,
+    Object? userMention = freezed,
+    Object? comment = freezed,
+    Object? creator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? recipient = freezed,
+    Object? counts = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? myVote = freezed,
   }) {
     return _then(_value.copyWith(
       userMention: userMention == freezed
           ? _value.userMention
-          : userMention as UserMention,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+          : userMention // ignore: cast_nullable_to_non_nullable
+              as UserMention,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 
   @override
   $UserMentionCopyWith<$Res> get userMention {
-    if (_value.userMention == null) {
-      return null;
-    }
     return $UserMentionCopyWith<$Res>(_value.userMention, (value) {
       return _then(_value.copyWith(userMention: value));
     });
@@ -345,9 +375,6 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $CommentCopyWith<$Res> get comment {
-    if (_value.comment == null) {
-      return null;
-    }
     return $CommentCopyWith<$Res>(_value.comment, (value) {
       return _then(_value.copyWith(comment: value));
     });
@@ -355,9 +382,6 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -365,9 +389,6 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -375,9 +396,6 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -385,9 +403,6 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get recipient {
-    if (_value.recipient == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value));
     });
@@ -395,9 +410,6 @@ class _$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $CommentAggregatesCopyWith<$Res> get counts {
-    if (_value.counts == null) {
-      return null;
-    }
     return $CommentAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
     });
@@ -422,7 +434,7 @@ abstract class _$UserMentionViewCopyWith<$Res>
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType myVote});
+      VoteType? myVote});
 
   @override
   $UserMentionCopyWith<$Res> get userMention;
@@ -453,37 +465,63 @@ class __$UserMentionViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object userMention = freezed,
-    Object comment = freezed,
-    Object creator = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object recipient = freezed,
-    Object counts = freezed,
-    Object creatorBannedFromCommunity = freezed,
-    Object subscribed = freezed,
-    Object saved = freezed,
-    Object myVote = freezed,
+    Object? userMention = freezed,
+    Object? comment = freezed,
+    Object? creator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? recipient = freezed,
+    Object? counts = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? myVote = freezed,
   }) {
     return _then(_UserMentionView(
       userMention: userMention == freezed
           ? _value.userMention
-          : userMention as UserMention,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+          : userMention // ignore: cast_nullable_to_non_nullable
+              as UserMention,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 }
@@ -493,28 +531,18 @@ class __$UserMentionViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserMentionView extends _UserMentionView {
   _$_UserMentionView(
-      {@required this.userMention,
-      @required this.comment,
-      @required this.creator,
-      @required this.post,
-      @required this.community,
-      @required this.recipient,
-      @required this.counts,
-      @required this.creatorBannedFromCommunity,
-      @required this.subscribed,
-      @required this.saved,
+      {required this.userMention,
+      required this.comment,
+      required this.creator,
+      required this.post,
+      required this.community,
+      required this.recipient,
+      required this.counts,
+      required this.creatorBannedFromCommunity,
+      required this.subscribed,
+      required this.saved,
       this.myVote})
-      : assert(userMention != null),
-        assert(comment != null),
-        assert(creator != null),
-        assert(post != null),
-        assert(community != null),
-        assert(recipient != null),
-        assert(counts != null),
-        assert(creatorBannedFromCommunity != null),
-        assert(subscribed != null),
-        assert(saved != null),
-        super._();
+      : super._();
 
   factory _$_UserMentionView.fromJson(Map<String, dynamic> json) =>
       _$_$_UserMentionViewFromJson(json);
@@ -540,7 +568,7 @@ class _$_UserMentionView extends _UserMentionView {
   @override
   final bool saved;
   @override
-  final VoteType myVote;
+  final VoteType? myVote;
 
   @override
   String toString() {
@@ -599,6 +627,7 @@ class _$_UserMentionView extends _UserMentionView {
       const DeepCollectionEquality().hash(saved) ^
       const DeepCollectionEquality().hash(myVote);
 
+  @JsonKey(ignore: true)
   @override
   _$UserMentionViewCopyWith<_UserMentionView> get copyWith =>
       __$UserMentionViewCopyWithImpl<_UserMentionView>(this, _$identity);
@@ -610,47 +639,49 @@ class _$_UserMentionView extends _UserMentionView {
 }
 
 abstract class _UserMentionView extends UserMentionView {
-  _UserMentionView._() : super._();
   factory _UserMentionView(
-      {@required UserMention userMention,
-      @required Comment comment,
-      @required UserSafe creator,
-      @required Post post,
-      @required CommunitySafe community,
-      @required UserSafe recipient,
-      @required CommentAggregates counts,
-      @required bool creatorBannedFromCommunity,
-      @required bool subscribed,
-      @required bool saved,
-      VoteType myVote}) = _$_UserMentionView;
+      {required UserMention userMention,
+      required Comment comment,
+      required UserSafe creator,
+      required Post post,
+      required CommunitySafe community,
+      required UserSafe recipient,
+      required CommentAggregates counts,
+      required bool creatorBannedFromCommunity,
+      required bool subscribed,
+      required bool saved,
+      VoteType? myVote}) = _$_UserMentionView;
+  _UserMentionView._() : super._();
 
   factory _UserMentionView.fromJson(Map<String, dynamic> json) =
       _$_UserMentionView.fromJson;
 
   @override
-  UserMention get userMention;
+  UserMention get userMention => throw _privateConstructorUsedError;
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get recipient;
+  UserSafe get recipient => throw _privateConstructorUsedError;
   @override
-  CommentAggregates get counts;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get saved;
+  bool get saved => throw _privateConstructorUsedError;
   @override
-  VoteType get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  _$UserMentionViewCopyWith<_UserMentionView> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserMentionViewCopyWith<_UserMentionView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
@@ -661,11 +692,10 @@ SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
 class _$SiteViewTearOff {
   const _$SiteViewTearOff();
 
-// ignore: unused_element
   _SiteView call(
-      {@required Site site,
-      @required UserSafe creator,
-      @required SiteAggregates counts}) {
+      {required Site site,
+      required UserSafe creator,
+      required SiteAggregates counts}) {
     return _SiteView(
       site: site,
       creator: creator,
@@ -673,24 +703,24 @@ class _$SiteViewTearOff {
     );
   }
 
-// ignore: unused_element
   SiteView fromJson(Map<String, Object> json) {
     return SiteView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SiteView = _$SiteViewTearOff();
 
 /// @nodoc
 mixin _$SiteView {
-  Site get site;
-  UserSafe get creator;
-  SiteAggregates get counts;
+  Site get site => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  SiteAggregates get counts => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SiteViewCopyWith<SiteView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SiteViewCopyWith<SiteView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -714,22 +744,28 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
 
   @override
   $Res call({
-    Object site = freezed,
-    Object creator = freezed,
-    Object counts = freezed,
+    Object? site = freezed,
+    Object? creator = freezed,
+    Object? counts = freezed,
   }) {
     return _then(_value.copyWith(
-      site: site == freezed ? _value.site : site as Site,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as SiteAggregates,
+      site: site == freezed
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as SiteAggregates,
     ));
   }
 
   @override
   $SiteCopyWith<$Res> get site {
-    if (_value.site == null) {
-      return null;
-    }
     return $SiteCopyWith<$Res>(_value.site, (value) {
       return _then(_value.copyWith(site: value));
     });
@@ -737,9 +773,6 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -747,9 +780,6 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
 
   @override
   $SiteAggregatesCopyWith<$Res> get counts {
-    if (_value.counts == null) {
-      return null;
-    }
     return $SiteAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
     });
@@ -782,14 +812,23 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object site = freezed,
-    Object creator = freezed,
-    Object counts = freezed,
+    Object? site = freezed,
+    Object? creator = freezed,
+    Object? counts = freezed,
   }) {
     return _then(_SiteView(
-      site: site == freezed ? _value.site : site as Site,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as SiteAggregates,
+      site: site == freezed
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as SiteAggregates,
     ));
   }
 }
@@ -798,12 +837,8 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SiteView extends _SiteView {
-  _$_SiteView(
-      {@required this.site, @required this.creator, @required this.counts})
-      : assert(site != null),
-        assert(creator != null),
-        assert(counts != null),
-        super._();
+  _$_SiteView({required this.site, required this.creator, required this.counts})
+      : super._();
 
   factory _$_SiteView.fromJson(Map<String, dynamic> json) =>
       _$_$_SiteViewFromJson(json);
@@ -840,6 +875,7 @@ class _$_SiteView extends _SiteView {
       const DeepCollectionEquality().hash(creator) ^
       const DeepCollectionEquality().hash(counts);
 
+  @JsonKey(ignore: true)
   @override
   _$SiteViewCopyWith<_SiteView> get copyWith =>
       __$SiteViewCopyWithImpl<_SiteView>(this, _$identity);
@@ -851,22 +887,24 @@ class _$_SiteView extends _SiteView {
 }
 
 abstract class _SiteView extends SiteView {
-  _SiteView._() : super._();
   factory _SiteView(
-      {@required Site site,
-      @required UserSafe creator,
-      @required SiteAggregates counts}) = _$_SiteView;
+      {required Site site,
+      required UserSafe creator,
+      required SiteAggregates counts}) = _$_SiteView;
+  _SiteView._() : super._();
 
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
   @override
-  Site get site;
+  Site get site => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  SiteAggregates get counts;
+  SiteAggregates get counts => throw _privateConstructorUsedError;
   @override
-  _$SiteViewCopyWith<_SiteView> get copyWith;
+  @JsonKey(ignore: true)
+  _$SiteViewCopyWith<_SiteView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PrivateMessageView _$PrivateMessageViewFromJson(Map<String, dynamic> json) {
@@ -877,11 +915,10 @@ PrivateMessageView _$PrivateMessageViewFromJson(Map<String, dynamic> json) {
 class _$PrivateMessageViewTearOff {
   const _$PrivateMessageViewTearOff();
 
-// ignore: unused_element
   _PrivateMessageView call(
-      {@required PrivateMessage privateMessage,
-      @required UserSafe creator,
-      @required UserSafe recipient}) {
+      {required PrivateMessage privateMessage,
+      required UserSafe creator,
+      required UserSafe recipient}) {
     return _PrivateMessageView(
       privateMessage: privateMessage,
       creator: creator,
@@ -889,24 +926,24 @@ class _$PrivateMessageViewTearOff {
     );
   }
 
-// ignore: unused_element
   PrivateMessageView fromJson(Map<String, Object> json) {
     return PrivateMessageView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PrivateMessageView = _$PrivateMessageViewTearOff();
 
 /// @nodoc
 mixin _$PrivateMessageView {
-  PrivateMessage get privateMessage;
-  UserSafe get creator;
-  UserSafe get recipient;
+  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  UserSafe get recipient => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PrivateMessageViewCopyWith<PrivateMessageView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PrivateMessageViewCopyWith<PrivateMessageView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -933,25 +970,28 @@ class _$PrivateMessageViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessage = freezed,
-    Object creator = freezed,
-    Object recipient = freezed,
+    Object? privateMessage = freezed,
+    Object? creator = freezed,
+    Object? recipient = freezed,
   }) {
     return _then(_value.copyWith(
       privateMessage: privateMessage == freezed
           ? _value.privateMessage
-          : privateMessage as PrivateMessage,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
+          : privateMessage // ignore: cast_nullable_to_non_nullable
+              as PrivateMessage,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $PrivateMessageCopyWith<$Res> get privateMessage {
-    if (_value.privateMessage == null) {
-      return null;
-    }
     return $PrivateMessageCopyWith<$Res>(_value.privateMessage, (value) {
       return _then(_value.copyWith(privateMessage: value));
     });
@@ -959,9 +999,6 @@ class _$PrivateMessageViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -969,9 +1006,6 @@ class _$PrivateMessageViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get recipient {
-    if (_value.recipient == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value));
     });
@@ -1009,17 +1043,23 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object privateMessage = freezed,
-    Object creator = freezed,
-    Object recipient = freezed,
+    Object? privateMessage = freezed,
+    Object? creator = freezed,
+    Object? recipient = freezed,
   }) {
     return _then(_PrivateMessageView(
       privateMessage: privateMessage == freezed
           ? _value.privateMessage
-          : privateMessage as PrivateMessage,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
+          : privateMessage // ignore: cast_nullable_to_non_nullable
+              as PrivateMessage,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -1029,13 +1069,10 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_PrivateMessageView extends _PrivateMessageView {
   _$_PrivateMessageView(
-      {@required this.privateMessage,
-      @required this.creator,
-      @required this.recipient})
-      : assert(privateMessage != null),
-        assert(creator != null),
-        assert(recipient != null),
-        super._();
+      {required this.privateMessage,
+      required this.creator,
+      required this.recipient})
+      : super._();
 
   factory _$_PrivateMessageView.fromJson(Map<String, dynamic> json) =>
       _$_$_PrivateMessageViewFromJson(json);
@@ -1074,6 +1111,7 @@ class _$_PrivateMessageView extends _PrivateMessageView {
       const DeepCollectionEquality().hash(creator) ^
       const DeepCollectionEquality().hash(recipient);
 
+  @JsonKey(ignore: true)
   @override
   _$PrivateMessageViewCopyWith<_PrivateMessageView> get copyWith =>
       __$PrivateMessageViewCopyWithImpl<_PrivateMessageView>(this, _$identity);
@@ -1085,23 +1123,25 @@ class _$_PrivateMessageView extends _PrivateMessageView {
 }
 
 abstract class _PrivateMessageView extends PrivateMessageView {
-  _PrivateMessageView._() : super._();
   factory _PrivateMessageView(
-      {@required PrivateMessage privateMessage,
-      @required UserSafe creator,
-      @required UserSafe recipient}) = _$_PrivateMessageView;
+      {required PrivateMessage privateMessage,
+      required UserSafe creator,
+      required UserSafe recipient}) = _$_PrivateMessageView;
+  _PrivateMessageView._() : super._();
 
   factory _PrivateMessageView.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessageView.fromJson;
 
   @override
-  PrivateMessage get privateMessage;
+  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  UserSafe get recipient;
+  UserSafe get recipient => throw _privateConstructorUsedError;
   @override
-  _$PrivateMessageViewCopyWith<_PrivateMessageView> get copyWith;
+  @JsonKey(ignore: true)
+  _$PrivateMessageViewCopyWith<_PrivateMessageView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PostView _$PostViewFromJson(Map<String, dynamic> json) {
@@ -1112,17 +1152,16 @@ PostView _$PostViewFromJson(Map<String, dynamic> json) {
 class _$PostViewTearOff {
   const _$PostViewTearOff();
 
-// ignore: unused_element
   _PostView call(
-      {@required Post post,
-      @required UserSafe creator,
-      @required CommunitySafe community,
-      @required bool creatorBannedFromCommunity,
-      @required PostAggregates counts,
-      @required bool subscribed,
-      @required bool saved,
-      @required bool read,
-      VoteType myVote}) {
+      {required Post post,
+      required UserSafe creator,
+      required CommunitySafe community,
+      required bool creatorBannedFromCommunity,
+      required PostAggregates counts,
+      required bool subscribed,
+      required bool saved,
+      required bool read,
+      VoteType? myVote}) {
     return _PostView(
       post: post,
       creator: creator,
@@ -1136,30 +1175,30 @@ class _$PostViewTearOff {
     );
   }
 
-// ignore: unused_element
   PostView fromJson(Map<String, Object> json) {
     return PostView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PostView = _$PostViewTearOff();
 
 /// @nodoc
 mixin _$PostView {
-  Post get post;
-  UserSafe get creator;
-  CommunitySafe get community;
-  bool get creatorBannedFromCommunity;
-  PostAggregates get counts;
-  bool get subscribed;
-  bool get saved;
-  bool get read;
-  VoteType get myVote;
+  Post get post => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  PostAggregates get counts => throw _privateConstructorUsedError;
+  bool get subscribed => throw _privateConstructorUsedError;
+  bool get saved => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  VoteType? get myVote => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PostViewCopyWith<PostView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PostViewCopyWith<PostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1175,7 +1214,7 @@ abstract class $PostViewCopyWith<$Res> {
       bool subscribed,
       bool saved,
       bool read,
-      VoteType myVote});
+      VoteType? myVote});
 
   $PostCopyWith<$Res> get post;
   $UserSafeCopyWith<$Res> get creator;
@@ -1193,38 +1232,58 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
 
   @override
   $Res call({
-    Object post = freezed,
-    Object creator = freezed,
-    Object community = freezed,
-    Object creatorBannedFromCommunity = freezed,
-    Object counts = freezed,
-    Object subscribed = freezed,
-    Object saved = freezed,
-    Object read = freezed,
-    Object myVote = freezed,
+    Object? post = freezed,
+    Object? creator = freezed,
+    Object? community = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? counts = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? read = freezed,
+    Object? myVote = freezed,
   }) {
     return _then(_value.copyWith(
-      post: post == freezed ? _value.post : post as Post,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      counts: counts == freezed ? _value.counts : counts as PostAggregates,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      read: read == freezed ? _value.read : read as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as PostAggregates,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -1232,9 +1291,6 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -1242,9 +1298,6 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -1252,9 +1305,6 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
 
   @override
   $PostAggregatesCopyWith<$Res> get counts {
-    if (_value.counts == null) {
-      return null;
-    }
     return $PostAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
     });
@@ -1275,7 +1325,7 @@ abstract class _$PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
       bool subscribed,
       bool saved,
       bool read,
-      VoteType myVote});
+      VoteType? myVote});
 
   @override
   $PostCopyWith<$Res> get post;
@@ -1298,30 +1348,53 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object post = freezed,
-    Object creator = freezed,
-    Object community = freezed,
-    Object creatorBannedFromCommunity = freezed,
-    Object counts = freezed,
-    Object subscribed = freezed,
-    Object saved = freezed,
-    Object read = freezed,
-    Object myVote = freezed,
+    Object? post = freezed,
+    Object? creator = freezed,
+    Object? community = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? counts = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? read = freezed,
+    Object? myVote = freezed,
   }) {
     return _then(_PostView(
-      post: post == freezed ? _value.post : post as Post,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      counts: counts == freezed ? _value.counts : counts as PostAggregates,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      read: read == freezed ? _value.read : read as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as PostAggregates,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 }
@@ -1331,24 +1404,16 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_PostView extends _PostView {
   _$_PostView(
-      {@required this.post,
-      @required this.creator,
-      @required this.community,
-      @required this.creatorBannedFromCommunity,
-      @required this.counts,
-      @required this.subscribed,
-      @required this.saved,
-      @required this.read,
+      {required this.post,
+      required this.creator,
+      required this.community,
+      required this.creatorBannedFromCommunity,
+      required this.counts,
+      required this.subscribed,
+      required this.saved,
+      required this.read,
       this.myVote})
-      : assert(post != null),
-        assert(creator != null),
-        assert(community != null),
-        assert(creatorBannedFromCommunity != null),
-        assert(counts != null),
-        assert(subscribed != null),
-        assert(saved != null),
-        assert(read != null),
-        super._();
+      : super._();
 
   factory _$_PostView.fromJson(Map<String, dynamic> json) =>
       _$_$_PostViewFromJson(json);
@@ -1370,7 +1435,7 @@ class _$_PostView extends _PostView {
   @override
   final bool read;
   @override
-  final VoteType myVote;
+  final VoteType? myVote;
 
   @override
   String toString() {
@@ -1420,6 +1485,7 @@ class _$_PostView extends _PostView {
       const DeepCollectionEquality().hash(read) ^
       const DeepCollectionEquality().hash(myVote);
 
+  @JsonKey(ignore: true)
   @override
   _$PostViewCopyWith<_PostView> get copyWith =>
       __$PostViewCopyWithImpl<_PostView>(this, _$identity);
@@ -1431,40 +1497,42 @@ class _$_PostView extends _PostView {
 }
 
 abstract class _PostView extends PostView {
-  _PostView._() : super._();
   factory _PostView(
-      {@required Post post,
-      @required UserSafe creator,
-      @required CommunitySafe community,
-      @required bool creatorBannedFromCommunity,
-      @required PostAggregates counts,
-      @required bool subscribed,
-      @required bool saved,
-      @required bool read,
-      VoteType myVote}) = _$_PostView;
+      {required Post post,
+      required UserSafe creator,
+      required CommunitySafe community,
+      required bool creatorBannedFromCommunity,
+      required PostAggregates counts,
+      required bool subscribed,
+      required bool saved,
+      required bool read,
+      VoteType? myVote}) = _$_PostView;
+  _PostView._() : super._();
 
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  PostAggregates get counts;
+  PostAggregates get counts => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get saved;
+  bool get saved => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  VoteType get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  _$PostViewCopyWith<_PostView> get copyWith;
+  @JsonKey(ignore: true)
+  _$PostViewCopyWith<_PostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PostReportView _$PostReportViewFromJson(Map<String, dynamic> json) {
@@ -1475,14 +1543,13 @@ PostReportView _$PostReportViewFromJson(Map<String, dynamic> json) {
 class _$PostReportViewTearOff {
   const _$PostReportViewTearOff();
 
-// ignore: unused_element
   _PostReportView call(
-      {@required PostReport postReport,
-      @required Post post,
-      @required CommunitySafe community,
-      @required UserSafe creator,
-      @required UserSafe postCreator,
-      UserSafe resolver}) {
+      {required PostReport postReport,
+      required Post post,
+      required CommunitySafe community,
+      required UserSafe creator,
+      required UserSafe postCreator,
+      UserSafe? resolver}) {
     return _PostReportView(
       postReport: postReport,
       post: post,
@@ -1493,27 +1560,27 @@ class _$PostReportViewTearOff {
     );
   }
 
-// ignore: unused_element
   PostReportView fromJson(Map<String, Object> json) {
     return PostReportView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PostReportView = _$PostReportViewTearOff();
 
 /// @nodoc
 mixin _$PostReportView {
-  PostReport get postReport;
-  Post get post;
-  CommunitySafe get community;
-  UserSafe get creator;
-  UserSafe get postCreator;
-  UserSafe get resolver;
+  PostReport get postReport => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  UserSafe get postCreator => throw _privateConstructorUsedError;
+  UserSafe? get resolver => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PostReportViewCopyWith<PostReportView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PostReportViewCopyWith<PostReportView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1527,14 +1594,14 @@ abstract class $PostReportViewCopyWith<$Res> {
       CommunitySafe community,
       UserSafe creator,
       UserSafe postCreator,
-      UserSafe resolver});
+      UserSafe? resolver});
 
   $PostReportCopyWith<$Res> get postReport;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
   $UserSafeCopyWith<$Res> get creator;
   $UserSafeCopyWith<$Res> get postCreator;
-  $UserSafeCopyWith<$Res> get resolver;
+  $UserSafeCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -1548,31 +1615,43 @@ class _$PostReportViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object postReport = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object creator = freezed,
-    Object postCreator = freezed,
-    Object resolver = freezed,
+    Object? postReport = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? creator = freezed,
+    Object? postCreator = freezed,
+    Object? resolver = freezed,
   }) {
     return _then(_value.copyWith(
-      postReport:
-          postReport == freezed ? _value.postReport : postReport as PostReport,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      postCreator:
-          postCreator == freezed ? _value.postCreator : postCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe,
+      postReport: postReport == freezed
+          ? _value.postReport
+          : postReport // ignore: cast_nullable_to_non_nullable
+              as PostReport,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      postCreator: postCreator == freezed
+          ? _value.postCreator
+          : postCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 
   @override
   $PostReportCopyWith<$Res> get postReport {
-    if (_value.postReport == null) {
-      return null;
-    }
     return $PostReportCopyWith<$Res>(_value.postReport, (value) {
       return _then(_value.copyWith(postReport: value));
     });
@@ -1580,9 +1659,6 @@ class _$PostReportViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -1590,9 +1666,6 @@ class _$PostReportViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -1600,9 +1673,6 @@ class _$PostReportViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -1610,20 +1680,18 @@ class _$PostReportViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get postCreator {
-    if (_value.postCreator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.postCreator, (value) {
       return _then(_value.copyWith(postCreator: value));
     });
   }
 
   @override
-  $UserSafeCopyWith<$Res> get resolver {
+  $UserSafeCopyWith<$Res>? get resolver {
     if (_value.resolver == null) {
       return null;
     }
-    return $UserSafeCopyWith<$Res>(_value.resolver, (value) {
+
+    return $UserSafeCopyWith<$Res>(_value.resolver!, (value) {
       return _then(_value.copyWith(resolver: value));
     });
   }
@@ -1642,7 +1710,7 @@ abstract class _$PostReportViewCopyWith<$Res>
       CommunitySafe community,
       UserSafe creator,
       UserSafe postCreator,
-      UserSafe resolver});
+      UserSafe? resolver});
 
   @override
   $PostReportCopyWith<$Res> get postReport;
@@ -1655,7 +1723,7 @@ abstract class _$PostReportViewCopyWith<$Res>
   @override
   $UserSafeCopyWith<$Res> get postCreator;
   @override
-  $UserSafeCopyWith<$Res> get resolver;
+  $UserSafeCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -1671,23 +1739,38 @@ class __$PostReportViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object postReport = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object creator = freezed,
-    Object postCreator = freezed,
-    Object resolver = freezed,
+    Object? postReport = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? creator = freezed,
+    Object? postCreator = freezed,
+    Object? resolver = freezed,
   }) {
     return _then(_PostReportView(
-      postReport:
-          postReport == freezed ? _value.postReport : postReport as PostReport,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      postCreator:
-          postCreator == freezed ? _value.postCreator : postCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe,
+      postReport: postReport == freezed
+          ? _value.postReport
+          : postReport // ignore: cast_nullable_to_non_nullable
+              as PostReport,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      postCreator: postCreator == freezed
+          ? _value.postCreator
+          : postCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 }
@@ -1697,18 +1780,13 @@ class __$PostReportViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_PostReportView extends _PostReportView {
   _$_PostReportView(
-      {@required this.postReport,
-      @required this.post,
-      @required this.community,
-      @required this.creator,
-      @required this.postCreator,
+      {required this.postReport,
+      required this.post,
+      required this.community,
+      required this.creator,
+      required this.postCreator,
       this.resolver})
-      : assert(postReport != null),
-        assert(post != null),
-        assert(community != null),
-        assert(creator != null),
-        assert(postCreator != null),
-        super._();
+      : super._();
 
   factory _$_PostReportView.fromJson(Map<String, dynamic> json) =>
       _$_$_PostReportViewFromJson(json);
@@ -1724,7 +1802,7 @@ class _$_PostReportView extends _PostReportView {
   @override
   final UserSafe postCreator;
   @override
-  final UserSafe resolver;
+  final UserSafe? resolver;
 
   @override
   String toString() {
@@ -1764,6 +1842,7 @@ class _$_PostReportView extends _PostReportView {
       const DeepCollectionEquality().hash(postCreator) ^
       const DeepCollectionEquality().hash(resolver);
 
+  @JsonKey(ignore: true)
   @override
   _$PostReportViewCopyWith<_PostReportView> get copyWith =>
       __$PostReportViewCopyWithImpl<_PostReportView>(this, _$identity);
@@ -1775,32 +1854,34 @@ class _$_PostReportView extends _PostReportView {
 }
 
 abstract class _PostReportView extends PostReportView {
-  _PostReportView._() : super._();
   factory _PostReportView(
-      {@required PostReport postReport,
-      @required Post post,
-      @required CommunitySafe community,
-      @required UserSafe creator,
-      @required UserSafe postCreator,
-      UserSafe resolver}) = _$_PostReportView;
+      {required PostReport postReport,
+      required Post post,
+      required CommunitySafe community,
+      required UserSafe creator,
+      required UserSafe postCreator,
+      UserSafe? resolver}) = _$_PostReportView;
+  _PostReportView._() : super._();
 
   factory _PostReportView.fromJson(Map<String, dynamic> json) =
       _$_PostReportView.fromJson;
 
   @override
-  PostReport get postReport;
+  PostReport get postReport => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  UserSafe get postCreator;
+  UserSafe get postCreator => throw _privateConstructorUsedError;
   @override
-  UserSafe get resolver;
+  UserSafe? get resolver => throw _privateConstructorUsedError;
   @override
-  _$PostReportViewCopyWith<_PostReportView> get copyWith;
+  @JsonKey(ignore: true)
+  _$PostReportViewCopyWith<_PostReportView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommentView _$CommentViewFromJson(Map<String, dynamic> json) {
@@ -1811,18 +1892,17 @@ CommentView _$CommentViewFromJson(Map<String, dynamic> json) {
 class _$CommentViewTearOff {
   const _$CommentViewTearOff();
 
-// ignore: unused_element
   _CommentView call(
-      {@required Comment comment,
-      @required UserSafe creator,
-      UserSafe recipient,
-      @required Post post,
-      @required CommunitySafe community,
-      @required CommentAggregates counts,
-      @required bool creatorBannedFromCommunity,
-      @required bool subscribed,
-      @required bool saved,
-      VoteType myVote}) {
+      {required Comment comment,
+      required UserSafe creator,
+      UserSafe? recipient,
+      required Post post,
+      required CommunitySafe community,
+      required CommentAggregates counts,
+      required bool creatorBannedFromCommunity,
+      required bool subscribed,
+      required bool saved,
+      VoteType? myVote}) {
     return _CommentView(
       comment: comment,
       creator: creator,
@@ -1837,31 +1917,31 @@ class _$CommentViewTearOff {
     );
   }
 
-// ignore: unused_element
   CommentView fromJson(Map<String, Object> json) {
     return CommentView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommentView = _$CommentViewTearOff();
 
 /// @nodoc
 mixin _$CommentView {
-  Comment get comment;
-  UserSafe get creator;
-  UserSafe get recipient;
-  Post get post;
-  CommunitySafe get community;
-  CommentAggregates get counts;
-  bool get creatorBannedFromCommunity;
-  bool get subscribed;
-  bool get saved;
-  VoteType get myVote;
+  Comment get comment => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  UserSafe? get recipient => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get subscribed => throw _privateConstructorUsedError;
+  bool get saved => throw _privateConstructorUsedError;
+  VoteType? get myVote => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommentViewCopyWith<CommentView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentViewCopyWith<CommentView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1872,18 +1952,18 @@ abstract class $CommentViewCopyWith<$Res> {
   $Res call(
       {Comment comment,
       UserSafe creator,
-      UserSafe recipient,
+      UserSafe? recipient,
       Post post,
       CommunitySafe community,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType myVote});
+      VoteType? myVote});
 
   $CommentCopyWith<$Res> get comment;
   $UserSafeCopyWith<$Res> get creator;
-  $UserSafeCopyWith<$Res> get recipient;
+  $UserSafeCopyWith<$Res>? get recipient;
   $PostCopyWith<$Res> get post;
   $CommunitySafeCopyWith<$Res> get community;
   $CommentAggregatesCopyWith<$Res> get counts;
@@ -1899,41 +1979,63 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
 
   @override
   $Res call({
-    Object comment = freezed,
-    Object creator = freezed,
-    Object recipient = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object counts = freezed,
-    Object creatorBannedFromCommunity = freezed,
-    Object subscribed = freezed,
-    Object saved = freezed,
-    Object myVote = freezed,
+    Object? comment = freezed,
+    Object? creator = freezed,
+    Object? recipient = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? counts = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? myVote = freezed,
   }) {
     return _then(_value.copyWith(
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 
   @override
   $CommentCopyWith<$Res> get comment {
-    if (_value.comment == null) {
-      return null;
-    }
     return $CommentCopyWith<$Res>(_value.comment, (value) {
       return _then(_value.copyWith(comment: value));
     });
@@ -1941,29 +2043,24 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
   }
 
   @override
-  $UserSafeCopyWith<$Res> get recipient {
+  $UserSafeCopyWith<$Res>? get recipient {
     if (_value.recipient == null) {
       return null;
     }
-    return $UserSafeCopyWith<$Res>(_value.recipient, (value) {
+
+    return $UserSafeCopyWith<$Res>(_value.recipient!, (value) {
       return _then(_value.copyWith(recipient: value));
     });
   }
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -1971,9 +2068,6 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -1981,9 +2075,6 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
 
   @override
   $CommentAggregatesCopyWith<$Res> get counts {
-    if (_value.counts == null) {
-      return null;
-    }
     return $CommentAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
     });
@@ -2000,21 +2091,21 @@ abstract class _$CommentViewCopyWith<$Res>
   $Res call(
       {Comment comment,
       UserSafe creator,
-      UserSafe recipient,
+      UserSafe? recipient,
       Post post,
       CommunitySafe community,
       CommentAggregates counts,
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType myVote});
+      VoteType? myVote});
 
   @override
   $CommentCopyWith<$Res> get comment;
   @override
   $UserSafeCopyWith<$Res> get creator;
   @override
-  $UserSafeCopyWith<$Res> get recipient;
+  $UserSafeCopyWith<$Res>? get recipient;
   @override
   $PostCopyWith<$Res> get post;
   @override
@@ -2035,33 +2126,58 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object comment = freezed,
-    Object creator = freezed,
-    Object recipient = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object counts = freezed,
-    Object creatorBannedFromCommunity = freezed,
-    Object subscribed = freezed,
-    Object saved = freezed,
-    Object myVote = freezed,
+    Object? comment = freezed,
+    Object? creator = freezed,
+    Object? recipient = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? counts = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? subscribed = freezed,
+    Object? saved = freezed,
+    Object? myVote = freezed,
   }) {
     return _then(_CommentView(
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 }
@@ -2071,25 +2187,17 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommentView extends _CommentView {
   _$_CommentView(
-      {@required this.comment,
-      @required this.creator,
+      {required this.comment,
+      required this.creator,
       this.recipient,
-      @required this.post,
-      @required this.community,
-      @required this.counts,
-      @required this.creatorBannedFromCommunity,
-      @required this.subscribed,
-      @required this.saved,
+      required this.post,
+      required this.community,
+      required this.counts,
+      required this.creatorBannedFromCommunity,
+      required this.subscribed,
+      required this.saved,
       this.myVote})
-      : assert(comment != null),
-        assert(creator != null),
-        assert(post != null),
-        assert(community != null),
-        assert(counts != null),
-        assert(creatorBannedFromCommunity != null),
-        assert(subscribed != null),
-        assert(saved != null),
-        super._();
+      : super._();
 
   factory _$_CommentView.fromJson(Map<String, dynamic> json) =>
       _$_$_CommentViewFromJson(json);
@@ -2099,7 +2207,7 @@ class _$_CommentView extends _CommentView {
   @override
   final UserSafe creator;
   @override
-  final UserSafe recipient;
+  final UserSafe? recipient;
   @override
   final Post post;
   @override
@@ -2113,7 +2221,7 @@ class _$_CommentView extends _CommentView {
   @override
   final bool saved;
   @override
-  final VoteType myVote;
+  final VoteType? myVote;
 
   @override
   String toString() {
@@ -2168,6 +2276,7 @@ class _$_CommentView extends _CommentView {
       const DeepCollectionEquality().hash(saved) ^
       const DeepCollectionEquality().hash(myVote);
 
+  @JsonKey(ignore: true)
   @override
   _$CommentViewCopyWith<_CommentView> get copyWith =>
       __$CommentViewCopyWithImpl<_CommentView>(this, _$identity);
@@ -2179,44 +2288,46 @@ class _$_CommentView extends _CommentView {
 }
 
 abstract class _CommentView extends CommentView {
-  _CommentView._() : super._();
   factory _CommentView(
-      {@required Comment comment,
-      @required UserSafe creator,
-      UserSafe recipient,
-      @required Post post,
-      @required CommunitySafe community,
-      @required CommentAggregates counts,
-      @required bool creatorBannedFromCommunity,
-      @required bool subscribed,
-      @required bool saved,
-      VoteType myVote}) = _$_CommentView;
+      {required Comment comment,
+      required UserSafe creator,
+      UserSafe? recipient,
+      required Post post,
+      required CommunitySafe community,
+      required CommentAggregates counts,
+      required bool creatorBannedFromCommunity,
+      required bool subscribed,
+      required bool saved,
+      VoteType? myVote}) = _$_CommentView;
+  _CommentView._() : super._();
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
       _$_CommentView.fromJson;
 
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  UserSafe get recipient;
+  UserSafe? get recipient => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  CommentAggregates get counts;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get saved;
+  bool get saved => throw _privateConstructorUsedError;
   @override
-  VoteType get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  _$CommentViewCopyWith<_CommentView> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommentViewCopyWith<_CommentView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommentReportView _$CommentReportViewFromJson(Map<String, dynamic> json) {
@@ -2227,15 +2338,14 @@ CommentReportView _$CommentReportViewFromJson(Map<String, dynamic> json) {
 class _$CommentReportViewTearOff {
   const _$CommentReportViewTearOff();
 
-// ignore: unused_element
   _CommentReportView call(
-      {@required CommentReport commentReport,
-      @required Comment comment,
-      @required Post post,
-      @required CommunitySafe community,
-      @required UserSafe creator,
-      @required UserSafe commentCreator,
-      UserSafe resolver}) {
+      {required CommentReport commentReport,
+      required Comment comment,
+      required Post post,
+      required CommunitySafe community,
+      required UserSafe creator,
+      required UserSafe commentCreator,
+      UserSafe? resolver}) {
     return _CommentReportView(
       commentReport: commentReport,
       comment: comment,
@@ -2247,28 +2357,28 @@ class _$CommentReportViewTearOff {
     );
   }
 
-// ignore: unused_element
   CommentReportView fromJson(Map<String, Object> json) {
     return CommentReportView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommentReportView = _$CommentReportViewTearOff();
 
 /// @nodoc
 mixin _$CommentReportView {
-  CommentReport get commentReport;
-  Comment get comment;
-  Post get post;
-  CommunitySafe get community;
-  UserSafe get creator;
-  UserSafe get commentCreator;
-  UserSafe get resolver;
+  CommentReport get commentReport => throw _privateConstructorUsedError;
+  Comment get comment => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  UserSafe get commentCreator => throw _privateConstructorUsedError;
+  UserSafe? get resolver => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommentReportViewCopyWith<CommentReportView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentReportViewCopyWith<CommentReportView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2283,7 +2393,7 @@ abstract class $CommentReportViewCopyWith<$Res> {
       CommunitySafe community,
       UserSafe creator,
       UserSafe commentCreator,
-      UserSafe resolver});
+      UserSafe? resolver});
 
   $CommentReportCopyWith<$Res> get commentReport;
   $CommentCopyWith<$Res> get comment;
@@ -2291,7 +2401,7 @@ abstract class $CommentReportViewCopyWith<$Res> {
   $CommunitySafeCopyWith<$Res> get community;
   $UserSafeCopyWith<$Res> get creator;
   $UserSafeCopyWith<$Res> get commentCreator;
-  $UserSafeCopyWith<$Res> get resolver;
+  $UserSafeCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -2305,35 +2415,48 @@ class _$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentReport = freezed,
-    Object comment = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object creator = freezed,
-    Object commentCreator = freezed,
-    Object resolver = freezed,
+    Object? commentReport = freezed,
+    Object? comment = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? creator = freezed,
+    Object? commentCreator = freezed,
+    Object? resolver = freezed,
   }) {
     return _then(_value.copyWith(
       commentReport: commentReport == freezed
           ? _value.commentReport
-          : commentReport as CommentReport,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
+          : commentReport // ignore: cast_nullable_to_non_nullable
+              as CommentReport,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
       commentCreator: commentCreator == freezed
           ? _value.commentCreator
-          : commentCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe,
+          : commentCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 
   @override
   $CommentReportCopyWith<$Res> get commentReport {
-    if (_value.commentReport == null) {
-      return null;
-    }
     return $CommentReportCopyWith<$Res>(_value.commentReport, (value) {
       return _then(_value.copyWith(commentReport: value));
     });
@@ -2341,9 +2464,6 @@ class _$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $CommentCopyWith<$Res> get comment {
-    if (_value.comment == null) {
-      return null;
-    }
     return $CommentCopyWith<$Res>(_value.comment, (value) {
       return _then(_value.copyWith(comment: value));
     });
@@ -2351,9 +2471,6 @@ class _$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -2361,9 +2478,6 @@ class _$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -2371,9 +2485,6 @@ class _$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -2381,20 +2492,18 @@ class _$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get commentCreator {
-    if (_value.commentCreator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.commentCreator, (value) {
       return _then(_value.copyWith(commentCreator: value));
     });
   }
 
   @override
-  $UserSafeCopyWith<$Res> get resolver {
+  $UserSafeCopyWith<$Res>? get resolver {
     if (_value.resolver == null) {
       return null;
     }
-    return $UserSafeCopyWith<$Res>(_value.resolver, (value) {
+
+    return $UserSafeCopyWith<$Res>(_value.resolver!, (value) {
       return _then(_value.copyWith(resolver: value));
     });
   }
@@ -2414,7 +2523,7 @@ abstract class _$CommentReportViewCopyWith<$Res>
       CommunitySafe community,
       UserSafe creator,
       UserSafe commentCreator,
-      UserSafe resolver});
+      UserSafe? resolver});
 
   @override
   $CommentReportCopyWith<$Res> get commentReport;
@@ -2429,7 +2538,7 @@ abstract class _$CommentReportViewCopyWith<$Res>
   @override
   $UserSafeCopyWith<$Res> get commentCreator;
   @override
-  $UserSafeCopyWith<$Res> get resolver;
+  $UserSafeCopyWith<$Res>? get resolver;
 }
 
 /// @nodoc
@@ -2445,27 +2554,43 @@ class __$CommentReportViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentReport = freezed,
-    Object comment = freezed,
-    Object post = freezed,
-    Object community = freezed,
-    Object creator = freezed,
-    Object commentCreator = freezed,
-    Object resolver = freezed,
+    Object? commentReport = freezed,
+    Object? comment = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? creator = freezed,
+    Object? commentCreator = freezed,
+    Object? resolver = freezed,
   }) {
     return _then(_CommentReportView(
       commentReport: commentReport == freezed
           ? _value.commentReport
-          : commentReport as CommentReport,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
+          : commentReport // ignore: cast_nullable_to_non_nullable
+              as CommentReport,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
       commentCreator: commentCreator == freezed
           ? _value.commentCreator
-          : commentCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe,
+          : commentCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 }
@@ -2475,20 +2600,14 @@ class __$CommentReportViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommentReportView extends _CommentReportView {
   _$_CommentReportView(
-      {@required this.commentReport,
-      @required this.comment,
-      @required this.post,
-      @required this.community,
-      @required this.creator,
-      @required this.commentCreator,
+      {required this.commentReport,
+      required this.comment,
+      required this.post,
+      required this.community,
+      required this.creator,
+      required this.commentCreator,
       this.resolver})
-      : assert(commentReport != null),
-        assert(comment != null),
-        assert(post != null),
-        assert(community != null),
-        assert(creator != null),
-        assert(commentCreator != null),
-        super._();
+      : super._();
 
   factory _$_CommentReportView.fromJson(Map<String, dynamic> json) =>
       _$_$_CommentReportViewFromJson(json);
@@ -2506,7 +2625,7 @@ class _$_CommentReportView extends _CommentReportView {
   @override
   final UserSafe commentCreator;
   @override
-  final UserSafe resolver;
+  final UserSafe? resolver;
 
   @override
   String toString() {
@@ -2550,6 +2669,7 @@ class _$_CommentReportView extends _CommentReportView {
       const DeepCollectionEquality().hash(commentCreator) ^
       const DeepCollectionEquality().hash(resolver);
 
+  @JsonKey(ignore: true)
   @override
   _$CommentReportViewCopyWith<_CommentReportView> get copyWith =>
       __$CommentReportViewCopyWithImpl<_CommentReportView>(this, _$identity);
@@ -2561,35 +2681,37 @@ class _$_CommentReportView extends _CommentReportView {
 }
 
 abstract class _CommentReportView extends CommentReportView {
-  _CommentReportView._() : super._();
   factory _CommentReportView(
-      {@required CommentReport commentReport,
-      @required Comment comment,
-      @required Post post,
-      @required CommunitySafe community,
-      @required UserSafe creator,
-      @required UserSafe commentCreator,
-      UserSafe resolver}) = _$_CommentReportView;
+      {required CommentReport commentReport,
+      required Comment comment,
+      required Post post,
+      required CommunitySafe community,
+      required UserSafe creator,
+      required UserSafe commentCreator,
+      UserSafe? resolver}) = _$_CommentReportView;
+  _CommentReportView._() : super._();
 
   factory _CommentReportView.fromJson(Map<String, dynamic> json) =
       _$_CommentReportView.fromJson;
 
   @override
-  CommentReport get commentReport;
+  CommentReport get commentReport => throw _privateConstructorUsedError;
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  UserSafe get commentCreator;
+  UserSafe get commentCreator => throw _privateConstructorUsedError;
   @override
-  UserSafe get resolver;
+  UserSafe? get resolver => throw _privateConstructorUsedError;
   @override
-  _$CommentReportViewCopyWith<_CommentReportView> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommentReportViewCopyWith<_CommentReportView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModAddCommunityView _$ModAddCommunityViewFromJson(Map<String, dynamic> json) {
@@ -2600,12 +2722,11 @@ ModAddCommunityView _$ModAddCommunityViewFromJson(Map<String, dynamic> json) {
 class _$ModAddCommunityViewTearOff {
   const _$ModAddCommunityViewTearOff();
 
-// ignore: unused_element
   _ModAddCommunityView call(
-      {@required ModAddCommunity modAddCommunity,
-      @required UserSafe moderator,
-      @required CommunitySafe community,
-      @required UserSafe moddedUser}) {
+      {required ModAddCommunity modAddCommunity,
+      required UserSafe moderator,
+      required CommunitySafe community,
+      required UserSafe moddedUser}) {
     return _ModAddCommunityView(
       modAddCommunity: modAddCommunity,
       moderator: moderator,
@@ -2614,25 +2735,25 @@ class _$ModAddCommunityViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModAddCommunityView fromJson(Map<String, Object> json) {
     return ModAddCommunityView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModAddCommunityView = _$ModAddCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModAddCommunityView {
-  ModAddCommunity get modAddCommunity;
-  UserSafe get moderator;
-  CommunitySafe get community;
-  UserSafe get moddedUser;
+  ModAddCommunity get modAddCommunity => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get moddedUser => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModAddCommunityViewCopyWith<ModAddCommunityView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModAddCommunityViewCopyWith<ModAddCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2663,29 +2784,33 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modAddCommunity = freezed,
-    Object moderator = freezed,
-    Object community = freezed,
-    Object moddedUser = freezed,
+    Object? modAddCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
+    Object? moddedUser = freezed,
   }) {
     return _then(_value.copyWith(
       modAddCommunity: modAddCommunity == freezed
           ? _value.modAddCommunity
-          : modAddCommunity as ModAddCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+          : modAddCommunity // ignore: cast_nullable_to_non_nullable
+              as ModAddCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $ModAddCommunityCopyWith<$Res> get modAddCommunity {
-    if (_value.modAddCommunity == null) {
-      return null;
-    }
     return $ModAddCommunityCopyWith<$Res>(_value.modAddCommunity, (value) {
       return _then(_value.copyWith(modAddCommunity: value));
     });
@@ -2693,9 +2818,6 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -2703,9 +2825,6 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -2713,9 +2832,6 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moddedUser {
-    if (_value.moddedUser == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moddedUser, (value) {
       return _then(_value.copyWith(moddedUser: value));
     });
@@ -2758,21 +2874,28 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modAddCommunity = freezed,
-    Object moderator = freezed,
-    Object community = freezed,
-    Object moddedUser = freezed,
+    Object? modAddCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
+    Object? moddedUser = freezed,
   }) {
     return _then(_ModAddCommunityView(
       modAddCommunity: modAddCommunity == freezed
           ? _value.modAddCommunity
-          : modAddCommunity as ModAddCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+          : modAddCommunity // ignore: cast_nullable_to_non_nullable
+              as ModAddCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -2782,15 +2905,11 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModAddCommunityView extends _ModAddCommunityView {
   _$_ModAddCommunityView(
-      {@required this.modAddCommunity,
-      @required this.moderator,
-      @required this.community,
-      @required this.moddedUser})
-      : assert(modAddCommunity != null),
-        assert(moderator != null),
-        assert(community != null),
-        assert(moddedUser != null),
-        super._();
+      {required this.modAddCommunity,
+      required this.moderator,
+      required this.community,
+      required this.moddedUser})
+      : super._();
 
   factory _$_ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModAddCommunityViewFromJson(json);
@@ -2835,6 +2954,7 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(moddedUser);
 
+  @JsonKey(ignore: true)
   @override
   _$ModAddCommunityViewCopyWith<_ModAddCommunityView> get copyWith =>
       __$ModAddCommunityViewCopyWithImpl<_ModAddCommunityView>(
@@ -2847,26 +2967,28 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
 }
 
 abstract class _ModAddCommunityView extends ModAddCommunityView {
-  _ModAddCommunityView._() : super._();
   factory _ModAddCommunityView(
-      {@required ModAddCommunity modAddCommunity,
-      @required UserSafe moderator,
-      @required CommunitySafe community,
-      @required UserSafe moddedUser}) = _$_ModAddCommunityView;
+      {required ModAddCommunity modAddCommunity,
+      required UserSafe moderator,
+      required CommunitySafe community,
+      required UserSafe moddedUser}) = _$_ModAddCommunityView;
+  _ModAddCommunityView._() : super._();
 
   factory _ModAddCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunityView.fromJson;
 
   @override
-  ModAddCommunity get modAddCommunity;
+  ModAddCommunity get modAddCommunity => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get moddedUser;
+  UserSafe get moddedUser => throw _privateConstructorUsedError;
   @override
-  _$ModAddCommunityViewCopyWith<_ModAddCommunityView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModAddCommunityViewCopyWith<_ModAddCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
@@ -2877,11 +2999,10 @@ ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
 class _$ModAddViewTearOff {
   const _$ModAddViewTearOff();
 
-// ignore: unused_element
   _ModAddView call(
-      {@required ModAdd modAdd,
-      @required UserSafe moderator,
-      @required UserSafe moddedUser}) {
+      {required ModAdd modAdd,
+      required UserSafe moderator,
+      required UserSafe moddedUser}) {
     return _ModAddView(
       modAdd: modAdd,
       moderator: moderator,
@@ -2889,24 +3010,24 @@ class _$ModAddViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModAddView fromJson(Map<String, Object> json) {
     return ModAddView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModAddView = _$ModAddViewTearOff();
 
 /// @nodoc
 mixin _$ModAddView {
-  ModAdd get modAdd;
-  UserSafe get moderator;
-  UserSafe get moddedUser;
+  ModAdd get modAdd => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  UserSafe get moddedUser => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModAddViewCopyWith<ModAddView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModAddViewCopyWith<ModAddView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2931,24 +3052,28 @@ class _$ModAddViewCopyWithImpl<$Res> implements $ModAddViewCopyWith<$Res> {
 
   @override
   $Res call({
-    Object modAdd = freezed,
-    Object moderator = freezed,
-    Object moddedUser = freezed,
+    Object? modAdd = freezed,
+    Object? moderator = freezed,
+    Object? moddedUser = freezed,
   }) {
     return _then(_value.copyWith(
-      modAdd: modAdd == freezed ? _value.modAdd : modAdd as ModAdd,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+      modAdd: modAdd == freezed
+          ? _value.modAdd
+          : modAdd // ignore: cast_nullable_to_non_nullable
+              as ModAdd,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $ModAddCopyWith<$Res> get modAdd {
-    if (_value.modAdd == null) {
-      return null;
-    }
     return $ModAddCopyWith<$Res>(_value.modAdd, (value) {
       return _then(_value.copyWith(modAdd: value));
     });
@@ -2956,9 +3081,6 @@ class _$ModAddViewCopyWithImpl<$Res> implements $ModAddViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -2966,9 +3088,6 @@ class _$ModAddViewCopyWithImpl<$Res> implements $ModAddViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get moddedUser {
-    if (_value.moddedUser == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moddedUser, (value) {
       return _then(_value.copyWith(moddedUser: value));
     });
@@ -3003,16 +3122,23 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modAdd = freezed,
-    Object moderator = freezed,
-    Object moddedUser = freezed,
+    Object? modAdd = freezed,
+    Object? moderator = freezed,
+    Object? moddedUser = freezed,
   }) {
     return _then(_ModAddView(
-      modAdd: modAdd == freezed ? _value.modAdd : modAdd as ModAdd,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+      modAdd: modAdd == freezed
+          ? _value.modAdd
+          : modAdd // ignore: cast_nullable_to_non_nullable
+              as ModAdd,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -3022,13 +3148,8 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModAddView extends _ModAddView {
   _$_ModAddView(
-      {@required this.modAdd,
-      @required this.moderator,
-      @required this.moddedUser})
-      : assert(modAdd != null),
-        assert(moderator != null),
-        assert(moddedUser != null),
-        super._();
+      {required this.modAdd, required this.moderator, required this.moddedUser})
+      : super._();
 
   factory _$_ModAddView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModAddViewFromJson(json);
@@ -3066,6 +3187,7 @@ class _$_ModAddView extends _ModAddView {
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(moddedUser);
 
+  @JsonKey(ignore: true)
   @override
   _$ModAddViewCopyWith<_ModAddView> get copyWith =>
       __$ModAddViewCopyWithImpl<_ModAddView>(this, _$identity);
@@ -3077,23 +3199,25 @@ class _$_ModAddView extends _ModAddView {
 }
 
 abstract class _ModAddView extends ModAddView {
-  _ModAddView._() : super._();
   factory _ModAddView(
-      {@required ModAdd modAdd,
-      @required UserSafe moderator,
-      @required UserSafe moddedUser}) = _$_ModAddView;
+      {required ModAdd modAdd,
+      required UserSafe moderator,
+      required UserSafe moddedUser}) = _$_ModAddView;
+  _ModAddView._() : super._();
 
   factory _ModAddView.fromJson(Map<String, dynamic> json) =
       _$_ModAddView.fromJson;
 
   @override
-  ModAdd get modAdd;
+  ModAdd get modAdd => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  UserSafe get moddedUser;
+  UserSafe get moddedUser => throw _privateConstructorUsedError;
   @override
-  _$ModAddViewCopyWith<_ModAddView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModAddViewCopyWith<_ModAddView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
@@ -3105,12 +3229,11 @@ ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
 class _$ModBanFromCommunityViewTearOff {
   const _$ModBanFromCommunityViewTearOff();
 
-// ignore: unused_element
   _ModBanFromCommunityView call(
-      {@required ModBanFromCommunity modBanFromCommunity,
-      @required UserSafe moderator,
-      @required CommunitySafe community,
-      @required UserSafe bannedUser}) {
+      {required ModBanFromCommunity modBanFromCommunity,
+      required UserSafe moderator,
+      required CommunitySafe community,
+      required UserSafe bannedUser}) {
     return _ModBanFromCommunityView(
       modBanFromCommunity: modBanFromCommunity,
       moderator: moderator,
@@ -3119,25 +3242,26 @@ class _$ModBanFromCommunityViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModBanFromCommunityView fromJson(Map<String, Object> json) {
     return ModBanFromCommunityView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModBanFromCommunityView = _$ModBanFromCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModBanFromCommunityView {
-  ModBanFromCommunity get modBanFromCommunity;
-  UserSafe get moderator;
-  CommunitySafe get community;
-  UserSafe get bannedUser;
+  ModBanFromCommunity get modBanFromCommunity =>
+      throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get bannedUser => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModBanFromCommunityViewCopyWith<ModBanFromCommunityView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModBanFromCommunityViewCopyWith<ModBanFromCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3168,29 +3292,33 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modBanFromCommunity = freezed,
-    Object moderator = freezed,
-    Object community = freezed,
-    Object bannedUser = freezed,
+    Object? modBanFromCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
+    Object? bannedUser = freezed,
   }) {
     return _then(_value.copyWith(
       modBanFromCommunity: modBanFromCommunity == freezed
           ? _value.modBanFromCommunity
-          : modBanFromCommunity as ModBanFromCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+          : modBanFromCommunity // ignore: cast_nullable_to_non_nullable
+              as ModBanFromCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $ModBanFromCommunityCopyWith<$Res> get modBanFromCommunity {
-    if (_value.modBanFromCommunity == null) {
-      return null;
-    }
     return $ModBanFromCommunityCopyWith<$Res>(_value.modBanFromCommunity,
         (value) {
       return _then(_value.copyWith(modBanFromCommunity: value));
@@ -3199,9 +3327,6 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -3209,9 +3334,6 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -3219,9 +3341,6 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get bannedUser {
-    if (_value.bannedUser == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.bannedUser, (value) {
       return _then(_value.copyWith(bannedUser: value));
     });
@@ -3265,21 +3384,28 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modBanFromCommunity = freezed,
-    Object moderator = freezed,
-    Object community = freezed,
-    Object bannedUser = freezed,
+    Object? modBanFromCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
+    Object? bannedUser = freezed,
   }) {
     return _then(_ModBanFromCommunityView(
       modBanFromCommunity: modBanFromCommunity == freezed
           ? _value.modBanFromCommunity
-          : modBanFromCommunity as ModBanFromCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+          : modBanFromCommunity // ignore: cast_nullable_to_non_nullable
+              as ModBanFromCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -3289,15 +3415,11 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
   _$_ModBanFromCommunityView(
-      {@required this.modBanFromCommunity,
-      @required this.moderator,
-      @required this.community,
-      @required this.bannedUser})
-      : assert(modBanFromCommunity != null),
-        assert(moderator != null),
-        assert(community != null),
-        assert(bannedUser != null),
-        super._();
+      {required this.modBanFromCommunity,
+      required this.moderator,
+      required this.community,
+      required this.bannedUser})
+      : super._();
 
   factory _$_ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModBanFromCommunityViewFromJson(json);
@@ -3342,6 +3464,7 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(bannedUser);
 
+  @JsonKey(ignore: true)
   @override
   _$ModBanFromCommunityViewCopyWith<_ModBanFromCommunityView> get copyWith =>
       __$ModBanFromCommunityViewCopyWithImpl<_ModBanFromCommunityView>(
@@ -3354,26 +3477,29 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
 }
 
 abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
-  _ModBanFromCommunityView._() : super._();
   factory _ModBanFromCommunityView(
-      {@required ModBanFromCommunity modBanFromCommunity,
-      @required UserSafe moderator,
-      @required CommunitySafe community,
-      @required UserSafe bannedUser}) = _$_ModBanFromCommunityView;
+      {required ModBanFromCommunity modBanFromCommunity,
+      required UserSafe moderator,
+      required CommunitySafe community,
+      required UserSafe bannedUser}) = _$_ModBanFromCommunityView;
+  _ModBanFromCommunityView._() : super._();
 
   factory _ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunityView.fromJson;
 
   @override
-  ModBanFromCommunity get modBanFromCommunity;
+  ModBanFromCommunity get modBanFromCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get bannedUser;
+  UserSafe get bannedUser => throw _privateConstructorUsedError;
   @override
-  _$ModBanFromCommunityViewCopyWith<_ModBanFromCommunityView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModBanFromCommunityViewCopyWith<_ModBanFromCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
@@ -3384,11 +3510,10 @@ ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
 class _$ModBanViewTearOff {
   const _$ModBanViewTearOff();
 
-// ignore: unused_element
   _ModBanView call(
-      {@required ModBan modBan,
-      @required UserSafe moderator,
-      @required UserSafe bannedUser}) {
+      {required ModBan modBan,
+      required UserSafe moderator,
+      required UserSafe bannedUser}) {
     return _ModBanView(
       modBan: modBan,
       moderator: moderator,
@@ -3396,24 +3521,24 @@ class _$ModBanViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModBanView fromJson(Map<String, Object> json) {
     return ModBanView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModBanView = _$ModBanViewTearOff();
 
 /// @nodoc
 mixin _$ModBanView {
-  ModBan get modBan;
-  UserSafe get moderator;
-  UserSafe get bannedUser;
+  ModBan get modBan => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  UserSafe get bannedUser => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModBanViewCopyWith<ModBanView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModBanViewCopyWith<ModBanView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3438,24 +3563,28 @@ class _$ModBanViewCopyWithImpl<$Res> implements $ModBanViewCopyWith<$Res> {
 
   @override
   $Res call({
-    Object modBan = freezed,
-    Object moderator = freezed,
-    Object bannedUser = freezed,
+    Object? modBan = freezed,
+    Object? moderator = freezed,
+    Object? bannedUser = freezed,
   }) {
     return _then(_value.copyWith(
-      modBan: modBan == freezed ? _value.modBan : modBan as ModBan,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+      modBan: modBan == freezed
+          ? _value.modBan
+          : modBan // ignore: cast_nullable_to_non_nullable
+              as ModBan,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $ModBanCopyWith<$Res> get modBan {
-    if (_value.modBan == null) {
-      return null;
-    }
     return $ModBanCopyWith<$Res>(_value.modBan, (value) {
       return _then(_value.copyWith(modBan: value));
     });
@@ -3463,9 +3592,6 @@ class _$ModBanViewCopyWithImpl<$Res> implements $ModBanViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -3473,9 +3599,6 @@ class _$ModBanViewCopyWithImpl<$Res> implements $ModBanViewCopyWith<$Res> {
 
   @override
   $UserSafeCopyWith<$Res> get bannedUser {
-    if (_value.bannedUser == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.bannedUser, (value) {
       return _then(_value.copyWith(bannedUser: value));
     });
@@ -3510,16 +3633,23 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modBan = freezed,
-    Object moderator = freezed,
-    Object bannedUser = freezed,
+    Object? modBan = freezed,
+    Object? moderator = freezed,
+    Object? bannedUser = freezed,
   }) {
     return _then(_ModBanView(
-      modBan: modBan == freezed ? _value.modBan : modBan as ModBan,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+      modBan: modBan == freezed
+          ? _value.modBan
+          : modBan // ignore: cast_nullable_to_non_nullable
+              as ModBan,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -3529,13 +3659,8 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModBanView extends _ModBanView {
   _$_ModBanView(
-      {@required this.modBan,
-      @required this.moderator,
-      @required this.bannedUser})
-      : assert(modBan != null),
-        assert(moderator != null),
-        assert(bannedUser != null),
-        super._();
+      {required this.modBan, required this.moderator, required this.bannedUser})
+      : super._();
 
   factory _$_ModBanView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModBanViewFromJson(json);
@@ -3573,6 +3698,7 @@ class _$_ModBanView extends _ModBanView {
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(bannedUser);
 
+  @JsonKey(ignore: true)
   @override
   _$ModBanViewCopyWith<_ModBanView> get copyWith =>
       __$ModBanViewCopyWithImpl<_ModBanView>(this, _$identity);
@@ -3584,23 +3710,25 @@ class _$_ModBanView extends _ModBanView {
 }
 
 abstract class _ModBanView extends ModBanView {
-  _ModBanView._() : super._();
   factory _ModBanView(
-      {@required ModBan modBan,
-      @required UserSafe moderator,
-      @required UserSafe bannedUser}) = _$_ModBanView;
+      {required ModBan modBan,
+      required UserSafe moderator,
+      required UserSafe bannedUser}) = _$_ModBanView;
+  _ModBanView._() : super._();
 
   factory _ModBanView.fromJson(Map<String, dynamic> json) =
       _$_ModBanView.fromJson;
 
   @override
-  ModBan get modBan;
+  ModBan get modBan => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  UserSafe get bannedUser;
+  UserSafe get bannedUser => throw _privateConstructorUsedError;
   @override
-  _$ModBanViewCopyWith<_ModBanView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModBanViewCopyWith<_ModBanView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
@@ -3611,12 +3739,11 @@ ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
 class _$ModLockPostViewTearOff {
   const _$ModLockPostViewTearOff();
 
-// ignore: unused_element
   _ModLockPostView call(
-      {@required ModLockPost modLockPost,
-      @required UserSafe moderator,
-      @required Post post,
-      @required CommunitySafe community}) {
+      {required ModLockPost modLockPost,
+      required UserSafe moderator,
+      required Post post,
+      required CommunitySafe community}) {
     return _ModLockPostView(
       modLockPost: modLockPost,
       moderator: moderator,
@@ -3625,25 +3752,25 @@ class _$ModLockPostViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModLockPostView fromJson(Map<String, Object> json) {
     return ModLockPostView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModLockPostView = _$ModLockPostViewTearOff();
 
 /// @nodoc
 mixin _$ModLockPostView {
-  ModLockPost get modLockPost;
-  UserSafe get moderator;
-  Post get post;
-  CommunitySafe get community;
+  ModLockPost get modLockPost => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModLockPostViewCopyWith<ModLockPostView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModLockPostViewCopyWith<ModLockPostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3674,28 +3801,33 @@ class _$ModLockPostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modLockPost = freezed,
-    Object moderator = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modLockPost = freezed,
+    Object? moderator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_value.copyWith(
       modLockPost: modLockPost == freezed
           ? _value.modLockPost
-          : modLockPost as ModLockPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modLockPost // ignore: cast_nullable_to_non_nullable
+              as ModLockPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
   @override
   $ModLockPostCopyWith<$Res> get modLockPost {
-    if (_value.modLockPost == null) {
-      return null;
-    }
     return $ModLockPostCopyWith<$Res>(_value.modLockPost, (value) {
       return _then(_value.copyWith(modLockPost: value));
     });
@@ -3703,9 +3835,6 @@ class _$ModLockPostViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -3713,9 +3842,6 @@ class _$ModLockPostViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -3723,9 +3849,6 @@ class _$ModLockPostViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -3768,20 +3891,28 @@ class __$ModLockPostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modLockPost = freezed,
-    Object moderator = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modLockPost = freezed,
+    Object? moderator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_ModLockPostView(
       modLockPost: modLockPost == freezed
           ? _value.modLockPost
-          : modLockPost as ModLockPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modLockPost // ignore: cast_nullable_to_non_nullable
+              as ModLockPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -3791,15 +3922,11 @@ class __$ModLockPostViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModLockPostView extends _ModLockPostView {
   _$_ModLockPostView(
-      {@required this.modLockPost,
-      @required this.moderator,
-      @required this.post,
-      @required this.community})
-      : assert(modLockPost != null),
-        assert(moderator != null),
-        assert(post != null),
-        assert(community != null),
-        super._();
+      {required this.modLockPost,
+      required this.moderator,
+      required this.post,
+      required this.community})
+      : super._();
 
   factory _$_ModLockPostView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModLockPostViewFromJson(json);
@@ -3843,6 +3970,7 @@ class _$_ModLockPostView extends _ModLockPostView {
       const DeepCollectionEquality().hash(post) ^
       const DeepCollectionEquality().hash(community);
 
+  @JsonKey(ignore: true)
   @override
   _$ModLockPostViewCopyWith<_ModLockPostView> get copyWith =>
       __$ModLockPostViewCopyWithImpl<_ModLockPostView>(this, _$identity);
@@ -3854,26 +3982,28 @@ class _$_ModLockPostView extends _ModLockPostView {
 }
 
 abstract class _ModLockPostView extends ModLockPostView {
-  _ModLockPostView._() : super._();
   factory _ModLockPostView(
-      {@required ModLockPost modLockPost,
-      @required UserSafe moderator,
-      @required Post post,
-      @required CommunitySafe community}) = _$_ModLockPostView;
+      {required ModLockPost modLockPost,
+      required UserSafe moderator,
+      required Post post,
+      required CommunitySafe community}) = _$_ModLockPostView;
+  _ModLockPostView._() : super._();
 
   factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
       _$_ModLockPostView.fromJson;
 
   @override
-  ModLockPost get modLockPost;
+  ModLockPost get modLockPost => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  _$ModLockPostViewCopyWith<_ModLockPostView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModLockPostViewCopyWith<_ModLockPostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
@@ -3884,14 +4014,13 @@ ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
 class _$ModRemoveCommentViewTearOff {
   const _$ModRemoveCommentViewTearOff();
 
-// ignore: unused_element
   _ModRemoveCommentView call(
-      {@required ModRemoveComment modRemoveComment,
-      @required UserSafe moderator,
-      @required Comment comment,
-      @required UserSafe commenter,
-      @required Post post,
-      @required CommunitySafe community}) {
+      {required ModRemoveComment modRemoveComment,
+      required UserSafe moderator,
+      required Comment comment,
+      required UserSafe commenter,
+      required Post post,
+      required CommunitySafe community}) {
     return _ModRemoveCommentView(
       modRemoveComment: modRemoveComment,
       moderator: moderator,
@@ -3902,27 +4031,27 @@ class _$ModRemoveCommentViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModRemoveCommentView fromJson(Map<String, Object> json) {
     return ModRemoveCommentView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModRemoveCommentView = _$ModRemoveCommentViewTearOff();
 
 /// @nodoc
 mixin _$ModRemoveCommentView {
-  ModRemoveComment get modRemoveComment;
-  UserSafe get moderator;
-  Comment get comment;
-  UserSafe get commenter;
-  Post get post;
-  CommunitySafe get community;
+  ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  Comment get comment => throw _privateConstructorUsedError;
+  UserSafe get commenter => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModRemoveCommentViewCopyWith<ModRemoveCommentView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModRemoveCommentViewCopyWith<ModRemoveCommentView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3957,33 +4086,43 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modRemoveComment = freezed,
-    Object moderator = freezed,
-    Object comment = freezed,
-    Object commenter = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modRemoveComment = freezed,
+    Object? moderator = freezed,
+    Object? comment = freezed,
+    Object? commenter = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_value.copyWith(
       modRemoveComment: modRemoveComment == freezed
           ? _value.modRemoveComment
-          : modRemoveComment as ModRemoveComment,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      commenter:
-          commenter == freezed ? _value.commenter : commenter as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveComment // ignore: cast_nullable_to_non_nullable
+              as ModRemoveComment,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      commenter: commenter == freezed
+          ? _value.commenter
+          : commenter // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
   @override
   $ModRemoveCommentCopyWith<$Res> get modRemoveComment {
-    if (_value.modRemoveComment == null) {
-      return null;
-    }
     return $ModRemoveCommentCopyWith<$Res>(_value.modRemoveComment, (value) {
       return _then(_value.copyWith(modRemoveComment: value));
     });
@@ -3991,9 +4130,6 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -4001,9 +4137,6 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $CommentCopyWith<$Res> get comment {
-    if (_value.comment == null) {
-      return null;
-    }
     return $CommentCopyWith<$Res>(_value.comment, (value) {
       return _then(_value.copyWith(comment: value));
     });
@@ -4011,9 +4144,6 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get commenter {
-    if (_value.commenter == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.commenter, (value) {
       return _then(_value.copyWith(commenter: value));
     });
@@ -4021,9 +4151,6 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -4031,9 +4158,6 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -4082,25 +4206,38 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modRemoveComment = freezed,
-    Object moderator = freezed,
-    Object comment = freezed,
-    Object commenter = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modRemoveComment = freezed,
+    Object? moderator = freezed,
+    Object? comment = freezed,
+    Object? commenter = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_ModRemoveCommentView(
       modRemoveComment: modRemoveComment == freezed
           ? _value.modRemoveComment
-          : modRemoveComment as ModRemoveComment,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      commenter:
-          commenter == freezed ? _value.commenter : commenter as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveComment // ignore: cast_nullable_to_non_nullable
+              as ModRemoveComment,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      commenter: commenter == freezed
+          ? _value.commenter
+          : commenter // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4110,19 +4247,13 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModRemoveCommentView extends _ModRemoveCommentView {
   _$_ModRemoveCommentView(
-      {@required this.modRemoveComment,
-      @required this.moderator,
-      @required this.comment,
-      @required this.commenter,
-      @required this.post,
-      @required this.community})
-      : assert(modRemoveComment != null),
-        assert(moderator != null),
-        assert(comment != null),
-        assert(commenter != null),
-        assert(post != null),
-        assert(community != null),
-        super._();
+      {required this.modRemoveComment,
+      required this.moderator,
+      required this.comment,
+      required this.commenter,
+      required this.post,
+      required this.community})
+      : super._();
 
   factory _$_ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModRemoveCommentViewFromJson(json);
@@ -4178,6 +4309,7 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
       const DeepCollectionEquality().hash(post) ^
       const DeepCollectionEquality().hash(community);
 
+  @JsonKey(ignore: true)
   @override
   _$ModRemoveCommentViewCopyWith<_ModRemoveCommentView> get copyWith =>
       __$ModRemoveCommentViewCopyWithImpl<_ModRemoveCommentView>(
@@ -4190,32 +4322,34 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
 }
 
 abstract class _ModRemoveCommentView extends ModRemoveCommentView {
-  _ModRemoveCommentView._() : super._();
   factory _ModRemoveCommentView(
-      {@required ModRemoveComment modRemoveComment,
-      @required UserSafe moderator,
-      @required Comment comment,
-      @required UserSafe commenter,
-      @required Post post,
-      @required CommunitySafe community}) = _$_ModRemoveCommentView;
+      {required ModRemoveComment modRemoveComment,
+      required UserSafe moderator,
+      required Comment comment,
+      required UserSafe commenter,
+      required Post post,
+      required CommunitySafe community}) = _$_ModRemoveCommentView;
+  _ModRemoveCommentView._() : super._();
 
   factory _ModRemoveCommentView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommentView.fromJson;
 
   @override
-  ModRemoveComment get modRemoveComment;
+  ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  UserSafe get commenter;
+  UserSafe get commenter => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  _$ModRemoveCommentViewCopyWith<_ModRemoveCommentView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModRemoveCommentViewCopyWith<_ModRemoveCommentView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModRemoveCommunityView _$ModRemoveCommunityViewFromJson(
@@ -4227,11 +4361,10 @@ ModRemoveCommunityView _$ModRemoveCommunityViewFromJson(
 class _$ModRemoveCommunityViewTearOff {
   const _$ModRemoveCommunityViewTearOff();
 
-// ignore: unused_element
   _ModRemoveCommunityView call(
-      {@required ModRemoveCommunity modRemoveCommunity,
-      @required UserSafe moderator,
-      @required CommunitySafe community}) {
+      {required ModRemoveCommunity modRemoveCommunity,
+      required UserSafe moderator,
+      required CommunitySafe community}) {
     return _ModRemoveCommunityView(
       modRemoveCommunity: modRemoveCommunity,
       moderator: moderator,
@@ -4239,24 +4372,25 @@ class _$ModRemoveCommunityViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModRemoveCommunityView fromJson(Map<String, Object> json) {
     return ModRemoveCommunityView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModRemoveCommunityView = _$ModRemoveCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModRemoveCommunityView {
-  ModRemoveCommunity get modRemoveCommunity;
-  UserSafe get moderator;
-  CommunitySafe get community;
+  ModRemoveCommunity get modRemoveCommunity =>
+      throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModRemoveCommunityViewCopyWith<ModRemoveCommunityView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModRemoveCommunityViewCopyWith<ModRemoveCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4285,26 +4419,28 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modRemoveCommunity = freezed,
-    Object moderator = freezed,
-    Object community = freezed,
+    Object? modRemoveCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
   }) {
     return _then(_value.copyWith(
       modRemoveCommunity: modRemoveCommunity == freezed
           ? _value.modRemoveCommunity
-          : modRemoveCommunity as ModRemoveCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveCommunity // ignore: cast_nullable_to_non_nullable
+              as ModRemoveCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
   @override
   $ModRemoveCommunityCopyWith<$Res> get modRemoveCommunity {
-    if (_value.modRemoveCommunity == null) {
-      return null;
-    }
     return $ModRemoveCommunityCopyWith<$Res>(_value.modRemoveCommunity,
         (value) {
       return _then(_value.copyWith(modRemoveCommunity: value));
@@ -4313,9 +4449,6 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -4323,9 +4456,6 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -4365,18 +4495,23 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modRemoveCommunity = freezed,
-    Object moderator = freezed,
-    Object community = freezed,
+    Object? modRemoveCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
   }) {
     return _then(_ModRemoveCommunityView(
       modRemoveCommunity: modRemoveCommunity == freezed
           ? _value.modRemoveCommunity
-          : modRemoveCommunity as ModRemoveCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveCommunity // ignore: cast_nullable_to_non_nullable
+              as ModRemoveCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4386,13 +4521,10 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
   _$_ModRemoveCommunityView(
-      {@required this.modRemoveCommunity,
-      @required this.moderator,
-      @required this.community})
-      : assert(modRemoveCommunity != null),
-        assert(moderator != null),
-        assert(community != null),
-        super._();
+      {required this.modRemoveCommunity,
+      required this.moderator,
+      required this.community})
+      : super._();
 
   factory _$_ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModRemoveCommunityViewFromJson(json);
@@ -4431,6 +4563,7 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(community);
 
+  @JsonKey(ignore: true)
   @override
   _$ModRemoveCommunityViewCopyWith<_ModRemoveCommunityView> get copyWith =>
       __$ModRemoveCommunityViewCopyWithImpl<_ModRemoveCommunityView>(
@@ -4443,23 +4576,26 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
 }
 
 abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
-  _ModRemoveCommunityView._() : super._();
   factory _ModRemoveCommunityView(
-      {@required ModRemoveCommunity modRemoveCommunity,
-      @required UserSafe moderator,
-      @required CommunitySafe community}) = _$_ModRemoveCommunityView;
+      {required ModRemoveCommunity modRemoveCommunity,
+      required UserSafe moderator,
+      required CommunitySafe community}) = _$_ModRemoveCommunityView;
+  _ModRemoveCommunityView._() : super._();
 
   factory _ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunityView.fromJson;
 
   @override
-  ModRemoveCommunity get modRemoveCommunity;
+  ModRemoveCommunity get modRemoveCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  _$ModRemoveCommunityViewCopyWith<_ModRemoveCommunityView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModRemoveCommunityViewCopyWith<_ModRemoveCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModRemovePostView _$ModRemovePostViewFromJson(Map<String, dynamic> json) {
@@ -4470,12 +4606,11 @@ ModRemovePostView _$ModRemovePostViewFromJson(Map<String, dynamic> json) {
 class _$ModRemovePostViewTearOff {
   const _$ModRemovePostViewTearOff();
 
-// ignore: unused_element
   _ModRemovePostView call(
-      {@required ModRemovePost modRemovePost,
-      @required UserSafe moderator,
-      @required Post post,
-      @required CommunitySafe community}) {
+      {required ModRemovePost modRemovePost,
+      required UserSafe moderator,
+      required Post post,
+      required CommunitySafe community}) {
     return _ModRemovePostView(
       modRemovePost: modRemovePost,
       moderator: moderator,
@@ -4484,25 +4619,25 @@ class _$ModRemovePostViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModRemovePostView fromJson(Map<String, Object> json) {
     return ModRemovePostView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModRemovePostView = _$ModRemovePostViewTearOff();
 
 /// @nodoc
 mixin _$ModRemovePostView {
-  ModRemovePost get modRemovePost;
-  UserSafe get moderator;
-  Post get post;
-  CommunitySafe get community;
+  ModRemovePost get modRemovePost => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModRemovePostViewCopyWith<ModRemovePostView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModRemovePostViewCopyWith<ModRemovePostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4533,28 +4668,33 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modRemovePost = freezed,
-    Object moderator = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modRemovePost = freezed,
+    Object? moderator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_value.copyWith(
       modRemovePost: modRemovePost == freezed
           ? _value.modRemovePost
-          : modRemovePost as ModRemovePost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemovePost // ignore: cast_nullable_to_non_nullable
+              as ModRemovePost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
   @override
   $ModRemovePostCopyWith<$Res> get modRemovePost {
-    if (_value.modRemovePost == null) {
-      return null;
-    }
     return $ModRemovePostCopyWith<$Res>(_value.modRemovePost, (value) {
       return _then(_value.copyWith(modRemovePost: value));
     });
@@ -4562,9 +4702,6 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -4572,9 +4709,6 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -4582,9 +4716,6 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -4627,20 +4758,28 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modRemovePost = freezed,
-    Object moderator = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modRemovePost = freezed,
+    Object? moderator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_ModRemovePostView(
       modRemovePost: modRemovePost == freezed
           ? _value.modRemovePost
-          : modRemovePost as ModRemovePost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemovePost // ignore: cast_nullable_to_non_nullable
+              as ModRemovePost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4650,15 +4789,11 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModRemovePostView extends _ModRemovePostView {
   _$_ModRemovePostView(
-      {@required this.modRemovePost,
-      @required this.moderator,
-      @required this.post,
-      @required this.community})
-      : assert(modRemovePost != null),
-        assert(moderator != null),
-        assert(post != null),
-        assert(community != null),
-        super._();
+      {required this.modRemovePost,
+      required this.moderator,
+      required this.post,
+      required this.community})
+      : super._();
 
   factory _$_ModRemovePostView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModRemovePostViewFromJson(json);
@@ -4702,6 +4837,7 @@ class _$_ModRemovePostView extends _ModRemovePostView {
       const DeepCollectionEquality().hash(post) ^
       const DeepCollectionEquality().hash(community);
 
+  @JsonKey(ignore: true)
   @override
   _$ModRemovePostViewCopyWith<_ModRemovePostView> get copyWith =>
       __$ModRemovePostViewCopyWithImpl<_ModRemovePostView>(this, _$identity);
@@ -4713,26 +4849,28 @@ class _$_ModRemovePostView extends _ModRemovePostView {
 }
 
 abstract class _ModRemovePostView extends ModRemovePostView {
-  _ModRemovePostView._() : super._();
   factory _ModRemovePostView(
-      {@required ModRemovePost modRemovePost,
-      @required UserSafe moderator,
-      @required Post post,
-      @required CommunitySafe community}) = _$_ModRemovePostView;
+      {required ModRemovePost modRemovePost,
+      required UserSafe moderator,
+      required Post post,
+      required CommunitySafe community}) = _$_ModRemovePostView;
+  _ModRemovePostView._() : super._();
 
   factory _ModRemovePostView.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePostView.fromJson;
 
   @override
-  ModRemovePost get modRemovePost;
+  ModRemovePost get modRemovePost => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  _$ModRemovePostViewCopyWith<_ModRemovePostView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModRemovePostViewCopyWith<_ModRemovePostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ModStickyPostView _$ModStickyPostViewFromJson(Map<String, dynamic> json) {
@@ -4743,12 +4881,11 @@ ModStickyPostView _$ModStickyPostViewFromJson(Map<String, dynamic> json) {
 class _$ModStickyPostViewTearOff {
   const _$ModStickyPostViewTearOff();
 
-// ignore: unused_element
   _ModStickyPostView call(
-      {@required ModStickyPost modStickyPost,
-      @required UserSafe moderator,
-      @required Post post,
-      @required CommunitySafe community}) {
+      {required ModStickyPost modStickyPost,
+      required UserSafe moderator,
+      required Post post,
+      required CommunitySafe community}) {
     return _ModStickyPostView(
       modStickyPost: modStickyPost,
       moderator: moderator,
@@ -4757,25 +4894,25 @@ class _$ModStickyPostViewTearOff {
     );
   }
 
-// ignore: unused_element
   ModStickyPostView fromJson(Map<String, Object> json) {
     return ModStickyPostView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ModStickyPostView = _$ModStickyPostViewTearOff();
 
 /// @nodoc
 mixin _$ModStickyPostView {
-  ModStickyPost get modStickyPost;
-  UserSafe get moderator;
-  Post get post;
-  CommunitySafe get community;
+  ModStickyPost get modStickyPost => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
+  Post get post => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ModStickyPostViewCopyWith<ModStickyPostView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModStickyPostViewCopyWith<ModStickyPostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4806,28 +4943,33 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modStickyPost = freezed,
-    Object moderator = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modStickyPost = freezed,
+    Object? moderator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_value.copyWith(
       modStickyPost: modStickyPost == freezed
           ? _value.modStickyPost
-          : modStickyPost as ModStickyPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modStickyPost // ignore: cast_nullable_to_non_nullable
+              as ModStickyPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
   @override
   $ModStickyPostCopyWith<$Res> get modStickyPost {
-    if (_value.modStickyPost == null) {
-      return null;
-    }
     return $ModStickyPostCopyWith<$Res>(_value.modStickyPost, (value) {
       return _then(_value.copyWith(modStickyPost: value));
     });
@@ -4835,9 +4977,6 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -4845,9 +4984,6 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
 
   @override
   $PostCopyWith<$Res> get post {
-    if (_value.post == null) {
-      return null;
-    }
     return $PostCopyWith<$Res>(_value.post, (value) {
       return _then(_value.copyWith(post: value));
     });
@@ -4855,9 +4991,6 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -4900,20 +5033,28 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object modStickyPost = freezed,
-    Object moderator = freezed,
-    Object post = freezed,
-    Object community = freezed,
+    Object? modStickyPost = freezed,
+    Object? moderator = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
   }) {
     return _then(_ModStickyPostView(
       modStickyPost: modStickyPost == freezed
           ? _value.modStickyPost
-          : modStickyPost as ModStickyPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modStickyPost // ignore: cast_nullable_to_non_nullable
+              as ModStickyPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4923,15 +5064,11 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_ModStickyPostView extends _ModStickyPostView {
   _$_ModStickyPostView(
-      {@required this.modStickyPost,
-      @required this.moderator,
-      @required this.post,
-      @required this.community})
-      : assert(modStickyPost != null),
-        assert(moderator != null),
-        assert(post != null),
-        assert(community != null),
-        super._();
+      {required this.modStickyPost,
+      required this.moderator,
+      required this.post,
+      required this.community})
+      : super._();
 
   factory _$_ModStickyPostView.fromJson(Map<String, dynamic> json) =>
       _$_$_ModStickyPostViewFromJson(json);
@@ -4975,6 +5112,7 @@ class _$_ModStickyPostView extends _ModStickyPostView {
       const DeepCollectionEquality().hash(post) ^
       const DeepCollectionEquality().hash(community);
 
+  @JsonKey(ignore: true)
   @override
   _$ModStickyPostViewCopyWith<_ModStickyPostView> get copyWith =>
       __$ModStickyPostViewCopyWithImpl<_ModStickyPostView>(this, _$identity);
@@ -4986,26 +5124,28 @@ class _$_ModStickyPostView extends _ModStickyPostView {
 }
 
 abstract class _ModStickyPostView extends ModStickyPostView {
-  _ModStickyPostView._() : super._();
   factory _ModStickyPostView(
-      {@required ModStickyPost modStickyPost,
-      @required UserSafe moderator,
-      @required Post post,
-      @required CommunitySafe community}) = _$_ModStickyPostView;
+      {required ModStickyPost modStickyPost,
+      required UserSafe moderator,
+      required Post post,
+      required CommunitySafe community}) = _$_ModStickyPostView;
+  _ModStickyPostView._() : super._();
 
   factory _ModStickyPostView.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPostView.fromJson;
 
   @override
-  ModStickyPost get modStickyPost;
+  ModStickyPost get modStickyPost => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  _$ModStickyPostViewCopyWith<_ModStickyPostView> get copyWith;
+  @JsonKey(ignore: true)
+  _$ModStickyPostViewCopyWith<_ModStickyPostView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommunityFollowerView _$CommunityFollowerViewFromJson(
@@ -5017,32 +5157,31 @@ CommunityFollowerView _$CommunityFollowerViewFromJson(
 class _$CommunityFollowerViewTearOff {
   const _$CommunityFollowerViewTearOff();
 
-// ignore: unused_element
   _CommunityFollowerView call(
-      {@required CommunitySafe community, @required UserSafe follower}) {
+      {required CommunitySafe community, required UserSafe follower}) {
     return _CommunityFollowerView(
       community: community,
       follower: follower,
     );
   }
 
-// ignore: unused_element
   CommunityFollowerView fromJson(Map<String, Object> json) {
     return CommunityFollowerView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommunityFollowerView = _$CommunityFollowerViewTearOff();
 
 /// @nodoc
 mixin _$CommunityFollowerView {
-  CommunitySafe get community;
-  UserSafe get follower;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get follower => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommunityFollowerViewCopyWith<CommunityFollowerView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunityFollowerViewCopyWith<CommunityFollowerView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5067,21 +5206,23 @@ class _$CommunityFollowerViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object follower = freezed,
+    Object? community = freezed,
+    Object? follower = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      follower: follower == freezed ? _value.follower : follower as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      follower: follower == freezed
+          ? _value.follower
+          : follower // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -5089,9 +5230,6 @@ class _$CommunityFollowerViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get follower {
-    if (_value.follower == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.follower, (value) {
       return _then(_value.copyWith(follower: value));
     });
@@ -5126,13 +5264,18 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object follower = freezed,
+    Object? community = freezed,
+    Object? follower = freezed,
   }) {
     return _then(_CommunityFollowerView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      follower: follower == freezed ? _value.follower : follower as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      follower: follower == freezed
+          ? _value.follower
+          : follower // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -5141,10 +5284,8 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityFollowerView extends _CommunityFollowerView {
-  _$_CommunityFollowerView({@required this.community, @required this.follower})
-      : assert(community != null),
-        assert(follower != null),
-        super._();
+  _$_CommunityFollowerView({required this.community, required this.follower})
+      : super._();
 
   factory _$_CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunityFollowerViewFromJson(json);
@@ -5177,6 +5318,7 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(follower);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunityFollowerViewCopyWith<_CommunityFollowerView> get copyWith =>
       __$CommunityFollowerViewCopyWithImpl<_CommunityFollowerView>(
@@ -5189,20 +5331,22 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 }
 
 abstract class _CommunityFollowerView extends CommunityFollowerView {
-  _CommunityFollowerView._() : super._();
   factory _CommunityFollowerView(
-      {@required CommunitySafe community,
-      @required UserSafe follower}) = _$_CommunityFollowerView;
+      {required CommunitySafe community,
+      required UserSafe follower}) = _$_CommunityFollowerView;
+  _CommunityFollowerView._() : super._();
 
   factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
       _$_CommunityFollowerView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get follower;
+  UserSafe get follower => throw _privateConstructorUsedError;
   @override
-  _$CommunityFollowerViewCopyWith<_CommunityFollowerView> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommunityFollowerViewCopyWith<_CommunityFollowerView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommunityModeratorView _$CommunityModeratorViewFromJson(
@@ -5214,32 +5358,31 @@ CommunityModeratorView _$CommunityModeratorViewFromJson(
 class _$CommunityModeratorViewTearOff {
   const _$CommunityModeratorViewTearOff();
 
-// ignore: unused_element
   _CommunityModeratorView call(
-      {@required CommunitySafe community, @required UserSafe moderator}) {
+      {required CommunitySafe community, required UserSafe moderator}) {
     return _CommunityModeratorView(
       community: community,
       moderator: moderator,
     );
   }
 
-// ignore: unused_element
   CommunityModeratorView fromJson(Map<String, Object> json) {
     return CommunityModeratorView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommunityModeratorView = _$CommunityModeratorViewTearOff();
 
 /// @nodoc
 mixin _$CommunityModeratorView {
-  CommunitySafe get community;
-  UserSafe get moderator;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get moderator => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommunityModeratorViewCopyWith<CommunityModeratorView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunityModeratorViewCopyWith<CommunityModeratorView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5264,22 +5407,23 @@ class _$CommunityModeratorViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object moderator = freezed,
+    Object? community = freezed,
+    Object? moderator = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -5287,9 +5431,6 @@ class _$CommunityModeratorViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get moderator {
-    if (_value.moderator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.moderator, (value) {
       return _then(_value.copyWith(moderator: value));
     });
@@ -5324,14 +5465,18 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object moderator = freezed,
+    Object? community = freezed,
+    Object? moderator = freezed,
   }) {
     return _then(_CommunityModeratorView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -5340,11 +5485,8 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityModeratorView extends _CommunityModeratorView {
-  _$_CommunityModeratorView(
-      {@required this.community, @required this.moderator})
-      : assert(community != null),
-        assert(moderator != null),
-        super._();
+  _$_CommunityModeratorView({required this.community, required this.moderator})
+      : super._();
 
   factory _$_CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunityModeratorViewFromJson(json);
@@ -5377,6 +5519,7 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(moderator);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunityModeratorViewCopyWith<_CommunityModeratorView> get copyWith =>
       __$CommunityModeratorViewCopyWithImpl<_CommunityModeratorView>(
@@ -5389,20 +5532,22 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 }
 
 abstract class _CommunityModeratorView extends CommunityModeratorView {
-  _CommunityModeratorView._() : super._();
   factory _CommunityModeratorView(
-      {@required CommunitySafe community,
-      @required UserSafe moderator}) = _$_CommunityModeratorView;
+      {required CommunitySafe community,
+      required UserSafe moderator}) = _$_CommunityModeratorView;
+  _CommunityModeratorView._() : super._();
 
   factory _CommunityModeratorView.fromJson(Map<String, dynamic> json) =
       _$_CommunityModeratorView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get moderator;
+  UserSafe get moderator => throw _privateConstructorUsedError;
   @override
-  _$CommunityModeratorViewCopyWith<_CommunityModeratorView> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommunityModeratorViewCopyWith<_CommunityModeratorView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommunityUserBanView _$CommunityUserBanViewFromJson(Map<String, dynamic> json) {
@@ -5413,32 +5558,31 @@ CommunityUserBanView _$CommunityUserBanViewFromJson(Map<String, dynamic> json) {
 class _$CommunityUserBanViewTearOff {
   const _$CommunityUserBanViewTearOff();
 
-// ignore: unused_element
   _CommunityUserBanView call(
-      {@required CommunitySafe community, @required UserSafe user}) {
+      {required CommunitySafe community, required UserSafe user}) {
     return _CommunityUserBanView(
       community: community,
       user: user,
     );
   }
 
-// ignore: unused_element
   CommunityUserBanView fromJson(Map<String, Object> json) {
     return CommunityUserBanView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommunityUserBanView = _$CommunityUserBanViewTearOff();
 
 /// @nodoc
 mixin _$CommunityUserBanView {
-  CommunitySafe get community;
-  UserSafe get user;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get user => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommunityUserBanViewCopyWith<CommunityUserBanView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunityUserBanViewCopyWith<CommunityUserBanView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5463,21 +5607,23 @@ class _$CommunityUserBanViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object user = freezed,
+    Object? community = freezed,
+    Object? user = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      user: user == freezed ? _value.user : user as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -5485,9 +5631,6 @@ class _$CommunityUserBanViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get user {
-    if (_value.user == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.user, (value) {
       return _then(_value.copyWith(user: value));
     });
@@ -5522,13 +5665,18 @@ class __$CommunityUserBanViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object user = freezed,
+    Object? community = freezed,
+    Object? user = freezed,
   }) {
     return _then(_CommunityUserBanView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      user: user == freezed ? _value.user : user as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -5537,10 +5685,8 @@ class __$CommunityUserBanViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityUserBanView extends _CommunityUserBanView {
-  _$_CommunityUserBanView({@required this.community, @required this.user})
-      : assert(community != null),
-        assert(user != null),
-        super._();
+  _$_CommunityUserBanView({required this.community, required this.user})
+      : super._();
 
   factory _$_CommunityUserBanView.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunityUserBanViewFromJson(json);
@@ -5572,6 +5718,7 @@ class _$_CommunityUserBanView extends _CommunityUserBanView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(user);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunityUserBanViewCopyWith<_CommunityUserBanView> get copyWith =>
       __$CommunityUserBanViewCopyWithImpl<_CommunityUserBanView>(
@@ -5584,20 +5731,22 @@ class _$_CommunityUserBanView extends _CommunityUserBanView {
 }
 
 abstract class _CommunityUserBanView extends CommunityUserBanView {
-  _CommunityUserBanView._() : super._();
   factory _CommunityUserBanView(
-      {@required CommunitySafe community,
-      @required UserSafe user}) = _$_CommunityUserBanView;
+      {required CommunitySafe community,
+      required UserSafe user}) = _$_CommunityUserBanView;
+  _CommunityUserBanView._() : super._();
 
   factory _CommunityUserBanView.fromJson(Map<String, dynamic> json) =
       _$_CommunityUserBanView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get user;
+  UserSafe get user => throw _privateConstructorUsedError;
   @override
-  _$CommunityUserBanViewCopyWith<_CommunityUserBanView> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommunityUserBanViewCopyWith<_CommunityUserBanView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
@@ -5608,13 +5757,12 @@ CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
 class _$CommunityViewTearOff {
   const _$CommunityViewTearOff();
 
-// ignore: unused_element
   _CommunityView call(
-      {@required CommunitySafe community,
-      @required UserSafe creator,
-      @required Category category,
-      @required bool subscribed,
-      @required CommunityAggregates counts}) {
+      {required CommunitySafe community,
+      required UserSafe creator,
+      required Category category,
+      required bool subscribed,
+      required CommunityAggregates counts}) {
     return _CommunityView(
       community: community,
       creator: creator,
@@ -5624,26 +5772,26 @@ class _$CommunityViewTearOff {
     );
   }
 
-// ignore: unused_element
   CommunityView fromJson(Map<String, Object> json) {
     return CommunityView.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommunityView = _$CommunityViewTearOff();
 
 /// @nodoc
 mixin _$CommunityView {
-  CommunitySafe get community;
-  UserSafe get creator;
-  Category get category;
-  bool get subscribed;
-  CommunityAggregates get counts;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  UserSafe get creator => throw _privateConstructorUsedError;
+  Category get category => throw _privateConstructorUsedError;
+  bool get subscribed => throw _privateConstructorUsedError;
+  CommunityAggregates get counts => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommunityViewCopyWith<CommunityView> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunityViewCopyWith<CommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5675,28 +5823,38 @@ class _$CommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object creator = freezed,
-    Object category = freezed,
-    Object subscribed = freezed,
-    Object counts = freezed,
+    Object? community = freezed,
+    Object? creator = freezed,
+    Object? category = freezed,
+    Object? subscribed = freezed,
+    Object? counts = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      category: category == freezed ? _value.category : category as Category,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      counts: counts == freezed ? _value.counts : counts as CommunityAggregates,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommunityAggregates,
     ));
   }
 
   @override
   $CommunitySafeCopyWith<$Res> get community {
-    if (_value.community == null) {
-      return null;
-    }
     return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
       return _then(_value.copyWith(community: value));
     });
@@ -5704,9 +5862,6 @@ class _$CommunityViewCopyWithImpl<$Res>
 
   @override
   $UserSafeCopyWith<$Res> get creator {
-    if (_value.creator == null) {
-      return null;
-    }
     return $UserSafeCopyWith<$Res>(_value.creator, (value) {
       return _then(_value.copyWith(creator: value));
     });
@@ -5714,9 +5869,6 @@ class _$CommunityViewCopyWithImpl<$Res>
 
   @override
   $CategoryCopyWith<$Res> get category {
-    if (_value.category == null) {
-      return null;
-    }
     return $CategoryCopyWith<$Res>(_value.category, (value) {
       return _then(_value.copyWith(category: value));
     });
@@ -5724,9 +5876,6 @@ class _$CommunityViewCopyWithImpl<$Res>
 
   @override
   $CommunityAggregatesCopyWith<$Res> get counts {
-    if (_value.counts == null) {
-      return null;
-    }
     return $CommunityAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
     });
@@ -5770,20 +5919,33 @@ class __$CommunityViewCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object community = freezed,
-    Object creator = freezed,
-    Object category = freezed,
-    Object subscribed = freezed,
-    Object counts = freezed,
+    Object? community = freezed,
+    Object? creator = freezed,
+    Object? category = freezed,
+    Object? subscribed = freezed,
+    Object? counts = freezed,
   }) {
     return _then(_CommunityView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      category: category == freezed ? _value.category : category as Category,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      counts: counts == freezed ? _value.counts : counts as CommunityAggregates,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommunityAggregates,
     ));
   }
 }
@@ -5793,17 +5955,12 @@ class __$CommunityViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunityView extends _CommunityView {
   _$_CommunityView(
-      {@required this.community,
-      @required this.creator,
-      @required this.category,
-      @required this.subscribed,
-      @required this.counts})
-      : assert(community != null),
-        assert(creator != null),
-        assert(category != null),
-        assert(subscribed != null),
-        assert(counts != null),
-        super._();
+      {required this.community,
+      required this.creator,
+      required this.category,
+      required this.subscribed,
+      required this.counts})
+      : super._();
 
   factory _$_CommunityView.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunityViewFromJson(json);
@@ -5853,6 +6010,7 @@ class _$_CommunityView extends _CommunityView {
       const DeepCollectionEquality().hash(subscribed) ^
       const DeepCollectionEquality().hash(counts);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunityViewCopyWith<_CommunityView> get copyWith =>
       __$CommunityViewCopyWithImpl<_CommunityView>(this, _$identity);
@@ -5864,27 +6022,29 @@ class _$_CommunityView extends _CommunityView {
 }
 
 abstract class _CommunityView extends CommunityView {
-  _CommunityView._() : super._();
   factory _CommunityView(
-      {@required CommunitySafe community,
-      @required UserSafe creator,
-      @required Category category,
-      @required bool subscribed,
-      @required CommunityAggregates counts}) = _$_CommunityView;
+      {required CommunitySafe community,
+      required UserSafe creator,
+      required Category category,
+      required bool subscribed,
+      required CommunityAggregates counts}) = _$_CommunityView;
+  _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
       _$_CommunityView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  UserSafe get creator;
+  UserSafe get creator => throw _privateConstructorUsedError;
   @override
-  Category get category;
+  Category get category => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  CommunityAggregates get counts;
+  CommunityAggregates get counts => throw _privateConstructorUsedError;
   @override
-  _$CommunityViewCopyWith<_CommunityView> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommunityViewCopyWith<_CommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
 }

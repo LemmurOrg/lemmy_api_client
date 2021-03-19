@@ -4,16 +4,13 @@
 
 import '../enums.dart';
 
-int sortTypeToIndex([SortType sortType]) =>
+int? sortTypeToIndex([SortType? sortType]) =>
     sortType == null ? null : SortType.values.indexOf(sortType);
-int postListingTypeToIndex([PostListingType postListingType]) =>
+int? postListingTypeToIndex([PostListingType? postListingType]) =>
     postListingType == null
         ? null
         : PostListingType.values.indexOf(postListingType);
 
-SortType sortTypeFromIndex(int index) =>
-    index >= SortType.values.length ? null : SortType.values[index];
+SortType sortTypeFromIndex(int index) => SortType.values[index];
 PostListingType postListingTypeFromIndex(int index) =>
-    index >= PostListingType.values.length
-        ? null
-        : PostListingType.values[index];
+    PostListingType.values[index];

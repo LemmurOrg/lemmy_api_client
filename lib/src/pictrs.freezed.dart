@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'pictrs.dart';
 
@@ -8,6 +8,10 @@ part of 'pictrs.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
   return _PictrsUploadFile.fromJson(json);
 }
@@ -16,32 +20,30 @@ PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
 class _$PictrsUploadFileTearOff {
   const _$PictrsUploadFileTearOff();
 
-// ignore: unused_element
-  _PictrsUploadFile call(
-      {@required String deleteToken, @required String file}) {
+  _PictrsUploadFile call({required String deleteToken, required String file}) {
     return _PictrsUploadFile(
       deleteToken: deleteToken,
       file: file,
     );
   }
 
-// ignore: unused_element
   PictrsUploadFile fromJson(Map<String, Object> json) {
     return PictrsUploadFile.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PictrsUploadFile = _$PictrsUploadFileTearOff();
 
 /// @nodoc
 mixin _$PictrsUploadFile {
-  String get deleteToken;
-  String get file;
+  String get deleteToken => throw _privateConstructorUsedError;
+  String get file => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PictrsUploadFileCopyWith<PictrsUploadFile> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PictrsUploadFileCopyWith<PictrsUploadFile> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -63,13 +65,18 @@ class _$PictrsUploadFileCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object deleteToken = freezed,
-    Object file = freezed,
+    Object? deleteToken = freezed,
+    Object? file = freezed,
   }) {
     return _then(_value.copyWith(
-      deleteToken:
-          deleteToken == freezed ? _value.deleteToken : deleteToken as String,
-      file: file == freezed ? _value.file : file as String,
+      deleteToken: deleteToken == freezed
+          ? _value.deleteToken
+          : deleteToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      file: file == freezed
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -97,13 +104,18 @@ class __$PictrsUploadFileCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object deleteToken = freezed,
-    Object file = freezed,
+    Object? deleteToken = freezed,
+    Object? file = freezed,
   }) {
     return _then(_PictrsUploadFile(
-      deleteToken:
-          deleteToken == freezed ? _value.deleteToken : deleteToken as String,
-      file: file == freezed ? _value.file : file as String,
+      deleteToken: deleteToken == freezed
+          ? _value.deleteToken
+          : deleteToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      file: file == freezed
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -112,10 +124,8 @@ class __$PictrsUploadFileCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PictrsUploadFile extends _PictrsUploadFile {
-  const _$_PictrsUploadFile({@required this.deleteToken, @required this.file})
-      : assert(deleteToken != null),
-        assert(file != null),
-        super._();
+  const _$_PictrsUploadFile({required this.deleteToken, required this.file})
+      : super._();
 
   factory _$_PictrsUploadFile.fromJson(Map<String, dynamic> json) =>
       _$_$_PictrsUploadFileFromJson(json);
@@ -147,6 +157,7 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
       const DeepCollectionEquality().hash(deleteToken) ^
       const DeepCollectionEquality().hash(file);
 
+  @JsonKey(ignore: true)
   @override
   _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith =>
       __$PictrsUploadFileCopyWithImpl<_PictrsUploadFile>(this, _$identity);
@@ -158,20 +169,22 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
 }
 
 abstract class _PictrsUploadFile extends PictrsUploadFile {
-  const _PictrsUploadFile._() : super._();
   const factory _PictrsUploadFile(
-      {@required String deleteToken,
-      @required String file}) = _$_PictrsUploadFile;
+      {required String deleteToken,
+      required String file}) = _$_PictrsUploadFile;
+  const _PictrsUploadFile._() : super._();
 
   factory _PictrsUploadFile.fromJson(Map<String, dynamic> json) =
       _$_PictrsUploadFile.fromJson;
 
   @override
-  String get deleteToken;
+  String get deleteToken => throw _privateConstructorUsedError;
   @override
-  String get file;
+  String get file => throw _privateConstructorUsedError;
   @override
-  _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith;
+  @JsonKey(ignore: true)
+  _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
@@ -182,32 +195,31 @@ PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
 class _$PictrsUploadTearOff {
   const _$PictrsUploadTearOff();
 
-// ignore: unused_element
   _PictrsUpload call(
-      {@required String msg, @required List<PictrsUploadFile> files}) {
+      {required String msg, required List<PictrsUploadFile> files}) {
     return _PictrsUpload(
       msg: msg,
       files: files,
     );
   }
 
-// ignore: unused_element
   PictrsUpload fromJson(Map<String, Object> json) {
     return PictrsUpload.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PictrsUpload = _$PictrsUploadTearOff();
 
 /// @nodoc
 mixin _$PictrsUpload {
-  String get msg;
-  List<PictrsUploadFile> get files;
+  String get msg => throw _privateConstructorUsedError;
+  List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PictrsUploadCopyWith<PictrsUpload> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PictrsUploadCopyWith<PictrsUpload> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -228,12 +240,18 @@ class _$PictrsUploadCopyWithImpl<$Res> implements $PictrsUploadCopyWith<$Res> {
 
   @override
   $Res call({
-    Object msg = freezed,
-    Object files = freezed,
+    Object? msg = freezed,
+    Object? files = freezed,
   }) {
     return _then(_value.copyWith(
-      msg: msg == freezed ? _value.msg : msg as String,
-      files: files == freezed ? _value.files : files as List<PictrsUploadFile>,
+      msg: msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+      files: files == freezed
+          ? _value.files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<PictrsUploadFile>,
     ));
   }
 }
@@ -260,12 +278,18 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object msg = freezed,
-    Object files = freezed,
+    Object? msg = freezed,
+    Object? files = freezed,
   }) {
     return _then(_PictrsUpload(
-      msg: msg == freezed ? _value.msg : msg as String,
-      files: files == freezed ? _value.files : files as List<PictrsUploadFile>,
+      msg: msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+      files: files == freezed
+          ? _value.files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<PictrsUploadFile>,
     ));
   }
 }
@@ -274,10 +298,7 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PictrsUpload extends _PictrsUpload {
-  _$_PictrsUpload({@required this.msg, @required this.files})
-      : assert(msg != null),
-        assert(files != null),
-        super._();
+  _$_PictrsUpload({required this.msg, required this.files}) : super._();
 
   factory _$_PictrsUpload.fromJson(Map<String, dynamic> json) =>
       _$_$_PictrsUploadFromJson(json);
@@ -308,6 +329,7 @@ class _$_PictrsUpload extends _PictrsUpload {
       const DeepCollectionEquality().hash(msg) ^
       const DeepCollectionEquality().hash(files);
 
+  @JsonKey(ignore: true)
   @override
   _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>
       __$PictrsUploadCopyWithImpl<_PictrsUpload>(this, _$identity);
@@ -319,18 +341,20 @@ class _$_PictrsUpload extends _PictrsUpload {
 }
 
 abstract class _PictrsUpload extends PictrsUpload {
-  _PictrsUpload._() : super._();
   factory _PictrsUpload(
-      {@required String msg,
-      @required List<PictrsUploadFile> files}) = _$_PictrsUpload;
+      {required String msg,
+      required List<PictrsUploadFile> files}) = _$_PictrsUpload;
+  _PictrsUpload._() : super._();
 
   factory _PictrsUpload.fromJson(Map<String, dynamic> json) =
       _$_PictrsUpload.fromJson;
 
   @override
-  String get msg;
+  String get msg => throw _privateConstructorUsedError;
   @override
-  List<PictrsUploadFile> get files;
+  List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
   @override
-  _$PictrsUploadCopyWith<_PictrsUpload> get copyWith;
+  @JsonKey(ignore: true)
+  _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>
+      throw _privateConstructorUsedError;
 }

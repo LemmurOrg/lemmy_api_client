@@ -27,11 +27,11 @@ class Jwt {
 }
 
 @freezed
-abstract class JwtPayload implements _$JwtPayload {
+class JwtPayload with _$JwtPayload {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory JwtPayload({
-    @required int id,
-    @required String iss,
+    required int id,
+    required String iss,
   }) = _JwtPayload;
 
   const JwtPayload._();

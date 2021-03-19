@@ -7,15 +7,15 @@ part 'aggregates.freezed.dart';
 part 'aggregates.g.dart';
 
 @freezed
-abstract class UserAggregates implements _$UserAggregates {
+class UserAggregates with _$UserAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory UserAggregates({
-    @required int id,
-    @required int userId,
-    @required int postCount,
-    @required int postScore,
-    @required int commentCount,
-    @required int commentScore,
+    required int id,
+    required int userId,
+    required int postCount,
+    required int postScore,
+    required int commentCount,
+    required int commentScore,
   }) = _UserAggregates;
 
   const UserAggregates._();
@@ -24,19 +24,19 @@ abstract class UserAggregates implements _$UserAggregates {
 }
 
 @freezed
-abstract class SiteAggregates implements _$SiteAggregates {
+class SiteAggregates with _$SiteAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory SiteAggregates({
-    @required int id,
-    @required int siteId,
-    @required int users,
-    @required int posts,
-    @required int comments,
-    @required int communities,
-    @required int usersActiveDay,
-    @required int usersActiveWeek,
-    @required int usersActiveMonth,
-    @required int usersActiveHalfYear,
+    required int id,
+    required int siteId,
+    required int users,
+    required int posts,
+    required int comments,
+    required int communities,
+    required int usersActiveDay,
+    required int usersActiveWeek,
+    required int usersActiveMonth,
+    required int usersActiveHalfYear,
   }) = _SiteAggregates;
 
   const SiteAggregates._();
@@ -45,18 +45,19 @@ abstract class SiteAggregates implements _$SiteAggregates {
 }
 
 @freezed
-abstract class PostAggregates implements _$PostAggregates {
+class PostAggregates with _$PostAggregates {
   @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory PostAggregates({
-    @required int id,
-    @required int postId,
-    @required int comments,
-    @required int score,
-    @required int upvotes,
-    @required int downvotes,
-    @required DateTime newestCommentTime,
-    @required DateTime newestCommentTimeNecro,
+    required int id,
+    required int postId,
+    required int comments,
+    required int score,
+    required int upvotes,
+    required int downvotes,
+    required DateTime newestCommentTime,
+    required DateTime newestCommentTimeNecro,
   }) = _PostAggregates;
 
   const PostAggregates._();
@@ -65,18 +66,18 @@ abstract class PostAggregates implements _$PostAggregates {
 }
 
 @freezed
-abstract class CommunityAggregates implements _$CommunityAggregates {
+class CommunityAggregates with _$CommunityAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory CommunityAggregates({
-    @required int id,
-    @required int communityId,
-    @required int subscribers,
-    @required int posts,
-    @required int comments,
-    @required int usersActiveDay,
-    @required int usersActiveWeek,
-    @required int usersActiveMonth,
-    @required int usersActiveHalfYear,
+    required int id,
+    required int communityId,
+    required int subscribers,
+    required int posts,
+    required int comments,
+    required int usersActiveDay,
+    required int usersActiveWeek,
+    required int usersActiveMonth,
+    required int usersActiveHalfYear,
   }) = _CommunityAggregates;
 
   const CommunityAggregates._();
@@ -85,14 +86,14 @@ abstract class CommunityAggregates implements _$CommunityAggregates {
 }
 
 @freezed
-abstract class CommentAggregates implements _$CommentAggregates {
+class CommentAggregates with _$CommentAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory CommentAggregates({
-    @required int id,
-    @required int commentId,
-    @required int score,
-    @required int upvotes,
-    @required int downvotes,
+    required int id,
+    required int commentId,
+    required int score,
+    required int upvotes,
+    required int downvotes,
   }) = _CommentAggregates;
 
   const CommentAggregates._();

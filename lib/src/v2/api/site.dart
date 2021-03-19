@@ -10,8 +10,9 @@ part 'site.freezed.dart';
 part 'site.g.dart';
 
 @freezed
-abstract class ListCategories
-    implements _$ListCategories, LemmyApiQuery<List<Category>> {
+class ListCategories
+    with _$ListCategories
+    implements LemmyApiQuery<List<Category>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCategories() = _ListCategories;
 
@@ -28,21 +29,23 @@ abstract class ListCategories
 
   @override
   List<Category> responseFactory(Map<String, dynamic> json) =>
-      (json['categories'] as List).map((e) => Category.fromJson(e)).toList();
+      (json['categories'] as List)
+          .map((dynamic e) => Category.fromJson(e))
+          .toList();
 }
 
 @freezed
-abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
+class Search with _$Search implements LemmyApiQuery<SearchResults> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Search({
-    @required String q,
-    @required @JsonKey(name: 'type_') SearchType type,
-    int communityId,
-    String communityName,
-    @required SortType sort,
-    int page,
-    int limit,
-    String auth,
+    required String q,
+    @JsonKey(name: 'type_') required SearchType type,
+    int? communityId,
+    String? communityName,
+    required SortType sort,
+    int? page,
+    int? limit,
+    String? auth,
   }) = _Search;
 
   const Search._();
@@ -61,13 +64,13 @@ abstract class Search implements _$Search, LemmyApiQuery<SearchResults> {
 }
 
 @freezed
-abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
+class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetModlog({
-    int modUserId,
-    int communityId,
-    int page,
-    int limit,
+    int? modUserId,
+    int? communityId,
+    int? page,
+    int? limit,
   }) = _GetModlog;
 
   const GetModlog._();
@@ -86,17 +89,17 @@ abstract class GetModlog implements _$GetModlog, LemmyApiQuery<Modlog> {
 }
 
 @freezed
-abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
+class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateSite({
-    @required String name,
-    String description,
-    String icon,
-    String banner,
-    @required bool enableDownvotes,
-    @required bool openRegistration,
-    @required bool enableNsfw,
-    @required String auth,
+    required String name,
+    String? description,
+    String? icon,
+    String? banner,
+    required bool enableDownvotes,
+    required bool openRegistration,
+    required bool enableNsfw,
+    required String auth,
   }) = _CreateSite;
 
   const CreateSite._();
@@ -116,17 +119,17 @@ abstract class CreateSite implements _$CreateSite, LemmyApiQuery<SiteView> {
 }
 
 @freezed
-abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
+class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditSite({
-    @required String name,
-    String description,
-    String icon,
-    String banner,
-    @required bool enableDownvotes,
-    @required bool openRegistration,
-    @required bool enableNsfw,
-    @required String auth,
+    required String name,
+    String? description,
+    String? icon,
+    String? banner,
+    required bool enableDownvotes,
+    required bool openRegistration,
+    required bool enableNsfw,
+    required String auth,
   }) = _EditSite;
 
   const EditSite._();
@@ -146,10 +149,10 @@ abstract class EditSite implements _$EditSite, LemmyApiQuery<SiteView> {
 }
 
 @freezed
-abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
+class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSite({
-    String auth,
+    String? auth,
   }) = _GetSite;
 
   const GetSite._();
@@ -169,12 +172,11 @@ abstract class GetSite implements _$GetSite, LemmyApiQuery<FullSiteView> {
 }
 
 @freezed
-abstract class TransferSite
-    implements _$TransferSite, LemmyApiQuery<FullSiteView> {
+class TransferSite with _$TransferSite implements LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory TransferSite({
-    @required int userId,
-    @required String auth,
+    required int userId,
+    required String auth,
   }) = _TransferSite;
 
   const TransferSite._();
@@ -194,10 +196,10 @@ abstract class TransferSite
 }
 
 @freezed
-abstract class GetSiteConfig implements _$GetSiteConfig, LemmyApiQuery<String> {
+class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSiteConfig({
-    @required String auth,
+    required String auth,
   }) = _GetSiteConfig;
 
   const GetSiteConfig._();
@@ -217,12 +219,11 @@ abstract class GetSiteConfig implements _$GetSiteConfig, LemmyApiQuery<String> {
 }
 
 @freezed
-abstract class SaveSiteConfig
-    implements _$SaveSiteConfig, LemmyApiQuery<String> {
+class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveSiteConfig({
-    @required String configHjson,
-    @required String auth,
+    required String configHjson,
+    required String auth,
   }) = _SaveSiteConfig;
 
   const SaveSiteConfig._();

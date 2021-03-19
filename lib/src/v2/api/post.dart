@@ -9,11 +9,11 @@ part 'post.freezed.dart';
 part 'post.g.dart';
 
 @freezed
-abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPostView> {
+class GetPost with _$GetPost implements LemmyApiQuery<FullPostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPost({
-    @required int id,
-    String auth,
+    required int id,
+    String? auth,
   }) = _GetPost;
 
   const GetPost._();
@@ -32,15 +32,15 @@ abstract class GetPost implements _$GetPost, LemmyApiQuery<FullPostView> {
 }
 
 @freezed
-abstract class CreatePost implements _$CreatePost, LemmyApiQuery<PostView> {
+class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreatePost({
-    @required String name,
-    String url,
-    String body,
-    @required bool nsfw,
-    @required int communityId,
-    @required String auth,
+    required String name,
+    String? url,
+    String? body,
+    required bool nsfw,
+    required int communityId,
+    required String auth,
   }) = _CreatePost;
 
   const CreatePost._();
@@ -59,16 +59,16 @@ abstract class CreatePost implements _$CreatePost, LemmyApiQuery<PostView> {
 }
 
 @freezed
-abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
+class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPosts({
-    @required @JsonKey(name: 'type_') PostListingType type,
-    @required SortType sort,
-    int page,
-    int limit,
-    int communityId,
-    String communityName,
-    String auth,
+    @JsonKey(name: 'type_') required PostListingType type,
+    required SortType sort,
+    int? page,
+    int? limit,
+    int? communityId,
+    String? communityName,
+    String? auth,
   }) = _GetPosts;
 
   const GetPosts._();
@@ -83,17 +83,16 @@ abstract class GetPosts implements _$GetPosts, LemmyApiQuery<List<PostView>> {
 
   @override
   List<PostView> responseFactory(Map<String, dynamic> json) =>
-      (json['posts'] as List).map((e) => PostView.fromJson(e)).toList();
+      (json['posts'] as List).map((dynamic e) => PostView.fromJson(e)).toList();
 }
 
 @freezed
-abstract class CreatePostLike
-    implements _$CreatePostLike, LemmyApiQuery<PostView> {
+class CreatePostLike with _$CreatePostLike implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreatePostLike({
-    @required int postId,
-    @required VoteType score,
-    @required String auth,
+    required int postId,
+    required VoteType score,
+    required String auth,
   }) = _CreatePostLike;
 
   const CreatePostLike._();
@@ -112,15 +111,15 @@ abstract class CreatePostLike
 }
 
 @freezed
-abstract class EditPost implements _$EditPost, LemmyApiQuery<PostView> {
+class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditPost({
-    @required int postId,
-    @required String name,
-    String url,
-    String body,
-    @required bool nsfw,
-    @required String auth,
+    required int postId,
+    required String name,
+    String? url,
+    String? body,
+    required bool nsfw,
+    required String auth,
   }) = _EditPost;
 
   const EditPost._();
@@ -139,12 +138,12 @@ abstract class EditPost implements _$EditPost, LemmyApiQuery<PostView> {
 }
 
 @freezed
-abstract class DeletePost implements _$DeletePost, LemmyApiQuery<PostView> {
+class DeletePost with _$DeletePost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory DeletePost({
-    @required int postId,
-    @required bool deleted,
-    @required String auth,
+    required int postId,
+    required bool deleted,
+    required String auth,
   }) = _DeletePost;
 
   const DeletePost._();
@@ -163,13 +162,13 @@ abstract class DeletePost implements _$DeletePost, LemmyApiQuery<PostView> {
 }
 
 @freezed
-abstract class RemovePost implements _$RemovePost, LemmyApiQuery<PostView> {
+class RemovePost with _$RemovePost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory RemovePost({
-    @required int postId,
-    @required bool removed,
-    String reason,
-    @required String auth,
+    required int postId,
+    required bool removed,
+    String? reason,
+    required String auth,
   }) = _RemovePost;
 
   const RemovePost._();
@@ -188,12 +187,12 @@ abstract class RemovePost implements _$RemovePost, LemmyApiQuery<PostView> {
 }
 
 @freezed
-abstract class LockPost implements _$LockPost, LemmyApiQuery<PostView> {
+class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory LockPost({
-    @required int postId,
-    @required bool locked,
-    @required String auth,
+    required int postId,
+    required bool locked,
+    required String auth,
   }) = _LockPost;
 
   const LockPost._();
@@ -212,12 +211,12 @@ abstract class LockPost implements _$LockPost, LemmyApiQuery<PostView> {
 }
 
 @freezed
-abstract class StickyPost implements _$StickyPost, LemmyApiQuery<PostView> {
+class StickyPost with _$StickyPost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory StickyPost({
-    @required int postId,
-    @required bool stickied,
-    @required String auth,
+    required int postId,
+    required bool stickied,
+    required String auth,
   }) = _StickyPost;
 
   const StickyPost._();
@@ -236,12 +235,12 @@ abstract class StickyPost implements _$StickyPost, LemmyApiQuery<PostView> {
 }
 
 @freezed
-abstract class SavePost implements _$SavePost, LemmyApiQuery<PostView> {
+class SavePost with _$SavePost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SavePost({
-    @required int postId,
-    @required bool save,
-    @required String auth,
+    required int postId,
+    required bool save,
+    required String auth,
   }) = _SavePost;
 
   const SavePost._();
@@ -261,13 +260,12 @@ abstract class SavePost implements _$SavePost, LemmyApiQuery<PostView> {
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class CreatePostReport
-    implements _$CreatePostReport, LemmyApiQuery<bool> {
+class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<bool> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreatePostReport({
-    @required int postId,
-    @required String reason,
-    @required String auth,
+    required int postId,
+    required String reason,
+    required String auth,
   }) = _CreatePostReport;
 
   const CreatePostReport._();
@@ -275,10 +273,10 @@ abstract class CreatePostReport
       _$CreatePostReportFromJson(json);
 
   @override
-  String path() => null;
+  String path() => 'xyz';
 
   @override
-  HttpMethod httpMethod() => null;
+  HttpMethod httpMethod() => HttpMethod.get;
 
   @override
   bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
@@ -286,13 +284,14 @@ abstract class CreatePostReport
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class ResolvePostReport
-    implements _$ResolvePostReport, LemmyApiQuery<ResolvePostReportResponse> {
+class ResolvePostReport
+    with _$ResolvePostReport
+    implements LemmyApiQuery<ResolvePostReportResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ResolvePostReport({
-    @required int reportId,
-    @required bool resolved,
-    @required String auth,
+    required int reportId,
+    required bool resolved,
+    required String auth,
   }) = _ResolvePostReport;
 
   const ResolvePostReport._();
@@ -300,10 +299,10 @@ abstract class ResolvePostReport
       _$ResolvePostReportFromJson(json);
 
   @override
-  String path() => null;
+  String path() => 'xyz';
 
   @override
-  HttpMethod httpMethod() => null;
+  HttpMethod httpMethod() => HttpMethod.get;
 
   @override
   ResolvePostReportResponse responseFactory(Map<String, dynamic> json) =>
@@ -312,14 +311,15 @@ abstract class ResolvePostReport
 
 // TODO: this does not seem to exist yet
 @freezed
-abstract class ListPostReports
-    implements _$ListPostReports, LemmyApiQuery<List<PostReportView>> {
+class ListPostReports
+    with _$ListPostReports
+    implements LemmyApiQuery<List<PostReportView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListPostReports({
-    int page,
-    int limit,
-    int community,
-    @required String auth,
+    int? page,
+    int? limit,
+    int? community,
+    required String auth,
   }) = _ListPostReports;
 
   const ListPostReports._();
@@ -327,12 +327,12 @@ abstract class ListPostReports
       _$ListPostReportsFromJson(json);
 
   @override
-  String path() => null;
+  String path() => 'xyz';
 
   @override
-  HttpMethod httpMethod() => null;
+  HttpMethod httpMethod() => HttpMethod.get;
 
   @override
   List<PostReportView> responseFactory(Map<String, dynamic> json) =>
-      (json as List).map((e) => PostReportView.fromJson(json)).toList();
+      (json as List).map((dynamic e) => PostReportView.fromJson(json)).toList();
 }

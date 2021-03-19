@@ -1,3 +1,9 @@
+## Unreleased
+
+### Breaking change
+
+- Null safety
+
 ## v0.12.0 - 2021-02-20
 
 ### Breaking change

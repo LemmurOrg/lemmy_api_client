@@ -1,3 +1,5 @@
+import 'exceptions.dart';
+
 class VoteType {
   final int _value;
 
@@ -14,7 +16,8 @@ class VoteType {
       case -1:
         return down;
       default:
-        return null;
+        throw LemmyApiException(
+            'Unexpected VoteType value "$value", this is likely a LemmyApiClient error, please open an issue');
     }
   }
 
@@ -33,7 +36,7 @@ class PostListingType {
   String get value => _value;
 
   factory PostListingType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
@@ -61,7 +64,7 @@ class SortType {
   String get value => _value;
 
   factory SortType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
@@ -102,7 +105,7 @@ class SearchType {
   String get value => _value;
 
   factory SearchType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 
@@ -134,7 +137,7 @@ class CommentListingType {
   String get value => _value;
 
   factory CommentListingType.fromJson(String value) =>
-      values.firstWhere((e) => e.value == value, orElse: () => null);
+      values.firstWhere((e) => e.value == value);
 
   String toJson() => value;
 

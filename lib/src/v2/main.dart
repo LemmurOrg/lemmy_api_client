@@ -2,8 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
+// TODO: remove this ignore
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:web_socket_channel/status.dart' as status;
+// TODO: remove this ignore
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import '../exceptions.dart';
@@ -26,7 +29,7 @@ class LemmyApiV2 {
           return http.get(Uri.https(
             host,
             '$extraPath${query.path()}',
-            {
+            <String, String>{
               for (final entry in query.toJson().entries)
                 entry.key: entry.value.toString()
             },
@@ -61,7 +64,7 @@ class LemmyApiV2 {
     }
 
     // augment responses with `instance_host`
-    final json = jsonDecode(utf8.decode(res.bodyBytes));
+    final Map<String, dynamic> json = jsonDecode(utf8.decode(res.bodyBytes));
     _augmentInstanceHost(host, json);
 
     return query.responseFactory(json);
@@ -73,7 +76,7 @@ class LemmyApiV2 {
     String op,
     Map<String, dynamic> data,
   ) {
-    WebSocketChannel ws;
+    late WebSocketChannel ws;
 
     var isDone = false;
     final controller = StreamController<WsEvent>(
@@ -96,20 +99,21 @@ class LemmyApiV2 {
       ws = WebSocketChannel.connect(uri);
 
       ws.stream.listen(
-        (data) {
+        (dynamic data) {
           final message = jsonDecode(data) as Map<String, dynamic>;
 
           // skip first message which is just a confirmation that
           // the connection was successful
           if (message['op'] == op) return;
 
-          if (wsDeserializer.containsKey(message['op'])) {
-            final data = wsDeserializer[message['op']](message['data']);
+          final deser = wsDeserializer[message['op']];
+          if (deser != null) {
+            final data = deser(message['data']);
             controller.add(data);
             return;
           }
         },
-        onError: (_) => reconnect(),
+        onError: (dynamic _) => reconnect(),
         onDone: reconnect,
       );
 
@@ -124,47 +128,35 @@ class LemmyApiV2 {
   /// Receives community actions.
   /// When `communityId` is 0, front page is listened
   StreamController<WsEvent> communityJoin({
-    @required int communityId,
-  }) {
-    assert(communityId != null);
-
-    return _persistantStream('CommunityJoin', {
-      'community_id': communityId,
-    });
-  }
+    required int communityId,
+  }) =>
+      _persistantStream('CommunityJoin', <String, dynamic>{
+        'community_id': communityId,
+      });
 
   /// Receives replies, private messages, etc.
   StreamController<WsEvent> userJoin({
-    @required String auth,
-  }) {
-    assert(auth != null);
-
-    return _persistantStream('UserJoin', {
-      'auth': auth,
-    });
-  }
+    required String auth,
+  }) =>
+      _persistantStream('UserJoin', <String, dynamic>{
+        'auth': auth,
+      });
 
   /// Receives new comments on a post
   StreamController<WsEvent> postJoin({
-    @required int postId,
-  }) {
-    assert(postId != null);
-
-    return _persistantStream('PostJoin', {
-      'post_id': postId,
-    });
-  }
+    required int postId,
+  }) =>
+      _persistantStream('PostJoin', <String, dynamic>{
+        'post_id': postId,
+      });
 
   /// Receives community moderator updates like reports
   StreamController<WsEvent> modJoin({
-    @required int communityId,
-  }) {
-    assert(communityId != null);
-
-    return _persistantStream('ModJoin', {
-      'community_id': communityId,
-    });
-  }
+    required int communityId,
+  }) =>
+      _persistantStream('ModJoin', <String, dynamic>{
+        'community_id': communityId,
+      });
 }
 
 /// Deeply augments the whole json with `instance_host`.
@@ -175,11 +167,11 @@ void _augmentInstanceHost(String instanceHost, Map<String, dynamic> json) {
   json['instance_host'] = instanceHost;
 
   for (final value in json.values) {
-    if (value is Map) {
+    if (value is Map<String, dynamic>) {
       _augmentInstanceHost(instanceHost, value);
     } else if (value is List) {
       for (final subvalue in value) {
-        if (subvalue is Map) {
+        if (subvalue is Map<String, dynamic>) {
           _augmentInstanceHost(instanceHost, subvalue);
         }
       }

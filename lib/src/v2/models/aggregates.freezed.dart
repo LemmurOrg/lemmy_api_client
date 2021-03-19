@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'aggregates.dart';
 
@@ -8,6 +8,10 @@ part of 'aggregates.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 UserAggregates _$UserAggregatesFromJson(Map<String, dynamic> json) {
   return _UserAggregates.fromJson(json);
 }
@@ -16,14 +20,13 @@ UserAggregates _$UserAggregatesFromJson(Map<String, dynamic> json) {
 class _$UserAggregatesTearOff {
   const _$UserAggregatesTearOff();
 
-// ignore: unused_element
   _UserAggregates call(
-      {@required int id,
-      @required int userId,
-      @required int postCount,
-      @required int postScore,
-      @required int commentCount,
-      @required int commentScore}) {
+      {required int id,
+      required int userId,
+      required int postCount,
+      required int postScore,
+      required int commentCount,
+      required int commentScore}) {
     return _UserAggregates(
       id: id,
       userId: userId,
@@ -34,27 +37,27 @@ class _$UserAggregatesTearOff {
     );
   }
 
-// ignore: unused_element
   UserAggregates fromJson(Map<String, Object> json) {
     return UserAggregates.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserAggregates = _$UserAggregatesTearOff();
 
 /// @nodoc
 mixin _$UserAggregates {
-  int get id;
-  int get userId;
-  int get postCount;
-  int get postScore;
-  int get commentCount;
-  int get commentScore;
+  int get id => throw _privateConstructorUsedError;
+  int get userId => throw _privateConstructorUsedError;
+  int get postCount => throw _privateConstructorUsedError;
+  int get postScore => throw _privateConstructorUsedError;
+  int get commentCount => throw _privateConstructorUsedError;
+  int get commentScore => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserAggregatesCopyWith<UserAggregates> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserAggregatesCopyWith<UserAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -82,22 +85,38 @@ class _$UserAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object userId = freezed,
-    Object postCount = freezed,
-    Object postScore = freezed,
-    Object commentCount = freezed,
-    Object commentScore = freezed,
+    Object? id = freezed,
+    Object? userId = freezed,
+    Object? postCount = freezed,
+    Object? postScore = freezed,
+    Object? commentCount = freezed,
+    Object? commentScore = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      userId: userId == freezed ? _value.userId : userId as int,
-      postCount: postCount == freezed ? _value.postCount : postCount as int,
-      postScore: postScore == freezed ? _value.postScore : postScore as int,
-      commentCount:
-          commentCount == freezed ? _value.commentCount : commentCount as int,
-      commentScore:
-          commentScore == freezed ? _value.commentScore : commentScore as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postCount: postCount == freezed
+          ? _value.postCount
+          : postCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      postScore: postScore == freezed
+          ? _value.postScore
+          : postScore // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentCount: commentCount == freezed
+          ? _value.commentCount
+          : commentCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentScore: commentScore == freezed
+          ? _value.commentScore
+          : commentScore // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -131,22 +150,38 @@ class __$UserAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object userId = freezed,
-    Object postCount = freezed,
-    Object postScore = freezed,
-    Object commentCount = freezed,
-    Object commentScore = freezed,
+    Object? id = freezed,
+    Object? userId = freezed,
+    Object? postCount = freezed,
+    Object? postScore = freezed,
+    Object? commentCount = freezed,
+    Object? commentScore = freezed,
   }) {
     return _then(_UserAggregates(
-      id: id == freezed ? _value.id : id as int,
-      userId: userId == freezed ? _value.userId : userId as int,
-      postCount: postCount == freezed ? _value.postCount : postCount as int,
-      postScore: postScore == freezed ? _value.postScore : postScore as int,
-      commentCount:
-          commentCount == freezed ? _value.commentCount : commentCount as int,
-      commentScore:
-          commentScore == freezed ? _value.commentScore : commentScore as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postCount: postCount == freezed
+          ? _value.postCount
+          : postCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      postScore: postScore == freezed
+          ? _value.postScore
+          : postScore // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentCount: commentCount == freezed
+          ? _value.commentCount
+          : commentCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentScore: commentScore == freezed
+          ? _value.commentScore
+          : commentScore // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -156,19 +191,13 @@ class __$UserAggregatesCopyWithImpl<$Res>
 /// @nodoc
 class _$_UserAggregates extends _UserAggregates {
   const _$_UserAggregates(
-      {@required this.id,
-      @required this.userId,
-      @required this.postCount,
-      @required this.postScore,
-      @required this.commentCount,
-      @required this.commentScore})
-      : assert(id != null),
-        assert(userId != null),
-        assert(postCount != null),
-        assert(postScore != null),
-        assert(commentCount != null),
-        assert(commentScore != null),
-        super._();
+      {required this.id,
+      required this.userId,
+      required this.postCount,
+      required this.postScore,
+      required this.commentCount,
+      required this.commentScore})
+      : super._();
 
   factory _$_UserAggregates.fromJson(Map<String, dynamic> json) =>
       _$_$_UserAggregatesFromJson(json);
@@ -223,6 +252,7 @@ class _$_UserAggregates extends _UserAggregates {
       const DeepCollectionEquality().hash(commentCount) ^
       const DeepCollectionEquality().hash(commentScore);
 
+  @JsonKey(ignore: true)
   @override
   _$UserAggregatesCopyWith<_UserAggregates> get copyWith =>
       __$UserAggregatesCopyWithImpl<_UserAggregates>(this, _$identity);
@@ -234,32 +264,34 @@ class _$_UserAggregates extends _UserAggregates {
 }
 
 abstract class _UserAggregates extends UserAggregates {
-  const _UserAggregates._() : super._();
   const factory _UserAggregates(
-      {@required int id,
-      @required int userId,
-      @required int postCount,
-      @required int postScore,
-      @required int commentCount,
-      @required int commentScore}) = _$_UserAggregates;
+      {required int id,
+      required int userId,
+      required int postCount,
+      required int postScore,
+      required int commentCount,
+      required int commentScore}) = _$_UserAggregates;
+  const _UserAggregates._() : super._();
 
   factory _UserAggregates.fromJson(Map<String, dynamic> json) =
       _$_UserAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get userId;
+  int get userId => throw _privateConstructorUsedError;
   @override
-  int get postCount;
+  int get postCount => throw _privateConstructorUsedError;
   @override
-  int get postScore;
+  int get postScore => throw _privateConstructorUsedError;
   @override
-  int get commentCount;
+  int get commentCount => throw _privateConstructorUsedError;
   @override
-  int get commentScore;
+  int get commentScore => throw _privateConstructorUsedError;
   @override
-  _$UserAggregatesCopyWith<_UserAggregates> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserAggregatesCopyWith<_UserAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
@@ -270,18 +302,17 @@ SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
 class _$SiteAggregatesTearOff {
   const _$SiteAggregatesTearOff();
 
-// ignore: unused_element
   _SiteAggregates call(
-      {@required int id,
-      @required int siteId,
-      @required int users,
-      @required int posts,
-      @required int comments,
-      @required int communities,
-      @required int usersActiveDay,
-      @required int usersActiveWeek,
-      @required int usersActiveMonth,
-      @required int usersActiveHalfYear}) {
+      {required int id,
+      required int siteId,
+      required int users,
+      required int posts,
+      required int comments,
+      required int communities,
+      required int usersActiveDay,
+      required int usersActiveWeek,
+      required int usersActiveMonth,
+      required int usersActiveHalfYear}) {
     return _SiteAggregates(
       id: id,
       siteId: siteId,
@@ -296,31 +327,31 @@ class _$SiteAggregatesTearOff {
     );
   }
 
-// ignore: unused_element
   SiteAggregates fromJson(Map<String, Object> json) {
     return SiteAggregates.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SiteAggregates = _$SiteAggregatesTearOff();
 
 /// @nodoc
 mixin _$SiteAggregates {
-  int get id;
-  int get siteId;
-  int get users;
-  int get posts;
-  int get comments;
-  int get communities;
-  int get usersActiveDay;
-  int get usersActiveWeek;
-  int get usersActiveMonth;
-  int get usersActiveHalfYear;
+  int get id => throw _privateConstructorUsedError;
+  int get siteId => throw _privateConstructorUsedError;
+  int get users => throw _privateConstructorUsedError;
+  int get posts => throw _privateConstructorUsedError;
+  int get comments => throw _privateConstructorUsedError;
+  int get communities => throw _privateConstructorUsedError;
+  int get usersActiveDay => throw _privateConstructorUsedError;
+  int get usersActiveWeek => throw _privateConstructorUsedError;
+  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int get usersActiveHalfYear => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SiteAggregatesCopyWith<SiteAggregates> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SiteAggregatesCopyWith<SiteAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -352,37 +383,58 @@ class _$SiteAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object siteId = freezed,
-    Object users = freezed,
-    Object posts = freezed,
-    Object comments = freezed,
-    Object communities = freezed,
-    Object usersActiveDay = freezed,
-    Object usersActiveWeek = freezed,
-    Object usersActiveMonth = freezed,
-    Object usersActiveHalfYear = freezed,
+    Object? id = freezed,
+    Object? siteId = freezed,
+    Object? users = freezed,
+    Object? posts = freezed,
+    Object? comments = freezed,
+    Object? communities = freezed,
+    Object? usersActiveDay = freezed,
+    Object? usersActiveWeek = freezed,
+    Object? usersActiveMonth = freezed,
+    Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      siteId: siteId == freezed ? _value.siteId : siteId as int,
-      users: users == freezed ? _value.users : users as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      communities:
-          communities == freezed ? _value.communities : communities as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteId: siteId == freezed
+          ? _value.siteId
+          : siteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      users: users == freezed
+          ? _value.users
+          : users // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      communities: communities == freezed
+          ? _value.communities
+          : communities // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -420,37 +472,58 @@ class __$SiteAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object siteId = freezed,
-    Object users = freezed,
-    Object posts = freezed,
-    Object comments = freezed,
-    Object communities = freezed,
-    Object usersActiveDay = freezed,
-    Object usersActiveWeek = freezed,
-    Object usersActiveMonth = freezed,
-    Object usersActiveHalfYear = freezed,
+    Object? id = freezed,
+    Object? siteId = freezed,
+    Object? users = freezed,
+    Object? posts = freezed,
+    Object? comments = freezed,
+    Object? communities = freezed,
+    Object? usersActiveDay = freezed,
+    Object? usersActiveWeek = freezed,
+    Object? usersActiveMonth = freezed,
+    Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_SiteAggregates(
-      id: id == freezed ? _value.id : id as int,
-      siteId: siteId == freezed ? _value.siteId : siteId as int,
-      users: users == freezed ? _value.users : users as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      communities:
-          communities == freezed ? _value.communities : communities as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteId: siteId == freezed
+          ? _value.siteId
+          : siteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      users: users == freezed
+          ? _value.users
+          : users // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      communities: communities == freezed
+          ? _value.communities
+          : communities // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -460,27 +533,17 @@ class __$SiteAggregatesCopyWithImpl<$Res>
 /// @nodoc
 class _$_SiteAggregates extends _SiteAggregates {
   const _$_SiteAggregates(
-      {@required this.id,
-      @required this.siteId,
-      @required this.users,
-      @required this.posts,
-      @required this.comments,
-      @required this.communities,
-      @required this.usersActiveDay,
-      @required this.usersActiveWeek,
-      @required this.usersActiveMonth,
-      @required this.usersActiveHalfYear})
-      : assert(id != null),
-        assert(siteId != null),
-        assert(users != null),
-        assert(posts != null),
-        assert(comments != null),
-        assert(communities != null),
-        assert(usersActiveDay != null),
-        assert(usersActiveWeek != null),
-        assert(usersActiveMonth != null),
-        assert(usersActiveHalfYear != null),
-        super._();
+      {required this.id,
+      required this.siteId,
+      required this.users,
+      required this.posts,
+      required this.comments,
+      required this.communities,
+      required this.usersActiveDay,
+      required this.usersActiveWeek,
+      required this.usersActiveMonth,
+      required this.usersActiveHalfYear})
+      : super._();
 
   factory _$_SiteAggregates.fromJson(Map<String, dynamic> json) =>
       _$_$_SiteAggregatesFromJson(json);
@@ -557,6 +620,7 @@ class _$_SiteAggregates extends _SiteAggregates {
       const DeepCollectionEquality().hash(usersActiveMonth) ^
       const DeepCollectionEquality().hash(usersActiveHalfYear);
 
+  @JsonKey(ignore: true)
   @override
   _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
       __$SiteAggregatesCopyWithImpl<_SiteAggregates>(this, _$identity);
@@ -568,44 +632,46 @@ class _$_SiteAggregates extends _SiteAggregates {
 }
 
 abstract class _SiteAggregates extends SiteAggregates {
-  const _SiteAggregates._() : super._();
   const factory _SiteAggregates(
-      {@required int id,
-      @required int siteId,
-      @required int users,
-      @required int posts,
-      @required int comments,
-      @required int communities,
-      @required int usersActiveDay,
-      @required int usersActiveWeek,
-      @required int usersActiveMonth,
-      @required int usersActiveHalfYear}) = _$_SiteAggregates;
+      {required int id,
+      required int siteId,
+      required int users,
+      required int posts,
+      required int comments,
+      required int communities,
+      required int usersActiveDay,
+      required int usersActiveWeek,
+      required int usersActiveMonth,
+      required int usersActiveHalfYear}) = _$_SiteAggregates;
+  const _SiteAggregates._() : super._();
 
   factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
       _$_SiteAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get siteId;
+  int get siteId => throw _privateConstructorUsedError;
   @override
-  int get users;
+  int get users => throw _privateConstructorUsedError;
   @override
-  int get posts;
+  int get posts => throw _privateConstructorUsedError;
   @override
-  int get comments;
+  int get comments => throw _privateConstructorUsedError;
   @override
-  int get communities;
+  int get communities => throw _privateConstructorUsedError;
   @override
-  int get usersActiveDay;
+  int get usersActiveDay => throw _privateConstructorUsedError;
   @override
-  int get usersActiveWeek;
+  int get usersActiveWeek => throw _privateConstructorUsedError;
   @override
-  int get usersActiveMonth;
+  int get usersActiveMonth => throw _privateConstructorUsedError;
   @override
-  int get usersActiveHalfYear;
+  int get usersActiveHalfYear => throw _privateConstructorUsedError;
   @override
-  _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith;
+  @JsonKey(ignore: true)
+  _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
@@ -616,16 +682,15 @@ PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
 class _$PostAggregatesTearOff {
   const _$PostAggregatesTearOff();
 
-// ignore: unused_element
   _PostAggregates call(
-      {@required int id,
-      @required int postId,
-      @required int comments,
-      @required int score,
-      @required int upvotes,
-      @required int downvotes,
-      @required DateTime newestCommentTime,
-      @required DateTime newestCommentTimeNecro}) {
+      {required int id,
+      required int postId,
+      required int comments,
+      required int score,
+      required int upvotes,
+      required int downvotes,
+      required DateTime newestCommentTime,
+      required DateTime newestCommentTimeNecro}) {
     return _PostAggregates(
       id: id,
       postId: postId,
@@ -638,29 +703,29 @@ class _$PostAggregatesTearOff {
     );
   }
 
-// ignore: unused_element
   PostAggregates fromJson(Map<String, Object> json) {
     return PostAggregates.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PostAggregates = _$PostAggregatesTearOff();
 
 /// @nodoc
 mixin _$PostAggregates {
-  int get id;
-  int get postId;
-  int get comments;
-  int get score;
-  int get upvotes;
-  int get downvotes;
-  DateTime get newestCommentTime;
-  DateTime get newestCommentTimeNecro;
+  int get id => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  int get comments => throw _privateConstructorUsedError;
+  int get score => throw _privateConstructorUsedError;
+  int get upvotes => throw _privateConstructorUsedError;
+  int get downvotes => throw _privateConstructorUsedError;
+  DateTime get newestCommentTime => throw _privateConstructorUsedError;
+  DateTime get newestCommentTimeNecro => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PostAggregatesCopyWith<PostAggregates> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PostAggregatesCopyWith<PostAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -690,28 +755,48 @@ class _$PostAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object postId = freezed,
-    Object comments = freezed,
-    Object score = freezed,
-    Object upvotes = freezed,
-    Object downvotes = freezed,
-    Object newestCommentTime = freezed,
-    Object newestCommentTimeNecro = freezed,
+    Object? id = freezed,
+    Object? postId = freezed,
+    Object? comments = freezed,
+    Object? score = freezed,
+    Object? upvotes = freezed,
+    Object? downvotes = freezed,
+    Object? newestCommentTime = freezed,
+    Object? newestCommentTimeNecro = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
       newestCommentTime: newestCommentTime == freezed
           ? _value.newestCommentTime
-          : newestCommentTime as DateTime,
+          : newestCommentTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       newestCommentTimeNecro: newestCommentTimeNecro == freezed
           ? _value.newestCommentTimeNecro
-          : newestCommentTimeNecro as DateTime,
+          : newestCommentTimeNecro // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -747,55 +832,68 @@ class __$PostAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object postId = freezed,
-    Object comments = freezed,
-    Object score = freezed,
-    Object upvotes = freezed,
-    Object downvotes = freezed,
-    Object newestCommentTime = freezed,
-    Object newestCommentTimeNecro = freezed,
+    Object? id = freezed,
+    Object? postId = freezed,
+    Object? comments = freezed,
+    Object? score = freezed,
+    Object? upvotes = freezed,
+    Object? downvotes = freezed,
+    Object? newestCommentTime = freezed,
+    Object? newestCommentTimeNecro = freezed,
   }) {
     return _then(_PostAggregates(
-      id: id == freezed ? _value.id : id as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
       newestCommentTime: newestCommentTime == freezed
           ? _value.newestCommentTime
-          : newestCommentTime as DateTime,
+          : newestCommentTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       newestCommentTimeNecro: newestCommentTimeNecro == freezed
           ? _value.newestCommentTimeNecro
-          : newestCommentTimeNecro as DateTime,
+          : newestCommentTimeNecro // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
 
 @ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
 class _$_PostAggregates extends _PostAggregates {
   const _$_PostAggregates(
-      {@required this.id,
-      @required this.postId,
-      @required this.comments,
-      @required this.score,
-      @required this.upvotes,
-      @required this.downvotes,
-      @required this.newestCommentTime,
-      @required this.newestCommentTimeNecro})
-      : assert(id != null),
-        assert(postId != null),
-        assert(comments != null),
-        assert(score != null),
-        assert(upvotes != null),
-        assert(downvotes != null),
-        assert(newestCommentTime != null),
-        assert(newestCommentTimeNecro != null),
-        super._();
+      {required this.id,
+      required this.postId,
+      required this.comments,
+      required this.score,
+      required this.upvotes,
+      required this.downvotes,
+      required this.newestCommentTime,
+      required this.newestCommentTimeNecro})
+      : super._();
 
   factory _$_PostAggregates.fromJson(Map<String, dynamic> json) =>
       _$_$_PostAggregatesFromJson(json);
@@ -861,6 +959,7 @@ class _$_PostAggregates extends _PostAggregates {
       const DeepCollectionEquality().hash(newestCommentTime) ^
       const DeepCollectionEquality().hash(newestCommentTimeNecro);
 
+  @JsonKey(ignore: true)
   @override
   _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
       __$PostAggregatesCopyWithImpl<_PostAggregates>(this, _$identity);
@@ -872,38 +971,40 @@ class _$_PostAggregates extends _PostAggregates {
 }
 
 abstract class _PostAggregates extends PostAggregates {
-  const _PostAggregates._() : super._();
   const factory _PostAggregates(
-      {@required int id,
-      @required int postId,
-      @required int comments,
-      @required int score,
-      @required int upvotes,
-      @required int downvotes,
-      @required DateTime newestCommentTime,
-      @required DateTime newestCommentTimeNecro}) = _$_PostAggregates;
+      {required int id,
+      required int postId,
+      required int comments,
+      required int score,
+      required int upvotes,
+      required int downvotes,
+      required DateTime newestCommentTime,
+      required DateTime newestCommentTimeNecro}) = _$_PostAggregates;
+  const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
       _$_PostAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  int get comments;
+  int get comments => throw _privateConstructorUsedError;
   @override
-  int get score;
+  int get score => throw _privateConstructorUsedError;
   @override
-  int get upvotes;
+  int get upvotes => throw _privateConstructorUsedError;
   @override
-  int get downvotes;
+  int get downvotes => throw _privateConstructorUsedError;
   @override
-  DateTime get newestCommentTime;
+  DateTime get newestCommentTime => throw _privateConstructorUsedError;
   @override
-  DateTime get newestCommentTimeNecro;
+  DateTime get newestCommentTimeNecro => throw _privateConstructorUsedError;
   @override
-  _$PostAggregatesCopyWith<_PostAggregates> get copyWith;
+  @JsonKey(ignore: true)
+  _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
@@ -914,17 +1015,16 @@ CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
 class _$CommunityAggregatesTearOff {
   const _$CommunityAggregatesTearOff();
 
-// ignore: unused_element
   _CommunityAggregates call(
-      {@required int id,
-      @required int communityId,
-      @required int subscribers,
-      @required int posts,
-      @required int comments,
-      @required int usersActiveDay,
-      @required int usersActiveWeek,
-      @required int usersActiveMonth,
-      @required int usersActiveHalfYear}) {
+      {required int id,
+      required int communityId,
+      required int subscribers,
+      required int posts,
+      required int comments,
+      required int usersActiveDay,
+      required int usersActiveWeek,
+      required int usersActiveMonth,
+      required int usersActiveHalfYear}) {
     return _CommunityAggregates(
       id: id,
       communityId: communityId,
@@ -938,30 +1038,30 @@ class _$CommunityAggregatesTearOff {
     );
   }
 
-// ignore: unused_element
   CommunityAggregates fromJson(Map<String, Object> json) {
     return CommunityAggregates.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommunityAggregates = _$CommunityAggregatesTearOff();
 
 /// @nodoc
 mixin _$CommunityAggregates {
-  int get id;
-  int get communityId;
-  int get subscribers;
-  int get posts;
-  int get comments;
-  int get usersActiveDay;
-  int get usersActiveWeek;
-  int get usersActiveMonth;
-  int get usersActiveHalfYear;
+  int get id => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  int get subscribers => throw _privateConstructorUsedError;
+  int get posts => throw _privateConstructorUsedError;
+  int get comments => throw _privateConstructorUsedError;
+  int get usersActiveDay => throw _privateConstructorUsedError;
+  int get usersActiveWeek => throw _privateConstructorUsedError;
+  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int get usersActiveHalfYear => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommunityAggregatesCopyWith<CommunityAggregates> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunityAggregatesCopyWith<CommunityAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -992,36 +1092,53 @@ class _$CommunityAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object communityId = freezed,
-    Object subscribers = freezed,
-    Object posts = freezed,
-    Object comments = freezed,
-    Object usersActiveDay = freezed,
-    Object usersActiveWeek = freezed,
-    Object usersActiveMonth = freezed,
-    Object usersActiveHalfYear = freezed,
+    Object? id = freezed,
+    Object? communityId = freezed,
+    Object? subscribers = freezed,
+    Object? posts = freezed,
+    Object? comments = freezed,
+    Object? usersActiveDay = freezed,
+    Object? usersActiveWeek = freezed,
+    Object? usersActiveMonth = freezed,
+    Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      subscribers:
-          subscribers == freezed ? _value.subscribers : subscribers as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      subscribers: subscribers == freezed
+          ? _value.subscribers
+          : subscribers // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1058,36 +1175,53 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object communityId = freezed,
-    Object subscribers = freezed,
-    Object posts = freezed,
-    Object comments = freezed,
-    Object usersActiveDay = freezed,
-    Object usersActiveWeek = freezed,
-    Object usersActiveMonth = freezed,
-    Object usersActiveHalfYear = freezed,
+    Object? id = freezed,
+    Object? communityId = freezed,
+    Object? subscribers = freezed,
+    Object? posts = freezed,
+    Object? comments = freezed,
+    Object? usersActiveDay = freezed,
+    Object? usersActiveWeek = freezed,
+    Object? usersActiveMonth = freezed,
+    Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_CommunityAggregates(
-      id: id == freezed ? _value.id : id as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      subscribers:
-          subscribers == freezed ? _value.subscribers : subscribers as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      subscribers: subscribers == freezed
+          ? _value.subscribers
+          : subscribers // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1097,25 +1231,16 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunityAggregates extends _CommunityAggregates {
   const _$_CommunityAggregates(
-      {@required this.id,
-      @required this.communityId,
-      @required this.subscribers,
-      @required this.posts,
-      @required this.comments,
-      @required this.usersActiveDay,
-      @required this.usersActiveWeek,
-      @required this.usersActiveMonth,
-      @required this.usersActiveHalfYear})
-      : assert(id != null),
-        assert(communityId != null),
-        assert(subscribers != null),
-        assert(posts != null),
-        assert(comments != null),
-        assert(usersActiveDay != null),
-        assert(usersActiveWeek != null),
-        assert(usersActiveMonth != null),
-        assert(usersActiveHalfYear != null),
-        super._();
+      {required this.id,
+      required this.communityId,
+      required this.subscribers,
+      required this.posts,
+      required this.comments,
+      required this.usersActiveDay,
+      required this.usersActiveWeek,
+      required this.usersActiveMonth,
+      required this.usersActiveHalfYear})
+      : super._();
 
   factory _$_CommunityAggregates.fromJson(Map<String, dynamic> json) =>
       _$_$_CommunityAggregatesFromJson(json);
@@ -1188,6 +1313,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       const DeepCollectionEquality().hash(usersActiveMonth) ^
       const DeepCollectionEquality().hash(usersActiveHalfYear);
 
+  @JsonKey(ignore: true)
   @override
   _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
       __$CommunityAggregatesCopyWithImpl<_CommunityAggregates>(
@@ -1200,41 +1326,43 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 }
 
 abstract class _CommunityAggregates extends CommunityAggregates {
-  const _CommunityAggregates._() : super._();
   const factory _CommunityAggregates(
-      {@required int id,
-      @required int communityId,
-      @required int subscribers,
-      @required int posts,
-      @required int comments,
-      @required int usersActiveDay,
-      @required int usersActiveWeek,
-      @required int usersActiveMonth,
-      @required int usersActiveHalfYear}) = _$_CommunityAggregates;
+      {required int id,
+      required int communityId,
+      required int subscribers,
+      required int posts,
+      required int comments,
+      required int usersActiveDay,
+      required int usersActiveWeek,
+      required int usersActiveMonth,
+      required int usersActiveHalfYear}) = _$_CommunityAggregates;
+  const _CommunityAggregates._() : super._();
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommunityAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  int get subscribers;
+  int get subscribers => throw _privateConstructorUsedError;
   @override
-  int get posts;
+  int get posts => throw _privateConstructorUsedError;
   @override
-  int get comments;
+  int get comments => throw _privateConstructorUsedError;
   @override
-  int get usersActiveDay;
+  int get usersActiveDay => throw _privateConstructorUsedError;
   @override
-  int get usersActiveWeek;
+  int get usersActiveWeek => throw _privateConstructorUsedError;
   @override
-  int get usersActiveMonth;
+  int get usersActiveMonth => throw _privateConstructorUsedError;
   @override
-  int get usersActiveHalfYear;
+  int get usersActiveHalfYear => throw _privateConstructorUsedError;
   @override
-  _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
@@ -1245,13 +1373,12 @@ CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
 class _$CommentAggregatesTearOff {
   const _$CommentAggregatesTearOff();
 
-// ignore: unused_element
   _CommentAggregates call(
-      {@required int id,
-      @required int commentId,
-      @required int score,
-      @required int upvotes,
-      @required int downvotes}) {
+      {required int id,
+      required int commentId,
+      required int score,
+      required int upvotes,
+      required int downvotes}) {
     return _CommentAggregates(
       id: id,
       commentId: commentId,
@@ -1261,26 +1388,26 @@ class _$CommentAggregatesTearOff {
     );
   }
 
-// ignore: unused_element
   CommentAggregates fromJson(Map<String, Object> json) {
     return CommentAggregates.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CommentAggregates = _$CommentAggregatesTearOff();
 
 /// @nodoc
 mixin _$CommentAggregates {
-  int get id;
-  int get commentId;
-  int get score;
-  int get upvotes;
-  int get downvotes;
+  int get id => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  int get score => throw _privateConstructorUsedError;
+  int get upvotes => throw _privateConstructorUsedError;
+  int get downvotes => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CommentAggregatesCopyWith<CommentAggregates> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommentAggregatesCopyWith<CommentAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1302,18 +1429,33 @@ class _$CommentAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object commentId = freezed,
-    Object score = freezed,
-    Object upvotes = freezed,
-    Object downvotes = freezed,
+    Object? id = freezed,
+    Object? commentId = freezed,
+    Object? score = freezed,
+    Object? upvotes = freezed,
+    Object? downvotes = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1341,18 +1483,33 @@ class __$CommentAggregatesCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object commentId = freezed,
-    Object score = freezed,
-    Object upvotes = freezed,
-    Object downvotes = freezed,
+    Object? id = freezed,
+    Object? commentId = freezed,
+    Object? score = freezed,
+    Object? upvotes = freezed,
+    Object? downvotes = freezed,
   }) {
     return _then(_CommentAggregates(
-      id: id == freezed ? _value.id : id as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1362,17 +1519,12 @@ class __$CommentAggregatesCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommentAggregates extends _CommentAggregates {
   const _$_CommentAggregates(
-      {@required this.id,
-      @required this.commentId,
-      @required this.score,
-      @required this.upvotes,
-      @required this.downvotes})
-      : assert(id != null),
-        assert(commentId != null),
-        assert(score != null),
-        assert(upvotes != null),
-        assert(downvotes != null),
-        super._();
+      {required this.id,
+      required this.commentId,
+      required this.score,
+      required this.upvotes,
+      required this.downvotes})
+      : super._();
 
   factory _$_CommentAggregates.fromJson(Map<String, dynamic> json) =>
       _$_$_CommentAggregatesFromJson(json);
@@ -1421,6 +1573,7 @@ class _$_CommentAggregates extends _CommentAggregates {
       const DeepCollectionEquality().hash(upvotes) ^
       const DeepCollectionEquality().hash(downvotes);
 
+  @JsonKey(ignore: true)
   @override
   _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith =>
       __$CommentAggregatesCopyWithImpl<_CommentAggregates>(this, _$identity);
@@ -1432,27 +1585,29 @@ class _$_CommentAggregates extends _CommentAggregates {
 }
 
 abstract class _CommentAggregates extends CommentAggregates {
-  const _CommentAggregates._() : super._();
   const factory _CommentAggregates(
-      {@required int id,
-      @required int commentId,
-      @required int score,
-      @required int upvotes,
-      @required int downvotes}) = _$_CommentAggregates;
+      {required int id,
+      required int commentId,
+      required int score,
+      required int upvotes,
+      required int downvotes}) = _$_CommentAggregates;
+  const _CommentAggregates._() : super._();
 
   factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommentAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  int get score;
+  int get score => throw _privateConstructorUsedError;
   @override
-  int get upvotes;
+  int get upvotes => throw _privateConstructorUsedError;
   @override
-  int get downvotes;
+  int get downvotes => throw _privateConstructorUsedError;
   @override
-  _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith;
+  @JsonKey(ignore: true)
+  _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith =>
+      throw _privateConstructorUsedError;
 }

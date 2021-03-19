@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'comment.dart';
 
@@ -8,6 +8,10 @@ part of 'comment.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 CreateComment _$CreateCommentFromJson(Map<String, dynamic> json) {
   return _CreateComment.fromJson(json);
 }
@@ -16,13 +20,12 @@ CreateComment _$CreateCommentFromJson(Map<String, dynamic> json) {
 class _$CreateCommentTearOff {
   const _$CreateCommentTearOff();
 
-// ignore: unused_element
   _CreateComment call(
-      {@required String content,
-      int parentId,
-      @required int postId,
-      String formId,
-      @required String auth}) {
+      {required String content,
+      int? parentId,
+      required int postId,
+      String? formId,
+      required String auth}) {
     return _CreateComment(
       content: content,
       parentId: parentId,
@@ -32,26 +35,26 @@ class _$CreateCommentTearOff {
     );
   }
 
-// ignore: unused_element
   CreateComment fromJson(Map<String, Object> json) {
     return CreateComment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CreateComment = _$CreateCommentTearOff();
 
 /// @nodoc
 mixin _$CreateComment {
-  String get content;
-  int get parentId;
-  int get postId;
-  String get formId;
-  String get auth;
+  String get content => throw _privateConstructorUsedError;
+  int? get parentId => throw _privateConstructorUsedError;
+  int get postId => throw _privateConstructorUsedError;
+  String? get formId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CreateCommentCopyWith<CreateComment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreateCommentCopyWith<CreateComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -60,7 +63,7 @@ abstract class $CreateCommentCopyWith<$Res> {
           CreateComment value, $Res Function(CreateComment) then) =
       _$CreateCommentCopyWithImpl<$Res>;
   $Res call(
-      {String content, int parentId, int postId, String formId, String auth});
+      {String content, int? parentId, int postId, String? formId, String auth});
 }
 
 /// @nodoc
@@ -74,18 +77,33 @@ class _$CreateCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object content = freezed,
-    Object parentId = freezed,
-    Object postId = freezed,
-    Object formId = freezed,
-    Object auth = freezed,
+    Object? content = freezed,
+    Object? parentId = freezed,
+    Object? postId = freezed,
+    Object? formId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed ? _value.content : content as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      formId: formId == freezed ? _value.formId : formId as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -98,7 +116,7 @@ abstract class _$CreateCommentCopyWith<$Res>
       __$CreateCommentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String content, int parentId, int postId, String formId, String auth});
+      {String content, int? parentId, int postId, String? formId, String auth});
 }
 
 /// @nodoc
@@ -114,18 +132,33 @@ class __$CreateCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object content = freezed,
-    Object parentId = freezed,
-    Object postId = freezed,
-    Object formId = freezed,
-    Object auth = freezed,
+    Object? content = freezed,
+    Object? parentId = freezed,
+    Object? postId = freezed,
+    Object? formId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_CreateComment(
-      content: content == freezed ? _value.content : content as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      formId: formId == freezed ? _value.formId : formId as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -135,15 +168,12 @@ class __$CreateCommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_CreateComment extends _CreateComment {
   const _$_CreateComment(
-      {@required this.content,
+      {required this.content,
       this.parentId,
-      @required this.postId,
+      required this.postId,
       this.formId,
-      @required this.auth})
-      : assert(content != null),
-        assert(postId != null),
-        assert(auth != null),
-        super._();
+      required this.auth})
+      : super._();
 
   factory _$_CreateComment.fromJson(Map<String, dynamic> json) =>
       _$_$_CreateCommentFromJson(json);
@@ -151,11 +181,11 @@ class _$_CreateComment extends _CreateComment {
   @override
   final String content;
   @override
-  final int parentId;
+  final int? parentId;
   @override
   final int postId;
   @override
-  final String formId;
+  final String? formId;
   @override
   final String auth;
 
@@ -191,6 +221,7 @@ class _$_CreateComment extends _CreateComment {
       const DeepCollectionEquality().hash(formId) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$CreateCommentCopyWith<_CreateComment> get copyWith =>
       __$CreateCommentCopyWithImpl<_CreateComment>(this, _$identity);
@@ -202,29 +233,31 @@ class _$_CreateComment extends _CreateComment {
 }
 
 abstract class _CreateComment extends CreateComment {
-  const _CreateComment._() : super._();
   const factory _CreateComment(
-      {@required String content,
-      int parentId,
-      @required int postId,
-      String formId,
-      @required String auth}) = _$_CreateComment;
+      {required String content,
+      int? parentId,
+      required int postId,
+      String? formId,
+      required String auth}) = _$_CreateComment;
+  const _CreateComment._() : super._();
 
   factory _CreateComment.fromJson(Map<String, dynamic> json) =
       _$_CreateComment.fromJson;
 
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  int get parentId;
+  int? get parentId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String get formId;
+  String? get formId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$CreateCommentCopyWith<_CreateComment> get copyWith;
+  @JsonKey(ignore: true)
+  _$CreateCommentCopyWith<_CreateComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EditComment _$EditCommentFromJson(Map<String, dynamic> json) {
@@ -235,12 +268,11 @@ EditComment _$EditCommentFromJson(Map<String, dynamic> json) {
 class _$EditCommentTearOff {
   const _$EditCommentTearOff();
 
-// ignore: unused_element
   _EditComment call(
-      {@required String content,
-      @required int commentId,
-      String formId,
-      @required String auth}) {
+      {required String content,
+      required int commentId,
+      String? formId,
+      required String auth}) {
     return _EditComment(
       content: content,
       commentId: commentId,
@@ -249,25 +281,25 @@ class _$EditCommentTearOff {
     );
   }
 
-// ignore: unused_element
   EditComment fromJson(Map<String, Object> json) {
     return EditComment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $EditComment = _$EditCommentTearOff();
 
 /// @nodoc
 mixin _$EditComment {
-  String get content;
-  int get commentId;
-  String get formId;
-  String get auth;
+  String get content => throw _privateConstructorUsedError;
+  int get commentId => throw _privateConstructorUsedError;
+  String? get formId => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $EditCommentCopyWith<EditComment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EditCommentCopyWith<EditComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -275,7 +307,7 @@ abstract class $EditCommentCopyWith<$Res> {
   factory $EditCommentCopyWith(
           EditComment value, $Res Function(EditComment) then) =
       _$EditCommentCopyWithImpl<$Res>;
-  $Res call({String content, int commentId, String formId, String auth});
+  $Res call({String content, int commentId, String? formId, String auth});
 }
 
 /// @nodoc
@@ -288,16 +320,28 @@ class _$EditCommentCopyWithImpl<$Res> implements $EditCommentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object content = freezed,
-    Object commentId = freezed,
-    Object formId = freezed,
-    Object auth = freezed,
+    Object? content = freezed,
+    Object? commentId = freezed,
+    Object? formId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed ? _value.content : content as String,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      formId: formId == freezed ? _value.formId : formId as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -309,7 +353,7 @@ abstract class _$EditCommentCopyWith<$Res>
           _EditComment value, $Res Function(_EditComment) then) =
       __$EditCommentCopyWithImpl<$Res>;
   @override
-  $Res call({String content, int commentId, String formId, String auth});
+  $Res call({String content, int commentId, String? formId, String auth});
 }
 
 /// @nodoc
@@ -324,16 +368,28 @@ class __$EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object content = freezed,
-    Object commentId = freezed,
-    Object formId = freezed,
-    Object auth = freezed,
+    Object? content = freezed,
+    Object? commentId = freezed,
+    Object? formId = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_EditComment(
-      content: content == freezed ? _value.content : content as String,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      formId: formId == freezed ? _value.formId : formId as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -343,14 +399,11 @@ class __$EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_EditComment extends _EditComment {
   const _$_EditComment(
-      {@required this.content,
-      @required this.commentId,
+      {required this.content,
+      required this.commentId,
       this.formId,
-      @required this.auth})
-      : assert(content != null),
-        assert(commentId != null),
-        assert(auth != null),
-        super._();
+      required this.auth})
+      : super._();
 
   factory _$_EditComment.fromJson(Map<String, dynamic> json) =>
       _$_$_EditCommentFromJson(json);
@@ -360,7 +413,7 @@ class _$_EditComment extends _EditComment {
   @override
   final int commentId;
   @override
-  final String formId;
+  final String? formId;
   @override
   final String auth;
 
@@ -393,6 +446,7 @@ class _$_EditComment extends _EditComment {
       const DeepCollectionEquality().hash(formId) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$EditCommentCopyWith<_EditComment> get copyWith =>
       __$EditCommentCopyWithImpl<_EditComment>(this, _$identity);
@@ -404,26 +458,28 @@ class _$_EditComment extends _EditComment {
 }
 
 abstract class _EditComment extends EditComment {
-  const _EditComment._() : super._();
   const factory _EditComment(
-      {@required String content,
-      @required int commentId,
-      String formId,
-      @required String auth}) = _$_EditComment;
+      {required String content,
+      required int commentId,
+      String? formId,
+      required String auth}) = _$_EditComment;
+  const _EditComment._() : super._();
 
   factory _EditComment.fromJson(Map<String, dynamic> json) =
       _$_EditComment.fromJson;
 
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  String get formId;
+  String? get formId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$EditCommentCopyWith<_EditComment> get copyWith;
+  @JsonKey(ignore: true)
+  _$EditCommentCopyWith<_EditComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DeleteComment _$DeleteCommentFromJson(Map<String, dynamic> json) {
@@ -434,11 +490,8 @@ DeleteComment _$DeleteCommentFromJson(Map<String, dynamic> json) {
 class _$DeleteCommentTearOff {
   const _$DeleteCommentTearOff();
 
-// ignore: unused_element
   _DeleteComment call(
-      {@required int commentId,
-      @required bool deleted,
-      @required String auth}) {
+      {required int commentId, required bool deleted, required String auth}) {
     return _DeleteComment(
       commentId: commentId,
       deleted: deleted,
@@ -446,24 +499,24 @@ class _$DeleteCommentTearOff {
     );
   }
 
-// ignore: unused_element
   DeleteComment fromJson(Map<String, Object> json) {
     return DeleteComment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DeleteComment = _$DeleteCommentTearOff();
 
 /// @nodoc
 mixin _$DeleteComment {
-  int get commentId;
-  bool get deleted;
-  String get auth;
+  int get commentId => throw _privateConstructorUsedError;
+  bool get deleted => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DeleteCommentCopyWith<DeleteComment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeleteCommentCopyWith<DeleteComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -485,14 +538,23 @@ class _$DeleteCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object deleted = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? deleted = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -520,14 +582,23 @@ class __$DeleteCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object deleted = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? deleted = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_DeleteComment(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -537,11 +608,8 @@ class __$DeleteCommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_DeleteComment extends _DeleteComment {
   const _$_DeleteComment(
-      {@required this.commentId, @required this.deleted, @required this.auth})
-      : assert(commentId != null),
-        assert(deleted != null),
-        assert(auth != null),
-        super._();
+      {required this.commentId, required this.deleted, required this.auth})
+      : super._();
 
   factory _$_DeleteComment.fromJson(Map<String, dynamic> json) =>
       _$_$_DeleteCommentFromJson(json);
@@ -579,6 +647,7 @@ class _$_DeleteComment extends _DeleteComment {
       const DeepCollectionEquality().hash(deleted) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$DeleteCommentCopyWith<_DeleteComment> get copyWith =>
       __$DeleteCommentCopyWithImpl<_DeleteComment>(this, _$identity);
@@ -590,23 +659,25 @@ class _$_DeleteComment extends _DeleteComment {
 }
 
 abstract class _DeleteComment extends DeleteComment {
-  const _DeleteComment._() : super._();
   const factory _DeleteComment(
-      {@required int commentId,
-      @required bool deleted,
-      @required String auth}) = _$_DeleteComment;
+      {required int commentId,
+      required bool deleted,
+      required String auth}) = _$_DeleteComment;
+  const _DeleteComment._() : super._();
 
   factory _DeleteComment.fromJson(Map<String, dynamic> json) =
       _$_DeleteComment.fromJson;
 
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$DeleteCommentCopyWith<_DeleteComment> get copyWith;
+  @JsonKey(ignore: true)
+  _$DeleteCommentCopyWith<_DeleteComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 RemoveComment _$RemoveCommentFromJson(Map<String, dynamic> json) {
@@ -617,12 +688,11 @@ RemoveComment _$RemoveCommentFromJson(Map<String, dynamic> json) {
 class _$RemoveCommentTearOff {
   const _$RemoveCommentTearOff();
 
-// ignore: unused_element
   _RemoveComment call(
-      {@required int commentId,
-      @required bool removed,
-      String reason,
-      @required String auth}) {
+      {required int commentId,
+      required bool removed,
+      String? reason,
+      required String auth}) {
     return _RemoveComment(
       commentId: commentId,
       removed: removed,
@@ -631,25 +701,25 @@ class _$RemoveCommentTearOff {
     );
   }
 
-// ignore: unused_element
   RemoveComment fromJson(Map<String, Object> json) {
     return RemoveComment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $RemoveComment = _$RemoveCommentTearOff();
 
 /// @nodoc
 mixin _$RemoveComment {
-  int get commentId;
-  bool get removed;
-  String get reason;
-  String get auth;
+  int get commentId => throw _privateConstructorUsedError;
+  bool get removed => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $RemoveCommentCopyWith<RemoveComment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RemoveCommentCopyWith<RemoveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -657,7 +727,7 @@ abstract class $RemoveCommentCopyWith<$Res> {
   factory $RemoveCommentCopyWith(
           RemoveComment value, $Res Function(RemoveComment) then) =
       _$RemoveCommentCopyWithImpl<$Res>;
-  $Res call({int commentId, bool removed, String reason, String auth});
+  $Res call({int commentId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
@@ -671,16 +741,28 @@ class _$RemoveCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object removed = freezed,
-    Object reason = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? removed = freezed,
+    Object? reason = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      reason: reason == freezed ? _value.reason : reason as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -692,7 +774,7 @@ abstract class _$RemoveCommentCopyWith<$Res>
           _RemoveComment value, $Res Function(_RemoveComment) then) =
       __$RemoveCommentCopyWithImpl<$Res>;
   @override
-  $Res call({int commentId, bool removed, String reason, String auth});
+  $Res call({int commentId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
@@ -708,16 +790,28 @@ class __$RemoveCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object removed = freezed,
-    Object reason = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? removed = freezed,
+    Object? reason = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_RemoveComment(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      reason: reason == freezed ? _value.reason : reason as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -727,14 +821,11 @@ class __$RemoveCommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_RemoveComment extends _RemoveComment {
   const _$_RemoveComment(
-      {@required this.commentId,
-      @required this.removed,
+      {required this.commentId,
+      required this.removed,
       this.reason,
-      @required this.auth})
-      : assert(commentId != null),
-        assert(removed != null),
-        assert(auth != null),
-        super._();
+      required this.auth})
+      : super._();
 
   factory _$_RemoveComment.fromJson(Map<String, dynamic> json) =>
       _$_$_RemoveCommentFromJson(json);
@@ -744,7 +835,7 @@ class _$_RemoveComment extends _RemoveComment {
   @override
   final bool removed;
   @override
-  final String reason;
+  final String? reason;
   @override
   final String auth;
 
@@ -777,6 +868,7 @@ class _$_RemoveComment extends _RemoveComment {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$RemoveCommentCopyWith<_RemoveComment> get copyWith =>
       __$RemoveCommentCopyWithImpl<_RemoveComment>(this, _$identity);
@@ -788,26 +880,28 @@ class _$_RemoveComment extends _RemoveComment {
 }
 
 abstract class _RemoveComment extends RemoveComment {
-  const _RemoveComment._() : super._();
   const factory _RemoveComment(
-      {@required int commentId,
-      @required bool removed,
-      String reason,
-      @required String auth}) = _$_RemoveComment;
+      {required int commentId,
+      required bool removed,
+      String? reason,
+      required String auth}) = _$_RemoveComment;
+  const _RemoveComment._() : super._();
 
   factory _RemoveComment.fromJson(Map<String, dynamic> json) =
       _$_RemoveComment.fromJson;
 
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$RemoveCommentCopyWith<_RemoveComment> get copyWith;
+  @JsonKey(ignore: true)
+  _$RemoveCommentCopyWith<_RemoveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MarkCommentAsRead _$MarkCommentAsReadFromJson(Map<String, dynamic> json) {
@@ -818,9 +912,8 @@ MarkCommentAsRead _$MarkCommentAsReadFromJson(Map<String, dynamic> json) {
 class _$MarkCommentAsReadTearOff {
   const _$MarkCommentAsReadTearOff();
 
-// ignore: unused_element
   _MarkCommentAsRead call(
-      {@required int commentId, @required bool read, @required String auth}) {
+      {required int commentId, required bool read, required String auth}) {
     return _MarkCommentAsRead(
       commentId: commentId,
       read: read,
@@ -828,24 +921,24 @@ class _$MarkCommentAsReadTearOff {
     );
   }
 
-// ignore: unused_element
   MarkCommentAsRead fromJson(Map<String, Object> json) {
     return MarkCommentAsRead.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MarkCommentAsRead = _$MarkCommentAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkCommentAsRead {
-  int get commentId;
-  bool get read;
-  String get auth;
+  int get commentId => throw _privateConstructorUsedError;
+  bool get read => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $MarkCommentAsReadCopyWith<MarkCommentAsRead> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MarkCommentAsReadCopyWith<MarkCommentAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -867,14 +960,23 @@ class _$MarkCommentAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object read = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? read = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -902,14 +1004,23 @@ class __$MarkCommentAsReadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object read = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? read = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_MarkCommentAsRead(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -919,11 +1030,8 @@ class __$MarkCommentAsReadCopyWithImpl<$Res>
 /// @nodoc
 class _$_MarkCommentAsRead extends _MarkCommentAsRead {
   const _$_MarkCommentAsRead(
-      {@required this.commentId, @required this.read, @required this.auth})
-      : assert(commentId != null),
-        assert(read != null),
-        assert(auth != null),
-        super._();
+      {required this.commentId, required this.read, required this.auth})
+      : super._();
 
   factory _$_MarkCommentAsRead.fromJson(Map<String, dynamic> json) =>
       _$_$_MarkCommentAsReadFromJson(json);
@@ -960,6 +1068,7 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
       const DeepCollectionEquality().hash(read) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$MarkCommentAsReadCopyWith<_MarkCommentAsRead> get copyWith =>
       __$MarkCommentAsReadCopyWithImpl<_MarkCommentAsRead>(this, _$identity);
@@ -971,23 +1080,25 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
 }
 
 abstract class _MarkCommentAsRead extends MarkCommentAsRead {
-  const _MarkCommentAsRead._() : super._();
   const factory _MarkCommentAsRead(
-      {@required int commentId,
-      @required bool read,
-      @required String auth}) = _$_MarkCommentAsRead;
+      {required int commentId,
+      required bool read,
+      required String auth}) = _$_MarkCommentAsRead;
+  const _MarkCommentAsRead._() : super._();
 
   factory _MarkCommentAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkCommentAsRead.fromJson;
 
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$MarkCommentAsReadCopyWith<_MarkCommentAsRead> get copyWith;
+  @JsonKey(ignore: true)
+  _$MarkCommentAsReadCopyWith<_MarkCommentAsRead> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SaveComment _$SaveCommentFromJson(Map<String, dynamic> json) {
@@ -998,9 +1109,8 @@ SaveComment _$SaveCommentFromJson(Map<String, dynamic> json) {
 class _$SaveCommentTearOff {
   const _$SaveCommentTearOff();
 
-// ignore: unused_element
   _SaveComment call(
-      {@required int commentId, @required bool save, @required String auth}) {
+      {required int commentId, required bool save, required String auth}) {
     return _SaveComment(
       commentId: commentId,
       save: save,
@@ -1008,24 +1118,24 @@ class _$SaveCommentTearOff {
     );
   }
 
-// ignore: unused_element
   SaveComment fromJson(Map<String, Object> json) {
     return SaveComment.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SaveComment = _$SaveCommentTearOff();
 
 /// @nodoc
 mixin _$SaveComment {
-  int get commentId;
-  bool get save;
-  String get auth;
+  int get commentId => throw _privateConstructorUsedError;
+  bool get save => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SaveCommentCopyWith<SaveComment> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SaveCommentCopyWith<SaveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1046,14 +1156,23 @@ class _$SaveCommentCopyWithImpl<$Res> implements $SaveCommentCopyWith<$Res> {
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object save = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? save = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      save: save == freezed ? _value.save : save as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      save: save == freezed
+          ? _value.save
+          : save // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1080,14 +1199,23 @@ class __$SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object save = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? save = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_SaveComment(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      save: save == freezed ? _value.save : save as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      save: save == freezed
+          ? _value.save
+          : save // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1097,11 +1225,8 @@ class __$SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
 /// @nodoc
 class _$_SaveComment extends _SaveComment {
   const _$_SaveComment(
-      {@required this.commentId, @required this.save, @required this.auth})
-      : assert(commentId != null),
-        assert(save != null),
-        assert(auth != null),
-        super._();
+      {required this.commentId, required this.save, required this.auth})
+      : super._();
 
   factory _$_SaveComment.fromJson(Map<String, dynamic> json) =>
       _$_$_SaveCommentFromJson(json);
@@ -1138,6 +1263,7 @@ class _$_SaveComment extends _SaveComment {
       const DeepCollectionEquality().hash(save) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$SaveCommentCopyWith<_SaveComment> get copyWith =>
       __$SaveCommentCopyWithImpl<_SaveComment>(this, _$identity);
@@ -1149,23 +1275,25 @@ class _$_SaveComment extends _SaveComment {
 }
 
 abstract class _SaveComment extends SaveComment {
-  const _SaveComment._() : super._();
   const factory _SaveComment(
-      {@required int commentId,
-      @required bool save,
-      @required String auth}) = _$_SaveComment;
+      {required int commentId,
+      required bool save,
+      required String auth}) = _$_SaveComment;
+  const _SaveComment._() : super._();
 
   factory _SaveComment.fromJson(Map<String, dynamic> json) =
       _$_SaveComment.fromJson;
 
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  bool get save;
+  bool get save => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$SaveCommentCopyWith<_SaveComment> get copyWith;
+  @JsonKey(ignore: true)
+  _$SaveCommentCopyWith<_SaveComment> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CreateCommentLike _$CreateCommentLikeFromJson(Map<String, dynamic> json) {
@@ -1176,11 +1304,8 @@ CreateCommentLike _$CreateCommentLikeFromJson(Map<String, dynamic> json) {
 class _$CreateCommentLikeTearOff {
   const _$CreateCommentLikeTearOff();
 
-// ignore: unused_element
   _CreateCommentLike call(
-      {@required int commentId,
-      @required VoteType score,
-      @required String auth}) {
+      {required int commentId, required VoteType score, required String auth}) {
     return _CreateCommentLike(
       commentId: commentId,
       score: score,
@@ -1188,24 +1313,24 @@ class _$CreateCommentLikeTearOff {
     );
   }
 
-// ignore: unused_element
   CreateCommentLike fromJson(Map<String, Object> json) {
     return CreateCommentLike.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CreateCommentLike = _$CreateCommentLikeTearOff();
 
 /// @nodoc
 mixin _$CreateCommentLike {
-  int get commentId;
-  VoteType get score;
-  String get auth;
+  int get commentId => throw _privateConstructorUsedError;
+  VoteType get score => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CreateCommentLikeCopyWith<CreateCommentLike> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreateCommentLikeCopyWith<CreateCommentLike> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1227,14 +1352,23 @@ class _$CreateCommentLikeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object score = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? score = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as VoteType,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as VoteType,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1262,14 +1396,23 @@ class __$CreateCommentLikeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object score = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? score = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_CreateCommentLike(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as VoteType,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as VoteType,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1279,11 +1422,8 @@ class __$CreateCommentLikeCopyWithImpl<$Res>
 /// @nodoc
 class _$_CreateCommentLike extends _CreateCommentLike {
   const _$_CreateCommentLike(
-      {@required this.commentId, @required this.score, @required this.auth})
-      : assert(commentId != null),
-        assert(score != null),
-        assert(auth != null),
-        super._();
+      {required this.commentId, required this.score, required this.auth})
+      : super._();
 
   factory _$_CreateCommentLike.fromJson(Map<String, dynamic> json) =>
       _$_$_CreateCommentLikeFromJson(json);
@@ -1320,6 +1460,7 @@ class _$_CreateCommentLike extends _CreateCommentLike {
       const DeepCollectionEquality().hash(score) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$CreateCommentLikeCopyWith<_CreateCommentLike> get copyWith =>
       __$CreateCommentLikeCopyWithImpl<_CreateCommentLike>(this, _$identity);
@@ -1331,23 +1472,25 @@ class _$_CreateCommentLike extends _CreateCommentLike {
 }
 
 abstract class _CreateCommentLike extends CreateCommentLike {
-  const _CreateCommentLike._() : super._();
   const factory _CreateCommentLike(
-      {@required int commentId,
-      @required VoteType score,
-      @required String auth}) = _$_CreateCommentLike;
+      {required int commentId,
+      required VoteType score,
+      required String auth}) = _$_CreateCommentLike;
+  const _CreateCommentLike._() : super._();
 
   factory _CreateCommentLike.fromJson(Map<String, dynamic> json) =
       _$_CreateCommentLike.fromJson;
 
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  VoteType get score;
+  VoteType get score => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$CreateCommentLikeCopyWith<_CreateCommentLike> get copyWith;
+  @JsonKey(ignore: true)
+  _$CreateCommentLikeCopyWith<_CreateCommentLike> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetComments _$GetCommentsFromJson(Map<String, dynamic> json) {
@@ -1358,15 +1501,14 @@ GetComments _$GetCommentsFromJson(Map<String, dynamic> json) {
 class _$GetCommentsTearOff {
   const _$GetCommentsTearOff();
 
-// ignore: unused_element
   _GetComments call(
-      {@required @JsonKey(name: 'type_') CommentListingType type,
-      @required SortType sort,
-      int page,
-      int limit,
-      int communityId,
-      String communityName,
-      String auth}) {
+      {@JsonKey(name: 'type_') required CommentListingType type,
+      required SortType sort,
+      int? page,
+      int? limit,
+      int? communityId,
+      String? communityName,
+      String? auth}) {
     return _GetComments(
       type: type,
       sort: sort,
@@ -1378,29 +1520,29 @@ class _$GetCommentsTearOff {
     );
   }
 
-// ignore: unused_element
   GetComments fromJson(Map<String, Object> json) {
     return GetComments.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $GetComments = _$GetCommentsTearOff();
 
 /// @nodoc
 mixin _$GetComments {
   @JsonKey(name: 'type_')
-  CommentListingType get type;
-  SortType get sort;
-  int get page;
-  int get limit;
-  int get communityId;
-  String get communityName;
-  String get auth;
+  CommentListingType get type => throw _privateConstructorUsedError;
+  SortType get sort => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
+  String? get communityName => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $GetCommentsCopyWith<GetComments> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetCommentsCopyWith<GetComments> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1411,11 +1553,11 @@ abstract class $GetCommentsCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'type_') CommentListingType type,
       SortType sort,
-      int page,
-      int limit,
-      int communityId,
-      String communityName,
-      String auth});
+      int? page,
+      int? limit,
+      int? communityId,
+      String? communityName,
+      String? auth});
 }
 
 /// @nodoc
@@ -1428,25 +1570,43 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
 
   @override
   $Res call({
-    Object type = freezed,
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object communityId = freezed,
-    Object communityName = freezed,
-    Object auth = freezed,
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? communityName = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as CommentListingType,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CommentListingType,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
       communityName: communityName == freezed
           ? _value.communityName
-          : communityName as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : communityName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1461,11 +1621,11 @@ abstract class _$GetCommentsCopyWith<$Res>
   $Res call(
       {@JsonKey(name: 'type_') CommentListingType type,
       SortType sort,
-      int page,
-      int limit,
-      int communityId,
-      String communityName,
-      String auth});
+      int? page,
+      int? limit,
+      int? communityId,
+      String? communityName,
+      String? auth});
 }
 
 /// @nodoc
@@ -1480,25 +1640,43 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object type = freezed,
-    Object sort = freezed,
-    Object page = freezed,
-    Object limit = freezed,
-    Object communityId = freezed,
-    Object communityName = freezed,
-    Object auth = freezed,
+    Object? type = freezed,
+    Object? sort = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? communityId = freezed,
+    Object? communityName = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetComments(
-      type: type == freezed ? _value.type : type as CommentListingType,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CommentListingType,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
       communityName: communityName == freezed
           ? _value.communityName
-          : communityName as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : communityName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1508,16 +1686,14 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetComments extends _GetComments {
   const _$_GetComments(
-      {@required @JsonKey(name: 'type_') this.type,
-      @required this.sort,
+      {@JsonKey(name: 'type_') required this.type,
+      required this.sort,
       this.page,
       this.limit,
       this.communityId,
       this.communityName,
       this.auth})
-      : assert(type != null),
-        assert(sort != null),
-        super._();
+      : super._();
 
   factory _$_GetComments.fromJson(Map<String, dynamic> json) =>
       _$_$_GetCommentsFromJson(json);
@@ -1528,15 +1704,15 @@ class _$_GetComments extends _GetComments {
   @override
   final SortType sort;
   @override
-  final int page;
+  final int? page;
   @override
-  final int limit;
+  final int? limit;
   @override
-  final int communityId;
+  final int? communityId;
   @override
-  final String communityName;
+  final String? communityName;
   @override
-  final String auth;
+  final String? auth;
 
   @override
   String toString() {
@@ -1576,6 +1752,7 @@ class _$_GetComments extends _GetComments {
       const DeepCollectionEquality().hash(communityName) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$GetCommentsCopyWith<_GetComments> get copyWith =>
       __$GetCommentsCopyWithImpl<_GetComments>(this, _$identity);
@@ -1587,36 +1764,38 @@ class _$_GetComments extends _GetComments {
 }
 
 abstract class _GetComments extends GetComments {
-  const _GetComments._() : super._();
   const factory _GetComments(
-      {@required @JsonKey(name: 'type_') CommentListingType type,
-      @required SortType sort,
-      int page,
-      int limit,
-      int communityId,
-      String communityName,
-      String auth}) = _$_GetComments;
+      {@JsonKey(name: 'type_') required CommentListingType type,
+      required SortType sort,
+      int? page,
+      int? limit,
+      int? communityId,
+      String? communityName,
+      String? auth}) = _$_GetComments;
+  const _GetComments._() : super._();
 
   factory _GetComments.fromJson(Map<String, dynamic> json) =
       _$_GetComments.fromJson;
 
   @override
   @JsonKey(name: 'type_')
-  CommentListingType get type;
+  CommentListingType get type => throw _privateConstructorUsedError;
   @override
-  SortType get sort;
+  SortType get sort => throw _privateConstructorUsedError;
   @override
-  int get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  String get communityName;
+  String? get communityName => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
-  _$GetCommentsCopyWith<_GetComments> get copyWith;
+  @JsonKey(ignore: true)
+  _$GetCommentsCopyWith<_GetComments> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CreateCommentReport _$CreateCommentReportFromJson(Map<String, dynamic> json) {
@@ -1627,11 +1806,8 @@ CreateCommentReport _$CreateCommentReportFromJson(Map<String, dynamic> json) {
 class _$CreateCommentReportTearOff {
   const _$CreateCommentReportTearOff();
 
-// ignore: unused_element
   _CreateCommentReport call(
-      {@required int commentId,
-      @required String reason,
-      @required String auth}) {
+      {required int commentId, required String reason, required String auth}) {
     return _CreateCommentReport(
       commentId: commentId,
       reason: reason,
@@ -1639,24 +1815,24 @@ class _$CreateCommentReportTearOff {
     );
   }
 
-// ignore: unused_element
   CreateCommentReport fromJson(Map<String, Object> json) {
     return CreateCommentReport.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CreateCommentReport = _$CreateCommentReportTearOff();
 
 /// @nodoc
 mixin _$CreateCommentReport {
-  int get commentId;
-  String get reason;
-  String get auth;
+  int get commentId => throw _privateConstructorUsedError;
+  String get reason => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $CreateCommentReportCopyWith<CreateCommentReport> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CreateCommentReportCopyWith<CreateCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1678,14 +1854,23 @@ class _$CreateCommentReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object reason = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? reason = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1713,14 +1898,23 @@ class __$CreateCommentReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object commentId = freezed,
-    Object reason = freezed,
-    Object auth = freezed,
+    Object? commentId = freezed,
+    Object? reason = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_CreateCommentReport(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1730,11 +1924,8 @@ class __$CreateCommentReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_CreateCommentReport extends _CreateCommentReport {
   const _$_CreateCommentReport(
-      {@required this.commentId, @required this.reason, @required this.auth})
-      : assert(commentId != null),
-        assert(reason != null),
-        assert(auth != null),
-        super._();
+      {required this.commentId, required this.reason, required this.auth})
+      : super._();
 
   factory _$_CreateCommentReport.fromJson(Map<String, dynamic> json) =>
       _$_$_CreateCommentReportFromJson(json);
@@ -1771,6 +1962,7 @@ class _$_CreateCommentReport extends _CreateCommentReport {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$CreateCommentReportCopyWith<_CreateCommentReport> get copyWith =>
       __$CreateCommentReportCopyWithImpl<_CreateCommentReport>(
@@ -1783,23 +1975,25 @@ class _$_CreateCommentReport extends _CreateCommentReport {
 }
 
 abstract class _CreateCommentReport extends CreateCommentReport {
-  const _CreateCommentReport._() : super._();
   const factory _CreateCommentReport(
-      {@required int commentId,
-      @required String reason,
-      @required String auth}) = _$_CreateCommentReport;
+      {required int commentId,
+      required String reason,
+      required String auth}) = _$_CreateCommentReport;
+  const _CreateCommentReport._() : super._();
 
   factory _CreateCommentReport.fromJson(Map<String, dynamic> json) =
       _$_CreateCommentReport.fromJson;
 
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$CreateCommentReportCopyWith<_CreateCommentReport> get copyWith;
+  @JsonKey(ignore: true)
+  _$CreateCommentReportCopyWith<_CreateCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ResolveCommentReport _$ResolveCommentReportFromJson(Map<String, dynamic> json) {
@@ -1810,11 +2004,8 @@ ResolveCommentReport _$ResolveCommentReportFromJson(Map<String, dynamic> json) {
 class _$ResolveCommentReportTearOff {
   const _$ResolveCommentReportTearOff();
 
-// ignore: unused_element
   _ResolveCommentReport call(
-      {@required int reportId,
-      @required bool resolved,
-      @required String auth}) {
+      {required int reportId, required bool resolved, required String auth}) {
     return _ResolveCommentReport(
       reportId: reportId,
       resolved: resolved,
@@ -1822,24 +2013,24 @@ class _$ResolveCommentReportTearOff {
     );
   }
 
-// ignore: unused_element
   ResolveCommentReport fromJson(Map<String, Object> json) {
     return ResolveCommentReport.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ResolveCommentReport = _$ResolveCommentReportTearOff();
 
 /// @nodoc
 mixin _$ResolveCommentReport {
-  int get reportId;
-  bool get resolved;
-  String get auth;
+  int get reportId => throw _privateConstructorUsedError;
+  bool get resolved => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ResolveCommentReportCopyWith<ResolveCommentReport> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResolveCommentReportCopyWith<ResolveCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1861,14 +2052,23 @@ class _$ResolveCommentReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object reportId = freezed,
-    Object resolved = freezed,
-    Object auth = freezed,
+    Object? reportId = freezed,
+    Object? resolved = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      reportId: reportId == freezed ? _value.reportId : reportId as int,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      reportId: reportId == freezed
+          ? _value.reportId
+          : reportId // ignore: cast_nullable_to_non_nullable
+              as int,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1896,14 +2096,23 @@ class __$ResolveCommentReportCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object reportId = freezed,
-    Object resolved = freezed,
-    Object auth = freezed,
+    Object? reportId = freezed,
+    Object? resolved = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_ResolveCommentReport(
-      reportId: reportId == freezed ? _value.reportId : reportId as int,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      reportId: reportId == freezed
+          ? _value.reportId
+          : reportId // ignore: cast_nullable_to_non_nullable
+              as int,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1913,11 +2122,8 @@ class __$ResolveCommentReportCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResolveCommentReport extends _ResolveCommentReport {
   const _$_ResolveCommentReport(
-      {@required this.reportId, @required this.resolved, @required this.auth})
-      : assert(reportId != null),
-        assert(resolved != null),
-        assert(auth != null),
-        super._();
+      {required this.reportId, required this.resolved, required this.auth})
+      : super._();
 
   factory _$_ResolveCommentReport.fromJson(Map<String, dynamic> json) =>
       _$_$_ResolveCommentReportFromJson(json);
@@ -1955,6 +2161,7 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
       const DeepCollectionEquality().hash(resolved) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$ResolveCommentReportCopyWith<_ResolveCommentReport> get copyWith =>
       __$ResolveCommentReportCopyWithImpl<_ResolveCommentReport>(
@@ -1967,23 +2174,25 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
 }
 
 abstract class _ResolveCommentReport extends ResolveCommentReport {
-  const _ResolveCommentReport._() : super._();
   const factory _ResolveCommentReport(
-      {@required int reportId,
-      @required bool resolved,
-      @required String auth}) = _$_ResolveCommentReport;
+      {required int reportId,
+      required bool resolved,
+      required String auth}) = _$_ResolveCommentReport;
+  const _ResolveCommentReport._() : super._();
 
   factory _ResolveCommentReport.fromJson(Map<String, dynamic> json) =
       _$_ResolveCommentReport.fromJson;
 
   @override
-  int get reportId;
+  int get reportId => throw _privateConstructorUsedError;
   @override
-  bool get resolved;
+  bool get resolved => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$ResolveCommentReportCopyWith<_ResolveCommentReport> get copyWith;
+  @JsonKey(ignore: true)
+  _$ResolveCommentReportCopyWith<_ResolveCommentReport> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ListCommentReports _$ListCommentReportsFromJson(Map<String, dynamic> json) {
@@ -1994,9 +2203,8 @@ ListCommentReports _$ListCommentReportsFromJson(Map<String, dynamic> json) {
 class _$ListCommentReportsTearOff {
   const _$ListCommentReportsTearOff();
 
-// ignore: unused_element
   _ListCommentReports call(
-      {int page, int limit, int community, @required String auth}) {
+      {int? page, int? limit, int? community, required String auth}) {
     return _ListCommentReports(
       page: page,
       limit: limit,
@@ -2005,25 +2213,25 @@ class _$ListCommentReportsTearOff {
     );
   }
 
-// ignore: unused_element
   ListCommentReports fromJson(Map<String, Object> json) {
     return ListCommentReports.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ListCommentReports = _$ListCommentReportsTearOff();
 
 /// @nodoc
 mixin _$ListCommentReports {
-  int get page;
-  int get limit;
-  int get community;
-  String get auth;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  int? get community => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ListCommentReportsCopyWith<ListCommentReports> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListCommentReportsCopyWith<ListCommentReports> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2031,7 +2239,7 @@ abstract class $ListCommentReportsCopyWith<$Res> {
   factory $ListCommentReportsCopyWith(
           ListCommentReports value, $Res Function(ListCommentReports) then) =
       _$ListCommentReportsCopyWithImpl<$Res>;
-  $Res call({int page, int limit, int community, String auth});
+  $Res call({int? page, int? limit, int? community, String auth});
 }
 
 /// @nodoc
@@ -2045,16 +2253,28 @@ class _$ListCommentReportsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object page = freezed,
-    Object limit = freezed,
-    Object community = freezed,
-    Object auth = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? community = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
-      community: community == freezed ? _value.community : community as int,
-      auth: auth == freezed ? _value.auth : auth as String,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2066,7 +2286,7 @@ abstract class _$ListCommentReportsCopyWith<$Res>
           _ListCommentReports value, $Res Function(_ListCommentReports) then) =
       __$ListCommentReportsCopyWithImpl<$Res>;
   @override
-  $Res call({int page, int limit, int community, String auth});
+  $Res call({int? page, int? limit, int? community, String auth});
 }
 
 /// @nodoc
@@ -2082,16 +2302,28 @@ class __$ListCommentReportsCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object page = freezed,
-    Object limit = freezed,
-    Object community = freezed,
-    Object auth = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? community = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_ListCommentReports(
-      page: page == freezed ? _value.page : page as int,
-      limit: limit == freezed ? _value.limit : limit as int,
-      community: community == freezed ? _value.community : community as int,
-      auth: auth == freezed ? _value.auth : auth as String,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2101,19 +2333,18 @@ class __$ListCommentReportsCopyWithImpl<$Res>
 /// @nodoc
 class _$_ListCommentReports extends _ListCommentReports {
   const _$_ListCommentReports(
-      {this.page, this.limit, this.community, @required this.auth})
-      : assert(auth != null),
-        super._();
+      {this.page, this.limit, this.community, required this.auth})
+      : super._();
 
   factory _$_ListCommentReports.fromJson(Map<String, dynamic> json) =>
       _$_$_ListCommentReportsFromJson(json);
 
   @override
-  final int page;
+  final int? page;
   @override
-  final int limit;
+  final int? limit;
   @override
-  final int community;
+  final int? community;
   @override
   final String auth;
 
@@ -2145,6 +2376,7 @@ class _$_ListCommentReports extends _ListCommentReports {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(auth);
 
+  @JsonKey(ignore: true)
   @override
   _$ListCommentReportsCopyWith<_ListCommentReports> get copyWith =>
       __$ListCommentReportsCopyWithImpl<_ListCommentReports>(this, _$identity);
@@ -2156,24 +2388,26 @@ class _$_ListCommentReports extends _ListCommentReports {
 }
 
 abstract class _ListCommentReports extends ListCommentReports {
-  const _ListCommentReports._() : super._();
   const factory _ListCommentReports(
-      {int page,
-      int limit,
-      int community,
-      @required String auth}) = _$_ListCommentReports;
+      {int? page,
+      int? limit,
+      int? community,
+      required String auth}) = _$_ListCommentReports;
+  const _ListCommentReports._() : super._();
 
   factory _ListCommentReports.fromJson(Map<String, dynamic> json) =
       _$_ListCommentReports.fromJson;
 
   @override
-  int get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int get community;
+  int? get community => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  _$ListCommentReportsCopyWith<_ListCommentReports> get copyWith;
+  @JsonKey(ignore: true)
+  _$ListCommentReportsCopyWith<_ListCommentReports> get copyWith =>
+      throw _privateConstructorUsedError;
 }
