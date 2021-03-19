@@ -30,8 +30,9 @@ class PictrsApi {
     final res = await req.send();
     final Map<String, dynamic> body =
         jsonDecode(utf8.decode(await res.stream.toBytes()));
+    body['instance_host'] = host;
 
-    return PictrsUpload.fromJson(body)..instanceHost = host;
+    return PictrsUpload.fromJson(body);
   }
 
   Future<void> delete(PictrsUploadFile pictrsFile) async {

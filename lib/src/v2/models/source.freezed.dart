@@ -131,25 +131,62 @@ class _$UserSafeCopyWithImpl<$Res> implements $UserSafeCopyWith<$Res> {
     Object? deleted = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String?,
-      avatar: avatar == freezed ? _value.avatar : avatar as String?,
-      admin: admin == freezed ? _value.admin : admin as bool,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+          : preferredUsername // ignore: cast_nullable_to_non_nullable
+              as String?,
+      avatar: avatar == freezed
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as bool,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String?,
-      actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String?,
-      local: local == freezed ? _value.local : local as bool,
-      banner: banner == freezed ? _value.banner : banner as String?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      bio: bio == freezed
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String?,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -203,25 +240,62 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
     Object? deleted = freezed,
   }) {
     return _then(_UserSafe(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String?,
-      avatar: avatar == freezed ? _value.avatar : avatar as String?,
-      admin: admin == freezed ? _value.admin : admin as bool,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+          : preferredUsername // ignore: cast_nullable_to_non_nullable
+              as String?,
+      avatar: avatar == freezed
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as bool,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String?,
-      actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String?,
-      local: local == freezed ? _value.local : local as bool,
-      banner: banner == freezed ? _value.banner : banner as String?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      bio: bio == freezed
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String?,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -355,7 +429,6 @@ class _$_UserSafe extends _UserSafe {
 }
 
 abstract class _UserSafe extends UserSafe {
-  _UserSafe._() : super._();
   factory _UserSafe(
       {required int id,
       required String name,
@@ -371,6 +444,7 @@ abstract class _UserSafe extends UserSafe {
       required bool local,
       String? banner,
       required bool deleted}) = _$_UserSafe;
+  _UserSafe._() : super._();
 
   factory _UserSafe.fromJson(Map<String, dynamic> json) = _$_UserSafe.fromJson;
 
@@ -580,43 +654,98 @@ class _$UserSafeSettingsCopyWithImpl<$Res>
     Object? deleted = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String?,
-      email: email == freezed ? _value.email : email as String?,
-      avatar: avatar == freezed ? _value.avatar : avatar as String?,
-      admin: admin == freezed ? _value.admin : admin as bool,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
-      theme: theme == freezed ? _value.theme : theme as String,
+          : preferredUsername // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      avatar: avatar == freezed
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as bool,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      showNsfw: showNsfw == freezed
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      theme: theme == freezed
+          ? _value.theme
+          : theme // ignore: cast_nullable_to_non_nullable
+              as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as SortType,
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as PostListingType,
-      lang: lang == freezed ? _value.lang : lang as String,
-      showAvatars:
-          showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
+          : defaultListingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
+      lang: lang == freezed
+          ? _value.lang
+          : lang // ignore: cast_nullable_to_non_nullable
+              as String,
+      showAvatars: showAvatars == freezed
+          ? _value.showAvatars
+          : showAvatars // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
-          : sendNotificationsToEmail as bool,
+          : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+              as bool,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String?,
-      actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String?,
-      local: local == freezed ? _value.local : local as bool,
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      bio: bio == freezed
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String?,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
       lastRefreshedAt: lastRefreshedAt == freezed
           ? _value.lastRefreshedAt
-          : lastRefreshedAt as DateTime,
-      banner: banner == freezed ? _value.banner : banner as String?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
+          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -694,43 +823,98 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
     Object? deleted = freezed,
   }) {
     return _then(_UserSafeSettings(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String?,
-      email: email == freezed ? _value.email : email as String?,
-      avatar: avatar == freezed ? _value.avatar : avatar as String?,
-      admin: admin == freezed ? _value.admin : admin as bool,
-      banned: banned == freezed ? _value.banned : banned as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
-      theme: theme == freezed ? _value.theme : theme as String,
+          : preferredUsername // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      avatar: avatar == freezed
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as bool,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      showNsfw: showNsfw == freezed
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      theme: theme == freezed
+          ? _value.theme
+          : theme // ignore: cast_nullable_to_non_nullable
+              as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as SortType,
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as PostListingType,
-      lang: lang == freezed ? _value.lang : lang as String,
-      showAvatars:
-          showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
+          : defaultListingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
+      lang: lang == freezed
+          ? _value.lang
+          : lang // ignore: cast_nullable_to_non_nullable
+              as String,
+      showAvatars: showAvatars == freezed
+          ? _value.showAvatars
+          : showAvatars // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
-          : sendNotificationsToEmail as bool,
+          : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+              as bool,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String?,
-      actorId: actorId == freezed ? _value.actorId : actorId as String,
-      bio: bio == freezed ? _value.bio : bio as String?,
-      local: local == freezed ? _value.local : local as bool,
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      bio: bio == freezed
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String?,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
       lastRefreshedAt: lastRefreshedAt == freezed
           ? _value.lastRefreshedAt
-          : lastRefreshedAt as DateTime,
-      banner: banner == freezed ? _value.banner : banner as String?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
+          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -930,7 +1114,6 @@ class _$_UserSafeSettings extends _UserSafeSettings {
 }
 
 abstract class _UserSafeSettings extends UserSafeSettings {
-  _UserSafeSettings._() : super._();
   factory _UserSafeSettings(
       {required int id,
       required String name,
@@ -957,6 +1140,7 @@ abstract class _UserSafeSettings extends UserSafeSettings {
       required DateTime lastRefreshedAt,
       String? banner,
       required bool deleted}) = _$_UserSafeSettings;
+  _UserSafeSettings._() : super._();
 
   factory _UserSafeSettings.fromJson(Map<String, dynamic> json) =
       _$_UserSafeSettings.fromJson;
@@ -1118,24 +1302,50 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? banner = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
-          : enableDownvotes as bool,
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
-          : openRegistration as bool,
-      enableNsfw:
-          enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+          : openRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: enableNsfw == freezed
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1183,24 +1393,50 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? banner = freezed,
   }) {
     return _then(_Site(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
-          : enableDownvotes as bool,
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
-          : openRegistration as bool,
-      enableNsfw:
-          enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+          : openRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: enableNsfw == freezed
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1318,7 +1554,6 @@ class _$_Site extends _Site {
 }
 
 abstract class _Site extends Site {
-  _Site._() : super._();
   factory _Site(
       {required int id,
       required String name,
@@ -1331,6 +1566,7 @@ abstract class _Site extends Site {
       required bool enableNsfw,
       String? icon,
       String? banner}) = _$_Site;
+  _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
 
@@ -1462,18 +1698,46 @@ class _$PrivateMessageCopyWithImpl<$Res>
     Object? local = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      recipientId:
-          recipientId == freezed ? _value.recipientId : recipientId as int,
-      content: content == freezed ? _value.content : content as String,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      read: read == freezed ? _value.read : read as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      apId: apId == freezed ? _value.apId : apId as String,
-      local: local == freezed ? _value.local : local as bool,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      recipientId: recipientId == freezed
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      apId: apId == freezed
+          ? _value.apId
+          : apId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1523,18 +1787,46 @@ class __$PrivateMessageCopyWithImpl<$Res>
     Object? local = freezed,
   }) {
     return _then(_PrivateMessage(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      recipientId:
-          recipientId == freezed ? _value.recipientId : recipientId as int,
-      content: content == freezed ? _value.content : content as String,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      read: read == freezed ? _value.read : read as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      apId: apId == freezed ? _value.apId : apId as String,
-      local: local == freezed ? _value.local : local as bool,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      recipientId: recipientId == freezed
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      apId: apId == freezed
+          ? _value.apId
+          : apId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -1645,7 +1937,6 @@ class _$_PrivateMessage extends _PrivateMessage {
 }
 
 abstract class _PrivateMessage extends PrivateMessage {
-  _PrivateMessage._() : super._();
   factory _PrivateMessage(
       {required int id,
       required int creatorId,
@@ -1657,6 +1948,7 @@ abstract class _PrivateMessage extends PrivateMessage {
       DateTime? updated,
       required String apId,
       required bool local}) = _$_PrivateMessage;
+  _PrivateMessage._() : super._();
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessage.fromJson;
@@ -1792,25 +2084,50 @@ class _$PostReportCopyWithImpl<$Res> implements $PostReportCopyWith<$Res> {
     Object? updated = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
       originalPostName: originalPostName == freezed
           ? _value.originalPostName
-          : originalPostName as String,
+          : originalPostName // ignore: cast_nullable_to_non_nullable
+              as String,
       originalPostUrl: originalPostUrl == freezed
           ? _value.originalPostUrl
-          : originalPostUrl as String?,
+          : originalPostUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalPostBody: originalPostBody == freezed
           ? _value.originalPostBody
-          : originalPostBody as String?,
-      reason: reason == freezed ? _value.reason : reason as String,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId:
-          resolverId == freezed ? _value.resolverId : resolverId as int?,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+          : originalPostBody // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      resolverId: resolverId == freezed
+          ? _value.resolverId
+          : resolverId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -1860,25 +2177,50 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
     Object? updated = freezed,
   }) {
     return _then(_PostReport(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
       originalPostName: originalPostName == freezed
           ? _value.originalPostName
-          : originalPostName as String,
+          : originalPostName // ignore: cast_nullable_to_non_nullable
+              as String,
       originalPostUrl: originalPostUrl == freezed
           ? _value.originalPostUrl
-          : originalPostUrl as String?,
+          : originalPostUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       originalPostBody: originalPostBody == freezed
           ? _value.originalPostBody
-          : originalPostBody as String?,
-      reason: reason == freezed ? _value.reason : reason as String,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId:
-          resolverId == freezed ? _value.resolverId : resolverId as int?,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+          : originalPostBody // ignore: cast_nullable_to_non_nullable
+              as String?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      resolverId: resolverId == freezed
+          ? _value.resolverId
+          : resolverId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -1996,7 +2338,6 @@ class _$_PostReport extends _PostReport {
 }
 
 abstract class _PostReport extends PostReport {
-  _PostReport._() : super._();
   factory _PostReport(
       {required int id,
       required int creatorId,
@@ -2009,6 +2350,7 @@ abstract class _PostReport extends PostReport {
       int? resolverId,
       required DateTime published,
       DateTime? updated}) = _$_PostReport;
+  _PostReport._() : super._();
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
       _$_PostReport.fromJson;
@@ -2184,32 +2526,82 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
     Object? local = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String?,
-      body: body == freezed ? _value.body : body as String?,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      locked: locked == freezed ? _value.locked : locked as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
-      stickied: stickied == freezed ? _value.stickied : stickied as bool,
-      embedTitle:
-          embedTitle == freezed ? _value.embedTitle : embedTitle as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      body: body == freezed
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      locked: locked == freezed
+          ? _value.locked
+          : locked // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      nsfw: nsfw == freezed
+          ? _value.nsfw
+          : nsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      stickied: stickied == freezed
+          ? _value.stickied
+          : stickied // ignore: cast_nullable_to_non_nullable
+              as bool,
+      embedTitle: embedTitle == freezed
+          ? _value.embedTitle
+          : embedTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
       embedDescription: embedDescription == freezed
           ? _value.embedDescription
-          : embedDescription as String?,
-      embedHtml: embedHtml == freezed ? _value.embedHtml : embedHtml as String?,
+          : embedDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      embedHtml: embedHtml == freezed
+          ? _value.embedHtml
+          : embedHtml // ignore: cast_nullable_to_non_nullable
+              as String?,
       thumbnailUrl: thumbnailUrl == freezed
           ? _value.thumbnailUrl
-          : thumbnailUrl as String?,
-      apId: apId == freezed ? _value.apId : apId as String,
-      local: local == freezed ? _value.local : local as bool,
+          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      apId: apId == freezed
+          ? _value.apId
+          : apId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -2273,32 +2665,82 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
     Object? local = freezed,
   }) {
     return _then(_Post(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
-      url: url == freezed ? _value.url : url as String?,
-      body: body == freezed ? _value.body : body as String?,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      locked: locked == freezed ? _value.locked : locked as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
-      stickied: stickied == freezed ? _value.stickied : stickied as bool,
-      embedTitle:
-          embedTitle == freezed ? _value.embedTitle : embedTitle as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      body: body == freezed
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as String?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      locked: locked == freezed
+          ? _value.locked
+          : locked // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      nsfw: nsfw == freezed
+          ? _value.nsfw
+          : nsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      stickied: stickied == freezed
+          ? _value.stickied
+          : stickied // ignore: cast_nullable_to_non_nullable
+              as bool,
+      embedTitle: embedTitle == freezed
+          ? _value.embedTitle
+          : embedTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
       embedDescription: embedDescription == freezed
           ? _value.embedDescription
-          : embedDescription as String?,
-      embedHtml: embedHtml == freezed ? _value.embedHtml : embedHtml as String?,
+          : embedDescription // ignore: cast_nullable_to_non_nullable
+              as String?,
+      embedHtml: embedHtml == freezed
+          ? _value.embedHtml
+          : embedHtml // ignore: cast_nullable_to_non_nullable
+              as String?,
       thumbnailUrl: thumbnailUrl == freezed
           ? _value.thumbnailUrl
-          : thumbnailUrl as String?,
-      apId: apId == freezed ? _value.apId : apId as String,
-      local: local == freezed ? _value.local : local as bool,
+          : thumbnailUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
+      apId: apId == freezed
+          ? _value.apId
+          : apId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -2468,7 +2910,6 @@ class _$_Post extends _Post {
 }
 
 abstract class _Post extends Post {
-  _Post._() : super._();
   factory _Post(
       {required int id,
       required String name,
@@ -2489,6 +2930,7 @@ abstract class _Post extends Post {
       String? thumbnailUrl,
       required String apId,
       required bool local}) = _$_Post;
+  _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
@@ -2602,13 +3044,22 @@ class _$PasswordResetRequestCopyWithImpl<$Res>
     Object? published = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      userId: userId == freezed ? _value.userId : userId as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
       tokenEncrypted: tokenEncrypted == freezed
           ? _value.tokenEncrypted
-          : tokenEncrypted as String,
-      published:
-          published == freezed ? _value.published : published as DateTime,
+          : tokenEncrypted // ignore: cast_nullable_to_non_nullable
+              as String,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -2642,13 +3093,22 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
     Object? published = freezed,
   }) {
     return _then(_PasswordResetRequest(
-      id: id == freezed ? _value.id : id as int,
-      userId: userId == freezed ? _value.userId : userId as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
       tokenEncrypted: tokenEncrypted == freezed
           ? _value.tokenEncrypted
-          : tokenEncrypted as String,
-      published:
-          published == freezed ? _value.published : published as DateTime,
+          : tokenEncrypted // ignore: cast_nullable_to_non_nullable
+              as String,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -2720,12 +3180,12 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 }
 
 abstract class _PasswordResetRequest extends PasswordResetRequest {
-  _PasswordResetRequest._() : super._();
   factory _PasswordResetRequest(
       {required int id,
       required int userId,
       required String tokenEncrypted,
       required DateTime published}) = _$_PasswordResetRequest;
+  _PasswordResetRequest._() : super._();
 
   factory _PasswordResetRequest.fromJson(Map<String, dynamic> json) =
       _$_PasswordResetRequest.fromJson;
@@ -2826,12 +3286,30 @@ class _$ModRemovePostCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -2873,12 +3351,30 @@ class __$ModRemovePostCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModRemovePost(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -2962,7 +3458,6 @@ class _$_ModRemovePost extends _ModRemovePost {
 }
 
 abstract class _ModRemovePost extends ModRemovePost {
-  _ModRemovePost._() : super._();
   factory _ModRemovePost(
       {required int id,
       required int modUserId,
@@ -2970,6 +3465,7 @@ abstract class _ModRemovePost extends ModRemovePost {
       String? reason,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemovePost;
+  _ModRemovePost._() : super._();
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePost.fromJson;
@@ -3069,11 +3565,26 @@ class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      locked: locked == freezed ? _value.locked : locked as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      locked: locked == freezed
+          ? _value.locked
+          : locked // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3112,11 +3623,26 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModLockPost(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      locked: locked == freezed ? _value.locked : locked as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      locked: locked == freezed
+          ? _value.locked
+          : locked // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3193,13 +3719,13 @@ class _$_ModLockPost extends _ModLockPost {
 }
 
 abstract class _ModLockPost extends ModLockPost {
-  _ModLockPost._() : super._();
   factory _ModLockPost(
       {required int id,
       required int modUserId,
       required int postId,
       bool? locked,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModLockPost;
+  _ModLockPost._() : super._();
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
       _$_ModLockPost.fromJson;
@@ -3298,11 +3824,26 @@ class _$ModStickyPostCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      stickied: stickied == freezed ? _value.stickied : stickied as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      stickied: stickied == freezed
+          ? _value.stickied
+          : stickied // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3342,11 +3883,26 @@ class __$ModStickyPostCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModStickyPost(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      stickied: stickied == freezed ? _value.stickied : stickied as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      stickied: stickied == freezed
+          ? _value.stickied
+          : stickied // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3424,13 +3980,13 @@ class _$_ModStickyPost extends _ModStickyPost {
 }
 
 abstract class _ModStickyPost extends ModStickyPost {
-  _ModStickyPost._() : super._();
   factory _ModStickyPost(
       {required int id,
       required int modUserId,
       required int postId,
       bool? stickied,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModStickyPost;
+  _ModStickyPost._() : super._();
 
   factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPost.fromJson;
@@ -3534,12 +4090,30 @@ class _$ModRemoveCommentCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3581,12 +4155,30 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModRemoveComment(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3671,7 +4263,6 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 }
 
 abstract class _ModRemoveComment extends ModRemoveComment {
-  _ModRemoveComment._() : super._();
   factory _ModRemoveComment(
       {required int id,
       required int modUserId,
@@ -3679,6 +4270,7 @@ abstract class _ModRemoveComment extends ModRemoveComment {
       String? reason,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemoveComment;
+  _ModRemoveComment._() : super._();
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveComment.fromJson;
@@ -3789,14 +4381,34 @@ class _$ModRemoveCommunityCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      expires: expires == freezed ? _value.expires : expires as DateTime?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3840,14 +4452,34 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModRemoveCommunity(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      expires: expires == freezed ? _value.expires : expires as DateTime?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -3939,7 +4571,6 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 }
 
 abstract class _ModRemoveCommunity extends ModRemoveCommunity {
-  _ModRemoveCommunity._() : super._();
   factory _ModRemoveCommunity(
       {required int id,
       required int modUserId,
@@ -3948,6 +4579,7 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
       bool? removed,
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemoveCommunity;
+  _ModRemoveCommunity._() : super._();
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunity.fromJson;
@@ -4065,16 +4697,38 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      banned: banned == freezed ? _value.banned : banned as bool?,
-      expires: expires == freezed ? _value.expires : expires as DateTime?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4120,16 +4774,38 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModBanFromCommunity(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      banned: banned == freezed ? _value.banned : banned as bool?,
-      expires: expires == freezed ? _value.expires : expires as DateTime?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4228,7 +4904,6 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 }
 
 abstract class _ModBanFromCommunity extends ModBanFromCommunity {
-  _ModBanFromCommunity._() : super._();
   factory _ModBanFromCommunity(
       {required int id,
       required int modUserId,
@@ -4238,6 +4913,7 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
       bool? banned,
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModBanFromCommunity;
+  _ModBanFromCommunity._() : super._();
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunity.fromJson;
@@ -4349,14 +5025,34 @@ class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      banned: banned == freezed ? _value.banned : banned as bool?,
-      expires: expires == freezed ? _value.expires : expires as DateTime?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4396,14 +5092,34 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModBan(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      banned: banned == freezed ? _value.banned : banned as bool?,
-      expires: expires == freezed ? _value.expires : expires as DateTime?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banned: banned == freezed
+          ? _value.banned
+          : banned // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4494,7 +5210,6 @@ class _$_ModBan extends _ModBan {
 }
 
 abstract class _ModBan extends ModBan {
-  _ModBan._() : super._();
   factory _ModBan(
       {required int id,
       required int modUserId,
@@ -4503,6 +5218,7 @@ abstract class _ModBan extends ModBan {
       bool? banned,
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModBan;
+  _ModBan._() : super._();
 
   factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
 
@@ -4608,14 +5324,30 @@ class _$ModAddCommunityCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4657,14 +5389,30 @@ class __$ModAddCommunityCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModAddCommunity(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4750,7 +5498,6 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 }
 
 abstract class _ModAddCommunity extends ModAddCommunity {
-  _ModAddCommunity._() : super._();
   factory _ModAddCommunity(
       {required int id,
       required int modUserId,
@@ -4758,6 +5505,7 @@ abstract class _ModAddCommunity extends ModAddCommunity {
       required int communityId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModAddCommunity;
+  _ModAddCommunity._() : super._();
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunity.fromJson;
@@ -4855,12 +5603,26 @@ class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
     Object? when = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4896,12 +5658,26 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
     Object? when = freezed,
   }) {
     return _then(_ModAdd(
-      id: id == freezed ? _value.id : id as int,
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int,
-      otherUserId:
-          otherUserId == freezed ? _value.otherUserId : otherUserId as int,
-      removed: removed == freezed ? _value.removed : removed as bool?,
-      when: when == freezed ? _value.when : when as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherUserId: otherUserId == freezed
+          ? _value.otherUserId
+          : otherUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -4980,13 +5756,13 @@ class _$_ModAdd extends _ModAdd {
 }
 
 abstract class _ModAdd extends ModAdd {
-  _ModAdd._() : super._();
   factory _ModAdd(
       {required int id,
       required int modUserId,
       required int otherUserId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModAdd;
+  _ModAdd._() : super._();
 
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
 
@@ -5132,23 +5908,66 @@ class _$CommunitySafeCopyWithImpl<$Res>
     Object? banner = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
-      title: title == freezed ? _value.title : title as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      categoryId: categoryId == freezed ? _value.categoryId : categoryId as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
-      actorId: actorId == freezed ? _value.actorId : actorId as String,
-      local: local == freezed ? _value.local : local as bool,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      categoryId: categoryId == freezed
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      nsfw: nsfw == freezed
+          ? _value.nsfw
+          : nsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -5208,23 +6027,66 @@ class __$CommunitySafeCopyWithImpl<$Res>
     Object? banner = freezed,
   }) {
     return _then(_CommunitySafe(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
-      title: title == freezed ? _value.title : title as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      categoryId: categoryId == freezed ? _value.categoryId : categoryId as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      nsfw: nsfw == freezed ? _value.nsfw : nsfw as bool,
-      actorId: actorId == freezed ? _value.actorId : actorId as String,
-      local: local == freezed ? _value.local : local as bool,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      categoryId: categoryId == freezed
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      nsfw: nsfw == freezed
+          ? _value.nsfw
+          : nsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -5367,7 +6229,6 @@ class _$_CommunitySafe extends _CommunitySafe {
 }
 
 abstract class _CommunitySafe extends CommunitySafe {
-  _CommunitySafe._() : super._();
   factory _CommunitySafe(
       {required int id,
       required String name,
@@ -5384,6 +6245,7 @@ abstract class _CommunitySafe extends CommunitySafe {
       required bool local,
       String? icon,
       String? banner}) = _$_CommunitySafe;
+  _CommunitySafe._() : super._();
 
   factory _CommunitySafe.fromJson(Map<String, dynamic> json) =
       _$_CommunitySafe.fromJson;
@@ -5520,19 +6382,42 @@ class _$CommentReportCopyWithImpl<$Res>
     Object? updated = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
       originalCommentText: originalCommentText == freezed
           ? _value.originalCommentText
-          : originalCommentText as String,
-      reason: reason == freezed ? _value.reason : reason as String,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId:
-          resolverId == freezed ? _value.resolverId : resolverId as int?,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+          : originalCommentText // ignore: cast_nullable_to_non_nullable
+              as String,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      resolverId: resolverId == freezed
+          ? _value.resolverId
+          : resolverId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -5580,19 +6465,42 @@ class __$CommentReportCopyWithImpl<$Res>
     Object? updated = freezed,
   }) {
     return _then(_CommentReport(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
       originalCommentText: originalCommentText == freezed
           ? _value.originalCommentText
-          : originalCommentText as String,
-      reason: reason == freezed ? _value.reason : reason as String,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      resolverId:
-          resolverId == freezed ? _value.resolverId : resolverId as int?,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
+          : originalCommentText // ignore: cast_nullable_to_non_nullable
+              as String,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      resolverId: resolverId == freezed
+          ? _value.resolverId
+          : resolverId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -5697,7 +6605,6 @@ class _$_CommentReport extends _CommentReport {
 }
 
 abstract class _CommentReport extends CommentReport {
-  _CommentReport._() : super._();
   factory _CommentReport(
       {required int id,
       required int creatorId,
@@ -5708,6 +6615,7 @@ abstract class _CommentReport extends CommentReport {
       int? resolverId,
       required DateTime published,
       DateTime? updated}) = _$_CommentReport;
+  _CommentReport._() : super._();
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
       _$_CommentReport.fromJson;
@@ -5844,19 +6752,54 @@ class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
     Object? local = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      parentId: parentId == freezed ? _value.parentId : parentId as int?,
-      content: content == freezed ? _value.content : content as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      read: read == freezed ? _value.read : read as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      apId: apId == freezed ? _value.apId : apId as String,
-      local: local == freezed ? _value.local : local as bool,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      apId: apId == freezed
+          ? _value.apId
+          : apId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -5906,19 +6849,54 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
     Object? local = freezed,
   }) {
     return _then(_Comment(
-      id: id == freezed ? _value.id : id as int,
-      creatorId: creatorId == freezed ? _value.creatorId : creatorId as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      parentId: parentId == freezed ? _value.parentId : parentId as int?,
-      content: content == freezed ? _value.content : content as String,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      read: read == freezed ? _value.read : read as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
-      updated: updated == freezed ? _value.updated : updated as DateTime?,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      apId: apId == freezed ? _value.apId : apId as String,
-      local: local == freezed ? _value.local : local as bool,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      updated: updated == freezed
+          ? _value.updated
+          : updated // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      apId: apId == freezed
+          ? _value.apId
+          : apId // ignore: cast_nullable_to_non_nullable
+              as String,
+      local: local == freezed
+          ? _value.local
+          : local // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -6042,7 +7020,6 @@ class _$_Comment extends _Comment {
 }
 
 abstract class _Comment extends Comment {
-  _Comment._() : super._();
   factory _Comment(
       {required int id,
       required int creatorId,
@@ -6056,6 +7033,7 @@ abstract class _Comment extends Comment {
       required bool deleted,
       required String apId,
       required bool local}) = _$_Comment;
+  _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
 
@@ -6144,8 +7122,14 @@ class _$CategoryCopyWithImpl<$Res> implements $CategoryCopyWith<$Res> {
     Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6173,8 +7157,14 @@ class __$CategoryCopyWithImpl<$Res> extends _$CategoryCopyWithImpl<$Res>
     Object? name = freezed,
   }) {
     return _then(_Category(
-      id: id == freezed ? _value.id : id as int,
-      name: name == freezed ? _value.name : name as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6228,8 +7218,8 @@ class _$_Category extends _Category {
 }
 
 abstract class _Category extends Category {
-  _Category._() : super._();
   factory _Category({required int id, required String name}) = _$_Category;
+  _Category._() : super._();
 
   factory _Category.fromJson(Map<String, dynamic> json) = _$_Category.fromJson;
 
@@ -6314,13 +7304,26 @@ class _$UserMentionCopyWithImpl<$Res> implements $UserMentionCopyWith<$Res> {
     Object? published = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      recipientId:
-          recipientId == freezed ? _value.recipientId : recipientId as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      read: read == freezed ? _value.read : read as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      recipientId: recipientId == freezed
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -6355,13 +7358,26 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
     Object? published = freezed,
   }) {
     return _then(_UserMention(
-      id: id == freezed ? _value.id : id as int,
-      recipientId:
-          recipientId == freezed ? _value.recipientId : recipientId as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      read: read == freezed ? _value.read : read as bool,
-      published:
-          published == freezed ? _value.published : published as DateTime,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      recipientId: recipientId == freezed
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -6439,13 +7455,13 @@ class _$_UserMention extends _UserMention {
 }
 
 abstract class _UserMention extends UserMention {
-  _UserMention._() : super._();
   factory _UserMention(
       {required int id,
       required int recipientId,
       required int commentId,
       required bool read,
       required DateTime published}) = _$_UserMention;
+  _UserMention._() : super._();
 
   factory _UserMention.fromJson(Map<String, dynamic> json) =
       _$_UserMention.fromJson;

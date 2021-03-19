@@ -71,8 +71,14 @@ class _$UserViewSafeCopyWithImpl<$Res> implements $UserViewSafeCopyWith<$Res> {
     Object? counts = freezed,
   }) {
     return _then(_value.copyWith(
-      user: user == freezed ? _value.user : user as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as UserAggregates,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as UserAggregates,
     ));
   }
 
@@ -122,8 +128,14 @@ class __$UserViewSafeCopyWithImpl<$Res> extends _$UserViewSafeCopyWithImpl<$Res>
     Object? counts = freezed,
   }) {
     return _then(_UserViewSafe(
-      user: user == freezed ? _value.user : user as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as UserAggregates,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as UserAggregates,
     ));
   }
 }
@@ -175,10 +187,10 @@ class _$_UserViewSafe extends _UserViewSafe {
 }
 
 abstract class _UserViewSafe extends UserViewSafe {
-  _UserViewSafe._() : super._();
   factory _UserViewSafe(
       {required UserSafe user,
       required UserAggregates counts}) = _$_UserViewSafe;
+  _UserViewSafe._() : super._();
 
   factory _UserViewSafe.fromJson(Map<String, dynamic> json) =
       _$_UserViewSafe.fromJson;
@@ -309,22 +321,48 @@ class _$UserMentionViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       userMention: userMention == freezed
           ? _value.userMention
-          : userMention as UserMention,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+          : userMention // ignore: cast_nullable_to_non_nullable
+              as UserMention,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType?,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 
@@ -442,22 +480,48 @@ class __$UserMentionViewCopyWithImpl<$Res>
     return _then(_UserMentionView(
       userMention: userMention == freezed
           ? _value.userMention
-          : userMention as UserMention,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+          : userMention // ignore: cast_nullable_to_non_nullable
+              as UserMention,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType?,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 }
@@ -575,7 +639,6 @@ class _$_UserMentionView extends _UserMentionView {
 }
 
 abstract class _UserMentionView extends UserMentionView {
-  _UserMentionView._() : super._();
   factory _UserMentionView(
       {required UserMention userMention,
       required Comment comment,
@@ -588,6 +651,7 @@ abstract class _UserMentionView extends UserMentionView {
       required bool subscribed,
       required bool saved,
       VoteType? myVote}) = _$_UserMentionView;
+  _UserMentionView._() : super._();
 
   factory _UserMentionView.fromJson(Map<String, dynamic> json) =
       _$_UserMentionView.fromJson;
@@ -685,9 +749,18 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
     Object? counts = freezed,
   }) {
     return _then(_value.copyWith(
-      site: site == freezed ? _value.site : site as Site,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as SiteAggregates,
+      site: site == freezed
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as SiteAggregates,
     ));
   }
 
@@ -744,9 +817,18 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
     Object? counts = freezed,
   }) {
     return _then(_SiteView(
-      site: site == freezed ? _value.site : site as Site,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      counts: counts == freezed ? _value.counts : counts as SiteAggregates,
+      site: site == freezed
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as SiteAggregates,
     ));
   }
 }
@@ -805,11 +887,11 @@ class _$_SiteView extends _SiteView {
 }
 
 abstract class _SiteView extends SiteView {
-  _SiteView._() : super._();
   factory _SiteView(
       {required Site site,
       required UserSafe creator,
       required SiteAggregates counts}) = _$_SiteView;
+  _SiteView._() : super._();
 
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
@@ -895,10 +977,16 @@ class _$PrivateMessageViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       privateMessage: privateMessage == freezed
           ? _value.privateMessage
-          : privateMessage as PrivateMessage,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
+          : privateMessage // ignore: cast_nullable_to_non_nullable
+              as PrivateMessage,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -962,10 +1050,16 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
     return _then(_PrivateMessageView(
       privateMessage: privateMessage == freezed
           ? _value.privateMessage
-          : privateMessage as PrivateMessage,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe,
+          : privateMessage // ignore: cast_nullable_to_non_nullable
+              as PrivateMessage,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -1029,11 +1123,11 @@ class _$_PrivateMessageView extends _PrivateMessageView {
 }
 
 abstract class _PrivateMessageView extends PrivateMessageView {
-  _PrivateMessageView._() : super._();
   factory _PrivateMessageView(
       {required PrivateMessage privateMessage,
       required UserSafe creator,
       required UserSafe recipient}) = _$_PrivateMessageView;
+  _PrivateMessageView._() : super._();
 
   factory _PrivateMessageView.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessageView.fromJson;
@@ -1149,19 +1243,42 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
     Object? myVote = freezed,
   }) {
     return _then(_value.copyWith(
-      post: post == freezed ? _value.post : post as Post,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      counts: counts == freezed ? _value.counts : counts as PostAggregates,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      read: read == freezed ? _value.read : read as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType?,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as PostAggregates,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 
@@ -1242,19 +1359,42 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
     Object? myVote = freezed,
   }) {
     return _then(_PostView(
-      post: post == freezed ? _value.post : post as Post,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      counts: counts == freezed ? _value.counts : counts as PostAggregates,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      read: read == freezed ? _value.read : read as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType?,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as PostAggregates,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 }
@@ -1357,7 +1497,6 @@ class _$_PostView extends _PostView {
 }
 
 abstract class _PostView extends PostView {
-  _PostView._() : super._();
   factory _PostView(
       {required Post post,
       required UserSafe creator,
@@ -1368,6 +1507,7 @@ abstract class _PostView extends PostView {
       required bool saved,
       required bool read,
       VoteType? myVote}) = _$_PostView;
+  _PostView._() : super._();
 
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
@@ -1483,15 +1623,30 @@ class _$PostReportViewCopyWithImpl<$Res>
     Object? resolver = freezed,
   }) {
     return _then(_value.copyWith(
-      postReport:
-          postReport == freezed ? _value.postReport : postReport as PostReport,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      postCreator:
-          postCreator == freezed ? _value.postCreator : postCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe?,
+      postReport: postReport == freezed
+          ? _value.postReport
+          : postReport // ignore: cast_nullable_to_non_nullable
+              as PostReport,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      postCreator: postCreator == freezed
+          ? _value.postCreator
+          : postCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 
@@ -1592,15 +1747,30 @@ class __$PostReportViewCopyWithImpl<$Res>
     Object? resolver = freezed,
   }) {
     return _then(_PostReportView(
-      postReport:
-          postReport == freezed ? _value.postReport : postReport as PostReport,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      postCreator:
-          postCreator == freezed ? _value.postCreator : postCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe?,
+      postReport: postReport == freezed
+          ? _value.postReport
+          : postReport // ignore: cast_nullable_to_non_nullable
+              as PostReport,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      postCreator: postCreator == freezed
+          ? _value.postCreator
+          : postCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 }
@@ -1684,7 +1854,6 @@ class _$_PostReportView extends _PostReportView {
 }
 
 abstract class _PostReportView extends PostReportView {
-  _PostReportView._() : super._();
   factory _PostReportView(
       {required PostReport postReport,
       required Post post,
@@ -1692,6 +1861,7 @@ abstract class _PostReportView extends PostReportView {
       required UserSafe creator,
       required UserSafe postCreator,
       UserSafe? resolver}) = _$_PostReportView;
+  _PostReportView._() : super._();
 
   factory _PostReportView.fromJson(Map<String, dynamic> json) =
       _$_PostReportView.fromJson;
@@ -1821,21 +1991,46 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
     Object? myVote = freezed,
   }) {
     return _then(_value.copyWith(
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe?,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType?,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 
@@ -1943,21 +2138,46 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
     Object? myVote = freezed,
   }) {
     return _then(_CommentView(
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as UserSafe?,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      counts: counts == freezed ? _value.counts : counts as CommentAggregates,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
           ? _value.creatorBannedFromCommunity
-          : creatorBannedFromCommunity as bool,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      saved: saved == freezed ? _value.saved : saved as bool,
-      myVote: myVote == freezed ? _value.myVote : myVote as VoteType?,
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      saved: saved == freezed
+          ? _value.saved
+          : saved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
     ));
   }
 }
@@ -2068,7 +2288,6 @@ class _$_CommentView extends _CommentView {
 }
 
 abstract class _CommentView extends CommentView {
-  _CommentView._() : super._();
   factory _CommentView(
       {required Comment comment,
       required UserSafe creator,
@@ -2080,6 +2299,7 @@ abstract class _CommentView extends CommentView {
       required bool subscribed,
       required bool saved,
       VoteType? myVote}) = _$_CommentView;
+  _CommentView._() : super._();
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
       _$_CommentView.fromJson;
@@ -2206,16 +2426,32 @@ class _$CommentReportViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       commentReport: commentReport == freezed
           ? _value.commentReport
-          : commentReport as CommentReport,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
+          : commentReport // ignore: cast_nullable_to_non_nullable
+              as CommentReport,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
       commentCreator: commentCreator == freezed
           ? _value.commentCreator
-          : commentCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe?,
+          : commentCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 
@@ -2329,16 +2565,32 @@ class __$CommentReportViewCopyWithImpl<$Res>
     return _then(_CommentReportView(
       commentReport: commentReport == freezed
           ? _value.commentReport
-          : commentReport as CommentReport,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
+          : commentReport // ignore: cast_nullable_to_non_nullable
+              as CommentReport,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
       commentCreator: commentCreator == freezed
           ? _value.commentCreator
-          : commentCreator as UserSafe,
-      resolver: resolver == freezed ? _value.resolver : resolver as UserSafe?,
+          : commentCreator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      resolver: resolver == freezed
+          ? _value.resolver
+          : resolver // ignore: cast_nullable_to_non_nullable
+              as UserSafe?,
     ));
   }
 }
@@ -2429,7 +2681,6 @@ class _$_CommentReportView extends _CommentReportView {
 }
 
 abstract class _CommentReportView extends CommentReportView {
-  _CommentReportView._() : super._();
   factory _CommentReportView(
       {required CommentReport commentReport,
       required Comment comment,
@@ -2438,6 +2689,7 @@ abstract class _CommentReportView extends CommentReportView {
       required UserSafe creator,
       required UserSafe commentCreator,
       UserSafe? resolver}) = _$_CommentReportView;
+  _CommentReportView._() : super._();
 
   factory _CommentReportView.fromJson(Map<String, dynamic> json) =
       _$_CommentReportView.fromJson;
@@ -2540,13 +2792,20 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modAddCommunity: modAddCommunity == freezed
           ? _value.modAddCommunity
-          : modAddCommunity as ModAddCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+          : modAddCommunity // ignore: cast_nullable_to_non_nullable
+              as ModAddCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -2623,13 +2882,20 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
     return _then(_ModAddCommunityView(
       modAddCommunity: modAddCommunity == freezed
           ? _value.modAddCommunity
-          : modAddCommunity as ModAddCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+          : modAddCommunity // ignore: cast_nullable_to_non_nullable
+              as ModAddCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -2701,12 +2967,12 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
 }
 
 abstract class _ModAddCommunityView extends ModAddCommunityView {
-  _ModAddCommunityView._() : super._();
   factory _ModAddCommunityView(
       {required ModAddCommunity modAddCommunity,
       required UserSafe moderator,
       required CommunitySafe community,
       required UserSafe moddedUser}) = _$_ModAddCommunityView;
+  _ModAddCommunityView._() : super._();
 
   factory _ModAddCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunityView.fromJson;
@@ -2791,11 +3057,18 @@ class _$ModAddViewCopyWithImpl<$Res> implements $ModAddViewCopyWith<$Res> {
     Object? moddedUser = freezed,
   }) {
     return _then(_value.copyWith(
-      modAdd: modAdd == freezed ? _value.modAdd : modAdd as ModAdd,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+      modAdd: modAdd == freezed
+          ? _value.modAdd
+          : modAdd // ignore: cast_nullable_to_non_nullable
+              as ModAdd,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -2854,11 +3127,18 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
     Object? moddedUser = freezed,
   }) {
     return _then(_ModAddView(
-      modAdd: modAdd == freezed ? _value.modAdd : modAdd as ModAdd,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      moddedUser:
-          moddedUser == freezed ? _value.moddedUser : moddedUser as UserSafe,
+      modAdd: modAdd == freezed
+          ? _value.modAdd
+          : modAdd // ignore: cast_nullable_to_non_nullable
+              as ModAdd,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      moddedUser: moddedUser == freezed
+          ? _value.moddedUser
+          : moddedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -2919,11 +3199,11 @@ class _$_ModAddView extends _ModAddView {
 }
 
 abstract class _ModAddView extends ModAddView {
-  _ModAddView._() : super._();
   factory _ModAddView(
       {required ModAdd modAdd,
       required UserSafe moderator,
       required UserSafe moddedUser}) = _$_ModAddView;
+  _ModAddView._() : super._();
 
   factory _ModAddView.fromJson(Map<String, dynamic> json) =
       _$_ModAddView.fromJson;
@@ -3020,13 +3300,20 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modBanFromCommunity: modBanFromCommunity == freezed
           ? _value.modBanFromCommunity
-          : modBanFromCommunity as ModBanFromCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+          : modBanFromCommunity // ignore: cast_nullable_to_non_nullable
+              as ModBanFromCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -3105,13 +3392,20 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
     return _then(_ModBanFromCommunityView(
       modBanFromCommunity: modBanFromCommunity == freezed
           ? _value.modBanFromCommunity
-          : modBanFromCommunity as ModBanFromCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+          : modBanFromCommunity // ignore: cast_nullable_to_non_nullable
+              as ModBanFromCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -3183,12 +3477,12 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
 }
 
 abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
-  _ModBanFromCommunityView._() : super._();
   factory _ModBanFromCommunityView(
       {required ModBanFromCommunity modBanFromCommunity,
       required UserSafe moderator,
       required CommunitySafe community,
       required UserSafe bannedUser}) = _$_ModBanFromCommunityView;
+  _ModBanFromCommunityView._() : super._();
 
   factory _ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunityView.fromJson;
@@ -3274,11 +3568,18 @@ class _$ModBanViewCopyWithImpl<$Res> implements $ModBanViewCopyWith<$Res> {
     Object? bannedUser = freezed,
   }) {
     return _then(_value.copyWith(
-      modBan: modBan == freezed ? _value.modBan : modBan as ModBan,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+      modBan: modBan == freezed
+          ? _value.modBan
+          : modBan // ignore: cast_nullable_to_non_nullable
+              as ModBan,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -3337,11 +3638,18 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
     Object? bannedUser = freezed,
   }) {
     return _then(_ModBanView(
-      modBan: modBan == freezed ? _value.modBan : modBan as ModBan,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      bannedUser:
-          bannedUser == freezed ? _value.bannedUser : bannedUser as UserSafe,
+      modBan: modBan == freezed
+          ? _value.modBan
+          : modBan // ignore: cast_nullable_to_non_nullable
+              as ModBan,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      bannedUser: bannedUser == freezed
+          ? _value.bannedUser
+          : bannedUser // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -3402,11 +3710,11 @@ class _$_ModBanView extends _ModBanView {
 }
 
 abstract class _ModBanView extends ModBanView {
-  _ModBanView._() : super._();
   factory _ModBanView(
       {required ModBan modBan,
       required UserSafe moderator,
       required UserSafe bannedUser}) = _$_ModBanView;
+  _ModBanView._() : super._();
 
   factory _ModBanView.fromJson(Map<String, dynamic> json) =
       _$_ModBanView.fromJson;
@@ -3501,12 +3809,20 @@ class _$ModLockPostViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modLockPost: modLockPost == freezed
           ? _value.modLockPost
-          : modLockPost as ModLockPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modLockPost // ignore: cast_nullable_to_non_nullable
+              as ModLockPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
@@ -3583,12 +3899,20 @@ class __$ModLockPostViewCopyWithImpl<$Res>
     return _then(_ModLockPostView(
       modLockPost: modLockPost == freezed
           ? _value.modLockPost
-          : modLockPost as ModLockPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modLockPost // ignore: cast_nullable_to_non_nullable
+              as ModLockPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -3658,12 +3982,12 @@ class _$_ModLockPostView extends _ModLockPostView {
 }
 
 abstract class _ModLockPostView extends ModLockPostView {
-  _ModLockPostView._() : super._();
   factory _ModLockPostView(
       {required ModLockPost modLockPost,
       required UserSafe moderator,
       required Post post,
       required CommunitySafe community}) = _$_ModLockPostView;
+  _ModLockPostView._() : super._();
 
   factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
       _$_ModLockPostView.fromJson;
@@ -3772,15 +4096,28 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modRemoveComment: modRemoveComment == freezed
           ? _value.modRemoveComment
-          : modRemoveComment as ModRemoveComment,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      commenter:
-          commenter == freezed ? _value.commenter : commenter as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveComment // ignore: cast_nullable_to_non_nullable
+              as ModRemoveComment,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      commenter: commenter == freezed
+          ? _value.commenter
+          : commenter // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
@@ -3879,15 +4216,28 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
     return _then(_ModRemoveCommentView(
       modRemoveComment: modRemoveComment == freezed
           ? _value.modRemoveComment
-          : modRemoveComment as ModRemoveComment,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      comment: comment == freezed ? _value.comment : comment as Comment,
-      commenter:
-          commenter == freezed ? _value.commenter : commenter as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveComment // ignore: cast_nullable_to_non_nullable
+              as ModRemoveComment,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as Comment,
+      commenter: commenter == freezed
+          ? _value.commenter
+          : commenter // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -3972,7 +4322,6 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
 }
 
 abstract class _ModRemoveCommentView extends ModRemoveCommentView {
-  _ModRemoveCommentView._() : super._();
   factory _ModRemoveCommentView(
       {required ModRemoveComment modRemoveComment,
       required UserSafe moderator,
@@ -3980,6 +4329,7 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       required UserSafe commenter,
       required Post post,
       required CommunitySafe community}) = _$_ModRemoveCommentView;
+  _ModRemoveCommentView._() : super._();
 
   factory _ModRemoveCommentView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommentView.fromJson;
@@ -4076,11 +4426,16 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modRemoveCommunity: modRemoveCommunity == freezed
           ? _value.modRemoveCommunity
-          : modRemoveCommunity as ModRemoveCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveCommunity // ignore: cast_nullable_to_non_nullable
+              as ModRemoveCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
@@ -4147,11 +4502,16 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
     return _then(_ModRemoveCommunityView(
       modRemoveCommunity: modRemoveCommunity == freezed
           ? _value.modRemoveCommunity
-          : modRemoveCommunity as ModRemoveCommunity,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemoveCommunity // ignore: cast_nullable_to_non_nullable
+              as ModRemoveCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4216,11 +4576,11 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
 }
 
 abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
-  _ModRemoveCommunityView._() : super._();
   factory _ModRemoveCommunityView(
       {required ModRemoveCommunity modRemoveCommunity,
       required UserSafe moderator,
       required CommunitySafe community}) = _$_ModRemoveCommunityView;
+  _ModRemoveCommunityView._() : super._();
 
   factory _ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunityView.fromJson;
@@ -4316,12 +4676,20 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modRemovePost: modRemovePost == freezed
           ? _value.modRemovePost
-          : modRemovePost as ModRemovePost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemovePost // ignore: cast_nullable_to_non_nullable
+              as ModRemovePost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
@@ -4398,12 +4766,20 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
     return _then(_ModRemovePostView(
       modRemovePost: modRemovePost == freezed
           ? _value.modRemovePost
-          : modRemovePost as ModRemovePost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modRemovePost // ignore: cast_nullable_to_non_nullable
+              as ModRemovePost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4473,12 +4849,12 @@ class _$_ModRemovePostView extends _ModRemovePostView {
 }
 
 abstract class _ModRemovePostView extends ModRemovePostView {
-  _ModRemovePostView._() : super._();
   factory _ModRemovePostView(
       {required ModRemovePost modRemovePost,
       required UserSafe moderator,
       required Post post,
       required CommunitySafe community}) = _$_ModRemovePostView;
+  _ModRemovePostView._() : super._();
 
   factory _ModRemovePostView.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePostView.fromJson;
@@ -4575,12 +4951,20 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
     return _then(_value.copyWith(
       modStickyPost: modStickyPost == freezed
           ? _value.modStickyPost
-          : modStickyPost as ModStickyPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modStickyPost // ignore: cast_nullable_to_non_nullable
+              as ModStickyPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 
@@ -4657,12 +5041,20 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
     return _then(_ModStickyPostView(
       modStickyPost: modStickyPost == freezed
           ? _value.modStickyPost
-          : modStickyPost as ModStickyPost,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
-      post: post == freezed ? _value.post : post as Post,
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
+          : modStickyPost // ignore: cast_nullable_to_non_nullable
+              as ModStickyPost,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as Post,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
     ));
   }
 }
@@ -4732,12 +5124,12 @@ class _$_ModStickyPostView extends _ModStickyPostView {
 }
 
 abstract class _ModStickyPostView extends ModStickyPostView {
-  _ModStickyPostView._() : super._();
   factory _ModStickyPostView(
       {required ModStickyPost modStickyPost,
       required UserSafe moderator,
       required Post post,
       required CommunitySafe community}) = _$_ModStickyPostView;
+  _ModStickyPostView._() : super._();
 
   factory _ModStickyPostView.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPostView.fromJson;
@@ -4818,9 +5210,14 @@ class _$CommunityFollowerViewCopyWithImpl<$Res>
     Object? follower = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      follower: follower == freezed ? _value.follower : follower as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      follower: follower == freezed
+          ? _value.follower
+          : follower // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -4871,9 +5268,14 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
     Object? follower = freezed,
   }) {
     return _then(_CommunityFollowerView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      follower: follower == freezed ? _value.follower : follower as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      follower: follower == freezed
+          ? _value.follower
+          : follower // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -4929,10 +5331,10 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 }
 
 abstract class _CommunityFollowerView extends CommunityFollowerView {
-  _CommunityFollowerView._() : super._();
   factory _CommunityFollowerView(
       {required CommunitySafe community,
       required UserSafe follower}) = _$_CommunityFollowerView;
+  _CommunityFollowerView._() : super._();
 
   factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
       _$_CommunityFollowerView.fromJson;
@@ -5009,10 +5411,14 @@ class _$CommunityModeratorViewCopyWithImpl<$Res>
     Object? moderator = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -5063,10 +5469,14 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
     Object? moderator = freezed,
   }) {
     return _then(_CommunityModeratorView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      moderator:
-          moderator == freezed ? _value.moderator : moderator as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -5122,10 +5532,10 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 }
 
 abstract class _CommunityModeratorView extends CommunityModeratorView {
-  _CommunityModeratorView._() : super._();
   factory _CommunityModeratorView(
       {required CommunitySafe community,
       required UserSafe moderator}) = _$_CommunityModeratorView;
+  _CommunityModeratorView._() : super._();
 
   factory _CommunityModeratorView.fromJson(Map<String, dynamic> json) =
       _$_CommunityModeratorView.fromJson;
@@ -5201,9 +5611,14 @@ class _$CommunityUserBanViewCopyWithImpl<$Res>
     Object? user = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      user: user == freezed ? _value.user : user as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 
@@ -5254,9 +5669,14 @@ class __$CommunityUserBanViewCopyWithImpl<$Res>
     Object? user = freezed,
   }) {
     return _then(_CommunityUserBanView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      user: user == freezed ? _value.user : user as UserSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      user: user == freezed
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
     ));
   }
 }
@@ -5311,10 +5731,10 @@ class _$_CommunityUserBanView extends _CommunityUserBanView {
 }
 
 abstract class _CommunityUserBanView extends CommunityUserBanView {
-  _CommunityUserBanView._() : super._();
   factory _CommunityUserBanView(
       {required CommunitySafe community,
       required UserSafe user}) = _$_CommunityUserBanView;
+  _CommunityUserBanView._() : super._();
 
   factory _CommunityUserBanView.fromJson(Map<String, dynamic> json) =
       _$_CommunityUserBanView.fromJson;
@@ -5410,13 +5830,26 @@ class _$CommunityViewCopyWithImpl<$Res>
     Object? counts = freezed,
   }) {
     return _then(_value.copyWith(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      category: category == freezed ? _value.category : category as Category,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      counts: counts == freezed ? _value.counts : counts as CommunityAggregates,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommunityAggregates,
     ));
   }
 
@@ -5493,13 +5926,26 @@ class __$CommunityViewCopyWithImpl<$Res>
     Object? counts = freezed,
   }) {
     return _then(_CommunityView(
-      community:
-          community == freezed ? _value.community : community as CommunitySafe,
-      creator: creator == freezed ? _value.creator : creator as UserSafe,
-      category: category == freezed ? _value.category : category as Category,
-      subscribed:
-          subscribed == freezed ? _value.subscribed : subscribed as bool,
-      counts: counts == freezed ? _value.counts : counts as CommunityAggregates,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as UserSafe,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category,
+      subscribed: subscribed == freezed
+          ? _value.subscribed
+          : subscribed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommunityAggregates,
     ));
   }
 }
@@ -5576,13 +6022,13 @@ class _$_CommunityView extends _CommunityView {
 }
 
 abstract class _CommunityView extends CommunityView {
-  _CommunityView._() : super._();
   factory _CommunityView(
       {required CommunitySafe community,
       required UserSafe creator,
       required Category category,
       required bool subscribed,
       required CommunityAggregates counts}) = _$_CommunityView;
+  _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
       _$_CommunityView.fromJson;

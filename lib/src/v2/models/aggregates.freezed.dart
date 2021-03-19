@@ -93,14 +93,30 @@ class _$UserAggregatesCopyWithImpl<$Res>
     Object? commentScore = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      userId: userId == freezed ? _value.userId : userId as int,
-      postCount: postCount == freezed ? _value.postCount : postCount as int,
-      postScore: postScore == freezed ? _value.postScore : postScore as int,
-      commentCount:
-          commentCount == freezed ? _value.commentCount : commentCount as int,
-      commentScore:
-          commentScore == freezed ? _value.commentScore : commentScore as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postCount: postCount == freezed
+          ? _value.postCount
+          : postCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      postScore: postScore == freezed
+          ? _value.postScore
+          : postScore // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentCount: commentCount == freezed
+          ? _value.commentCount
+          : commentCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentScore: commentScore == freezed
+          ? _value.commentScore
+          : commentScore // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -142,14 +158,30 @@ class __$UserAggregatesCopyWithImpl<$Res>
     Object? commentScore = freezed,
   }) {
     return _then(_UserAggregates(
-      id: id == freezed ? _value.id : id as int,
-      userId: userId == freezed ? _value.userId : userId as int,
-      postCount: postCount == freezed ? _value.postCount : postCount as int,
-      postScore: postScore == freezed ? _value.postScore : postScore as int,
-      commentCount:
-          commentCount == freezed ? _value.commentCount : commentCount as int,
-      commentScore:
-          commentScore == freezed ? _value.commentScore : commentScore as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      postCount: postCount == freezed
+          ? _value.postCount
+          : postCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      postScore: postScore == freezed
+          ? _value.postScore
+          : postScore // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentCount: commentCount == freezed
+          ? _value.commentCount
+          : commentCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentScore: commentScore == freezed
+          ? _value.commentScore
+          : commentScore // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -232,7 +264,6 @@ class _$_UserAggregates extends _UserAggregates {
 }
 
 abstract class _UserAggregates extends UserAggregates {
-  const _UserAggregates._() : super._();
   const factory _UserAggregates(
       {required int id,
       required int userId,
@@ -240,6 +271,7 @@ abstract class _UserAggregates extends UserAggregates {
       required int postScore,
       required int commentCount,
       required int commentScore}) = _$_UserAggregates;
+  const _UserAggregates._() : super._();
 
   factory _UserAggregates.fromJson(Map<String, dynamic> json) =
       _$_UserAggregates.fromJson;
@@ -363,25 +395,46 @@ class _$SiteAggregatesCopyWithImpl<$Res>
     Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      siteId: siteId == freezed ? _value.siteId : siteId as int,
-      users: users == freezed ? _value.users : users as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      communities:
-          communities == freezed ? _value.communities : communities as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteId: siteId == freezed
+          ? _value.siteId
+          : siteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      users: users == freezed
+          ? _value.users
+          : users // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      communities: communities == freezed
+          ? _value.communities
+          : communities // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -431,25 +484,46 @@ class __$SiteAggregatesCopyWithImpl<$Res>
     Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_SiteAggregates(
-      id: id == freezed ? _value.id : id as int,
-      siteId: siteId == freezed ? _value.siteId : siteId as int,
-      users: users == freezed ? _value.users : users as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      communities:
-          communities == freezed ? _value.communities : communities as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      siteId: siteId == freezed
+          ? _value.siteId
+          : siteId // ignore: cast_nullable_to_non_nullable
+              as int,
+      users: users == freezed
+          ? _value.users
+          : users // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      communities: communities == freezed
+          ? _value.communities
+          : communities // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -558,7 +632,6 @@ class _$_SiteAggregates extends _SiteAggregates {
 }
 
 abstract class _SiteAggregates extends SiteAggregates {
-  const _SiteAggregates._() : super._();
   const factory _SiteAggregates(
       {required int id,
       required int siteId,
@@ -570,6 +643,7 @@ abstract class _SiteAggregates extends SiteAggregates {
       required int usersActiveWeek,
       required int usersActiveMonth,
       required int usersActiveHalfYear}) = _$_SiteAggregates;
+  const _SiteAggregates._() : super._();
 
   factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
       _$_SiteAggregates.fromJson;
@@ -691,18 +765,38 @@ class _$PostAggregatesCopyWithImpl<$Res>
     Object? newestCommentTimeNecro = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
       newestCommentTime: newestCommentTime == freezed
           ? _value.newestCommentTime
-          : newestCommentTime as DateTime,
+          : newestCommentTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       newestCommentTimeNecro: newestCommentTimeNecro == freezed
           ? _value.newestCommentTimeNecro
-          : newestCommentTimeNecro as DateTime,
+          : newestCommentTimeNecro // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -748,18 +842,38 @@ class __$PostAggregatesCopyWithImpl<$Res>
     Object? newestCommentTimeNecro = freezed,
   }) {
     return _then(_PostAggregates(
-      id: id == freezed ? _value.id : id as int,
-      postId: postId == freezed ? _value.postId : postId as int,
-      comments: comments == freezed ? _value.comments : comments as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
       newestCommentTime: newestCommentTime == freezed
           ? _value.newestCommentTime
-          : newestCommentTime as DateTime,
+          : newestCommentTime // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       newestCommentTimeNecro: newestCommentTimeNecro == freezed
           ? _value.newestCommentTimeNecro
-          : newestCommentTimeNecro as DateTime,
+          : newestCommentTimeNecro // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -857,7 +971,6 @@ class _$_PostAggregates extends _PostAggregates {
 }
 
 abstract class _PostAggregates extends PostAggregates {
-  const _PostAggregates._() : super._();
   const factory _PostAggregates(
       {required int id,
       required int postId,
@@ -867,6 +980,7 @@ abstract class _PostAggregates extends PostAggregates {
       required int downvotes,
       required DateTime newestCommentTime,
       required DateTime newestCommentTimeNecro}) = _$_PostAggregates;
+  const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
       _$_PostAggregates.fromJson;
@@ -989,25 +1103,42 @@ class _$CommunityAggregatesCopyWithImpl<$Res>
     Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      subscribers:
-          subscribers == freezed ? _value.subscribers : subscribers as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      subscribers: subscribers == freezed
+          ? _value.subscribers
+          : subscribers // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1055,25 +1186,42 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
     Object? usersActiveHalfYear = freezed,
   }) {
     return _then(_CommunityAggregates(
-      id: id == freezed ? _value.id : id as int,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int,
-      subscribers:
-          subscribers == freezed ? _value.subscribers : subscribers as int,
-      posts: posts == freezed ? _value.posts : posts as int,
-      comments: comments == freezed ? _value.comments : comments as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      subscribers: subscribers == freezed
+          ? _value.subscribers
+          : subscribers // ignore: cast_nullable_to_non_nullable
+              as int,
+      posts: posts == freezed
+          ? _value.posts
+          : posts // ignore: cast_nullable_to_non_nullable
+              as int,
+      comments: comments == freezed
+          ? _value.comments
+          : comments // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveDay: usersActiveDay == freezed
           ? _value.usersActiveDay
-          : usersActiveDay as int,
+          : usersActiveDay // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveWeek: usersActiveWeek == freezed
           ? _value.usersActiveWeek
-          : usersActiveWeek as int,
+          : usersActiveWeek // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveMonth: usersActiveMonth == freezed
           ? _value.usersActiveMonth
-          : usersActiveMonth as int,
+          : usersActiveMonth // ignore: cast_nullable_to_non_nullable
+              as int,
       usersActiveHalfYear: usersActiveHalfYear == freezed
           ? _value.usersActiveHalfYear
-          : usersActiveHalfYear as int,
+          : usersActiveHalfYear // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1178,7 +1326,6 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 }
 
 abstract class _CommunityAggregates extends CommunityAggregates {
-  const _CommunityAggregates._() : super._();
   const factory _CommunityAggregates(
       {required int id,
       required int communityId,
@@ -1189,6 +1336,7 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       required int usersActiveWeek,
       required int usersActiveMonth,
       required int usersActiveHalfYear}) = _$_CommunityAggregates;
+  const _CommunityAggregates._() : super._();
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommunityAggregates.fromJson;
@@ -1288,11 +1436,26 @@ class _$CommentAggregatesCopyWithImpl<$Res>
     Object? downvotes = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1327,11 +1490,26 @@ class __$CommentAggregatesCopyWithImpl<$Res>
     Object? downvotes = freezed,
   }) {
     return _then(_CommentAggregates(
-      id: id == freezed ? _value.id : id as int,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as int,
-      upvotes: upvotes == freezed ? _value.upvotes : upvotes as int,
-      downvotes: downvotes == freezed ? _value.downvotes : downvotes as int,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as int,
+      upvotes: upvotes == freezed
+          ? _value.upvotes
+          : upvotes // ignore: cast_nullable_to_non_nullable
+              as int,
+      downvotes: downvotes == freezed
+          ? _value.downvotes
+          : downvotes // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -1407,13 +1585,13 @@ class _$_CommentAggregates extends _CommentAggregates {
 }
 
 abstract class _CommentAggregates extends CommentAggregates {
-  const _CommentAggregates._() : super._();
   const factory _CommentAggregates(
       {required int id,
       required int commentId,
       required int score,
       required int upvotes,
       required int downvotes}) = _$_CommentAggregates;
+  const _CommentAggregates._() : super._();
 
   factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommentAggregates.fromJson;

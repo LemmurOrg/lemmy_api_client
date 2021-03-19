@@ -84,11 +84,26 @@ class _$CreateCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed ? _value.content : content as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as int?,
-      postId: postId == freezed ? _value.postId : postId as int,
-      formId: formId == freezed ? _value.formId : formId as String?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -124,11 +139,26 @@ class __$CreateCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_CreateComment(
-      content: content == freezed ? _value.content : content as String,
-      parentId: parentId == freezed ? _value.parentId : parentId as int?,
-      postId: postId == freezed ? _value.postId : postId as int,
-      formId: formId == freezed ? _value.formId : formId as String?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      postId: postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -203,13 +233,13 @@ class _$_CreateComment extends _CreateComment {
 }
 
 abstract class _CreateComment extends CreateComment {
-  const _CreateComment._() : super._();
   const factory _CreateComment(
       {required String content,
       int? parentId,
       required int postId,
       String? formId,
       required String auth}) = _$_CreateComment;
+  const _CreateComment._() : super._();
 
   factory _CreateComment.fromJson(Map<String, dynamic> json) =
       _$_CreateComment.fromJson;
@@ -296,10 +326,22 @@ class _$EditCommentCopyWithImpl<$Res> implements $EditCommentCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed ? _value.content : content as String,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      formId: formId == freezed ? _value.formId : formId as String?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -332,10 +374,22 @@ class __$EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_EditComment(
-      content: content == freezed ? _value.content : content as String,
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      formId: formId == freezed ? _value.formId : formId as String?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      formId: formId == freezed
+          ? _value.formId
+          : formId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -404,12 +458,12 @@ class _$_EditComment extends _EditComment {
 }
 
 abstract class _EditComment extends EditComment {
-  const _EditComment._() : super._();
   const factory _EditComment(
       {required String content,
       required int commentId,
       String? formId,
       required String auth}) = _$_EditComment;
+  const _EditComment._() : super._();
 
   factory _EditComment.fromJson(Map<String, dynamic> json) =
       _$_EditComment.fromJson;
@@ -489,9 +543,18 @@ class _$DeleteCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -524,9 +587,18 @@ class __$DeleteCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_DeleteComment(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -587,11 +659,11 @@ class _$_DeleteComment extends _DeleteComment {
 }
 
 abstract class _DeleteComment extends DeleteComment {
-  const _DeleteComment._() : super._();
   const factory _DeleteComment(
       {required int commentId,
       required bool deleted,
       required String auth}) = _$_DeleteComment;
+  const _DeleteComment._() : super._();
 
   factory _DeleteComment.fromJson(Map<String, dynamic> json) =
       _$_DeleteComment.fromJson;
@@ -675,10 +747,22 @@ class _$RemoveCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -712,10 +796,22 @@ class __$RemoveCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_RemoveComment(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      removed: removed == freezed ? _value.removed : removed as bool,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -784,12 +880,12 @@ class _$_RemoveComment extends _RemoveComment {
 }
 
 abstract class _RemoveComment extends RemoveComment {
-  const _RemoveComment._() : super._();
   const factory _RemoveComment(
       {required int commentId,
       required bool removed,
       String? reason,
       required String auth}) = _$_RemoveComment;
+  const _RemoveComment._() : super._();
 
   factory _RemoveComment.fromJson(Map<String, dynamic> json) =
       _$_RemoveComment.fromJson;
@@ -869,9 +965,18 @@ class _$MarkCommentAsReadCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -904,9 +1009,18 @@ class __$MarkCommentAsReadCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_MarkCommentAsRead(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -966,11 +1080,11 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
 }
 
 abstract class _MarkCommentAsRead extends MarkCommentAsRead {
-  const _MarkCommentAsRead._() : super._();
   const factory _MarkCommentAsRead(
       {required int commentId,
       required bool read,
       required String auth}) = _$_MarkCommentAsRead;
+  const _MarkCommentAsRead._() : super._();
 
   factory _MarkCommentAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkCommentAsRead.fromJson;
@@ -1047,9 +1161,18 @@ class _$SaveCommentCopyWithImpl<$Res> implements $SaveCommentCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      save: save == freezed ? _value.save : save as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      save: save == freezed
+          ? _value.save
+          : save // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1081,9 +1204,18 @@ class __$SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_SaveComment(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      save: save == freezed ? _value.save : save as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      save: save == freezed
+          ? _value.save
+          : save // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1143,11 +1275,11 @@ class _$_SaveComment extends _SaveComment {
 }
 
 abstract class _SaveComment extends SaveComment {
-  const _SaveComment._() : super._();
   const factory _SaveComment(
       {required int commentId,
       required bool save,
       required String auth}) = _$_SaveComment;
+  const _SaveComment._() : super._();
 
   factory _SaveComment.fromJson(Map<String, dynamic> json) =
       _$_SaveComment.fromJson;
@@ -1225,9 +1357,18 @@ class _$CreateCommentLikeCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as VoteType,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as VoteType,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1260,9 +1401,18 @@ class __$CreateCommentLikeCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_CreateCommentLike(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      score: score == freezed ? _value.score : score as VoteType,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      score: score == freezed
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as VoteType,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1322,11 +1472,11 @@ class _$_CreateCommentLike extends _CreateCommentLike {
 }
 
 abstract class _CreateCommentLike extends CreateCommentLike {
-  const _CreateCommentLike._() : super._();
   const factory _CreateCommentLike(
       {required int commentId,
       required VoteType score,
       required String auth}) = _$_CreateCommentLike;
+  const _CreateCommentLike._() : super._();
 
   factory _CreateCommentLike.fromJson(Map<String, dynamic> json) =
       _$_CreateCommentLike.fromJson;
@@ -1429,16 +1579,34 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed ? _value.type : type as CommentListingType,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CommentListingType,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
       communityName: communityName == freezed
           ? _value.communityName
-          : communityName as String?,
-      auth: auth == freezed ? _value.auth : auth as String?,
+          : communityName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1481,16 +1649,34 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetComments(
-      type: type == freezed ? _value.type : type as CommentListingType,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CommentListingType,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
       communityName: communityName == freezed
           ? _value.communityName
-          : communityName as String?,
-      auth: auth == freezed ? _value.auth : auth as String?,
+          : communityName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1578,7 +1764,6 @@ class _$_GetComments extends _GetComments {
 }
 
 abstract class _GetComments extends GetComments {
-  const _GetComments._() : super._();
   const factory _GetComments(
       {@JsonKey(name: 'type_') required CommentListingType type,
       required SortType sort,
@@ -1587,6 +1772,7 @@ abstract class _GetComments extends GetComments {
       int? communityId,
       String? communityName,
       String? auth}) = _$_GetComments;
+  const _GetComments._() : super._();
 
   factory _GetComments.fromJson(Map<String, dynamic> json) =
       _$_GetComments.fromJson;
@@ -1673,9 +1859,18 @@ class _$CreateCommentReportCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1708,9 +1903,18 @@ class __$CreateCommentReportCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_CreateCommentReport(
-      commentId: commentId == freezed ? _value.commentId : commentId as int,
-      reason: reason == freezed ? _value.reason : reason as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      commentId: commentId == freezed
+          ? _value.commentId
+          : commentId // ignore: cast_nullable_to_non_nullable
+              as int,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1771,11 +1975,11 @@ class _$_CreateCommentReport extends _CreateCommentReport {
 }
 
 abstract class _CreateCommentReport extends CreateCommentReport {
-  const _CreateCommentReport._() : super._();
   const factory _CreateCommentReport(
       {required int commentId,
       required String reason,
       required String auth}) = _$_CreateCommentReport;
+  const _CreateCommentReport._() : super._();
 
   factory _CreateCommentReport.fromJson(Map<String, dynamic> json) =
       _$_CreateCommentReport.fromJson;
@@ -1853,9 +2057,18 @@ class _$ResolveCommentReportCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      reportId: reportId == freezed ? _value.reportId : reportId as int,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      reportId: reportId == freezed
+          ? _value.reportId
+          : reportId // ignore: cast_nullable_to_non_nullable
+              as int,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1888,9 +2101,18 @@ class __$ResolveCommentReportCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_ResolveCommentReport(
-      reportId: reportId == freezed ? _value.reportId : reportId as int,
-      resolved: resolved == freezed ? _value.resolved : resolved as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      reportId: reportId == freezed
+          ? _value.reportId
+          : reportId // ignore: cast_nullable_to_non_nullable
+              as int,
+      resolved: resolved == freezed
+          ? _value.resolved
+          : resolved // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1952,11 +2174,11 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
 }
 
 abstract class _ResolveCommentReport extends ResolveCommentReport {
-  const _ResolveCommentReport._() : super._();
   const factory _ResolveCommentReport(
       {required int reportId,
       required bool resolved,
       required String auth}) = _$_ResolveCommentReport;
+  const _ResolveCommentReport._() : super._();
 
   factory _ResolveCommentReport.fromJson(Map<String, dynamic> json) =
       _$_ResolveCommentReport.fromJson;
@@ -2037,10 +2259,22 @@ class _$ListCommentReportsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      community: community == freezed ? _value.community : community as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2074,10 +2308,22 @@ class __$ListCommentReportsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_ListCommentReports(
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      community: community == freezed ? _value.community : community as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2142,12 +2388,12 @@ class _$_ListCommentReports extends _ListCommentReports {
 }
 
 abstract class _ListCommentReports extends ListCommentReports {
-  const _ListCommentReports._() : super._();
   const factory _ListCommentReports(
       {int? page,
       int? limit,
       int? community,
       required String auth}) = _$_ListCommentReports;
+  const _ListCommentReports._() : super._();
 
   factory _ListCommentReports.fromJson(Map<String, dynamic> json) =
       _$_ListCommentReports.fromJson;

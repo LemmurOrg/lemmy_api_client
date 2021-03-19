@@ -68,8 +68,14 @@ class _$JwtPayloadCopyWithImpl<$Res> implements $JwtPayloadCopyWith<$Res> {
     Object? iss = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as int,
-      iss: iss == freezed ? _value.iss : iss as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      iss: iss == freezed
+          ? _value.iss
+          : iss // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -99,8 +105,14 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
     Object? iss = freezed,
   }) {
     return _then(_JwtPayload(
-      id: id == freezed ? _value.id : id as int,
-      iss: iss == freezed ? _value.iss : iss as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      iss: iss == freezed
+          ? _value.iss
+          : iss // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -152,9 +164,9 @@ class _$_JwtPayload extends _JwtPayload {
 }
 
 abstract class _JwtPayload extends JwtPayload {
-  const _JwtPayload._() : super._();
   const factory _JwtPayload({required int id, required String iss}) =
       _$_JwtPayload;
+  const _JwtPayload._() : super._();
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =
       _$_JwtPayload.fromJson;

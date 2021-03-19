@@ -69,9 +69,14 @@ class _$PictrsUploadFileCopyWithImpl<$Res>
     Object? file = freezed,
   }) {
     return _then(_value.copyWith(
-      deleteToken:
-          deleteToken == freezed ? _value.deleteToken : deleteToken as String,
-      file: file == freezed ? _value.file : file as String,
+      deleteToken: deleteToken == freezed
+          ? _value.deleteToken
+          : deleteToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      file: file == freezed
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -103,9 +108,14 @@ class __$PictrsUploadFileCopyWithImpl<$Res>
     Object? file = freezed,
   }) {
     return _then(_PictrsUploadFile(
-      deleteToken:
-          deleteToken == freezed ? _value.deleteToken : deleteToken as String,
-      file: file == freezed ? _value.file : file as String,
+      deleteToken: deleteToken == freezed
+          ? _value.deleteToken
+          : deleteToken // ignore: cast_nullable_to_non_nullable
+              as String,
+      file: file == freezed
+          ? _value.file
+          : file // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -159,10 +169,10 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
 }
 
 abstract class _PictrsUploadFile extends PictrsUploadFile {
-  const _PictrsUploadFile._() : super._();
   const factory _PictrsUploadFile(
       {required String deleteToken,
       required String file}) = _$_PictrsUploadFile;
+  const _PictrsUploadFile._() : super._();
 
   factory _PictrsUploadFile.fromJson(Map<String, dynamic> json) =
       _$_PictrsUploadFile.fromJson;
@@ -234,8 +244,14 @@ class _$PictrsUploadCopyWithImpl<$Res> implements $PictrsUploadCopyWith<$Res> {
     Object? files = freezed,
   }) {
     return _then(_value.copyWith(
-      msg: msg == freezed ? _value.msg : msg as String,
-      files: files == freezed ? _value.files : files as List<PictrsUploadFile>,
+      msg: msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+      files: files == freezed
+          ? _value.files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<PictrsUploadFile>,
     ));
   }
 }
@@ -266,8 +282,14 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
     Object? files = freezed,
   }) {
     return _then(_PictrsUpload(
-      msg: msg == freezed ? _value.msg : msg as String,
-      files: files == freezed ? _value.files : files as List<PictrsUploadFile>,
+      msg: msg == freezed
+          ? _value.msg
+          : msg // ignore: cast_nullable_to_non_nullable
+              as String,
+      files: files == freezed
+          ? _value.files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<PictrsUploadFile>,
     ));
   }
 }
@@ -319,10 +341,10 @@ class _$_PictrsUpload extends _PictrsUpload {
 }
 
 abstract class _PictrsUpload extends PictrsUpload {
-  _PictrsUpload._() : super._();
   factory _PictrsUpload(
       {required String msg,
       required List<PictrsUploadFile> files}) = _$_PictrsUpload;
+  _PictrsUpload._() : super._();
 
   factory _PictrsUpload.fromJson(Map<String, dynamic> json) =
       _$_PictrsUpload.fromJson;

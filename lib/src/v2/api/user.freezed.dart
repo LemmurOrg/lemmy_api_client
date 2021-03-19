@@ -68,8 +68,12 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
     return _then(_value.copyWith(
       usernameOrEmail: usernameOrEmail == freezed
           ? _value.usernameOrEmail
-          : usernameOrEmail as String,
-      password: password == freezed ? _value.password : password as String,
+          : usernameOrEmail // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -99,8 +103,12 @@ class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
     return _then(_Login(
       usernameOrEmail: usernameOrEmail == freezed
           ? _value.usernameOrEmail
-          : usernameOrEmail as String,
-      password: password == freezed ? _value.password : password as String,
+          : usernameOrEmail // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -155,9 +163,9 @@ class _$_Login extends _Login {
 }
 
 abstract class _Login extends Login {
-  const _Login._() : super._();
   const factory _Login(
       {required String usernameOrEmail, required String password}) = _$_Login;
+  const _Login._() : super._();
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
 
@@ -254,18 +262,34 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
     Object? captchaAnswer = freezed,
   }) {
     return _then(_value.copyWith(
-      username: username == freezed ? _value.username : username as String,
-      email: email == freezed ? _value.email : email as String?,
-      password: password == freezed ? _value.password : password as String,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
-          : passwordVerify as String,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
-      captchaUuid:
-          captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String?,
+          : passwordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
+      showNsfw: showNsfw == freezed
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      captchaUuid: captchaUuid == freezed
+          ? _value.captchaUuid
+          : captchaUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
       captchaAnswer: captchaAnswer == freezed
           ? _value.captchaAnswer
-          : captchaAnswer as String?,
+          : captchaAnswer // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -305,18 +329,34 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
     Object? captchaAnswer = freezed,
   }) {
     return _then(_Register(
-      username: username == freezed ? _value.username : username as String,
-      email: email == freezed ? _value.email : email as String?,
-      password: password == freezed ? _value.password : password as String,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
-          : passwordVerify as String,
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
-      captchaUuid:
-          captchaUuid == freezed ? _value.captchaUuid : captchaUuid as String?,
+          : passwordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
+      showNsfw: showNsfw == freezed
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      captchaUuid: captchaUuid == freezed
+          ? _value.captchaUuid
+          : captchaUuid // ignore: cast_nullable_to_non_nullable
+              as String?,
       captchaAnswer: captchaAnswer == freezed
           ? _value.captchaAnswer
-          : captchaAnswer as String?,
+          : captchaAnswer // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -407,7 +447,6 @@ class _$_Register extends _Register {
 }
 
 abstract class _Register extends Register {
-  const _Register._() : super._();
   const factory _Register(
       {required String username,
       String? email,
@@ -416,6 +455,7 @@ abstract class _Register extends Register {
       required bool showNsfw,
       String? captchaUuid,
       String? captchaAnswer}) = _$_Register;
+  const _Register._() : super._();
 
   factory _Register.fromJson(Map<String, dynamic> json) = _$_Register.fromJson;
 
@@ -527,8 +567,8 @@ class _$_GetCaptcha extends _GetCaptcha {
 }
 
 abstract class _GetCaptcha extends GetCaptcha {
-  const _GetCaptcha._() : super._();
   const factory _GetCaptcha() = _$_GetCaptcha;
+  const _GetCaptcha._() : super._();
 
   factory _GetCaptcha.fromJson(Map<String, dynamic> json) =
       _$_GetCaptcha.fromJson;
@@ -676,38 +716,74 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
-      theme: theme == freezed ? _value.theme : theme as String,
+      showNsfw: showNsfw == freezed
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      theme: theme == freezed
+          ? _value.theme
+          : theme // ignore: cast_nullable_to_non_nullable
+              as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as SortType,
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as PostListingType,
-      lang: lang == freezed ? _value.lang : lang as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+          : defaultListingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
+      lang: lang == freezed
+          ? _value.lang
+          : lang // ignore: cast_nullable_to_non_nullable
+              as String,
+      avatar: avatar == freezed
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String?,
-      email: email == freezed ? _value.email : email as String?,
-      bio: bio == freezed ? _value.bio : bio as String?,
+          : preferredUsername // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bio: bio == freezed
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String?,
-      newPassword:
-          newPassword == freezed ? _value.newPassword : newPassword as String?,
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String?,
       newPasswordVerify: newPasswordVerify == freezed
           ? _value.newPasswordVerify
-          : newPasswordVerify as String?,
-      oldPassword:
-          oldPassword == freezed ? _value.oldPassword : oldPassword as String?,
-      showAvatars:
-          showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
+          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+              as String?,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String?,
+      showAvatars: showAvatars == freezed
+          ? _value.showAvatars
+          : showAvatars // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
-          : sendNotificationsToEmail as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -773,38 +849,74 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_SaveUserSettings(
-      showNsfw: showNsfw == freezed ? _value.showNsfw : showNsfw as bool,
-      theme: theme == freezed ? _value.theme : theme as String,
+      showNsfw: showNsfw == freezed
+          ? _value.showNsfw
+          : showNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      theme: theme == freezed
+          ? _value.theme
+          : theme // ignore: cast_nullable_to_non_nullable
+              as String,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
-          : defaultSortType as SortType,
+          : defaultSortType // ignore: cast_nullable_to_non_nullable
+              as SortType,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
-          : defaultListingType as PostListingType,
-      lang: lang == freezed ? _value.lang : lang as String,
-      avatar: avatar == freezed ? _value.avatar : avatar as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+          : defaultListingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
+      lang: lang == freezed
+          ? _value.lang
+          : lang // ignore: cast_nullable_to_non_nullable
+              as String,
+      avatar: avatar == freezed
+          ? _value.avatar
+          : avatar // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       preferredUsername: preferredUsername == freezed
           ? _value.preferredUsername
-          : preferredUsername as String?,
-      email: email == freezed ? _value.email : email as String?,
-      bio: bio == freezed ? _value.bio : bio as String?,
+          : preferredUsername // ignore: cast_nullable_to_non_nullable
+              as String?,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String?,
+      bio: bio == freezed
+          ? _value.bio
+          : bio // ignore: cast_nullable_to_non_nullable
+              as String?,
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
-          : matrixUserId as String?,
-      newPassword:
-          newPassword == freezed ? _value.newPassword : newPassword as String?,
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String?,
       newPasswordVerify: newPasswordVerify == freezed
           ? _value.newPasswordVerify
-          : newPasswordVerify as String?,
-      oldPassword:
-          oldPassword == freezed ? _value.oldPassword : oldPassword as String?,
-      showAvatars:
-          showAvatars == freezed ? _value.showAvatars : showAvatars as bool,
+          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+              as String?,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String?,
+      showAvatars: showAvatars == freezed
+          ? _value.showAvatars
+          : showAvatars // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
-          : sendNotificationsToEmail as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -965,7 +1077,6 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 }
 
 abstract class _SaveUserSettings extends SaveUserSettings {
-  const _SaveUserSettings._() : super._();
   const factory _SaveUserSettings(
       {required bool showNsfw,
       required String theme,
@@ -986,6 +1097,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       required bool showAvatars,
       required bool sendNotificationsToEmail,
       required String auth}) = _$_SaveUserSettings;
+  const _SaveUserSettings._() : super._();
 
   factory _SaveUserSettings.fromJson(Map<String, dynamic> json) =
       _$_SaveUserSettings.fromJson;
@@ -1123,15 +1235,38 @@ class _$GetUserDetailsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as int?,
-      username: username == freezed ? _value.username : username as String?,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
-      savedOnly: savedOnly == freezed ? _value.savedOnly : savedOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String?,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      savedOnly: savedOnly == freezed
+          ? _value.savedOnly
+          : savedOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1177,15 +1312,38 @@ class __$GetUserDetailsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetUserDetails(
-      userId: userId == freezed ? _value.userId : userId as int?,
-      username: username == freezed ? _value.username : username as String?,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
-      savedOnly: savedOnly == freezed ? _value.savedOnly : savedOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String?,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      username: username == freezed
+          ? _value.username
+          : username // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      savedOnly: savedOnly == freezed
+          ? _value.savedOnly
+          : savedOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1279,7 +1437,6 @@ class _$_GetUserDetails extends _GetUserDetails {
 }
 
 abstract class _GetUserDetails extends GetUserDetails {
-  const _GetUserDetails._() : super._();
   const factory _GetUserDetails(
       {int? userId,
       String? username,
@@ -1289,6 +1446,7 @@ abstract class _GetUserDetails extends GetUserDetails {
       int? communityId,
       required bool savedOnly,
       String? auth}) = _$_GetUserDetails;
+  const _GetUserDetails._() : super._();
 
   factory _GetUserDetails.fromJson(Map<String, dynamic> json) =
       _$_GetUserDetails.fromJson;
@@ -1369,7 +1527,10 @@ class _$MarkAllAsReadCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed ? _value.auth : auth as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1400,7 +1561,10 @@ class __$MarkAllAsReadCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_MarkAllAsRead(
-      auth: auth == freezed ? _value.auth : auth as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1446,8 +1610,8 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
 }
 
 abstract class _MarkAllAsRead extends MarkAllAsRead {
-  const _MarkAllAsRead._() : super._();
   const factory _MarkAllAsRead({required String auth}) = _$_MarkAllAsRead;
+  const _MarkAllAsRead._() : super._();
 
   factory _MarkAllAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkAllAsRead.fromJson;
@@ -1519,9 +1683,18 @@ class _$AddAdminCopyWithImpl<$Res> implements $AddAdminCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as int,
-      added: added == freezed ? _value.added : added as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      added: added == freezed
+          ? _value.added
+          : added // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1550,9 +1723,18 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_AddAdmin(
-      userId: userId == freezed ? _value.userId : userId as int,
-      added: added == freezed ? _value.added : added as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      added: added == freezed
+          ? _value.added
+          : added // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1611,11 +1793,11 @@ class _$_AddAdmin extends _AddAdmin {
 }
 
 abstract class _AddAdmin extends AddAdmin {
-  const _AddAdmin._() : super._();
   const factory _AddAdmin(
       {required int userId,
       required bool added,
       required String auth}) = _$_AddAdmin;
+  const _AddAdmin._() : super._();
 
   factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$_AddAdmin.fromJson;
 
@@ -1709,13 +1891,30 @@ class _$BanUserCopyWithImpl<$Res> implements $BanUserCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as int,
-      ban: ban == freezed ? _value.ban : ban as bool,
-      removeData:
-          removeData == freezed ? _value.removeData : removeData as bool,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      expires: expires == freezed ? _value.expires : expires as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      ban: ban == freezed
+          ? _value.ban
+          : ban // ignore: cast_nullable_to_non_nullable
+              as bool,
+      removeData: removeData == freezed
+          ? _value.removeData
+          : removeData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1753,13 +1952,30 @@ class __$BanUserCopyWithImpl<$Res> extends _$BanUserCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_BanUser(
-      userId: userId == freezed ? _value.userId : userId as int,
-      ban: ban == freezed ? _value.ban : ban as bool,
-      removeData:
-          removeData == freezed ? _value.removeData : removeData as bool,
-      reason: reason == freezed ? _value.reason : reason as String?,
-      expires: expires == freezed ? _value.expires : expires as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      ban: ban == freezed
+          ? _value.ban
+          : ban // ignore: cast_nullable_to_non_nullable
+              as bool,
+      removeData: removeData == freezed
+          ? _value.removeData
+          : removeData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      expires: expires == freezed
+          ? _value.expires
+          : expires // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1840,7 +2056,6 @@ class _$_BanUser extends _BanUser {
 }
 
 abstract class _BanUser extends BanUser {
-  const _BanUser._() : super._();
   const factory _BanUser(
       {required int userId,
       required bool ban,
@@ -1848,6 +2063,7 @@ abstract class _BanUser extends BanUser {
       String? reason,
       int? expires,
       required String auth}) = _$_BanUser;
+  const _BanUser._() : super._();
 
   factory _BanUser.fromJson(Map<String, dynamic> json) = _$_BanUser.fromJson;
 
@@ -1940,12 +2156,26 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      unreadOnly:
-          unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1979,12 +2209,26 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetReplies(
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      unreadOnly:
-          unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2058,13 +2302,13 @@ class _$_GetReplies extends _GetReplies {
 }
 
 abstract class _GetReplies extends GetReplies {
-  const _GetReplies._() : super._();
   const factory _GetReplies(
       {required SortType sort,
       int? page,
       int? limit,
       required bool unreadOnly,
       required String auth}) = _$_GetReplies;
+  const _GetReplies._() : super._();
 
   factory _GetReplies.fromJson(Map<String, dynamic> json) =
       _$_GetReplies.fromJson;
@@ -2157,12 +2401,26 @@ class _$GetUserMentionsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      unreadOnly:
-          unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2198,12 +2456,26 @@ class __$GetUserMentionsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetUserMentions(
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      unreadOnly:
-          unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2277,13 +2549,13 @@ class _$_GetUserMentions extends _GetUserMentions {
 }
 
 abstract class _GetUserMentions extends GetUserMentions {
-  const _GetUserMentions._() : super._();
   const factory _GetUserMentions(
       {required SortType sort,
       int? page,
       int? limit,
       required bool unreadOnly,
       required String auth}) = _$_GetUserMentions;
+  const _GetUserMentions._() : super._();
 
   factory _GetUserMentions.fromJson(Map<String, dynamic> json) =
       _$_GetUserMentions.fromJson;
@@ -2368,9 +2640,16 @@ class _$MarkUserMentionAsReadCopyWithImpl<$Res>
     return _then(_value.copyWith(
       userMentionId: userMentionId == freezed
           ? _value.userMentionId
-          : userMentionId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : userMentionId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2405,9 +2684,16 @@ class __$MarkUserMentionAsReadCopyWithImpl<$Res>
     return _then(_MarkUserMentionAsRead(
       userMentionId: userMentionId == freezed
           ? _value.userMentionId
-          : userMentionId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : userMentionId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2468,11 +2754,11 @@ class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
 }
 
 abstract class _MarkUserMentionAsRead extends MarkUserMentionAsRead {
-  const _MarkUserMentionAsRead._() : super._();
   const factory _MarkUserMentionAsRead(
       {required int userMentionId,
       required bool read,
       required String auth}) = _$_MarkUserMentionAsRead;
+  const _MarkUserMentionAsRead._() : super._();
 
   factory _MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkUserMentionAsRead.fromJson;
@@ -2546,8 +2832,14 @@ class _$DeleteAccountCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      password: password == freezed ? _value.password : password as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2579,8 +2871,14 @@ class __$DeleteAccountCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_DeleteAccount(
-      password: password == freezed ? _value.password : password as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2634,9 +2932,9 @@ class _$_DeleteAccount extends _DeleteAccount {
 }
 
 abstract class _DeleteAccount extends DeleteAccount {
-  const _DeleteAccount._() : super._();
   const factory _DeleteAccount(
       {required String password, required String auth}) = _$_DeleteAccount;
+  const _DeleteAccount._() : super._();
 
   factory _DeleteAccount.fromJson(Map<String, dynamic> json) =
       _$_DeleteAccount.fromJson;
@@ -2705,7 +3003,10 @@ class _$PasswordResetCopyWithImpl<$Res>
     Object? email = freezed,
   }) {
     return _then(_value.copyWith(
-      email: email == freezed ? _value.email : email as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2736,7 +3037,10 @@ class __$PasswordResetCopyWithImpl<$Res>
     Object? email = freezed,
   }) {
     return _then(_PasswordReset(
-      email: email == freezed ? _value.email : email as String,
+      email: email == freezed
+          ? _value.email
+          : email // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2782,8 +3086,8 @@ class _$_PasswordReset extends _PasswordReset {
 }
 
 abstract class _PasswordReset extends PasswordReset {
-  const _PasswordReset._() : super._();
   const factory _PasswordReset({required String email}) = _$_PasswordReset;
+  const _PasswordReset._() : super._();
 
   factory _PasswordReset.fromJson(Map<String, dynamic> json) =
       _$_PasswordReset.fromJson;
@@ -2859,11 +3163,18 @@ class _$PasswordChangeCopyWithImpl<$Res>
     Object? passwordVerify = freezed,
   }) {
     return _then(_value.copyWith(
-      token: token == freezed ? _value.token : token as String,
-      password: password == freezed ? _value.password : password as String,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
-          : passwordVerify as String,
+          : passwordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2896,11 +3207,18 @@ class __$PasswordChangeCopyWithImpl<$Res>
     Object? passwordVerify = freezed,
   }) {
     return _then(_PasswordChange(
-      token: token == freezed ? _value.token : token as String,
-      password: password == freezed ? _value.password : password as String,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      password: password == freezed
+          ? _value.password
+          : password // ignore: cast_nullable_to_non_nullable
+              as String,
       passwordVerify: passwordVerify == freezed
           ? _value.passwordVerify
-          : passwordVerify as String,
+          : passwordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2963,11 +3281,11 @@ class _$_PasswordChange extends _PasswordChange {
 }
 
 abstract class _PasswordChange extends PasswordChange {
-  const _PasswordChange._() : super._();
   const factory _PasswordChange(
       {required String token,
       required String password,
       required String passwordVerify}) = _$_PasswordChange;
+  const _PasswordChange._() : super._();
 
   factory _PasswordChange.fromJson(Map<String, dynamic> json) =
       _$_PasswordChange.fromJson;
@@ -3047,10 +3365,18 @@ class _$CreatePrivateMessageCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      content: content == freezed ? _value.content : content as String,
-      recipientId:
-          recipientId == freezed ? _value.recipientId : recipientId as int,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipientId: recipientId == freezed
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3083,10 +3409,18 @@ class __$CreatePrivateMessageCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_CreatePrivateMessage(
-      content: content == freezed ? _value.content : content as String,
-      recipientId:
-          recipientId == freezed ? _value.recipientId : recipientId as int,
-      auth: auth == freezed ? _value.auth : auth as String,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      recipientId: recipientId == freezed
+          ? _value.recipientId
+          : recipientId // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3148,11 +3482,11 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
 }
 
 abstract class _CreatePrivateMessage extends CreatePrivateMessage {
-  const _CreatePrivateMessage._() : super._();
   const factory _CreatePrivateMessage(
       {required String content,
       required int recipientId,
       required String auth}) = _$_CreatePrivateMessage;
+  const _CreatePrivateMessage._() : super._();
 
   factory _CreatePrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_CreatePrivateMessage.fromJson;
@@ -3234,9 +3568,16 @@ class _$EditPrivateMessageCopyWithImpl<$Res>
     return _then(_value.copyWith(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
-          : privateMessageId as int,
-      content: content == freezed ? _value.content : content as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : privateMessageId // ignore: cast_nullable_to_non_nullable
+              as int,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3271,9 +3612,16 @@ class __$EditPrivateMessageCopyWithImpl<$Res>
     return _then(_EditPrivateMessage(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
-          : privateMessageId as int,
-      content: content == freezed ? _value.content : content as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : privateMessageId // ignore: cast_nullable_to_non_nullable
+              as int,
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3336,11 +3684,11 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
 }
 
 abstract class _EditPrivateMessage extends EditPrivateMessage {
-  const _EditPrivateMessage._() : super._();
   const factory _EditPrivateMessage(
       {required int privateMessageId,
       required String content,
       required String auth}) = _$_EditPrivateMessage;
+  const _EditPrivateMessage._() : super._();
 
   factory _EditPrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_EditPrivateMessage.fromJson;
@@ -3422,9 +3770,16 @@ class _$DeletePrivateMessageCopyWithImpl<$Res>
     return _then(_value.copyWith(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
-          : privateMessageId as int,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : privateMessageId // ignore: cast_nullable_to_non_nullable
+              as int,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3459,9 +3814,16 @@ class __$DeletePrivateMessageCopyWithImpl<$Res>
     return _then(_DeletePrivateMessage(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
-          : privateMessageId as int,
-      deleted: deleted == freezed ? _value.deleted : deleted as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : privateMessageId // ignore: cast_nullable_to_non_nullable
+              as int,
+      deleted: deleted == freezed
+          ? _value.deleted
+          : deleted // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3525,11 +3887,11 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
 }
 
 abstract class _DeletePrivateMessage extends DeletePrivateMessage {
-  const _DeletePrivateMessage._() : super._();
   const factory _DeletePrivateMessage(
       {required int privateMessageId,
       required bool deleted,
       required String auth}) = _$_DeletePrivateMessage;
+  const _DeletePrivateMessage._() : super._();
 
   factory _DeletePrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_DeletePrivateMessage.fromJson;
@@ -3612,9 +3974,16 @@ class _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
     return _then(_value.copyWith(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
-          : privateMessageId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : privateMessageId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3650,9 +4019,16 @@ class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
     return _then(_MarkPrivateMessageAsRead(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
-          : privateMessageId as int,
-      read: read == freezed ? _value.read : read as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : privateMessageId // ignore: cast_nullable_to_non_nullable
+              as int,
+      read: read == freezed
+          ? _value.read
+          : read // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3713,11 +4089,11 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
 }
 
 abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
-  const _MarkPrivateMessageAsRead._() : super._();
   const factory _MarkPrivateMessageAsRead(
       {required int privateMessageId,
       required bool read,
       required String auth}) = _$_MarkPrivateMessageAsRead;
+  const _MarkPrivateMessageAsRead._() : super._();
 
   factory _MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkPrivateMessageAsRead.fromJson;
@@ -3798,11 +4174,22 @@ class _$GetPrivateMessagesCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      unreadOnly:
-          unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3836,11 +4223,22 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetPrivateMessages(
-      unreadOnly:
-          unreadOnly == freezed ? _value.unreadOnly : unreadOnly as bool,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3905,12 +4303,12 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 }
 
 abstract class _GetPrivateMessages extends GetPrivateMessages {
-  const _GetPrivateMessages._() : super._();
   const factory _GetPrivateMessages(
       {required bool unreadOnly,
       int? page,
       int? limit,
       required String auth}) = _$_GetPrivateMessages;
+  const _GetPrivateMessages._() : super._();
 
   factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) =
       _$_GetPrivateMessages.fromJson;
@@ -3986,8 +4384,14 @@ class _$GetReportCountCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      community: community == freezed ? _value.community : community as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4019,8 +4423,14 @@ class __$GetReportCountCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetReportCount(
-      community: community == freezed ? _value.community : community as int?,
-      auth: auth == freezed ? _value.auth : auth as String,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4073,9 +4483,9 @@ class _$_GetReportCount extends _GetReportCount {
 }
 
 abstract class _GetReportCount extends GetReportCount {
-  const _GetReportCount._() : super._();
   const factory _GetReportCount({int? community, required String auth}) =
       _$_GetReportCount;
+  const _GetReportCount._() : super._();
 
   factory _GetReportCount.fromJson(Map<String, dynamic> json) =
       _$_GetReportCount.fromJson;

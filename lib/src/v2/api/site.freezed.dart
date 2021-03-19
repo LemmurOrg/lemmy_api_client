@@ -102,8 +102,8 @@ class _$_ListCategories extends _ListCategories {
 }
 
 abstract class _ListCategories extends ListCategories {
-  const _ListCategories._() : super._();
   const factory _ListCategories() = _$_ListCategories;
+  const _ListCategories._() : super._();
 
   factory _ListCategories.fromJson(Map<String, dynamic> json) =
       _$_ListCategories.fromJson;
@@ -198,17 +198,38 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      q: q == freezed ? _value.q : q as String,
-      type: type == freezed ? _value.type : type as SearchType,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
+      q: q == freezed
+          ? _value.q
+          : q // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchType,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
       communityName: communityName == freezed
           ? _value.communityName
-          : communityName as String?,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      auth: auth == freezed ? _value.auth : auth as String?,
+          : communityName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -250,17 +271,38 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_Search(
-      q: q == freezed ? _value.q : q as String,
-      type: type == freezed ? _value.type : type as SearchType,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
+      q: q == freezed
+          ? _value.q
+          : q // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as SearchType,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
       communityName: communityName == freezed
           ? _value.communityName
-          : communityName as String?,
-      sort: sort == freezed ? _value.sort : sort as SortType,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
-      auth: auth == freezed ? _value.auth : auth as String?,
+          : communityName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sort: sort == freezed
+          ? _value.sort
+          : sort // ignore: cast_nullable_to_non_nullable
+              as SortType,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -354,7 +396,6 @@ class _$_Search extends _Search {
 }
 
 abstract class _Search extends Search {
-  const _Search._() : super._();
   const factory _Search(
       {required String q,
       @JsonKey(name: 'type_') required SearchType type,
@@ -364,6 +405,7 @@ abstract class _Search extends Search {
       int? page,
       int? limit,
       String? auth}) = _$_Search;
+  const _Search._() : super._();
 
   factory _Search.fromJson(Map<String, dynamic> json) = _$_Search.fromJson;
 
@@ -450,11 +492,22 @@ class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
     Object? limit = freezed,
   }) {
     return _then(_value.copyWith(
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int?,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -485,11 +538,22 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
     Object? limit = freezed,
   }) {
     return _then(_GetModlog(
-      modUserId: modUserId == freezed ? _value.modUserId : modUserId as int?,
-      communityId:
-          communityId == freezed ? _value.communityId : communityId as int?,
-      page: page == freezed ? _value.page : page as int?,
-      limit: limit == freezed ? _value.limit : limit as int?,
+      modUserId: modUserId == freezed
+          ? _value.modUserId
+          : modUserId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -554,9 +618,9 @@ class _$_GetModlog extends _GetModlog {
 }
 
 abstract class _GetModlog extends GetModlog {
-  const _GetModlog._() : super._();
   const factory _GetModlog(
       {int? modUserId, int? communityId, int? page, int? limit}) = _$_GetModlog;
+  const _GetModlog._() : super._();
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
       _$_GetModlog.fromJson;
@@ -665,20 +729,38 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
-          : enableDownvotes as bool,
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
-          : openRegistration as bool,
-      enableNsfw:
-          enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : openRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: enableNsfw == freezed
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -722,20 +804,38 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_CreateSite(
-      name: name == freezed ? _value.name : name as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
-          : enableDownvotes as bool,
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
-          : openRegistration as bool,
-      enableNsfw:
-          enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : openRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: enableNsfw == freezed
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -830,7 +930,6 @@ class _$_CreateSite extends _CreateSite {
 }
 
 abstract class _CreateSite extends CreateSite {
-  const _CreateSite._() : super._();
   const factory _CreateSite(
       {required String name,
       String? description,
@@ -840,6 +939,7 @@ abstract class _CreateSite extends CreateSite {
       required bool openRegistration,
       required bool enableNsfw,
       required String auth}) = _$_CreateSite;
+  const _CreateSite._() : super._();
 
   factory _CreateSite.fromJson(Map<String, dynamic> json) =
       _$_CreateSite.fromJson;
@@ -955,20 +1055,38 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed ? _value.name : name as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
-          : enableDownvotes as bool,
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
-          : openRegistration as bool,
-      enableNsfw:
-          enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : openRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: enableNsfw == freezed
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1010,20 +1128,38 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_EditSite(
-      name: name == freezed ? _value.name : name as String,
-      description:
-          description == freezed ? _value.description : description as String?,
-      icon: icon == freezed ? _value.icon : icon as String?,
-      banner: banner == freezed ? _value.banner : banner as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      icon: icon == freezed
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
+              as String?,
+      banner: banner == freezed
+          ? _value.banner
+          : banner // ignore: cast_nullable_to_non_nullable
+              as String?,
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
-          : enableDownvotes as bool,
+          : enableDownvotes // ignore: cast_nullable_to_non_nullable
+              as bool,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
-          : openRegistration as bool,
-      enableNsfw:
-          enableNsfw == freezed ? _value.enableNsfw : enableNsfw as bool,
-      auth: auth == freezed ? _value.auth : auth as String,
+          : openRegistration // ignore: cast_nullable_to_non_nullable
+              as bool,
+      enableNsfw: enableNsfw == freezed
+          ? _value.enableNsfw
+          : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1118,7 +1254,6 @@ class _$_EditSite extends _EditSite {
 }
 
 abstract class _EditSite extends EditSite {
-  const _EditSite._() : super._();
   const factory _EditSite(
       {required String name,
       String? description,
@@ -1128,6 +1263,7 @@ abstract class _EditSite extends EditSite {
       required bool openRegistration,
       required bool enableNsfw,
       required String auth}) = _$_EditSite;
+  const _EditSite._() : super._();
 
   factory _EditSite.fromJson(Map<String, dynamic> json) = _$_EditSite.fromJson;
 
@@ -1204,7 +1340,10 @@ class _$GetSiteCopyWithImpl<$Res> implements $GetSiteCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed ? _value.auth : auth as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1231,7 +1370,10 @@ class __$GetSiteCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetSite(
-      auth: auth == freezed ? _value.auth : auth as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1277,8 +1419,8 @@ class _$_GetSite extends _GetSite {
 }
 
 abstract class _GetSite extends GetSite {
-  const _GetSite._() : super._();
   const factory _GetSite({String? auth}) = _$_GetSite;
+  const _GetSite._() : super._();
 
   factory _GetSite.fromJson(Map<String, dynamic> json) = _$_GetSite.fromJson;
 
@@ -1346,8 +1488,14 @@ class _$TransferSiteCopyWithImpl<$Res> implements $TransferSiteCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed ? _value.userId : userId as int,
-      auth: auth == freezed ? _value.auth : auth as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1378,8 +1526,14 @@ class __$TransferSiteCopyWithImpl<$Res> extends _$TransferSiteCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_TransferSite(
-      userId: userId == freezed ? _value.userId : userId as int,
-      auth: auth == freezed ? _value.auth : auth as String,
+      userId: userId == freezed
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1431,9 +1585,9 @@ class _$_TransferSite extends _TransferSite {
 }
 
 abstract class _TransferSite extends TransferSite {
-  const _TransferSite._() : super._();
   const factory _TransferSite({required int userId, required String auth}) =
       _$_TransferSite;
+  const _TransferSite._() : super._();
 
   factory _TransferSite.fromJson(Map<String, dynamic> json) =
       _$_TransferSite.fromJson;
@@ -1502,7 +1656,10 @@ class _$GetSiteConfigCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      auth: auth == freezed ? _value.auth : auth as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1533,7 +1690,10 @@ class __$GetSiteConfigCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_GetSiteConfig(
-      auth: auth == freezed ? _value.auth : auth as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1579,8 +1739,8 @@ class _$_GetSiteConfig extends _GetSiteConfig {
 }
 
 abstract class _GetSiteConfig extends GetSiteConfig {
-  const _GetSiteConfig._() : super._();
   const factory _GetSiteConfig({required String auth}) = _$_GetSiteConfig;
+  const _GetSiteConfig._() : super._();
 
   factory _GetSiteConfig.fromJson(Map<String, dynamic> json) =
       _$_GetSiteConfig.fromJson;
@@ -1650,9 +1810,14 @@ class _$SaveSiteConfigCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      configHjson:
-          configHjson == freezed ? _value.configHjson : configHjson as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      configHjson: configHjson == freezed
+          ? _value.configHjson
+          : configHjson // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1684,9 +1849,14 @@ class __$SaveSiteConfigCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_SaveSiteConfig(
-      configHjson:
-          configHjson == freezed ? _value.configHjson : configHjson as String,
-      auth: auth == freezed ? _value.auth : auth as String,
+      configHjson: configHjson == freezed
+          ? _value.configHjson
+          : configHjson // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1740,9 +1910,9 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
 }
 
 abstract class _SaveSiteConfig extends SaveSiteConfig {
-  const _SaveSiteConfig._() : super._();
   const factory _SaveSiteConfig(
       {required String configHjson, required String auth}) = _$_SaveSiteConfig;
+  const _SaveSiteConfig._() : super._();
 
   factory _SaveSiteConfig.fromJson(Map<String, dynamic> json) =
       _$_SaveSiteConfig.fromJson;
