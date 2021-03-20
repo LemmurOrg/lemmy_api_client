@@ -2,11 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-// TODO: remove this ignore
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:web_socket_channel/status.dart' as status;
-// TODO: remove this ignore
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import '../exceptions.dart';
