@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Added
+
+- API v3
+
 ### Breaking change
 
 - Null safety
