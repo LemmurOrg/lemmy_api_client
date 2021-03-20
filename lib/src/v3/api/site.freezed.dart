@@ -342,9 +342,9 @@ GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
 class _$GetModlogTearOff {
   const _$GetModlogTearOff();
 
-  _GetModlog call({int? modUserId, int? communityId, int? page, int? limit}) {
+  _GetModlog call({int? modPersonId, int? communityId, int? page, int? limit}) {
     return _GetModlog(
-      modUserId: modUserId,
+      modPersonId: modPersonId,
       communityId: communityId,
       page: page,
       limit: limit,
@@ -361,7 +361,7 @@ const $GetModlog = _$GetModlogTearOff();
 
 /// @nodoc
 mixin _$GetModlog {
-  int? get modUserId => throw _privateConstructorUsedError;
+  int? get modPersonId => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
@@ -376,7 +376,7 @@ mixin _$GetModlog {
 abstract class $GetModlogCopyWith<$Res> {
   factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) =
       _$GetModlogCopyWithImpl<$Res>;
-  $Res call({int? modUserId, int? communityId, int? page, int? limit});
+  $Res call({int? modPersonId, int? communityId, int? page, int? limit});
 }
 
 /// @nodoc
@@ -389,15 +389,15 @@ class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? communityId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
   }) {
     return _then(_value.copyWith(
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
       communityId: communityId == freezed
           ? _value.communityId
@@ -421,7 +421,7 @@ abstract class _$GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
           _GetModlog value, $Res Function(_GetModlog) then) =
       __$GetModlogCopyWithImpl<$Res>;
   @override
-  $Res call({int? modUserId, int? communityId, int? page, int? limit});
+  $Res call({int? modPersonId, int? communityId, int? page, int? limit});
 }
 
 /// @nodoc
@@ -435,15 +435,15 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? communityId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
   }) {
     return _then(_GetModlog(
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int?,
       communityId: communityId == freezed
           ? _value.communityId
@@ -465,14 +465,15 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_GetModlog extends _GetModlog {
-  const _$_GetModlog({this.modUserId, this.communityId, this.page, this.limit})
+  const _$_GetModlog(
+      {this.modPersonId, this.communityId, this.page, this.limit})
       : super._();
 
   factory _$_GetModlog.fromJson(Map<String, dynamic> json) =>
       _$_$_GetModlogFromJson(json);
 
   @override
-  final int? modUserId;
+  final int? modPersonId;
   @override
   final int? communityId;
   @override
@@ -482,16 +483,16 @@ class _$_GetModlog extends _GetModlog {
 
   @override
   String toString() {
-    return 'GetModlog(modUserId: $modUserId, communityId: $communityId, page: $page, limit: $limit)';
+    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, page: $page, limit: $limit)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _GetModlog &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
+                    .equals(other.modPersonId, modPersonId)) &&
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
@@ -504,7 +505,7 @@ class _$_GetModlog extends _GetModlog {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(page) ^
       const DeepCollectionEquality().hash(limit);
@@ -522,14 +523,17 @@ class _$_GetModlog extends _GetModlog {
 
 abstract class _GetModlog extends GetModlog {
   const factory _GetModlog(
-      {int? modUserId, int? communityId, int? page, int? limit}) = _$_GetModlog;
+      {int? modPersonId,
+      int? communityId,
+      int? page,
+      int? limit}) = _$_GetModlog;
   const _GetModlog._() : super._();
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
       _$_GetModlog.fromJson;
 
   @override
-  int? get modUserId => throw _privateConstructorUsedError;
+  int? get modPersonId => throw _privateConstructorUsedError;
   @override
   int? get communityId => throw _privateConstructorUsedError;
   @override
@@ -1343,9 +1347,9 @@ TransferSite _$TransferSiteFromJson(Map<String, dynamic> json) {
 class _$TransferSiteTearOff {
   const _$TransferSiteTearOff();
 
-  _TransferSite call({required int userId, required String auth}) {
+  _TransferSite call({required int personId, required String auth}) {
     return _TransferSite(
-      userId: userId,
+      personId: personId,
       auth: auth,
     );
   }
@@ -1360,7 +1364,7 @@ const $TransferSite = _$TransferSiteTearOff();
 
 /// @nodoc
 mixin _$TransferSite {
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1374,7 +1378,7 @@ abstract class $TransferSiteCopyWith<$Res> {
   factory $TransferSiteCopyWith(
           TransferSite value, $Res Function(TransferSite) then) =
       _$TransferSiteCopyWithImpl<$Res>;
-  $Res call({int userId, String auth});
+  $Res call({int personId, String auth});
 }
 
 /// @nodoc
@@ -1387,13 +1391,13 @@ class _$TransferSiteCopyWithImpl<$Res> implements $TransferSiteCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       auth: auth == freezed
           ? _value.auth
@@ -1410,7 +1414,7 @@ abstract class _$TransferSiteCopyWith<$Res>
           _TransferSite value, $Res Function(_TransferSite) then) =
       __$TransferSiteCopyWithImpl<$Res>;
   @override
-  $Res call({int userId, String auth});
+  $Res call({int personId, String auth});
 }
 
 /// @nodoc
@@ -1425,13 +1429,13 @@ class __$TransferSiteCopyWithImpl<$Res> extends _$TransferSiteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_TransferSite(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       auth: auth == freezed
           ? _value.auth
@@ -1445,27 +1449,29 @@ class __$TransferSiteCopyWithImpl<$Res> extends _$TransferSiteCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_TransferSite extends _TransferSite {
-  const _$_TransferSite({required this.userId, required this.auth}) : super._();
+  const _$_TransferSite({required this.personId, required this.auth})
+      : super._();
 
   factory _$_TransferSite.fromJson(Map<String, dynamic> json) =>
       _$_$_TransferSiteFromJson(json);
 
   @override
-  final int userId;
+  final int personId;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'TransferSite(userId: $userId, auth: $auth)';
+    return 'TransferSite(personId: $personId, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _TransferSite &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -1473,7 +1479,7 @@ class _$_TransferSite extends _TransferSite {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -1488,7 +1494,7 @@ class _$_TransferSite extends _TransferSite {
 }
 
 abstract class _TransferSite extends TransferSite {
-  const factory _TransferSite({required int userId, required String auth}) =
+  const factory _TransferSite({required int personId, required String auth}) =
       _$_TransferSite;
   const _TransferSite._() : super._();
 
@@ -1496,7 +1502,7 @@ abstract class _TransferSite extends TransferSite {
       _$_TransferSite.fromJson;
 
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override

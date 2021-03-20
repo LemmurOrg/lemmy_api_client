@@ -7,20 +7,20 @@ part 'aggregates.freezed.dart';
 part 'aggregates.g.dart';
 
 @freezed
-class UserAggregates with _$UserAggregates {
+class PersonAggregates with _$PersonAggregates {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  const factory UserAggregates({
+  const factory PersonAggregates({
     required int id,
-    required int userId,
+    required int personId,
     required int postCount,
     required int postScore,
     required int commentCount,
     required int commentScore,
-  }) = _UserAggregates;
+  }) = _PersonAggregates;
 
-  const UserAggregates._();
-  factory UserAggregates.fromJson(Map<String, dynamic> json) =>
-      _$UserAggregatesFromJson(json);
+  const PersonAggregates._();
+  factory PersonAggregates.fromJson(Map<String, dynamic> json) =>
+      _$PersonAggregatesFromJson(json);
 }
 
 @freezed

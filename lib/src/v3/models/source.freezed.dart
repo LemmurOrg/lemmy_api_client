@@ -12,15 +12,15 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UserSafe _$UserSafeFromJson(Map<String, dynamic> json) {
-  return _UserSafe.fromJson(json);
+PersonSafe _$PersonSafeFromJson(Map<String, dynamic> json) {
+  return _PersonSafe.fromJson(json);
 }
 
 /// @nodoc
-class _$UserSafeTearOff {
-  const _$UserSafeTearOff();
+class _$PersonSafeTearOff {
+  const _$PersonSafeTearOff();
 
-  _UserSafe call(
+  _PersonSafe call(
       {required int id,
       required String name,
       String? preferredUsername,
@@ -29,13 +29,14 @@ class _$UserSafeTearOff {
       required bool banned,
       required DateTime published,
       DateTime? updated,
-      String? matrixUserId,
       required String actorId,
       String? bio,
       required bool local,
       String? banner,
-      required bool deleted}) {
-    return _UserSafe(
+      required bool deleted,
+      required String inboxUrl,
+      required String sharedInboxUrl}) {
+    return _PersonSafe(
       id: id,
       name: name,
       preferredUsername: preferredUsername,
@@ -44,25 +45,26 @@ class _$UserSafeTearOff {
       banned: banned,
       published: published,
       updated: updated,
-      matrixUserId: matrixUserId,
       actorId: actorId,
       bio: bio,
       local: local,
       banner: banner,
       deleted: deleted,
+      inboxUrl: inboxUrl,
+      sharedInboxUrl: sharedInboxUrl,
     );
   }
 
-  UserSafe fromJson(Map<String, Object> json) {
-    return UserSafe.fromJson(json);
+  PersonSafe fromJson(Map<String, Object> json) {
+    return PersonSafe.fromJson(json);
   }
 }
 
 /// @nodoc
-const $UserSafe = _$UserSafeTearOff();
+const $PersonSafe = _$PersonSafeTearOff();
 
 /// @nodoc
-mixin _$UserSafe {
+mixin _$PersonSafe {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get preferredUsername => throw _privateConstructorUsedError;
@@ -71,23 +73,25 @@ mixin _$UserSafe {
   bool get banned => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
-  String? get matrixUserId => throw _privateConstructorUsedError;
   String get actorId => throw _privateConstructorUsedError;
   String? get bio => throw _privateConstructorUsedError;
   bool get local => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
   bool get deleted => throw _privateConstructorUsedError;
+  String get inboxUrl => throw _privateConstructorUsedError;
+  String get sharedInboxUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserSafeCopyWith<UserSafe> get copyWith =>
+  $PersonSafeCopyWith<PersonSafe> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserSafeCopyWith<$Res> {
-  factory $UserSafeCopyWith(UserSafe value, $Res Function(UserSafe) then) =
-      _$UserSafeCopyWithImpl<$Res>;
+abstract class $PersonSafeCopyWith<$Res> {
+  factory $PersonSafeCopyWith(
+          PersonSafe value, $Res Function(PersonSafe) then) =
+      _$PersonSafeCopyWithImpl<$Res>;
   $Res call(
       {int id,
       String name,
@@ -97,21 +101,22 @@ abstract class $UserSafeCopyWith<$Res> {
       bool banned,
       DateTime published,
       DateTime? updated,
-      String? matrixUserId,
       String actorId,
       String? bio,
       bool local,
       String? banner,
-      bool deleted});
+      bool deleted,
+      String inboxUrl,
+      String sharedInboxUrl});
 }
 
 /// @nodoc
-class _$UserSafeCopyWithImpl<$Res> implements $UserSafeCopyWith<$Res> {
-  _$UserSafeCopyWithImpl(this._value, this._then);
+class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
+  _$PersonSafeCopyWithImpl(this._value, this._then);
 
-  final UserSafe _value;
+  final PersonSafe _value;
   // ignore: unused_field
-  final $Res Function(UserSafe) _then;
+  final $Res Function(PersonSafe) _then;
 
   @override
   $Res call({
@@ -123,12 +128,13 @@ class _$UserSafeCopyWithImpl<$Res> implements $UserSafeCopyWith<$Res> {
     Object? banned = freezed,
     Object? published = freezed,
     Object? updated = freezed,
-    Object? matrixUserId = freezed,
     Object? actorId = freezed,
     Object? bio = freezed,
     Object? local = freezed,
     Object? banner = freezed,
     Object? deleted = freezed,
+    Object? inboxUrl = freezed,
+    Object? sharedInboxUrl = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -163,10 +169,6 @@ class _$UserSafeCopyWithImpl<$Res> implements $UserSafeCopyWith<$Res> {
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      matrixUserId: matrixUserId == freezed
-          ? _value.matrixUserId
-          : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
       actorId: actorId == freezed
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
@@ -187,14 +189,23 @@ class _$UserSafeCopyWithImpl<$Res> implements $UserSafeCopyWith<$Res> {
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
+      inboxUrl: inboxUrl == freezed
+          ? _value.inboxUrl
+          : inboxUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      sharedInboxUrl: sharedInboxUrl == freezed
+          ? _value.sharedInboxUrl
+          : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$UserSafeCopyWith<$Res> implements $UserSafeCopyWith<$Res> {
-  factory _$UserSafeCopyWith(_UserSafe value, $Res Function(_UserSafe) then) =
-      __$UserSafeCopyWithImpl<$Res>;
+abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
+  factory _$PersonSafeCopyWith(
+          _PersonSafe value, $Res Function(_PersonSafe) then) =
+      __$PersonSafeCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -205,22 +216,24 @@ abstract class _$UserSafeCopyWith<$Res> implements $UserSafeCopyWith<$Res> {
       bool banned,
       DateTime published,
       DateTime? updated,
-      String? matrixUserId,
       String actorId,
       String? bio,
       bool local,
       String? banner,
-      bool deleted});
+      bool deleted,
+      String inboxUrl,
+      String sharedInboxUrl});
 }
 
 /// @nodoc
-class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
-    implements _$UserSafeCopyWith<$Res> {
-  __$UserSafeCopyWithImpl(_UserSafe _value, $Res Function(_UserSafe) _then)
-      : super(_value, (v) => _then(v as _UserSafe));
+class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
+    implements _$PersonSafeCopyWith<$Res> {
+  __$PersonSafeCopyWithImpl(
+      _PersonSafe _value, $Res Function(_PersonSafe) _then)
+      : super(_value, (v) => _then(v as _PersonSafe));
 
   @override
-  _UserSafe get _value => super._value as _UserSafe;
+  _PersonSafe get _value => super._value as _PersonSafe;
 
   @override
   $Res call({
@@ -232,14 +245,15 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
     Object? banned = freezed,
     Object? published = freezed,
     Object? updated = freezed,
-    Object? matrixUserId = freezed,
     Object? actorId = freezed,
     Object? bio = freezed,
     Object? local = freezed,
     Object? banner = freezed,
     Object? deleted = freezed,
+    Object? inboxUrl = freezed,
+    Object? sharedInboxUrl = freezed,
   }) {
-    return _then(_UserSafe(
+    return _then(_PersonSafe(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -272,10 +286,6 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      matrixUserId: matrixUserId == freezed
-          ? _value.matrixUserId
-          : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
       actorId: actorId == freezed
           ? _value.actorId
           : actorId // ignore: cast_nullable_to_non_nullable
@@ -296,6 +306,14 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
           ? _value.deleted
           : deleted // ignore: cast_nullable_to_non_nullable
               as bool,
+      inboxUrl: inboxUrl == freezed
+          ? _value.inboxUrl
+          : inboxUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      sharedInboxUrl: sharedInboxUrl == freezed
+          ? _value.sharedInboxUrl
+          : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -305,8 +323,8 @@ class __$UserSafeCopyWithImpl<$Res> extends _$UserSafeCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_UserSafe extends _UserSafe {
-  _$_UserSafe(
+class _$_PersonSafe extends _PersonSafe {
+  _$_PersonSafe(
       {required this.id,
       required this.name,
       this.preferredUsername,
@@ -315,16 +333,17 @@ class _$_UserSafe extends _UserSafe {
       required this.banned,
       required this.published,
       this.updated,
-      this.matrixUserId,
       required this.actorId,
       this.bio,
       required this.local,
       this.banner,
-      required this.deleted})
+      required this.deleted,
+      required this.inboxUrl,
+      required this.sharedInboxUrl})
       : super._();
 
-  factory _$_UserSafe.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserSafeFromJson(json);
+  factory _$_PersonSafe.fromJson(Map<String, dynamic> json) =>
+      _$_$_PersonSafeFromJson(json);
 
   @override
   final int id;
@@ -343,8 +362,6 @@ class _$_UserSafe extends _UserSafe {
   @override
   final DateTime? updated;
   @override
-  final String? matrixUserId;
-  @override
   final String actorId;
   @override
   final String? bio;
@@ -354,16 +371,20 @@ class _$_UserSafe extends _UserSafe {
   final String? banner;
   @override
   final bool deleted;
+  @override
+  final String inboxUrl;
+  @override
+  final String sharedInboxUrl;
 
   @override
   String toString() {
-    return 'UserSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, admin: $admin, banned: $banned, published: $published, updated: $updated, matrixUserId: $matrixUserId, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted)';
+    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, admin: $admin, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UserSafe &&
+        (other is _PersonSafe &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
@@ -383,9 +404,6 @@ class _$_UserSafe extends _UserSafe {
             (identical(other.updated, updated) ||
                 const DeepCollectionEquality()
                     .equals(other.updated, updated)) &&
-            (identical(other.matrixUserId, matrixUserId) ||
-                const DeepCollectionEquality()
-                    .equals(other.matrixUserId, matrixUserId)) &&
             (identical(other.actorId, actorId) ||
                 const DeepCollectionEquality()
                     .equals(other.actorId, actorId)) &&
@@ -396,7 +414,14 @@ class _$_UserSafe extends _UserSafe {
             (identical(other.banner, banner) ||
                 const DeepCollectionEquality().equals(other.banner, banner)) &&
             (identical(other.deleted, deleted) ||
-                const DeepCollectionEquality().equals(other.deleted, deleted)));
+                const DeepCollectionEquality()
+                    .equals(other.deleted, deleted)) &&
+            (identical(other.inboxUrl, inboxUrl) ||
+                const DeepCollectionEquality()
+                    .equals(other.inboxUrl, inboxUrl)) &&
+            (identical(other.sharedInboxUrl, sharedInboxUrl) ||
+                const DeepCollectionEquality()
+                    .equals(other.sharedInboxUrl, sharedInboxUrl)));
   }
 
   @override
@@ -410,26 +435,27 @@ class _$_UserSafe extends _UserSafe {
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated) ^
-      const DeepCollectionEquality().hash(matrixUserId) ^
       const DeepCollectionEquality().hash(actorId) ^
       const DeepCollectionEquality().hash(bio) ^
       const DeepCollectionEquality().hash(local) ^
       const DeepCollectionEquality().hash(banner) ^
-      const DeepCollectionEquality().hash(deleted);
+      const DeepCollectionEquality().hash(deleted) ^
+      const DeepCollectionEquality().hash(inboxUrl) ^
+      const DeepCollectionEquality().hash(sharedInboxUrl);
 
   @JsonKey(ignore: true)
   @override
-  _$UserSafeCopyWith<_UserSafe> get copyWith =>
-      __$UserSafeCopyWithImpl<_UserSafe>(this, _$identity);
+  _$PersonSafeCopyWith<_PersonSafe> get copyWith =>
+      __$PersonSafeCopyWithImpl<_PersonSafe>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserSafeToJson(this);
+    return _$_$_PersonSafeToJson(this);
   }
 }
 
-abstract class _UserSafe extends UserSafe {
-  factory _UserSafe(
+abstract class _PersonSafe extends PersonSafe {
+  factory _PersonSafe(
       {required int id,
       required String name,
       String? preferredUsername,
@@ -438,15 +464,17 @@ abstract class _UserSafe extends UserSafe {
       required bool banned,
       required DateTime published,
       DateTime? updated,
-      String? matrixUserId,
       required String actorId,
       String? bio,
       required bool local,
       String? banner,
-      required bool deleted}) = _$_UserSafe;
-  _UserSafe._() : super._();
+      required bool deleted,
+      required String inboxUrl,
+      required String sharedInboxUrl}) = _$_PersonSafe;
+  _PersonSafe._() : super._();
 
-  factory _UserSafe.fromJson(Map<String, dynamic> json) = _$_UserSafe.fromJson;
+  factory _PersonSafe.fromJson(Map<String, dynamic> json) =
+      _$_PersonSafe.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
@@ -464,8 +492,6 @@ abstract class _UserSafe extends UserSafe {
   DateTime get published => throw _privateConstructorUsedError;
   @override
   DateTime? get updated => throw _privateConstructorUsedError;
-  @override
-  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
   String get actorId => throw _privateConstructorUsedError;
   @override
@@ -477,29 +503,28 @@ abstract class _UserSafe extends UserSafe {
   @override
   bool get deleted => throw _privateConstructorUsedError;
   @override
+  String get inboxUrl => throw _privateConstructorUsedError;
+  @override
+  String get sharedInboxUrl => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
-  _$UserSafeCopyWith<_UserSafe> get copyWith =>
+  _$PersonSafeCopyWith<_PersonSafe> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-UserSafeSettings _$UserSafeSettingsFromJson(Map<String, dynamic> json) {
-  return _UserSafeSettings.fromJson(json);
+LocalUserSettings _$LocalUserSettingsFromJson(Map<String, dynamic> json) {
+  return _LocalUserSettings.fromJson(json);
 }
 
 /// @nodoc
-class _$UserSafeSettingsTearOff {
-  const _$UserSafeSettingsTearOff();
+class _$LocalUserSettingsTearOff {
+  const _$LocalUserSettingsTearOff();
 
-  _UserSafeSettings call(
+  _LocalUserSettings call(
       {required int id,
-      required String name,
-      String? preferredUsername,
+      required int personId,
       String? email,
-      String? avatar,
       required bool admin,
-      required bool banned,
-      required DateTime published,
-      DateTime? updated,
       required bool showNsfw,
       required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -509,23 +534,12 @@ class _$UserSafeSettingsTearOff {
       required String lang,
       required bool showAvatars,
       required bool sendNotificationsToEmail,
-      String? matrixUserId,
-      required String actorId,
-      String? bio,
-      required bool local,
-      required DateTime lastRefreshedAt,
-      String? banner,
-      required bool deleted}) {
-    return _UserSafeSettings(
+      String? matrixUserId}) {
+    return _LocalUserSettings(
       id: id,
-      name: name,
-      preferredUsername: preferredUsername,
+      personId: personId,
       email: email,
-      avatar: avatar,
       admin: admin,
-      banned: banned,
-      published: published,
-      updated: updated,
       showNsfw: showNsfw,
       theme: theme,
       defaultSortType: defaultSortType,
@@ -534,34 +548,23 @@ class _$UserSafeSettingsTearOff {
       showAvatars: showAvatars,
       sendNotificationsToEmail: sendNotificationsToEmail,
       matrixUserId: matrixUserId,
-      actorId: actorId,
-      bio: bio,
-      local: local,
-      lastRefreshedAt: lastRefreshedAt,
-      banner: banner,
-      deleted: deleted,
     );
   }
 
-  UserSafeSettings fromJson(Map<String, Object> json) {
-    return UserSafeSettings.fromJson(json);
+  LocalUserSettings fromJson(Map<String, Object> json) {
+    return LocalUserSettings.fromJson(json);
   }
 }
 
 /// @nodoc
-const $UserSafeSettings = _$UserSafeSettingsTearOff();
+const $LocalUserSettings = _$LocalUserSettingsTearOff();
 
 /// @nodoc
-mixin _$UserSafeSettings {
+mixin _$LocalUserSettings {
   int get id => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
-  String? get avatar => throw _privateConstructorUsedError;
   bool get admin => throw _privateConstructorUsedError;
-  bool get banned => throw _privateConstructorUsedError;
-  DateTime get published => throw _privateConstructorUsedError;
-  DateTime? get updated => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
   String get theme => throw _privateConstructorUsedError;
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -572,34 +575,23 @@ mixin _$UserSafeSettings {
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
-  String get actorId => throw _privateConstructorUsedError;
-  String? get bio => throw _privateConstructorUsedError;
-  bool get local => throw _privateConstructorUsedError;
-  DateTime get lastRefreshedAt => throw _privateConstructorUsedError;
-  String? get banner => throw _privateConstructorUsedError;
-  bool get deleted => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserSafeSettingsCopyWith<UserSafeSettings> get copyWith =>
+  $LocalUserSettingsCopyWith<LocalUserSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserSafeSettingsCopyWith<$Res> {
-  factory $UserSafeSettingsCopyWith(
-          UserSafeSettings value, $Res Function(UserSafeSettings) then) =
-      _$UserSafeSettingsCopyWithImpl<$Res>;
+abstract class $LocalUserSettingsCopyWith<$Res> {
+  factory $LocalUserSettingsCopyWith(
+          LocalUserSettings value, $Res Function(LocalUserSettings) then) =
+      _$LocalUserSettingsCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      String name,
-      String? preferredUsername,
+      int personId,
       String? email,
-      String? avatar,
       bool admin,
-      bool banned,
-      DateTime published,
-      DateTime? updated,
       bool showNsfw,
       String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -609,35 +601,24 @@ abstract class $UserSafeSettingsCopyWith<$Res> {
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
-      String? matrixUserId,
-      String actorId,
-      String? bio,
-      bool local,
-      DateTime lastRefreshedAt,
-      String? banner,
-      bool deleted});
+      String? matrixUserId});
 }
 
 /// @nodoc
-class _$UserSafeSettingsCopyWithImpl<$Res>
-    implements $UserSafeSettingsCopyWith<$Res> {
-  _$UserSafeSettingsCopyWithImpl(this._value, this._then);
+class _$LocalUserSettingsCopyWithImpl<$Res>
+    implements $LocalUserSettingsCopyWith<$Res> {
+  _$LocalUserSettingsCopyWithImpl(this._value, this._then);
 
-  final UserSafeSettings _value;
+  final LocalUserSettings _value;
   // ignore: unused_field
-  final $Res Function(UserSafeSettings) _then;
+  final $Res Function(LocalUserSettings) _then;
 
   @override
   $Res call({
     Object? id = freezed,
-    Object? name = freezed,
-    Object? preferredUsername = freezed,
+    Object? personId = freezed,
     Object? email = freezed,
-    Object? avatar = freezed,
     Object? admin = freezed,
-    Object? banned = freezed,
-    Object? published = freezed,
-    Object? updated = freezed,
     Object? showNsfw = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
@@ -646,50 +627,24 @@ class _$UserSafeSettingsCopyWithImpl<$Res>
     Object? showAvatars = freezed,
     Object? sendNotificationsToEmail = freezed,
     Object? matrixUserId = freezed,
-    Object? actorId = freezed,
-    Object? bio = freezed,
-    Object? local = freezed,
-    Object? lastRefreshedAt = freezed,
-    Object? banner = freezed,
-    Object? deleted = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
-              as String?,
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
+              as int,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatar: avatar == freezed
-          ? _value.avatar
-          : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
       admin: admin == freezed
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
               as bool,
-      banned: banned == freezed
-          ? _value.banned
-          : banned // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: published == freezed
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: updated == freezed
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
@@ -722,51 +677,22 @@ class _$UserSafeSettingsCopyWithImpl<$Res>
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      actorId: actorId == freezed
-          ? _value.actorId
-          : actorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      bio: bio == freezed
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
-              as String?,
-      local: local == freezed
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool,
-      lastRefreshedAt: lastRefreshedAt == freezed
-          ? _value.lastRefreshedAt
-          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      banner: banner == freezed
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      deleted: deleted == freezed
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$UserSafeSettingsCopyWith<$Res>
-    implements $UserSafeSettingsCopyWith<$Res> {
-  factory _$UserSafeSettingsCopyWith(
-          _UserSafeSettings value, $Res Function(_UserSafeSettings) then) =
-      __$UserSafeSettingsCopyWithImpl<$Res>;
+abstract class _$LocalUserSettingsCopyWith<$Res>
+    implements $LocalUserSettingsCopyWith<$Res> {
+  factory _$LocalUserSettingsCopyWith(
+          _LocalUserSettings value, $Res Function(_LocalUserSettings) then) =
+      __$LocalUserSettingsCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
-      String name,
-      String? preferredUsername,
+      int personId,
       String? email,
-      String? avatar,
       bool admin,
-      bool banned,
-      DateTime published,
-      DateTime? updated,
       bool showNsfw,
       String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -776,37 +702,26 @@ abstract class _$UserSafeSettingsCopyWith<$Res>
       String lang,
       bool showAvatars,
       bool sendNotificationsToEmail,
-      String? matrixUserId,
-      String actorId,
-      String? bio,
-      bool local,
-      DateTime lastRefreshedAt,
-      String? banner,
-      bool deleted});
+      String? matrixUserId});
 }
 
 /// @nodoc
-class __$UserSafeSettingsCopyWithImpl<$Res>
-    extends _$UserSafeSettingsCopyWithImpl<$Res>
-    implements _$UserSafeSettingsCopyWith<$Res> {
-  __$UserSafeSettingsCopyWithImpl(
-      _UserSafeSettings _value, $Res Function(_UserSafeSettings) _then)
-      : super(_value, (v) => _then(v as _UserSafeSettings));
+class __$LocalUserSettingsCopyWithImpl<$Res>
+    extends _$LocalUserSettingsCopyWithImpl<$Res>
+    implements _$LocalUserSettingsCopyWith<$Res> {
+  __$LocalUserSettingsCopyWithImpl(
+      _LocalUserSettings _value, $Res Function(_LocalUserSettings) _then)
+      : super(_value, (v) => _then(v as _LocalUserSettings));
 
   @override
-  _UserSafeSettings get _value => super._value as _UserSafeSettings;
+  _LocalUserSettings get _value => super._value as _LocalUserSettings;
 
   @override
   $Res call({
     Object? id = freezed,
-    Object? name = freezed,
-    Object? preferredUsername = freezed,
+    Object? personId = freezed,
     Object? email = freezed,
-    Object? avatar = freezed,
     Object? admin = freezed,
-    Object? banned = freezed,
-    Object? published = freezed,
-    Object? updated = freezed,
     Object? showNsfw = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
@@ -815,50 +730,24 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
     Object? showAvatars = freezed,
     Object? sendNotificationsToEmail = freezed,
     Object? matrixUserId = freezed,
-    Object? actorId = freezed,
-    Object? bio = freezed,
-    Object? local = freezed,
-    Object? lastRefreshedAt = freezed,
-    Object? banner = freezed,
-    Object? deleted = freezed,
   }) {
-    return _then(_UserSafeSettings(
+    return _then(_LocalUserSettings(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
-              as String?,
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
+              as int,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-      avatar: avatar == freezed
-          ? _value.avatar
-          : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
       admin: admin == freezed
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
               as bool,
-      banned: banned == freezed
-          ? _value.banned
-          : banned // ignore: cast_nullable_to_non_nullable
-              as bool,
-      published: published == freezed
-          ? _value.published
-          : published // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updated: updated == freezed
-          ? _value.updated
-          : updated // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
@@ -891,30 +780,6 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      actorId: actorId == freezed
-          ? _value.actorId
-          : actorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      bio: bio == freezed
-          ? _value.bio
-          : bio // ignore: cast_nullable_to_non_nullable
-              as String?,
-      local: local == freezed
-          ? _value.local
-          : local // ignore: cast_nullable_to_non_nullable
-              as bool,
-      lastRefreshedAt: lastRefreshedAt == freezed
-          ? _value.lastRefreshedAt
-          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      banner: banner == freezed
-          ? _value.banner
-          : banner // ignore: cast_nullable_to_non_nullable
-              as String?,
-      deleted: deleted == freezed
-          ? _value.deleted
-          : deleted // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -924,17 +789,12 @@ class __$UserSafeSettingsCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_UserSafeSettings extends _UserSafeSettings {
-  _$_UserSafeSettings(
+class _$_LocalUserSettings extends _LocalUserSettings {
+  _$_LocalUserSettings(
       {required this.id,
-      required this.name,
-      this.preferredUsername,
+      required this.personId,
       this.email,
-      this.avatar,
       required this.admin,
-      required this.banned,
-      required this.published,
-      this.updated,
       required this.showNsfw,
       required this.theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -944,36 +804,20 @@ class _$_UserSafeSettings extends _UserSafeSettings {
       required this.lang,
       required this.showAvatars,
       required this.sendNotificationsToEmail,
-      this.matrixUserId,
-      required this.actorId,
-      this.bio,
-      required this.local,
-      required this.lastRefreshedAt,
-      this.banner,
-      required this.deleted})
+      this.matrixUserId})
       : super._();
 
-  factory _$_UserSafeSettings.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserSafeSettingsFromJson(json);
+  factory _$_LocalUserSettings.fromJson(Map<String, dynamic> json) =>
+      _$_$_LocalUserSettingsFromJson(json);
 
   @override
   final int id;
   @override
-  final String name;
-  @override
-  final String? preferredUsername;
+  final int personId;
   @override
   final String? email;
   @override
-  final String? avatar;
-  @override
   final bool admin;
-  @override
-  final bool banned;
-  @override
-  final DateTime published;
-  @override
-  final DateTime? updated;
   @override
   final bool showNsfw;
   @override
@@ -992,49 +836,25 @@ class _$_UserSafeSettings extends _UserSafeSettings {
   final bool sendNotificationsToEmail;
   @override
   final String? matrixUserId;
-  @override
-  final String actorId;
-  @override
-  final String? bio;
-  @override
-  final bool local;
-  @override
-  final DateTime lastRefreshedAt;
-  @override
-  final String? banner;
-  @override
-  final bool deleted;
 
   @override
   String toString() {
-    return 'UserSafeSettings(id: $id, name: $name, preferredUsername: $preferredUsername, email: $email, avatar: $avatar, admin: $admin, banned: $banned, published: $published, updated: $updated, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, matrixUserId: $matrixUserId, actorId: $actorId, bio: $bio, local: $local, lastRefreshedAt: $lastRefreshedAt, banner: $banner, deleted: $deleted)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, admin: $admin, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, matrixUserId: $matrixUserId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UserSafeSettings &&
+        (other is _LocalUserSettings &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.preferredUsername, preferredUsername) ||
+            (identical(other.personId, personId) ||
                 const DeepCollectionEquality()
-                    .equals(other.preferredUsername, preferredUsername)) &&
+                    .equals(other.personId, personId)) &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
-            (identical(other.avatar, avatar) ||
-                const DeepCollectionEquality().equals(other.avatar, avatar)) &&
             (identical(other.admin, admin) ||
                 const DeepCollectionEquality().equals(other.admin, admin)) &&
-            (identical(other.banned, banned) ||
-                const DeepCollectionEquality().equals(other.banned, banned)) &&
-            (identical(other.published, published) ||
-                const DeepCollectionEquality()
-                    .equals(other.published, published)) &&
-            (identical(other.updated, updated) ||
-                const DeepCollectionEquality()
-                    .equals(other.updated, updated)) &&
             (identical(other.showNsfw, showNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.showNsfw, showNsfw)) &&
@@ -1058,35 +878,16 @@ class _$_UserSafeSettings extends _UserSafeSettings {
                     sendNotificationsToEmail)) &&
             (identical(other.matrixUserId, matrixUserId) ||
                 const DeepCollectionEquality()
-                    .equals(other.matrixUserId, matrixUserId)) &&
-            (identical(other.actorId, actorId) ||
-                const DeepCollectionEquality()
-                    .equals(other.actorId, actorId)) &&
-            (identical(other.bio, bio) ||
-                const DeepCollectionEquality().equals(other.bio, bio)) &&
-            (identical(other.local, local) ||
-                const DeepCollectionEquality().equals(other.local, local)) &&
-            (identical(other.lastRefreshedAt, lastRefreshedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastRefreshedAt, lastRefreshedAt)) &&
-            (identical(other.banner, banner) ||
-                const DeepCollectionEquality().equals(other.banner, banner)) &&
-            (identical(other.deleted, deleted) ||
-                const DeepCollectionEquality().equals(other.deleted, deleted)));
+                    .equals(other.matrixUserId, matrixUserId)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(preferredUsername) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(avatar) ^
       const DeepCollectionEquality().hash(admin) ^
-      const DeepCollectionEquality().hash(banned) ^
-      const DeepCollectionEquality().hash(published) ^
-      const DeepCollectionEquality().hash(updated) ^
       const DeepCollectionEquality().hash(showNsfw) ^
       const DeepCollectionEquality().hash(theme) ^
       const DeepCollectionEquality().hash(defaultSortType) ^
@@ -1094,36 +895,25 @@ class _$_UserSafeSettings extends _UserSafeSettings {
       const DeepCollectionEquality().hash(lang) ^
       const DeepCollectionEquality().hash(showAvatars) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
-      const DeepCollectionEquality().hash(matrixUserId) ^
-      const DeepCollectionEquality().hash(actorId) ^
-      const DeepCollectionEquality().hash(bio) ^
-      const DeepCollectionEquality().hash(local) ^
-      const DeepCollectionEquality().hash(lastRefreshedAt) ^
-      const DeepCollectionEquality().hash(banner) ^
-      const DeepCollectionEquality().hash(deleted);
+      const DeepCollectionEquality().hash(matrixUserId);
 
   @JsonKey(ignore: true)
   @override
-  _$UserSafeSettingsCopyWith<_UserSafeSettings> get copyWith =>
-      __$UserSafeSettingsCopyWithImpl<_UserSafeSettings>(this, _$identity);
+  _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>
+      __$LocalUserSettingsCopyWithImpl<_LocalUserSettings>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserSafeSettingsToJson(this);
+    return _$_$_LocalUserSettingsToJson(this);
   }
 }
 
-abstract class _UserSafeSettings extends UserSafeSettings {
-  factory _UserSafeSettings(
+abstract class _LocalUserSettings extends LocalUserSettings {
+  factory _LocalUserSettings(
       {required int id,
-      required String name,
-      String? preferredUsername,
+      required int personId,
       String? email,
-      String? avatar,
       required bool admin,
-      required bool banned,
-      required DateTime published,
-      DateTime? updated,
       required bool showNsfw,
       required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -1133,36 +923,20 @@ abstract class _UserSafeSettings extends UserSafeSettings {
       required String lang,
       required bool showAvatars,
       required bool sendNotificationsToEmail,
-      String? matrixUserId,
-      required String actorId,
-      String? bio,
-      required bool local,
-      required DateTime lastRefreshedAt,
-      String? banner,
-      required bool deleted}) = _$_UserSafeSettings;
-  _UserSafeSettings._() : super._();
+      String? matrixUserId}) = _$_LocalUserSettings;
+  _LocalUserSettings._() : super._();
 
-  factory _UserSafeSettings.fromJson(Map<String, dynamic> json) =
-      _$_UserSafeSettings.fromJson;
+  factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
+      _$_LocalUserSettings.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   String? get email => throw _privateConstructorUsedError;
   @override
-  String? get avatar => throw _privateConstructorUsedError;
-  @override
   bool get admin => throw _privateConstructorUsedError;
-  @override
-  bool get banned => throw _privateConstructorUsedError;
-  @override
-  DateTime get published => throw _privateConstructorUsedError;
-  @override
-  DateTime? get updated => throw _privateConstructorUsedError;
   @override
   bool get showNsfw => throw _privateConstructorUsedError;
   @override
@@ -1182,20 +956,8 @@ abstract class _UserSafeSettings extends UserSafeSettings {
   @override
   String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  String get actorId => throw _privateConstructorUsedError;
-  @override
-  String? get bio => throw _privateConstructorUsedError;
-  @override
-  bool get local => throw _privateConstructorUsedError;
-  @override
-  DateTime get lastRefreshedAt => throw _privateConstructorUsedError;
-  @override
-  String? get banner => throw _privateConstructorUsedError;
-  @override
-  bool get deleted => throw _privateConstructorUsedError;
-  @override
   @JsonKey(ignore: true)
-  _$UserSafeSettingsCopyWith<_UserSafeSettings> get copyWith =>
+  _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2987,12 +2749,12 @@ class _$PasswordResetRequestTearOff {
 
   _PasswordResetRequest call(
       {required int id,
-      required int userId,
+      required int localUserId,
       required String tokenEncrypted,
       required DateTime published}) {
     return _PasswordResetRequest(
       id: id,
-      userId: userId,
+      localUserId: localUserId,
       tokenEncrypted: tokenEncrypted,
       published: published,
     );
@@ -3009,7 +2771,7 @@ const $PasswordResetRequest = _$PasswordResetRequestTearOff();
 /// @nodoc
 mixin _$PasswordResetRequest {
   int get id => throw _privateConstructorUsedError;
-  int get userId => throw _privateConstructorUsedError;
+  int get localUserId => throw _privateConstructorUsedError;
   String get tokenEncrypted => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
 
@@ -3024,7 +2786,8 @@ abstract class $PasswordResetRequestCopyWith<$Res> {
   factory $PasswordResetRequestCopyWith(PasswordResetRequest value,
           $Res Function(PasswordResetRequest) then) =
       _$PasswordResetRequestCopyWithImpl<$Res>;
-  $Res call({int id, int userId, String tokenEncrypted, DateTime published});
+  $Res call(
+      {int id, int localUserId, String tokenEncrypted, DateTime published});
 }
 
 /// @nodoc
@@ -3039,7 +2802,7 @@ class _$PasswordResetRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? userId = freezed,
+    Object? localUserId = freezed,
     Object? tokenEncrypted = freezed,
     Object? published = freezed,
   }) {
@@ -3048,9 +2811,9 @@ class _$PasswordResetRequestCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      localUserId: localUserId == freezed
+          ? _value.localUserId
+          : localUserId // ignore: cast_nullable_to_non_nullable
               as int,
       tokenEncrypted: tokenEncrypted == freezed
           ? _value.tokenEncrypted
@@ -3071,7 +2834,8 @@ abstract class _$PasswordResetRequestCopyWith<$Res>
           $Res Function(_PasswordResetRequest) then) =
       __$PasswordResetRequestCopyWithImpl<$Res>;
   @override
-  $Res call({int id, int userId, String tokenEncrypted, DateTime published});
+  $Res call(
+      {int id, int localUserId, String tokenEncrypted, DateTime published});
 }
 
 /// @nodoc
@@ -3088,7 +2852,7 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? userId = freezed,
+    Object? localUserId = freezed,
     Object? tokenEncrypted = freezed,
     Object? published = freezed,
   }) {
@@ -3097,9 +2861,9 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      localUserId: localUserId == freezed
+          ? _value.localUserId
+          : localUserId // ignore: cast_nullable_to_non_nullable
               as int,
       tokenEncrypted: tokenEncrypted == freezed
           ? _value.tokenEncrypted
@@ -3121,7 +2885,7 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
 class _$_PasswordResetRequest extends _PasswordResetRequest {
   _$_PasswordResetRequest(
       {required this.id,
-      required this.userId,
+      required this.localUserId,
       required this.tokenEncrypted,
       required this.published})
       : super._();
@@ -3132,7 +2896,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
   @override
   final int id;
   @override
-  final int userId;
+  final int localUserId;
   @override
   final String tokenEncrypted;
   @override
@@ -3140,7 +2904,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 
   @override
   String toString() {
-    return 'PasswordResetRequest(id: $id, userId: $userId, tokenEncrypted: $tokenEncrypted, published: $published)';
+    return 'PasswordResetRequest(id: $id, localUserId: $localUserId, tokenEncrypted: $tokenEncrypted, published: $published)';
   }
 
   @override
@@ -3149,8 +2913,9 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
         (other is _PasswordResetRequest &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.localUserId, localUserId) ||
+                const DeepCollectionEquality()
+                    .equals(other.localUserId, localUserId)) &&
             (identical(other.tokenEncrypted, tokenEncrypted) ||
                 const DeepCollectionEquality()
                     .equals(other.tokenEncrypted, tokenEncrypted)) &&
@@ -3163,7 +2928,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(localUserId) ^
       const DeepCollectionEquality().hash(tokenEncrypted) ^
       const DeepCollectionEquality().hash(published);
 
@@ -3182,7 +2947,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 abstract class _PasswordResetRequest extends PasswordResetRequest {
   factory _PasswordResetRequest(
       {required int id,
-      required int userId,
+      required int localUserId,
       required String tokenEncrypted,
       required DateTime published}) = _$_PasswordResetRequest;
   _PasswordResetRequest._() : super._();
@@ -3193,7 +2958,7 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get localUserId => throw _privateConstructorUsedError;
   @override
   String get tokenEncrypted => throw _privateConstructorUsedError;
   @override
@@ -3214,14 +2979,14 @@ class _$ModRemovePostTearOff {
 
   _ModRemovePost call(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int postId,
       String? reason,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModRemovePost(
       id: id,
-      modUserId: modUserId,
+      modPersonId: modPersonId,
       postId: postId,
       reason: reason,
       removed: removed,
@@ -3240,7 +3005,7 @@ const $ModRemovePost = _$ModRemovePostTearOff();
 /// @nodoc
 mixin _$ModRemovePost {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   int get postId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool? get removed => throw _privateConstructorUsedError;
@@ -3260,7 +3025,7 @@ abstract class $ModRemovePostCopyWith<$Res> {
       _$ModRemovePostCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int postId,
       String? reason,
       bool? removed,
@@ -3279,7 +3044,7 @@ class _$ModRemovePostCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? postId = freezed,
     Object? reason = freezed,
     Object? removed = freezed,
@@ -3290,9 +3055,9 @@ class _$ModRemovePostCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       postId: postId == freezed
           ? _value.postId
@@ -3323,7 +3088,7 @@ abstract class _$ModRemovePostCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int postId,
       String? reason,
       bool? removed,
@@ -3344,7 +3109,7 @@ class __$ModRemovePostCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? postId = freezed,
     Object? reason = freezed,
     Object? removed = freezed,
@@ -3355,9 +3120,9 @@ class __$ModRemovePostCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       postId: postId == freezed
           ? _value.postId
@@ -3387,7 +3152,7 @@ class __$ModRemovePostCopyWithImpl<$Res>
 class _$_ModRemovePost extends _ModRemovePost {
   _$_ModRemovePost(
       {required this.id,
-      required this.modUserId,
+      required this.modPersonId,
       required this.postId,
       this.reason,
       this.removed,
@@ -3400,7 +3165,7 @@ class _$_ModRemovePost extends _ModRemovePost {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
   final int postId;
   @override
@@ -3413,7 +3178,7 @@ class _$_ModRemovePost extends _ModRemovePost {
 
   @override
   String toString() {
-    return 'ModRemovePost(id: $id, modUserId: $modUserId, postId: $postId, reason: $reason, removed: $removed, when: $when)';
+    return 'ModRemovePost(id: $id, modPersonId: $modPersonId, postId: $postId, reason: $reason, removed: $removed, when: $when)';
   }
 
   @override
@@ -3422,9 +3187,9 @@ class _$_ModRemovePost extends _ModRemovePost {
         (other is _ModRemovePost &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
+                    .equals(other.modPersonId, modPersonId)) &&
             (identical(other.postId, postId) ||
                 const DeepCollectionEquality().equals(other.postId, postId)) &&
             (identical(other.reason, reason) ||
@@ -3440,7 +3205,7 @@ class _$_ModRemovePost extends _ModRemovePost {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(postId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(removed) ^
@@ -3460,7 +3225,7 @@ class _$_ModRemovePost extends _ModRemovePost {
 abstract class _ModRemovePost extends ModRemovePost {
   factory _ModRemovePost(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int postId,
       String? reason,
       bool? removed,
@@ -3473,7 +3238,7 @@ abstract class _ModRemovePost extends ModRemovePost {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
   int get postId => throw _privateConstructorUsedError;
   @override
@@ -3499,13 +3264,13 @@ class _$ModLockPostTearOff {
 
   _ModLockPost call(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int postId,
       bool? locked,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModLockPost(
       id: id,
-      modUserId: modUserId,
+      modPersonId: modPersonId,
       postId: postId,
       locked: locked,
       when: when,
@@ -3523,7 +3288,7 @@ const $ModLockPost = _$ModLockPostTearOff();
 /// @nodoc
 mixin _$ModLockPost {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   int get postId => throw _privateConstructorUsedError;
   bool? get locked => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
@@ -3542,7 +3307,7 @@ abstract class $ModLockPostCopyWith<$Res> {
       _$ModLockPostCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int postId,
       bool? locked,
       @JsonKey(name: 'when_') DateTime when});
@@ -3559,7 +3324,7 @@ class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? postId = freezed,
     Object? locked = freezed,
     Object? when = freezed,
@@ -3569,9 +3334,9 @@ class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       postId: postId == freezed
           ? _value.postId
@@ -3598,7 +3363,7 @@ abstract class _$ModLockPostCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int postId,
       bool? locked,
       @JsonKey(name: 'when_') DateTime when});
@@ -3617,7 +3382,7 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? postId = freezed,
     Object? locked = freezed,
     Object? when = freezed,
@@ -3627,9 +3392,9 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       postId: postId == freezed
           ? _value.postId
@@ -3655,7 +3420,7 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
 class _$_ModLockPost extends _ModLockPost {
   _$_ModLockPost(
       {required this.id,
-      required this.modUserId,
+      required this.modPersonId,
       required this.postId,
       this.locked,
       @JsonKey(name: 'when_') required this.when})
@@ -3667,7 +3432,7 @@ class _$_ModLockPost extends _ModLockPost {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
   final int postId;
   @override
@@ -3678,7 +3443,7 @@ class _$_ModLockPost extends _ModLockPost {
 
   @override
   String toString() {
-    return 'ModLockPost(id: $id, modUserId: $modUserId, postId: $postId, locked: $locked, when: $when)';
+    return 'ModLockPost(id: $id, modPersonId: $modPersonId, postId: $postId, locked: $locked, when: $when)';
   }
 
   @override
@@ -3687,9 +3452,9 @@ class _$_ModLockPost extends _ModLockPost {
         (other is _ModLockPost &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
+                    .equals(other.modPersonId, modPersonId)) &&
             (identical(other.postId, postId) ||
                 const DeepCollectionEquality().equals(other.postId, postId)) &&
             (identical(other.locked, locked) ||
@@ -3702,7 +3467,7 @@ class _$_ModLockPost extends _ModLockPost {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(postId) ^
       const DeepCollectionEquality().hash(locked) ^
       const DeepCollectionEquality().hash(when);
@@ -3721,7 +3486,7 @@ class _$_ModLockPost extends _ModLockPost {
 abstract class _ModLockPost extends ModLockPost {
   factory _ModLockPost(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int postId,
       bool? locked,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModLockPost;
@@ -3733,7 +3498,7 @@ abstract class _ModLockPost extends ModLockPost {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
   int get postId => throw _privateConstructorUsedError;
   @override
@@ -3757,13 +3522,13 @@ class _$ModStickyPostTearOff {
 
   _ModStickyPost call(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int postId,
       bool? stickied,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModStickyPost(
       id: id,
-      modUserId: modUserId,
+      modPersonId: modPersonId,
       postId: postId,
       stickied: stickied,
       when: when,
@@ -3781,7 +3546,7 @@ const $ModStickyPost = _$ModStickyPostTearOff();
 /// @nodoc
 mixin _$ModStickyPost {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   int get postId => throw _privateConstructorUsedError;
   bool? get stickied => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
@@ -3800,7 +3565,7 @@ abstract class $ModStickyPostCopyWith<$Res> {
       _$ModStickyPostCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int postId,
       bool? stickied,
       @JsonKey(name: 'when_') DateTime when});
@@ -3818,7 +3583,7 @@ class _$ModStickyPostCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? postId = freezed,
     Object? stickied = freezed,
     Object? when = freezed,
@@ -3828,9 +3593,9 @@ class _$ModStickyPostCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       postId: postId == freezed
           ? _value.postId
@@ -3857,7 +3622,7 @@ abstract class _$ModStickyPostCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int postId,
       bool? stickied,
       @JsonKey(name: 'when_') DateTime when});
@@ -3877,7 +3642,7 @@ class __$ModStickyPostCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? postId = freezed,
     Object? stickied = freezed,
     Object? when = freezed,
@@ -3887,9 +3652,9 @@ class __$ModStickyPostCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       postId: postId == freezed
           ? _value.postId
@@ -3915,7 +3680,7 @@ class __$ModStickyPostCopyWithImpl<$Res>
 class _$_ModStickyPost extends _ModStickyPost {
   _$_ModStickyPost(
       {required this.id,
-      required this.modUserId,
+      required this.modPersonId,
       required this.postId,
       this.stickied,
       @JsonKey(name: 'when_') required this.when})
@@ -3927,7 +3692,7 @@ class _$_ModStickyPost extends _ModStickyPost {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
   final int postId;
   @override
@@ -3938,7 +3703,7 @@ class _$_ModStickyPost extends _ModStickyPost {
 
   @override
   String toString() {
-    return 'ModStickyPost(id: $id, modUserId: $modUserId, postId: $postId, stickied: $stickied, when: $when)';
+    return 'ModStickyPost(id: $id, modPersonId: $modPersonId, postId: $postId, stickied: $stickied, when: $when)';
   }
 
   @override
@@ -3947,9 +3712,9 @@ class _$_ModStickyPost extends _ModStickyPost {
         (other is _ModStickyPost &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
+                    .equals(other.modPersonId, modPersonId)) &&
             (identical(other.postId, postId) ||
                 const DeepCollectionEquality().equals(other.postId, postId)) &&
             (identical(other.stickied, stickied) ||
@@ -3963,7 +3728,7 @@ class _$_ModStickyPost extends _ModStickyPost {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(postId) ^
       const DeepCollectionEquality().hash(stickied) ^
       const DeepCollectionEquality().hash(when);
@@ -3982,7 +3747,7 @@ class _$_ModStickyPost extends _ModStickyPost {
 abstract class _ModStickyPost extends ModStickyPost {
   factory _ModStickyPost(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int postId,
       bool? stickied,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModStickyPost;
@@ -3994,7 +3759,7 @@ abstract class _ModStickyPost extends ModStickyPost {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
   int get postId => throw _privateConstructorUsedError;
   @override
@@ -4018,14 +3783,14 @@ class _$ModRemoveCommentTearOff {
 
   _ModRemoveComment call(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int commentId,
       String? reason,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModRemoveComment(
       id: id,
-      modUserId: modUserId,
+      modPersonId: modPersonId,
       commentId: commentId,
       reason: reason,
       removed: removed,
@@ -4044,7 +3809,7 @@ const $ModRemoveComment = _$ModRemoveCommentTearOff();
 /// @nodoc
 mixin _$ModRemoveComment {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   int get commentId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool? get removed => throw _privateConstructorUsedError;
@@ -4064,7 +3829,7 @@ abstract class $ModRemoveCommentCopyWith<$Res> {
       _$ModRemoveCommentCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int commentId,
       String? reason,
       bool? removed,
@@ -4083,7 +3848,7 @@ class _$ModRemoveCommentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? commentId = freezed,
     Object? reason = freezed,
     Object? removed = freezed,
@@ -4094,9 +3859,9 @@ class _$ModRemoveCommentCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       commentId: commentId == freezed
           ? _value.commentId
@@ -4127,7 +3892,7 @@ abstract class _$ModRemoveCommentCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int commentId,
       String? reason,
       bool? removed,
@@ -4148,7 +3913,7 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? commentId = freezed,
     Object? reason = freezed,
     Object? removed = freezed,
@@ -4159,9 +3924,9 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       commentId: commentId == freezed
           ? _value.commentId
@@ -4191,7 +3956,7 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
 class _$_ModRemoveComment extends _ModRemoveComment {
   _$_ModRemoveComment(
       {required this.id,
-      required this.modUserId,
+      required this.modPersonId,
       required this.commentId,
       this.reason,
       this.removed,
@@ -4204,7 +3969,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
   final int commentId;
   @override
@@ -4217,7 +3982,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 
   @override
   String toString() {
-    return 'ModRemoveComment(id: $id, modUserId: $modUserId, commentId: $commentId, reason: $reason, removed: $removed, when: $when)';
+    return 'ModRemoveComment(id: $id, modPersonId: $modPersonId, commentId: $commentId, reason: $reason, removed: $removed, when: $when)';
   }
 
   @override
@@ -4226,9 +3991,9 @@ class _$_ModRemoveComment extends _ModRemoveComment {
         (other is _ModRemoveComment &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
+                    .equals(other.modPersonId, modPersonId)) &&
             (identical(other.commentId, commentId) ||
                 const DeepCollectionEquality()
                     .equals(other.commentId, commentId)) &&
@@ -4245,7 +4010,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(commentId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(removed) ^
@@ -4265,7 +4030,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 abstract class _ModRemoveComment extends ModRemoveComment {
   factory _ModRemoveComment(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int commentId,
       String? reason,
       bool? removed,
@@ -4278,7 +4043,7 @@ abstract class _ModRemoveComment extends ModRemoveComment {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
   int get commentId => throw _privateConstructorUsedError;
   @override
@@ -4304,7 +4069,7 @@ class _$ModRemoveCommunityTearOff {
 
   _ModRemoveCommunity call(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int communityId,
       String? reason,
       bool? removed,
@@ -4312,7 +4077,7 @@ class _$ModRemoveCommunityTearOff {
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModRemoveCommunity(
       id: id,
-      modUserId: modUserId,
+      modPersonId: modPersonId,
       communityId: communityId,
       reason: reason,
       removed: removed,
@@ -4332,7 +4097,7 @@ const $ModRemoveCommunity = _$ModRemoveCommunityTearOff();
 /// @nodoc
 mixin _$ModRemoveCommunity {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool? get removed => throw _privateConstructorUsedError;
@@ -4353,7 +4118,7 @@ abstract class $ModRemoveCommunityCopyWith<$Res> {
       _$ModRemoveCommunityCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int communityId,
       String? reason,
       bool? removed,
@@ -4373,7 +4138,7 @@ class _$ModRemoveCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? communityId = freezed,
     Object? reason = freezed,
     Object? removed = freezed,
@@ -4385,9 +4150,9 @@ class _$ModRemoveCommunityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       communityId: communityId == freezed
           ? _value.communityId
@@ -4422,7 +4187,7 @@ abstract class _$ModRemoveCommunityCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
+      int modPersonId,
       int communityId,
       String? reason,
       bool? removed,
@@ -4444,7 +4209,7 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
+    Object? modPersonId = freezed,
     Object? communityId = freezed,
     Object? reason = freezed,
     Object? removed = freezed,
@@ -4456,9 +4221,9 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       communityId: communityId == freezed
           ? _value.communityId
@@ -4492,7 +4257,7 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
 class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   _$_ModRemoveCommunity(
       {required this.id,
-      required this.modUserId,
+      required this.modPersonId,
       required this.communityId,
       this.reason,
       this.removed,
@@ -4506,7 +4271,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
   final int communityId;
   @override
@@ -4521,7 +4286,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 
   @override
   String toString() {
-    return 'ModRemoveCommunity(id: $id, modUserId: $modUserId, communityId: $communityId, reason: $reason, removed: $removed, expires: $expires, when: $when)';
+    return 'ModRemoveCommunity(id: $id, modPersonId: $modPersonId, communityId: $communityId, reason: $reason, removed: $removed, expires: $expires, when: $when)';
   }
 
   @override
@@ -4530,9 +4295,9 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
         (other is _ModRemoveCommunity &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
+                    .equals(other.modPersonId, modPersonId)) &&
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
@@ -4552,7 +4317,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(removed) ^
@@ -4573,7 +4338,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   factory _ModRemoveCommunity(
       {required int id,
-      required int modUserId,
+      required int modPersonId,
       required int communityId,
       String? reason,
       bool? removed,
@@ -4587,7 +4352,7 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
@@ -4615,8 +4380,8 @@ class _$ModBanFromCommunityTearOff {
 
   _ModBanFromCommunity call(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       required int communityId,
       String? reason,
       bool? banned,
@@ -4624,8 +4389,8 @@ class _$ModBanFromCommunityTearOff {
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModBanFromCommunity(
       id: id,
-      modUserId: modUserId,
-      otherUserId: otherUserId,
+      modPersonId: modPersonId,
+      otherPersonId: otherPersonId,
       communityId: communityId,
       reason: reason,
       banned: banned,
@@ -4645,8 +4410,8 @@ const $ModBanFromCommunity = _$ModBanFromCommunityTearOff();
 /// @nodoc
 mixin _$ModBanFromCommunity {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool? get banned => throw _privateConstructorUsedError;
@@ -4667,8 +4432,8 @@ abstract class $ModBanFromCommunityCopyWith<$Res> {
       _$ModBanFromCommunityCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       int communityId,
       String? reason,
       bool? banned,
@@ -4688,8 +4453,8 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? communityId = freezed,
     Object? reason = freezed,
     Object? banned = freezed,
@@ -4701,13 +4466,13 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       communityId: communityId == freezed
           ? _value.communityId
@@ -4742,8 +4507,8 @@ abstract class _$ModBanFromCommunityCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       int communityId,
       String? reason,
       bool? banned,
@@ -4765,8 +4530,8 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? communityId = freezed,
     Object? reason = freezed,
     Object? banned = freezed,
@@ -4778,13 +4543,13 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       communityId: communityId == freezed
           ? _value.communityId
@@ -4818,8 +4583,8 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
 class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   _$_ModBanFromCommunity(
       {required this.id,
-      required this.modUserId,
-      required this.otherUserId,
+      required this.modPersonId,
+      required this.otherPersonId,
       required this.communityId,
       this.reason,
       this.banned,
@@ -4833,9 +4598,9 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
-  final int otherUserId;
+  final int otherPersonId;
   @override
   final int communityId;
   @override
@@ -4850,7 +4615,7 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 
   @override
   String toString() {
-    return 'ModBanFromCommunity(id: $id, modUserId: $modUserId, otherUserId: $otherUserId, communityId: $communityId, reason: $reason, banned: $banned, expires: $expires, when: $when)';
+    return 'ModBanFromCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, reason: $reason, banned: $banned, expires: $expires, when: $when)';
   }
 
   @override
@@ -4859,12 +4624,12 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
         (other is _ModBanFromCommunity &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
-            (identical(other.otherUserId, otherUserId) ||
+                    .equals(other.modPersonId, modPersonId)) &&
+            (identical(other.otherPersonId, otherPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.otherUserId, otherUserId)) &&
+                    .equals(other.otherPersonId, otherPersonId)) &&
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
@@ -4883,8 +4648,8 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
-      const DeepCollectionEquality().hash(otherUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
+      const DeepCollectionEquality().hash(otherPersonId) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(banned) ^
@@ -4906,8 +4671,8 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   factory _ModBanFromCommunity(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       required int communityId,
       String? reason,
       bool? banned,
@@ -4921,9 +4686,9 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
@@ -4951,16 +4716,16 @@ class _$ModBanTearOff {
 
   _ModBan call(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       String? reason,
       bool? banned,
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModBan(
       id: id,
-      modUserId: modUserId,
-      otherUserId: otherUserId,
+      modPersonId: modPersonId,
+      otherPersonId: otherPersonId,
       reason: reason,
       banned: banned,
       expires: expires,
@@ -4979,8 +4744,8 @@ const $ModBan = _$ModBanTearOff();
 /// @nodoc
 mixin _$ModBan {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   bool? get banned => throw _privateConstructorUsedError;
   DateTime? get expires => throw _privateConstructorUsedError;
@@ -4998,8 +4763,8 @@ abstract class $ModBanCopyWith<$Res> {
       _$ModBanCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       String? reason,
       bool? banned,
       DateTime? expires,
@@ -5017,8 +4782,8 @@ class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? reason = freezed,
     Object? banned = freezed,
     Object? expires = freezed,
@@ -5029,13 +4794,13 @@ class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       reason: reason == freezed
           ? _value.reason
@@ -5064,8 +4829,8 @@ abstract class _$ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
   @override
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       String? reason,
       bool? banned,
       DateTime? expires,
@@ -5084,8 +4849,8 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? reason = freezed,
     Object? banned = freezed,
     Object? expires = freezed,
@@ -5096,13 +4861,13 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       reason: reason == freezed
           ? _value.reason
@@ -5132,8 +4897,8 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
 class _$_ModBan extends _ModBan {
   _$_ModBan(
       {required this.id,
-      required this.modUserId,
-      required this.otherUserId,
+      required this.modPersonId,
+      required this.otherPersonId,
       this.reason,
       this.banned,
       this.expires,
@@ -5146,9 +4911,9 @@ class _$_ModBan extends _ModBan {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
-  final int otherUserId;
+  final int otherPersonId;
   @override
   final String? reason;
   @override
@@ -5161,7 +4926,7 @@ class _$_ModBan extends _ModBan {
 
   @override
   String toString() {
-    return 'ModBan(id: $id, modUserId: $modUserId, otherUserId: $otherUserId, reason: $reason, banned: $banned, expires: $expires, when: $when)';
+    return 'ModBan(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, reason: $reason, banned: $banned, expires: $expires, when: $when)';
   }
 
   @override
@@ -5170,12 +4935,12 @@ class _$_ModBan extends _ModBan {
         (other is _ModBan &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
-            (identical(other.otherUserId, otherUserId) ||
+                    .equals(other.modPersonId, modPersonId)) &&
+            (identical(other.otherPersonId, otherPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.otherUserId, otherUserId)) &&
+                    .equals(other.otherPersonId, otherPersonId)) &&
             (identical(other.reason, reason) ||
                 const DeepCollectionEquality().equals(other.reason, reason)) &&
             (identical(other.banned, banned) ||
@@ -5191,8 +4956,8 @@ class _$_ModBan extends _ModBan {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
-      const DeepCollectionEquality().hash(otherUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
+      const DeepCollectionEquality().hash(otherPersonId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(expires) ^
@@ -5212,8 +4977,8 @@ class _$_ModBan extends _ModBan {
 abstract class _ModBan extends ModBan {
   factory _ModBan(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       String? reason,
       bool? banned,
       DateTime? expires,
@@ -5225,9 +4990,9 @@ abstract class _ModBan extends ModBan {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
   String? get reason => throw _privateConstructorUsedError;
   @override
@@ -5252,15 +5017,15 @@ class _$ModAddCommunityTearOff {
 
   _ModAddCommunity call(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       required int communityId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModAddCommunity(
       id: id,
-      modUserId: modUserId,
-      otherUserId: otherUserId,
+      modPersonId: modPersonId,
+      otherPersonId: otherPersonId,
       communityId: communityId,
       removed: removed,
       when: when,
@@ -5278,8 +5043,8 @@ const $ModAddCommunity = _$ModAddCommunityTearOff();
 /// @nodoc
 mixin _$ModAddCommunity {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
@@ -5298,8 +5063,8 @@ abstract class $ModAddCommunityCopyWith<$Res> {
       _$ModAddCommunityCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       int communityId,
       bool? removed,
       @JsonKey(name: 'when_') DateTime when});
@@ -5317,8 +5082,8 @@ class _$ModAddCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? communityId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
@@ -5328,13 +5093,13 @@ class _$ModAddCommunityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       communityId: communityId == freezed
           ? _value.communityId
@@ -5361,8 +5126,8 @@ abstract class _$ModAddCommunityCopyWith<$Res>
   @override
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       int communityId,
       bool? removed,
       @JsonKey(name: 'when_') DateTime when});
@@ -5382,8 +5147,8 @@ class __$ModAddCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? communityId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
@@ -5393,13 +5158,13 @@ class __$ModAddCommunityCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       communityId: communityId == freezed
           ? _value.communityId
@@ -5425,8 +5190,8 @@ class __$ModAddCommunityCopyWithImpl<$Res>
 class _$_ModAddCommunity extends _ModAddCommunity {
   _$_ModAddCommunity(
       {required this.id,
-      required this.modUserId,
-      required this.otherUserId,
+      required this.modPersonId,
+      required this.otherPersonId,
       required this.communityId,
       this.removed,
       @JsonKey(name: 'when_') required this.when})
@@ -5438,9 +5203,9 @@ class _$_ModAddCommunity extends _ModAddCommunity {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
-  final int otherUserId;
+  final int otherPersonId;
   @override
   final int communityId;
   @override
@@ -5451,7 +5216,7 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 
   @override
   String toString() {
-    return 'ModAddCommunity(id: $id, modUserId: $modUserId, otherUserId: $otherUserId, communityId: $communityId, removed: $removed, when: $when)';
+    return 'ModAddCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, removed: $removed, when: $when)';
   }
 
   @override
@@ -5460,12 +5225,12 @@ class _$_ModAddCommunity extends _ModAddCommunity {
         (other is _ModAddCommunity &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
-            (identical(other.otherUserId, otherUserId) ||
+                    .equals(other.modPersonId, modPersonId)) &&
+            (identical(other.otherPersonId, otherPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.otherUserId, otherUserId)) &&
+                    .equals(other.otherPersonId, otherPersonId)) &&
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
@@ -5480,8 +5245,8 @@ class _$_ModAddCommunity extends _ModAddCommunity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
-      const DeepCollectionEquality().hash(otherUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
+      const DeepCollectionEquality().hash(otherPersonId) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(when);
@@ -5500,8 +5265,8 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 abstract class _ModAddCommunity extends ModAddCommunity {
   factory _ModAddCommunity(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       required int communityId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModAddCommunity;
@@ -5513,9 +5278,9 @@ abstract class _ModAddCommunity extends ModAddCommunity {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
@@ -5539,14 +5304,14 @@ class _$ModAddTearOff {
 
   _ModAdd call(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) {
     return _ModAdd(
       id: id,
-      modUserId: modUserId,
-      otherUserId: otherUserId,
+      modPersonId: modPersonId,
+      otherPersonId: otherPersonId,
       removed: removed,
       when: when,
     );
@@ -5563,8 +5328,8 @@ const $ModAdd = _$ModAddTearOff();
 /// @nodoc
 mixin _$ModAdd {
   int get id => throw _privateConstructorUsedError;
-  int get modUserId => throw _privateConstructorUsedError;
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
@@ -5580,8 +5345,8 @@ abstract class $ModAddCopyWith<$Res> {
       _$ModAddCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
@@ -5597,8 +5362,8 @@ class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
   }) {
@@ -5607,13 +5372,13 @@ class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       removed: removed == freezed
           ? _value.removed
@@ -5634,8 +5399,8 @@ abstract class _$ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
   @override
   $Res call(
       {int id,
-      int modUserId,
-      int otherUserId,
+      int modPersonId,
+      int otherPersonId,
       bool? removed,
       @JsonKey(name: 'when_') DateTime when});
 }
@@ -5652,8 +5417,8 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? modUserId = freezed,
-    Object? otherUserId = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
   }) {
@@ -5662,13 +5427,13 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      modUserId: modUserId == freezed
-          ? _value.modUserId
-          : modUserId // ignore: cast_nullable_to_non_nullable
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
               as int,
-      otherUserId: otherUserId == freezed
-          ? _value.otherUserId
-          : otherUserId // ignore: cast_nullable_to_non_nullable
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
               as int,
       removed: removed == freezed
           ? _value.removed
@@ -5690,8 +5455,8 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
 class _$_ModAdd extends _ModAdd {
   _$_ModAdd(
       {required this.id,
-      required this.modUserId,
-      required this.otherUserId,
+      required this.modPersonId,
+      required this.otherPersonId,
       this.removed,
       @JsonKey(name: 'when_') required this.when})
       : super._();
@@ -5702,9 +5467,9 @@ class _$_ModAdd extends _ModAdd {
   @override
   final int id;
   @override
-  final int modUserId;
+  final int modPersonId;
   @override
-  final int otherUserId;
+  final int otherPersonId;
   @override
   final bool? removed;
   @override
@@ -5713,7 +5478,7 @@ class _$_ModAdd extends _ModAdd {
 
   @override
   String toString() {
-    return 'ModAdd(id: $id, modUserId: $modUserId, otherUserId: $otherUserId, removed: $removed, when: $when)';
+    return 'ModAdd(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, removed: $removed, when: $when)';
   }
 
   @override
@@ -5722,12 +5487,12 @@ class _$_ModAdd extends _ModAdd {
         (other is _ModAdd &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.modUserId, modUserId) ||
+            (identical(other.modPersonId, modPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.modUserId, modUserId)) &&
-            (identical(other.otherUserId, otherUserId) ||
+                    .equals(other.modPersonId, modPersonId)) &&
+            (identical(other.otherPersonId, otherPersonId) ||
                 const DeepCollectionEquality()
-                    .equals(other.otherUserId, otherUserId)) &&
+                    .equals(other.otherPersonId, otherPersonId)) &&
             (identical(other.removed, removed) ||
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
@@ -5739,8 +5504,8 @@ class _$_ModAdd extends _ModAdd {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(modUserId) ^
-      const DeepCollectionEquality().hash(otherUserId) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
+      const DeepCollectionEquality().hash(otherPersonId) ^
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(when);
 
@@ -5758,8 +5523,8 @@ class _$_ModAdd extends _ModAdd {
 abstract class _ModAdd extends ModAdd {
   factory _ModAdd(
       {required int id,
-      required int modUserId,
-      required int otherUserId,
+      required int modPersonId,
+      required int otherPersonId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when}) = _$_ModAdd;
   _ModAdd._() : super._();
@@ -5769,9 +5534,9 @@ abstract class _ModAdd extends ModAdd {
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get modUserId => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherUserId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
   bool? get removed => throw _privateConstructorUsedError;
   @override
@@ -7042,21 +6807,21 @@ abstract class _Comment extends Comment {
       throw _privateConstructorUsedError;
 }
 
-UserMention _$UserMentionFromJson(Map<String, dynamic> json) {
-  return _UserMention.fromJson(json);
+PersonMention _$PersonMentionFromJson(Map<String, dynamic> json) {
+  return _PersonMention.fromJson(json);
 }
 
 /// @nodoc
-class _$UserMentionTearOff {
-  const _$UserMentionTearOff();
+class _$PersonMentionTearOff {
+  const _$PersonMentionTearOff();
 
-  _UserMention call(
+  _PersonMention call(
       {required int id,
       required int recipientId,
       required int commentId,
       required bool read,
       required DateTime published}) {
-    return _UserMention(
+    return _PersonMention(
       id: id,
       recipientId: recipientId,
       commentId: commentId,
@@ -7065,16 +6830,16 @@ class _$UserMentionTearOff {
     );
   }
 
-  UserMention fromJson(Map<String, Object> json) {
-    return UserMention.fromJson(json);
+  PersonMention fromJson(Map<String, Object> json) {
+    return PersonMention.fromJson(json);
   }
 }
 
 /// @nodoc
-const $UserMention = _$UserMentionTearOff();
+const $PersonMention = _$PersonMentionTearOff();
 
 /// @nodoc
-mixin _$UserMention {
+mixin _$PersonMention {
   int get id => throw _privateConstructorUsedError;
   int get recipientId => throw _privateConstructorUsedError;
   int get commentId => throw _privateConstructorUsedError;
@@ -7083,26 +6848,27 @@ mixin _$UserMention {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserMentionCopyWith<UserMention> get copyWith =>
+  $PersonMentionCopyWith<PersonMention> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserMentionCopyWith<$Res> {
-  factory $UserMentionCopyWith(
-          UserMention value, $Res Function(UserMention) then) =
-      _$UserMentionCopyWithImpl<$Res>;
+abstract class $PersonMentionCopyWith<$Res> {
+  factory $PersonMentionCopyWith(
+          PersonMention value, $Res Function(PersonMention) then) =
+      _$PersonMentionCopyWithImpl<$Res>;
   $Res call(
       {int id, int recipientId, int commentId, bool read, DateTime published});
 }
 
 /// @nodoc
-class _$UserMentionCopyWithImpl<$Res> implements $UserMentionCopyWith<$Res> {
-  _$UserMentionCopyWithImpl(this._value, this._then);
+class _$PersonMentionCopyWithImpl<$Res>
+    implements $PersonMentionCopyWith<$Res> {
+  _$PersonMentionCopyWithImpl(this._value, this._then);
 
-  final UserMention _value;
+  final PersonMention _value;
   // ignore: unused_field
-  final $Res Function(UserMention) _then;
+  final $Res Function(PersonMention) _then;
 
   @override
   $Res call({
@@ -7138,25 +6904,26 @@ class _$UserMentionCopyWithImpl<$Res> implements $UserMentionCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UserMentionCopyWith<$Res>
-    implements $UserMentionCopyWith<$Res> {
-  factory _$UserMentionCopyWith(
-          _UserMention value, $Res Function(_UserMention) then) =
-      __$UserMentionCopyWithImpl<$Res>;
+abstract class _$PersonMentionCopyWith<$Res>
+    implements $PersonMentionCopyWith<$Res> {
+  factory _$PersonMentionCopyWith(
+          _PersonMention value, $Res Function(_PersonMention) then) =
+      __$PersonMentionCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id, int recipientId, int commentId, bool read, DateTime published});
 }
 
 /// @nodoc
-class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
-    implements _$UserMentionCopyWith<$Res> {
-  __$UserMentionCopyWithImpl(
-      _UserMention _value, $Res Function(_UserMention) _then)
-      : super(_value, (v) => _then(v as _UserMention));
+class __$PersonMentionCopyWithImpl<$Res>
+    extends _$PersonMentionCopyWithImpl<$Res>
+    implements _$PersonMentionCopyWith<$Res> {
+  __$PersonMentionCopyWithImpl(
+      _PersonMention _value, $Res Function(_PersonMention) _then)
+      : super(_value, (v) => _then(v as _PersonMention));
 
   @override
-  _UserMention get _value => super._value as _UserMention;
+  _PersonMention get _value => super._value as _PersonMention;
 
   @override
   $Res call({
@@ -7166,7 +6933,7 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
     Object? read = freezed,
     Object? published = freezed,
   }) {
-    return _then(_UserMention(
+    return _then(_PersonMention(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7196,8 +6963,8 @@ class __$UserMentionCopyWithImpl<$Res> extends _$UserMentionCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_UserMention extends _UserMention {
-  _$_UserMention(
+class _$_PersonMention extends _PersonMention {
+  _$_PersonMention(
       {required this.id,
       required this.recipientId,
       required this.commentId,
@@ -7205,8 +6972,8 @@ class _$_UserMention extends _UserMention {
       required this.published})
       : super._();
 
-  factory _$_UserMention.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserMentionFromJson(json);
+  factory _$_PersonMention.fromJson(Map<String, dynamic> json) =>
+      _$_$_PersonMentionFromJson(json);
 
   @override
   final int id;
@@ -7221,13 +6988,13 @@ class _$_UserMention extends _UserMention {
 
   @override
   String toString() {
-    return 'UserMention(id: $id, recipientId: $recipientId, commentId: $commentId, read: $read, published: $published)';
+    return 'PersonMention(id: $id, recipientId: $recipientId, commentId: $commentId, read: $read, published: $published)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UserMention &&
+        (other is _PersonMention &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.recipientId, recipientId) ||
@@ -7254,26 +7021,26 @@ class _$_UserMention extends _UserMention {
 
   @JsonKey(ignore: true)
   @override
-  _$UserMentionCopyWith<_UserMention> get copyWith =>
-      __$UserMentionCopyWithImpl<_UserMention>(this, _$identity);
+  _$PersonMentionCopyWith<_PersonMention> get copyWith =>
+      __$PersonMentionCopyWithImpl<_PersonMention>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserMentionToJson(this);
+    return _$_$_PersonMentionToJson(this);
   }
 }
 
-abstract class _UserMention extends UserMention {
-  factory _UserMention(
+abstract class _PersonMention extends PersonMention {
+  factory _PersonMention(
       {required int id,
       required int recipientId,
       required int commentId,
       required bool read,
-      required DateTime published}) = _$_UserMention;
-  _UserMention._() : super._();
+      required DateTime published}) = _$_PersonMention;
+  _PersonMention._() : super._();
 
-  factory _UserMention.fromJson(Map<String, dynamic> json) =
-      _$_UserMention.fromJson;
+  factory _PersonMention.fromJson(Map<String, dynamic> json) =
+      _$_PersonMention.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
@@ -7287,6 +7054,6 @@ abstract class _UserMention extends UserMention {
   DateTime get published => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserMentionCopyWith<_UserMention> get copyWith =>
+  _$PersonMentionCopyWith<_PersonMention> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -527,7 +527,7 @@ class _$SearchResultsTearOff {
       required List<CommentView> comments,
       required List<PostView> posts,
       required List<CommunityView> communities,
-      required List<UserViewSafe> users}) {
+      required List<PersonViewSafe> users}) {
     return _SearchResults(
       type: type,
       comments: comments,
@@ -552,7 +552,7 @@ mixin _$SearchResults {
   List<CommentView> get comments => throw _privateConstructorUsedError;
   List<PostView> get posts => throw _privateConstructorUsedError;
   List<CommunityView> get communities => throw _privateConstructorUsedError;
-  List<UserViewSafe> get users => throw _privateConstructorUsedError;
+  List<PersonViewSafe> get users => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -570,7 +570,7 @@ abstract class $SearchResultsCopyWith<$Res> {
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityView> communities,
-      List<UserViewSafe> users});
+      List<PersonViewSafe> users});
 }
 
 /// @nodoc
@@ -610,7 +610,7 @@ class _$SearchResultsCopyWithImpl<$Res>
       users: users == freezed
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
-              as List<UserViewSafe>,
+              as List<PersonViewSafe>,
     ));
   }
 }
@@ -627,7 +627,7 @@ abstract class _$SearchResultsCopyWith<$Res>
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityView> communities,
-      List<UserViewSafe> users});
+      List<PersonViewSafe> users});
 }
 
 /// @nodoc
@@ -669,7 +669,7 @@ class __$SearchResultsCopyWithImpl<$Res>
       users: users == freezed
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
-              as List<UserViewSafe>,
+              as List<PersonViewSafe>,
     ));
   }
 }
@@ -699,7 +699,7 @@ class _$_SearchResults extends _SearchResults {
   @override
   final List<CommunityView> communities;
   @override
-  final List<UserViewSafe> users;
+  final List<PersonViewSafe> users;
 
   @override
   String toString() {
@@ -750,7 +750,7 @@ abstract class _SearchResults extends SearchResults {
       required List<CommentView> comments,
       required List<PostView> posts,
       required List<CommunityView> communities,
-      required List<UserViewSafe> users}) = _$_SearchResults;
+      required List<PersonViewSafe> users}) = _$_SearchResults;
   _SearchResults._() : super._();
 
   factory _SearchResults.fromJson(Map<String, dynamic> json) =
@@ -766,7 +766,7 @@ abstract class _SearchResults extends SearchResults {
   @override
   List<CommunityView> get communities => throw _privateConstructorUsedError;
   @override
-  List<UserViewSafe> get users => throw _privateConstructorUsedError;
+  List<PersonViewSafe> get users => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SearchResultsCopyWith<_SearchResults> get copyWith =>
@@ -1355,11 +1355,11 @@ class _$FullSiteViewTearOff {
 
   _FullSiteView call(
       {SiteView? siteView,
-      required List<UserViewSafe> admins,
-      required List<UserViewSafe> banned,
+      required List<PersonViewSafe> admins,
+      required List<PersonViewSafe> banned,
       required int online,
       required String version,
-      UserSafeSettings? myUser,
+      LocalUserSettingsView? myUser,
       FederatedInstances? federatedInstances}) {
     return _FullSiteView(
       siteView: siteView,
@@ -1383,11 +1383,11 @@ const $FullSiteView = _$FullSiteViewTearOff();
 /// @nodoc
 mixin _$FullSiteView {
   SiteView? get siteView => throw _privateConstructorUsedError;
-  List<UserViewSafe> get admins => throw _privateConstructorUsedError;
-  List<UserViewSafe> get banned => throw _privateConstructorUsedError;
+  List<PersonViewSafe> get admins => throw _privateConstructorUsedError;
+  List<PersonViewSafe> get banned => throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
-  UserSafeSettings? get myUser => throw _privateConstructorUsedError;
+  LocalUserSettingsView? get myUser => throw _privateConstructorUsedError;
   FederatedInstances? get federatedInstances =>
       throw _privateConstructorUsedError;
 
@@ -1404,15 +1404,15 @@ abstract class $FullSiteViewCopyWith<$Res> {
       _$FullSiteViewCopyWithImpl<$Res>;
   $Res call(
       {SiteView? siteView,
-      List<UserViewSafe> admins,
-      List<UserViewSafe> banned,
+      List<PersonViewSafe> admins,
+      List<PersonViewSafe> banned,
       int online,
       String version,
-      UserSafeSettings? myUser,
+      LocalUserSettingsView? myUser,
       FederatedInstances? federatedInstances});
 
   $SiteViewCopyWith<$Res>? get siteView;
-  $UserSafeSettingsCopyWith<$Res>? get myUser;
+  $LocalUserSettingsViewCopyWith<$Res>? get myUser;
   $FederatedInstancesCopyWith<$Res>? get federatedInstances;
 }
 
@@ -1442,11 +1442,11 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       admins: admins == freezed
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
-              as List<UserViewSafe>,
+              as List<PersonViewSafe>,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
-              as List<UserViewSafe>,
+              as List<PersonViewSafe>,
       online: online == freezed
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
@@ -1458,7 +1458,7 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       myUser: myUser == freezed
           ? _value.myUser
           : myUser // ignore: cast_nullable_to_non_nullable
-              as UserSafeSettings?,
+              as LocalUserSettingsView?,
       federatedInstances: federatedInstances == freezed
           ? _value.federatedInstances
           : federatedInstances // ignore: cast_nullable_to_non_nullable
@@ -1478,12 +1478,12 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
   }
 
   @override
-  $UserSafeSettingsCopyWith<$Res>? get myUser {
+  $LocalUserSettingsViewCopyWith<$Res>? get myUser {
     if (_value.myUser == null) {
       return null;
     }
 
-    return $UserSafeSettingsCopyWith<$Res>(_value.myUser!, (value) {
+    return $LocalUserSettingsViewCopyWith<$Res>(_value.myUser!, (value) {
       return _then(_value.copyWith(myUser: value));
     });
   }
@@ -1510,17 +1510,17 @@ abstract class _$FullSiteViewCopyWith<$Res>
   @override
   $Res call(
       {SiteView? siteView,
-      List<UserViewSafe> admins,
-      List<UserViewSafe> banned,
+      List<PersonViewSafe> admins,
+      List<PersonViewSafe> banned,
       int online,
       String version,
-      UserSafeSettings? myUser,
+      LocalUserSettingsView? myUser,
       FederatedInstances? federatedInstances});
 
   @override
   $SiteViewCopyWith<$Res>? get siteView;
   @override
-  $UserSafeSettingsCopyWith<$Res>? get myUser;
+  $LocalUserSettingsViewCopyWith<$Res>? get myUser;
   @override
   $FederatedInstancesCopyWith<$Res>? get federatedInstances;
 }
@@ -1553,11 +1553,11 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
       admins: admins == freezed
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
-              as List<UserViewSafe>,
+              as List<PersonViewSafe>,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
-              as List<UserViewSafe>,
+              as List<PersonViewSafe>,
       online: online == freezed
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
@@ -1569,7 +1569,7 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
       myUser: myUser == freezed
           ? _value.myUser
           : myUser // ignore: cast_nullable_to_non_nullable
-              as UserSafeSettings?,
+              as LocalUserSettingsView?,
       federatedInstances: federatedInstances == freezed
           ? _value.federatedInstances
           : federatedInstances // ignore: cast_nullable_to_non_nullable
@@ -1598,15 +1598,15 @@ class _$_FullSiteView extends _FullSiteView {
   @override
   final SiteView? siteView;
   @override
-  final List<UserViewSafe> admins;
+  final List<PersonViewSafe> admins;
   @override
-  final List<UserViewSafe> banned;
+  final List<PersonViewSafe> banned;
   @override
   final int online;
   @override
   final String version;
   @override
-  final UserSafeSettings? myUser;
+  final LocalUserSettingsView? myUser;
   @override
   final FederatedInstances? federatedInstances;
 
@@ -1663,11 +1663,11 @@ class _$_FullSiteView extends _FullSiteView {
 abstract class _FullSiteView extends FullSiteView {
   factory _FullSiteView(
       {SiteView? siteView,
-      required List<UserViewSafe> admins,
-      required List<UserViewSafe> banned,
+      required List<PersonViewSafe> admins,
+      required List<PersonViewSafe> banned,
       required int online,
       required String version,
-      UserSafeSettings? myUser,
+      LocalUserSettingsView? myUser,
       FederatedInstances? federatedInstances}) = _$_FullSiteView;
   _FullSiteView._() : super._();
 
@@ -1677,15 +1677,15 @@ abstract class _FullSiteView extends FullSiteView {
   @override
   SiteView? get siteView => throw _privateConstructorUsedError;
   @override
-  List<UserViewSafe> get admins => throw _privateConstructorUsedError;
+  List<PersonViewSafe> get admins => throw _privateConstructorUsedError;
   @override
-  List<UserViewSafe> get banned => throw _privateConstructorUsedError;
+  List<PersonViewSafe> get banned => throw _privateConstructorUsedError;
   @override
   int get online => throw _privateConstructorUsedError;
   @override
   String get version => throw _privateConstructorUsedError;
   @override
-  UserSafeSettings? get myUser => throw _privateConstructorUsedError;
+  LocalUserSettingsView? get myUser => throw _privateConstructorUsedError;
   @override
   FederatedInstances? get federatedInstances =>
       throw _privateConstructorUsedError;
@@ -2088,22 +2088,22 @@ abstract class _Captcha extends Captcha {
       throw _privateConstructorUsedError;
 }
 
-FullUserView _$FullUserViewFromJson(Map<String, dynamic> json) {
-  return _FullUserView.fromJson(json);
+FullPersonView _$FullPersonViewFromJson(Map<String, dynamic> json) {
+  return _FullPersonView.fromJson(json);
 }
 
 /// @nodoc
-class _$FullUserViewTearOff {
-  const _$FullUserViewTearOff();
+class _$FullPersonViewTearOff {
+  const _$FullPersonViewTearOff();
 
-  _FullUserView call(
-      {required UserViewSafe userView,
+  _FullPersonView call(
+      {required PersonViewSafe personView,
       required List<CommunityFollowerView> follows,
       required List<CommunityModeratorView> moderates,
       required List<CommentView> comments,
       required List<PostView> posts}) {
-    return _FullUserView(
-      userView: userView,
+    return _FullPersonView(
+      personView: personView,
       follows: follows,
       moderates: moderates,
       comments: comments,
@@ -2111,17 +2111,17 @@ class _$FullUserViewTearOff {
     );
   }
 
-  FullUserView fromJson(Map<String, Object> json) {
-    return FullUserView.fromJson(json);
+  FullPersonView fromJson(Map<String, Object> json) {
+    return FullPersonView.fromJson(json);
   }
 }
 
 /// @nodoc
-const $FullUserView = _$FullUserViewTearOff();
+const $FullPersonView = _$FullPersonViewTearOff();
 
 /// @nodoc
-mixin _$FullUserView {
-  UserViewSafe get userView => throw _privateConstructorUsedError;
+mixin _$FullPersonView {
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   List<CommunityFollowerView> get follows => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderates =>
       throw _privateConstructorUsedError;
@@ -2130,46 +2130,47 @@ mixin _$FullUserView {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $FullUserViewCopyWith<FullUserView> get copyWith =>
+  $FullPersonViewCopyWith<FullPersonView> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $FullUserViewCopyWith<$Res> {
-  factory $FullUserViewCopyWith(
-          FullUserView value, $Res Function(FullUserView) then) =
-      _$FullUserViewCopyWithImpl<$Res>;
+abstract class $FullPersonViewCopyWith<$Res> {
+  factory $FullPersonViewCopyWith(
+          FullPersonView value, $Res Function(FullPersonView) then) =
+      _$FullPersonViewCopyWithImpl<$Res>;
   $Res call(
-      {UserViewSafe userView,
+      {PersonViewSafe personView,
       List<CommunityFollowerView> follows,
       List<CommunityModeratorView> moderates,
       List<CommentView> comments,
       List<PostView> posts});
 
-  $UserViewSafeCopyWith<$Res> get userView;
+  $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class _$FullUserViewCopyWithImpl<$Res> implements $FullUserViewCopyWith<$Res> {
-  _$FullUserViewCopyWithImpl(this._value, this._then);
+class _$FullPersonViewCopyWithImpl<$Res>
+    implements $FullPersonViewCopyWith<$Res> {
+  _$FullPersonViewCopyWithImpl(this._value, this._then);
 
-  final FullUserView _value;
+  final FullPersonView _value;
   // ignore: unused_field
-  final $Res Function(FullUserView) _then;
+  final $Res Function(FullPersonView) _then;
 
   @override
   $Res call({
-    Object? userView = freezed,
+    Object? personView = freezed,
     Object? follows = freezed,
     Object? moderates = freezed,
     Object? comments = freezed,
     Object? posts = freezed,
   }) {
     return _then(_value.copyWith(
-      userView: userView == freezed
-          ? _value.userView
-          : userView // ignore: cast_nullable_to_non_nullable
-              as UserViewSafe,
+      personView: personView == freezed
+          ? _value.personView
+          : personView // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe,
       follows: follows == freezed
           ? _value.follows
           : follows // ignore: cast_nullable_to_non_nullable
@@ -2190,54 +2191,55 @@ class _$FullUserViewCopyWithImpl<$Res> implements $FullUserViewCopyWith<$Res> {
   }
 
   @override
-  $UserViewSafeCopyWith<$Res> get userView {
-    return $UserViewSafeCopyWith<$Res>(_value.userView, (value) {
-      return _then(_value.copyWith(userView: value));
+  $PersonViewSafeCopyWith<$Res> get personView {
+    return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
+      return _then(_value.copyWith(personView: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$FullUserViewCopyWith<$Res>
-    implements $FullUserViewCopyWith<$Res> {
-  factory _$FullUserViewCopyWith(
-          _FullUserView value, $Res Function(_FullUserView) then) =
-      __$FullUserViewCopyWithImpl<$Res>;
+abstract class _$FullPersonViewCopyWith<$Res>
+    implements $FullPersonViewCopyWith<$Res> {
+  factory _$FullPersonViewCopyWith(
+          _FullPersonView value, $Res Function(_FullPersonView) then) =
+      __$FullPersonViewCopyWithImpl<$Res>;
   @override
   $Res call(
-      {UserViewSafe userView,
+      {PersonViewSafe personView,
       List<CommunityFollowerView> follows,
       List<CommunityModeratorView> moderates,
       List<CommentView> comments,
       List<PostView> posts});
 
   @override
-  $UserViewSafeCopyWith<$Res> get userView;
+  $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class __$FullUserViewCopyWithImpl<$Res> extends _$FullUserViewCopyWithImpl<$Res>
-    implements _$FullUserViewCopyWith<$Res> {
-  __$FullUserViewCopyWithImpl(
-      _FullUserView _value, $Res Function(_FullUserView) _then)
-      : super(_value, (v) => _then(v as _FullUserView));
+class __$FullPersonViewCopyWithImpl<$Res>
+    extends _$FullPersonViewCopyWithImpl<$Res>
+    implements _$FullPersonViewCopyWith<$Res> {
+  __$FullPersonViewCopyWithImpl(
+      _FullPersonView _value, $Res Function(_FullPersonView) _then)
+      : super(_value, (v) => _then(v as _FullPersonView));
 
   @override
-  _FullUserView get _value => super._value as _FullUserView;
+  _FullPersonView get _value => super._value as _FullPersonView;
 
   @override
   $Res call({
-    Object? userView = freezed,
+    Object? personView = freezed,
     Object? follows = freezed,
     Object? moderates = freezed,
     Object? comments = freezed,
     Object? posts = freezed,
   }) {
-    return _then(_FullUserView(
-      userView: userView == freezed
-          ? _value.userView
-          : userView // ignore: cast_nullable_to_non_nullable
-              as UserViewSafe,
+    return _then(_FullPersonView(
+      personView: personView == freezed
+          ? _value.personView
+          : personView // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe,
       follows: follows == freezed
           ? _value.follows
           : follows // ignore: cast_nullable_to_non_nullable
@@ -2261,20 +2263,20 @@ class __$FullUserViewCopyWithImpl<$Res> extends _$FullUserViewCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_FullUserView extends _FullUserView {
-  _$_FullUserView(
-      {required this.userView,
+class _$_FullPersonView extends _FullPersonView {
+  _$_FullPersonView(
+      {required this.personView,
       required this.follows,
       required this.moderates,
       required this.comments,
       required this.posts})
       : super._();
 
-  factory _$_FullUserView.fromJson(Map<String, dynamic> json) =>
-      _$_$_FullUserViewFromJson(json);
+  factory _$_FullPersonView.fromJson(Map<String, dynamic> json) =>
+      _$_$_FullPersonViewFromJson(json);
 
   @override
-  final UserViewSafe userView;
+  final PersonViewSafe personView;
   @override
   final List<CommunityFollowerView> follows;
   @override
@@ -2286,16 +2288,16 @@ class _$_FullUserView extends _FullUserView {
 
   @override
   String toString() {
-    return 'FullUserView(userView: $userView, follows: $follows, moderates: $moderates, comments: $comments, posts: $posts)';
+    return 'FullPersonView(personView: $personView, follows: $follows, moderates: $moderates, comments: $comments, posts: $posts)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FullUserView &&
-            (identical(other.userView, userView) ||
+        (other is _FullPersonView &&
+            (identical(other.personView, personView) ||
                 const DeepCollectionEquality()
-                    .equals(other.userView, userView)) &&
+                    .equals(other.personView, personView)) &&
             (identical(other.follows, follows) ||
                 const DeepCollectionEquality()
                     .equals(other.follows, follows)) &&
@@ -2312,7 +2314,7 @@ class _$_FullUserView extends _FullUserView {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userView) ^
+      const DeepCollectionEquality().hash(personView) ^
       const DeepCollectionEquality().hash(follows) ^
       const DeepCollectionEquality().hash(moderates) ^
       const DeepCollectionEquality().hash(comments) ^
@@ -2320,29 +2322,29 @@ class _$_FullUserView extends _FullUserView {
 
   @JsonKey(ignore: true)
   @override
-  _$FullUserViewCopyWith<_FullUserView> get copyWith =>
-      __$FullUserViewCopyWithImpl<_FullUserView>(this, _$identity);
+  _$FullPersonViewCopyWith<_FullPersonView> get copyWith =>
+      __$FullPersonViewCopyWithImpl<_FullPersonView>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FullUserViewToJson(this);
+    return _$_$_FullPersonViewToJson(this);
   }
 }
 
-abstract class _FullUserView extends FullUserView {
-  factory _FullUserView(
-      {required UserViewSafe userView,
+abstract class _FullPersonView extends FullPersonView {
+  factory _FullPersonView(
+      {required PersonViewSafe personView,
       required List<CommunityFollowerView> follows,
       required List<CommunityModeratorView> moderates,
       required List<CommentView> comments,
-      required List<PostView> posts}) = _$_FullUserView;
-  _FullUserView._() : super._();
+      required List<PostView> posts}) = _$_FullPersonView;
+  _FullPersonView._() : super._();
 
-  factory _FullUserView.fromJson(Map<String, dynamic> json) =
-      _$_FullUserView.fromJson;
+  factory _FullPersonView.fromJson(Map<String, dynamic> json) =
+      _$_FullPersonView.fromJson;
 
   @override
-  UserViewSafe get userView => throw _privateConstructorUsedError;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
   List<CommunityFollowerView> get follows => throw _privateConstructorUsedError;
   @override
@@ -2354,7 +2356,7 @@ abstract class _FullUserView extends FullUserView {
   List<PostView> get posts => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FullUserViewCopyWith<_FullUserView> get copyWith =>
+  _$FullPersonViewCopyWith<_FullPersonView> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2367,9 +2369,9 @@ class _$BannedCommunityUserTearOff {
   const _$BannedCommunityUserTearOff();
 
   _BannedCommunityUser call(
-      {required UserViewSafe userView, required bool banned}) {
+      {required PersonViewSafe personView, required bool banned}) {
     return _BannedCommunityUser(
-      userView: userView,
+      personView: personView,
       banned: banned,
     );
   }
@@ -2384,7 +2386,7 @@ const $BannedCommunityUser = _$BannedCommunityUserTearOff();
 
 /// @nodoc
 mixin _$BannedCommunityUser {
-  UserViewSafe get userView => throw _privateConstructorUsedError;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2398,9 +2400,9 @@ abstract class $BannedCommunityUserCopyWith<$Res> {
   factory $BannedCommunityUserCopyWith(
           BannedCommunityUser value, $Res Function(BannedCommunityUser) then) =
       _$BannedCommunityUserCopyWithImpl<$Res>;
-  $Res call({UserViewSafe userView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned});
 
-  $UserViewSafeCopyWith<$Res> get userView;
+  $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
@@ -2414,14 +2416,14 @@ class _$BannedCommunityUserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userView = freezed,
+    Object? personView = freezed,
     Object? banned = freezed,
   }) {
     return _then(_value.copyWith(
-      userView: userView == freezed
-          ? _value.userView
-          : userView // ignore: cast_nullable_to_non_nullable
-              as UserViewSafe,
+      personView: personView == freezed
+          ? _value.personView
+          : personView // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -2430,9 +2432,9 @@ class _$BannedCommunityUserCopyWithImpl<$Res>
   }
 
   @override
-  $UserViewSafeCopyWith<$Res> get userView {
-    return $UserViewSafeCopyWith<$Res>(_value.userView, (value) {
-      return _then(_value.copyWith(userView: value));
+  $PersonViewSafeCopyWith<$Res> get personView {
+    return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
+      return _then(_value.copyWith(personView: value));
     });
   }
 }
@@ -2444,10 +2446,10 @@ abstract class _$BannedCommunityUserCopyWith<$Res>
           $Res Function(_BannedCommunityUser) then) =
       __$BannedCommunityUserCopyWithImpl<$Res>;
   @override
-  $Res call({UserViewSafe userView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned});
 
   @override
-  $UserViewSafeCopyWith<$Res> get userView;
+  $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
@@ -2463,14 +2465,14 @@ class __$BannedCommunityUserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userView = freezed,
+    Object? personView = freezed,
     Object? banned = freezed,
   }) {
     return _then(_BannedCommunityUser(
-      userView: userView == freezed
-          ? _value.userView
-          : userView // ignore: cast_nullable_to_non_nullable
-              as UserViewSafe,
+      personView: personView == freezed
+          ? _value.personView
+          : personView // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -2483,29 +2485,29 @@ class __$BannedCommunityUserCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_BannedCommunityUser extends _BannedCommunityUser {
-  _$_BannedCommunityUser({required this.userView, required this.banned})
+  _$_BannedCommunityUser({required this.personView, required this.banned})
       : super._();
 
   factory _$_BannedCommunityUser.fromJson(Map<String, dynamic> json) =>
       _$_$_BannedCommunityUserFromJson(json);
 
   @override
-  final UserViewSafe userView;
+  final PersonViewSafe personView;
   @override
   final bool banned;
 
   @override
   String toString() {
-    return 'BannedCommunityUser(userView: $userView, banned: $banned)';
+    return 'BannedCommunityUser(personView: $personView, banned: $banned)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _BannedCommunityUser &&
-            (identical(other.userView, userView) ||
+            (identical(other.personView, personView) ||
                 const DeepCollectionEquality()
-                    .equals(other.userView, userView)) &&
+                    .equals(other.personView, personView)) &&
             (identical(other.banned, banned) ||
                 const DeepCollectionEquality().equals(other.banned, banned)));
   }
@@ -2513,7 +2515,7 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userView) ^
+      const DeepCollectionEquality().hash(personView) ^
       const DeepCollectionEquality().hash(banned);
 
   @JsonKey(ignore: true)
@@ -2530,7 +2532,7 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
 
 abstract class _BannedCommunityUser extends BannedCommunityUser {
   factory _BannedCommunityUser(
-      {required UserViewSafe userView,
+      {required PersonViewSafe personView,
       required bool banned}) = _$_BannedCommunityUser;
   _BannedCommunityUser._() : super._();
 
@@ -2538,7 +2540,7 @@ abstract class _BannedCommunityUser extends BannedCommunityUser {
       _$_BannedCommunityUser.fromJson;
 
   @override
-  UserViewSafe get userView => throw _privateConstructorUsedError;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
   bool get banned => throw _privateConstructorUsedError;
   @override
@@ -2547,68 +2549,69 @@ abstract class _BannedCommunityUser extends BannedCommunityUser {
       throw _privateConstructorUsedError;
 }
 
-BannedUser _$BannedUserFromJson(Map<String, dynamic> json) {
-  return _BannedUser.fromJson(json);
+BannedPerson _$BannedPersonFromJson(Map<String, dynamic> json) {
+  return _BannedPerson.fromJson(json);
 }
 
 /// @nodoc
-class _$BannedUserTearOff {
-  const _$BannedUserTearOff();
+class _$BannedPersonTearOff {
+  const _$BannedPersonTearOff();
 
-  _BannedUser call({required UserViewSafe userView, required bool banned}) {
-    return _BannedUser(
-      userView: userView,
+  _BannedPerson call(
+      {required PersonViewSafe personView, required bool banned}) {
+    return _BannedPerson(
+      personView: personView,
       banned: banned,
     );
   }
 
-  BannedUser fromJson(Map<String, Object> json) {
-    return BannedUser.fromJson(json);
+  BannedPerson fromJson(Map<String, Object> json) {
+    return BannedPerson.fromJson(json);
   }
 }
 
 /// @nodoc
-const $BannedUser = _$BannedUserTearOff();
+const $BannedPerson = _$BannedPersonTearOff();
 
 /// @nodoc
-mixin _$BannedUser {
-  UserViewSafe get userView => throw _privateConstructorUsedError;
+mixin _$BannedPerson {
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BannedUserCopyWith<BannedUser> get copyWith =>
+  $BannedPersonCopyWith<BannedPerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BannedUserCopyWith<$Res> {
-  factory $BannedUserCopyWith(
-          BannedUser value, $Res Function(BannedUser) then) =
-      _$BannedUserCopyWithImpl<$Res>;
-  $Res call({UserViewSafe userView, bool banned});
+abstract class $BannedPersonCopyWith<$Res> {
+  factory $BannedPersonCopyWith(
+          BannedPerson value, $Res Function(BannedPerson) then) =
+      _$BannedPersonCopyWithImpl<$Res>;
+  $Res call({PersonViewSafe personView, bool banned});
 
-  $UserViewSafeCopyWith<$Res> get userView;
+  $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class _$BannedUserCopyWithImpl<$Res> implements $BannedUserCopyWith<$Res> {
-  _$BannedUserCopyWithImpl(this._value, this._then);
+class _$BannedPersonCopyWithImpl<$Res> implements $BannedPersonCopyWith<$Res> {
+  _$BannedPersonCopyWithImpl(this._value, this._then);
 
-  final BannedUser _value;
+  final BannedPerson _value;
   // ignore: unused_field
-  final $Res Function(BannedUser) _then;
+  final $Res Function(BannedPerson) _then;
 
   @override
   $Res call({
-    Object? userView = freezed,
+    Object? personView = freezed,
     Object? banned = freezed,
   }) {
     return _then(_value.copyWith(
-      userView: userView == freezed
-          ? _value.userView
-          : userView // ignore: cast_nullable_to_non_nullable
-              as UserViewSafe,
+      personView: personView == freezed
+          ? _value.personView
+          : personView // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -2617,45 +2620,46 @@ class _$BannedUserCopyWithImpl<$Res> implements $BannedUserCopyWith<$Res> {
   }
 
   @override
-  $UserViewSafeCopyWith<$Res> get userView {
-    return $UserViewSafeCopyWith<$Res>(_value.userView, (value) {
-      return _then(_value.copyWith(userView: value));
+  $PersonViewSafeCopyWith<$Res> get personView {
+    return $PersonViewSafeCopyWith<$Res>(_value.personView, (value) {
+      return _then(_value.copyWith(personView: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$BannedUserCopyWith<$Res> implements $BannedUserCopyWith<$Res> {
-  factory _$BannedUserCopyWith(
-          _BannedUser value, $Res Function(_BannedUser) then) =
-      __$BannedUserCopyWithImpl<$Res>;
+abstract class _$BannedPersonCopyWith<$Res>
+    implements $BannedPersonCopyWith<$Res> {
+  factory _$BannedPersonCopyWith(
+          _BannedPerson value, $Res Function(_BannedPerson) then) =
+      __$BannedPersonCopyWithImpl<$Res>;
   @override
-  $Res call({UserViewSafe userView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned});
 
   @override
-  $UserViewSafeCopyWith<$Res> get userView;
+  $PersonViewSafeCopyWith<$Res> get personView;
 }
 
 /// @nodoc
-class __$BannedUserCopyWithImpl<$Res> extends _$BannedUserCopyWithImpl<$Res>
-    implements _$BannedUserCopyWith<$Res> {
-  __$BannedUserCopyWithImpl(
-      _BannedUser _value, $Res Function(_BannedUser) _then)
-      : super(_value, (v) => _then(v as _BannedUser));
+class __$BannedPersonCopyWithImpl<$Res> extends _$BannedPersonCopyWithImpl<$Res>
+    implements _$BannedPersonCopyWith<$Res> {
+  __$BannedPersonCopyWithImpl(
+      _BannedPerson _value, $Res Function(_BannedPerson) _then)
+      : super(_value, (v) => _then(v as _BannedPerson));
 
   @override
-  _BannedUser get _value => super._value as _BannedUser;
+  _BannedPerson get _value => super._value as _BannedPerson;
 
   @override
   $Res call({
-    Object? userView = freezed,
+    Object? personView = freezed,
     Object? banned = freezed,
   }) {
-    return _then(_BannedUser(
-      userView: userView == freezed
-          ? _value.userView
-          : userView // ignore: cast_nullable_to_non_nullable
-              as UserViewSafe,
+    return _then(_BannedPerson(
+      personView: personView == freezed
+          ? _value.personView
+          : personView // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -2667,29 +2671,29 @@ class __$BannedUserCopyWithImpl<$Res> extends _$BannedUserCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_BannedUser extends _BannedUser {
-  _$_BannedUser({required this.userView, required this.banned}) : super._();
+class _$_BannedPerson extends _BannedPerson {
+  _$_BannedPerson({required this.personView, required this.banned}) : super._();
 
-  factory _$_BannedUser.fromJson(Map<String, dynamic> json) =>
-      _$_$_BannedUserFromJson(json);
+  factory _$_BannedPerson.fromJson(Map<String, dynamic> json) =>
+      _$_$_BannedPersonFromJson(json);
 
   @override
-  final UserViewSafe userView;
+  final PersonViewSafe personView;
   @override
   final bool banned;
 
   @override
   String toString() {
-    return 'BannedUser(userView: $userView, banned: $banned)';
+    return 'BannedPerson(personView: $personView, banned: $banned)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BannedUser &&
-            (identical(other.userView, userView) ||
+        (other is _BannedPerson &&
+            (identical(other.personView, personView) ||
                 const DeepCollectionEquality()
-                    .equals(other.userView, userView)) &&
+                    .equals(other.personView, personView)) &&
             (identical(other.banned, banned) ||
                 const DeepCollectionEquality().equals(other.banned, banned)));
   }
@@ -2697,35 +2701,36 @@ class _$_BannedUser extends _BannedUser {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userView) ^
+      const DeepCollectionEquality().hash(personView) ^
       const DeepCollectionEquality().hash(banned);
 
   @JsonKey(ignore: true)
   @override
-  _$BannedUserCopyWith<_BannedUser> get copyWith =>
-      __$BannedUserCopyWithImpl<_BannedUser>(this, _$identity);
+  _$BannedPersonCopyWith<_BannedPerson> get copyWith =>
+      __$BannedPersonCopyWithImpl<_BannedPerson>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BannedUserToJson(this);
+    return _$_$_BannedPersonToJson(this);
   }
 }
 
-abstract class _BannedUser extends BannedUser {
-  factory _BannedUser({required UserViewSafe userView, required bool banned}) =
-      _$_BannedUser;
-  _BannedUser._() : super._();
+abstract class _BannedPerson extends BannedPerson {
+  factory _BannedPerson(
+      {required PersonViewSafe personView,
+      required bool banned}) = _$_BannedPerson;
+  _BannedPerson._() : super._();
 
-  factory _BannedUser.fromJson(Map<String, dynamic> json) =
-      _$_BannedUser.fromJson;
+  factory _BannedPerson.fromJson(Map<String, dynamic> json) =
+      _$_BannedPerson.fromJson;
 
   @override
-  UserViewSafe get userView => throw _privateConstructorUsedError;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
   bool get banned => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BannedUserCopyWith<_BannedUser> get copyWith =>
+  _$BannedPersonCopyWith<_BannedPerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -7,8 +7,8 @@ import '../models/jwt.dart';
 import '../models/views.dart';
 import '../query.dart';
 
-part 'user.freezed.dart';
-part 'user.g.dart';
+part 'person.freezed.dart';
+part 'person.g.dart';
 
 @freezed
 class Login with _$Login implements LemmyApiQuery<Jwt> {
@@ -118,12 +118,12 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
 }
 
 @freezed
-class GetUserDetails
-    with _$GetUserDetails
-    implements LemmyApiQuery<FullUserView> {
+class GetPersonDetails
+    with _$GetPersonDetails
+    implements LemmyApiQuery<FullPersonView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  const factory GetUserDetails({
-    int? userId,
+  const factory GetPersonDetails({
+    int? personId,
     String? username,
     required SortType sort,
     int? page,
@@ -131,11 +131,11 @@ class GetUserDetails
     int? communityId,
     required bool savedOnly,
     String? auth,
-  }) = _GetUserDetails;
+  }) = _GetPersonDetails;
 
-  const GetUserDetails._();
-  factory GetUserDetails.fromJson(Map<String, dynamic> json) =>
-      _$GetUserDetailsFromJson(json);
+  const GetPersonDetails._();
+  factory GetPersonDetails.fromJson(Map<String, dynamic> json) =>
+      _$GetPersonDetailsFromJson(json);
 
   @override
   String path() => '/user';
@@ -144,8 +144,8 @@ class GetUserDetails
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  FullUserView responseFactory(Map<String, dynamic> json) =>
-      FullUserView.fromJson(json);
+  FullPersonView responseFactory(Map<String, dynamic> json) =>
+      FullPersonView.fromJson(json);
 }
 
 @freezed
@@ -170,10 +170,10 @@ class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<Jwt> {
 }
 
 @freezed
-class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<UserViewSafe>> {
+class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<PersonViewSafe>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory AddAdmin({
-    required int userId,
+    required int personId,
     required bool added,
     required String auth,
   }) = _AddAdmin;
@@ -189,27 +189,27 @@ class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<UserViewSafe>> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  List<UserViewSafe> responseFactory(Map<String, dynamic> json) =>
+  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) =>
       (json['admins'] as List)
-          .map((dynamic e) => UserViewSafe.fromJson(e))
+          .map((dynamic e) => PersonViewSafe.fromJson(e))
           .toList();
 }
 
 @freezed
-class BanUser with _$BanUser implements LemmyApiQuery<BannedUser> {
+class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  const factory BanUser({
-    required int userId,
+  const factory BanPerson({
+    required int personId,
     required bool ban,
     required bool removeData,
     String? reason,
     int? expires,
     required String auth,
-  }) = _BanUser;
+  }) = _BanPerson;
 
-  const BanUser._();
-  factory BanUser.fromJson(Map<String, dynamic> json) =>
-      _$BanUserFromJson(json);
+  const BanPerson._();
+  factory BanPerson.fromJson(Map<String, dynamic> json) =>
+      _$BanPersonFromJson(json);
 
   @override
   String path() => '/user/ban';
@@ -218,8 +218,8 @@ class BanUser with _$BanUser implements LemmyApiQuery<BannedUser> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  BannedUser responseFactory(Map<String, dynamic> json) =>
-      BannedUser.fromJson(json);
+  BannedPerson responseFactory(Map<String, dynamic> json) =>
+      BannedPerson.fromJson(json);
 }
 
 @freezed
@@ -251,21 +251,21 @@ class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
 }
 
 @freezed
-class GetUserMentions
-    with _$GetUserMentions
-    implements LemmyApiQuery<List<UserMentionView>> {
+class GetPersonMentions
+    with _$GetPersonMentions
+    implements LemmyApiQuery<List<PersonMentionView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  const factory GetUserMentions({
+  const factory GetPersonMentions({
     required SortType sort,
     int? page,
     int? limit,
     required bool unreadOnly,
     required String auth,
-  }) = _GetUserMentions;
+  }) = _GetPersonMentions;
 
-  const GetUserMentions._();
-  factory GetUserMentions.fromJson(Map<String, dynamic> json) =>
-      _$GetUserMentionsFromJson(json);
+  const GetPersonMentions._();
+  factory GetPersonMentions.fromJson(Map<String, dynamic> json) =>
+      _$GetPersonMentionsFromJson(json);
 
   @override
   String path() => '/user/mention';
@@ -274,26 +274,26 @@ class GetUserMentions
   HttpMethod httpMethod() => HttpMethod.get;
 
   @override
-  List<UserMentionView> responseFactory(Map<String, dynamic> json) =>
+  List<PersonMentionView> responseFactory(Map<String, dynamic> json) =>
       (json['mentions'] as List)
-          .map((dynamic e) => UserMentionView.fromJson(e))
+          .map((dynamic e) => PersonMentionView.fromJson(e))
           .toList();
 }
 
 @freezed
-class MarkUserMentionAsRead
-    with _$MarkUserMentionAsRead
-    implements LemmyApiQuery<UserMentionView> {
+class MarkPersonMentionAsRead
+    with _$MarkPersonMentionAsRead
+    implements LemmyApiQuery<PersonMentionView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  const factory MarkUserMentionAsRead({
-    required int userMentionId,
+  const factory MarkPersonMentionAsRead({
+    required int personMentionId,
     required bool read,
     required String auth,
-  }) = _MarkUserMentionAsRead;
+  }) = _MarkPersonMentionAsRead;
 
-  const MarkUserMentionAsRead._();
-  factory MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =>
-      _$MarkUserMentionAsReadFromJson(json);
+  const MarkPersonMentionAsRead._();
+  factory MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =>
+      _$MarkPersonMentionAsReadFromJson(json);
 
   @override
   String path() => '/user/mention/mark_as_read';
@@ -302,8 +302,8 @@ class MarkUserMentionAsRead
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  UserMentionView responseFactory(Map<String, dynamic> json) =>
-      UserMentionView.fromJson(json['user_mention_view']);
+  PersonMentionView responseFactory(Map<String, dynamic> json) =>
+      PersonMentionView.fromJson(json['person_mention_view']);
 }
 
 @freezed

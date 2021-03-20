@@ -4,9 +4,9 @@ import '../models/jwt.dart';
 import '../models/views.dart';
 import 'comment.dart';
 import 'community.dart';
+import 'person.dart';
 import 'post.dart';
 import 'site.dart';
-import 'user.dart';
 
 // You might think, oh wow that is pretty stupid! To what I say: Yes!
 // Trust me, I tried, dart is such a constraining language
@@ -53,10 +53,11 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
       const ListCommunities(type: PostListingType.all, sort: SortType.hot)
           .responseFactory(json)),
   'BanFromCommunity': (json) => WsEventBanFromCommunity(const BanFromCommunity(
-          communityId: 0, userId: 0, ban: true, removeData: true, auth: '')
+          communityId: 0, personId: 0, ban: true, removeData: true, auth: '')
       .responseFactory(json)),
   'AddModToCommunity': (json) => WsEventAddModToCommunity(
-      const AddModToCommunity(communityId: 0, userId: 0, added: true, auth: '')
+      const AddModToCommunity(
+              communityId: 0, personId: 0, added: true, auth: '')
           .responseFactory(json)),
   'EditCommunity': (json) => WsEventEditCommunity(
       const EditCommunity(communityId: 0, title: '', nsfw: true, auth: '')
@@ -73,7 +74,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'GetFollowedCommunities': (json) => WsEventGetFollowedCommunities(
       const GetFollowedCommunities(auth: '').responseFactory(json)),
   'TransferCommunity': (json) => WsEventTransferCommunity(
-      const TransferCommunity(communityId: 0, userId: 0, auth: '')
+      const TransferCommunity(communityId: 0, personId: 0, auth: '')
           .responseFactory(json)),
   'GetPost': (json) =>
       WsEventGetPost(const GetPost(id: 0).responseFactory(json)),
@@ -131,7 +132,7 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
       .responseFactory(json)),
   'GetSite': (json) => WsEventGetSite(const GetSite().responseFactory(json)),
   'TransferSite': (json) => WsEventTransferSite(
-      const TransferSite(userId: 0, auth: '').responseFactory(json)),
+      const TransferSite(personId: 0, auth: '').responseFactory(json)),
   'GetSiteConfig': (json) =>
       WsEventGetSiteConfig(const GetSiteConfig(auth: '').responseFactory(json)),
   'SaveSiteConfig': (json) => WsEventSaveSiteConfig(
@@ -153,24 +154,24 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           sendNotificationsToEmail: true,
           auth: '')
       .responseFactory(json)),
-  'GetUserDetails': (json) => WsEventGetUserDetails(
-      const GetUserDetails(sort: SortType.hot, savedOnly: true)
+  'GetPersonDetails': (json) => WsEventGetPersonDetails(
+      const GetPersonDetails(sort: SortType.hot, savedOnly: true)
           .responseFactory(json)),
   'MarkAllAsRead': (json) =>
       WsEventMarkAllAsRead(const MarkAllAsRead(auth: '').responseFactory(json)),
   'AddAdmin': (json) => WsEventAddAdmin(
-      const AddAdmin(userId: 0, added: true, auth: '').responseFactory(json)),
-  'BanUser': (json) => WsEventBanUser(
-      const BanUser(userId: 0, ban: true, removeData: true, auth: '')
+      const AddAdmin(personId: 0, added: true, auth: '').responseFactory(json)),
+  'BanPerson': (json) => WsEventBanPerson(
+      const BanPerson(personId: 0, ban: true, removeData: true, auth: '')
           .responseFactory(json)),
   'GetReplies': (json) => WsEventGetReplies(
       const GetReplies(sort: SortType.hot, unreadOnly: true, auth: '')
           .responseFactory(json)),
-  'GetUserMentions': (json) => WsEventGetUserMentions(
-      const GetUserMentions(sort: SortType.hot, unreadOnly: true, auth: '')
+  'GetPersonMentions': (json) => WsEventGetPersonMentions(
+      const GetPersonMentions(sort: SortType.hot, unreadOnly: true, auth: '')
           .responseFactory(json)),
-  'MarkUserMentionAsRead': (json) => WsEventMarkUserMentionAsRead(
-      const MarkUserMentionAsRead(userMentionId: 0, read: true, auth: '')
+  'MarkPersonMentionAsRead': (json) => WsEventMarkPersonMentionAsRead(
+      const MarkPersonMentionAsRead(personMentionId: 0, read: true, auth: '')
           .responseFactory(json)),
   'DeleteAccount': (json) => WsEventDeleteAccount(
       const DeleteAccount(password: '', auth: '').responseFactory(json)),
@@ -399,32 +400,32 @@ class WsEventSaveUserSettings extends WsEvent<Jwt> {
   const WsEventSaveUserSettings(Jwt data) : super(data);
 }
 
-class WsEventGetUserDetails extends WsEvent<FullUserView> {
-  const WsEventGetUserDetails(FullUserView data) : super(data);
+class WsEventGetPersonDetails extends WsEvent<FullPersonView> {
+  const WsEventGetPersonDetails(FullPersonView data) : super(data);
 }
 
 class WsEventMarkAllAsRead extends WsEvent<Jwt> {
   const WsEventMarkAllAsRead(Jwt data) : super(data);
 }
 
-class WsEventAddAdmin extends WsEvent<List<UserViewSafe>> {
-  const WsEventAddAdmin(List<UserViewSafe> data) : super(data);
+class WsEventAddAdmin extends WsEvent<List<PersonViewSafe>> {
+  const WsEventAddAdmin(List<PersonViewSafe> data) : super(data);
 }
 
-class WsEventBanUser extends WsEvent<BannedUser> {
-  const WsEventBanUser(BannedUser data) : super(data);
+class WsEventBanPerson extends WsEvent<BannedPerson> {
+  const WsEventBanPerson(BannedPerson data) : super(data);
 }
 
 class WsEventGetReplies extends WsEvent<List<CommentView>> {
   const WsEventGetReplies(List<CommentView> data) : super(data);
 }
 
-class WsEventGetUserMentions extends WsEvent<List<UserMentionView>> {
-  const WsEventGetUserMentions(List<UserMentionView> data) : super(data);
+class WsEventGetPersonMentions extends WsEvent<List<PersonMentionView>> {
+  const WsEventGetPersonMentions(List<PersonMentionView> data) : super(data);
 }
 
-class WsEventMarkUserMentionAsRead extends WsEvent<UserMentionView> {
-  const WsEventMarkUserMentionAsRead(UserMentionView data) : super(data);
+class WsEventMarkPersonMentionAsRead extends WsEvent<PersonMentionView> {
+  const WsEventMarkPersonMentionAsRead(PersonMentionView data) : super(data);
 }
 
 class WsEventDeleteAccount extends WsEvent<Jwt> {

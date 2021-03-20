@@ -6,8 +6,8 @@ part of 'source.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserSafe _$_$_UserSafeFromJson(Map<String, dynamic> json) {
-  return _$_UserSafe(
+_$_PersonSafe _$_$_PersonSafeFromJson(Map<String, dynamic> json) {
+  return _$_PersonSafe(
     id: json['id'] as int,
     name: json['name'] as String,
     preferredUsername: json['preferred_username'] as String?,
@@ -17,16 +17,17 @@ _$_UserSafe _$_$_UserSafeFromJson(Map<String, dynamic> json) {
     published: const ForceUtcDateTime().fromJson(json['published'] as String),
     updated:
         const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
-    matrixUserId: json['matrix_user_id'] as String?,
     actorId: json['actor_id'] as String,
     bio: json['bio'] as String?,
     local: json['local'] as bool,
     banner: json['banner'] as String?,
     deleted: json['deleted'] as bool,
+    inboxUrl: json['inbox_url'] as String,
+    sharedInboxUrl: json['shared_inbox_url'] as String,
   )..instanceHost = json['instance_host'] as String;
 }
 
-Map<String, dynamic> _$_$_UserSafeToJson(_$_UserSafe instance) =>
+Map<String, dynamic> _$_$_PersonSafeToJson(_$_PersonSafe instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
@@ -37,26 +38,21 @@ Map<String, dynamic> _$_$_UserSafeToJson(_$_UserSafe instance) =>
       'banned': instance.banned,
       'published': const ForceUtcDateTime().toJson(instance.published),
       'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
-      'matrix_user_id': instance.matrixUserId,
       'actor_id': instance.actorId,
       'bio': instance.bio,
       'local': instance.local,
       'banner': instance.banner,
       'deleted': instance.deleted,
+      'inbox_url': instance.inboxUrl,
+      'shared_inbox_url': instance.sharedInboxUrl,
     };
 
-_$_UserSafeSettings _$_$_UserSafeSettingsFromJson(Map<String, dynamic> json) {
-  return _$_UserSafeSettings(
+_$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
+  return _$_LocalUserSettings(
     id: json['id'] as int,
-    name: json['name'] as String,
-    preferredUsername: json['preferred_username'] as String?,
+    personId: json['person_id'] as int,
     email: json['email'] as String?,
-    avatar: json['avatar'] as String?,
     admin: json['admin'] as bool,
-    banned: json['banned'] as bool,
-    published: const ForceUtcDateTime().fromJson(json['published'] as String),
-    updated:
-        const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
     defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
@@ -66,29 +62,17 @@ _$_UserSafeSettings _$_$_UserSafeSettingsFromJson(Map<String, dynamic> json) {
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
     matrixUserId: json['matrix_user_id'] as String?,
-    actorId: json['actor_id'] as String,
-    bio: json['bio'] as String?,
-    local: json['local'] as bool,
-    lastRefreshedAt:
-        const ForceUtcDateTime().fromJson(json['last_refreshed_at'] as String),
-    banner: json['banner'] as String?,
-    deleted: json['deleted'] as bool,
   )..instanceHost = json['instance_host'] as String;
 }
 
-Map<String, dynamic> _$_$_UserSafeSettingsToJson(
-        _$_UserSafeSettings instance) =>
+Map<String, dynamic> _$_$_LocalUserSettingsToJson(
+        _$_LocalUserSettings instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'name': instance.name,
-      'preferred_username': instance.preferredUsername,
+      'person_id': instance.personId,
       'email': instance.email,
-      'avatar': instance.avatar,
       'admin': instance.admin,
-      'banned': instance.banned,
-      'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
       'show_nsfw': instance.showNsfw,
       'theme': instance.theme,
       'default_sort_type': sortTypeToIndex(instance.defaultSortType),
@@ -98,13 +82,6 @@ Map<String, dynamic> _$_$_UserSafeSettingsToJson(
       'show_avatars': instance.showAvatars,
       'send_notifications_to_email': instance.sendNotificationsToEmail,
       'matrix_user_id': instance.matrixUserId,
-      'actor_id': instance.actorId,
-      'bio': instance.bio,
-      'local': instance.local,
-      'last_refreshed_at':
-          const ForceUtcDateTime().toJson(instance.lastRefreshedAt),
-      'banner': instance.banner,
-      'deleted': instance.deleted,
     };
 
 _$_Site _$_$_SiteFromJson(Map<String, dynamic> json) {
@@ -255,7 +232,7 @@ _$_PasswordResetRequest _$_$_PasswordResetRequestFromJson(
     Map<String, dynamic> json) {
   return _$_PasswordResetRequest(
     id: json['id'] as int,
-    userId: json['user_id'] as int,
+    localUserId: json['local_user_id'] as int,
     tokenEncrypted: json['token_encrypted'] as String,
     published: const ForceUtcDateTime().fromJson(json['published'] as String),
   )..instanceHost = json['instance_host'] as String;
@@ -266,7 +243,7 @@ Map<String, dynamic> _$_$_PasswordResetRequestToJson(
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'user_id': instance.userId,
+      'local_user_id': instance.localUserId,
       'token_encrypted': instance.tokenEncrypted,
       'published': const ForceUtcDateTime().toJson(instance.published),
     };
@@ -274,7 +251,7 @@ Map<String, dynamic> _$_$_PasswordResetRequestToJson(
 _$_ModRemovePost _$_$_ModRemovePostFromJson(Map<String, dynamic> json) {
   return _$_ModRemovePost(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
     postId: json['post_id'] as int,
     reason: json['reason'] as String?,
     removed: json['removed'] as bool?,
@@ -286,7 +263,7 @@ Map<String, dynamic> _$_$_ModRemovePostToJson(_$_ModRemovePost instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
+      'mod_person_id': instance.modPersonId,
       'post_id': instance.postId,
       'reason': instance.reason,
       'removed': instance.removed,
@@ -296,7 +273,7 @@ Map<String, dynamic> _$_$_ModRemovePostToJson(_$_ModRemovePost instance) =>
 _$_ModLockPost _$_$_ModLockPostFromJson(Map<String, dynamic> json) {
   return _$_ModLockPost(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
     postId: json['post_id'] as int,
     locked: json['locked'] as bool?,
     when: const ForceUtcDateTime().fromJson(json['when_'] as String),
@@ -307,7 +284,7 @@ Map<String, dynamic> _$_$_ModLockPostToJson(_$_ModLockPost instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
+      'mod_person_id': instance.modPersonId,
       'post_id': instance.postId,
       'locked': instance.locked,
       'when_': const ForceUtcDateTime().toJson(instance.when),
@@ -316,7 +293,7 @@ Map<String, dynamic> _$_$_ModLockPostToJson(_$_ModLockPost instance) =>
 _$_ModStickyPost _$_$_ModStickyPostFromJson(Map<String, dynamic> json) {
   return _$_ModStickyPost(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
     postId: json['post_id'] as int,
     stickied: json['stickied'] as bool?,
     when: const ForceUtcDateTime().fromJson(json['when_'] as String),
@@ -327,7 +304,7 @@ Map<String, dynamic> _$_$_ModStickyPostToJson(_$_ModStickyPost instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
+      'mod_person_id': instance.modPersonId,
       'post_id': instance.postId,
       'stickied': instance.stickied,
       'when_': const ForceUtcDateTime().toJson(instance.when),
@@ -336,7 +313,7 @@ Map<String, dynamic> _$_$_ModStickyPostToJson(_$_ModStickyPost instance) =>
 _$_ModRemoveComment _$_$_ModRemoveCommentFromJson(Map<String, dynamic> json) {
   return _$_ModRemoveComment(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
     commentId: json['comment_id'] as int,
     reason: json['reason'] as String?,
     removed: json['removed'] as bool?,
@@ -349,7 +326,7 @@ Map<String, dynamic> _$_$_ModRemoveCommentToJson(
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
+      'mod_person_id': instance.modPersonId,
       'comment_id': instance.commentId,
       'reason': instance.reason,
       'removed': instance.removed,
@@ -360,7 +337,7 @@ _$_ModRemoveCommunity _$_$_ModRemoveCommunityFromJson(
     Map<String, dynamic> json) {
   return _$_ModRemoveCommunity(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
     communityId: json['community_id'] as int,
     reason: json['reason'] as String?,
     removed: json['removed'] as bool?,
@@ -375,7 +352,7 @@ Map<String, dynamic> _$_$_ModRemoveCommunityToJson(
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
+      'mod_person_id': instance.modPersonId,
       'community_id': instance.communityId,
       'reason': instance.reason,
       'removed': instance.removed,
@@ -387,8 +364,8 @@ _$_ModBanFromCommunity _$_$_ModBanFromCommunityFromJson(
     Map<String, dynamic> json) {
   return _$_ModBanFromCommunity(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
-    otherUserId: json['other_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
+    otherPersonId: json['other_person_id'] as int,
     communityId: json['community_id'] as int,
     reason: json['reason'] as String?,
     banned: json['banned'] as bool?,
@@ -403,8 +380,8 @@ Map<String, dynamic> _$_$_ModBanFromCommunityToJson(
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
-      'other_user_id': instance.otherUserId,
+      'mod_person_id': instance.modPersonId,
+      'other_person_id': instance.otherPersonId,
       'community_id': instance.communityId,
       'reason': instance.reason,
       'banned': instance.banned,
@@ -415,8 +392,8 @@ Map<String, dynamic> _$_$_ModBanFromCommunityToJson(
 _$_ModBan _$_$_ModBanFromJson(Map<String, dynamic> json) {
   return _$_ModBan(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
-    otherUserId: json['other_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
+    otherPersonId: json['other_person_id'] as int,
     reason: json['reason'] as String?,
     banned: json['banned'] as bool?,
     expires:
@@ -428,8 +405,8 @@ _$_ModBan _$_$_ModBanFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_ModBanToJson(_$_ModBan instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
-      'other_user_id': instance.otherUserId,
+      'mod_person_id': instance.modPersonId,
+      'other_person_id': instance.otherPersonId,
       'reason': instance.reason,
       'banned': instance.banned,
       'expires': const ForceUtcDateTimeNullable().toJson(instance.expires),
@@ -439,8 +416,8 @@ Map<String, dynamic> _$_$_ModBanToJson(_$_ModBan instance) => <String, dynamic>{
 _$_ModAddCommunity _$_$_ModAddCommunityFromJson(Map<String, dynamic> json) {
   return _$_ModAddCommunity(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
-    otherUserId: json['other_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
+    otherPersonId: json['other_person_id'] as int,
     communityId: json['community_id'] as int,
     removed: json['removed'] as bool?,
     when: const ForceUtcDateTime().fromJson(json['when_'] as String),
@@ -451,8 +428,8 @@ Map<String, dynamic> _$_$_ModAddCommunityToJson(_$_ModAddCommunity instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
-      'other_user_id': instance.otherUserId,
+      'mod_person_id': instance.modPersonId,
+      'other_person_id': instance.otherPersonId,
       'community_id': instance.communityId,
       'removed': instance.removed,
       'when_': const ForceUtcDateTime().toJson(instance.when),
@@ -461,8 +438,8 @@ Map<String, dynamic> _$_$_ModAddCommunityToJson(_$_ModAddCommunity instance) =>
 _$_ModAdd _$_$_ModAddFromJson(Map<String, dynamic> json) {
   return _$_ModAdd(
     id: json['id'] as int,
-    modUserId: json['mod_user_id'] as int,
-    otherUserId: json['other_user_id'] as int,
+    modPersonId: json['mod_person_id'] as int,
+    otherPersonId: json['other_person_id'] as int,
     removed: json['removed'] as bool?,
     when: const ForceUtcDateTime().fromJson(json['when_'] as String),
   )..instanceHost = json['instance_host'] as String;
@@ -471,8 +448,8 @@ _$_ModAdd _$_$_ModAddFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_ModAddToJson(_$_ModAdd instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
-      'mod_user_id': instance.modUserId,
-      'other_user_id': instance.otherUserId,
+      'mod_person_id': instance.modPersonId,
+      'other_person_id': instance.otherPersonId,
       'removed': instance.removed,
       'when_': const ForceUtcDateTime().toJson(instance.when),
     };
@@ -580,8 +557,8 @@ Map<String, dynamic> _$_$_CommentToJson(_$_Comment instance) =>
       'local': instance.local,
     };
 
-_$_UserMention _$_$_UserMentionFromJson(Map<String, dynamic> json) {
-  return _$_UserMention(
+_$_PersonMention _$_$_PersonMentionFromJson(Map<String, dynamic> json) {
+  return _$_PersonMention(
     id: json['id'] as int,
     recipientId: json['recipient_id'] as int,
     commentId: json['comment_id'] as int,
@@ -590,7 +567,7 @@ _$_UserMention _$_$_UserMentionFromJson(Map<String, dynamic> json) {
   )..instanceHost = json['instance_host'] as String;
 }
 
-Map<String, dynamic> _$_$_UserMentionToJson(_$_UserMention instance) =>
+Map<String, dynamic> _$_$_PersonMentionToJson(_$_PersonMention instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,

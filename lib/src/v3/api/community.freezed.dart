@@ -771,7 +771,7 @@ class _$BanFromCommunityTearOff {
 
   _BanFromCommunity call(
       {required int communityId,
-      required int userId,
+      required int personId,
       required bool ban,
       required bool removeData,
       String? reason,
@@ -779,7 +779,7 @@ class _$BanFromCommunityTearOff {
       required String auth}) {
     return _BanFromCommunity(
       communityId: communityId,
-      userId: userId,
+      personId: personId,
       ban: ban,
       removeData: removeData,
       reason: reason,
@@ -799,7 +799,7 @@ const $BanFromCommunity = _$BanFromCommunityTearOff();
 /// @nodoc
 mixin _$BanFromCommunity {
   int get communityId => throw _privateConstructorUsedError;
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   bool get ban => throw _privateConstructorUsedError;
   bool get removeData => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
@@ -819,7 +819,7 @@ abstract class $BanFromCommunityCopyWith<$Res> {
       _$BanFromCommunityCopyWithImpl<$Res>;
   $Res call(
       {int communityId,
-      int userId,
+      int personId,
       bool ban,
       bool removeData,
       String? reason,
@@ -839,7 +839,7 @@ class _$BanFromCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? ban = freezed,
     Object? removeData = freezed,
     Object? reason = freezed,
@@ -851,9 +851,9 @@ class _$BanFromCommunityCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       ban: ban == freezed
           ? _value.ban
@@ -888,7 +888,7 @@ abstract class _$BanFromCommunityCopyWith<$Res>
   @override
   $Res call(
       {int communityId,
-      int userId,
+      int personId,
       bool ban,
       bool removeData,
       String? reason,
@@ -910,7 +910,7 @@ class __$BanFromCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? ban = freezed,
     Object? removeData = freezed,
     Object? reason = freezed,
@@ -922,9 +922,9 @@ class __$BanFromCommunityCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       ban: ban == freezed
           ? _value.ban
@@ -956,7 +956,7 @@ class __$BanFromCommunityCopyWithImpl<$Res>
 class _$_BanFromCommunity extends _BanFromCommunity {
   const _$_BanFromCommunity(
       {required this.communityId,
-      required this.userId,
+      required this.personId,
       required this.ban,
       required this.removeData,
       this.reason,
@@ -970,7 +970,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
   @override
   final int communityId;
   @override
-  final int userId;
+  final int personId;
   @override
   final bool ban;
   @override
@@ -984,7 +984,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 
   @override
   String toString() {
-    return 'BanFromCommunity(communityId: $communityId, userId: $userId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
+    return 'BanFromCommunity(communityId: $communityId, personId: $personId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
   }
 
   @override
@@ -994,8 +994,9 @@ class _$_BanFromCommunity extends _BanFromCommunity {
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.ban, ban) ||
                 const DeepCollectionEquality().equals(other.ban, ban)) &&
             (identical(other.removeData, removeData) ||
@@ -1014,7 +1015,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(ban) ^
       const DeepCollectionEquality().hash(removeData) ^
       const DeepCollectionEquality().hash(reason) ^
@@ -1035,7 +1036,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 abstract class _BanFromCommunity extends BanFromCommunity {
   const factory _BanFromCommunity(
       {required int communityId,
-      required int userId,
+      required int personId,
       required bool ban,
       required bool removeData,
       String? reason,
@@ -1049,7 +1050,7 @@ abstract class _BanFromCommunity extends BanFromCommunity {
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   bool get ban => throw _privateConstructorUsedError;
   @override
@@ -1076,12 +1077,12 @@ class _$AddModToCommunityTearOff {
 
   _AddModToCommunity call(
       {required int communityId,
-      required int userId,
+      required int personId,
       required bool added,
       required String auth}) {
     return _AddModToCommunity(
       communityId: communityId,
-      userId: userId,
+      personId: personId,
       added: added,
       auth: auth,
     );
@@ -1098,7 +1099,7 @@ const $AddModToCommunity = _$AddModToCommunityTearOff();
 /// @nodoc
 mixin _$AddModToCommunity {
   int get communityId => throw _privateConstructorUsedError;
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   bool get added => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
@@ -1113,7 +1114,7 @@ abstract class $AddModToCommunityCopyWith<$Res> {
   factory $AddModToCommunityCopyWith(
           AddModToCommunity value, $Res Function(AddModToCommunity) then) =
       _$AddModToCommunityCopyWithImpl<$Res>;
-  $Res call({int communityId, int userId, bool added, String auth});
+  $Res call({int communityId, int personId, bool added, String auth});
 }
 
 /// @nodoc
@@ -1128,7 +1129,7 @@ class _$AddModToCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? added = freezed,
     Object? auth = freezed,
   }) {
@@ -1137,9 +1138,9 @@ class _$AddModToCommunityCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       added: added == freezed
           ? _value.added
@@ -1160,7 +1161,7 @@ abstract class _$AddModToCommunityCopyWith<$Res>
           _AddModToCommunity value, $Res Function(_AddModToCommunity) then) =
       __$AddModToCommunityCopyWithImpl<$Res>;
   @override
-  $Res call({int communityId, int userId, bool added, String auth});
+  $Res call({int communityId, int personId, bool added, String auth});
 }
 
 /// @nodoc
@@ -1177,7 +1178,7 @@ class __$AddModToCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? added = freezed,
     Object? auth = freezed,
   }) {
@@ -1186,9 +1187,9 @@ class __$AddModToCommunityCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       added: added == freezed
           ? _value.added
@@ -1208,7 +1209,7 @@ class __$AddModToCommunityCopyWithImpl<$Res>
 class _$_AddModToCommunity extends _AddModToCommunity {
   const _$_AddModToCommunity(
       {required this.communityId,
-      required this.userId,
+      required this.personId,
       required this.added,
       required this.auth})
       : super._();
@@ -1219,7 +1220,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
   @override
   final int communityId;
   @override
-  final int userId;
+  final int personId;
   @override
   final bool added;
   @override
@@ -1227,7 +1228,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 
   @override
   String toString() {
-    return 'AddModToCommunity(communityId: $communityId, userId: $userId, added: $added, auth: $auth)';
+    return 'AddModToCommunity(communityId: $communityId, personId: $personId, added: $added, auth: $auth)';
   }
 
   @override
@@ -1237,8 +1238,9 @@ class _$_AddModToCommunity extends _AddModToCommunity {
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.added, added) ||
                 const DeepCollectionEquality().equals(other.added, added)) &&
             (identical(other.auth, auth) ||
@@ -1249,7 +1251,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(added) ^
       const DeepCollectionEquality().hash(auth);
 
@@ -1267,7 +1269,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 abstract class _AddModToCommunity extends AddModToCommunity {
   const factory _AddModToCommunity(
       {required int communityId,
-      required int userId,
+      required int personId,
       required bool added,
       required String auth}) = _$_AddModToCommunity;
   const _AddModToCommunity._() : super._();
@@ -1278,7 +1280,7 @@ abstract class _AddModToCommunity extends AddModToCommunity {
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   bool get added => throw _privateConstructorUsedError;
   @override
@@ -2408,10 +2410,10 @@ class _$TransferCommunityTearOff {
   const _$TransferCommunityTearOff();
 
   _TransferCommunity call(
-      {required int communityId, required int userId, required String auth}) {
+      {required int communityId, required int personId, required String auth}) {
     return _TransferCommunity(
       communityId: communityId,
-      userId: userId,
+      personId: personId,
       auth: auth,
     );
   }
@@ -2427,7 +2429,7 @@ const $TransferCommunity = _$TransferCommunityTearOff();
 /// @nodoc
 mixin _$TransferCommunity {
   int get communityId => throw _privateConstructorUsedError;
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2441,7 +2443,7 @@ abstract class $TransferCommunityCopyWith<$Res> {
   factory $TransferCommunityCopyWith(
           TransferCommunity value, $Res Function(TransferCommunity) then) =
       _$TransferCommunityCopyWithImpl<$Res>;
-  $Res call({int communityId, int userId, String auth});
+  $Res call({int communityId, int personId, String auth});
 }
 
 /// @nodoc
@@ -2456,7 +2458,7 @@ class _$TransferCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2464,9 +2466,9 @@ class _$TransferCommunityCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       auth: auth == freezed
           ? _value.auth
@@ -2483,7 +2485,7 @@ abstract class _$TransferCommunityCopyWith<$Res>
           _TransferCommunity value, $Res Function(_TransferCommunity) then) =
       __$TransferCommunityCopyWithImpl<$Res>;
   @override
-  $Res call({int communityId, int userId, String auth});
+  $Res call({int communityId, int personId, String auth});
 }
 
 /// @nodoc
@@ -2500,7 +2502,7 @@ class __$TransferCommunityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityId = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_TransferCommunity(
@@ -2508,9 +2510,9 @@ class __$TransferCommunityCopyWithImpl<$Res>
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       auth: auth == freezed
           ? _value.auth
@@ -2525,7 +2527,7 @@ class __$TransferCommunityCopyWithImpl<$Res>
 /// @nodoc
 class _$_TransferCommunity extends _TransferCommunity {
   const _$_TransferCommunity(
-      {required this.communityId, required this.userId, required this.auth})
+      {required this.communityId, required this.personId, required this.auth})
       : super._();
 
   factory _$_TransferCommunity.fromJson(Map<String, dynamic> json) =>
@@ -2534,13 +2536,13 @@ class _$_TransferCommunity extends _TransferCommunity {
   @override
   final int communityId;
   @override
-  final int userId;
+  final int personId;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'TransferCommunity(communityId: $communityId, userId: $userId, auth: $auth)';
+    return 'TransferCommunity(communityId: $communityId, personId: $personId, auth: $auth)';
   }
 
   @override
@@ -2550,8 +2552,9 @@ class _$_TransferCommunity extends _TransferCommunity {
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -2560,7 +2563,7 @@ class _$_TransferCommunity extends _TransferCommunity {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -2577,7 +2580,7 @@ class _$_TransferCommunity extends _TransferCommunity {
 abstract class _TransferCommunity extends TransferCommunity {
   const factory _TransferCommunity(
       {required int communityId,
-      required int userId,
+      required int personId,
       required String auth}) = _$_TransferCommunity;
   const _TransferCommunity._() : super._();
 
@@ -2587,7 +2590,7 @@ abstract class _TransferCommunity extends TransferCommunity {
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override

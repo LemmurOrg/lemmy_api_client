@@ -12,24 +12,24 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-UserAggregates _$UserAggregatesFromJson(Map<String, dynamic> json) {
-  return _UserAggregates.fromJson(json);
+PersonAggregates _$PersonAggregatesFromJson(Map<String, dynamic> json) {
+  return _PersonAggregates.fromJson(json);
 }
 
 /// @nodoc
-class _$UserAggregatesTearOff {
-  const _$UserAggregatesTearOff();
+class _$PersonAggregatesTearOff {
+  const _$PersonAggregatesTearOff();
 
-  _UserAggregates call(
+  _PersonAggregates call(
       {required int id,
-      required int userId,
+      required int personId,
       required int postCount,
       required int postScore,
       required int commentCount,
       required int commentScore}) {
-    return _UserAggregates(
+    return _PersonAggregates(
       id: id,
-      userId: userId,
+      personId: personId,
       postCount: postCount,
       postScore: postScore,
       commentCount: commentCount,
@@ -37,18 +37,18 @@ class _$UserAggregatesTearOff {
     );
   }
 
-  UserAggregates fromJson(Map<String, Object> json) {
-    return UserAggregates.fromJson(json);
+  PersonAggregates fromJson(Map<String, Object> json) {
+    return PersonAggregates.fromJson(json);
   }
 }
 
 /// @nodoc
-const $UserAggregates = _$UserAggregatesTearOff();
+const $PersonAggregates = _$PersonAggregatesTearOff();
 
 /// @nodoc
-mixin _$UserAggregates {
+mixin _$PersonAggregates {
   int get id => throw _privateConstructorUsedError;
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   int get postCount => throw _privateConstructorUsedError;
   int get postScore => throw _privateConstructorUsedError;
   int get commentCount => throw _privateConstructorUsedError;
@@ -56,18 +56,18 @@ mixin _$UserAggregates {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $UserAggregatesCopyWith<UserAggregates> get copyWith =>
+  $PersonAggregatesCopyWith<PersonAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserAggregatesCopyWith<$Res> {
-  factory $UserAggregatesCopyWith(
-          UserAggregates value, $Res Function(UserAggregates) then) =
-      _$UserAggregatesCopyWithImpl<$Res>;
+abstract class $PersonAggregatesCopyWith<$Res> {
+  factory $PersonAggregatesCopyWith(
+          PersonAggregates value, $Res Function(PersonAggregates) then) =
+      _$PersonAggregatesCopyWithImpl<$Res>;
   $Res call(
       {int id,
-      int userId,
+      int personId,
       int postCount,
       int postScore,
       int commentCount,
@@ -75,18 +75,18 @@ abstract class $UserAggregatesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserAggregatesCopyWithImpl<$Res>
-    implements $UserAggregatesCopyWith<$Res> {
-  _$UserAggregatesCopyWithImpl(this._value, this._then);
+class _$PersonAggregatesCopyWithImpl<$Res>
+    implements $PersonAggregatesCopyWith<$Res> {
+  _$PersonAggregatesCopyWithImpl(this._value, this._then);
 
-  final UserAggregates _value;
+  final PersonAggregates _value;
   // ignore: unused_field
-  final $Res Function(UserAggregates) _then;
+  final $Res Function(PersonAggregates) _then;
 
   @override
   $Res call({
     Object? id = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? postCount = freezed,
     Object? postScore = freezed,
     Object? commentCount = freezed,
@@ -97,9 +97,9 @@ class _$UserAggregatesCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       postCount: postCount == freezed
           ? _value.postCount
@@ -122,15 +122,15 @@ class _$UserAggregatesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UserAggregatesCopyWith<$Res>
-    implements $UserAggregatesCopyWith<$Res> {
-  factory _$UserAggregatesCopyWith(
-          _UserAggregates value, $Res Function(_UserAggregates) then) =
-      __$UserAggregatesCopyWithImpl<$Res>;
+abstract class _$PersonAggregatesCopyWith<$Res>
+    implements $PersonAggregatesCopyWith<$Res> {
+  factory _$PersonAggregatesCopyWith(
+          _PersonAggregates value, $Res Function(_PersonAggregates) then) =
+      __$PersonAggregatesCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
-      int userId,
+      int personId,
       int postCount,
       int postScore,
       int commentCount,
@@ -138,33 +138,33 @@ abstract class _$UserAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$UserAggregatesCopyWithImpl<$Res>
-    extends _$UserAggregatesCopyWithImpl<$Res>
-    implements _$UserAggregatesCopyWith<$Res> {
-  __$UserAggregatesCopyWithImpl(
-      _UserAggregates _value, $Res Function(_UserAggregates) _then)
-      : super(_value, (v) => _then(v as _UserAggregates));
+class __$PersonAggregatesCopyWithImpl<$Res>
+    extends _$PersonAggregatesCopyWithImpl<$Res>
+    implements _$PersonAggregatesCopyWith<$Res> {
+  __$PersonAggregatesCopyWithImpl(
+      _PersonAggregates _value, $Res Function(_PersonAggregates) _then)
+      : super(_value, (v) => _then(v as _PersonAggregates));
 
   @override
-  _UserAggregates get _value => super._value as _UserAggregates;
+  _PersonAggregates get _value => super._value as _PersonAggregates;
 
   @override
   $Res call({
     Object? id = freezed,
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? postCount = freezed,
     Object? postScore = freezed,
     Object? commentCount = freezed,
     Object? commentScore = freezed,
   }) {
-    return _then(_UserAggregates(
+    return _then(_PersonAggregates(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       postCount: postCount == freezed
           ? _value.postCount
@@ -189,23 +189,23 @@ class __$UserAggregatesCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 
 /// @nodoc
-class _$_UserAggregates extends _UserAggregates {
-  const _$_UserAggregates(
+class _$_PersonAggregates extends _PersonAggregates {
+  const _$_PersonAggregates(
       {required this.id,
-      required this.userId,
+      required this.personId,
       required this.postCount,
       required this.postScore,
       required this.commentCount,
       required this.commentScore})
       : super._();
 
-  factory _$_UserAggregates.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserAggregatesFromJson(json);
+  factory _$_PersonAggregates.fromJson(Map<String, dynamic> json) =>
+      _$_$_PersonAggregatesFromJson(json);
 
   @override
   final int id;
   @override
-  final int userId;
+  final int personId;
   @override
   final int postCount;
   @override
@@ -217,17 +217,18 @@ class _$_UserAggregates extends _UserAggregates {
 
   @override
   String toString() {
-    return 'UserAggregates(id: $id, userId: $userId, postCount: $postCount, postScore: $postScore, commentCount: $commentCount, commentScore: $commentScore)';
+    return 'PersonAggregates(id: $id, personId: $personId, postCount: $postCount, postScore: $postScore, commentCount: $commentCount, commentScore: $commentScore)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UserAggregates &&
+        (other is _PersonAggregates &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.postCount, postCount) ||
                 const DeepCollectionEquality()
                     .equals(other.postCount, postCount)) &&
@@ -246,7 +247,7 @@ class _$_UserAggregates extends _UserAggregates {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(postCount) ^
       const DeepCollectionEquality().hash(postScore) ^
       const DeepCollectionEquality().hash(commentCount) ^
@@ -254,32 +255,32 @@ class _$_UserAggregates extends _UserAggregates {
 
   @JsonKey(ignore: true)
   @override
-  _$UserAggregatesCopyWith<_UserAggregates> get copyWith =>
-      __$UserAggregatesCopyWithImpl<_UserAggregates>(this, _$identity);
+  _$PersonAggregatesCopyWith<_PersonAggregates> get copyWith =>
+      __$PersonAggregatesCopyWithImpl<_PersonAggregates>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserAggregatesToJson(this);
+    return _$_$_PersonAggregatesToJson(this);
   }
 }
 
-abstract class _UserAggregates extends UserAggregates {
-  const factory _UserAggregates(
+abstract class _PersonAggregates extends PersonAggregates {
+  const factory _PersonAggregates(
       {required int id,
-      required int userId,
+      required int personId,
       required int postCount,
       required int postScore,
       required int commentCount,
-      required int commentScore}) = _$_UserAggregates;
-  const _UserAggregates._() : super._();
+      required int commentScore}) = _$_PersonAggregates;
+  const _PersonAggregates._() : super._();
 
-  factory _UserAggregates.fromJson(Map<String, dynamic> json) =
-      _$_UserAggregates.fromJson;
+  factory _PersonAggregates.fromJson(Map<String, dynamic> json) =
+      _$_PersonAggregates.fromJson;
 
   @override
   int get id => throw _privateConstructorUsedError;
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   int get postCount => throw _privateConstructorUsedError;
   @override
@@ -290,7 +291,7 @@ abstract class _UserAggregates extends UserAggregates {
   int get commentScore => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserAggregatesCopyWith<_UserAggregates> get copyWith =>
+  _$PersonAggregatesCopyWith<_PersonAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

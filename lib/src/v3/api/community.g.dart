@@ -92,7 +92,7 @@ Map<String, dynamic> _$_$_ListCommunitiesToJson(_$_ListCommunities instance) {
 _$_BanFromCommunity _$_$_BanFromCommunityFromJson(Map<String, dynamic> json) {
   return _$_BanFromCommunity(
     communityId: json['community_id'] as int,
-    userId: json['user_id'] as int,
+    personId: json['person_id'] as int,
     ban: json['ban'] as bool,
     removeData: json['remove_data'] as bool,
     reason: json['reason'] as String?,
@@ -104,7 +104,7 @@ _$_BanFromCommunity _$_$_BanFromCommunityFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
   final val = <String, dynamic>{
     'community_id': instance.communityId,
-    'user_id': instance.userId,
+    'person_id': instance.personId,
     'ban': instance.ban,
     'remove_data': instance.removeData,
   };
@@ -124,7 +124,7 @@ Map<String, dynamic> _$_$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
 _$_AddModToCommunity _$_$_AddModToCommunityFromJson(Map<String, dynamic> json) {
   return _$_AddModToCommunity(
     communityId: json['community_id'] as int,
-    userId: json['user_id'] as int,
+    personId: json['person_id'] as int,
     added: json['added'] as bool,
     auth: json['auth'] as String,
   );
@@ -134,7 +134,7 @@ Map<String, dynamic> _$_$_AddModToCommunityToJson(
         _$_AddModToCommunity instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
-      'user_id': instance.userId,
+      'person_id': instance.personId,
       'added': instance.added,
       'auth': instance.auth,
     };
@@ -245,7 +245,7 @@ Map<String, dynamic> _$_$_GetFollowedCommunitiesToJson(
 _$_TransferCommunity _$_$_TransferCommunityFromJson(Map<String, dynamic> json) {
   return _$_TransferCommunity(
     communityId: json['community_id'] as int,
-    userId: json['user_id'] as int,
+    personId: json['person_id'] as int,
     auth: json['auth'] as String,
   );
 }
@@ -254,6 +254,6 @@ Map<String, dynamic> _$_$_TransferCommunityToJson(
         _$_TransferCommunity instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
-      'user_id': instance.userId,
+      'person_id': instance.personId,
       'auth': instance.auth,
     };

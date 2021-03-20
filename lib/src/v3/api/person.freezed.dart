@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'user.dart';
+part of 'person.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -1144,16 +1144,16 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       throw _privateConstructorUsedError;
 }
 
-GetUserDetails _$GetUserDetailsFromJson(Map<String, dynamic> json) {
-  return _GetUserDetails.fromJson(json);
+GetPersonDetails _$GetPersonDetailsFromJson(Map<String, dynamic> json) {
+  return _GetPersonDetails.fromJson(json);
 }
 
 /// @nodoc
-class _$GetUserDetailsTearOff {
-  const _$GetUserDetailsTearOff();
+class _$GetPersonDetailsTearOff {
+  const _$GetPersonDetailsTearOff();
 
-  _GetUserDetails call(
-      {int? userId,
+  _GetPersonDetails call(
+      {int? personId,
       String? username,
       required SortType sort,
       int? page,
@@ -1161,8 +1161,8 @@ class _$GetUserDetailsTearOff {
       int? communityId,
       required bool savedOnly,
       String? auth}) {
-    return _GetUserDetails(
-      userId: userId,
+    return _GetPersonDetails(
+      personId: personId,
       username: username,
       sort: sort,
       page: page,
@@ -1173,17 +1173,17 @@ class _$GetUserDetailsTearOff {
     );
   }
 
-  GetUserDetails fromJson(Map<String, Object> json) {
-    return GetUserDetails.fromJson(json);
+  GetPersonDetails fromJson(Map<String, Object> json) {
+    return GetPersonDetails.fromJson(json);
   }
 }
 
 /// @nodoc
-const $GetUserDetails = _$GetUserDetailsTearOff();
+const $GetPersonDetails = _$GetPersonDetailsTearOff();
 
 /// @nodoc
-mixin _$GetUserDetails {
-  int? get userId => throw _privateConstructorUsedError;
+mixin _$GetPersonDetails {
+  int? get personId => throw _privateConstructorUsedError;
   String? get username => throw _privateConstructorUsedError;
   SortType get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
@@ -1194,17 +1194,17 @@ mixin _$GetUserDetails {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetUserDetailsCopyWith<GetUserDetails> get copyWith =>
+  $GetPersonDetailsCopyWith<GetPersonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetUserDetailsCopyWith<$Res> {
-  factory $GetUserDetailsCopyWith(
-          GetUserDetails value, $Res Function(GetUserDetails) then) =
-      _$GetUserDetailsCopyWithImpl<$Res>;
+abstract class $GetPersonDetailsCopyWith<$Res> {
+  factory $GetPersonDetailsCopyWith(
+          GetPersonDetails value, $Res Function(GetPersonDetails) then) =
+      _$GetPersonDetailsCopyWithImpl<$Res>;
   $Res call(
-      {int? userId,
+      {int? personId,
       String? username,
       SortType sort,
       int? page,
@@ -1215,17 +1215,17 @@ abstract class $GetUserDetailsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetUserDetailsCopyWithImpl<$Res>
-    implements $GetUserDetailsCopyWith<$Res> {
-  _$GetUserDetailsCopyWithImpl(this._value, this._then);
+class _$GetPersonDetailsCopyWithImpl<$Res>
+    implements $GetPersonDetailsCopyWith<$Res> {
+  _$GetPersonDetailsCopyWithImpl(this._value, this._then);
 
-  final GetUserDetails _value;
+  final GetPersonDetails _value;
   // ignore: unused_field
-  final $Res Function(GetUserDetails) _then;
+  final $Res Function(GetPersonDetails) _then;
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? username = freezed,
     Object? sort = freezed,
     Object? page = freezed,
@@ -1235,9 +1235,9 @@ class _$GetUserDetailsCopyWithImpl<$Res>
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int?,
       username: username == freezed
           ? _value.username
@@ -1272,14 +1272,14 @@ class _$GetUserDetailsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetUserDetailsCopyWith<$Res>
-    implements $GetUserDetailsCopyWith<$Res> {
-  factory _$GetUserDetailsCopyWith(
-          _GetUserDetails value, $Res Function(_GetUserDetails) then) =
-      __$GetUserDetailsCopyWithImpl<$Res>;
+abstract class _$GetPersonDetailsCopyWith<$Res>
+    implements $GetPersonDetailsCopyWith<$Res> {
+  factory _$GetPersonDetailsCopyWith(
+          _GetPersonDetails value, $Res Function(_GetPersonDetails) then) =
+      __$GetPersonDetailsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? userId,
+      {int? personId,
       String? username,
       SortType sort,
       int? page,
@@ -1290,19 +1290,19 @@ abstract class _$GetUserDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GetUserDetailsCopyWithImpl<$Res>
-    extends _$GetUserDetailsCopyWithImpl<$Res>
-    implements _$GetUserDetailsCopyWith<$Res> {
-  __$GetUserDetailsCopyWithImpl(
-      _GetUserDetails _value, $Res Function(_GetUserDetails) _then)
-      : super(_value, (v) => _then(v as _GetUserDetails));
+class __$GetPersonDetailsCopyWithImpl<$Res>
+    extends _$GetPersonDetailsCopyWithImpl<$Res>
+    implements _$GetPersonDetailsCopyWith<$Res> {
+  __$GetPersonDetailsCopyWithImpl(
+      _GetPersonDetails _value, $Res Function(_GetPersonDetails) _then)
+      : super(_value, (v) => _then(v as _GetPersonDetails));
 
   @override
-  _GetUserDetails get _value => super._value as _GetUserDetails;
+  _GetPersonDetails get _value => super._value as _GetPersonDetails;
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? username = freezed,
     Object? sort = freezed,
     Object? page = freezed,
@@ -1311,10 +1311,10 @@ class __$GetUserDetailsCopyWithImpl<$Res>
     Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetUserDetails(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+    return _then(_GetPersonDetails(
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int?,
       username: username == freezed
           ? _value.username
@@ -1351,9 +1351,9 @@ class __$GetUserDetailsCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 
 /// @nodoc
-class _$_GetUserDetails extends _GetUserDetails {
-  const _$_GetUserDetails(
-      {this.userId,
+class _$_GetPersonDetails extends _GetPersonDetails {
+  const _$_GetPersonDetails(
+      {this.personId,
       this.username,
       required this.sort,
       this.page,
@@ -1363,11 +1363,11 @@ class _$_GetUserDetails extends _GetUserDetails {
       this.auth})
       : super._();
 
-  factory _$_GetUserDetails.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetUserDetailsFromJson(json);
+  factory _$_GetPersonDetails.fromJson(Map<String, dynamic> json) =>
+      _$_$_GetPersonDetailsFromJson(json);
 
   @override
-  final int? userId;
+  final int? personId;
   @override
   final String? username;
   @override
@@ -1385,15 +1385,16 @@ class _$_GetUserDetails extends _GetUserDetails {
 
   @override
   String toString() {
-    return 'GetUserDetails(userId: $userId, username: $username, sort: $sort, page: $page, limit: $limit, communityId: $communityId, savedOnly: $savedOnly, auth: $auth)';
+    return 'GetPersonDetails(personId: $personId, username: $username, sort: $sort, page: $page, limit: $limit, communityId: $communityId, savedOnly: $savedOnly, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetUserDetails &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+        (other is _GetPersonDetails &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.username, username) ||
                 const DeepCollectionEquality()
                     .equals(other.username, username)) &&
@@ -1416,7 +1417,7 @@ class _$_GetUserDetails extends _GetUserDetails {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(username) ^
       const DeepCollectionEquality().hash(sort) ^
       const DeepCollectionEquality().hash(page) ^
@@ -1427,32 +1428,32 @@ class _$_GetUserDetails extends _GetUserDetails {
 
   @JsonKey(ignore: true)
   @override
-  _$GetUserDetailsCopyWith<_GetUserDetails> get copyWith =>
-      __$GetUserDetailsCopyWithImpl<_GetUserDetails>(this, _$identity);
+  _$GetPersonDetailsCopyWith<_GetPersonDetails> get copyWith =>
+      __$GetPersonDetailsCopyWithImpl<_GetPersonDetails>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetUserDetailsToJson(this);
+    return _$_$_GetPersonDetailsToJson(this);
   }
 }
 
-abstract class _GetUserDetails extends GetUserDetails {
-  const factory _GetUserDetails(
-      {int? userId,
+abstract class _GetPersonDetails extends GetPersonDetails {
+  const factory _GetPersonDetails(
+      {int? personId,
       String? username,
       required SortType sort,
       int? page,
       int? limit,
       int? communityId,
       required bool savedOnly,
-      String? auth}) = _$_GetUserDetails;
-  const _GetUserDetails._() : super._();
+      String? auth}) = _$_GetPersonDetails;
+  const _GetPersonDetails._() : super._();
 
-  factory _GetUserDetails.fromJson(Map<String, dynamic> json) =
-      _$_GetUserDetails.fromJson;
+  factory _GetPersonDetails.fromJson(Map<String, dynamic> json) =
+      _$_GetPersonDetails.fromJson;
 
   @override
-  int? get userId => throw _privateConstructorUsedError;
+  int? get personId => throw _privateConstructorUsedError;
   @override
   String? get username => throw _privateConstructorUsedError;
   @override
@@ -1469,7 +1470,7 @@ abstract class _GetUserDetails extends GetUserDetails {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetUserDetailsCopyWith<_GetUserDetails> get copyWith =>
+  _$GetPersonDetailsCopyWith<_GetPersonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1633,9 +1634,9 @@ class _$AddAdminTearOff {
   const _$AddAdminTearOff();
 
   _AddAdmin call(
-      {required int userId, required bool added, required String auth}) {
+      {required int personId, required bool added, required String auth}) {
     return _AddAdmin(
-      userId: userId,
+      personId: personId,
       added: added,
       auth: auth,
     );
@@ -1651,7 +1652,7 @@ const $AddAdmin = _$AddAdminTearOff();
 
 /// @nodoc
 mixin _$AddAdmin {
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   bool get added => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
@@ -1665,7 +1666,7 @@ mixin _$AddAdmin {
 abstract class $AddAdminCopyWith<$Res> {
   factory $AddAdminCopyWith(AddAdmin value, $Res Function(AddAdmin) then) =
       _$AddAdminCopyWithImpl<$Res>;
-  $Res call({int userId, bool added, String auth});
+  $Res call({int personId, bool added, String auth});
 }
 
 /// @nodoc
@@ -1678,14 +1679,14 @@ class _$AddAdminCopyWithImpl<$Res> implements $AddAdminCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? added = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       added: added == freezed
           ? _value.added
@@ -1704,7 +1705,7 @@ abstract class _$AddAdminCopyWith<$Res> implements $AddAdminCopyWith<$Res> {
   factory _$AddAdminCopyWith(_AddAdmin value, $Res Function(_AddAdmin) then) =
       __$AddAdminCopyWithImpl<$Res>;
   @override
-  $Res call({int userId, bool added, String auth});
+  $Res call({int personId, bool added, String auth});
 }
 
 /// @nodoc
@@ -1718,14 +1719,14 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? added = freezed,
     Object? auth = freezed,
   }) {
     return _then(_AddAdmin(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       added: added == freezed
           ? _value.added
@@ -1744,14 +1745,14 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
 /// @nodoc
 class _$_AddAdmin extends _AddAdmin {
   const _$_AddAdmin(
-      {required this.userId, required this.added, required this.auth})
+      {required this.personId, required this.added, required this.auth})
       : super._();
 
   factory _$_AddAdmin.fromJson(Map<String, dynamic> json) =>
       _$_$_AddAdminFromJson(json);
 
   @override
-  final int userId;
+  final int personId;
   @override
   final bool added;
   @override
@@ -1759,15 +1760,16 @@ class _$_AddAdmin extends _AddAdmin {
 
   @override
   String toString() {
-    return 'AddAdmin(userId: $userId, added: $added, auth: $auth)';
+    return 'AddAdmin(personId: $personId, added: $added, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _AddAdmin &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.added, added) ||
                 const DeepCollectionEquality().equals(other.added, added)) &&
             (identical(other.auth, auth) ||
@@ -1777,7 +1779,7 @@ class _$_AddAdmin extends _AddAdmin {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(added) ^
       const DeepCollectionEquality().hash(auth);
 
@@ -1794,7 +1796,7 @@ class _$_AddAdmin extends _AddAdmin {
 
 abstract class _AddAdmin extends AddAdmin {
   const factory _AddAdmin(
-      {required int userId,
+      {required int personId,
       required bool added,
       required String auth}) = _$_AddAdmin;
   const _AddAdmin._() : super._();
@@ -1802,7 +1804,7 @@ abstract class _AddAdmin extends AddAdmin {
   factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$_AddAdmin.fromJson;
 
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   bool get added => throw _privateConstructorUsedError;
   @override
@@ -1813,23 +1815,23 @@ abstract class _AddAdmin extends AddAdmin {
       throw _privateConstructorUsedError;
 }
 
-BanUser _$BanUserFromJson(Map<String, dynamic> json) {
-  return _BanUser.fromJson(json);
+BanPerson _$BanPersonFromJson(Map<String, dynamic> json) {
+  return _BanPerson.fromJson(json);
 }
 
 /// @nodoc
-class _$BanUserTearOff {
-  const _$BanUserTearOff();
+class _$BanPersonTearOff {
+  const _$BanPersonTearOff();
 
-  _BanUser call(
-      {required int userId,
+  _BanPerson call(
+      {required int personId,
       required bool ban,
       required bool removeData,
       String? reason,
       int? expires,
       required String auth}) {
-    return _BanUser(
-      userId: userId,
+    return _BanPerson(
+      personId: personId,
       ban: ban,
       removeData: removeData,
       reason: reason,
@@ -1838,17 +1840,17 @@ class _$BanUserTearOff {
     );
   }
 
-  BanUser fromJson(Map<String, Object> json) {
-    return BanUser.fromJson(json);
+  BanPerson fromJson(Map<String, Object> json) {
+    return BanPerson.fromJson(json);
   }
 }
 
 /// @nodoc
-const $BanUser = _$BanUserTearOff();
+const $BanPerson = _$BanPersonTearOff();
 
 /// @nodoc
-mixin _$BanUser {
-  int get userId => throw _privateConstructorUsedError;
+mixin _$BanPerson {
+  int get personId => throw _privateConstructorUsedError;
   bool get ban => throw _privateConstructorUsedError;
   bool get removeData => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
@@ -1857,15 +1859,16 @@ mixin _$BanUser {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BanUserCopyWith<BanUser> get copyWith => throw _privateConstructorUsedError;
+  $BanPersonCopyWith<BanPerson> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BanUserCopyWith<$Res> {
-  factory $BanUserCopyWith(BanUser value, $Res Function(BanUser) then) =
-      _$BanUserCopyWithImpl<$Res>;
+abstract class $BanPersonCopyWith<$Res> {
+  factory $BanPersonCopyWith(BanPerson value, $Res Function(BanPerson) then) =
+      _$BanPersonCopyWithImpl<$Res>;
   $Res call(
-      {int userId,
+      {int personId,
       bool ban,
       bool removeData,
       String? reason,
@@ -1874,16 +1877,16 @@ abstract class $BanUserCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$BanUserCopyWithImpl<$Res> implements $BanUserCopyWith<$Res> {
-  _$BanUserCopyWithImpl(this._value, this._then);
+class _$BanPersonCopyWithImpl<$Res> implements $BanPersonCopyWith<$Res> {
+  _$BanPersonCopyWithImpl(this._value, this._then);
 
-  final BanUser _value;
+  final BanPerson _value;
   // ignore: unused_field
-  final $Res Function(BanUser) _then;
+  final $Res Function(BanPerson) _then;
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? ban = freezed,
     Object? removeData = freezed,
     Object? reason = freezed,
@@ -1891,9 +1894,9 @@ class _$BanUserCopyWithImpl<$Res> implements $BanUserCopyWith<$Res> {
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       ban: ban == freezed
           ? _value.ban
@@ -1920,12 +1923,13 @@ class _$BanUserCopyWithImpl<$Res> implements $BanUserCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BanUserCopyWith<$Res> implements $BanUserCopyWith<$Res> {
-  factory _$BanUserCopyWith(_BanUser value, $Res Function(_BanUser) then) =
-      __$BanUserCopyWithImpl<$Res>;
+abstract class _$BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
+  factory _$BanPersonCopyWith(
+          _BanPerson value, $Res Function(_BanPerson) then) =
+      __$BanPersonCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int userId,
+      {int personId,
       bool ban,
       bool removeData,
       String? reason,
@@ -1934,27 +1938,27 @@ abstract class _$BanUserCopyWith<$Res> implements $BanUserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BanUserCopyWithImpl<$Res> extends _$BanUserCopyWithImpl<$Res>
-    implements _$BanUserCopyWith<$Res> {
-  __$BanUserCopyWithImpl(_BanUser _value, $Res Function(_BanUser) _then)
-      : super(_value, (v) => _then(v as _BanUser));
+class __$BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
+    implements _$BanPersonCopyWith<$Res> {
+  __$BanPersonCopyWithImpl(_BanPerson _value, $Res Function(_BanPerson) _then)
+      : super(_value, (v) => _then(v as _BanPerson));
 
   @override
-  _BanUser get _value => super._value as _BanUser;
+  _BanPerson get _value => super._value as _BanPerson;
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? personId = freezed,
     Object? ban = freezed,
     Object? removeData = freezed,
     Object? reason = freezed,
     Object? expires = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_BanUser(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+    return _then(_BanPerson(
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
               as int,
       ban: ban == freezed
           ? _value.ban
@@ -1983,9 +1987,9 @@ class __$BanUserCopyWithImpl<$Res> extends _$BanUserCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 
 /// @nodoc
-class _$_BanUser extends _BanUser {
-  const _$_BanUser(
-      {required this.userId,
+class _$_BanPerson extends _BanPerson {
+  const _$_BanPerson(
+      {required this.personId,
       required this.ban,
       required this.removeData,
       this.reason,
@@ -1993,11 +1997,11 @@ class _$_BanUser extends _BanUser {
       required this.auth})
       : super._();
 
-  factory _$_BanUser.fromJson(Map<String, dynamic> json) =>
-      _$_$_BanUserFromJson(json);
+  factory _$_BanPerson.fromJson(Map<String, dynamic> json) =>
+      _$_$_BanPersonFromJson(json);
 
   @override
-  final int userId;
+  final int personId;
   @override
   final bool ban;
   @override
@@ -2011,15 +2015,16 @@ class _$_BanUser extends _BanUser {
 
   @override
   String toString() {
-    return 'BanUser(userId: $userId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
+    return 'BanPerson(personId: $personId, ban: $ban, removeData: $removeData, reason: $reason, expires: $expires, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BanUser &&
-            (identical(other.userId, userId) ||
-                const DeepCollectionEquality().equals(other.userId, userId)) &&
+        (other is _BanPerson &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
             (identical(other.ban, ban) ||
                 const DeepCollectionEquality().equals(other.ban, ban)) &&
             (identical(other.removeData, removeData) ||
@@ -2037,7 +2042,7 @@ class _$_BanUser extends _BanUser {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userId) ^
+      const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(ban) ^
       const DeepCollectionEquality().hash(removeData) ^
       const DeepCollectionEquality().hash(reason) ^
@@ -2046,29 +2051,30 @@ class _$_BanUser extends _BanUser {
 
   @JsonKey(ignore: true)
   @override
-  _$BanUserCopyWith<_BanUser> get copyWith =>
-      __$BanUserCopyWithImpl<_BanUser>(this, _$identity);
+  _$BanPersonCopyWith<_BanPerson> get copyWith =>
+      __$BanPersonCopyWithImpl<_BanPerson>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BanUserToJson(this);
+    return _$_$_BanPersonToJson(this);
   }
 }
 
-abstract class _BanUser extends BanUser {
-  const factory _BanUser(
-      {required int userId,
+abstract class _BanPerson extends BanPerson {
+  const factory _BanPerson(
+      {required int personId,
       required bool ban,
       required bool removeData,
       String? reason,
       int? expires,
-      required String auth}) = _$_BanUser;
-  const _BanUser._() : super._();
+      required String auth}) = _$_BanPerson;
+  const _BanPerson._() : super._();
 
-  factory _BanUser.fromJson(Map<String, dynamic> json) = _$_BanUser.fromJson;
+  factory _BanPerson.fromJson(Map<String, dynamic> json) =
+      _$_BanPerson.fromJson;
 
   @override
-  int get userId => throw _privateConstructorUsedError;
+  int get personId => throw _privateConstructorUsedError;
   @override
   bool get ban => throw _privateConstructorUsedError;
   @override
@@ -2081,7 +2087,7 @@ abstract class _BanUser extends BanUser {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BanUserCopyWith<_BanUser> get copyWith =>
+  _$BanPersonCopyWith<_BanPerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2329,21 +2335,21 @@ abstract class _GetReplies extends GetReplies {
       throw _privateConstructorUsedError;
 }
 
-GetUserMentions _$GetUserMentionsFromJson(Map<String, dynamic> json) {
-  return _GetUserMentions.fromJson(json);
+GetPersonMentions _$GetPersonMentionsFromJson(Map<String, dynamic> json) {
+  return _GetPersonMentions.fromJson(json);
 }
 
 /// @nodoc
-class _$GetUserMentionsTearOff {
-  const _$GetUserMentionsTearOff();
+class _$GetPersonMentionsTearOff {
+  const _$GetPersonMentionsTearOff();
 
-  _GetUserMentions call(
+  _GetPersonMentions call(
       {required SortType sort,
       int? page,
       int? limit,
       required bool unreadOnly,
       required String auth}) {
-    return _GetUserMentions(
+    return _GetPersonMentions(
       sort: sort,
       page: page,
       limit: limit,
@@ -2352,16 +2358,16 @@ class _$GetUserMentionsTearOff {
     );
   }
 
-  GetUserMentions fromJson(Map<String, Object> json) {
-    return GetUserMentions.fromJson(json);
+  GetPersonMentions fromJson(Map<String, Object> json) {
+    return GetPersonMentions.fromJson(json);
   }
 }
 
 /// @nodoc
-const $GetUserMentions = _$GetUserMentionsTearOff();
+const $GetPersonMentions = _$GetPersonMentionsTearOff();
 
 /// @nodoc
-mixin _$GetUserMentions {
+mixin _$GetPersonMentions {
   SortType get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
@@ -2370,27 +2376,27 @@ mixin _$GetUserMentions {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetUserMentionsCopyWith<GetUserMentions> get copyWith =>
+  $GetPersonMentionsCopyWith<GetPersonMentions> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetUserMentionsCopyWith<$Res> {
-  factory $GetUserMentionsCopyWith(
-          GetUserMentions value, $Res Function(GetUserMentions) then) =
-      _$GetUserMentionsCopyWithImpl<$Res>;
+abstract class $GetPersonMentionsCopyWith<$Res> {
+  factory $GetPersonMentionsCopyWith(
+          GetPersonMentions value, $Res Function(GetPersonMentions) then) =
+      _$GetPersonMentionsCopyWithImpl<$Res>;
   $Res call(
       {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
-class _$GetUserMentionsCopyWithImpl<$Res>
-    implements $GetUserMentionsCopyWith<$Res> {
-  _$GetUserMentionsCopyWithImpl(this._value, this._then);
+class _$GetPersonMentionsCopyWithImpl<$Res>
+    implements $GetPersonMentionsCopyWith<$Res> {
+  _$GetPersonMentionsCopyWithImpl(this._value, this._then);
 
-  final GetUserMentions _value;
+  final GetPersonMentions _value;
   // ignore: unused_field
-  final $Res Function(GetUserMentions) _then;
+  final $Res Function(GetPersonMentions) _then;
 
   @override
   $Res call({
@@ -2426,26 +2432,26 @@ class _$GetUserMentionsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetUserMentionsCopyWith<$Res>
-    implements $GetUserMentionsCopyWith<$Res> {
-  factory _$GetUserMentionsCopyWith(
-          _GetUserMentions value, $Res Function(_GetUserMentions) then) =
-      __$GetUserMentionsCopyWithImpl<$Res>;
+abstract class _$GetPersonMentionsCopyWith<$Res>
+    implements $GetPersonMentionsCopyWith<$Res> {
+  factory _$GetPersonMentionsCopyWith(
+          _GetPersonMentions value, $Res Function(_GetPersonMentions) then) =
+      __$GetPersonMentionsCopyWithImpl<$Res>;
   @override
   $Res call(
       {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
 }
 
 /// @nodoc
-class __$GetUserMentionsCopyWithImpl<$Res>
-    extends _$GetUserMentionsCopyWithImpl<$Res>
-    implements _$GetUserMentionsCopyWith<$Res> {
-  __$GetUserMentionsCopyWithImpl(
-      _GetUserMentions _value, $Res Function(_GetUserMentions) _then)
-      : super(_value, (v) => _then(v as _GetUserMentions));
+class __$GetPersonMentionsCopyWithImpl<$Res>
+    extends _$GetPersonMentionsCopyWithImpl<$Res>
+    implements _$GetPersonMentionsCopyWith<$Res> {
+  __$GetPersonMentionsCopyWithImpl(
+      _GetPersonMentions _value, $Res Function(_GetPersonMentions) _then)
+      : super(_value, (v) => _then(v as _GetPersonMentions));
 
   @override
-  _GetUserMentions get _value => super._value as _GetUserMentions;
+  _GetPersonMentions get _value => super._value as _GetPersonMentions;
 
   @override
   $Res call({
@@ -2455,7 +2461,7 @@ class __$GetUserMentionsCopyWithImpl<$Res>
     Object? unreadOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetUserMentions(
+    return _then(_GetPersonMentions(
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -2483,8 +2489,8 @@ class __$GetUserMentionsCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 
 /// @nodoc
-class _$_GetUserMentions extends _GetUserMentions {
-  const _$_GetUserMentions(
+class _$_GetPersonMentions extends _GetPersonMentions {
+  const _$_GetPersonMentions(
       {required this.sort,
       this.page,
       this.limit,
@@ -2492,8 +2498,8 @@ class _$_GetUserMentions extends _GetUserMentions {
       required this.auth})
       : super._();
 
-  factory _$_GetUserMentions.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetUserMentionsFromJson(json);
+  factory _$_GetPersonMentions.fromJson(Map<String, dynamic> json) =>
+      _$_$_GetPersonMentionsFromJson(json);
 
   @override
   final SortType sort;
@@ -2508,13 +2514,13 @@ class _$_GetUserMentions extends _GetUserMentions {
 
   @override
   String toString() {
-    return 'GetUserMentions(sort: $sort, page: $page, limit: $limit, unreadOnly: $unreadOnly, auth: $auth)';
+    return 'GetPersonMentions(sort: $sort, page: $page, limit: $limit, unreadOnly: $unreadOnly, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetUserMentions &&
+        (other is _GetPersonMentions &&
             (identical(other.sort, sort) ||
                 const DeepCollectionEquality().equals(other.sort, sort)) &&
             (identical(other.page, page) ||
@@ -2539,26 +2545,26 @@ class _$_GetUserMentions extends _GetUserMentions {
 
   @JsonKey(ignore: true)
   @override
-  _$GetUserMentionsCopyWith<_GetUserMentions> get copyWith =>
-      __$GetUserMentionsCopyWithImpl<_GetUserMentions>(this, _$identity);
+  _$GetPersonMentionsCopyWith<_GetPersonMentions> get copyWith =>
+      __$GetPersonMentionsCopyWithImpl<_GetPersonMentions>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetUserMentionsToJson(this);
+    return _$_$_GetPersonMentionsToJson(this);
   }
 }
 
-abstract class _GetUserMentions extends GetUserMentions {
-  const factory _GetUserMentions(
+abstract class _GetPersonMentions extends GetPersonMentions {
+  const factory _GetPersonMentions(
       {required SortType sort,
       int? page,
       int? limit,
       required bool unreadOnly,
-      required String auth}) = _$_GetUserMentions;
-  const _GetUserMentions._() : super._();
+      required String auth}) = _$_GetPersonMentions;
+  const _GetPersonMentions._() : super._();
 
-  factory _GetUserMentions.fromJson(Map<String, dynamic> json) =
-      _$_GetUserMentions.fromJson;
+  factory _GetPersonMentions.fromJson(Map<String, dynamic> json) =
+      _$_GetPersonMentions.fromJson;
 
   @override
   SortType get sort => throw _privateConstructorUsedError;
@@ -2572,75 +2578,77 @@ abstract class _GetUserMentions extends GetUserMentions {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetUserMentionsCopyWith<_GetUserMentions> get copyWith =>
+  _$GetPersonMentionsCopyWith<_GetPersonMentions> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-MarkUserMentionAsRead _$MarkUserMentionAsReadFromJson(
+MarkPersonMentionAsRead _$MarkPersonMentionAsReadFromJson(
     Map<String, dynamic> json) {
-  return _MarkUserMentionAsRead.fromJson(json);
+  return _MarkPersonMentionAsRead.fromJson(json);
 }
 
 /// @nodoc
-class _$MarkUserMentionAsReadTearOff {
-  const _$MarkUserMentionAsReadTearOff();
+class _$MarkPersonMentionAsReadTearOff {
+  const _$MarkPersonMentionAsReadTearOff();
 
-  _MarkUserMentionAsRead call(
-      {required int userMentionId, required bool read, required String auth}) {
-    return _MarkUserMentionAsRead(
-      userMentionId: userMentionId,
+  _MarkPersonMentionAsRead call(
+      {required int personMentionId,
+      required bool read,
+      required String auth}) {
+    return _MarkPersonMentionAsRead(
+      personMentionId: personMentionId,
       read: read,
       auth: auth,
     );
   }
 
-  MarkUserMentionAsRead fromJson(Map<String, Object> json) {
-    return MarkUserMentionAsRead.fromJson(json);
+  MarkPersonMentionAsRead fromJson(Map<String, Object> json) {
+    return MarkPersonMentionAsRead.fromJson(json);
   }
 }
 
 /// @nodoc
-const $MarkUserMentionAsRead = _$MarkUserMentionAsReadTearOff();
+const $MarkPersonMentionAsRead = _$MarkPersonMentionAsReadTearOff();
 
 /// @nodoc
-mixin _$MarkUserMentionAsRead {
-  int get userMentionId => throw _privateConstructorUsedError;
+mixin _$MarkPersonMentionAsRead {
+  int get personMentionId => throw _privateConstructorUsedError;
   bool get read => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MarkUserMentionAsReadCopyWith<MarkUserMentionAsRead> get copyWith =>
+  $MarkPersonMentionAsReadCopyWith<MarkPersonMentionAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MarkUserMentionAsReadCopyWith<$Res> {
-  factory $MarkUserMentionAsReadCopyWith(MarkUserMentionAsRead value,
-          $Res Function(MarkUserMentionAsRead) then) =
-      _$MarkUserMentionAsReadCopyWithImpl<$Res>;
-  $Res call({int userMentionId, bool read, String auth});
+abstract class $MarkPersonMentionAsReadCopyWith<$Res> {
+  factory $MarkPersonMentionAsReadCopyWith(MarkPersonMentionAsRead value,
+          $Res Function(MarkPersonMentionAsRead) then) =
+      _$MarkPersonMentionAsReadCopyWithImpl<$Res>;
+  $Res call({int personMentionId, bool read, String auth});
 }
 
 /// @nodoc
-class _$MarkUserMentionAsReadCopyWithImpl<$Res>
-    implements $MarkUserMentionAsReadCopyWith<$Res> {
-  _$MarkUserMentionAsReadCopyWithImpl(this._value, this._then);
+class _$MarkPersonMentionAsReadCopyWithImpl<$Res>
+    implements $MarkPersonMentionAsReadCopyWith<$Res> {
+  _$MarkPersonMentionAsReadCopyWithImpl(this._value, this._then);
 
-  final MarkUserMentionAsRead _value;
+  final MarkPersonMentionAsRead _value;
   // ignore: unused_field
-  final $Res Function(MarkUserMentionAsRead) _then;
+  final $Res Function(MarkPersonMentionAsRead) _then;
 
   @override
   $Res call({
-    Object? userMentionId = freezed,
+    Object? personMentionId = freezed,
     Object? read = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      userMentionId: userMentionId == freezed
-          ? _value.userMentionId
-          : userMentionId // ignore: cast_nullable_to_non_nullable
+      personMentionId: personMentionId == freezed
+          ? _value.personMentionId
+          : personMentionId // ignore: cast_nullable_to_non_nullable
               as int,
       read: read == freezed
           ? _value.read
@@ -2655,36 +2663,37 @@ class _$MarkUserMentionAsReadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MarkUserMentionAsReadCopyWith<$Res>
-    implements $MarkUserMentionAsReadCopyWith<$Res> {
-  factory _$MarkUserMentionAsReadCopyWith(_MarkUserMentionAsRead value,
-          $Res Function(_MarkUserMentionAsRead) then) =
-      __$MarkUserMentionAsReadCopyWithImpl<$Res>;
+abstract class _$MarkPersonMentionAsReadCopyWith<$Res>
+    implements $MarkPersonMentionAsReadCopyWith<$Res> {
+  factory _$MarkPersonMentionAsReadCopyWith(_MarkPersonMentionAsRead value,
+          $Res Function(_MarkPersonMentionAsRead) then) =
+      __$MarkPersonMentionAsReadCopyWithImpl<$Res>;
   @override
-  $Res call({int userMentionId, bool read, String auth});
+  $Res call({int personMentionId, bool read, String auth});
 }
 
 /// @nodoc
-class __$MarkUserMentionAsReadCopyWithImpl<$Res>
-    extends _$MarkUserMentionAsReadCopyWithImpl<$Res>
-    implements _$MarkUserMentionAsReadCopyWith<$Res> {
-  __$MarkUserMentionAsReadCopyWithImpl(_MarkUserMentionAsRead _value,
-      $Res Function(_MarkUserMentionAsRead) _then)
-      : super(_value, (v) => _then(v as _MarkUserMentionAsRead));
+class __$MarkPersonMentionAsReadCopyWithImpl<$Res>
+    extends _$MarkPersonMentionAsReadCopyWithImpl<$Res>
+    implements _$MarkPersonMentionAsReadCopyWith<$Res> {
+  __$MarkPersonMentionAsReadCopyWithImpl(_MarkPersonMentionAsRead _value,
+      $Res Function(_MarkPersonMentionAsRead) _then)
+      : super(_value, (v) => _then(v as _MarkPersonMentionAsRead));
 
   @override
-  _MarkUserMentionAsRead get _value => super._value as _MarkUserMentionAsRead;
+  _MarkPersonMentionAsRead get _value =>
+      super._value as _MarkPersonMentionAsRead;
 
   @override
   $Res call({
-    Object? userMentionId = freezed,
+    Object? personMentionId = freezed,
     Object? read = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_MarkUserMentionAsRead(
-      userMentionId: userMentionId == freezed
-          ? _value.userMentionId
-          : userMentionId // ignore: cast_nullable_to_non_nullable
+    return _then(_MarkPersonMentionAsRead(
+      personMentionId: personMentionId == freezed
+          ? _value.personMentionId
+          : personMentionId // ignore: cast_nullable_to_non_nullable
               as int,
       read: read == freezed
           ? _value.read
@@ -2701,16 +2710,16 @@ class __$MarkUserMentionAsReadCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 
 /// @nodoc
-class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
-  const _$_MarkUserMentionAsRead(
-      {required this.userMentionId, required this.read, required this.auth})
+class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
+  const _$_MarkPersonMentionAsRead(
+      {required this.personMentionId, required this.read, required this.auth})
       : super._();
 
-  factory _$_MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =>
-      _$_$_MarkUserMentionAsReadFromJson(json);
+  factory _$_MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =>
+      _$_$_MarkPersonMentionAsReadFromJson(json);
 
   @override
-  final int userMentionId;
+  final int personMentionId;
   @override
   final bool read;
   @override
@@ -2718,16 +2727,16 @@ class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
 
   @override
   String toString() {
-    return 'MarkUserMentionAsRead(userMentionId: $userMentionId, read: $read, auth: $auth)';
+    return 'MarkPersonMentionAsRead(personMentionId: $personMentionId, read: $read, auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MarkUserMentionAsRead &&
-            (identical(other.userMentionId, userMentionId) ||
+        (other is _MarkPersonMentionAsRead &&
+            (identical(other.personMentionId, personMentionId) ||
                 const DeepCollectionEquality()
-                    .equals(other.userMentionId, userMentionId)) &&
+                    .equals(other.personMentionId, personMentionId)) &&
             (identical(other.read, read) ||
                 const DeepCollectionEquality().equals(other.read, read)) &&
             (identical(other.auth, auth) ||
@@ -2737,41 +2746,41 @@ class _$_MarkUserMentionAsRead extends _MarkUserMentionAsRead {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userMentionId) ^
+      const DeepCollectionEquality().hash(personMentionId) ^
       const DeepCollectionEquality().hash(read) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
   @override
-  _$MarkUserMentionAsReadCopyWith<_MarkUserMentionAsRead> get copyWith =>
-      __$MarkUserMentionAsReadCopyWithImpl<_MarkUserMentionAsRead>(
+  _$MarkPersonMentionAsReadCopyWith<_MarkPersonMentionAsRead> get copyWith =>
+      __$MarkPersonMentionAsReadCopyWithImpl<_MarkPersonMentionAsRead>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MarkUserMentionAsReadToJson(this);
+    return _$_$_MarkPersonMentionAsReadToJson(this);
   }
 }
 
-abstract class _MarkUserMentionAsRead extends MarkUserMentionAsRead {
-  const factory _MarkUserMentionAsRead(
-      {required int userMentionId,
+abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
+  const factory _MarkPersonMentionAsRead(
+      {required int personMentionId,
       required bool read,
-      required String auth}) = _$_MarkUserMentionAsRead;
-  const _MarkUserMentionAsRead._() : super._();
+      required String auth}) = _$_MarkPersonMentionAsRead;
+  const _MarkPersonMentionAsRead._() : super._();
 
-  factory _MarkUserMentionAsRead.fromJson(Map<String, dynamic> json) =
-      _$_MarkUserMentionAsRead.fromJson;
+  factory _MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =
+      _$_MarkPersonMentionAsRead.fromJson;
 
   @override
-  int get userMentionId => throw _privateConstructorUsedError;
+  int get personMentionId => throw _privateConstructorUsedError;
   @override
   bool get read => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarkUserMentionAsReadCopyWith<_MarkUserMentionAsRead> get copyWith =>
+  _$MarkPersonMentionAsReadCopyWith<_MarkPersonMentionAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

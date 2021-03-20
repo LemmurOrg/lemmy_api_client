@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user.dart';
+part of 'person.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
@@ -111,9 +111,9 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   return val;
 }
 
-_$_GetUserDetails _$_$_GetUserDetailsFromJson(Map<String, dynamic> json) {
-  return _$_GetUserDetails(
-    userId: json['user_id'] as int?,
+_$_GetPersonDetails _$_$_GetPersonDetailsFromJson(Map<String, dynamic> json) {
+  return _$_GetPersonDetails(
+    personId: json['person_id'] as int?,
     username: json['username'] as String?,
     sort: SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
@@ -124,7 +124,7 @@ _$_GetUserDetails _$_$_GetUserDetailsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_GetUserDetailsToJson(_$_GetUserDetails instance) {
+Map<String, dynamic> _$_$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -133,7 +133,7 @@ Map<String, dynamic> _$_$_GetUserDetailsToJson(_$_GetUserDetails instance) {
     }
   }
 
-  writeNotNull('user_id', instance.userId);
+  writeNotNull('person_id', instance.personId);
   writeNotNull('username', instance.username);
   val['sort'] = instance.sort.toJson();
   writeNotNull('page', instance.page);
@@ -157,7 +157,7 @@ Map<String, dynamic> _$_$_MarkAllAsReadToJson(_$_MarkAllAsRead instance) =>
 
 _$_AddAdmin _$_$_AddAdminFromJson(Map<String, dynamic> json) {
   return _$_AddAdmin(
-    userId: json['user_id'] as int,
+    personId: json['person_id'] as int,
     added: json['added'] as bool,
     auth: json['auth'] as String,
   );
@@ -165,14 +165,14 @@ _$_AddAdmin _$_$_AddAdminFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_AddAdminToJson(_$_AddAdmin instance) =>
     <String, dynamic>{
-      'user_id': instance.userId,
+      'person_id': instance.personId,
       'added': instance.added,
       'auth': instance.auth,
     };
 
-_$_BanUser _$_$_BanUserFromJson(Map<String, dynamic> json) {
-  return _$_BanUser(
-    userId: json['user_id'] as int,
+_$_BanPerson _$_$_BanPersonFromJson(Map<String, dynamic> json) {
+  return _$_BanPerson(
+    personId: json['person_id'] as int,
     ban: json['ban'] as bool,
     removeData: json['remove_data'] as bool,
     reason: json['reason'] as String?,
@@ -181,9 +181,9 @@ _$_BanUser _$_$_BanUserFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_BanUserToJson(_$_BanUser instance) {
+Map<String, dynamic> _$_$_BanPersonToJson(_$_BanPerson instance) {
   final val = <String, dynamic>{
-    'user_id': instance.userId,
+    'person_id': instance.personId,
     'ban': instance.ban,
     'remove_data': instance.removeData,
   };
@@ -228,8 +228,8 @@ Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
   return val;
 }
 
-_$_GetUserMentions _$_$_GetUserMentionsFromJson(Map<String, dynamic> json) {
-  return _$_GetUserMentions(
+_$_GetPersonMentions _$_$_GetPersonMentionsFromJson(Map<String, dynamic> json) {
+  return _$_GetPersonMentions(
     sort: SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
@@ -238,7 +238,8 @@ _$_GetUserMentions _$_$_GetUserMentionsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_GetUserMentionsToJson(_$_GetUserMentions instance) {
+Map<String, dynamic> _$_$_GetPersonMentionsToJson(
+    _$_GetPersonMentions instance) {
   final val = <String, dynamic>{
     'sort': instance.sort.toJson(),
   };
@@ -256,19 +257,19 @@ Map<String, dynamic> _$_$_GetUserMentionsToJson(_$_GetUserMentions instance) {
   return val;
 }
 
-_$_MarkUserMentionAsRead _$_$_MarkUserMentionAsReadFromJson(
+_$_MarkPersonMentionAsRead _$_$_MarkPersonMentionAsReadFromJson(
     Map<String, dynamic> json) {
-  return _$_MarkUserMentionAsRead(
-    userMentionId: json['user_mention_id'] as int,
+  return _$_MarkPersonMentionAsRead(
+    personMentionId: json['person_mention_id'] as int,
     read: json['read'] as bool,
     auth: json['auth'] as String,
   );
 }
 
-Map<String, dynamic> _$_$_MarkUserMentionAsReadToJson(
-        _$_MarkUserMentionAsRead instance) =>
+Map<String, dynamic> _$_$_MarkPersonMentionAsReadToJson(
+        _$_MarkPersonMentionAsRead instance) =>
     <String, dynamic>{
-      'user_mention_id': instance.userMentionId,
+      'person_mention_id': instance.personMentionId,
       'read': instance.read,
       'auth': instance.auth,
     };

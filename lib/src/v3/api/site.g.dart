@@ -42,7 +42,7 @@ Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) {
 
 _$_GetModlog _$_$_GetModlogFromJson(Map<String, dynamic> json) {
   return _$_GetModlog(
-    modUserId: json['mod_user_id'] as int?,
+    modPersonId: json['mod_person_id'] as int?,
     communityId: json['community_id'] as int?,
     page: json['page'] as int?,
     limit: json['limit'] as int?,
@@ -58,7 +58,7 @@ Map<String, dynamic> _$_$_GetModlogToJson(_$_GetModlog instance) {
     }
   }
 
-  writeNotNull('mod_user_id', instance.modUserId);
+  writeNotNull('mod_person_id', instance.modPersonId);
   writeNotNull('community_id', instance.communityId);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
@@ -154,14 +154,14 @@ Map<String, dynamic> _$_$_GetSiteToJson(_$_GetSite instance) {
 
 _$_TransferSite _$_$_TransferSiteFromJson(Map<String, dynamic> json) {
   return _$_TransferSite(
-    userId: json['user_id'] as int,
+    personId: json['person_id'] as int,
     auth: json['auth'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_TransferSiteToJson(_$_TransferSite instance) =>
     <String, dynamic>{
-      'user_id': instance.userId,
+      'person_id': instance.personId,
       'auth': instance.auth,
     };
 

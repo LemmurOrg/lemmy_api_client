@@ -9,11 +9,11 @@ part 'source.freezed.dart';
 part 'source.g.dart';
 
 @freezed
-class UserSafe extends WithInstanceHost with _$UserSafe {
+class PersonSafe extends WithInstanceHost with _$PersonSafe {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory UserSafe({
+  factory PersonSafe({
     required int id,
     required String name,
     String? preferredUsername,
@@ -22,34 +22,30 @@ class UserSafe extends WithInstanceHost with _$UserSafe {
     required bool banned,
     required DateTime published,
     DateTime? updated,
-    String? matrixUserId,
     required String actorId,
     String? bio,
     required bool local,
     String? banner,
     required bool deleted,
-  }) = _UserSafe;
+    required String inboxUrl,
+    required String sharedInboxUrl,
+  }) = _PersonSafe;
 
-  UserSafe._();
-  factory UserSafe.fromJson(Map<String, dynamic> json) =>
-      _$UserSafeFromJson(json);
+  PersonSafe._();
+  factory PersonSafe.fromJson(Map<String, dynamic> json) =>
+      _$PersonSafeFromJson(json);
 }
 
 @freezed
-class UserSafeSettings extends WithInstanceHost with _$UserSafeSettings {
+class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory UserSafeSettings({
+  factory LocalUserSettings({
     required int id,
-    required String name,
-    String? preferredUsername,
+    required int personId,
     String? email,
-    String? avatar,
     required bool admin,
-    required bool banned,
-    required DateTime published,
-    DateTime? updated,
     required bool showNsfw,
     required String theme,
     @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -60,17 +56,11 @@ class UserSafeSettings extends WithInstanceHost with _$UserSafeSettings {
     required bool showAvatars,
     required bool sendNotificationsToEmail,
     String? matrixUserId,
-    required String actorId,
-    String? bio,
-    required bool local,
-    required DateTime lastRefreshedAt,
-    String? banner,
-    required bool deleted,
-  }) = _UserSafeSettings;
+  }) = _LocalUserSettings;
 
-  UserSafeSettings._();
-  factory UserSafeSettings.fromJson(Map<String, dynamic> json) =>
-      _$UserSafeSettingsFromJson(json);
+  LocalUserSettings._();
+  factory LocalUserSettings.fromJson(Map<String, dynamic> json) =>
+      _$LocalUserSettingsFromJson(json);
 }
 
 @freezed
@@ -182,7 +172,7 @@ class PasswordResetRequest extends WithInstanceHost
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PasswordResetRequest({
     required int id,
-    required int userId,
+    required int localUserId,
     required String tokenEncrypted,
     required DateTime published,
   }) = _PasswordResetRequest;
@@ -199,7 +189,7 @@ class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePost({
     required int id,
-    required int modUserId,
+    required int modPersonId,
     required int postId,
     String? reason,
     bool? removed,
@@ -218,7 +208,7 @@ class ModLockPost extends WithInstanceHost with _$ModLockPost {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPost({
     required int id,
-    required int modUserId,
+    required int modPersonId,
     required int postId,
     bool? locked,
     @JsonKey(name: 'when_') required DateTime when,
@@ -236,7 +226,7 @@ class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPost({
     required int id,
-    required int modUserId,
+    required int modPersonId,
     required int postId,
     bool? stickied,
     @JsonKey(name: 'when_') required DateTime when,
@@ -254,7 +244,7 @@ class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveComment({
     required int id,
-    required int modUserId,
+    required int modPersonId,
     required int commentId,
     String? reason,
     bool? removed,
@@ -273,7 +263,7 @@ class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunity({
     required int id,
-    required int modUserId,
+    required int modPersonId,
     required int communityId,
     String? reason,
     bool? removed,
@@ -293,8 +283,8 @@ class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunity({
     required int id,
-    required int modUserId,
-    required int otherUserId,
+    required int modPersonId,
+    required int otherPersonId,
     required int communityId,
     String? reason,
     bool? banned,
@@ -314,8 +304,8 @@ class ModBan extends WithInstanceHost with _$ModBan {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBan({
     required int id,
-    required int modUserId,
-    required int otherUserId,
+    required int modPersonId,
+    required int otherPersonId,
     String? reason,
     bool? banned,
     DateTime? expires,
@@ -333,8 +323,8 @@ class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunity({
     required int id,
-    required int modUserId,
-    required int otherUserId,
+    required int modPersonId,
+    required int otherPersonId,
     required int communityId,
     bool? removed,
     @JsonKey(name: 'when_') required DateTime when,
@@ -352,8 +342,8 @@ class ModAdd extends WithInstanceHost with _$ModAdd {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAdd({
     required int id,
-    required int modUserId,
-    required int otherUserId,
+    required int modPersonId,
+    required int otherPersonId,
     bool? removed,
     @JsonKey(name: 'when_') required DateTime when,
   }) = _ModAdd;
@@ -437,19 +427,19 @@ class Comment extends WithInstanceHost with _$Comment {
 }
 
 @freezed
-class UserMention extends WithInstanceHost with _$UserMention {
+class PersonMention extends WithInstanceHost with _$PersonMention {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory UserMention({
+  factory PersonMention({
     required int id,
     required int recipientId,
     required int commentId,
     required bool read,
     required DateTime published,
-  }) = _UserMention;
+  }) = _PersonMention;
 
-  UserMention._();
-  factory UserMention.fromJson(Map<String, dynamic> json) =>
-      _$UserMentionFromJson(json);
+  PersonMention._();
+  factory PersonMention.fromJson(Map<String, dynamic> json) =>
+      _$PersonMentionFromJson(json);
 }

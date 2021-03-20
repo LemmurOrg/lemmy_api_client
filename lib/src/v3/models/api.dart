@@ -3,7 +3,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 import '../../enums.dart';
 import '../../utils/with_instance_host.dart';
-import 'source.dart';
 import 'views.dart';
 
 part 'api.freezed.dart';
@@ -48,7 +47,7 @@ class SearchResults extends WithInstanceHost with _$SearchResults {
     required List<CommentView> comments,
     required List<PostView> posts,
     required List<CommunityView> communities,
-    required List<UserViewSafe> users,
+    required List<PersonViewSafe> users,
   }) = _SearchResults;
 
   SearchResults._();
@@ -96,11 +95,11 @@ class FullSiteView extends WithInstanceHost with _$FullSiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullSiteView({
     SiteView? siteView,
-    required List<UserViewSafe> admins,
-    required List<UserViewSafe> banned,
+    required List<PersonViewSafe> admins,
+    required List<PersonViewSafe> banned,
     required int online,
     required String version,
-    UserSafeSettings? myUser,
+    LocalUserSettingsView? myUser,
     FederatedInstances? federatedInstances,
   }) = _FullSiteView;
 
@@ -143,26 +142,26 @@ class Captcha with _$Captcha {
 }
 
 @freezed
-class FullUserView extends WithInstanceHost with _$FullUserView {
+class FullPersonView extends WithInstanceHost with _$FullPersonView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullUserView({
-    required UserViewSafe userView,
+  factory FullPersonView({
+    required PersonViewSafe personView,
     required List<CommunityFollowerView> follows,
     required List<CommunityModeratorView> moderates,
     required List<CommentView> comments,
     required List<PostView> posts,
-  }) = _FullUserView;
+  }) = _FullPersonView;
 
-  FullUserView._();
-  factory FullUserView.fromJson(Map<String, dynamic> json) =>
-      _$FullUserViewFromJson(json);
+  FullPersonView._();
+  factory FullPersonView.fromJson(Map<String, dynamic> json) =>
+      _$FullPersonViewFromJson(json);
 }
 
 @freezed
 class BannedCommunityUser extends WithInstanceHost with _$BannedCommunityUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedCommunityUser({
-    required UserViewSafe userView,
+    required PersonViewSafe personView,
     required bool banned,
   }) = _BannedCommunityUser;
 
@@ -173,16 +172,16 @@ class BannedCommunityUser extends WithInstanceHost with _$BannedCommunityUser {
 }
 
 @freezed
-class BannedUser extends WithInstanceHost with _$BannedUser {
+class BannedPerson extends WithInstanceHost with _$BannedPerson {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BannedUser({
-    required UserViewSafe userView,
+  factory BannedPerson({
+    required PersonViewSafe personView,
     required bool banned,
-  }) = _BannedUser;
+  }) = _BannedPerson;
 
-  BannedUser._();
-  factory BannedUser.fromJson(Map<String, dynamic> json) =>
-      _$BannedUserFromJson(json);
+  BannedPerson._();
+  factory BannedPerson.fromJson(Map<String, dynamic> json) =>
+      _$BannedPersonFromJson(json);
 }
 
 // TODO: this does not seem to exist yet

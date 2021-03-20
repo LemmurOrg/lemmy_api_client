@@ -104,7 +104,7 @@ class BanFromCommunity
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory BanFromCommunity({
     required int communityId,
-    required int userId,
+    required int personId,
     required bool ban,
     required bool removeData,
     String? reason,
@@ -135,7 +135,7 @@ class AddModToCommunity
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory AddModToCommunity({
     required int communityId,
-    required int userId,
+    required int personId,
     required bool added,
     required String auth,
   }) = _AddModToCommunity;
@@ -306,7 +306,7 @@ class TransferCommunity
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory TransferCommunity({
     required int communityId,
-    required int userId,
+    required int personId,
     required String auth,
   }) = _TransferCommunity;
 

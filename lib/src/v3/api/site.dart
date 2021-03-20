@@ -41,7 +41,7 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
 class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetModlog({
-    int? modUserId,
+    int? modPersonId,
     int? communityId,
     int? page,
     int? limit,
@@ -149,7 +149,7 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
 class TransferSite with _$TransferSite implements LemmyApiQuery<FullSiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory TransferSite({
-    required int userId,
+    required int personId,
     required String auth,
   }) = _TransferSite;
 

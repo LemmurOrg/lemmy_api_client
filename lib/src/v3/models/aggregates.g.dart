@@ -6,10 +6,10 @@ part of 'aggregates.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserAggregates _$_$_UserAggregatesFromJson(Map<String, dynamic> json) {
-  return _$_UserAggregates(
+_$_PersonAggregates _$_$_PersonAggregatesFromJson(Map<String, dynamic> json) {
+  return _$_PersonAggregates(
     id: json['id'] as int,
-    userId: json['user_id'] as int,
+    personId: json['person_id'] as int,
     postCount: json['post_count'] as int,
     postScore: json['post_score'] as int,
     commentCount: json['comment_count'] as int,
@@ -17,10 +17,11 @@ _$_UserAggregates _$_$_UserAggregatesFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_UserAggregatesToJson(_$_UserAggregates instance) =>
+Map<String, dynamic> _$_$_PersonAggregatesToJson(
+        _$_PersonAggregates instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'user_id': instance.userId,
+      'person_id': instance.personId,
       'post_count': instance.postCount,
       'post_score': instance.postScore,
       'comment_count': instance.commentCount,
