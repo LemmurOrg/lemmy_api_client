@@ -20,10 +20,11 @@ JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
 class _$JwtPayloadTearOff {
   const _$JwtPayloadTearOff();
 
-  _JwtPayload call({required int id, required String iss}) {
+  _JwtPayload call({required int iat, required String iss, required int sub}) {
     return _JwtPayload(
-      id: id,
+      iat: iat,
       iss: iss,
+      sub: sub,
     );
   }
 
@@ -37,8 +38,9 @@ const $JwtPayload = _$JwtPayloadTearOff();
 
 /// @nodoc
 mixin _$JwtPayload {
-  int get id => throw _privateConstructorUsedError;
+  int get iat => throw _privateConstructorUsedError;
   String get iss => throw _privateConstructorUsedError;
+  int get sub => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -51,7 +53,7 @@ abstract class $JwtPayloadCopyWith<$Res> {
   factory $JwtPayloadCopyWith(
           JwtPayload value, $Res Function(JwtPayload) then) =
       _$JwtPayloadCopyWithImpl<$Res>;
-  $Res call({int id, String iss});
+  $Res call({int iat, String iss, int sub});
 }
 
 /// @nodoc
@@ -64,18 +66,23 @@ class _$JwtPayloadCopyWithImpl<$Res> implements $JwtPayloadCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? id = freezed,
+    Object? iat = freezed,
     Object? iss = freezed,
+    Object? sub = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      iat: iat == freezed
+          ? _value.iat
+          : iat // ignore: cast_nullable_to_non_nullable
               as int,
       iss: iss == freezed
           ? _value.iss
           : iss // ignore: cast_nullable_to_non_nullable
               as String,
+      sub: sub == freezed
+          ? _value.sub
+          : sub // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -86,7 +93,7 @@ abstract class _$JwtPayloadCopyWith<$Res> implements $JwtPayloadCopyWith<$Res> {
           _JwtPayload value, $Res Function(_JwtPayload) then) =
       __$JwtPayloadCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String iss});
+  $Res call({int iat, String iss, int sub});
 }
 
 /// @nodoc
@@ -101,18 +108,23 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? id = freezed,
+    Object? iat = freezed,
     Object? iss = freezed,
+    Object? sub = freezed,
   }) {
     return _then(_JwtPayload(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      iat: iat == freezed
+          ? _value.iat
+          : iat // ignore: cast_nullable_to_non_nullable
               as int,
       iss: iss == freezed
           ? _value.iss
           : iss // ignore: cast_nullable_to_non_nullable
               as String,
+      sub: sub == freezed
+          ? _value.sub
+          : sub // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -121,36 +133,42 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_JwtPayload extends _JwtPayload {
-  const _$_JwtPayload({required this.id, required this.iss}) : super._();
+  const _$_JwtPayload({required this.iat, required this.iss, required this.sub})
+      : super._();
 
   factory _$_JwtPayload.fromJson(Map<String, dynamic> json) =>
       _$_$_JwtPayloadFromJson(json);
 
   @override
-  final int id;
+  final int iat;
   @override
   final String iss;
+  @override
+  final int sub;
 
   @override
   String toString() {
-    return 'JwtPayload(id: $id, iss: $iss)';
+    return 'JwtPayload(iat: $iat, iss: $iss, sub: $sub)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _JwtPayload &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.iat, iat) ||
+                const DeepCollectionEquality().equals(other.iat, iat)) &&
             (identical(other.iss, iss) ||
-                const DeepCollectionEquality().equals(other.iss, iss)));
+                const DeepCollectionEquality().equals(other.iss, iss)) &&
+            (identical(other.sub, sub) ||
+                const DeepCollectionEquality().equals(other.sub, sub)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(iss);
+      const DeepCollectionEquality().hash(iat) ^
+      const DeepCollectionEquality().hash(iss) ^
+      const DeepCollectionEquality().hash(sub);
 
   @JsonKey(ignore: true)
   @override
@@ -164,17 +182,21 @@ class _$_JwtPayload extends _JwtPayload {
 }
 
 abstract class _JwtPayload extends JwtPayload {
-  const factory _JwtPayload({required int id, required String iss}) =
-      _$_JwtPayload;
+  const factory _JwtPayload(
+      {required int iat,
+      required String iss,
+      required int sub}) = _$_JwtPayload;
   const _JwtPayload._() : super._();
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =
       _$_JwtPayload.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get iat => throw _privateConstructorUsedError;
   @override
   String get iss => throw _privateConstructorUsedError;
+  @override
+  int get sub => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>

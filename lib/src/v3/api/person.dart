@@ -28,7 +28,7 @@ class Login with _$Login implements LemmyApiQuery<Jwt> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt(json['jwt']);
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
 }
 
 @freezed
@@ -149,7 +149,9 @@ class GetPersonDetails
 }
 
 @freezed
-class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<Jwt> {
+class MarkAllAsRead
+    with _$MarkAllAsRead
+    implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory MarkAllAsRead({
     required String auth,
@@ -166,7 +168,10 @@ class MarkAllAsRead with _$MarkAllAsRead implements LemmyApiQuery<Jwt> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt(json['jwt']);
+  List<CommentView> responseFactory(Map<String, dynamic> json) =>
+      (json['replies'] as List)
+          .map((dynamic e) => CommentView.fromJson(e))
+          .toList();
 }
 
 @freezed

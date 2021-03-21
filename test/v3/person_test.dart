@@ -17,7 +17,35 @@ void main() {
         );
       });
 
-      group('SaveUserSettings', () {});
+      group('SaveUserSettings', () {
+        test(
+          'correctly saves',
+          () => run(SaveUserSettings(
+            showNsfw: true,
+            theme: 'browser',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            lang: 'browser',
+            showAvatars: true,
+            sendNotificationsToEmail: true,
+            auth: goodAuth,
+          )),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const SaveUserSettings(
+            showNsfw: true,
+            theme: 'browser',
+            defaultSortType: SortType.active,
+            defaultListingType: PostListingType.all,
+            lang: 'browser',
+            showAvatars: true,
+            sendNotificationsToEmail: true,
+            auth: badAuth,
+          )),
+        );
+      });
 
       group('GetPersonDetails', () {
         test(
@@ -70,15 +98,61 @@ void main() {
         );
       });
 
-      group('MarkAllAsRead', () {});
+      group('MarkAllAsRead', () {
+        test(
+          'correctly fetches',
+          () => run(MarkAllAsRead(auth: goodAuth)),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const MarkAllAsRead(auth: badAuth)),
+        );
+      });
 
       group('AddAdmin', () {});
 
       group('BanPerson', () {});
 
-      group('GetReplies', () {});
+      group('GetReplies', () {
+        test(
+          'correctly fetches',
+          () => run(GetReplies(
+            sort: SortType.active,
+            unreadOnly: true,
+            auth: goodAuth,
+          )),
+        );
 
-      group('GetPersonMentions', () {});
+        test(
+          'bad auth',
+          () => lemmyThrows(const GetReplies(
+            sort: SortType.active,
+            unreadOnly: true,
+            auth: badAuth,
+          )),
+        );
+      });
+
+      group('GetPersonMentions', () {
+        test(
+          'correctly fetches',
+          () => run(GetPersonMentions(
+            sort: SortType.active,
+            unreadOnly: true,
+            auth: goodAuth,
+          )),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const GetPersonMentions(
+            sort: SortType.active,
+            unreadOnly: true,
+            auth: badAuth,
+          )),
+        );
+      });
 
       group('MarkPersonMentionAsRead', () {});
 
@@ -96,7 +170,23 @@ void main() {
 
       group('MarkPrivateMessageAsRead', () {});
 
-      group('GetPrivateMessages', () {});
+      group('GetPrivateMessages', () {
+        test(
+          'correctly fetches',
+          () => run(GetPrivateMessages(
+            unreadOnly: true,
+            auth: goodAuth,
+          )),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const GetPrivateMessages(
+            unreadOnly: true,
+            auth: badAuth,
+          )),
+        );
+      });
 
       group('GetReportCount', () {});
     });

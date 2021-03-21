@@ -71,7 +71,34 @@ void main() {
         // );
       });
 
-      group('CreatePostLike', () {});
+      group('CreatePostLike', () {
+        test(
+          'correctly likes',
+          () => run(CreatePostLike(
+            postId: goodPostId,
+            score: VoteType.down,
+            auth: goodAuth,
+          )),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const CreatePostLike(
+            postId: goodPostId,
+            score: VoteType.down,
+            auth: badAuth,
+          )),
+        );
+
+        test(
+          'bad postId',
+          () => lemmyThrows(CreatePostLike(
+            postId: badPostId,
+            score: VoteType.down,
+            auth: goodAuth,
+          )),
+        );
+      });
 
       group('EditPost', () {});
 
@@ -83,7 +110,34 @@ void main() {
 
       group('StickyPost', () {});
 
-      group('SavePost', () {});
+      group('SavePost', () {
+        test(
+          'correctly saves',
+          () => run(SavePost(
+            postId: goodPostId,
+            save: true,
+            auth: goodAuth,
+          )),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const SavePost(
+            postId: goodPostId,
+            save: true,
+            auth: badAuth,
+          )),
+        );
+
+        test(
+          'bad postId',
+          () => lemmyThrows(SavePost(
+            postId: badPostId,
+            save: true,
+            auth: goodAuth,
+          )),
+        );
+      });
 
       group('CreatePostReport', () {});
 

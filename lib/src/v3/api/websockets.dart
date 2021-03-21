@@ -404,8 +404,8 @@ class WsEventGetPersonDetails extends WsEvent<FullPersonView> {
   const WsEventGetPersonDetails(FullPersonView data) : super(data);
 }
 
-class WsEventMarkAllAsRead extends WsEvent<Jwt> {
-  const WsEventMarkAllAsRead(Jwt data) : super(data);
+class WsEventMarkAllAsRead extends WsEvent<List<CommentView>> {
+  const WsEventMarkAllAsRead(List<CommentView> data) : super(data);
 }
 
 class WsEventAddAdmin extends WsEvent<List<PersonViewSafe>> {

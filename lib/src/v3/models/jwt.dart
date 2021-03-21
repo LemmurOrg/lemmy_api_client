@@ -30,8 +30,9 @@ class Jwt {
 class JwtPayload with _$JwtPayload {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory JwtPayload({
-    required int id,
+    required int iat,
     required String iss,
+    required int sub,
   }) = _JwtPayload;
 
   const JwtPayload._();
