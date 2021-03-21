@@ -28,25 +28,25 @@ void main() {
           )),
         );
 
-        test(
-          'bad communityName',
-          () => lemmyThrows(const Search(
-            q: 'q',
-            type: SearchType.all,
-            sort: SortType.active,
-            communityName: badCommunityName,
-          )),
-        );
+        // test(
+        //   'bad communityName',
+        //   () => lemmyThrows(const Search(
+        //     q: 'q',
+        //     type: SearchType.all,
+        //     sort: SortType.active,
+        //     communityName: badCommunityName,
+        //   )),
+        // );
 
-        test(
-          'bad communityId',
-          () => lemmyThrows(const Search(
-            q: 'q',
-            type: SearchType.all,
-            sort: SortType.active,
-            communityId: badCommunityId,
-          )),
-        );
+        // test(
+        //   'bad communityId',
+        //   () => lemmyThrows(const Search(
+        //     q: 'q',
+        //     type: SearchType.all,
+        //     sort: SortType.active,
+        //     communityId: badCommunityId,
+        //   )),
+        // );
       });
 
       group('GetModlog', () {

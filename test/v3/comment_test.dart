@@ -112,14 +112,6 @@ void main() {
           )),
         );
 
-        test(
-          'lack of community',
-          () => lemmyThrows(const GetComments(
-            type: CommentListingType.all,
-            sort: SortType.active,
-          )),
-        );
-
         // test(
         //   'bad community id',
         //   () => lemmyThrows(const GetComments(

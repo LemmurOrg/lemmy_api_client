@@ -14,10 +14,7 @@ void main() {
             auth: goodAuth,
           )),
         );
-        test(
-          'lack of community',
-          () => lemmyThrows(const GetCommunity()),
-        );
+
         test(
           'bad auth',
           () => lemmyThrows(const GetCommunity(auth: badAuth)),
