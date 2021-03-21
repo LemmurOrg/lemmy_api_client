@@ -33,5 +33,11 @@ const badUsername = '--';
 const goodCommunityId = 2;
 const badCommunityId = -1;
 
-final goodToken = Platform.environment['TEST_JWT_ENTERPRISE']!;
-const badToken = 'dsa';
+const goodMyCommentId = 387;
+const badMyCommentId = 300;
+
+const goodCommentId = 362;
+const badCommentId = -1;
+
+final goodAuth = Platform.environment['TEST_JWT_ENTERPRISE']!;
+const badAuth = 'dsa';

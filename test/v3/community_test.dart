@@ -11,7 +11,7 @@ void main() {
           'correctly fetches',
           () => run(GetCommunity(
             name: goodCommunityName,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
         test(
@@ -20,7 +20,7 @@ void main() {
         );
         test(
           'bad auth',
-          () => lemmyThrows(const GetCommunity(auth: badToken)),
+          () => lemmyThrows(const GetCommunity(auth: badAuth)),
         );
       });
 
@@ -32,7 +32,7 @@ void main() {
           () => run(ListCommunities(
             type: PostListingType.all,
             sort: SortType.active,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
         test(
@@ -40,7 +40,7 @@ void main() {
           () => lemmyThrows(const ListCommunities(
             type: PostListingType.all,
             sort: SortType.active,
-            auth: badToken,
+            auth: badAuth,
           )),
         );
       });
@@ -61,13 +61,13 @@ void main() {
         test(
           'correctly fetches',
           () => run(GetFollowedCommunities(
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
         test(
           'bad auth',
           () => lemmyThrows(const GetFollowedCommunities(
-            auth: badToken,
+            auth: badAuth,
           )),
         );
       });

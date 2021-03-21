@@ -26,7 +26,7 @@ void main() {
             savedOnly: false,
             sort: SortType.active,
             username: goodUsername,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
@@ -36,7 +36,7 @@ void main() {
             savedOnly: false,
             sort: SortType.active,
             username: goodUsername,
-            auth: badToken,
+            auth: badAuth,
           )),
         );
 
@@ -45,7 +45,7 @@ void main() {
           () => lemmyThrows(GetPersonDetails(
             savedOnly: false,
             sort: SortType.active,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
@@ -55,7 +55,7 @@ void main() {
             savedOnly: false,
             sort: SortType.active,
             username: badUsername,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
@@ -65,7 +65,7 @@ void main() {
             savedOnly: false,
             sort: SortType.active,
             personId: badPersonId,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
       });

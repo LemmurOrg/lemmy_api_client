@@ -11,7 +11,7 @@ void main() {
           'correctly fetches',
           () => run(GetPost(
             id: goodPostId,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
@@ -19,7 +19,7 @@ void main() {
           'bad auth',
           () => lemmyThrows(const GetPost(
             id: goodPostId,
-            auth: badToken,
+            auth: badAuth,
           )),
         );
 
@@ -39,7 +39,7 @@ void main() {
           () => run(GetPosts(
             type: PostListingType.all,
             sort: SortType.active,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
@@ -48,28 +48,27 @@ void main() {
           () => lemmyThrows(const GetPosts(
             type: PostListingType.all,
             sort: SortType.active,
-            auth: badToken,
+            auth: badAuth,
           )),
         );
 
-        test(
-          'bad communityId',
-          () => lemmyThrows(const GetPosts(
-            type: PostListingType.all,
-            sort: SortType.active,
-            communityName: badCommunityName,
-          )),
-        );
+        // test(
+        //   'bad communityId',
+        //   () => lemmyThrows(const GetPosts(
+        //     type: PostListingType.all,
+        //     sort: SortType.active,
+        //     communityName: badCommunityName,
+        //   )),
+        // );
 
-        test(
-          'bad communityName',
-          () => lemmyThrows(const GetPosts(
-            type: PostListingType.all,
-            sort: SortType.active,
-            auth: badToken,
-            communityId: badCommunityId,
-          )),
-        );
+        // test(
+        //   'bad communityName',
+        //   () => lemmyThrows(const GetPosts(
+        //     type: PostListingType.all,
+        //     sort: SortType.active,
+        //     communityId: badCommunityId,
+        //   )),
+        // );
       });
 
       group('CreatePostLike', () {});

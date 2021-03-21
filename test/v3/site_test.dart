@@ -14,7 +14,7 @@ void main() {
             type: SearchType.all,
             sort: SortType.active,
             communityId: goodCommunityId,
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
@@ -24,7 +24,7 @@ void main() {
             q: 'q',
             type: SearchType.all,
             sort: SortType.active,
-            auth: badToken,
+            auth: badAuth,
           )),
         );
 
@@ -58,19 +58,19 @@ void main() {
           )),
         );
 
-        test(
-          'bad modPersonId',
-          () => lemmyThrows(const GetModlog(
-            modPersonId: badModPersonId,
-          )),
-        );
+        // test(
+        //   'bad modPersonId',
+        //   () => lemmyThrows(const GetModlog(
+        //     modPersonId: badModPersonId,
+        //   )),
+        // );
 
-        test(
-          'bad communityId',
-          () => lemmyThrows(const GetModlog(
-            communityId: badCommunityId,
-          )),
-        );
+        // test(
+        //   'bad communityId',
+        //   () => lemmyThrows(const GetModlog(
+        //     communityId: badCommunityId,
+        //   )),
+        // );
       });
 
       group('CreateSite', () {});
@@ -81,14 +81,14 @@ void main() {
         test(
           'correctly fetches',
           () => run(GetSite(
-            auth: goodToken,
+            auth: goodAuth,
           )),
         );
 
         test(
           'bad auth',
           () => lemmyThrows(const GetSite(
-            auth: badToken,
+            auth: badAuth,
           )),
         );
       });
