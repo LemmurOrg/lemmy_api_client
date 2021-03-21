@@ -25,7 +25,6 @@ class _$PersonSafeTearOff {
       required String name,
       String? preferredUsername,
       String? avatar,
-      required bool admin,
       required bool banned,
       required DateTime published,
       DateTime? updated,
@@ -41,7 +40,6 @@ class _$PersonSafeTearOff {
       name: name,
       preferredUsername: preferredUsername,
       avatar: avatar,
-      admin: admin,
       banned: banned,
       published: published,
       updated: updated,
@@ -69,7 +67,6 @@ mixin _$PersonSafe {
   String get name => throw _privateConstructorUsedError;
   String? get preferredUsername => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
-  bool get admin => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
@@ -97,7 +94,6 @@ abstract class $PersonSafeCopyWith<$Res> {
       String name,
       String? preferredUsername,
       String? avatar,
-      bool admin,
       bool banned,
       DateTime published,
       DateTime? updated,
@@ -124,7 +120,6 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
     Object? name = freezed,
     Object? preferredUsername = freezed,
     Object? avatar = freezed,
-    Object? admin = freezed,
     Object? banned = freezed,
     Object? published = freezed,
     Object? updated = freezed,
@@ -153,10 +148,6 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: admin == freezed
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as bool,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -212,7 +203,6 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
       String name,
       String? preferredUsername,
       String? avatar,
-      bool admin,
       bool banned,
       DateTime published,
       DateTime? updated,
@@ -241,7 +231,6 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
     Object? name = freezed,
     Object? preferredUsername = freezed,
     Object? avatar = freezed,
-    Object? admin = freezed,
     Object? banned = freezed,
     Object? published = freezed,
     Object? updated = freezed,
@@ -270,10 +259,6 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: admin == freezed
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as bool,
       banned: banned == freezed
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
@@ -329,7 +314,6 @@ class _$_PersonSafe extends _PersonSafe {
       required this.name,
       this.preferredUsername,
       this.avatar,
-      required this.admin,
       required this.banned,
       required this.published,
       this.updated,
@@ -354,8 +338,6 @@ class _$_PersonSafe extends _PersonSafe {
   @override
   final String? avatar;
   @override
-  final bool admin;
-  @override
   final bool banned;
   @override
   final DateTime published;
@@ -378,7 +360,7 @@ class _$_PersonSafe extends _PersonSafe {
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, admin: $admin, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl)';
+    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl)';
   }
 
   @override
@@ -394,8 +376,6 @@ class _$_PersonSafe extends _PersonSafe {
                     .equals(other.preferredUsername, preferredUsername)) &&
             (identical(other.avatar, avatar) ||
                 const DeepCollectionEquality().equals(other.avatar, avatar)) &&
-            (identical(other.admin, admin) ||
-                const DeepCollectionEquality().equals(other.admin, admin)) &&
             (identical(other.banned, banned) ||
                 const DeepCollectionEquality().equals(other.banned, banned)) &&
             (identical(other.published, published) ||
@@ -431,7 +411,6 @@ class _$_PersonSafe extends _PersonSafe {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(preferredUsername) ^
       const DeepCollectionEquality().hash(avatar) ^
-      const DeepCollectionEquality().hash(admin) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated) ^
@@ -460,7 +439,6 @@ abstract class _PersonSafe extends PersonSafe {
       required String name,
       String? preferredUsername,
       String? avatar,
-      required bool admin,
       required bool banned,
       required DateTime published,
       DateTime? updated,
@@ -484,8 +462,6 @@ abstract class _PersonSafe extends PersonSafe {
   String? get preferredUsername => throw _privateConstructorUsedError;
   @override
   String? get avatar => throw _privateConstructorUsedError;
-  @override
-  bool get admin => throw _privateConstructorUsedError;
   @override
   bool get banned => throw _privateConstructorUsedError;
   @override

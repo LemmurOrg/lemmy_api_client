@@ -12,7 +12,6 @@ _$_PersonSafe _$_$_PersonSafeFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     preferredUsername: json['preferred_username'] as String?,
     avatar: json['avatar'] as String?,
-    admin: json['admin'] as bool,
     banned: json['banned'] as bool,
     published: const ForceUtcDateTime().fromJson(json['published'] as String),
     updated:
@@ -34,7 +33,6 @@ Map<String, dynamic> _$_$_PersonSafeToJson(_$_PersonSafe instance) =>
       'name': instance.name,
       'preferred_username': instance.preferredUsername,
       'avatar': instance.avatar,
-      'admin': instance.admin,
       'banned': instance.banned,
       'published': const ForceUtcDateTime().toJson(instance.published),
       'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),

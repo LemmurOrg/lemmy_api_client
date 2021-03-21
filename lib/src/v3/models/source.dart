@@ -18,7 +18,6 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
     required String name,
     String? preferredUsername,
     String? avatar,
-    required bool admin,
     required bool banned,
     required DateTime published,
     DateTime? updated,

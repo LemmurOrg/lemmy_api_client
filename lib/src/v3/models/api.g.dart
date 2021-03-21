@@ -187,9 +187,9 @@ _$_FederatedInstances _$_$_FederatedInstancesFromJson(
   return _$_FederatedInstances(
     linked: (json['linked'] as List<dynamic>).map((e) => e as String).toList(),
     allowed:
-        (json['allowed'] as List<dynamic>).map((e) => e as String).toList(),
+        (json['allowed'] as List<dynamic>?)?.map((e) => e as String).toList(),
     blocked:
-        (json['blocked'] as List<dynamic>).map((e) => e as String).toList(),
+        (json['blocked'] as List<dynamic>?)?.map((e) => e as String).toList(),
   )..instanceHost = json['instance_host'] as String;
 }
 

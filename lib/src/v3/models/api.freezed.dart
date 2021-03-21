@@ -1705,8 +1705,8 @@ class _$FederatedInstancesTearOff {
 
   _FederatedInstances call(
       {required List<String> linked,
-      required List<String> allowed,
-      required List<String> blocked}) {
+      List<String>? allowed,
+      List<String>? blocked}) {
     return _FederatedInstances(
       linked: linked,
       allowed: allowed,
@@ -1725,8 +1725,8 @@ const $FederatedInstances = _$FederatedInstancesTearOff();
 /// @nodoc
 mixin _$FederatedInstances {
   List<String> get linked => throw _privateConstructorUsedError;
-  List<String> get allowed => throw _privateConstructorUsedError;
-  List<String> get blocked => throw _privateConstructorUsedError;
+  List<String>? get allowed => throw _privateConstructorUsedError;
+  List<String>? get blocked => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1739,7 +1739,8 @@ abstract class $FederatedInstancesCopyWith<$Res> {
   factory $FederatedInstancesCopyWith(
           FederatedInstances value, $Res Function(FederatedInstances) then) =
       _$FederatedInstancesCopyWithImpl<$Res>;
-  $Res call({List<String> linked, List<String> allowed, List<String> blocked});
+  $Res call(
+      {List<String> linked, List<String>? allowed, List<String>? blocked});
 }
 
 /// @nodoc
@@ -1765,11 +1766,11 @@ class _$FederatedInstancesCopyWithImpl<$Res>
       allowed: allowed == freezed
           ? _value.allowed
           : allowed // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
       blocked: blocked == freezed
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
     ));
   }
 }
@@ -1781,7 +1782,8 @@ abstract class _$FederatedInstancesCopyWith<$Res>
           _FederatedInstances value, $Res Function(_FederatedInstances) then) =
       __$FederatedInstancesCopyWithImpl<$Res>;
   @override
-  $Res call({List<String> linked, List<String> allowed, List<String> blocked});
+  $Res call(
+      {List<String> linked, List<String>? allowed, List<String>? blocked});
 }
 
 /// @nodoc
@@ -1809,11 +1811,11 @@ class __$FederatedInstancesCopyWithImpl<$Res>
       allowed: allowed == freezed
           ? _value.allowed
           : allowed // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
       blocked: blocked == freezed
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
     ));
   }
 }
@@ -1822,8 +1824,7 @@ class __$FederatedInstancesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_FederatedInstances extends _FederatedInstances {
-  _$_FederatedInstances(
-      {required this.linked, required this.allowed, required this.blocked})
+  _$_FederatedInstances({required this.linked, this.allowed, this.blocked})
       : super._();
 
   factory _$_FederatedInstances.fromJson(Map<String, dynamic> json) =>
@@ -1832,9 +1833,9 @@ class _$_FederatedInstances extends _FederatedInstances {
   @override
   final List<String> linked;
   @override
-  final List<String> allowed;
+  final List<String>? allowed;
   @override
-  final List<String> blocked;
+  final List<String>? blocked;
 
   @override
   String toString() {
@@ -1875,8 +1876,8 @@ class _$_FederatedInstances extends _FederatedInstances {
 abstract class _FederatedInstances extends FederatedInstances {
   factory _FederatedInstances(
       {required List<String> linked,
-      required List<String> allowed,
-      required List<String> blocked}) = _$_FederatedInstances;
+      List<String>? allowed,
+      List<String>? blocked}) = _$_FederatedInstances;
   _FederatedInstances._() : super._();
 
   factory _FederatedInstances.fromJson(Map<String, dynamic> json) =
@@ -1885,9 +1886,9 @@ abstract class _FederatedInstances extends FederatedInstances {
   @override
   List<String> get linked => throw _privateConstructorUsedError;
   @override
-  List<String> get allowed => throw _privateConstructorUsedError;
+  List<String>? get allowed => throw _privateConstructorUsedError;
   @override
-  List<String> get blocked => throw _privateConstructorUsedError;
+  List<String>? get blocked => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FederatedInstancesCopyWith<_FederatedInstances> get copyWith =>

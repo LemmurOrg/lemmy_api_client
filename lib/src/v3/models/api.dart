@@ -114,8 +114,8 @@ class FederatedInstances extends WithInstanceHost with _$FederatedInstances {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FederatedInstances({
     required List<String> linked,
-    required List<String> allowed,
-    required List<String> blocked,
+    List<String>? allowed,
+    List<String>? blocked,
   }) = _FederatedInstances;
 
   FederatedInstances._();
