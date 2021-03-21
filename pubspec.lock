@@ -172,12 +172,10 @@ packages:
   freezed:
     dependency: "direct dev"
     description:
-      path: "packages/freezed"
-      ref: master
-      resolved-ref: a9a3fa25b0588fc4c3bf2e4e078a40fee10992c7
-      url: "git://github.com/rrousselGit/freezed.git"
-    source: git
-    version: "0.14.1"
+      name: freezed
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.14.1+1"
   freezed_annotation:
     dependency: "direct main"
     description:

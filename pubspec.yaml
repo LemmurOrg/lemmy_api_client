@@ -16,9 +16,4 @@ dev_dependencies:
   test: ^1.16.8
   json_serializable: ^4.1.0
   build_runner: ^1.11.5
-  # TODO: change to released version once it gets released
-  freezed:
-    git:
-      url: git://github.com/rrousselGit/freezed.git
-      path: packages/freezed
-      ref: master
+  freezed: ^0.14.1+1
