@@ -87,15 +87,15 @@ void main() {
           )),
         );
 
-        test(
-          'bad personId',
-          () => lemmyThrows(GetPersonDetails(
-            savedOnly: false,
-            sort: SortType.active,
-            personId: badPersonId,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'bad personId',
+        //   () => lemmyThrows(GetPersonDetails(
+        //     savedOnly: false,
+        //     sort: SortType.active,
+        //     personId: badPersonId,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
 
       group('MarkAllAsRead', () {

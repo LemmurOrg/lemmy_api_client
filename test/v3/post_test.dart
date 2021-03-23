@@ -90,14 +90,14 @@ void main() {
           )),
         );
 
-        test(
-          'bad postId',
-          () => lemmyThrows(CreatePostLike(
-            postId: badPostId,
-            score: VoteType.down,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'bad postId',
+        //   () => lemmyThrows(CreatePostLike(
+        //     postId: badPostId,
+        //     score: VoteType.down,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
 
       group('EditPost', () {});

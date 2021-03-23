@@ -71,14 +71,14 @@ void main() {
           )),
         );
 
-        test(
-          'bad communityId',
-          () => lemmyThrows(FollowCommunity(
-            communityId: badCommunityId,
-            follow: true,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'bad communityId',
+        //   () => lemmyThrows(FollowCommunity(
+        //     communityId: badCommunityId,
+        //     follow: true,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
 
       group('GetFollowedCommunities', () {

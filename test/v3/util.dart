@@ -11,7 +11,7 @@ Future<void> lemmyThrows(LemmyApiQuery query) async {
     await run<dynamic>(query);
     fail('no error was thrown');
   } on LemmyApiException catch (err) {
-    expect(err.message, matches(RegExp('([a-z]+_)*[a-z]+')));
+    expect(err.message, matches(RegExp(r'^([a-z]+_)*[a-z]+$')));
   }
 }
 

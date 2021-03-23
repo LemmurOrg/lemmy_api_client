@@ -91,14 +91,14 @@ void main() {
           )),
         );
 
-        test(
-          'bad commentId',
-          () => lemmyThrows(CreateCommentLike(
-            commentId: badCommentId,
-            score: VoteType.up,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'bad commentId',
+        //   () => lemmyThrows(CreateCommentLike(
+        //     commentId: badCommentId,
+        //     score: VoteType.up,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
 
       group('GetComments', () {
