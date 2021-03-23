@@ -34,7 +34,9 @@ class _$PersonSafeTearOff {
       String? banner,
       required bool deleted,
       required String inboxUrl,
-      required String sharedInboxUrl}) {
+      required String sharedInboxUrl,
+      String? matrixUserId,
+      required bool admin}) {
     return _PersonSafe(
       id: id,
       name: name,
@@ -50,6 +52,8 @@ class _$PersonSafeTearOff {
       deleted: deleted,
       inboxUrl: inboxUrl,
       sharedInboxUrl: sharedInboxUrl,
+      matrixUserId: matrixUserId,
+      admin: admin,
     );
   }
 
@@ -77,6 +81,8 @@ mixin _$PersonSafe {
   bool get deleted => throw _privateConstructorUsedError;
   String get inboxUrl => throw _privateConstructorUsedError;
   String get sharedInboxUrl => throw _privateConstructorUsedError;
+  String? get matrixUserId => throw _privateConstructorUsedError;
+  bool get admin => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -103,7 +109,9 @@ abstract class $PersonSafeCopyWith<$Res> {
       String? banner,
       bool deleted,
       String inboxUrl,
-      String sharedInboxUrl});
+      String sharedInboxUrl,
+      String? matrixUserId,
+      bool admin});
 }
 
 /// @nodoc
@@ -130,6 +138,8 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
     Object? deleted = freezed,
     Object? inboxUrl = freezed,
     Object? sharedInboxUrl = freezed,
+    Object? matrixUserId = freezed,
+    Object? admin = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -188,6 +198,14 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.sharedInboxUrl
           : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      matrixUserId: matrixUserId == freezed
+          ? _value.matrixUserId
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -212,7 +230,9 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
       String? banner,
       bool deleted,
       String inboxUrl,
-      String sharedInboxUrl});
+      String sharedInboxUrl,
+      String? matrixUserId,
+      bool admin});
 }
 
 /// @nodoc
@@ -241,6 +261,8 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
     Object? deleted = freezed,
     Object? inboxUrl = freezed,
     Object? sharedInboxUrl = freezed,
+    Object? matrixUserId = freezed,
+    Object? admin = freezed,
   }) {
     return _then(_PersonSafe(
       id: id == freezed
@@ -299,6 +321,14 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.sharedInboxUrl
           : sharedInboxUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      matrixUserId: matrixUserId == freezed
+          ? _value.matrixUserId
+          : matrixUserId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -323,7 +353,9 @@ class _$_PersonSafe extends _PersonSafe {
       this.banner,
       required this.deleted,
       required this.inboxUrl,
-      required this.sharedInboxUrl})
+      required this.sharedInboxUrl,
+      this.matrixUserId,
+      required this.admin})
       : super._();
 
   factory _$_PersonSafe.fromJson(Map<String, dynamic> json) =>
@@ -357,10 +389,14 @@ class _$_PersonSafe extends _PersonSafe {
   final String inboxUrl;
   @override
   final String sharedInboxUrl;
+  @override
+  final String? matrixUserId;
+  @override
+  final bool admin;
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl)';
+    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin)';
   }
 
   @override
@@ -401,7 +437,12 @@ class _$_PersonSafe extends _PersonSafe {
                     .equals(other.inboxUrl, inboxUrl)) &&
             (identical(other.sharedInboxUrl, sharedInboxUrl) ||
                 const DeepCollectionEquality()
-                    .equals(other.sharedInboxUrl, sharedInboxUrl)));
+                    .equals(other.sharedInboxUrl, sharedInboxUrl)) &&
+            (identical(other.matrixUserId, matrixUserId) ||
+                const DeepCollectionEquality()
+                    .equals(other.matrixUserId, matrixUserId)) &&
+            (identical(other.admin, admin) ||
+                const DeepCollectionEquality().equals(other.admin, admin)));
   }
 
   @override
@@ -420,7 +461,9 @@ class _$_PersonSafe extends _PersonSafe {
       const DeepCollectionEquality().hash(banner) ^
       const DeepCollectionEquality().hash(deleted) ^
       const DeepCollectionEquality().hash(inboxUrl) ^
-      const DeepCollectionEquality().hash(sharedInboxUrl);
+      const DeepCollectionEquality().hash(sharedInboxUrl) ^
+      const DeepCollectionEquality().hash(matrixUserId) ^
+      const DeepCollectionEquality().hash(admin);
 
   @JsonKey(ignore: true)
   @override
@@ -448,7 +491,9 @@ abstract class _PersonSafe extends PersonSafe {
       String? banner,
       required bool deleted,
       required String inboxUrl,
-      required String sharedInboxUrl}) = _$_PersonSafe;
+      required String sharedInboxUrl,
+      String? matrixUserId,
+      required bool admin}) = _$_PersonSafe;
   _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
@@ -483,6 +528,10 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   String get sharedInboxUrl => throw _privateConstructorUsedError;
   @override
+  String? get matrixUserId => throw _privateConstructorUsedError;
+  @override
+  bool get admin => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PersonSafeCopyWith<_PersonSafe> get copyWith =>
       throw _privateConstructorUsedError;
@@ -500,7 +549,6 @@ class _$LocalUserSettingsTearOff {
       {required int id,
       required int personId,
       String? email,
-      required bool admin,
       required bool showNsfw,
       required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -509,13 +557,11 @@ class _$LocalUserSettingsTearOff {
           required PostListingType defaultListingType,
       required String lang,
       required bool showAvatars,
-      required bool sendNotificationsToEmail,
-      String? matrixUserId}) {
+      required bool sendNotificationsToEmail}) {
     return _LocalUserSettings(
       id: id,
       personId: personId,
       email: email,
-      admin: admin,
       showNsfw: showNsfw,
       theme: theme,
       defaultSortType: defaultSortType,
@@ -523,7 +569,6 @@ class _$LocalUserSettingsTearOff {
       lang: lang,
       showAvatars: showAvatars,
       sendNotificationsToEmail: sendNotificationsToEmail,
-      matrixUserId: matrixUserId,
     );
   }
 
@@ -540,7 +585,6 @@ mixin _$LocalUserSettings {
   int get id => throw _privateConstructorUsedError;
   int get personId => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
-  bool get admin => throw _privateConstructorUsedError;
   bool get showNsfw => throw _privateConstructorUsedError;
   String get theme => throw _privateConstructorUsedError;
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -550,7 +594,6 @@ mixin _$LocalUserSettings {
   String get lang => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
-  String? get matrixUserId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -567,7 +610,6 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
       {int id,
       int personId,
       String? email,
-      bool admin,
       bool showNsfw,
       String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -576,8 +618,7 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
           PostListingType defaultListingType,
       String lang,
       bool showAvatars,
-      bool sendNotificationsToEmail,
-      String? matrixUserId});
+      bool sendNotificationsToEmail});
 }
 
 /// @nodoc
@@ -594,7 +635,6 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? id = freezed,
     Object? personId = freezed,
     Object? email = freezed,
-    Object? admin = freezed,
     Object? showNsfw = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
@@ -602,7 +642,6 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? showAvatars = freezed,
     Object? sendNotificationsToEmail = freezed,
-    Object? matrixUserId = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -617,10 +656,6 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: admin == freezed
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as bool,
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
@@ -649,10 +684,6 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      matrixUserId: matrixUserId == freezed
-          ? _value.matrixUserId
-          : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -668,7 +699,6 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
       {int id,
       int personId,
       String? email,
-      bool admin,
       bool showNsfw,
       String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -677,8 +707,7 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
           PostListingType defaultListingType,
       String lang,
       bool showAvatars,
-      bool sendNotificationsToEmail,
-      String? matrixUserId});
+      bool sendNotificationsToEmail});
 }
 
 /// @nodoc
@@ -697,7 +726,6 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? id = freezed,
     Object? personId = freezed,
     Object? email = freezed,
-    Object? admin = freezed,
     Object? showNsfw = freezed,
     Object? theme = freezed,
     Object? defaultSortType = freezed,
@@ -705,7 +733,6 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? showAvatars = freezed,
     Object? sendNotificationsToEmail = freezed,
-    Object? matrixUserId = freezed,
   }) {
     return _then(_LocalUserSettings(
       id: id == freezed
@@ -720,10 +747,6 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String?,
-      admin: admin == freezed
-          ? _value.admin
-          : admin // ignore: cast_nullable_to_non_nullable
-              as bool,
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
@@ -752,10 +775,6 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool,
-      matrixUserId: matrixUserId == freezed
-          ? _value.matrixUserId
-          : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
     ));
   }
 }
@@ -770,7 +789,6 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       {required this.id,
       required this.personId,
       this.email,
-      required this.admin,
       required this.showNsfw,
       required this.theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -779,8 +797,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
           required this.defaultListingType,
       required this.lang,
       required this.showAvatars,
-      required this.sendNotificationsToEmail,
-      this.matrixUserId})
+      required this.sendNotificationsToEmail})
       : super._();
 
   factory _$_LocalUserSettings.fromJson(Map<String, dynamic> json) =>
@@ -792,8 +809,6 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   final int personId;
   @override
   final String? email;
-  @override
-  final bool admin;
   @override
   final bool showNsfw;
   @override
@@ -810,12 +825,10 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   final bool showAvatars;
   @override
   final bool sendNotificationsToEmail;
-  @override
-  final String? matrixUserId;
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, admin: $admin, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, matrixUserId: $matrixUserId)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail)';
   }
 
   @override
@@ -829,8 +842,6 @@ class _$_LocalUserSettings extends _LocalUserSettings {
                     .equals(other.personId, personId)) &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
-            (identical(other.admin, admin) ||
-                const DeepCollectionEquality().equals(other.admin, admin)) &&
             (identical(other.showNsfw, showNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.showNsfw, showNsfw)) &&
@@ -850,11 +861,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
             (identical(
                     other.sendNotificationsToEmail, sendNotificationsToEmail) ||
                 const DeepCollectionEquality().equals(
-                    other.sendNotificationsToEmail,
-                    sendNotificationsToEmail)) &&
-            (identical(other.matrixUserId, matrixUserId) ||
-                const DeepCollectionEquality()
-                    .equals(other.matrixUserId, matrixUserId)));
+                    other.sendNotificationsToEmail, sendNotificationsToEmail)));
   }
 
   @override
@@ -863,15 +870,13 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(personId) ^
       const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(admin) ^
       const DeepCollectionEquality().hash(showNsfw) ^
       const DeepCollectionEquality().hash(theme) ^
       const DeepCollectionEquality().hash(defaultSortType) ^
       const DeepCollectionEquality().hash(defaultListingType) ^
       const DeepCollectionEquality().hash(lang) ^
       const DeepCollectionEquality().hash(showAvatars) ^
-      const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
-      const DeepCollectionEquality().hash(matrixUserId);
+      const DeepCollectionEquality().hash(sendNotificationsToEmail);
 
   @JsonKey(ignore: true)
   @override
@@ -889,7 +894,6 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       {required int id,
       required int personId,
       String? email,
-      required bool admin,
       required bool showNsfw,
       required String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -898,8 +902,7 @@ abstract class _LocalUserSettings extends LocalUserSettings {
           required PostListingType defaultListingType,
       required String lang,
       required bool showAvatars,
-      required bool sendNotificationsToEmail,
-      String? matrixUserId}) = _$_LocalUserSettings;
+      required bool sendNotificationsToEmail}) = _$_LocalUserSettings;
   _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
@@ -911,8 +914,6 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   int get personId => throw _privateConstructorUsedError;
   @override
   String? get email => throw _privateConstructorUsedError;
-  @override
-  bool get admin => throw _privateConstructorUsedError;
   @override
   bool get showNsfw => throw _privateConstructorUsedError;
   @override
@@ -929,8 +930,6 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   bool get showAvatars => throw _privateConstructorUsedError;
   @override
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
-  @override
-  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>

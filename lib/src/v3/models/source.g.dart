@@ -23,6 +23,8 @@ _$_PersonSafe _$_$_PersonSafeFromJson(Map<String, dynamic> json) {
     deleted: json['deleted'] as bool,
     inboxUrl: json['inbox_url'] as String,
     sharedInboxUrl: json['shared_inbox_url'] as String,
+    matrixUserId: json['matrix_user_id'] as String?,
+    admin: json['admin'] as bool,
   )..instanceHost = json['instance_host'] as String;
 }
 
@@ -43,6 +45,8 @@ Map<String, dynamic> _$_$_PersonSafeToJson(_$_PersonSafe instance) =>
       'deleted': instance.deleted,
       'inbox_url': instance.inboxUrl,
       'shared_inbox_url': instance.sharedInboxUrl,
+      'matrix_user_id': instance.matrixUserId,
+      'admin': instance.admin,
     };
 
 _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
@@ -50,7 +54,6 @@ _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
     id: json['id'] as int,
     personId: json['person_id'] as int,
     email: json['email'] as String?,
-    admin: json['admin'] as bool,
     showNsfw: json['show_nsfw'] as bool,
     theme: json['theme'] as String,
     defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
@@ -59,7 +62,6 @@ _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
     lang: json['lang'] as String,
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
-    matrixUserId: json['matrix_user_id'] as String?,
   )..instanceHost = json['instance_host'] as String;
 }
 
@@ -70,7 +72,6 @@ Map<String, dynamic> _$_$_LocalUserSettingsToJson(
       'id': instance.id,
       'person_id': instance.personId,
       'email': instance.email,
-      'admin': instance.admin,
       'show_nsfw': instance.showNsfw,
       'theme': instance.theme,
       'default_sort_type': sortTypeToIndex(instance.defaultSortType),
@@ -79,7 +80,6 @@ Map<String, dynamic> _$_$_LocalUserSettingsToJson(
       'lang': instance.lang,
       'show_avatars': instance.showAvatars,
       'send_notifications_to_email': instance.sendNotificationsToEmail,
-      'matrix_user_id': instance.matrixUserId,
     };
 
 _$_Site _$_$_SiteFromJson(Map<String, dynamic> json) {

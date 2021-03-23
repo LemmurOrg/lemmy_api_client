@@ -46,7 +46,7 @@ class CreateCommunity
     String? description,
     String? icon,
     String? banner,
-    required bool nsfw,
+    bool? nsfw,
     required String auth,
   }) = _CreateCommunity;
 
@@ -169,7 +169,7 @@ class EditCommunity
     String? description,
     String? icon,
     String? banner,
-    required bool nsfw,
+    bool? nsfw,
     required String auth,
   }) = _EditCommunity;
 

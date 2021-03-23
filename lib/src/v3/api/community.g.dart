@@ -36,7 +36,7 @@ _$_CreateCommunity _$_$_CreateCommunityFromJson(Map<String, dynamic> json) {
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
-    nsfw: json['nsfw'] as bool,
+    nsfw: json['nsfw'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -56,7 +56,7 @@ Map<String, dynamic> _$_$_CreateCommunityToJson(_$_CreateCommunity instance) {
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
-  val['nsfw'] = instance.nsfw;
+  writeNotNull('nsfw', instance.nsfw);
   val['auth'] = instance.auth;
   return val;
 }
@@ -146,7 +146,7 @@ _$_EditCommunity _$_$_EditCommunityFromJson(Map<String, dynamic> json) {
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
-    nsfw: json['nsfw'] as bool,
+    nsfw: json['nsfw'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -166,7 +166,7 @@ Map<String, dynamic> _$_$_EditCommunityToJson(_$_EditCommunity instance) {
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
-  val['nsfw'] = instance.nsfw;
+  writeNotNull('nsfw', instance.nsfw);
   val['auth'] = instance.auth;
   return val;
 }

@@ -28,6 +28,8 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
     required bool deleted,
     required String inboxUrl,
     required String sharedInboxUrl,
+    String? matrixUserId,
+    required bool admin,
   }) = _PersonSafe;
 
   PersonSafe._();
@@ -44,7 +46,6 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
     required int id,
     required int personId,
     String? email,
-    required bool admin,
     required bool showNsfw,
     required String theme,
     @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
@@ -54,7 +55,6 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
     required String lang,
     required bool showAvatars,
     required bool sendNotificationsToEmail,
-    String? matrixUserId,
   }) = _LocalUserSettings;
 
   LocalUserSettings._();

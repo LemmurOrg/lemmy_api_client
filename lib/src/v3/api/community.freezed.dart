@@ -215,7 +215,7 @@ class _$CreateCommunityTearOff {
       String? description,
       String? icon,
       String? banner,
-      required bool nsfw,
+      bool? nsfw,
       required String auth}) {
     return _CreateCommunity(
       name: name,
@@ -243,7 +243,7 @@ mixin _$CreateCommunity {
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -263,7 +263,7 @@ abstract class $CreateCommunityCopyWith<$Res> {
       String? description,
       String? icon,
       String? banner,
-      bool nsfw,
+      bool? nsfw,
       String auth});
 }
 
@@ -310,7 +310,7 @@ class _$CreateCommunityCopyWithImpl<$Res>
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -332,7 +332,7 @@ abstract class _$CreateCommunityCopyWith<$Res>
       String? description,
       String? icon,
       String? banner,
-      bool nsfw,
+      bool? nsfw,
       String auth});
 }
 
@@ -381,7 +381,7 @@ class __$CreateCommunityCopyWithImpl<$Res>
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -400,7 +400,7 @@ class _$_CreateCommunity extends _CreateCommunity {
       this.description,
       this.icon,
       this.banner,
-      required this.nsfw,
+      this.nsfw,
       required this.auth})
       : super._();
 
@@ -418,7 +418,7 @@ class _$_CreateCommunity extends _CreateCommunity {
   @override
   final String? banner;
   @override
-  final bool nsfw;
+  final bool? nsfw;
   @override
   final String auth;
 
@@ -477,7 +477,7 @@ abstract class _CreateCommunity extends CreateCommunity {
       String? description,
       String? icon,
       String? banner,
-      required bool nsfw,
+      bool? nsfw,
       required String auth}) = _$_CreateCommunity;
   const _CreateCommunity._() : super._();
 
@@ -495,7 +495,7 @@ abstract class _CreateCommunity extends CreateCommunity {
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -1305,7 +1305,7 @@ class _$EditCommunityTearOff {
       String? description,
       String? icon,
       String? banner,
-      required bool nsfw,
+      bool? nsfw,
       required String auth}) {
     return _EditCommunity(
       communityId: communityId,
@@ -1333,7 +1333,7 @@ mixin _$EditCommunity {
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1353,7 +1353,7 @@ abstract class $EditCommunityCopyWith<$Res> {
       String? description,
       String? icon,
       String? banner,
-      bool nsfw,
+      bool? nsfw,
       String auth});
 }
 
@@ -1400,7 +1400,7 @@ class _$EditCommunityCopyWithImpl<$Res>
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1422,7 +1422,7 @@ abstract class _$EditCommunityCopyWith<$Res>
       String? description,
       String? icon,
       String? banner,
-      bool nsfw,
+      bool? nsfw,
       String auth});
 }
 
@@ -1471,7 +1471,7 @@ class __$EditCommunityCopyWithImpl<$Res>
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1490,7 +1490,7 @@ class _$_EditCommunity extends _EditCommunity {
       this.description,
       this.icon,
       this.banner,
-      required this.nsfw,
+      this.nsfw,
       required this.auth})
       : super._();
 
@@ -1508,7 +1508,7 @@ class _$_EditCommunity extends _EditCommunity {
   @override
   final String? banner;
   @override
-  final bool nsfw;
+  final bool? nsfw;
   @override
   final String auth;
 
@@ -1568,7 +1568,7 @@ abstract class _EditCommunity extends EditCommunity {
       String? description,
       String? icon,
       String? banner,
-      required bool nsfw,
+      bool? nsfw,
       required String auth}) = _$_EditCommunity;
   const _EditCommunity._() : super._();
 
@@ -1586,7 +1586,7 @@ abstract class _EditCommunity extends EditCommunity {
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
