@@ -1508,6 +1508,7 @@ class _$GetCommentsTearOff {
       int? limit,
       int? communityId,
       String? communityName,
+      required bool savedOnly,
       String? auth}) {
     return _GetComments(
       type: type,
@@ -1516,6 +1517,7 @@ class _$GetCommentsTearOff {
       limit: limit,
       communityId: communityId,
       communityName: communityName,
+      savedOnly: savedOnly,
       auth: auth,
     );
   }
@@ -1537,6 +1539,7 @@ mixin _$GetComments {
   int? get limit => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
   String? get communityName => throw _privateConstructorUsedError;
+  bool get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1557,6 +1560,7 @@ abstract class $GetCommentsCopyWith<$Res> {
       int? limit,
       int? communityId,
       String? communityName,
+      bool savedOnly,
       String? auth});
 }
 
@@ -1576,6 +1580,7 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
     Object? limit = freezed,
     Object? communityId = freezed,
     Object? communityName = freezed,
+    Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1603,6 +1608,10 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
           ? _value.communityName
           : communityName // ignore: cast_nullable_to_non_nullable
               as String?,
+      savedOnly: savedOnly == freezed
+          ? _value.savedOnly
+          : savedOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1625,6 +1634,7 @@ abstract class _$GetCommentsCopyWith<$Res>
       int? limit,
       int? communityId,
       String? communityName,
+      bool savedOnly,
       String? auth});
 }
 
@@ -1646,6 +1656,7 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? communityId = freezed,
     Object? communityName = freezed,
+    Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_GetComments(
@@ -1673,6 +1684,10 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
           ? _value.communityName
           : communityName // ignore: cast_nullable_to_non_nullable
               as String?,
+      savedOnly: savedOnly == freezed
+          ? _value.savedOnly
+          : savedOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1692,6 +1707,7 @@ class _$_GetComments extends _GetComments {
       this.limit,
       this.communityId,
       this.communityName,
+      required this.savedOnly,
       this.auth})
       : super._();
 
@@ -1712,11 +1728,13 @@ class _$_GetComments extends _GetComments {
   @override
   final String? communityName;
   @override
+  final bool savedOnly;
+  @override
   final String? auth;
 
   @override
   String toString() {
-    return 'GetComments(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, auth: $auth)';
+    return 'GetComments(type: $type, sort: $sort, page: $page, limit: $limit, communityId: $communityId, communityName: $communityName, savedOnly: $savedOnly, auth: $auth)';
   }
 
   @override
@@ -1737,6 +1755,9 @@ class _$_GetComments extends _GetComments {
             (identical(other.communityName, communityName) ||
                 const DeepCollectionEquality()
                     .equals(other.communityName, communityName)) &&
+            (identical(other.savedOnly, savedOnly) ||
+                const DeepCollectionEquality()
+                    .equals(other.savedOnly, savedOnly)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -1750,6 +1771,7 @@ class _$_GetComments extends _GetComments {
       const DeepCollectionEquality().hash(limit) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(communityName) ^
+      const DeepCollectionEquality().hash(savedOnly) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -1771,6 +1793,7 @@ abstract class _GetComments extends GetComments {
       int? limit,
       int? communityId,
       String? communityName,
+      required bool savedOnly,
       String? auth}) = _$_GetComments;
   const _GetComments._() : super._();
 
@@ -1790,6 +1813,8 @@ abstract class _GetComments extends GetComments {
   int? get communityId => throw _privateConstructorUsedError;
   @override
   String? get communityName => throw _privateConstructorUsedError;
+  @override
+  bool get savedOnly => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override

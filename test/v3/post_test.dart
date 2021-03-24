@@ -39,6 +39,7 @@ void main() {
           () => run(GetPosts(
             type: PostListingType.all,
             sort: SortType.active,
+            savedOnly: false,
             auth: goodAuth,
           )),
         );
@@ -48,6 +49,7 @@ void main() {
           () => lemmyThrows(const GetPosts(
             type: PostListingType.all,
             sort: SortType.active,
+            savedOnly: false,
             auth: badAuth,
           )),
         );

@@ -108,6 +108,7 @@ void main() {
             type: CommentListingType.all,
             sort: SortType.active,
             communityName: goodCommunityName,
+            savedOnly: false,
             auth: goodAuth,
           )),
         );
@@ -135,6 +136,7 @@ void main() {
           () => lemmyThrows(const GetComments(
             type: CommentListingType.all,
             sort: SortType.active,
+            savedOnly: false,
             auth: badAuth,
           )),
         );

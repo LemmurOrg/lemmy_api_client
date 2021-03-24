@@ -66,6 +66,7 @@ _$_GetPosts _$_$_GetPostsFromJson(Map<String, dynamic> json) {
     limit: json['limit'] as int?,
     communityId: json['community_id'] as int?,
     communityName: json['community_name'] as String?,
+    savedOnly: json['saved_only'] as bool,
     auth: json['auth'] as String?,
   );
 }
@@ -86,6 +87,7 @@ Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
   writeNotNull('community_name', instance.communityName);
+  val['saved_only'] = instance.savedOnly;
   writeNotNull('auth', instance.auth);
   return val;
 }

@@ -33,9 +33,9 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'CreateCommentLike': (json) => WsEventCreateCommentLike(
       const CreateCommentLike(commentId: 0, score: VoteType.none, auth: '')
           .responseFactory(json)),
-  'GetComments': (json) => WsEventGetComments(
-      const GetComments(type: CommentListingType.all, sort: SortType.hot)
-          .responseFactory(json)),
+  'GetComments': (json) => WsEventGetComments(const GetComments(
+          type: CommentListingType.all, sort: SortType.hot, savedOnly: false)
+      .responseFactory(json)),
   'CreateCommentReport': (json) => WsEventCreateCommentReport(
       const CreateCommentReport(commentId: 0, reason: '', auth: '')
           .responseFactory(json)),
@@ -81,9 +81,9 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'CreatePost': (json) => WsEventCreatePost(
       const CreatePost(name: '', nsfw: true, communityId: 0, auth: '')
           .responseFactory(json)),
-  'GetPosts': (json) => WsEventGetPosts(
-      const GetPosts(type: PostListingType.all, sort: SortType.hot)
-          .responseFactory(json)),
+  'GetPosts': (json) => WsEventGetPosts(const GetPosts(
+          type: PostListingType.all, sort: SortType.hot, savedOnly: false)
+      .responseFactory(json)),
   'CreatePostLike': (json) => WsEventCreatePostLike(
       const CreatePostLike(postId: 0, score: VoteType.none, auth: '')
           .responseFactory(json)),

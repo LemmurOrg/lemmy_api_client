@@ -68,6 +68,7 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
     int? limit,
     int? communityId,
     String? communityName,
+    required bool savedOnly,
     String? auth,
   }) = _GetPosts;
 
