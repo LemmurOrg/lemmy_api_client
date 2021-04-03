@@ -9,12 +9,12 @@ import '../exceptions.dart';
 import 'api/websockets.dart';
 import 'query.dart';
 
-/// Lemmy API that uses version 2
-class LemmyApiV2 {
+/// Lemmy API that uses version 3
+class LemmyApiV3 {
   final String host;
-  static const extraPath = '/api/v2';
+  static const extraPath = '/api/v3';
 
-  const LemmyApiV2(this.host);
+  const LemmyApiV3(this.host);
 
   /// Run a given query
   Future<T> run<T>(LemmyApiQuery<T> query) async {
