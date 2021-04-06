@@ -12,10 +12,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Jwt _$JwtFromJson(Map<String, dynamic> json) {
-  return _Jwt.fromJson(json);
-}
-
 /// @nodoc
 class _$JwtTearOff {
   const _$JwtTearOff();
@@ -25,10 +21,6 @@ class _$JwtTearOff {
       raw: raw,
       payload: payload,
     );
-  }
-
-  Jwt fromJson(Map<String, Object> json) {
-    return Jwt.fromJson(json);
   }
 }
 
@@ -40,7 +32,6 @@ mixin _$Jwt {
   String get raw => throw _privateConstructorUsedError;
   JwtPayload get payload => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $JwtCopyWith<Jwt> get copyWith => throw _privateConstructorUsedError;
 }
@@ -125,13 +116,9 @@ class __$JwtCopyWithImpl<$Res> extends _$JwtCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
 class _$_Jwt implements _Jwt {
   const _$_Jwt({required this.raw, required this.payload});
-
-  factory _$_Jwt.fromJson(Map<String, dynamic> json) => _$_$_JwtFromJson(json);
 
   @override
   final String raw;
@@ -163,18 +150,11 @@ class _$_Jwt implements _Jwt {
   @override
   _$JwtCopyWith<_Jwt> get copyWith =>
       __$JwtCopyWithImpl<_Jwt>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$_$_JwtToJson(this);
-  }
 }
 
 abstract class _Jwt implements Jwt {
   const factory _Jwt({required String raw, required JwtPayload payload}) =
       _$_Jwt;
-
-  factory _Jwt.fromJson(Map<String, dynamic> json) = _$_Jwt.fromJson;
 
   @override
   String get raw => throw _privateConstructorUsedError;

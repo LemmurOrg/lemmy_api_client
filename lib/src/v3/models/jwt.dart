@@ -18,14 +18,16 @@ Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
 
 @freezed
 class Jwt with _$Jwt {
-  @JsonSerializable(fieldRename: FieldRename.snake)
   const factory Jwt({
     required String raw,
     required JwtPayload payload,
   }) = _Jwt;
 
-  factory Jwt.fromJson(String json) =>
-      Jwt(raw: json, payload: JwtPayload.fromJson(_jwtDecode(json)));
+  // ignored because it is a workaround for freezed to stop generating serde
+  // ignore: prefer_expression_function_bodies
+  factory Jwt.fromJson(String json) {
+    return Jwt(raw: json, payload: JwtPayload.fromJson(_jwtDecode(json)));
+  }
   String toJson() => raw;
 }
 
