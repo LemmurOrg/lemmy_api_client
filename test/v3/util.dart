@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:lemmy_api_client/v3.dart';
 import 'package:test/test.dart';
 
-final run = const LemmyApiV3('enterprise.lemmy.ml').run;
+final run = const LemmyApiV3('lemmy.ml').run;
 
 /// checks if the LemmyApiQuery will throw and will have a correct i18n string set as a message
 Future<void> lemmyThrows(LemmyApiQuery query) async {
@@ -15,29 +15,29 @@ Future<void> lemmyThrows(LemmyApiQuery query) async {
   }
 }
 
-const goodCommunityName = 'main';
+const goodCommunityName = 'lemmy';
 const badCommunityName = '--';
 
-const goodPersonId = 108;
+const goodPersonId = 229;
 const badPersonId = -1;
 
-const goodModPersonId = 2;
+const goodModPersonId = 8169;
 const badModPersonId = -1;
 
-const goodPostId = 248;
+const goodPostId = 53512;
 const badPostId = -1;
 
-const goodUsername = 'lemmur_test';
+const goodUsername = 'shilangyu';
 const badUsername = '--';
 
-const goodCommunityId = 2;
+const goodCommunityId = 18040;
 const badCommunityId = -1;
 
-const goodMyCommentId = 387;
-const badMyCommentId = 300;
+const goodMyCommentId = 43631;
+const badMyCommentId = 42890;
 
-const goodCommentId = 362;
+const goodCommentId = 42890;
 const badCommentId = -1;
 
-final goodAuth = Platform.environment['TEST_JWT_ENTERPRISE']!;
+final goodAuth = Platform.environment['TEST_JWT']!;
 const badAuth = 'dsa';

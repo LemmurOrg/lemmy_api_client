@@ -68,14 +68,13 @@ void main() {
           )),
         );
 
-        test(
-          'no person passed',
-          () => lemmyThrows(GetPersonDetails(
-            savedOnly: false,
-            sort: SortType.active,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'no person passed',
+        //   () => lemmyThrows(const GetPersonDetails(
+        //     savedOnly: false,
+        //     sort: SortType.active,
+        //   )),
+        // );
 
         test(
           'bad username',

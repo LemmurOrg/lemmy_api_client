@@ -20,10 +20,17 @@ class Jwt {
   final String raw;
   final JwtPayload payload;
 
-  Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
+  const Jwt({
+    required this.raw,
+    required this.payload,
+  });
 
-  factory Jwt.fromJson(String json) => Jwt(json);
+  factory Jwt.fromJson(String json) =>
+      Jwt(raw: json, payload: JwtPayload.fromJson(_jwtDecode(json)));
   String toJson() => raw;
+
+  Jwt copyWith({String? raw, JwtPayload? payload}) =>
+      Jwt(raw: raw ?? this.raw, payload: payload ?? this.payload);
 }
 
 @freezed

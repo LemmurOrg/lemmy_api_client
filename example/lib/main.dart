@@ -1,8 +1,8 @@
-import 'package:lemmy_api_client/v2.dart';
+import 'package:lemmy_api_client/v3.dart';
 
 Future<void> main() async {
   // instantiate your lemmy instance with the host uri
-  const lemmy = LemmyApiV2('lemmy.ml');
+  const lemmy = LemmyApiV3('lemmy.ml');
 
   // call methods that are named after op codes from the lemmy docs
   final token =
