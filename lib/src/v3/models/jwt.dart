@@ -16,19 +16,21 @@ Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
       ),
     );
 
-@freezed
-class Jwt with _$Jwt {
-  const factory Jwt({
-    required String raw,
-    required JwtPayload payload,
-  }) = _Jwt;
+class Jwt {
+  final String raw;
+  final JwtPayload payload;
 
-  // ignored because it is a workaround for freezed to stop generating serde
-  // ignore: prefer_expression_function_bodies
-  factory Jwt.fromJson(String json) {
-    return Jwt(raw: json, payload: JwtPayload.fromJson(_jwtDecode(json)));
-  }
+  const Jwt({
+    required this.raw,
+    required this.payload,
+  });
+
+  factory Jwt.fromJson(String json) =>
+      Jwt(raw: json, payload: JwtPayload.fromJson(_jwtDecode(json)));
   String toJson() => raw;
+
+  Jwt copyWith({String? raw, JwtPayload? payload}) =>
+      Jwt(raw: raw ?? this.raw, payload: payload ?? this.payload);
 }
 
 @freezed
