@@ -16,13 +16,16 @@ Map<String, dynamic> _jwtDecode(String token) => jsonDecode(
       ),
     );
 
-class Jwt {
-  final String raw;
-  final JwtPayload payload;
+@freezed
+class Jwt with _$Jwt {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory Jwt({
+    required String raw,
+    required JwtPayload payload,
+  }) = _Jwt;
 
-  Jwt(this.raw) : payload = JwtPayload.fromJson(_jwtDecode(raw));
-
-  factory Jwt.fromJson(String json) => Jwt(json);
+  factory Jwt.fromJson(String json) =>
+      Jwt(raw: json, payload: JwtPayload.fromJson(_jwtDecode(json)));
   String toJson() => raw;
 }
 

@@ -55,7 +55,7 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt(json['jwt']);
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
 }
 
 @freezed
@@ -114,7 +114,7 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   HttpMethod httpMethod() => HttpMethod.put;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt(json['jwt']);
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
 }
 
 @freezed
@@ -330,7 +330,7 @@ class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<Jwt> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt(json['jwt']);
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
 }
 
 @freezed
@@ -374,7 +374,7 @@ class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
   HttpMethod httpMethod() => HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt(json['jwt']);
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
 }
 
 @freezed

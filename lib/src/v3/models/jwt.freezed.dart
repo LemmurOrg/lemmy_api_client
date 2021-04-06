@@ -12,6 +12,179 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+Jwt _$JwtFromJson(Map<String, dynamic> json) {
+  return _Jwt.fromJson(json);
+}
+
+/// @nodoc
+class _$JwtTearOff {
+  const _$JwtTearOff();
+
+  _Jwt call({required String raw, required JwtPayload payload}) {
+    return _Jwt(
+      raw: raw,
+      payload: payload,
+    );
+  }
+
+  Jwt fromJson(Map<String, Object> json) {
+    return Jwt.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $Jwt = _$JwtTearOff();
+
+/// @nodoc
+mixin _$Jwt {
+  String get raw => throw _privateConstructorUsedError;
+  JwtPayload get payload => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $JwtCopyWith<Jwt> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $JwtCopyWith<$Res> {
+  factory $JwtCopyWith(Jwt value, $Res Function(Jwt) then) =
+      _$JwtCopyWithImpl<$Res>;
+  $Res call({String raw, JwtPayload payload});
+
+  $JwtPayloadCopyWith<$Res> get payload;
+}
+
+/// @nodoc
+class _$JwtCopyWithImpl<$Res> implements $JwtCopyWith<$Res> {
+  _$JwtCopyWithImpl(this._value, this._then);
+
+  final Jwt _value;
+  // ignore: unused_field
+  final $Res Function(Jwt) _then;
+
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? payload = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: raw == freezed
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as String,
+      payload: payload == freezed
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as JwtPayload,
+    ));
+  }
+
+  @override
+  $JwtPayloadCopyWith<$Res> get payload {
+    return $JwtPayloadCopyWith<$Res>(_value.payload, (value) {
+      return _then(_value.copyWith(payload: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$JwtCopyWith<$Res> implements $JwtCopyWith<$Res> {
+  factory _$JwtCopyWith(_Jwt value, $Res Function(_Jwt) then) =
+      __$JwtCopyWithImpl<$Res>;
+  @override
+  $Res call({String raw, JwtPayload payload});
+
+  @override
+  $JwtPayloadCopyWith<$Res> get payload;
+}
+
+/// @nodoc
+class __$JwtCopyWithImpl<$Res> extends _$JwtCopyWithImpl<$Res>
+    implements _$JwtCopyWith<$Res> {
+  __$JwtCopyWithImpl(_Jwt _value, $Res Function(_Jwt) _then)
+      : super(_value, (v) => _then(v as _Jwt));
+
+  @override
+  _Jwt get _value => super._value as _Jwt;
+
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? payload = freezed,
+  }) {
+    return _then(_Jwt(
+      raw: raw == freezed
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as String,
+      payload: payload == freezed
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as JwtPayload,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_Jwt implements _Jwt {
+  const _$_Jwt({required this.raw, required this.payload});
+
+  factory _$_Jwt.fromJson(Map<String, dynamic> json) => _$_$_JwtFromJson(json);
+
+  @override
+  final String raw;
+  @override
+  final JwtPayload payload;
+
+  @override
+  String toString() {
+    return 'Jwt(raw: $raw, payload: $payload)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _Jwt &&
+            (identical(other.raw, raw) ||
+                const DeepCollectionEquality().equals(other.raw, raw)) &&
+            (identical(other.payload, payload) ||
+                const DeepCollectionEquality().equals(other.payload, payload)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(raw) ^
+      const DeepCollectionEquality().hash(payload);
+
+  @JsonKey(ignore: true)
+  @override
+  _$JwtCopyWith<_Jwt> get copyWith =>
+      __$JwtCopyWithImpl<_Jwt>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_JwtToJson(this);
+  }
+}
+
+abstract class _Jwt implements Jwt {
+  const factory _Jwt({required String raw, required JwtPayload payload}) =
+      _$_Jwt;
+
+  factory _Jwt.fromJson(Map<String, dynamic> json) = _$_Jwt.fromJson;
+
+  @override
+  String get raw => throw _privateConstructorUsedError;
+  @override
+  JwtPayload get payload => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$JwtCopyWith<_Jwt> get copyWith => throw _privateConstructorUsedError;
+}
+
 JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
   return _JwtPayload.fromJson(json);
 }

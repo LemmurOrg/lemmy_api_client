@@ -6,6 +6,18 @@ part of 'jwt.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_Jwt _$_$_JwtFromJson(Map<String, dynamic> json) {
+  return _$_Jwt(
+    raw: json['raw'] as String,
+    payload: JwtPayload.fromJson(json['payload'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_JwtToJson(_$_Jwt instance) => <String, dynamic>{
+      'raw': instance.raw,
+      'payload': instance.payload.toJson(),
+    };
+
 _$_JwtPayload _$_$_JwtPayloadFromJson(Map<String, dynamic> json) {
   return _$_JwtPayload(
     iat: json['iat'] as int,
