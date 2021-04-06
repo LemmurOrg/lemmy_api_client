@@ -1,3 +1,9 @@
+## Unreleased
+
+### Changed
+
+- `Jwt` has a different constructor and now provides a `copyWith` method
+
 ## v0.13.0 - 2021-04-03
 
 ### Added
