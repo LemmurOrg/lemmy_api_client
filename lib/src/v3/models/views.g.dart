@@ -477,7 +477,6 @@ _$_CommunityView _$_$_CommunityViewFromJson(Map<String, dynamic> json) {
   return _$_CommunityView(
     community:
         CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
-    creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
     subscribed: json['subscribed'] as bool,
     counts:
         CommunityAggregates.fromJson(json['counts'] as Map<String, dynamic>),
@@ -488,7 +487,6 @@ Map<String, dynamic> _$_$_CommunityViewToJson(_$_CommunityView instance) =>
     <String, dynamic>{
       'instance_host': instance.instanceHost,
       'community': instance.community.toJson(),
-      'creator': instance.creator.toJson(),
       'subscribed': instance.subscribed,
       'counts': instance.counts.toJson(),
     };

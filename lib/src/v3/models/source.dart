@@ -16,7 +16,7 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
   factory PersonSafe({
     required int id,
     required String name,
-    String? preferredUsername,
+    String? displayName,
     String? avatar,
     required bool banned,
     required DateTime published,
@@ -361,7 +361,6 @@ class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
     required String name,
     required String title,
     String? description,
-    required int creatorId,
     required bool removed,
     required DateTime published,
     DateTime? updated,

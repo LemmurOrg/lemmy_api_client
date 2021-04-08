@@ -23,7 +23,7 @@ class _$PersonSafeTearOff {
   _PersonSafe call(
       {required int id,
       required String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       required bool banned,
       required DateTime published,
@@ -40,7 +40,7 @@ class _$PersonSafeTearOff {
     return _PersonSafe(
       id: id,
       name: name,
-      preferredUsername: preferredUsername,
+      displayName: displayName,
       avatar: avatar,
       banned: banned,
       published: published,
@@ -69,7 +69,7 @@ const $PersonSafe = _$PersonSafeTearOff();
 mixin _$PersonSafe {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
@@ -98,7 +98,7 @@ abstract class $PersonSafeCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       bool banned,
       DateTime published,
@@ -126,7 +126,7 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? avatar = freezed,
     Object? banned = freezed,
     Object? published = freezed,
@@ -150,9 +150,9 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       avatar: avatar == freezed
           ? _value.avatar
@@ -219,7 +219,7 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       bool banned,
       DateTime published,
@@ -249,7 +249,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? avatar = freezed,
     Object? banned = freezed,
     Object? published = freezed,
@@ -273,9 +273,9 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       avatar: avatar == freezed
           ? _value.avatar
@@ -342,7 +342,7 @@ class _$_PersonSafe extends _PersonSafe {
   _$_PersonSafe(
       {required this.id,
       required this.name,
-      this.preferredUsername,
+      this.displayName,
       this.avatar,
       required this.banned,
       required this.published,
@@ -366,7 +366,7 @@ class _$_PersonSafe extends _PersonSafe {
   @override
   final String name;
   @override
-  final String? preferredUsername;
+  final String? displayName;
   @override
   final String? avatar;
   @override
@@ -396,7 +396,7 @@ class _$_PersonSafe extends _PersonSafe {
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin)';
+    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin)';
   }
 
   @override
@@ -407,9 +407,9 @@ class _$_PersonSafe extends _PersonSafe {
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.preferredUsername, preferredUsername) ||
+            (identical(other.displayName, displayName) ||
                 const DeepCollectionEquality()
-                    .equals(other.preferredUsername, preferredUsername)) &&
+                    .equals(other.displayName, displayName)) &&
             (identical(other.avatar, avatar) ||
                 const DeepCollectionEquality().equals(other.avatar, avatar)) &&
             (identical(other.banned, banned) ||
@@ -450,7 +450,7 @@ class _$_PersonSafe extends _PersonSafe {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(preferredUsername) ^
+      const DeepCollectionEquality().hash(displayName) ^
       const DeepCollectionEquality().hash(avatar) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(published) ^
@@ -480,7 +480,7 @@ abstract class _PersonSafe extends PersonSafe {
   factory _PersonSafe(
       {required int id,
       required String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       required bool banned,
       required DateTime published,
@@ -504,7 +504,7 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   @override
   String? get avatar => throw _privateConstructorUsedError;
   @override
@@ -5535,7 +5535,6 @@ class _$CommunitySafeTearOff {
       required String name,
       required String title,
       String? description,
-      required int creatorId,
       required bool removed,
       required DateTime published,
       DateTime? updated,
@@ -5550,7 +5549,6 @@ class _$CommunitySafeTearOff {
       name: name,
       title: title,
       description: description,
-      creatorId: creatorId,
       removed: removed,
       published: published,
       updated: updated,
@@ -5577,7 +5575,6 @@ mixin _$CommunitySafe {
   String get name => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
   bool get removed => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
@@ -5604,7 +5601,6 @@ abstract class $CommunitySafeCopyWith<$Res> {
       String name,
       String title,
       String? description,
-      int creatorId,
       bool removed,
       DateTime published,
       DateTime? updated,
@@ -5631,7 +5627,6 @@ class _$CommunitySafeCopyWithImpl<$Res>
     Object? name = freezed,
     Object? title = freezed,
     Object? description = freezed,
-    Object? creatorId = freezed,
     Object? removed = freezed,
     Object? published = freezed,
     Object? updated = freezed,
@@ -5659,10 +5654,6 @@ class _$CommunitySafeCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
       removed: removed == freezed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
@@ -5715,7 +5706,6 @@ abstract class _$CommunitySafeCopyWith<$Res>
       String name,
       String title,
       String? description,
-      int creatorId,
       bool removed,
       DateTime published,
       DateTime? updated,
@@ -5744,7 +5734,6 @@ class __$CommunitySafeCopyWithImpl<$Res>
     Object? name = freezed,
     Object? title = freezed,
     Object? description = freezed,
-    Object? creatorId = freezed,
     Object? removed = freezed,
     Object? published = freezed,
     Object? updated = freezed,
@@ -5772,10 +5761,6 @@ class __$CommunitySafeCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
       removed: removed == freezed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
@@ -5827,7 +5812,6 @@ class _$_CommunitySafe extends _CommunitySafe {
       required this.name,
       required this.title,
       this.description,
-      required this.creatorId,
       required this.removed,
       required this.published,
       this.updated,
@@ -5851,8 +5835,6 @@ class _$_CommunitySafe extends _CommunitySafe {
   @override
   final String? description;
   @override
-  final int creatorId;
-  @override
   final bool removed;
   @override
   final DateTime published;
@@ -5873,7 +5855,7 @@ class _$_CommunitySafe extends _CommunitySafe {
 
   @override
   String toString() {
-    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, creatorId: $creatorId, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner)';
+    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner)';
   }
 
   @override
@@ -5889,9 +5871,6 @@ class _$_CommunitySafe extends _CommunitySafe {
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.creatorId, creatorId) ||
-                const DeepCollectionEquality()
-                    .equals(other.creatorId, creatorId)) &&
             (identical(other.removed, removed) ||
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
@@ -5924,7 +5903,6 @@ class _$_CommunitySafe extends _CommunitySafe {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(creatorId) ^
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated) ^
@@ -5952,7 +5930,6 @@ abstract class _CommunitySafe extends CommunitySafe {
       required String name,
       required String title,
       String? description,
-      required int creatorId,
       required bool removed,
       required DateTime published,
       DateTime? updated,
@@ -5975,8 +5952,6 @@ abstract class _CommunitySafe extends CommunitySafe {
   String get title => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
-  @override
-  int get creatorId => throw _privateConstructorUsedError;
   @override
   bool get removed => throw _privateConstructorUsedError;
   @override

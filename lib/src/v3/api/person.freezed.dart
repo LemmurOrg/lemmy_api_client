@@ -592,13 +592,10 @@ class _$SaveUserSettingsTearOff {
       required String lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
       required bool showAvatars,
       required bool sendNotificationsToEmail,
       required String auth}) {
@@ -610,13 +607,10 @@ class _$SaveUserSettingsTearOff {
       lang: lang,
       avatar: avatar,
       banner: banner,
-      preferredUsername: preferredUsername,
+      displayName: displayName,
       email: email,
       bio: bio,
       matrixUserId: matrixUserId,
-      newPassword: newPassword,
-      newPasswordVerify: newPasswordVerify,
-      oldPassword: oldPassword,
       showAvatars: showAvatars,
       sendNotificationsToEmail: sendNotificationsToEmail,
       auth: auth,
@@ -642,13 +636,10 @@ mixin _$SaveUserSettings {
   String get lang => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get bio => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
-  String? get newPassword => throw _privateConstructorUsedError;
-  String? get newPasswordVerify => throw _privateConstructorUsedError;
-  String? get oldPassword => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
@@ -674,13 +665,10 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       String lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
       bool showAvatars,
       bool sendNotificationsToEmail,
       String auth});
@@ -704,13 +692,10 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? avatar = freezed,
     Object? banner = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? email = freezed,
     Object? bio = freezed,
     Object? matrixUserId = freezed,
-    Object? newPassword = freezed,
-    Object? newPasswordVerify = freezed,
-    Object? oldPassword = freezed,
     Object? showAvatars = freezed,
     Object? sendNotificationsToEmail = freezed,
     Object? auth = freezed,
@@ -744,9 +729,9 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       email: email == freezed
           ? _value.email
@@ -759,18 +744,6 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      newPassword: newPassword == freezed
-          ? _value.newPassword
-          : newPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
-      newPasswordVerify: newPasswordVerify == freezed
-          ? _value.newPasswordVerify
-          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
-              as String?,
-      oldPassword: oldPassword == freezed
-          ? _value.oldPassword
-          : oldPassword // ignore: cast_nullable_to_non_nullable
               as String?,
       showAvatars: showAvatars == freezed
           ? _value.showAvatars
@@ -805,13 +778,10 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
       String lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
       bool showAvatars,
       bool sendNotificationsToEmail,
       String auth});
@@ -837,13 +807,10 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? avatar = freezed,
     Object? banner = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? email = freezed,
     Object? bio = freezed,
     Object? matrixUserId = freezed,
-    Object? newPassword = freezed,
-    Object? newPasswordVerify = freezed,
-    Object? oldPassword = freezed,
     Object? showAvatars = freezed,
     Object? sendNotificationsToEmail = freezed,
     Object? auth = freezed,
@@ -877,9 +844,9 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       email: email == freezed
           ? _value.email
@@ -892,18 +859,6 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
       matrixUserId: matrixUserId == freezed
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      newPassword: newPassword == freezed
-          ? _value.newPassword
-          : newPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
-      newPasswordVerify: newPasswordVerify == freezed
-          ? _value.newPasswordVerify
-          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
-              as String?,
-      oldPassword: oldPassword == freezed
-          ? _value.oldPassword
-          : oldPassword // ignore: cast_nullable_to_non_nullable
               as String?,
       showAvatars: showAvatars == freezed
           ? _value.showAvatars
@@ -935,13 +890,10 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       required this.lang,
       this.avatar,
       this.banner,
-      this.preferredUsername,
+      this.displayName,
       this.email,
       this.bio,
       this.matrixUserId,
-      this.newPassword,
-      this.newPasswordVerify,
-      this.oldPassword,
       required this.showAvatars,
       required this.sendNotificationsToEmail,
       required this.auth})
@@ -967,19 +919,13 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String? banner;
   @override
-  final String? preferredUsername;
+  final String? displayName;
   @override
   final String? email;
   @override
   final String? bio;
   @override
   final String? matrixUserId;
-  @override
-  final String? newPassword;
-  @override
-  final String? newPasswordVerify;
-  @override
-  final String? oldPassword;
   @override
   final bool showAvatars;
   @override
@@ -989,7 +935,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, preferredUsername: $preferredUsername, email: $email, bio: $bio, matrixUserId: $matrixUserId, newPassword: $newPassword, newPasswordVerify: $newPasswordVerify, oldPassword: $oldPassword, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, auth: $auth)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, auth: $auth)';
   }
 
   @override
@@ -1013,9 +959,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
                 const DeepCollectionEquality().equals(other.avatar, avatar)) &&
             (identical(other.banner, banner) ||
                 const DeepCollectionEquality().equals(other.banner, banner)) &&
-            (identical(other.preferredUsername, preferredUsername) ||
+            (identical(other.displayName, displayName) ||
                 const DeepCollectionEquality()
-                    .equals(other.preferredUsername, preferredUsername)) &&
+                    .equals(other.displayName, displayName)) &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
             (identical(other.bio, bio) ||
@@ -1023,15 +969,6 @@ class _$_SaveUserSettings extends _SaveUserSettings {
             (identical(other.matrixUserId, matrixUserId) ||
                 const DeepCollectionEquality()
                     .equals(other.matrixUserId, matrixUserId)) &&
-            (identical(other.newPassword, newPassword) ||
-                const DeepCollectionEquality()
-                    .equals(other.newPassword, newPassword)) &&
-            (identical(other.newPasswordVerify, newPasswordVerify) ||
-                const DeepCollectionEquality()
-                    .equals(other.newPasswordVerify, newPasswordVerify)) &&
-            (identical(other.oldPassword, oldPassword) ||
-                const DeepCollectionEquality()
-                    .equals(other.oldPassword, oldPassword)) &&
             (identical(other.showAvatars, showAvatars) ||
                 const DeepCollectionEquality()
                     .equals(other.showAvatars, showAvatars)) &&
@@ -1054,13 +991,10 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       const DeepCollectionEquality().hash(lang) ^
       const DeepCollectionEquality().hash(avatar) ^
       const DeepCollectionEquality().hash(banner) ^
-      const DeepCollectionEquality().hash(preferredUsername) ^
+      const DeepCollectionEquality().hash(displayName) ^
       const DeepCollectionEquality().hash(email) ^
       const DeepCollectionEquality().hash(bio) ^
       const DeepCollectionEquality().hash(matrixUserId) ^
-      const DeepCollectionEquality().hash(newPassword) ^
-      const DeepCollectionEquality().hash(newPasswordVerify) ^
-      const DeepCollectionEquality().hash(oldPassword) ^
       const DeepCollectionEquality().hash(showAvatars) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
       const DeepCollectionEquality().hash(auth);
@@ -1087,13 +1021,10 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       required String lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
       required bool showAvatars,
       required bool sendNotificationsToEmail,
       required String auth}) = _$_SaveUserSettings;
@@ -1119,19 +1050,13 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   @override
   String? get email => throw _privateConstructorUsedError;
   @override
   String? get bio => throw _privateConstructorUsedError;
   @override
   String? get matrixUserId => throw _privateConstructorUsedError;
-  @override
-  String? get newPassword => throw _privateConstructorUsedError;
-  @override
-  String? get newPasswordVerify => throw _privateConstructorUsedError;
-  @override
-  String? get oldPassword => throw _privateConstructorUsedError;
   @override
   bool get showAvatars => throw _privateConstructorUsedError;
   @override
@@ -1141,6 +1066,239 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   @JsonKey(ignore: true)
   _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ChangePassword _$ChangePasswordFromJson(Map<String, dynamic> json) {
+  return _ChangePassword.fromJson(json);
+}
+
+/// @nodoc
+class _$ChangePasswordTearOff {
+  const _$ChangePasswordTearOff();
+
+  _ChangePassword call(
+      {required String newPassword,
+      required String newPasswordVerify,
+      required String oldPassword,
+      required String auth}) {
+    return _ChangePassword(
+      newPassword: newPassword,
+      newPasswordVerify: newPasswordVerify,
+      oldPassword: oldPassword,
+      auth: auth,
+    );
+  }
+
+  ChangePassword fromJson(Map<String, Object> json) {
+    return ChangePassword.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ChangePassword = _$ChangePasswordTearOff();
+
+/// @nodoc
+mixin _$ChangePassword {
+  String get newPassword => throw _privateConstructorUsedError;
+  String get newPasswordVerify => throw _privateConstructorUsedError;
+  String get oldPassword => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChangePasswordCopyWith<ChangePassword> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChangePasswordCopyWith<$Res> {
+  factory $ChangePasswordCopyWith(
+          ChangePassword value, $Res Function(ChangePassword) then) =
+      _$ChangePasswordCopyWithImpl<$Res>;
+  $Res call(
+      {String newPassword,
+      String newPasswordVerify,
+      String oldPassword,
+      String auth});
+}
+
+/// @nodoc
+class _$ChangePasswordCopyWithImpl<$Res>
+    implements $ChangePasswordCopyWith<$Res> {
+  _$ChangePasswordCopyWithImpl(this._value, this._then);
+
+  final ChangePassword _value;
+  // ignore: unused_field
+  final $Res Function(ChangePassword) _then;
+
+  @override
+  $Res call({
+    Object? newPassword = freezed,
+    Object? newPasswordVerify = freezed,
+    Object? oldPassword = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      newPasswordVerify: newPasswordVerify == freezed
+          ? _value.newPasswordVerify
+          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ChangePasswordCopyWith<$Res>
+    implements $ChangePasswordCopyWith<$Res> {
+  factory _$ChangePasswordCopyWith(
+          _ChangePassword value, $Res Function(_ChangePassword) then) =
+      __$ChangePasswordCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String newPassword,
+      String newPasswordVerify,
+      String oldPassword,
+      String auth});
+}
+
+/// @nodoc
+class __$ChangePasswordCopyWithImpl<$Res>
+    extends _$ChangePasswordCopyWithImpl<$Res>
+    implements _$ChangePasswordCopyWith<$Res> {
+  __$ChangePasswordCopyWithImpl(
+      _ChangePassword _value, $Res Function(_ChangePassword) _then)
+      : super(_value, (v) => _then(v as _ChangePassword));
+
+  @override
+  _ChangePassword get _value => super._value as _ChangePassword;
+
+  @override
+  $Res call({
+    Object? newPassword = freezed,
+    Object? newPasswordVerify = freezed,
+    Object? oldPassword = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_ChangePassword(
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      newPasswordVerify: newPasswordVerify == freezed
+          ? _value.newPasswordVerify
+          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_ChangePassword extends _ChangePassword {
+  const _$_ChangePassword(
+      {required this.newPassword,
+      required this.newPasswordVerify,
+      required this.oldPassword,
+      required this.auth})
+      : super._();
+
+  factory _$_ChangePassword.fromJson(Map<String, dynamic> json) =>
+      _$_$_ChangePasswordFromJson(json);
+
+  @override
+  final String newPassword;
+  @override
+  final String newPasswordVerify;
+  @override
+  final String oldPassword;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'ChangePassword(newPassword: $newPassword, newPasswordVerify: $newPasswordVerify, oldPassword: $oldPassword, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ChangePassword &&
+            (identical(other.newPassword, newPassword) ||
+                const DeepCollectionEquality()
+                    .equals(other.newPassword, newPassword)) &&
+            (identical(other.newPasswordVerify, newPasswordVerify) ||
+                const DeepCollectionEquality()
+                    .equals(other.newPasswordVerify, newPasswordVerify)) &&
+            (identical(other.oldPassword, oldPassword) ||
+                const DeepCollectionEquality()
+                    .equals(other.oldPassword, oldPassword)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(newPassword) ^
+      const DeepCollectionEquality().hash(newPasswordVerify) ^
+      const DeepCollectionEquality().hash(oldPassword) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
+      __$ChangePasswordCopyWithImpl<_ChangePassword>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ChangePasswordToJson(this);
+  }
+}
+
+abstract class _ChangePassword extends ChangePassword {
+  const factory _ChangePassword(
+      {required String newPassword,
+      required String newPasswordVerify,
+      required String oldPassword,
+      required String auth}) = _$_ChangePassword;
+  const _ChangePassword._() : super._();
+
+  factory _ChangePassword.fromJson(Map<String, dynamic> json) =
+      _$_ChangePassword.fromJson;
+
+  @override
+  String get newPassword => throw _privateConstructorUsedError;
+  @override
+  String get newPasswordVerify => throw _privateConstructorUsedError;
+  @override
+  String get oldPassword => throw _privateConstructorUsedError;
+  @override
+  String get auth => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

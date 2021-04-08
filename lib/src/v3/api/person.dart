@@ -91,13 +91,10 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
     required String lang,
     String? avatar,
     String? banner,
-    String? preferredUsername,
+    String? displayName,
     String? email,
     String? bio,
     String? matrixUserId,
-    String? newPassword,
-    String? newPasswordVerify,
-    String? oldPassword,
     required bool showAvatars,
     required bool sendNotificationsToEmail,
     required String auth,
@@ -109,6 +106,30 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
 
   @override
   String path() => '/user/save_user_settings';
+
+  @override
+  HttpMethod httpMethod() => HttpMethod.put;
+
+  @override
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
+}
+
+@freezed
+class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory ChangePassword({
+    required String newPassword,
+    required String newPasswordVerify,
+    required String oldPassword,
+    required String auth,
+  }) = _ChangePassword;
+
+  const ChangePassword._();
+  factory ChangePassword.fromJson(Map<String, dynamic> json) =>
+      _$ChangePasswordFromJson(json);
+
+  @override
+  String path() => '/user/change_password';
 
   @override
   HttpMethod httpMethod() => HttpMethod.put;

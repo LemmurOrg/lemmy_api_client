@@ -347,7 +347,6 @@ class CommunityView extends WithInstanceHost with _$CommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityView({
     required CommunitySafe community,
-    required PersonSafe creator,
     required bool subscribed,
     required CommunityAggregates counts,
   }) = _CommunityView;

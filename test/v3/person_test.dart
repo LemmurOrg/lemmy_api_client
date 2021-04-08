@@ -47,6 +47,18 @@ void main() {
         );
       });
 
+      group('ChangePassword', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(const ChangePassword(
+            newPassword: '',
+            newPasswordVerify: '',
+            oldPassword: '',
+            auth: badAuth,
+          )),
+        );
+      });
+
       group('GetPersonDetails', () {
         test(
           'correctly fetches',

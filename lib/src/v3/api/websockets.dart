@@ -154,6 +154,12 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           sendNotificationsToEmail: true,
           auth: '')
       .responseFactory(json)),
+  'ChangePassword': (json) => WsEventChangePassword(const ChangePassword(
+        newPassword: '',
+        newPasswordVerify: '',
+        oldPassword: '',
+        auth: '',
+      ).responseFactory(json)),
   'GetPersonDetails': (json) => WsEventGetPersonDetails(
       const GetPersonDetails(sort: SortType.hot, savedOnly: true)
           .responseFactory(json)),
@@ -398,6 +404,10 @@ class WsEventGetCaptcha extends WsEvent<Captcha> {
 
 class WsEventSaveUserSettings extends WsEvent<Jwt> {
   const WsEventSaveUserSettings(Jwt data) : super(data);
+}
+
+class WsEventChangePassword extends WsEvent<Jwt> {
+  const WsEventChangePassword(Jwt data) : super(data);
 }
 
 class WsEventGetPersonDetails extends WsEvent<FullPersonView> {

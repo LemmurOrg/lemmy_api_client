@@ -67,13 +67,10 @@ _$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
     lang: json['lang'] as String,
     avatar: json['avatar'] as String?,
     banner: json['banner'] as String?,
-    preferredUsername: json['preferred_username'] as String?,
+    displayName: json['display_name'] as String?,
     email: json['email'] as String?,
     bio: json['bio'] as String?,
     matrixUserId: json['matrix_user_id'] as String?,
-    newPassword: json['new_password'] as String?,
-    newPasswordVerify: json['new_password_verify'] as String?,
-    oldPassword: json['old_password'] as String?,
     showAvatars: json['show_avatars'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
     auth: json['auth'] as String,
@@ -98,18 +95,32 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   val['lang'] = instance.lang;
   writeNotNull('avatar', instance.avatar);
   writeNotNull('banner', instance.banner);
-  writeNotNull('preferred_username', instance.preferredUsername);
+  writeNotNull('display_name', instance.displayName);
   writeNotNull('email', instance.email);
   writeNotNull('bio', instance.bio);
   writeNotNull('matrix_user_id', instance.matrixUserId);
-  writeNotNull('new_password', instance.newPassword);
-  writeNotNull('new_password_verify', instance.newPasswordVerify);
-  writeNotNull('old_password', instance.oldPassword);
   val['show_avatars'] = instance.showAvatars;
   val['send_notifications_to_email'] = instance.sendNotificationsToEmail;
   val['auth'] = instance.auth;
   return val;
 }
+
+_$_ChangePassword _$_$_ChangePasswordFromJson(Map<String, dynamic> json) {
+  return _$_ChangePassword(
+    newPassword: json['new_password'] as String,
+    newPasswordVerify: json['new_password_verify'] as String,
+    oldPassword: json['old_password'] as String,
+    auth: json['auth'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_ChangePasswordToJson(_$_ChangePassword instance) =>
+    <String, dynamic>{
+      'new_password': instance.newPassword,
+      'new_password_verify': instance.newPasswordVerify,
+      'old_password': instance.oldPassword,
+      'auth': instance.auth,
+    };
 
 _$_GetPersonDetails _$_$_GetPersonDetailsFromJson(Map<String, dynamic> json) {
   return _$_GetPersonDetails(

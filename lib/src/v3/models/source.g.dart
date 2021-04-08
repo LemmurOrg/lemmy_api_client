@@ -10,7 +10,7 @@ _$_PersonSafe _$_$_PersonSafeFromJson(Map<String, dynamic> json) {
   return _$_PersonSafe(
     id: json['id'] as int,
     name: json['name'] as String,
-    preferredUsername: json['preferred_username'] as String?,
+    displayName: json['display_name'] as String?,
     avatar: json['avatar'] as String?,
     banned: json['banned'] as bool,
     published: const ForceUtcDateTime().fromJson(json['published'] as String),
@@ -33,7 +33,7 @@ Map<String, dynamic> _$_$_PersonSafeToJson(_$_PersonSafe instance) =>
       'instance_host': instance.instanceHost,
       'id': instance.id,
       'name': instance.name,
-      'preferred_username': instance.preferredUsername,
+      'display_name': instance.displayName,
       'avatar': instance.avatar,
       'banned': instance.banned,
       'published': const ForceUtcDateTime().toJson(instance.published),
@@ -458,7 +458,6 @@ _$_CommunitySafe _$_$_CommunitySafeFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     title: json['title'] as String,
     description: json['description'] as String?,
-    creatorId: json['creator_id'] as int,
     removed: json['removed'] as bool,
     published: const ForceUtcDateTime().fromJson(json['published'] as String),
     updated:
@@ -479,7 +478,6 @@ Map<String, dynamic> _$_$_CommunitySafeToJson(_$_CommunitySafe instance) =>
       'name': instance.name,
       'title': instance.title,
       'description': instance.description,
-      'creator_id': instance.creatorId,
       'removed': instance.removed,
       'published': const ForceUtcDateTime().toJson(instance.published),
       'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
