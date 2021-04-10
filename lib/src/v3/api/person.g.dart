@@ -59,29 +59,27 @@ Map<String, dynamic> _$_$_GetCaptchaToJson(_$_GetCaptcha instance) =>
 
 _$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
   return _$_SaveUserSettings(
-    showNsfw: json['show_nsfw'] as bool,
-    theme: json['theme'] as String,
+    showNsfw: json['show_nsfw'] as bool?,
+    theme: json['theme'] as String?,
     defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
     defaultListingType:
         postListingTypeFromIndex(json['default_listing_type'] as int),
-    lang: json['lang'] as String,
+    lang: json['lang'] as String?,
     avatar: json['avatar'] as String?,
     banner: json['banner'] as String?,
     displayName: json['display_name'] as String?,
     email: json['email'] as String?,
     bio: json['bio'] as String?,
     matrixUserId: json['matrix_user_id'] as String?,
-    showAvatars: json['show_avatars'] as bool,
-    sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
+    showAvatars: json['show_avatars'] as bool?,
+    showScores: json['show_scores'] as bool?,
+    sendNotificationsToEmail: json['send_notifications_to_email'] as bool?,
     auth: json['auth'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
-  final val = <String, dynamic>{
-    'show_nsfw': instance.showNsfw,
-    'theme': instance.theme,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -89,18 +87,22 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
     }
   }
 
+  writeNotNull('show_nsfw', instance.showNsfw);
+  writeNotNull('theme', instance.theme);
   writeNotNull('default_sort_type', sortTypeToIndex(instance.defaultSortType));
   writeNotNull('default_listing_type',
       postListingTypeToIndex(instance.defaultListingType));
-  val['lang'] = instance.lang;
+  writeNotNull('lang', instance.lang);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('banner', instance.banner);
   writeNotNull('display_name', instance.displayName);
   writeNotNull('email', instance.email);
   writeNotNull('bio', instance.bio);
   writeNotNull('matrix_user_id', instance.matrixUserId);
-  val['show_avatars'] = instance.showAvatars;
-  val['send_notifications_to_email'] = instance.sendNotificationsToEmail;
+  writeNotNull('show_avatars', instance.showAvatars);
+  writeNotNull('show_scores', instance.showScores);
+  writeNotNull(
+      'send_notifications_to_email', instance.sendNotificationsToEmail);
   val['auth'] = instance.auth;
   return val;
 }

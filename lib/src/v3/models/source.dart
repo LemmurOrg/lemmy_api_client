@@ -54,6 +54,7 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
         required PostListingType defaultListingType,
     required String lang,
     required bool showAvatars,
+    required bool showScores,
     required bool sendNotificationsToEmail,
   }) = _LocalUserSettings;
 

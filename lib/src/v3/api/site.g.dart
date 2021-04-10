@@ -10,11 +10,13 @@ _$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
   return _$_Search(
     q: json['q'] as String,
     type: SearchType.fromJson(json['type_'] as String),
+    listingType: PostListingType.fromJson(json['listing_type'] as String),
     communityId: json['community_id'] as int?,
     communityName: json['community_name'] as String?,
     sort: SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
+    creatorId: json['creator_id'] as int?,
     auth: json['auth'] as String?,
   );
 }
@@ -23,6 +25,7 @@ Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) {
   final val = <String, dynamic>{
     'q': instance.q,
     'type_': instance.type.toJson(),
+    'listing_type': instance.listingType.toJson(),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -36,6 +39,7 @@ Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) {
   val['sort'] = instance.sort.toJson();
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
+  writeNotNull('creator_id', instance.creatorId);
   writeNotNull('auth', instance.auth);
   return val;
 }

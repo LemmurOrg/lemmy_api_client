@@ -61,6 +61,7 @@ _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
         postListingTypeFromIndex(json['default_listing_type'] as int),
     lang: json['lang'] as String,
     showAvatars: json['show_avatars'] as bool,
+    showScores: json['show_scores'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
   )..instanceHost = json['instance_host'] as String;
 }
@@ -79,6 +80,7 @@ Map<String, dynamic> _$_$_LocalUserSettingsToJson(
           postListingTypeToIndex(instance.defaultListingType),
       'lang': instance.lang,
       'show_avatars': instance.showAvatars,
+      'show_scores': instance.showScores,
       'send_notifications_to_email': instance.sendNotificationsToEmail,
     };
 

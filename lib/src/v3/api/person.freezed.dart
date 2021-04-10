@@ -583,21 +583,22 @@ class _$SaveUserSettingsTearOff {
   const _$SaveUserSettingsTearOff();
 
   _SaveUserSettings call(
-      {required bool showNsfw,
-      required String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required PostListingType defaultListingType,
-      required String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
       String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      required bool showAvatars,
-      required bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
       required String auth}) {
     return _SaveUserSettings(
       showNsfw: showNsfw,
@@ -612,6 +613,7 @@ class _$SaveUserSettingsTearOff {
       bio: bio,
       matrixUserId: matrixUserId,
       showAvatars: showAvatars,
+      showScores: showScores,
       sendNotificationsToEmail: sendNotificationsToEmail,
       auth: auth,
     );
@@ -627,21 +629,22 @@ const $SaveUserSettings = _$SaveUserSettingsTearOff();
 
 /// @nodoc
 mixin _$SaveUserSettings {
-  bool get showNsfw => throw _privateConstructorUsedError;
-  String get theme => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError;
+  String? get theme => throw _privateConstructorUsedError;
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType => throw _privateConstructorUsedError;
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType => throw _privateConstructorUsedError;
-  String get lang => throw _privateConstructorUsedError;
+  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
+  String? get lang => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
   String? get displayName => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get bio => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
-  bool get showAvatars => throw _privateConstructorUsedError;
-  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get showAvatars => throw _privateConstructorUsedError;
+  bool? get showScores => throw _privateConstructorUsedError;
+  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -656,21 +659,22 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
           SaveUserSettings value, $Res Function(SaveUserSettings) then) =
       _$SaveUserSettingsCopyWithImpl<$Res>;
   $Res call(
-      {bool showNsfw,
-      String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
       String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      bool showAvatars,
-      bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
       String auth});
 }
 
@@ -697,6 +701,7 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
     Object? bio = freezed,
     Object? matrixUserId = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
     Object? auth = freezed,
   }) {
@@ -704,23 +709,23 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       theme: theme == freezed
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       lang: lang == freezed
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       avatar: avatar == freezed
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
@@ -748,11 +753,15 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
       showAvatars: showAvatars == freezed
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool?,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -769,21 +778,22 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
       __$SaveUserSettingsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool showNsfw,
-      String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
       String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      bool showAvatars,
-      bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
       String auth});
 }
 
@@ -812,6 +822,7 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
     Object? bio = freezed,
     Object? matrixUserId = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
     Object? auth = freezed,
   }) {
@@ -819,23 +830,23 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       theme: theme == freezed
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       lang: lang == freezed
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       avatar: avatar == freezed
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
@@ -863,11 +874,15 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
       showAvatars: showAvatars == freezed
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool?,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -881,21 +896,22 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_SaveUserSettings extends _SaveUserSettings {
   const _$_SaveUserSettings(
-      {required this.showNsfw,
-      required this.theme,
+      {this.showNsfw,
+      this.theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required this.defaultSortType,
+          this.defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required this.defaultListingType,
-      required this.lang,
+          this.defaultListingType,
+      this.lang,
       this.avatar,
       this.banner,
       this.displayName,
       this.email,
       this.bio,
       this.matrixUserId,
-      required this.showAvatars,
-      required this.sendNotificationsToEmail,
+      this.showAvatars,
+      this.showScores,
+      this.sendNotificationsToEmail,
       required this.auth})
       : super._();
 
@@ -903,17 +919,17 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       _$_$_SaveUserSettingsFromJson(json);
 
   @override
-  final bool showNsfw;
+  final bool? showNsfw;
   @override
-  final String theme;
+  final String? theme;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  final SortType defaultSortType;
+  final SortType? defaultSortType;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  final PostListingType defaultListingType;
+  final PostListingType? defaultListingType;
   @override
-  final String lang;
+  final String? lang;
   @override
   final String? avatar;
   @override
@@ -927,15 +943,17 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String? matrixUserId;
   @override
-  final bool showAvatars;
+  final bool? showAvatars;
   @override
-  final bool sendNotificationsToEmail;
+  final bool? showScores;
+  @override
+  final bool? sendNotificationsToEmail;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, auth: $auth)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, auth: $auth)';
   }
 
   @override
@@ -972,6 +990,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
             (identical(other.showAvatars, showAvatars) ||
                 const DeepCollectionEquality()
                     .equals(other.showAvatars, showAvatars)) &&
+            (identical(other.showScores, showScores) ||
+                const DeepCollectionEquality()
+                    .equals(other.showScores, showScores)) &&
             (identical(
                     other.sendNotificationsToEmail, sendNotificationsToEmail) ||
                 const DeepCollectionEquality().equals(
@@ -996,6 +1017,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       const DeepCollectionEquality().hash(bio) ^
       const DeepCollectionEquality().hash(matrixUserId) ^
       const DeepCollectionEquality().hash(showAvatars) ^
+      const DeepCollectionEquality().hash(showScores) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
       const DeepCollectionEquality().hash(auth);
 
@@ -1012,21 +1034,22 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 
 abstract class _SaveUserSettings extends SaveUserSettings {
   const factory _SaveUserSettings(
-      {required bool showNsfw,
-      required String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required PostListingType defaultListingType,
-      required String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
       String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      required bool showAvatars,
-      required bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
       required String auth}) = _$_SaveUserSettings;
   const _SaveUserSettings._() : super._();
 
@@ -1034,17 +1057,17 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       _$_SaveUserSettings.fromJson;
 
   @override
-  bool get showNsfw => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError;
   @override
-  String get theme => throw _privateConstructorUsedError;
+  String? get theme => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType => throw _privateConstructorUsedError;
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType => throw _privateConstructorUsedError;
+  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
   @override
-  String get lang => throw _privateConstructorUsedError;
+  String? get lang => throw _privateConstructorUsedError;
   @override
   String? get avatar => throw _privateConstructorUsedError;
   @override
@@ -1058,9 +1081,11 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  bool get showAvatars => throw _privateConstructorUsedError;
+  bool? get showAvatars => throw _privateConstructorUsedError;
   @override
-  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get showScores => throw _privateConstructorUsedError;
+  @override
+  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override

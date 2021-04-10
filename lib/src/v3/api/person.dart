@@ -82,21 +82,22 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
 class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveUserSettings({
-    required bool showNsfw,
-    required String theme,
+    bool? showNsfw,
+    String? theme,
     @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-        required SortType defaultSortType,
+        SortType? defaultSortType,
     @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-        required PostListingType defaultListingType,
-    required String lang,
+        PostListingType? defaultListingType,
+    String? lang,
     String? avatar,
     String? banner,
     String? displayName,
     String? email,
     String? bio,
     String? matrixUserId,
-    required bool showAvatars,
-    required bool sendNotificationsToEmail,
+    bool? showAvatars,
+    bool? showScores,
+    bool? sendNotificationsToEmail,
     required String auth,
   }) = _SaveUserSettings;
 

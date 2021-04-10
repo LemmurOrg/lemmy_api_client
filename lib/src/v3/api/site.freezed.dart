@@ -23,20 +23,24 @@ class _$SearchTearOff {
   _Search call(
       {required String q,
       @JsonKey(name: 'type_') required SearchType type,
+      required PostListingType listingType,
       int? communityId,
       String? communityName,
       required SortType sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth}) {
     return _Search(
       q: q,
       type: type,
+      listingType: listingType,
       communityId: communityId,
       communityName: communityName,
       sort: sort,
       page: page,
       limit: limit,
+      creatorId: creatorId,
       auth: auth,
     );
   }
@@ -54,11 +58,13 @@ mixin _$Search {
   String get q => throw _privateConstructorUsedError;
   @JsonKey(name: 'type_')
   SearchType get type => throw _privateConstructorUsedError;
+  PostListingType get listingType => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
   String? get communityName => throw _privateConstructorUsedError;
   SortType get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
+  int? get creatorId => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -73,11 +79,13 @@ abstract class $SearchCopyWith<$Res> {
   $Res call(
       {String q,
       @JsonKey(name: 'type_') SearchType type,
+      PostListingType listingType,
       int? communityId,
       String? communityName,
       SortType sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth});
 }
 
@@ -93,11 +101,13 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
   $Res call({
     Object? q = freezed,
     Object? type = freezed,
+    Object? listingType = freezed,
     Object? communityId = freezed,
     Object? communityName = freezed,
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -109,6 +119,10 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchType,
+      listingType: listingType == freezed
+          ? _value.listingType
+          : listingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -128,6 +142,10 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
       limit: limit == freezed
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
       auth: auth == freezed
           ? _value.auth
@@ -145,11 +163,13 @@ abstract class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
   $Res call(
       {String q,
       @JsonKey(name: 'type_') SearchType type,
+      PostListingType listingType,
       int? communityId,
       String? communityName,
       SortType sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth});
 }
 
@@ -166,11 +186,13 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
   $Res call({
     Object? q = freezed,
     Object? type = freezed,
+    Object? listingType = freezed,
     Object? communityId = freezed,
     Object? communityName = freezed,
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_Search(
@@ -182,6 +204,10 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchType,
+      listingType: listingType == freezed
+          ? _value.listingType
+          : listingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType,
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -202,6 +228,10 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
+              as int?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -217,11 +247,13 @@ class _$_Search extends _Search {
   const _$_Search(
       {required this.q,
       @JsonKey(name: 'type_') required this.type,
+      required this.listingType,
       this.communityId,
       this.communityName,
       required this.sort,
       this.page,
       this.limit,
+      this.creatorId,
       this.auth})
       : super._();
 
@@ -234,6 +266,8 @@ class _$_Search extends _Search {
   @JsonKey(name: 'type_')
   final SearchType type;
   @override
+  final PostListingType listingType;
+  @override
   final int? communityId;
   @override
   final String? communityName;
@@ -244,11 +278,13 @@ class _$_Search extends _Search {
   @override
   final int? limit;
   @override
+  final int? creatorId;
+  @override
   final String? auth;
 
   @override
   String toString() {
-    return 'Search(q: $q, type: $type, communityId: $communityId, communityName: $communityName, sort: $sort, page: $page, limit: $limit, auth: $auth)';
+    return 'Search(q: $q, type: $type, listingType: $listingType, communityId: $communityId, communityName: $communityName, sort: $sort, page: $page, limit: $limit, creatorId: $creatorId, auth: $auth)';
   }
 
   @override
@@ -259,6 +295,9 @@ class _$_Search extends _Search {
                 const DeepCollectionEquality().equals(other.q, q)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.listingType, listingType) ||
+                const DeepCollectionEquality()
+                    .equals(other.listingType, listingType)) &&
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
@@ -271,6 +310,9 @@ class _$_Search extends _Search {
                 const DeepCollectionEquality().equals(other.page, page)) &&
             (identical(other.limit, limit) ||
                 const DeepCollectionEquality().equals(other.limit, limit)) &&
+            (identical(other.creatorId, creatorId) ||
+                const DeepCollectionEquality()
+                    .equals(other.creatorId, creatorId)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -280,11 +322,13 @@ class _$_Search extends _Search {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(q) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(listingType) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(communityName) ^
       const DeepCollectionEquality().hash(sort) ^
       const DeepCollectionEquality().hash(page) ^
       const DeepCollectionEquality().hash(limit) ^
+      const DeepCollectionEquality().hash(creatorId) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -302,11 +346,13 @@ abstract class _Search extends Search {
   const factory _Search(
       {required String q,
       @JsonKey(name: 'type_') required SearchType type,
+      required PostListingType listingType,
       int? communityId,
       String? communityName,
       required SortType sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth}) = _$_Search;
   const _Search._() : super._();
 
@@ -318,6 +364,8 @@ abstract class _Search extends Search {
   @JsonKey(name: 'type_')
   SearchType get type => throw _privateConstructorUsedError;
   @override
+  PostListingType get listingType => throw _privateConstructorUsedError;
+  @override
   int? get communityId => throw _privateConstructorUsedError;
   @override
   String? get communityName => throw _privateConstructorUsedError;
@@ -327,6 +375,8 @@ abstract class _Search extends Search {
   int? get page => throw _privateConstructorUsedError;
   @override
   int? get limit => throw _privateConstructorUsedError;
+  @override
+  int? get creatorId => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override

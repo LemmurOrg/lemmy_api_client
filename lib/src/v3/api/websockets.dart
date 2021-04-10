@@ -111,9 +111,12 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           .responseFactory(json)),
   'ListPostReports': (json) => WsEventListPostReports(
       const ListPostReports(auth: '').responseFactory(json)),
-  'Search': (json) => WsEventSearch(
-      const Search(q: '', type: SearchType.all, sort: SortType.hot)
-          .responseFactory(json)),
+  'Search': (json) => WsEventSearch(const Search(
+          q: '',
+          type: SearchType.all,
+          listingType: PostListingType.all,
+          sort: SortType.hot)
+      .responseFactory(json)),
   'GetModlog': (json) =>
       WsEventGetModlog(const GetModlog().responseFactory(json)),
   'CreateSite': (json) => WsEventCreateSite(const CreateSite(

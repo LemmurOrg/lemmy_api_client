@@ -557,6 +557,7 @@ class _$LocalUserSettingsTearOff {
           required PostListingType defaultListingType,
       required String lang,
       required bool showAvatars,
+      required bool showScores,
       required bool sendNotificationsToEmail}) {
     return _LocalUserSettings(
       id: id,
@@ -568,6 +569,7 @@ class _$LocalUserSettingsTearOff {
       defaultListingType: defaultListingType,
       lang: lang,
       showAvatars: showAvatars,
+      showScores: showScores,
       sendNotificationsToEmail: sendNotificationsToEmail,
     );
   }
@@ -593,6 +595,7 @@ mixin _$LocalUserSettings {
   PostListingType get defaultListingType => throw _privateConstructorUsedError;
   String get lang => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
+  bool get showScores => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -618,6 +621,7 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
           PostListingType defaultListingType,
       String lang,
       bool showAvatars,
+      bool showScores,
       bool sendNotificationsToEmail});
 }
 
@@ -641,6 +645,7 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? defaultListingType = freezed,
     Object? lang = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
   }) {
     return _then(_value.copyWith(
@@ -680,6 +685,10 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
@@ -707,6 +716,7 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
           PostListingType defaultListingType,
       String lang,
       bool showAvatars,
+      bool showScores,
       bool sendNotificationsToEmail});
 }
 
@@ -732,6 +742,7 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? defaultListingType = freezed,
     Object? lang = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
   }) {
     return _then(_LocalUserSettings(
@@ -771,6 +782,10 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
@@ -797,6 +812,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
           required this.defaultListingType,
       required this.lang,
       required this.showAvatars,
+      required this.showScores,
       required this.sendNotificationsToEmail})
       : super._();
 
@@ -824,11 +840,13 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @override
   final bool showAvatars;
   @override
+  final bool showScores;
+  @override
   final bool sendNotificationsToEmail;
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail)';
   }
 
   @override
@@ -858,6 +876,9 @@ class _$_LocalUserSettings extends _LocalUserSettings {
             (identical(other.showAvatars, showAvatars) ||
                 const DeepCollectionEquality()
                     .equals(other.showAvatars, showAvatars)) &&
+            (identical(other.showScores, showScores) ||
+                const DeepCollectionEquality()
+                    .equals(other.showScores, showScores)) &&
             (identical(
                     other.sendNotificationsToEmail, sendNotificationsToEmail) ||
                 const DeepCollectionEquality().equals(
@@ -876,6 +897,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       const DeepCollectionEquality().hash(defaultListingType) ^
       const DeepCollectionEquality().hash(lang) ^
       const DeepCollectionEquality().hash(showAvatars) ^
+      const DeepCollectionEquality().hash(showScores) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail);
 
   @JsonKey(ignore: true)
@@ -902,6 +924,7 @@ abstract class _LocalUserSettings extends LocalUserSettings {
           required PostListingType defaultListingType,
       required String lang,
       required bool showAvatars,
+      required bool showScores,
       required bool sendNotificationsToEmail}) = _$_LocalUserSettings;
   _LocalUserSettings._() : super._();
 
@@ -928,6 +951,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   String get lang => throw _privateConstructorUsedError;
   @override
   bool get showAvatars => throw _privateConstructorUsedError;
+  @override
+  bool get showScores => throw _privateConstructorUsedError;
   @override
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override

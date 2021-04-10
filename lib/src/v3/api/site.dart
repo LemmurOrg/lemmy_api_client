@@ -14,11 +14,13 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
   const factory Search({
     required String q,
     @JsonKey(name: 'type_') required SearchType type,
+    required PostListingType listingType,
     int? communityId,
     String? communityName,
     required SortType sort,
     int? page,
     int? limit,
+    int? creatorId,
     String? auth,
   }) = _Search;
 

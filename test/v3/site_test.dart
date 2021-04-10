@@ -12,6 +12,7 @@ void main() {
           () => run(Search(
             q: 'q',
             type: SearchType.all,
+            listingType: PostListingType.all,
             sort: SortType.active,
             communityId: goodCommunityId,
             auth: goodAuth,
@@ -23,6 +24,7 @@ void main() {
           () => lemmyThrows(const Search(
             q: 'q',
             type: SearchType.all,
+            listingType: PostListingType.all,
             sort: SortType.active,
             auth: badAuth,
           )),
