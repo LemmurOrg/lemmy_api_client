@@ -13,11 +13,11 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Search({
     required String q,
-    @JsonKey(name: 'type_') required SearchType type,
-    required PostListingType listingType,
+    @JsonKey(name: 'type_') SearchType? type,
+    PostListingType? listingType,
     int? communityId,
     String? communityName,
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
     int? creatorId,
@@ -72,9 +72,9 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
     String? description,
     String? icon,
     String? banner,
-    required bool enableDownvotes,
-    required bool openRegistration,
-    required bool enableNsfw,
+    bool? enableDownvotes,
+    bool? openRegistration,
+    bool? enableNsfw,
     required String auth,
   }) = _CreateSite;
 
@@ -98,13 +98,13 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
 class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditSite({
-    required String name,
+    String? name,
     String? description,
     String? icon,
     String? banner,
-    required bool enableDownvotes,
-    required bool openRegistration,
-    required bool enableNsfw,
+    bool? enableDownvotes,
+    bool? openRegistration,
+    bool? enableNsfw,
     required String auth,
   }) = _EditSite;
 

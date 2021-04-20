@@ -1338,11 +1338,11 @@ class _$GetPersonDetailsTearOff {
   _GetPersonDetails call(
       {int? personId,
       String? username,
-      required SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) {
     return _GetPersonDetails(
       personId: personId,
@@ -1368,11 +1368,11 @@ const $GetPersonDetails = _$GetPersonDetailsTearOff();
 mixin _$GetPersonDetails {
   int? get personId => throw _privateConstructorUsedError;
   String? get username => throw _privateConstructorUsedError;
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1389,11 +1389,11 @@ abstract class $GetPersonDetailsCopyWith<$Res> {
   $Res call(
       {int? personId,
       String? username,
-      SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -1429,7 +1429,7 @@ class _$GetPersonDetailsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1445,7 +1445,7 @@ class _$GetPersonDetailsCopyWithImpl<$Res>
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1464,11 +1464,11 @@ abstract class _$GetPersonDetailsCopyWith<$Res>
   $Res call(
       {int? personId,
       String? username,
-      SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -1506,7 +1506,7 @@ class __$GetPersonDetailsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1522,7 +1522,7 @@ class __$GetPersonDetailsCopyWithImpl<$Res>
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1538,11 +1538,11 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   const _$_GetPersonDetails(
       {this.personId,
       this.username,
-      required this.sort,
+      this.sort,
       this.page,
       this.limit,
       this.communityId,
-      required this.savedOnly,
+      this.savedOnly,
       this.auth})
       : super._();
 
@@ -1554,7 +1554,7 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   @override
   final String? username;
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
@@ -1562,7 +1562,7 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   @override
   final int? communityId;
   @override
-  final bool savedOnly;
+  final bool? savedOnly;
   @override
   final String? auth;
 
@@ -1624,11 +1624,11 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   const factory _GetPersonDetails(
       {int? personId,
       String? username,
-      required SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) = _$_GetPersonDetails;
   const _GetPersonDetails._() : super._();
 
@@ -1640,7 +1640,7 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   @override
   String? get username => throw _privateConstructorUsedError;
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
@@ -1648,7 +1648,7 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   @override
   int? get communityId => throw _privateConstructorUsedError;
   @override
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override
@@ -2009,7 +2009,7 @@ class _$BanPersonTearOff {
   _BanPerson call(
       {required int personId,
       required bool ban,
-      required bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       required String auth}) {
@@ -2035,7 +2035,7 @@ const $BanPerson = _$BanPersonTearOff();
 mixin _$BanPerson {
   int get personId => throw _privateConstructorUsedError;
   bool get ban => throw _privateConstructorUsedError;
-  bool get removeData => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   int? get expires => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
@@ -2053,7 +2053,7 @@ abstract class $BanPersonCopyWith<$Res> {
   $Res call(
       {int personId,
       bool ban,
-      bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       String auth});
@@ -2088,7 +2088,7 @@ class _$BanPersonCopyWithImpl<$Res> implements $BanPersonCopyWith<$Res> {
       removeData: removeData == freezed
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -2114,7 +2114,7 @@ abstract class _$BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
   $Res call(
       {int personId,
       bool ban,
-      bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       String auth});
@@ -2150,7 +2150,7 @@ class __$BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
       removeData: removeData == freezed
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -2174,7 +2174,7 @@ class _$_BanPerson extends _BanPerson {
   const _$_BanPerson(
       {required this.personId,
       required this.ban,
-      required this.removeData,
+      this.removeData,
       this.reason,
       this.expires,
       required this.auth})
@@ -2188,7 +2188,7 @@ class _$_BanPerson extends _BanPerson {
   @override
   final bool ban;
   @override
-  final bool removeData;
+  final bool? removeData;
   @override
   final String? reason;
   @override
@@ -2247,7 +2247,7 @@ abstract class _BanPerson extends BanPerson {
   const factory _BanPerson(
       {required int personId,
       required bool ban,
-      required bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       required String auth}) = _$_BanPerson;
@@ -2261,7 +2261,7 @@ abstract class _BanPerson extends BanPerson {
   @override
   bool get ban => throw _privateConstructorUsedError;
   @override
-  bool get removeData => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
   @override
   String? get reason => throw _privateConstructorUsedError;
   @override
@@ -2283,10 +2283,10 @@ class _$GetRepliesTearOff {
   const _$GetRepliesTearOff();
 
   _GetReplies call(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) {
     return _GetReplies(
       sort: sort,
@@ -2307,10 +2307,10 @@ const $GetReplies = _$GetRepliesTearOff();
 
 /// @nodoc
 mixin _$GetReplies {
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2325,7 +2325,7 @@ abstract class $GetRepliesCopyWith<$Res> {
           GetReplies value, $Res Function(GetReplies) then) =
       _$GetRepliesCopyWithImpl<$Res>;
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2348,7 +2348,7 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2360,7 +2360,7 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2376,7 +2376,7 @@ abstract class _$GetRepliesCopyWith<$Res> implements $GetRepliesCopyWith<$Res> {
       __$GetRepliesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2401,7 +2401,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2413,7 +2413,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2427,24 +2427,20 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetReplies extends _GetReplies {
   const _$_GetReplies(
-      {required this.sort,
-      this.page,
-      this.limit,
-      required this.unreadOnly,
-      required this.auth})
+      {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
       : super._();
 
   factory _$_GetReplies.fromJson(Map<String, dynamic> json) =>
       _$_$_GetRepliesFromJson(json);
 
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
   final int? limit;
   @override
-  final bool unreadOnly;
+  final bool? unreadOnly;
   @override
   final String auth;
 
@@ -2492,10 +2488,10 @@ class _$_GetReplies extends _GetReplies {
 
 abstract class _GetReplies extends GetReplies {
   const factory _GetReplies(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) = _$_GetReplies;
   const _GetReplies._() : super._();
 
@@ -2503,13 +2499,13 @@ abstract class _GetReplies extends GetReplies {
       _$_GetReplies.fromJson;
 
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
   int? get limit => throw _privateConstructorUsedError;
   @override
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -2527,10 +2523,10 @@ class _$GetPersonMentionsTearOff {
   const _$GetPersonMentionsTearOff();
 
   _GetPersonMentions call(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) {
     return _GetPersonMentions(
       sort: sort,
@@ -2551,10 +2547,10 @@ const $GetPersonMentions = _$GetPersonMentionsTearOff();
 
 /// @nodoc
 mixin _$GetPersonMentions {
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2569,7 +2565,7 @@ abstract class $GetPersonMentionsCopyWith<$Res> {
           GetPersonMentions value, $Res Function(GetPersonMentions) then) =
       _$GetPersonMentionsCopyWithImpl<$Res>;
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2593,7 +2589,7 @@ class _$GetPersonMentionsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2605,7 +2601,7 @@ class _$GetPersonMentionsCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2622,7 +2618,7 @@ abstract class _$GetPersonMentionsCopyWith<$Res>
       __$GetPersonMentionsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2648,7 +2644,7 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2660,7 +2656,7 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2674,24 +2670,20 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetPersonMentions extends _GetPersonMentions {
   const _$_GetPersonMentions(
-      {required this.sort,
-      this.page,
-      this.limit,
-      required this.unreadOnly,
-      required this.auth})
+      {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
       : super._();
 
   factory _$_GetPersonMentions.fromJson(Map<String, dynamic> json) =>
       _$_$_GetPersonMentionsFromJson(json);
 
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
   final int? limit;
   @override
-  final bool unreadOnly;
+  final bool? unreadOnly;
   @override
   final String auth;
 
@@ -2739,10 +2731,10 @@ class _$_GetPersonMentions extends _GetPersonMentions {
 
 abstract class _GetPersonMentions extends GetPersonMentions {
   const factory _GetPersonMentions(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) = _$_GetPersonMentions;
   const _GetPersonMentions._() : super._();
 
@@ -2750,13 +2742,13 @@ abstract class _GetPersonMentions extends GetPersonMentions {
       _$_GetPersonMentions.fromJson;
 
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
   int? get limit => throw _privateConstructorUsedError;
   @override
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -4311,7 +4303,7 @@ class _$GetPrivateMessagesTearOff {
   const _$GetPrivateMessagesTearOff();
 
   _GetPrivateMessages call(
-      {required bool unreadOnly, int? page, int? limit, required String auth}) {
+      {bool? unreadOnly, int? page, int? limit, required String auth}) {
     return _GetPrivateMessages(
       unreadOnly: unreadOnly,
       page: page,
@@ -4330,7 +4322,7 @@ const $GetPrivateMessages = _$GetPrivateMessagesTearOff();
 
 /// @nodoc
 mixin _$GetPrivateMessages {
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
@@ -4346,7 +4338,7 @@ abstract class $GetPrivateMessagesCopyWith<$Res> {
   factory $GetPrivateMessagesCopyWith(
           GetPrivateMessages value, $Res Function(GetPrivateMessages) then) =
       _$GetPrivateMessagesCopyWithImpl<$Res>;
-  $Res call({bool unreadOnly, int? page, int? limit, String auth});
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
@@ -4369,7 +4361,7 @@ class _$GetPrivateMessagesCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -4393,7 +4385,7 @@ abstract class _$GetPrivateMessagesCopyWith<$Res>
           _GetPrivateMessages value, $Res Function(_GetPrivateMessages) then) =
       __$GetPrivateMessagesCopyWithImpl<$Res>;
   @override
-  $Res call({bool unreadOnly, int? page, int? limit, String auth});
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
@@ -4418,7 +4410,7 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -4440,14 +4432,14 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetPrivateMessages extends _GetPrivateMessages {
   const _$_GetPrivateMessages(
-      {required this.unreadOnly, this.page, this.limit, required this.auth})
+      {this.unreadOnly, this.page, this.limit, required this.auth})
       : super._();
 
   factory _$_GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
       _$_$_GetPrivateMessagesFromJson(json);
 
   @override
-  final bool unreadOnly;
+  final bool? unreadOnly;
   @override
   final int? page;
   @override
@@ -4496,7 +4488,7 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 
 abstract class _GetPrivateMessages extends GetPrivateMessages {
   const factory _GetPrivateMessages(
-      {required bool unreadOnly,
+      {bool? unreadOnly,
       int? page,
       int? limit,
       required String auth}) = _$_GetPrivateMessages;
@@ -4506,7 +4498,7 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
       _$_GetPrivateMessages.fromJson;
 
   @override
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override

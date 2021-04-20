@@ -196,13 +196,13 @@ class GetComments
     implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetComments({
-    @JsonKey(name: 'type_') required CommentListingType type,
-    required SortType sort,
+    @JsonKey(name: 'type_') CommentListingType? type,
+    SortType? sort,
     int? page,
     int? limit,
     int? communityId,
     String? communityName,
-    required bool savedOnly,
+    bool? savedOnly,
     String? auth,
   }) = _GetComments;
 

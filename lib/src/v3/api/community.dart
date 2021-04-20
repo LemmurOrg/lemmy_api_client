@@ -72,8 +72,8 @@ class ListCommunities
     implements LemmyApiQuery<List<CommunityView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCommunities({
-    @JsonKey(name: 'type_') required PostListingType type,
-    required SortType sort,
+    @JsonKey(name: 'type_') PostListingType? type,
+    SortType? sort,
     int? page,
     int? limit,
     String? auth,
@@ -106,7 +106,7 @@ class BanFromCommunity
     required int communityId,
     required int personId,
     required bool ban,
-    required bool removeData,
+    bool? removeData,
     String? reason,
     int? expires,
     required String auth,
@@ -165,7 +165,7 @@ class EditCommunity
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditCommunity({
     required int communityId,
-    required String title,
+    String? title,
     String? description,
     String? icon,
     String? banner,

@@ -147,11 +147,11 @@ class GetPersonDetails
   const factory GetPersonDetails({
     int? personId,
     String? username,
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
     int? communityId,
-    required bool savedOnly,
+    bool? savedOnly,
     String? auth,
   }) = _GetPersonDetails;
 
@@ -228,7 +228,7 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
   const factory BanPerson({
     required int personId,
     required bool ban,
-    required bool removeData,
+    bool? removeData,
     String? reason,
     int? expires,
     required String auth,
@@ -253,10 +253,10 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
 class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReplies({
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
-    required bool unreadOnly,
+    bool? unreadOnly,
     required String auth,
   }) = _GetReplies;
 
@@ -283,10 +283,10 @@ class GetPersonMentions
     implements LemmyApiQuery<List<PersonMentionView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPersonMentions({
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
-    required bool unreadOnly,
+    bool? unreadOnly,
     required String auth,
   }) = _GetPersonMentions;
 
@@ -509,7 +509,7 @@ class GetPrivateMessages
     implements LemmyApiQuery<List<PrivateMessageView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPrivateMessages({
-    required bool unreadOnly,
+    bool? unreadOnly,
     int? page,
     int? limit,
     required String auth,

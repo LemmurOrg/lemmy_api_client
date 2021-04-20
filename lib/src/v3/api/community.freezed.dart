@@ -513,8 +513,8 @@ class _$ListCommunitiesTearOff {
   const _$ListCommunitiesTearOff();
 
   _ListCommunities call(
-      {@JsonKey(name: 'type_') required PostListingType type,
-      required SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       String? auth}) {
@@ -538,8 +538,8 @@ const $ListCommunities = _$ListCommunitiesTearOff();
 /// @nodoc
 mixin _$ListCommunities {
   @JsonKey(name: 'type_')
-  PostListingType get type => throw _privateConstructorUsedError;
-  SortType get sort => throw _privateConstructorUsedError;
+  PostListingType? get type => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
@@ -556,8 +556,8 @@ abstract class $ListCommunitiesCopyWith<$Res> {
           ListCommunities value, $Res Function(ListCommunities) then) =
       _$ListCommunitiesCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'type_') PostListingType type,
-      SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       String? auth});
@@ -584,11 +584,11 @@ class _$ListCommunitiesCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -613,8 +613,8 @@ abstract class _$ListCommunitiesCopyWith<$Res>
       __$ListCommunitiesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'type_') PostListingType type,
-      SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       String? auth});
@@ -643,11 +643,11 @@ class __$ListCommunitiesCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -669,8 +669,8 @@ class __$ListCommunitiesCopyWithImpl<$Res>
 /// @nodoc
 class _$_ListCommunities extends _ListCommunities {
   const _$_ListCommunities(
-      {@JsonKey(name: 'type_') required this.type,
-      required this.sort,
+      {@JsonKey(name: 'type_') this.type,
+      this.sort,
       this.page,
       this.limit,
       this.auth})
@@ -681,9 +681,9 @@ class _$_ListCommunities extends _ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  final PostListingType type;
+  final PostListingType? type;
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
@@ -734,8 +734,8 @@ class _$_ListCommunities extends _ListCommunities {
 
 abstract class _ListCommunities extends ListCommunities {
   const factory _ListCommunities(
-      {@JsonKey(name: 'type_') required PostListingType type,
-      required SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       String? auth}) = _$_ListCommunities;
@@ -746,9 +746,9 @@ abstract class _ListCommunities extends ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType get type => throw _privateConstructorUsedError;
+  PostListingType? get type => throw _privateConstructorUsedError;
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
@@ -773,7 +773,7 @@ class _$BanFromCommunityTearOff {
       {required int communityId,
       required int personId,
       required bool ban,
-      required bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       required String auth}) {
@@ -801,7 +801,7 @@ mixin _$BanFromCommunity {
   int get communityId => throw _privateConstructorUsedError;
   int get personId => throw _privateConstructorUsedError;
   bool get ban => throw _privateConstructorUsedError;
-  bool get removeData => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   int? get expires => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
@@ -821,7 +821,7 @@ abstract class $BanFromCommunityCopyWith<$Res> {
       {int communityId,
       int personId,
       bool ban,
-      bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       String auth});
@@ -862,7 +862,7 @@ class _$BanFromCommunityCopyWithImpl<$Res>
       removeData: removeData == freezed
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -890,7 +890,7 @@ abstract class _$BanFromCommunityCopyWith<$Res>
       {int communityId,
       int personId,
       bool ban,
-      bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       String auth});
@@ -933,7 +933,7 @@ class __$BanFromCommunityCopyWithImpl<$Res>
       removeData: removeData == freezed
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -958,7 +958,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
       {required this.communityId,
       required this.personId,
       required this.ban,
-      required this.removeData,
+      this.removeData,
       this.reason,
       this.expires,
       required this.auth})
@@ -974,7 +974,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
   @override
   final bool ban;
   @override
-  final bool removeData;
+  final bool? removeData;
   @override
   final String? reason;
   @override
@@ -1038,7 +1038,7 @@ abstract class _BanFromCommunity extends BanFromCommunity {
       {required int communityId,
       required int personId,
       required bool ban,
-      required bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       required String auth}) = _$_BanFromCommunity;
@@ -1054,7 +1054,7 @@ abstract class _BanFromCommunity extends BanFromCommunity {
   @override
   bool get ban => throw _privateConstructorUsedError;
   @override
-  bool get removeData => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
   @override
   String? get reason => throw _privateConstructorUsedError;
   @override
@@ -1301,7 +1301,7 @@ class _$EditCommunityTearOff {
 
   _EditCommunity call(
       {required int communityId,
-      required String title,
+      String? title,
       String? description,
       String? icon,
       String? banner,
@@ -1329,7 +1329,7 @@ const $EditCommunity = _$EditCommunityTearOff();
 /// @nodoc
 mixin _$EditCommunity {
   int get communityId => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
@@ -1349,7 +1349,7 @@ abstract class $EditCommunityCopyWith<$Res> {
       _$EditCommunityCopyWithImpl<$Res>;
   $Res call(
       {int communityId,
-      String title,
+      String? title,
       String? description,
       String? icon,
       String? banner,
@@ -1384,7 +1384,7 @@ class _$EditCommunityCopyWithImpl<$Res>
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -1418,7 +1418,7 @@ abstract class _$EditCommunityCopyWith<$Res>
   @override
   $Res call(
       {int communityId,
-      String title,
+      String? title,
       String? description,
       String? icon,
       String? banner,
@@ -1455,7 +1455,7 @@ class __$EditCommunityCopyWithImpl<$Res>
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -1486,7 +1486,7 @@ class __$EditCommunityCopyWithImpl<$Res>
 class _$_EditCommunity extends _EditCommunity {
   const _$_EditCommunity(
       {required this.communityId,
-      required this.title,
+      this.title,
       this.description,
       this.icon,
       this.banner,
@@ -1500,7 +1500,7 @@ class _$_EditCommunity extends _EditCommunity {
   @override
   final int communityId;
   @override
-  final String title;
+  final String? title;
   @override
   final String? description;
   @override
@@ -1564,7 +1564,7 @@ class _$_EditCommunity extends _EditCommunity {
 abstract class _EditCommunity extends EditCommunity {
   const factory _EditCommunity(
       {required int communityId,
-      required String title,
+      String? title,
       String? description,
       String? icon,
       String? banner,
@@ -1578,7 +1578,7 @@ abstract class _EditCommunity extends EditCommunity {
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override

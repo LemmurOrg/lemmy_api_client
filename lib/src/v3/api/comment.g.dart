@@ -150,22 +150,22 @@ Map<String, dynamic> _$_$_CreateCommentLikeToJson(
 
 _$_GetComments _$_$_GetCommentsFromJson(Map<String, dynamic> json) {
   return _$_GetComments(
-    type: CommentListingType.fromJson(json['type_'] as String),
-    sort: SortType.fromJson(json['sort'] as String),
+    type: json['type_'] == null
+        ? null
+        : CommentListingType.fromJson(json['type_'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
     communityId: json['community_id'] as int?,
     communityName: json['community_name'] as String?,
-    savedOnly: json['saved_only'] as bool,
+    savedOnly: json['saved_only'] as bool?,
     auth: json['auth'] as String?,
   );
 }
 
 Map<String, dynamic> _$_$_GetCommentsToJson(_$_GetComments instance) {
-  final val = <String, dynamic>{
-    'type_': instance.type.toJson(),
-    'sort': instance.sort.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -173,11 +173,13 @@ Map<String, dynamic> _$_$_GetCommentsToJson(_$_GetComments instance) {
     }
   }
 
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
   writeNotNull('community_name', instance.communityName);
-  val['saved_only'] = instance.savedOnly;
+  writeNotNull('saved_only', instance.savedOnly);
   writeNotNull('auth', instance.auth);
   return val;
 }

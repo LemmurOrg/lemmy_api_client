@@ -38,7 +38,7 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
     required String name,
     String? url,
     String? body,
-    required bool nsfw,
+    bool? nsfw,
     required int communityId,
     required String auth,
   }) = _CreatePost;
@@ -62,13 +62,13 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
 class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPosts({
-    @JsonKey(name: 'type_') required PostListingType type,
-    required SortType sort,
+    @JsonKey(name: 'type_') PostListingType? type,
+    SortType? sort,
     int? page,
     int? limit,
     int? communityId,
     String? communityName,
-    required bool savedOnly,
+    bool? savedOnly,
     String? auth,
   }) = _GetPosts;
 
@@ -116,10 +116,10 @@ class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditPost({
     required int postId,
-    required String name,
+    String? name,
     String? url,
     String? body,
-    required bool nsfw,
+    bool? nsfw,
     required String auth,
   }) = _EditPost;
 
