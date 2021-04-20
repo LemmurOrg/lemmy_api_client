@@ -20,11 +20,11 @@ class LemmyApiV3 {
   Future<T> run<T>(LemmyApiQuery<T> query) async {
     // get a future based on http method
     final res = await () {
-      switch (query.httpMethod()) {
+      switch (query.httpMethod) {
         case HttpMethod.get:
           return http.get(Uri.https(
             host,
-            '$extraPath${query.path()}',
+            '$extraPath${query.path}',
             <String, String>{
               for (final entry in query.toJson().entries)
                 entry.key: entry.value.toString()
@@ -32,13 +32,13 @@ class LemmyApiV3 {
           ));
         case HttpMethod.post:
           return http.post(
-            Uri.https(host, '$extraPath${query.path()}'),
+            Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
             headers: {'Content-Type': 'application/json'},
           );
         case HttpMethod.put:
           return http.put(
-            Uri.https(host, '$extraPath${query.path()}'),
+            Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
             headers: {'Content-Type': 'application/json'},
           );

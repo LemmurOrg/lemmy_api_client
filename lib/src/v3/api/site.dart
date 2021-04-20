@@ -28,11 +28,9 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
 
   factory Search.fromJson(Map<String, dynamic> json) => _$SearchFromJson(json);
 
-  @override
-  String path() => '/search';
+  final path = '/search';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   SearchResults responseFactory(Map<String, dynamic> json) =>
@@ -54,11 +52,9 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
   factory GetModlog.fromJson(Map<String, dynamic> json) =>
       _$GetModlogFromJson(json);
 
-  @override
-  String path() => '/modlog';
+  final path = '/modlog';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   Modlog responseFactory(Map<String, dynamic> json) => Modlog.fromJson(json);
@@ -83,11 +79,9 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
   factory CreateSite.fromJson(Map<String, dynamic> json) =>
       _$CreateSiteFromJson(json);
 
-  @override
-  String path() => '/site';
+  final path = '/site';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   SiteView responseFactory(Map<String, dynamic> json) =>
@@ -113,11 +107,9 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
   factory EditSite.fromJson(Map<String, dynamic> json) =>
       _$EditSiteFromJson(json);
 
-  @override
-  String path() => '/site';
+  final path = '/site';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   SiteView responseFactory(Map<String, dynamic> json) =>
@@ -136,11 +128,9 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
   factory GetSite.fromJson(Map<String, dynamic> json) =>
       _$GetSiteFromJson(json);
 
-  @override
-  String path() => '/site';
+  final path = '/site';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   FullSiteView responseFactory(Map<String, dynamic> json) =>
@@ -160,11 +150,9 @@ class TransferSite with _$TransferSite implements LemmyApiQuery<FullSiteView> {
   factory TransferSite.fromJson(Map<String, dynamic> json) =>
       _$TransferSiteFromJson(json);
 
-  @override
-  String path() => '/site/transfer';
+  final path = '/site/transfer';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullSiteView responseFactory(Map<String, dynamic> json) =>
@@ -183,11 +171,9 @@ class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
   factory GetSiteConfig.fromJson(Map<String, dynamic> json) =>
       _$GetSiteConfigFromJson(json);
 
-  @override
-  String path() => '/site/config';
+  final path = '/site/config';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   String responseFactory(Map<String, dynamic> json) =>
@@ -207,11 +193,9 @@ class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
   factory SaveSiteConfig.fromJson(Map<String, dynamic> json) =>
       _$SaveSiteConfigFromJson(json);
 
-  @override
-  String path() => '/site/config';
+  final path = '/site/config';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   String responseFactory(Map<String, dynamic> json) =>

@@ -20,11 +20,9 @@ class GetPost with _$GetPost implements LemmyApiQuery<FullPostView> {
   factory GetPost.fromJson(Map<String, dynamic> json) =>
       _$GetPostFromJson(json);
 
-  @override
-  String path() => '/post';
+  final path = '/post';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   FullPostView responseFactory(Map<String, dynamic> json) =>
@@ -47,11 +45,9 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
   factory CreatePost.fromJson(Map<String, dynamic> json) =>
       _$CreatePostFromJson(json);
 
-  @override
-  String path() => '/post';
+  final path = '/post';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -76,11 +72,9 @@ class GetPosts with _$GetPosts implements LemmyApiQuery<List<PostView>> {
   factory GetPosts.fromJson(Map<String, dynamic> json) =>
       _$GetPostsFromJson(json);
 
-  @override
-  String path() => '/post/list';
+  final path = '/post/list';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<PostView> responseFactory(Map<String, dynamic> json) =>
@@ -100,11 +94,9 @@ class CreatePostLike with _$CreatePostLike implements LemmyApiQuery<PostView> {
   factory CreatePostLike.fromJson(Map<String, dynamic> json) =>
       _$CreatePostLikeFromJson(json);
 
-  @override
-  String path() => '/post/like';
+  final path = '/post/like';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -127,11 +119,9 @@ class EditPost with _$EditPost implements LemmyApiQuery<PostView> {
   factory EditPost.fromJson(Map<String, dynamic> json) =>
       _$EditPostFromJson(json);
 
-  @override
-  String path() => '/post';
+  final path = '/post';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -151,11 +141,9 @@ class DeletePost with _$DeletePost implements LemmyApiQuery<PostView> {
   factory DeletePost.fromJson(Map<String, dynamic> json) =>
       _$DeletePostFromJson(json);
 
-  @override
-  String path() => '/post/delete';
+  final path = '/post/delete';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -176,11 +164,9 @@ class RemovePost with _$RemovePost implements LemmyApiQuery<PostView> {
   factory RemovePost.fromJson(Map<String, dynamic> json) =>
       _$RemovePostFromJson(json);
 
-  @override
-  String path() => '/post/remove';
+  final path = '/post/remove';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -200,11 +186,9 @@ class LockPost with _$LockPost implements LemmyApiQuery<PostView> {
   factory LockPost.fromJson(Map<String, dynamic> json) =>
       _$LockPostFromJson(json);
 
-  @override
-  String path() => '/post/lock';
+  final path = '/post/lock';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -224,11 +208,9 @@ class StickyPost with _$StickyPost implements LemmyApiQuery<PostView> {
   factory StickyPost.fromJson(Map<String, dynamic> json) =>
       _$StickyPostFromJson(json);
 
-  @override
-  String path() => '/post/sticky';
+  final path = '/post/sticky';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -248,11 +230,9 @@ class SavePost with _$SavePost implements LemmyApiQuery<PostView> {
   factory SavePost.fromJson(Map<String, dynamic> json) =>
       _$SavePostFromJson(json);
 
-  @override
-  String path() => '/post/save';
+  final path = '/post/save';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   PostView responseFactory(Map<String, dynamic> json) =>
@@ -273,11 +253,9 @@ class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<bool> {
   factory CreatePostReport.fromJson(Map<String, dynamic> json) =>
       _$CreatePostReportFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
@@ -299,11 +277,9 @@ class ResolvePostReport
   factory ResolvePostReport.fromJson(Map<String, dynamic> json) =>
       _$ResolvePostReportFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   ResolvePostReportResponse responseFactory(Map<String, dynamic> json) =>
@@ -327,11 +303,9 @@ class ListPostReports
   factory ListPostReports.fromJson(Map<String, dynamic> json) =>
       _$ListPostReportsFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<PostReportView> responseFactory(Map<String, dynamic> json) =>
