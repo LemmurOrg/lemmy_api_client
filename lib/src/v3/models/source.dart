@@ -78,6 +78,7 @@ class Site extends WithInstanceHost with _$Site {
     required bool enableDownvotes,
     required bool openRegistration,
     required bool enableNsfw,
+    required bool communityCreationAdminOnly,
     String? icon,
     String? banner,
   }) = _Site;

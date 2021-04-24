@@ -71,6 +71,7 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
     bool? enableDownvotes,
     bool? openRegistration,
     bool? enableNsfw,
+    bool? communityCreationAdminOnly,
     required String auth,
   }) = _CreateSite;
 
@@ -99,6 +100,7 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
     bool? enableDownvotes,
     bool? openRegistration,
     bool? enableNsfw,
+    bool? communityCreationAdminOnly,
     required String auth,
   }) = _EditSite;
 

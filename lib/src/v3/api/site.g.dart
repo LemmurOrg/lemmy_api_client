@@ -83,6 +83,7 @@ _$_CreateSite _$_$_CreateSiteFromJson(Map<String, dynamic> json) {
     enableDownvotes: json['enable_downvotes'] as bool?,
     openRegistration: json['open_registration'] as bool?,
     enableNsfw: json['enable_nsfw'] as bool?,
+    communityCreationAdminOnly: json['community_creation_admin_only'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -104,6 +105,8 @@ Map<String, dynamic> _$_$_CreateSiteToJson(_$_CreateSite instance) {
   writeNotNull('enable_downvotes', instance.enableDownvotes);
   writeNotNull('open_registration', instance.openRegistration);
   writeNotNull('enable_nsfw', instance.enableNsfw);
+  writeNotNull(
+      'community_creation_admin_only', instance.communityCreationAdminOnly);
   val['auth'] = instance.auth;
   return val;
 }
@@ -117,6 +120,7 @@ _$_EditSite _$_$_EditSiteFromJson(Map<String, dynamic> json) {
     enableDownvotes: json['enable_downvotes'] as bool?,
     openRegistration: json['open_registration'] as bool?,
     enableNsfw: json['enable_nsfw'] as bool?,
+    communityCreationAdminOnly: json['community_creation_admin_only'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -137,6 +141,8 @@ Map<String, dynamic> _$_$_EditSiteToJson(_$_EditSite instance) {
   writeNotNull('enable_downvotes', instance.enableDownvotes);
   writeNotNull('open_registration', instance.openRegistration);
   writeNotNull('enable_nsfw', instance.enableNsfw);
+  writeNotNull(
+      'community_creation_admin_only', instance.communityCreationAdminOnly);
   val['auth'] = instance.auth;
   return val;
 }

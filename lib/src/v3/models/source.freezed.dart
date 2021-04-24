@@ -979,6 +979,7 @@ class _$SiteTearOff {
       required bool enableDownvotes,
       required bool openRegistration,
       required bool enableNsfw,
+      required bool communityCreationAdminOnly,
       String? icon,
       String? banner}) {
     return _Site(
@@ -991,6 +992,7 @@ class _$SiteTearOff {
       enableDownvotes: enableDownvotes,
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
+      communityCreationAdminOnly: communityCreationAdminOnly,
       icon: icon,
       banner: banner,
     );
@@ -1015,6 +1017,7 @@ mixin _$Site {
   bool get enableDownvotes => throw _privateConstructorUsedError;
   bool get openRegistration => throw _privateConstructorUsedError;
   bool get enableNsfw => throw _privateConstructorUsedError;
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
 
@@ -1037,6 +1040,7 @@ abstract class $SiteCopyWith<$Res> {
       bool enableDownvotes,
       bool openRegistration,
       bool enableNsfw,
+      bool communityCreationAdminOnly,
       String? icon,
       String? banner});
 }
@@ -1060,6 +1064,7 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
   }) {
@@ -1100,6 +1105,10 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -1127,6 +1136,7 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       bool enableDownvotes,
       bool openRegistration,
       bool enableNsfw,
+      bool communityCreationAdminOnly,
       String? icon,
       String? banner});
 }
@@ -1151,6 +1161,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
   }) {
@@ -1191,6 +1202,10 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool,
       icon: icon == freezed
           ? _value.icon
           : icon // ignore: cast_nullable_to_non_nullable
@@ -1219,6 +1234,7 @@ class _$_Site extends _Site {
       required this.enableDownvotes,
       required this.openRegistration,
       required this.enableNsfw,
+      required this.communityCreationAdminOnly,
       this.icon,
       this.banner})
       : super._();
@@ -1245,13 +1261,15 @@ class _$_Site extends _Site {
   @override
   final bool enableNsfw;
   @override
+  final bool communityCreationAdminOnly;
+  @override
   final String? icon;
   @override
   final String? banner;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, icon: $icon, banner: $banner)';
+    return 'Site(id: $id, name: $name, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner)';
   }
 
   @override
@@ -1283,6 +1301,11 @@ class _$_Site extends _Site {
             (identical(other.enableNsfw, enableNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.enableNsfw, enableNsfw)) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                const DeepCollectionEquality().equals(
+                    other.communityCreationAdminOnly,
+                    communityCreationAdminOnly)) &&
             (identical(other.icon, icon) ||
                 const DeepCollectionEquality().equals(other.icon, icon)) &&
             (identical(other.banner, banner) ||
@@ -1301,6 +1324,7 @@ class _$_Site extends _Site {
       const DeepCollectionEquality().hash(enableDownvotes) ^
       const DeepCollectionEquality().hash(openRegistration) ^
       const DeepCollectionEquality().hash(enableNsfw) ^
+      const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner);
 
@@ -1326,6 +1350,7 @@ abstract class _Site extends Site {
       required bool enableDownvotes,
       required bool openRegistration,
       required bool enableNsfw,
+      required bool communityCreationAdminOnly,
       String? icon,
       String? banner}) = _$_Site;
   _Site._() : super._();
@@ -1350,6 +1375,8 @@ abstract class _Site extends Site {
   bool get openRegistration => throw _privateConstructorUsedError;
   @override
   bool get enableNsfw => throw _privateConstructorUsedError;
+  @override
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
   String? get icon => throw _privateConstructorUsedError;
   @override

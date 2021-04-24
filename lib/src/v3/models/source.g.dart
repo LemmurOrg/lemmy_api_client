@@ -96,6 +96,7 @@ _$_Site _$_$_SiteFromJson(Map<String, dynamic> json) {
     enableDownvotes: json['enable_downvotes'] as bool,
     openRegistration: json['open_registration'] as bool,
     enableNsfw: json['enable_nsfw'] as bool,
+    communityCreationAdminOnly: json['community_creation_admin_only'] as bool,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
   )..instanceHost = json['instance_host'] as String;
@@ -112,6 +113,7 @@ Map<String, dynamic> _$_$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'enable_downvotes': instance.enableDownvotes,
       'open_registration': instance.openRegistration,
       'enable_nsfw': instance.enableNsfw,
+      'community_creation_admin_only': instance.communityCreationAdminOnly,
       'icon': instance.icon,
       'banner': instance.banner,
     };

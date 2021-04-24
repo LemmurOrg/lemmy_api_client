@@ -612,6 +612,7 @@ class _$CreateSiteTearOff {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) {
     return _CreateSite(
       name: name,
@@ -621,6 +622,7 @@ class _$CreateSiteTearOff {
       enableDownvotes: enableDownvotes,
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
+      communityCreationAdminOnly: communityCreationAdminOnly,
       auth: auth,
     );
   }
@@ -642,6 +644,7 @@ mixin _$CreateSite {
   bool? get enableDownvotes => throw _privateConstructorUsedError;
   bool? get openRegistration => throw _privateConstructorUsedError;
   bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -663,6 +666,7 @@ abstract class $CreateSiteCopyWith<$Res> {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -683,6 +687,7 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -714,6 +719,10 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -736,6 +745,7 @@ abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -758,6 +768,7 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_CreateSite(
@@ -789,6 +800,10 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -809,6 +824,7 @@ class _$_CreateSite extends _CreateSite {
       this.enableDownvotes,
       this.openRegistration,
       this.enableNsfw,
+      this.communityCreationAdminOnly,
       required this.auth})
       : super._();
 
@@ -830,11 +846,13 @@ class _$_CreateSite extends _CreateSite {
   @override
   final bool? enableNsfw;
   @override
+  final bool? communityCreationAdminOnly;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'CreateSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, auth: $auth)';
+    return 'CreateSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
   }
 
   @override
@@ -859,6 +877,11 @@ class _$_CreateSite extends _CreateSite {
             (identical(other.enableNsfw, enableNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.enableNsfw, enableNsfw)) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                const DeepCollectionEquality().equals(
+                    other.communityCreationAdminOnly,
+                    communityCreationAdminOnly)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -873,6 +896,7 @@ class _$_CreateSite extends _CreateSite {
       const DeepCollectionEquality().hash(enableDownvotes) ^
       const DeepCollectionEquality().hash(openRegistration) ^
       const DeepCollectionEquality().hash(enableNsfw) ^
+      const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -895,6 +919,7 @@ abstract class _CreateSite extends CreateSite {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) = _$_CreateSite;
   const _CreateSite._() : super._();
 
@@ -915,6 +940,8 @@ abstract class _CreateSite extends CreateSite {
   bool? get openRegistration => throw _privateConstructorUsedError;
   @override
   bool? get enableNsfw => throw _privateConstructorUsedError;
+  @override
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -939,6 +966,7 @@ class _$EditSiteTearOff {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) {
     return _EditSite(
       name: name,
@@ -948,6 +976,7 @@ class _$EditSiteTearOff {
       enableDownvotes: enableDownvotes,
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
+      communityCreationAdminOnly: communityCreationAdminOnly,
       auth: auth,
     );
   }
@@ -969,6 +998,7 @@ mixin _$EditSite {
   bool? get enableDownvotes => throw _privateConstructorUsedError;
   bool? get openRegistration => throw _privateConstructorUsedError;
   bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -989,6 +1019,7 @@ abstract class $EditSiteCopyWith<$Res> {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -1009,6 +1040,7 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1040,6 +1072,10 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1061,6 +1097,7 @@ abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -1082,6 +1119,7 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_EditSite(
@@ -1113,6 +1151,10 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1133,6 +1175,7 @@ class _$_EditSite extends _EditSite {
       this.enableDownvotes,
       this.openRegistration,
       this.enableNsfw,
+      this.communityCreationAdminOnly,
       required this.auth})
       : super._();
 
@@ -1154,11 +1197,13 @@ class _$_EditSite extends _EditSite {
   @override
   final bool? enableNsfw;
   @override
+  final bool? communityCreationAdminOnly;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'EditSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, auth: $auth)';
+    return 'EditSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
   }
 
   @override
@@ -1183,6 +1228,11 @@ class _$_EditSite extends _EditSite {
             (identical(other.enableNsfw, enableNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.enableNsfw, enableNsfw)) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                const DeepCollectionEquality().equals(
+                    other.communityCreationAdminOnly,
+                    communityCreationAdminOnly)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -1197,6 +1247,7 @@ class _$_EditSite extends _EditSite {
       const DeepCollectionEquality().hash(enableDownvotes) ^
       const DeepCollectionEquality().hash(openRegistration) ^
       const DeepCollectionEquality().hash(enableNsfw) ^
+      const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -1219,6 +1270,7 @@ abstract class _EditSite extends EditSite {
       bool? enableDownvotes,
       bool? openRegistration,
       bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) = _$_EditSite;
   const _EditSite._() : super._();
 
@@ -1238,6 +1290,8 @@ abstract class _EditSite extends EditSite {
   bool? get openRegistration => throw _privateConstructorUsedError;
   @override
   bool? get enableNsfw => throw _privateConstructorUsedError;
+  @override
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
