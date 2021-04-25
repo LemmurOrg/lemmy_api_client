@@ -606,6 +606,7 @@ class _$CreateSiteTearOff {
 
   _CreateSite call(
       {required String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -616,6 +617,7 @@ class _$CreateSiteTearOff {
       required String auth}) {
     return _CreateSite(
       name: name,
+      sidebar: sidebar,
       description: description,
       icon: icon,
       banner: banner,
@@ -638,6 +640,7 @@ const $CreateSite = _$CreateSiteTearOff();
 /// @nodoc
 mixin _$CreateSite {
   String get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
@@ -660,6 +663,7 @@ abstract class $CreateSiteCopyWith<$Res> {
       _$CreateSiteCopyWithImpl<$Res>;
   $Res call(
       {String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -681,6 +685,7 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
@@ -695,6 +700,10 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -739,6 +748,7 @@ abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
   @override
   $Res call(
       {String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -762,6 +772,7 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
@@ -776,6 +787,10 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -818,6 +833,7 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
 class _$_CreateSite extends _CreateSite {
   const _$_CreateSite(
       {required this.name,
+      this.sidebar,
       this.description,
       this.icon,
       this.banner,
@@ -833,6 +849,8 @@ class _$_CreateSite extends _CreateSite {
 
   @override
   final String name;
+  @override
+  final String? sidebar;
   @override
   final String? description;
   @override
@@ -852,7 +870,7 @@ class _$_CreateSite extends _CreateSite {
 
   @override
   String toString() {
-    return 'CreateSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
+    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
   }
 
   @override
@@ -861,6 +879,9 @@ class _$_CreateSite extends _CreateSite {
         (other is _CreateSite &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.sidebar, sidebar) ||
+                const DeepCollectionEquality()
+                    .equals(other.sidebar, sidebar)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
@@ -890,6 +911,7 @@ class _$_CreateSite extends _CreateSite {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(sidebar) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner) ^
@@ -913,6 +935,7 @@ class _$_CreateSite extends _CreateSite {
 abstract class _CreateSite extends CreateSite {
   const factory _CreateSite(
       {required String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -928,6 +951,8 @@ abstract class _CreateSite extends CreateSite {
 
   @override
   String get name => throw _privateConstructorUsedError;
+  @override
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override
@@ -960,6 +985,7 @@ class _$EditSiteTearOff {
 
   _EditSite call(
       {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -970,6 +996,7 @@ class _$EditSiteTearOff {
       required String auth}) {
     return _EditSite(
       name: name,
+      sidebar: sidebar,
       description: description,
       icon: icon,
       banner: banner,
@@ -992,6 +1019,7 @@ const $EditSite = _$EditSiteTearOff();
 /// @nodoc
 mixin _$EditSite {
   String? get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
@@ -1013,6 +1041,7 @@ abstract class $EditSiteCopyWith<$Res> {
       _$EditSiteCopyWithImpl<$Res>;
   $Res call(
       {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -1034,6 +1063,7 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
@@ -1047,6 +1077,10 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
       description: description == freezed
           ? _value.description
@@ -1091,6 +1125,7 @@ abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
   @override
   $Res call(
       {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -1113,6 +1148,7 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
@@ -1126,6 +1162,10 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
               as String?,
       description: description == freezed
           ? _value.description
@@ -1169,6 +1209,7 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
 class _$_EditSite extends _EditSite {
   const _$_EditSite(
       {this.name,
+      this.sidebar,
       this.description,
       this.icon,
       this.banner,
@@ -1184,6 +1225,8 @@ class _$_EditSite extends _EditSite {
 
   @override
   final String? name;
+  @override
+  final String? sidebar;
   @override
   final String? description;
   @override
@@ -1203,7 +1246,7 @@ class _$_EditSite extends _EditSite {
 
   @override
   String toString() {
-    return 'EditSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
   }
 
   @override
@@ -1212,6 +1255,9 @@ class _$_EditSite extends _EditSite {
         (other is _EditSite &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.sidebar, sidebar) ||
+                const DeepCollectionEquality()
+                    .equals(other.sidebar, sidebar)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
@@ -1241,6 +1287,7 @@ class _$_EditSite extends _EditSite {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(sidebar) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner) ^
@@ -1264,6 +1311,7 @@ class _$_EditSite extends _EditSite {
 abstract class _EditSite extends EditSite {
   const factory _EditSite(
       {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
@@ -1278,6 +1326,8 @@ abstract class _EditSite extends EditSite {
 
   @override
   String? get name => throw _privateConstructorUsedError;
+  @override
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override

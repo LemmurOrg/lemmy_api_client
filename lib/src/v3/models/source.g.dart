@@ -25,6 +25,7 @@ _$_PersonSafe _$_$_PersonSafeFromJson(Map<String, dynamic> json) {
     sharedInboxUrl: json['shared_inbox_url'] as String,
     matrixUserId: json['matrix_user_id'] as String?,
     admin: json['admin'] as bool,
+    botAccount: json['bot_account'] as bool,
   )..instanceHost = json['instance_host'] as String;
 }
 
@@ -47,6 +48,7 @@ Map<String, dynamic> _$_$_PersonSafeToJson(_$_PersonSafe instance) =>
       'shared_inbox_url': instance.sharedInboxUrl,
       'matrix_user_id': instance.matrixUserId,
       'admin': instance.admin,
+      'bot_account': instance.botAccount,
     };
 
 _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
@@ -63,6 +65,8 @@ _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
     showAvatars: json['show_avatars'] as bool,
     showScores: json['show_scores'] as bool,
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
+    showReadPosts: json['show_read_posts'] as bool,
+    showBotAccounts: json['show_bot_accounts'] as bool,
   )..instanceHost = json['instance_host'] as String;
 }
 
@@ -82,12 +86,15 @@ Map<String, dynamic> _$_$_LocalUserSettingsToJson(
       'show_avatars': instance.showAvatars,
       'show_scores': instance.showScores,
       'send_notifications_to_email': instance.sendNotificationsToEmail,
+      'show_read_posts': instance.showReadPosts,
+      'show_bot_accounts': instance.showBotAccounts,
     };
 
 _$_Site _$_$_SiteFromJson(Map<String, dynamic> json) {
   return _$_Site(
     id: json['id'] as int,
     name: json['name'] as String,
+    sidebar: json['sidebar'] as String?,
     description: json['description'] as String?,
     creatorId: json['creator_id'] as int,
     published: const ForceUtcDateTime().fromJson(json['published'] as String),
@@ -106,6 +113,7 @@ Map<String, dynamic> _$_$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'instance_host': instance.instanceHost,
       'id': instance.id,
       'name': instance.name,
+      'sidebar': instance.sidebar,
       'description': instance.description,
       'creator_id': instance.creatorId,
       'published': const ForceUtcDateTime().toJson(instance.published),

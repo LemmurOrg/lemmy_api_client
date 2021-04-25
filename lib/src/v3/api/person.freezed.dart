@@ -599,6 +599,9 @@ class _$SaveUserSettingsTearOff {
       bool? showAvatars,
       bool? showScores,
       bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       required String auth}) {
     return _SaveUserSettings(
       showNsfw: showNsfw,
@@ -615,6 +618,9 @@ class _$SaveUserSettingsTearOff {
       showAvatars: showAvatars,
       showScores: showScores,
       sendNotificationsToEmail: sendNotificationsToEmail,
+      showReadPosts: showReadPosts,
+      botAccount: botAccount,
+      showBotAccounts: showBotAccounts,
       auth: auth,
     );
   }
@@ -645,6 +651,9 @@ mixin _$SaveUserSettings {
   bool? get showAvatars => throw _privateConstructorUsedError;
   bool? get showScores => throw _privateConstructorUsedError;
   bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get showReadPosts => throw _privateConstructorUsedError;
+  bool? get botAccount => throw _privateConstructorUsedError;
+  bool? get showBotAccounts => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -675,6 +684,9 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
       bool? showAvatars,
       bool? showScores,
       bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       String auth});
 }
 
@@ -703,6 +715,9 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
     Object? showAvatars = freezed,
     Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
+    Object? showReadPosts = freezed,
+    Object? botAccount = freezed,
+    Object? showBotAccounts = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -762,6 +777,18 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showReadPosts: showReadPosts == freezed
+          ? _value.showReadPosts
+          : showReadPosts // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      botAccount: botAccount == freezed
+          ? _value.botAccount
+          : botAccount // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showBotAccounts: showBotAccounts == freezed
+          ? _value.showBotAccounts
+          : showBotAccounts // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -794,6 +821,9 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
       bool? showAvatars,
       bool? showScores,
       bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       String auth});
 }
 
@@ -824,6 +854,9 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
     Object? showAvatars = freezed,
     Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
+    Object? showReadPosts = freezed,
+    Object? botAccount = freezed,
+    Object? showBotAccounts = freezed,
     Object? auth = freezed,
   }) {
     return _then(_SaveUserSettings(
@@ -883,6 +916,18 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
               as bool?,
+      showReadPosts: showReadPosts == freezed
+          ? _value.showReadPosts
+          : showReadPosts // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      botAccount: botAccount == freezed
+          ? _value.botAccount
+          : botAccount // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showBotAccounts: showBotAccounts == freezed
+          ? _value.showBotAccounts
+          : showBotAccounts // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -912,6 +957,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       this.showAvatars,
       this.showScores,
       this.sendNotificationsToEmail,
+      this.showReadPosts,
+      this.botAccount,
+      this.showBotAccounts,
       required this.auth})
       : super._();
 
@@ -949,11 +997,17 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final bool? sendNotificationsToEmail;
   @override
+  final bool? showReadPosts;
+  @override
+  final bool? botAccount;
+  @override
+  final bool? showBotAccounts;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, auth: $auth)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, botAccount: $botAccount, showBotAccounts: $showBotAccounts, auth: $auth)';
   }
 
   @override
@@ -998,6 +1052,15 @@ class _$_SaveUserSettings extends _SaveUserSettings {
                 const DeepCollectionEquality().equals(
                     other.sendNotificationsToEmail,
                     sendNotificationsToEmail)) &&
+            (identical(other.showReadPosts, showReadPosts) ||
+                const DeepCollectionEquality()
+                    .equals(other.showReadPosts, showReadPosts)) &&
+            (identical(other.botAccount, botAccount) ||
+                const DeepCollectionEquality()
+                    .equals(other.botAccount, botAccount)) &&
+            (identical(other.showBotAccounts, showBotAccounts) ||
+                const DeepCollectionEquality()
+                    .equals(other.showBotAccounts, showBotAccounts)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -1019,6 +1082,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       const DeepCollectionEquality().hash(showAvatars) ^
       const DeepCollectionEquality().hash(showScores) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
+      const DeepCollectionEquality().hash(showReadPosts) ^
+      const DeepCollectionEquality().hash(botAccount) ^
+      const DeepCollectionEquality().hash(showBotAccounts) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -1050,6 +1116,9 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       bool? showAvatars,
       bool? showScores,
       bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       required String auth}) = _$_SaveUserSettings;
   const _SaveUserSettings._() : super._();
 
@@ -1086,6 +1155,12 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   bool? get showScores => throw _privateConstructorUsedError;
   @override
   bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  @override
+  bool? get showReadPosts => throw _privateConstructorUsedError;
+  @override
+  bool? get botAccount => throw _privateConstructorUsedError;
+  @override
+  bool? get showBotAccounts => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override

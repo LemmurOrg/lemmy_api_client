@@ -65,6 +65,7 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateSite({
     required String name,
+    String? sidebar,
     String? description,
     String? icon,
     String? banner,
@@ -94,6 +95,7 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditSite({
     String? name,
+    String? sidebar,
     String? description,
     String? icon,
     String? banner,

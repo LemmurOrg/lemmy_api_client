@@ -30,6 +30,7 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
     required String sharedInboxUrl,
     String? matrixUserId,
     required bool admin,
+    required bool botAccount,
   }) = _PersonSafe;
 
   PersonSafe._();
@@ -56,6 +57,8 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
     required bool showAvatars,
     required bool showScores,
     required bool sendNotificationsToEmail,
+    required bool showReadPosts,
+    required bool showBotAccounts,
   }) = _LocalUserSettings;
 
   LocalUserSettings._();
@@ -71,6 +74,7 @@ class Site extends WithInstanceHost with _$Site {
   factory Site({
     required int id,
     required String name,
+    String? sidebar,
     String? description,
     required int creatorId,
     required DateTime published,

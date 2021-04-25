@@ -77,6 +77,7 @@ Map<String, dynamic> _$_$_GetModlogToJson(_$_GetModlog instance) {
 _$_CreateSite _$_$_CreateSiteFromJson(Map<String, dynamic> json) {
   return _$_CreateSite(
     name: json['name'] as String,
+    sidebar: json['sidebar'] as String?,
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
@@ -99,6 +100,7 @@ Map<String, dynamic> _$_$_CreateSiteToJson(_$_CreateSite instance) {
     }
   }
 
+  writeNotNull('sidebar', instance.sidebar);
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
@@ -114,6 +116,7 @@ Map<String, dynamic> _$_$_CreateSiteToJson(_$_CreateSite instance) {
 _$_EditSite _$_$_EditSiteFromJson(Map<String, dynamic> json) {
   return _$_EditSite(
     name: json['name'] as String?,
+    sidebar: json['sidebar'] as String?,
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
@@ -135,6 +138,7 @@ Map<String, dynamic> _$_$_EditSiteToJson(_$_EditSite instance) {
   }
 
   writeNotNull('name', instance.name);
+  writeNotNull('sidebar', instance.sidebar);
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);

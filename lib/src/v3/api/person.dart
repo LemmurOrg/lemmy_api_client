@@ -92,6 +92,9 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
     bool? showAvatars,
     bool? showScores,
     bool? sendNotificationsToEmail,
+    bool? showReadPosts,
+    bool? botAccount,
+    bool? showBotAccounts,
     required String auth,
   }) = _SaveUserSettings;
 
