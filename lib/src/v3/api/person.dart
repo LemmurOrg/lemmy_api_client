@@ -21,11 +21,9 @@ class Login with _$Login implements LemmyApiQuery<Jwt> {
   const Login._();
   factory Login.fromJson(Map<String, dynamic> json) => _$LoginFromJson(json);
 
-  @override
-  String path() => '/user/login';
+  final path = '/user/login';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
@@ -48,11 +46,9 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
   factory Register.fromJson(Map<String, dynamic> json) =>
       _$RegisterFromJson(json);
 
-  @override
-  String path() => '/user/register';
+  final path = '/user/register';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
@@ -67,11 +63,9 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
   factory GetCaptcha.fromJson(Map<String, dynamic> json) =>
       _$GetCaptchaFromJson(json);
 
-  @override
-  String path() => '/user/get_captcha';
+  final path = '/user/get_captcha';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   Captcha responseFactory(Map<String, dynamic> json) =>
@@ -82,24 +76,25 @@ class GetCaptcha with _$GetCaptcha implements LemmyApiQuery<Captcha> {
 class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory SaveUserSettings({
-    required bool showNsfw,
-    required String theme,
+    bool? showNsfw,
+    String? theme,
     @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-        required SortType defaultSortType,
+        SortType? defaultSortType,
     @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-        required PostListingType defaultListingType,
-    required String lang,
+        PostListingType? defaultListingType,
+    String? lang,
     String? avatar,
     String? banner,
-    String? preferredUsername,
+    String? displayName,
     String? email,
     String? bio,
     String? matrixUserId,
-    String? newPassword,
-    String? newPasswordVerify,
-    String? oldPassword,
-    required bool showAvatars,
-    required bool sendNotificationsToEmail,
+    bool? showAvatars,
+    bool? showScores,
+    bool? sendNotificationsToEmail,
+    bool? showReadPosts,
+    bool? botAccount,
+    bool? showBotAccounts,
     required String auth,
   }) = _SaveUserSettings;
 
@@ -107,11 +102,31 @@ class SaveUserSettings with _$SaveUserSettings implements LemmyApiQuery<Jwt> {
   factory SaveUserSettings.fromJson(Map<String, dynamic> json) =>
       _$SaveUserSettingsFromJson(json);
 
-  @override
-  String path() => '/user/save_user_settings';
+  final path = '/user/save_user_settings';
+
+  final httpMethod = HttpMethod.put;
 
   @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
+}
+
+@freezed
+class ChangePassword with _$ChangePassword implements LemmyApiQuery<Jwt> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory ChangePassword({
+    required String newPassword,
+    required String newPasswordVerify,
+    required String oldPassword,
+    required String auth,
+  }) = _ChangePassword;
+
+  const ChangePassword._();
+  factory ChangePassword.fromJson(Map<String, dynamic> json) =>
+      _$ChangePasswordFromJson(json);
+
+  final path = '/user/change_password';
+
+  final httpMethod = HttpMethod.put;
 
   @override
   Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
@@ -125,11 +140,11 @@ class GetPersonDetails
   const factory GetPersonDetails({
     int? personId,
     String? username,
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
     int? communityId,
-    required bool savedOnly,
+    bool? savedOnly,
     String? auth,
   }) = _GetPersonDetails;
 
@@ -137,11 +152,9 @@ class GetPersonDetails
   factory GetPersonDetails.fromJson(Map<String, dynamic> json) =>
       _$GetPersonDetailsFromJson(json);
 
-  @override
-  String path() => '/user';
+  final path = '/user';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   FullPersonView responseFactory(Map<String, dynamic> json) =>
@@ -161,11 +174,9 @@ class MarkAllAsRead
   factory MarkAllAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkAllAsReadFromJson(json);
 
-  @override
-  String path() => '/user/mark_all_as_read';
+  final path = '/user/mark_all_as_read';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   List<CommentView> responseFactory(Map<String, dynamic> json) =>
@@ -187,11 +198,9 @@ class AddAdmin with _$AddAdmin implements LemmyApiQuery<List<PersonViewSafe>> {
   factory AddAdmin.fromJson(Map<String, dynamic> json) =>
       _$AddAdminFromJson(json);
 
-  @override
-  String path() => '/admin/add';
+  final path = '/admin/add';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   List<PersonViewSafe> responseFactory(Map<String, dynamic> json) =>
@@ -206,7 +215,7 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
   const factory BanPerson({
     required int personId,
     required bool ban,
-    required bool removeData,
+    bool? removeData,
     String? reason,
     int? expires,
     required String auth,
@@ -216,11 +225,9 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
   factory BanPerson.fromJson(Map<String, dynamic> json) =>
       _$BanPersonFromJson(json);
 
-  @override
-  String path() => '/user/ban';
+  final path = '/user/ban';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   BannedPerson responseFactory(Map<String, dynamic> json) =>
@@ -231,10 +238,10 @@ class BanPerson with _$BanPerson implements LemmyApiQuery<BannedPerson> {
 class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReplies({
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
-    required bool unreadOnly,
+    bool? unreadOnly,
     required String auth,
   }) = _GetReplies;
 
@@ -242,11 +249,9 @@ class GetReplies with _$GetReplies implements LemmyApiQuery<List<CommentView>> {
   factory GetReplies.fromJson(Map<String, dynamic> json) =>
       _$GetRepliesFromJson(json);
 
-  @override
-  String path() => '/user/replies';
+  final path = '/user/replies';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<CommentView> responseFactory(Map<String, dynamic> json) =>
@@ -261,10 +266,10 @@ class GetPersonMentions
     implements LemmyApiQuery<List<PersonMentionView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPersonMentions({
-    required SortType sort,
+    SortType? sort,
     int? page,
     int? limit,
-    required bool unreadOnly,
+    bool? unreadOnly,
     required String auth,
   }) = _GetPersonMentions;
 
@@ -272,11 +277,9 @@ class GetPersonMentions
   factory GetPersonMentions.fromJson(Map<String, dynamic> json) =>
       _$GetPersonMentionsFromJson(json);
 
-  @override
-  String path() => '/user/mention';
+  final path = '/user/mention';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<PersonMentionView> responseFactory(Map<String, dynamic> json) =>
@@ -300,11 +303,9 @@ class MarkPersonMentionAsRead
   factory MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkPersonMentionAsReadFromJson(json);
 
-  @override
-  String path() => '/user/mention/mark_as_read';
+  final path = '/user/mention/mark_as_read';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PersonMentionView responseFactory(Map<String, dynamic> json) =>
@@ -323,11 +324,9 @@ class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<Jwt> {
   factory DeleteAccount.fromJson(Map<String, dynamic> json) =>
       _$DeleteAccountFromJson(json);
 
-  @override
-  String path() => '/user/delete_account';
+  final path = '/user/delete_account';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
@@ -344,11 +343,9 @@ class PasswordReset with _$PasswordReset implements LemmyApiQuery<Null> {
   factory PasswordReset.fromJson(Map<String, dynamic> json) =>
       _$PasswordResetFromJson(json);
 
-  @override
-  String path() => '/user/password_reset';
+  final path = '/user/password_reset';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   Null responseFactory(Map<String, dynamic> json) => null;
@@ -367,11 +364,9 @@ class PasswordChange with _$PasswordChange implements LemmyApiQuery<Jwt> {
   factory PasswordChange.fromJson(Map<String, dynamic> json) =>
       _$PasswordChangeFromJson(json);
 
-  @override
-  String path() => '/user/password_change';
+  final path = '/user/password_change';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
@@ -392,11 +387,9 @@ class CreatePrivateMessage
   factory CreatePrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$CreatePrivateMessageFromJson(json);
 
-  @override
-  String path() => '/private_message';
+  final path = '/private_message';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PrivateMessageView responseFactory(Map<String, dynamic> json) =>
@@ -418,11 +411,9 @@ class EditPrivateMessage
   factory EditPrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$EditPrivateMessageFromJson(json);
 
-  @override
-  String path() => '/private_message';
+  final path = '/private_message';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   PrivateMessageView responseFactory(Map<String, dynamic> json) =>
@@ -444,11 +435,9 @@ class DeletePrivateMessage
   factory DeletePrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$DeletePrivateMessageFromJson(json);
 
-  @override
-  String path() => '/private_message/delete';
+  final path = '/private_message/delete';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PrivateMessageView responseFactory(Map<String, dynamic> json) =>
@@ -470,11 +459,9 @@ class MarkPrivateMessageAsRead
   factory MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkPrivateMessageAsReadFromJson(json);
 
-  @override
-  String path() => '/private_message/mark_as_read';
+  final path = '/private_message/mark_as_read';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   PrivateMessageView responseFactory(Map<String, dynamic> json) =>
@@ -487,7 +474,7 @@ class GetPrivateMessages
     implements LemmyApiQuery<List<PrivateMessageView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetPrivateMessages({
-    required bool unreadOnly,
+    bool? unreadOnly,
     int? page,
     int? limit,
     required String auth,
@@ -497,11 +484,9 @@ class GetPrivateMessages
   factory GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
       _$GetPrivateMessagesFromJson(json);
 
-  @override
-  String path() => '/private_message/list';
+  final path = '/private_message/list';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<PrivateMessageView> responseFactory(Map<String, dynamic> json) =>
@@ -525,11 +510,9 @@ class GetReportCount
   factory GetReportCount.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   GetReportCountResponse responseFactory(Map<String, dynamic> json) =>

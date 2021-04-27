@@ -1502,13 +1502,13 @@ class _$GetCommentsTearOff {
   const _$GetCommentsTearOff();
 
   _GetComments call(
-      {@JsonKey(name: 'type_') required CommentListingType type,
-      required SortType sort,
+      {@JsonKey(name: 'type_') CommentListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) {
     return _GetComments(
       type: type,
@@ -1533,13 +1533,13 @@ const $GetComments = _$GetCommentsTearOff();
 /// @nodoc
 mixin _$GetComments {
   @JsonKey(name: 'type_')
-  CommentListingType get type => throw _privateConstructorUsedError;
-  SortType get sort => throw _privateConstructorUsedError;
+  CommentListingType? get type => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
   String? get communityName => throw _privateConstructorUsedError;
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1554,13 +1554,13 @@ abstract class $GetCommentsCopyWith<$Res> {
           GetComments value, $Res Function(GetComments) then) =
       _$GetCommentsCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'type_') CommentListingType type,
-      SortType sort,
+      {@JsonKey(name: 'type_') CommentListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -1587,11 +1587,11 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CommentListingType,
+              as CommentListingType?,
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1611,7 +1611,7 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1628,13 +1628,13 @@ abstract class _$GetCommentsCopyWith<$Res>
       __$GetCommentsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'type_') CommentListingType type,
-      SortType sort,
+      {@JsonKey(name: 'type_') CommentListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -1663,11 +1663,11 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as CommentListingType,
+              as CommentListingType?,
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1687,7 +1687,7 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1701,13 +1701,13 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetComments extends _GetComments {
   const _$_GetComments(
-      {@JsonKey(name: 'type_') required this.type,
-      required this.sort,
+      {@JsonKey(name: 'type_') this.type,
+      this.sort,
       this.page,
       this.limit,
       this.communityId,
       this.communityName,
-      required this.savedOnly,
+      this.savedOnly,
       this.auth})
       : super._();
 
@@ -1716,9 +1716,9 @@ class _$_GetComments extends _GetComments {
 
   @override
   @JsonKey(name: 'type_')
-  final CommentListingType type;
+  final CommentListingType? type;
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
@@ -1728,7 +1728,7 @@ class _$_GetComments extends _GetComments {
   @override
   final String? communityName;
   @override
-  final bool savedOnly;
+  final bool? savedOnly;
   @override
   final String? auth;
 
@@ -1787,13 +1787,13 @@ class _$_GetComments extends _GetComments {
 
 abstract class _GetComments extends GetComments {
   const factory _GetComments(
-      {@JsonKey(name: 'type_') required CommentListingType type,
-      required SortType sort,
+      {@JsonKey(name: 'type_') CommentListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) = _$_GetComments;
   const _GetComments._() : super._();
 
@@ -1802,9 +1802,9 @@ abstract class _GetComments extends GetComments {
 
   @override
   @JsonKey(name: 'type_')
-  CommentListingType get type => throw _privateConstructorUsedError;
+  CommentListingType? get type => throw _privateConstructorUsedError;
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
@@ -1814,7 +1814,7 @@ abstract class _GetComments extends GetComments {
   @override
   String? get communityName => throw _privateConstructorUsedError;
   @override
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override

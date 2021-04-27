@@ -22,21 +22,25 @@ class _$SearchTearOff {
 
   _Search call(
       {required String q,
-      @JsonKey(name: 'type_') required SearchType type,
+      @JsonKey(name: 'type_') SearchType? type,
+      PostListingType? listingType,
       int? communityId,
       String? communityName,
-      required SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth}) {
     return _Search(
       q: q,
       type: type,
+      listingType: listingType,
       communityId: communityId,
       communityName: communityName,
       sort: sort,
       page: page,
       limit: limit,
+      creatorId: creatorId,
       auth: auth,
     );
   }
@@ -53,12 +57,14 @@ const $Search = _$SearchTearOff();
 mixin _$Search {
   String get q => throw _privateConstructorUsedError;
   @JsonKey(name: 'type_')
-  SearchType get type => throw _privateConstructorUsedError;
+  SearchType? get type => throw _privateConstructorUsedError;
+  PostListingType? get listingType => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
   String? get communityName => throw _privateConstructorUsedError;
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
+  int? get creatorId => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -72,12 +78,14 @@ abstract class $SearchCopyWith<$Res> {
       _$SearchCopyWithImpl<$Res>;
   $Res call(
       {String q,
-      @JsonKey(name: 'type_') SearchType type,
+      @JsonKey(name: 'type_') SearchType? type,
+      PostListingType? listingType,
       int? communityId,
       String? communityName,
-      SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth});
 }
 
@@ -93,11 +101,13 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
   $Res call({
     Object? q = freezed,
     Object? type = freezed,
+    Object? listingType = freezed,
     Object? communityId = freezed,
     Object? communityName = freezed,
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -108,7 +118,11 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as SearchType,
+              as SearchType?,
+      listingType: listingType == freezed
+          ? _value.listingType
+          : listingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType?,
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -120,7 +134,7 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -128,6 +142,10 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
       limit: limit == freezed
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
       auth: auth == freezed
           ? _value.auth
@@ -144,12 +162,14 @@ abstract class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
   @override
   $Res call(
       {String q,
-      @JsonKey(name: 'type_') SearchType type,
+      @JsonKey(name: 'type_') SearchType? type,
+      PostListingType? listingType,
       int? communityId,
       String? communityName,
-      SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth});
 }
 
@@ -166,11 +186,13 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
   $Res call({
     Object? q = freezed,
     Object? type = freezed,
+    Object? listingType = freezed,
     Object? communityId = freezed,
     Object? communityName = freezed,
     Object? sort = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_Search(
@@ -181,7 +203,11 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as SearchType,
+              as SearchType?,
+      listingType: listingType == freezed
+          ? _value.listingType
+          : listingType // ignore: cast_nullable_to_non_nullable
+              as PostListingType?,
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -193,7 +219,7 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -201,6 +227,10 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
       limit: limit == freezed
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      creatorId: creatorId == freezed
+          ? _value.creatorId
+          : creatorId // ignore: cast_nullable_to_non_nullable
               as int?,
       auth: auth == freezed
           ? _value.auth
@@ -216,12 +246,14 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
 class _$_Search extends _Search {
   const _$_Search(
       {required this.q,
-      @JsonKey(name: 'type_') required this.type,
+      @JsonKey(name: 'type_') this.type,
+      this.listingType,
       this.communityId,
       this.communityName,
-      required this.sort,
+      this.sort,
       this.page,
       this.limit,
+      this.creatorId,
       this.auth})
       : super._();
 
@@ -232,23 +264,27 @@ class _$_Search extends _Search {
   final String q;
   @override
   @JsonKey(name: 'type_')
-  final SearchType type;
+  final SearchType? type;
+  @override
+  final PostListingType? listingType;
   @override
   final int? communityId;
   @override
   final String? communityName;
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
   final int? limit;
   @override
+  final int? creatorId;
+  @override
   final String? auth;
 
   @override
   String toString() {
-    return 'Search(q: $q, type: $type, communityId: $communityId, communityName: $communityName, sort: $sort, page: $page, limit: $limit, auth: $auth)';
+    return 'Search(q: $q, type: $type, listingType: $listingType, communityId: $communityId, communityName: $communityName, sort: $sort, page: $page, limit: $limit, creatorId: $creatorId, auth: $auth)';
   }
 
   @override
@@ -259,6 +295,9 @@ class _$_Search extends _Search {
                 const DeepCollectionEquality().equals(other.q, q)) &&
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
+            (identical(other.listingType, listingType) ||
+                const DeepCollectionEquality()
+                    .equals(other.listingType, listingType)) &&
             (identical(other.communityId, communityId) ||
                 const DeepCollectionEquality()
                     .equals(other.communityId, communityId)) &&
@@ -271,6 +310,9 @@ class _$_Search extends _Search {
                 const DeepCollectionEquality().equals(other.page, page)) &&
             (identical(other.limit, limit) ||
                 const DeepCollectionEquality().equals(other.limit, limit)) &&
+            (identical(other.creatorId, creatorId) ||
+                const DeepCollectionEquality()
+                    .equals(other.creatorId, creatorId)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -280,11 +322,13 @@ class _$_Search extends _Search {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(q) ^
       const DeepCollectionEquality().hash(type) ^
+      const DeepCollectionEquality().hash(listingType) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(communityName) ^
       const DeepCollectionEquality().hash(sort) ^
       const DeepCollectionEquality().hash(page) ^
       const DeepCollectionEquality().hash(limit) ^
+      const DeepCollectionEquality().hash(creatorId) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -301,12 +345,14 @@ class _$_Search extends _Search {
 abstract class _Search extends Search {
   const factory _Search(
       {required String q,
-      @JsonKey(name: 'type_') required SearchType type,
+      @JsonKey(name: 'type_') SearchType? type,
+      PostListingType? listingType,
       int? communityId,
       String? communityName,
-      required SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
+      int? creatorId,
       String? auth}) = _$_Search;
   const _Search._() : super._();
 
@@ -316,17 +362,21 @@ abstract class _Search extends Search {
   String get q => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'type_')
-  SearchType get type => throw _privateConstructorUsedError;
+  SearchType? get type => throw _privateConstructorUsedError;
+  @override
+  PostListingType? get listingType => throw _privateConstructorUsedError;
   @override
   int? get communityId => throw _privateConstructorUsedError;
   @override
   String? get communityName => throw _privateConstructorUsedError;
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
   int? get limit => throw _privateConstructorUsedError;
+  @override
+  int? get creatorId => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override
@@ -556,21 +606,25 @@ class _$CreateSiteTearOff {
 
   _CreateSite call(
       {required String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      required bool enableDownvotes,
-      required bool openRegistration,
-      required bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) {
     return _CreateSite(
       name: name,
+      sidebar: sidebar,
       description: description,
       icon: icon,
       banner: banner,
       enableDownvotes: enableDownvotes,
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
+      communityCreationAdminOnly: communityCreationAdminOnly,
       auth: auth,
     );
   }
@@ -586,12 +640,14 @@ const $CreateSite = _$CreateSiteTearOff();
 /// @nodoc
 mixin _$CreateSite {
   String get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  bool get enableDownvotes => throw _privateConstructorUsedError;
-  bool get openRegistration => throw _privateConstructorUsedError;
-  bool get enableNsfw => throw _privateConstructorUsedError;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get openRegistration => throw _privateConstructorUsedError;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -607,12 +663,14 @@ abstract class $CreateSiteCopyWith<$Res> {
       _$CreateSiteCopyWithImpl<$Res>;
   $Res call(
       {String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      bool enableDownvotes,
-      bool openRegistration,
-      bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -627,12 +685,14 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -640,6 +700,10 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -655,15 +719,19 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       enableNsfw: enableNsfw == freezed
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -680,12 +748,14 @@ abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
   @override
   $Res call(
       {String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      bool enableDownvotes,
-      bool openRegistration,
-      bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -702,12 +772,14 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_CreateSite(
@@ -715,6 +787,10 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -730,15 +806,19 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       enableNsfw: enableNsfw == freezed
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -753,12 +833,14 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
 class _$_CreateSite extends _CreateSite {
   const _$_CreateSite(
       {required this.name,
+      this.sidebar,
       this.description,
       this.icon,
       this.banner,
-      required this.enableDownvotes,
-      required this.openRegistration,
-      required this.enableNsfw,
+      this.enableDownvotes,
+      this.openRegistration,
+      this.enableNsfw,
+      this.communityCreationAdminOnly,
       required this.auth})
       : super._();
 
@@ -768,23 +850,27 @@ class _$_CreateSite extends _CreateSite {
   @override
   final String name;
   @override
+  final String? sidebar;
+  @override
   final String? description;
   @override
   final String? icon;
   @override
   final String? banner;
   @override
-  final bool enableDownvotes;
+  final bool? enableDownvotes;
   @override
-  final bool openRegistration;
+  final bool? openRegistration;
   @override
-  final bool enableNsfw;
+  final bool? enableNsfw;
+  @override
+  final bool? communityCreationAdminOnly;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'CreateSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, auth: $auth)';
+    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
   }
 
   @override
@@ -793,6 +879,9 @@ class _$_CreateSite extends _CreateSite {
         (other is _CreateSite &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.sidebar, sidebar) ||
+                const DeepCollectionEquality()
+                    .equals(other.sidebar, sidebar)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
@@ -809,6 +898,11 @@ class _$_CreateSite extends _CreateSite {
             (identical(other.enableNsfw, enableNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.enableNsfw, enableNsfw)) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                const DeepCollectionEquality().equals(
+                    other.communityCreationAdminOnly,
+                    communityCreationAdminOnly)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -817,12 +911,14 @@ class _$_CreateSite extends _CreateSite {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(sidebar) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner) ^
       const DeepCollectionEquality().hash(enableDownvotes) ^
       const DeepCollectionEquality().hash(openRegistration) ^
       const DeepCollectionEquality().hash(enableNsfw) ^
+      const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -839,12 +935,14 @@ class _$_CreateSite extends _CreateSite {
 abstract class _CreateSite extends CreateSite {
   const factory _CreateSite(
       {required String name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      required bool enableDownvotes,
-      required bool openRegistration,
-      required bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) = _$_CreateSite;
   const _CreateSite._() : super._();
 
@@ -854,17 +952,21 @@ abstract class _CreateSite extends CreateSite {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
+  String? get sidebar => throw _privateConstructorUsedError;
+  @override
   String? get description => throw _privateConstructorUsedError;
   @override
   String? get icon => throw _privateConstructorUsedError;
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
   @override
-  bool get openRegistration => throw _privateConstructorUsedError;
+  bool? get openRegistration => throw _privateConstructorUsedError;
   @override
-  bool get enableNsfw => throw _privateConstructorUsedError;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
+  @override
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -882,22 +984,26 @@ class _$EditSiteTearOff {
   const _$EditSiteTearOff();
 
   _EditSite call(
-      {required String name,
+      {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      required bool enableDownvotes,
-      required bool openRegistration,
-      required bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) {
     return _EditSite(
       name: name,
+      sidebar: sidebar,
       description: description,
       icon: icon,
       banner: banner,
       enableDownvotes: enableDownvotes,
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
+      communityCreationAdminOnly: communityCreationAdminOnly,
       auth: auth,
     );
   }
@@ -912,13 +1018,15 @@ const $EditSite = _$EditSiteTearOff();
 
 /// @nodoc
 mixin _$EditSite {
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  bool get enableDownvotes => throw _privateConstructorUsedError;
-  bool get openRegistration => throw _privateConstructorUsedError;
-  bool get enableNsfw => throw _privateConstructorUsedError;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get openRegistration => throw _privateConstructorUsedError;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -932,13 +1040,15 @@ abstract class $EditSiteCopyWith<$Res> {
   factory $EditSiteCopyWith(EditSite value, $Res Function(EditSite) then) =
       _$EditSiteCopyWithImpl<$Res>;
   $Res call(
-      {String name,
+      {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      bool enableDownvotes,
-      bool openRegistration,
-      bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -953,19 +1063,25 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -981,15 +1097,19 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       enableNsfw: enableNsfw == freezed
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1004,13 +1124,15 @@ abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
       __$EditSiteCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name,
+      {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      bool enableDownvotes,
-      bool openRegistration,
-      bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       String auth});
 }
 
@@ -1026,19 +1148,25 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_EditSite(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -1054,15 +1182,19 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
       enableDownvotes: enableDownvotes == freezed
           ? _value.enableDownvotes
           : enableDownvotes // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       openRegistration: openRegistration == freezed
           ? _value.openRegistration
           : openRegistration // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       enableNsfw: enableNsfw == freezed
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1076,13 +1208,15 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
 /// @nodoc
 class _$_EditSite extends _EditSite {
   const _$_EditSite(
-      {required this.name,
+      {this.name,
+      this.sidebar,
       this.description,
       this.icon,
       this.banner,
-      required this.enableDownvotes,
-      required this.openRegistration,
-      required this.enableNsfw,
+      this.enableDownvotes,
+      this.openRegistration,
+      this.enableNsfw,
+      this.communityCreationAdminOnly,
       required this.auth})
       : super._();
 
@@ -1090,7 +1224,9 @@ class _$_EditSite extends _EditSite {
       _$_$_EditSiteFromJson(json);
 
   @override
-  final String name;
+  final String? name;
+  @override
+  final String? sidebar;
   @override
   final String? description;
   @override
@@ -1098,17 +1234,19 @@ class _$_EditSite extends _EditSite {
   @override
   final String? banner;
   @override
-  final bool enableDownvotes;
+  final bool? enableDownvotes;
   @override
-  final bool openRegistration;
+  final bool? openRegistration;
   @override
-  final bool enableNsfw;
+  final bool? enableNsfw;
+  @override
+  final bool? communityCreationAdminOnly;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'EditSite(name: $name, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, auth: $auth)';
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
   }
 
   @override
@@ -1117,6 +1255,9 @@ class _$_EditSite extends _EditSite {
         (other is _EditSite &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.sidebar, sidebar) ||
+                const DeepCollectionEquality()
+                    .equals(other.sidebar, sidebar)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
@@ -1133,6 +1274,11 @@ class _$_EditSite extends _EditSite {
             (identical(other.enableNsfw, enableNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.enableNsfw, enableNsfw)) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                const DeepCollectionEquality().equals(
+                    other.communityCreationAdminOnly,
+                    communityCreationAdminOnly)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -1141,12 +1287,14 @@ class _$_EditSite extends _EditSite {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(sidebar) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner) ^
       const DeepCollectionEquality().hash(enableDownvotes) ^
       const DeepCollectionEquality().hash(openRegistration) ^
       const DeepCollectionEquality().hash(enableNsfw) ^
+      const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -1162,20 +1310,24 @@ class _$_EditSite extends _EditSite {
 
 abstract class _EditSite extends EditSite {
   const factory _EditSite(
-      {required String name,
+      {String? name,
+      String? sidebar,
       String? description,
       String? icon,
       String? banner,
-      required bool enableDownvotes,
-      required bool openRegistration,
-      required bool enableNsfw,
+      bool? enableDownvotes,
+      bool? openRegistration,
+      bool? enableNsfw,
+      bool? communityCreationAdminOnly,
       required String auth}) = _$_EditSite;
   const _EditSite._() : super._();
 
   factory _EditSite.fromJson(Map<String, dynamic> json) = _$_EditSite.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  @override
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override
@@ -1183,11 +1335,13 @@ abstract class _EditSite extends EditSite {
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
   @override
-  bool get openRegistration => throw _privateConstructorUsedError;
+  bool? get openRegistration => throw _privateConstructorUsedError;
   @override
-  bool get enableNsfw => throw _privateConstructorUsedError;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
+  @override
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override

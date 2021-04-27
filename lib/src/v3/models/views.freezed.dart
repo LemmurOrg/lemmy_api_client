@@ -6010,12 +6010,10 @@ class _$CommunityViewTearOff {
 
   _CommunityView call(
       {required CommunitySafe community,
-      required PersonSafe creator,
       required bool subscribed,
       required CommunityAggregates counts}) {
     return _CommunityView(
       community: community,
-      creator: creator,
       subscribed: subscribed,
       counts: counts,
     );
@@ -6032,7 +6030,6 @@ const $CommunityView = _$CommunityViewTearOff();
 /// @nodoc
 mixin _$CommunityView {
   CommunitySafe get community => throw _privateConstructorUsedError;
-  PersonSafe get creator => throw _privateConstructorUsedError;
   bool get subscribed => throw _privateConstructorUsedError;
   CommunityAggregates get counts => throw _privateConstructorUsedError;
 
@@ -6048,13 +6045,9 @@ abstract class $CommunityViewCopyWith<$Res> {
           CommunityView value, $Res Function(CommunityView) then) =
       _$CommunityViewCopyWithImpl<$Res>;
   $Res call(
-      {CommunitySafe community,
-      PersonSafe creator,
-      bool subscribed,
-      CommunityAggregates counts});
+      {CommunitySafe community, bool subscribed, CommunityAggregates counts});
 
   $CommunitySafeCopyWith<$Res> get community;
-  $PersonSafeCopyWith<$Res> get creator;
   $CommunityAggregatesCopyWith<$Res> get counts;
 }
 
@@ -6070,7 +6063,6 @@ class _$CommunityViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? community = freezed,
-    Object? creator = freezed,
     Object? subscribed = freezed,
     Object? counts = freezed,
   }) {
@@ -6079,10 +6071,6 @@ class _$CommunityViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
-      creator: creator == freezed
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
       subscribed: subscribed == freezed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -6102,13 +6090,6 @@ class _$CommunityViewCopyWithImpl<$Res>
   }
 
   @override
-  $PersonSafeCopyWith<$Res> get creator {
-    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
-      return _then(_value.copyWith(creator: value));
-    });
-  }
-
-  @override
   $CommunityAggregatesCopyWith<$Res> get counts {
     return $CommunityAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
@@ -6124,15 +6105,10 @@ abstract class _$CommunityViewCopyWith<$Res>
       __$CommunityViewCopyWithImpl<$Res>;
   @override
   $Res call(
-      {CommunitySafe community,
-      PersonSafe creator,
-      bool subscribed,
-      CommunityAggregates counts});
+      {CommunitySafe community, bool subscribed, CommunityAggregates counts});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
-  @override
-  $PersonSafeCopyWith<$Res> get creator;
   @override
   $CommunityAggregatesCopyWith<$Res> get counts;
 }
@@ -6151,7 +6127,6 @@ class __$CommunityViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? community = freezed,
-    Object? creator = freezed,
     Object? subscribed = freezed,
     Object? counts = freezed,
   }) {
@@ -6160,10 +6135,6 @@ class __$CommunityViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
-      creator: creator == freezed
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe,
       subscribed: subscribed == freezed
           ? _value.subscribed
           : subscribed // ignore: cast_nullable_to_non_nullable
@@ -6181,10 +6152,7 @@ class __$CommunityViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunityView extends _CommunityView {
   _$_CommunityView(
-      {required this.community,
-      required this.creator,
-      required this.subscribed,
-      required this.counts})
+      {required this.community, required this.subscribed, required this.counts})
       : super._();
 
   factory _$_CommunityView.fromJson(Map<String, dynamic> json) =>
@@ -6193,15 +6161,13 @@ class _$_CommunityView extends _CommunityView {
   @override
   final CommunitySafe community;
   @override
-  final PersonSafe creator;
-  @override
   final bool subscribed;
   @override
   final CommunityAggregates counts;
 
   @override
   String toString() {
-    return 'CommunityView(community: $community, creator: $creator, subscribed: $subscribed, counts: $counts)';
+    return 'CommunityView(community: $community, subscribed: $subscribed, counts: $counts)';
   }
 
   @override
@@ -6211,9 +6177,6 @@ class _$_CommunityView extends _CommunityView {
             (identical(other.community, community) ||
                 const DeepCollectionEquality()
                     .equals(other.community, community)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
             (identical(other.subscribed, subscribed) ||
                 const DeepCollectionEquality()
                     .equals(other.subscribed, subscribed)) &&
@@ -6225,7 +6188,6 @@ class _$_CommunityView extends _CommunityView {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(creator) ^
       const DeepCollectionEquality().hash(subscribed) ^
       const DeepCollectionEquality().hash(counts);
 
@@ -6243,7 +6205,6 @@ class _$_CommunityView extends _CommunityView {
 abstract class _CommunityView extends CommunityView {
   factory _CommunityView(
       {required CommunitySafe community,
-      required PersonSafe creator,
       required bool subscribed,
       required CommunityAggregates counts}) = _$_CommunityView;
   _CommunityView._() : super._();
@@ -6253,8 +6214,6 @@ abstract class _CommunityView extends CommunityView {
 
   @override
   CommunitySafe get community => throw _privateConstructorUsedError;
-  @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
   bool get subscribed => throw _privateConstructorUsedError;
   @override

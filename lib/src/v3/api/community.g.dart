@@ -63,8 +63,11 @@ Map<String, dynamic> _$_$_CreateCommunityToJson(_$_CreateCommunity instance) {
 
 _$_ListCommunities _$_$_ListCommunitiesFromJson(Map<String, dynamic> json) {
   return _$_ListCommunities(
-    type: PostListingType.fromJson(json['type_'] as String),
-    sort: SortType.fromJson(json['sort'] as String),
+    type: json['type_'] == null
+        ? null
+        : PostListingType.fromJson(json['type_'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
     auth: json['auth'] as String?,
@@ -72,10 +75,7 @@ _$_ListCommunities _$_$_ListCommunitiesFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_ListCommunitiesToJson(_$_ListCommunities instance) {
-  final val = <String, dynamic>{
-    'type_': instance.type.toJson(),
-    'sort': instance.sort.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -83,6 +83,8 @@ Map<String, dynamic> _$_$_ListCommunitiesToJson(_$_ListCommunities instance) {
     }
   }
 
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('auth', instance.auth);
@@ -94,7 +96,7 @@ _$_BanFromCommunity _$_$_BanFromCommunityFromJson(Map<String, dynamic> json) {
     communityId: json['community_id'] as int,
     personId: json['person_id'] as int,
     ban: json['ban'] as bool,
-    removeData: json['remove_data'] as bool,
+    removeData: json['remove_data'] as bool?,
     reason: json['reason'] as String?,
     expires: json['expires'] as int?,
     auth: json['auth'] as String,
@@ -106,7 +108,6 @@ Map<String, dynamic> _$_$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
     'community_id': instance.communityId,
     'person_id': instance.personId,
     'ban': instance.ban,
-    'remove_data': instance.removeData,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -115,6 +116,7 @@ Map<String, dynamic> _$_$_BanFromCommunityToJson(_$_BanFromCommunity instance) {
     }
   }
 
+  writeNotNull('remove_data', instance.removeData);
   writeNotNull('reason', instance.reason);
   writeNotNull('expires', instance.expires);
   val['auth'] = instance.auth;
@@ -142,7 +144,7 @@ Map<String, dynamic> _$_$_AddModToCommunityToJson(
 _$_EditCommunity _$_$_EditCommunityFromJson(Map<String, dynamic> json) {
   return _$_EditCommunity(
     communityId: json['community_id'] as int,
-    title: json['title'] as String,
+    title: json['title'] as String?,
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
@@ -154,7 +156,6 @@ _$_EditCommunity _$_$_EditCommunityFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_EditCommunityToJson(_$_EditCommunity instance) {
   final val = <String, dynamic>{
     'community_id': instance.communityId,
-    'title': instance.title,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -163,6 +164,7 @@ Map<String, dynamic> _$_$_EditCommunityToJson(_$_EditCommunity instance) {
     }
   }
 
+  writeNotNull('title', instance.title);
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);

@@ -583,24 +583,25 @@ class _$SaveUserSettingsTearOff {
   const _$SaveUserSettingsTearOff();
 
   _SaveUserSettings call(
-      {required bool showNsfw,
-      required String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required PostListingType defaultListingType,
-      required String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
-      required bool showAvatars,
-      required bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       required String auth}) {
     return _SaveUserSettings(
       showNsfw: showNsfw,
@@ -610,15 +611,16 @@ class _$SaveUserSettingsTearOff {
       lang: lang,
       avatar: avatar,
       banner: banner,
-      preferredUsername: preferredUsername,
+      displayName: displayName,
       email: email,
       bio: bio,
       matrixUserId: matrixUserId,
-      newPassword: newPassword,
-      newPasswordVerify: newPasswordVerify,
-      oldPassword: oldPassword,
       showAvatars: showAvatars,
+      showScores: showScores,
       sendNotificationsToEmail: sendNotificationsToEmail,
+      showReadPosts: showReadPosts,
+      botAccount: botAccount,
+      showBotAccounts: showBotAccounts,
       auth: auth,
     );
   }
@@ -633,24 +635,25 @@ const $SaveUserSettings = _$SaveUserSettingsTearOff();
 
 /// @nodoc
 mixin _$SaveUserSettings {
-  bool get showNsfw => throw _privateConstructorUsedError;
-  String get theme => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError;
+  String? get theme => throw _privateConstructorUsedError;
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType => throw _privateConstructorUsedError;
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType => throw _privateConstructorUsedError;
-  String get lang => throw _privateConstructorUsedError;
+  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
+  String? get lang => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   String? get bio => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
-  String? get newPassword => throw _privateConstructorUsedError;
-  String? get newPasswordVerify => throw _privateConstructorUsedError;
-  String? get oldPassword => throw _privateConstructorUsedError;
-  bool get showAvatars => throw _privateConstructorUsedError;
-  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get showAvatars => throw _privateConstructorUsedError;
+  bool? get showScores => throw _privateConstructorUsedError;
+  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get showReadPosts => throw _privateConstructorUsedError;
+  bool? get botAccount => throw _privateConstructorUsedError;
+  bool? get showBotAccounts => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -665,24 +668,25 @@ abstract class $SaveUserSettingsCopyWith<$Res> {
           SaveUserSettings value, $Res Function(SaveUserSettings) then) =
       _$SaveUserSettingsCopyWithImpl<$Res>;
   $Res call(
-      {bool showNsfw,
-      String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
-      bool showAvatars,
-      bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       String auth});
 }
 
@@ -704,38 +708,39 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? avatar = freezed,
     Object? banner = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? email = freezed,
     Object? bio = freezed,
     Object? matrixUserId = freezed,
-    Object? newPassword = freezed,
-    Object? newPasswordVerify = freezed,
-    Object? oldPassword = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
+    Object? showReadPosts = freezed,
+    Object? botAccount = freezed,
+    Object? showBotAccounts = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       theme: theme == freezed
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       lang: lang == freezed
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       avatar: avatar == freezed
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
@@ -744,9 +749,9 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       email: email == freezed
           ? _value.email
@@ -760,26 +765,30 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      newPassword: newPassword == freezed
-          ? _value.newPassword
-          : newPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
-      newPasswordVerify: newPasswordVerify == freezed
-          ? _value.newPasswordVerify
-          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
-              as String?,
-      oldPassword: oldPassword == freezed
-          ? _value.oldPassword
-          : oldPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
       showAvatars: showAvatars == freezed
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool?,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      showReadPosts: showReadPosts == freezed
+          ? _value.showReadPosts
+          : showReadPosts // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      botAccount: botAccount == freezed
+          ? _value.botAccount
+          : botAccount // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showBotAccounts: showBotAccounts == freezed
+          ? _value.showBotAccounts
+          : showBotAccounts // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -796,24 +805,25 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
       __$SaveUserSettingsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool showNsfw,
-      String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType defaultListingType,
-      String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
-      bool showAvatars,
-      bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       String auth});
 }
 
@@ -837,38 +847,39 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
     Object? lang = freezed,
     Object? avatar = freezed,
     Object? banner = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? email = freezed,
     Object? bio = freezed,
     Object? matrixUserId = freezed,
-    Object? newPassword = freezed,
-    Object? newPasswordVerify = freezed,
-    Object? oldPassword = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
+    Object? showReadPosts = freezed,
+    Object? botAccount = freezed,
+    Object? showBotAccounts = freezed,
     Object? auth = freezed,
   }) {
     return _then(_SaveUserSettings(
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       theme: theme == freezed
           ? _value.theme
           : theme // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       defaultSortType: defaultSortType == freezed
           ? _value.defaultSortType
           : defaultSortType // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       defaultListingType: defaultListingType == freezed
           ? _value.defaultListingType
           : defaultListingType // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       lang: lang == freezed
           ? _value.lang
           : lang // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       avatar: avatar == freezed
           ? _value.avatar
           : avatar // ignore: cast_nullable_to_non_nullable
@@ -877,9 +888,9 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       email: email == freezed
           ? _value.email
@@ -893,26 +904,30 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
           ? _value.matrixUserId
           : matrixUserId // ignore: cast_nullable_to_non_nullable
               as String?,
-      newPassword: newPassword == freezed
-          ? _value.newPassword
-          : newPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
-      newPasswordVerify: newPasswordVerify == freezed
-          ? _value.newPasswordVerify
-          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
-              as String?,
-      oldPassword: oldPassword == freezed
-          ? _value.oldPassword
-          : oldPassword // ignore: cast_nullable_to_non_nullable
-              as String?,
       showAvatars: showAvatars == freezed
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool?,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
+      showReadPosts: showReadPosts == freezed
+          ? _value.showReadPosts
+          : showReadPosts // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      botAccount: botAccount == freezed
+          ? _value.botAccount
+          : botAccount // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      showBotAccounts: showBotAccounts == freezed
+          ? _value.showBotAccounts
+          : showBotAccounts // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -926,24 +941,25 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
 /// @nodoc
 class _$_SaveUserSettings extends _SaveUserSettings {
   const _$_SaveUserSettings(
-      {required this.showNsfw,
-      required this.theme,
+      {this.showNsfw,
+      this.theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required this.defaultSortType,
+          this.defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required this.defaultListingType,
-      required this.lang,
+          this.defaultListingType,
+      this.lang,
       this.avatar,
       this.banner,
-      this.preferredUsername,
+      this.displayName,
       this.email,
       this.bio,
       this.matrixUserId,
-      this.newPassword,
-      this.newPasswordVerify,
-      this.oldPassword,
-      required this.showAvatars,
-      required this.sendNotificationsToEmail,
+      this.showAvatars,
+      this.showScores,
+      this.sendNotificationsToEmail,
+      this.showReadPosts,
+      this.botAccount,
+      this.showBotAccounts,
       required this.auth})
       : super._();
 
@@ -951,23 +967,23 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       _$_$_SaveUserSettingsFromJson(json);
 
   @override
-  final bool showNsfw;
+  final bool? showNsfw;
   @override
-  final String theme;
+  final String? theme;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  final SortType defaultSortType;
+  final SortType? defaultSortType;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  final PostListingType defaultListingType;
+  final PostListingType? defaultListingType;
   @override
-  final String lang;
+  final String? lang;
   @override
   final String? avatar;
   @override
   final String? banner;
   @override
-  final String? preferredUsername;
+  final String? displayName;
   @override
   final String? email;
   @override
@@ -975,21 +991,23 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   @override
   final String? matrixUserId;
   @override
-  final String? newPassword;
+  final bool? showAvatars;
   @override
-  final String? newPasswordVerify;
+  final bool? showScores;
   @override
-  final String? oldPassword;
+  final bool? sendNotificationsToEmail;
   @override
-  final bool showAvatars;
+  final bool? showReadPosts;
   @override
-  final bool sendNotificationsToEmail;
+  final bool? botAccount;
+  @override
+  final bool? showBotAccounts;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, preferredUsername: $preferredUsername, email: $email, bio: $bio, matrixUserId: $matrixUserId, newPassword: $newPassword, newPasswordVerify: $newPasswordVerify, oldPassword: $oldPassword, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail, auth: $auth)';
+    return 'SaveUserSettings(showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, avatar: $avatar, banner: $banner, displayName: $displayName, email: $email, bio: $bio, matrixUserId: $matrixUserId, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, botAccount: $botAccount, showBotAccounts: $showBotAccounts, auth: $auth)';
   }
 
   @override
@@ -1013,9 +1031,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
                 const DeepCollectionEquality().equals(other.avatar, avatar)) &&
             (identical(other.banner, banner) ||
                 const DeepCollectionEquality().equals(other.banner, banner)) &&
-            (identical(other.preferredUsername, preferredUsername) ||
+            (identical(other.displayName, displayName) ||
                 const DeepCollectionEquality()
-                    .equals(other.preferredUsername, preferredUsername)) &&
+                    .equals(other.displayName, displayName)) &&
             (identical(other.email, email) ||
                 const DeepCollectionEquality().equals(other.email, email)) &&
             (identical(other.bio, bio) ||
@@ -1023,23 +1041,26 @@ class _$_SaveUserSettings extends _SaveUserSettings {
             (identical(other.matrixUserId, matrixUserId) ||
                 const DeepCollectionEquality()
                     .equals(other.matrixUserId, matrixUserId)) &&
-            (identical(other.newPassword, newPassword) ||
-                const DeepCollectionEquality()
-                    .equals(other.newPassword, newPassword)) &&
-            (identical(other.newPasswordVerify, newPasswordVerify) ||
-                const DeepCollectionEquality()
-                    .equals(other.newPasswordVerify, newPasswordVerify)) &&
-            (identical(other.oldPassword, oldPassword) ||
-                const DeepCollectionEquality()
-                    .equals(other.oldPassword, oldPassword)) &&
             (identical(other.showAvatars, showAvatars) ||
                 const DeepCollectionEquality()
                     .equals(other.showAvatars, showAvatars)) &&
+            (identical(other.showScores, showScores) ||
+                const DeepCollectionEquality()
+                    .equals(other.showScores, showScores)) &&
             (identical(
                     other.sendNotificationsToEmail, sendNotificationsToEmail) ||
                 const DeepCollectionEquality().equals(
                     other.sendNotificationsToEmail,
                     sendNotificationsToEmail)) &&
+            (identical(other.showReadPosts, showReadPosts) ||
+                const DeepCollectionEquality()
+                    .equals(other.showReadPosts, showReadPosts)) &&
+            (identical(other.botAccount, botAccount) ||
+                const DeepCollectionEquality()
+                    .equals(other.botAccount, botAccount)) &&
+            (identical(other.showBotAccounts, showBotAccounts) ||
+                const DeepCollectionEquality()
+                    .equals(other.showBotAccounts, showBotAccounts)) &&
             (identical(other.auth, auth) ||
                 const DeepCollectionEquality().equals(other.auth, auth)));
   }
@@ -1054,15 +1075,16 @@ class _$_SaveUserSettings extends _SaveUserSettings {
       const DeepCollectionEquality().hash(lang) ^
       const DeepCollectionEquality().hash(avatar) ^
       const DeepCollectionEquality().hash(banner) ^
-      const DeepCollectionEquality().hash(preferredUsername) ^
+      const DeepCollectionEquality().hash(displayName) ^
       const DeepCollectionEquality().hash(email) ^
       const DeepCollectionEquality().hash(bio) ^
       const DeepCollectionEquality().hash(matrixUserId) ^
-      const DeepCollectionEquality().hash(newPassword) ^
-      const DeepCollectionEquality().hash(newPasswordVerify) ^
-      const DeepCollectionEquality().hash(oldPassword) ^
       const DeepCollectionEquality().hash(showAvatars) ^
+      const DeepCollectionEquality().hash(showScores) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
+      const DeepCollectionEquality().hash(showReadPosts) ^
+      const DeepCollectionEquality().hash(botAccount) ^
+      const DeepCollectionEquality().hash(showBotAccounts) ^
       const DeepCollectionEquality().hash(auth);
 
   @JsonKey(ignore: true)
@@ -1078,24 +1100,25 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 
 abstract class _SaveUserSettings extends SaveUserSettings {
   const factory _SaveUserSettings(
-      {required bool showNsfw,
-      required String theme,
+      {bool? showNsfw,
+      String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required SortType defaultSortType,
+          SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required PostListingType defaultListingType,
-      required String lang,
+          PostListingType? defaultListingType,
+      String? lang,
       String? avatar,
       String? banner,
-      String? preferredUsername,
+      String? displayName,
       String? email,
       String? bio,
       String? matrixUserId,
-      String? newPassword,
-      String? newPasswordVerify,
-      String? oldPassword,
-      required bool showAvatars,
-      required bool sendNotificationsToEmail,
+      bool? showAvatars,
+      bool? showScores,
+      bool? sendNotificationsToEmail,
+      bool? showReadPosts,
+      bool? botAccount,
+      bool? showBotAccounts,
       required String auth}) = _$_SaveUserSettings;
   const _SaveUserSettings._() : super._();
 
@@ -1103,23 +1126,23 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       _$_SaveUserSettings.fromJson;
 
   @override
-  bool get showNsfw => throw _privateConstructorUsedError;
+  bool? get showNsfw => throw _privateConstructorUsedError;
   @override
-  String get theme => throw _privateConstructorUsedError;
+  String? get theme => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType => throw _privateConstructorUsedError;
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType => throw _privateConstructorUsedError;
+  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
   @override
-  String get lang => throw _privateConstructorUsedError;
+  String? get lang => throw _privateConstructorUsedError;
   @override
   String? get avatar => throw _privateConstructorUsedError;
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   @override
   String? get email => throw _privateConstructorUsedError;
   @override
@@ -1127,20 +1150,255 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   @override
   String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  String? get newPassword => throw _privateConstructorUsedError;
+  bool? get showAvatars => throw _privateConstructorUsedError;
   @override
-  String? get newPasswordVerify => throw _privateConstructorUsedError;
+  bool? get showScores => throw _privateConstructorUsedError;
   @override
-  String? get oldPassword => throw _privateConstructorUsedError;
+  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override
-  bool get showAvatars => throw _privateConstructorUsedError;
+  bool? get showReadPosts => throw _privateConstructorUsedError;
   @override
-  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get botAccount => throw _privateConstructorUsedError;
+  @override
+  bool? get showBotAccounts => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ChangePassword _$ChangePasswordFromJson(Map<String, dynamic> json) {
+  return _ChangePassword.fromJson(json);
+}
+
+/// @nodoc
+class _$ChangePasswordTearOff {
+  const _$ChangePasswordTearOff();
+
+  _ChangePassword call(
+      {required String newPassword,
+      required String newPasswordVerify,
+      required String oldPassword,
+      required String auth}) {
+    return _ChangePassword(
+      newPassword: newPassword,
+      newPasswordVerify: newPasswordVerify,
+      oldPassword: oldPassword,
+      auth: auth,
+    );
+  }
+
+  ChangePassword fromJson(Map<String, Object> json) {
+    return ChangePassword.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ChangePassword = _$ChangePasswordTearOff();
+
+/// @nodoc
+mixin _$ChangePassword {
+  String get newPassword => throw _privateConstructorUsedError;
+  String get newPasswordVerify => throw _privateConstructorUsedError;
+  String get oldPassword => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChangePasswordCopyWith<ChangePassword> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChangePasswordCopyWith<$Res> {
+  factory $ChangePasswordCopyWith(
+          ChangePassword value, $Res Function(ChangePassword) then) =
+      _$ChangePasswordCopyWithImpl<$Res>;
+  $Res call(
+      {String newPassword,
+      String newPasswordVerify,
+      String oldPassword,
+      String auth});
+}
+
+/// @nodoc
+class _$ChangePasswordCopyWithImpl<$Res>
+    implements $ChangePasswordCopyWith<$Res> {
+  _$ChangePasswordCopyWithImpl(this._value, this._then);
+
+  final ChangePassword _value;
+  // ignore: unused_field
+  final $Res Function(ChangePassword) _then;
+
+  @override
+  $Res call({
+    Object? newPassword = freezed,
+    Object? newPasswordVerify = freezed,
+    Object? oldPassword = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      newPasswordVerify: newPasswordVerify == freezed
+          ? _value.newPasswordVerify
+          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ChangePasswordCopyWith<$Res>
+    implements $ChangePasswordCopyWith<$Res> {
+  factory _$ChangePasswordCopyWith(
+          _ChangePassword value, $Res Function(_ChangePassword) then) =
+      __$ChangePasswordCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String newPassword,
+      String newPasswordVerify,
+      String oldPassword,
+      String auth});
+}
+
+/// @nodoc
+class __$ChangePasswordCopyWithImpl<$Res>
+    extends _$ChangePasswordCopyWithImpl<$Res>
+    implements _$ChangePasswordCopyWith<$Res> {
+  __$ChangePasswordCopyWithImpl(
+      _ChangePassword _value, $Res Function(_ChangePassword) _then)
+      : super(_value, (v) => _then(v as _ChangePassword));
+
+  @override
+  _ChangePassword get _value => super._value as _ChangePassword;
+
+  @override
+  $Res call({
+    Object? newPassword = freezed,
+    Object? newPasswordVerify = freezed,
+    Object? oldPassword = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_ChangePassword(
+      newPassword: newPassword == freezed
+          ? _value.newPassword
+          : newPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      newPasswordVerify: newPasswordVerify == freezed
+          ? _value.newPasswordVerify
+          : newPasswordVerify // ignore: cast_nullable_to_non_nullable
+              as String,
+      oldPassword: oldPassword == freezed
+          ? _value.oldPassword
+          : oldPassword // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_ChangePassword extends _ChangePassword {
+  const _$_ChangePassword(
+      {required this.newPassword,
+      required this.newPasswordVerify,
+      required this.oldPassword,
+      required this.auth})
+      : super._();
+
+  factory _$_ChangePassword.fromJson(Map<String, dynamic> json) =>
+      _$_$_ChangePasswordFromJson(json);
+
+  @override
+  final String newPassword;
+  @override
+  final String newPasswordVerify;
+  @override
+  final String oldPassword;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'ChangePassword(newPassword: $newPassword, newPasswordVerify: $newPasswordVerify, oldPassword: $oldPassword, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ChangePassword &&
+            (identical(other.newPassword, newPassword) ||
+                const DeepCollectionEquality()
+                    .equals(other.newPassword, newPassword)) &&
+            (identical(other.newPasswordVerify, newPasswordVerify) ||
+                const DeepCollectionEquality()
+                    .equals(other.newPasswordVerify, newPasswordVerify)) &&
+            (identical(other.oldPassword, oldPassword) ||
+                const DeepCollectionEquality()
+                    .equals(other.oldPassword, oldPassword)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(newPassword) ^
+      const DeepCollectionEquality().hash(newPasswordVerify) ^
+      const DeepCollectionEquality().hash(oldPassword) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
+      __$ChangePasswordCopyWithImpl<_ChangePassword>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ChangePasswordToJson(this);
+  }
+}
+
+abstract class _ChangePassword extends ChangePassword {
+  const factory _ChangePassword(
+      {required String newPassword,
+      required String newPasswordVerify,
+      required String oldPassword,
+      required String auth}) = _$_ChangePassword;
+  const _ChangePassword._() : super._();
+
+  factory _ChangePassword.fromJson(Map<String, dynamic> json) =
+      _$_ChangePassword.fromJson;
+
+  @override
+  String get newPassword => throw _privateConstructorUsedError;
+  @override
+  String get newPasswordVerify => throw _privateConstructorUsedError;
+  @override
+  String get oldPassword => throw _privateConstructorUsedError;
+  @override
+  String get auth => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1155,11 +1413,11 @@ class _$GetPersonDetailsTearOff {
   _GetPersonDetails call(
       {int? personId,
       String? username,
-      required SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) {
     return _GetPersonDetails(
       personId: personId,
@@ -1185,11 +1443,11 @@ const $GetPersonDetails = _$GetPersonDetailsTearOff();
 mixin _$GetPersonDetails {
   int? get personId => throw _privateConstructorUsedError;
   String? get username => throw _privateConstructorUsedError;
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1206,11 +1464,11 @@ abstract class $GetPersonDetailsCopyWith<$Res> {
   $Res call(
       {int? personId,
       String? username,
-      SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -1246,7 +1504,7 @@ class _$GetPersonDetailsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1262,7 +1520,7 @@ class _$GetPersonDetailsCopyWithImpl<$Res>
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1281,11 +1539,11 @@ abstract class _$GetPersonDetailsCopyWith<$Res>
   $Res call(
       {int? personId,
       String? username,
-      SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -1323,7 +1581,7 @@ class __$GetPersonDetailsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -1339,7 +1597,7 @@ class __$GetPersonDetailsCopyWithImpl<$Res>
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1355,11 +1613,11 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   const _$_GetPersonDetails(
       {this.personId,
       this.username,
-      required this.sort,
+      this.sort,
       this.page,
       this.limit,
       this.communityId,
-      required this.savedOnly,
+      this.savedOnly,
       this.auth})
       : super._();
 
@@ -1371,7 +1629,7 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   @override
   final String? username;
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
@@ -1379,7 +1637,7 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   @override
   final int? communityId;
   @override
-  final bool savedOnly;
+  final bool? savedOnly;
   @override
   final String? auth;
 
@@ -1441,11 +1699,11 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   const factory _GetPersonDetails(
       {int? personId,
       String? username,
-      required SortType sort,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) = _$_GetPersonDetails;
   const _GetPersonDetails._() : super._();
 
@@ -1457,7 +1715,7 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   @override
   String? get username => throw _privateConstructorUsedError;
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
@@ -1465,7 +1723,7 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   @override
   int? get communityId => throw _privateConstructorUsedError;
   @override
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override
@@ -1826,7 +2084,7 @@ class _$BanPersonTearOff {
   _BanPerson call(
       {required int personId,
       required bool ban,
-      required bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       required String auth}) {
@@ -1852,7 +2110,7 @@ const $BanPerson = _$BanPersonTearOff();
 mixin _$BanPerson {
   int get personId => throw _privateConstructorUsedError;
   bool get ban => throw _privateConstructorUsedError;
-  bool get removeData => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
   String? get reason => throw _privateConstructorUsedError;
   int? get expires => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
@@ -1870,7 +2128,7 @@ abstract class $BanPersonCopyWith<$Res> {
   $Res call(
       {int personId,
       bool ban,
-      bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       String auth});
@@ -1905,7 +2163,7 @@ class _$BanPersonCopyWithImpl<$Res> implements $BanPersonCopyWith<$Res> {
       removeData: removeData == freezed
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -1931,7 +2189,7 @@ abstract class _$BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
   $Res call(
       {int personId,
       bool ban,
-      bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       String auth});
@@ -1967,7 +2225,7 @@ class __$BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
       removeData: removeData == freezed
           ? _value.removeData
           : removeData // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -1991,7 +2249,7 @@ class _$_BanPerson extends _BanPerson {
   const _$_BanPerson(
       {required this.personId,
       required this.ban,
-      required this.removeData,
+      this.removeData,
       this.reason,
       this.expires,
       required this.auth})
@@ -2005,7 +2263,7 @@ class _$_BanPerson extends _BanPerson {
   @override
   final bool ban;
   @override
-  final bool removeData;
+  final bool? removeData;
   @override
   final String? reason;
   @override
@@ -2064,7 +2322,7 @@ abstract class _BanPerson extends BanPerson {
   const factory _BanPerson(
       {required int personId,
       required bool ban,
-      required bool removeData,
+      bool? removeData,
       String? reason,
       int? expires,
       required String auth}) = _$_BanPerson;
@@ -2078,7 +2336,7 @@ abstract class _BanPerson extends BanPerson {
   @override
   bool get ban => throw _privateConstructorUsedError;
   @override
-  bool get removeData => throw _privateConstructorUsedError;
+  bool? get removeData => throw _privateConstructorUsedError;
   @override
   String? get reason => throw _privateConstructorUsedError;
   @override
@@ -2100,10 +2358,10 @@ class _$GetRepliesTearOff {
   const _$GetRepliesTearOff();
 
   _GetReplies call(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) {
     return _GetReplies(
       sort: sort,
@@ -2124,10 +2382,10 @@ const $GetReplies = _$GetRepliesTearOff();
 
 /// @nodoc
 mixin _$GetReplies {
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2142,7 +2400,7 @@ abstract class $GetRepliesCopyWith<$Res> {
           GetReplies value, $Res Function(GetReplies) then) =
       _$GetRepliesCopyWithImpl<$Res>;
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2165,7 +2423,7 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2177,7 +2435,7 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2193,7 +2451,7 @@ abstract class _$GetRepliesCopyWith<$Res> implements $GetRepliesCopyWith<$Res> {
       __$GetRepliesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2218,7 +2476,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2230,7 +2488,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2244,24 +2502,20 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetReplies extends _GetReplies {
   const _$_GetReplies(
-      {required this.sort,
-      this.page,
-      this.limit,
-      required this.unreadOnly,
-      required this.auth})
+      {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
       : super._();
 
   factory _$_GetReplies.fromJson(Map<String, dynamic> json) =>
       _$_$_GetRepliesFromJson(json);
 
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
   final int? limit;
   @override
-  final bool unreadOnly;
+  final bool? unreadOnly;
   @override
   final String auth;
 
@@ -2309,10 +2563,10 @@ class _$_GetReplies extends _GetReplies {
 
 abstract class _GetReplies extends GetReplies {
   const factory _GetReplies(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) = _$_GetReplies;
   const _GetReplies._() : super._();
 
@@ -2320,13 +2574,13 @@ abstract class _GetReplies extends GetReplies {
       _$_GetReplies.fromJson;
 
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
   int? get limit => throw _privateConstructorUsedError;
   @override
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -2344,10 +2598,10 @@ class _$GetPersonMentionsTearOff {
   const _$GetPersonMentionsTearOff();
 
   _GetPersonMentions call(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) {
     return _GetPersonMentions(
       sort: sort,
@@ -2368,10 +2622,10 @@ const $GetPersonMentions = _$GetPersonMentionsTearOff();
 
 /// @nodoc
 mixin _$GetPersonMentions {
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2386,7 +2640,7 @@ abstract class $GetPersonMentionsCopyWith<$Res> {
           GetPersonMentions value, $Res Function(GetPersonMentions) then) =
       _$GetPersonMentionsCopyWithImpl<$Res>;
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2410,7 +2664,7 @@ class _$GetPersonMentionsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2422,7 +2676,7 @@ class _$GetPersonMentionsCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2439,7 +2693,7 @@ abstract class _$GetPersonMentionsCopyWith<$Res>
       __$GetPersonMentionsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {SortType sort, int? page, int? limit, bool unreadOnly, String auth});
+      {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
@@ -2465,7 +2719,7 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2477,7 +2731,7 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2491,24 +2745,20 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetPersonMentions extends _GetPersonMentions {
   const _$_GetPersonMentions(
-      {required this.sort,
-      this.page,
-      this.limit,
-      required this.unreadOnly,
-      required this.auth})
+      {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
       : super._();
 
   factory _$_GetPersonMentions.fromJson(Map<String, dynamic> json) =>
       _$_$_GetPersonMentionsFromJson(json);
 
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
   final int? limit;
   @override
-  final bool unreadOnly;
+  final bool? unreadOnly;
   @override
   final String auth;
 
@@ -2556,10 +2806,10 @@ class _$_GetPersonMentions extends _GetPersonMentions {
 
 abstract class _GetPersonMentions extends GetPersonMentions {
   const factory _GetPersonMentions(
-      {required SortType sort,
+      {SortType? sort,
       int? page,
       int? limit,
-      required bool unreadOnly,
+      bool? unreadOnly,
       required String auth}) = _$_GetPersonMentions;
   const _GetPersonMentions._() : super._();
 
@@ -2567,13 +2817,13 @@ abstract class _GetPersonMentions extends GetPersonMentions {
       _$_GetPersonMentions.fromJson;
 
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
   int? get limit => throw _privateConstructorUsedError;
   @override
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
@@ -4128,7 +4378,7 @@ class _$GetPrivateMessagesTearOff {
   const _$GetPrivateMessagesTearOff();
 
   _GetPrivateMessages call(
-      {required bool unreadOnly, int? page, int? limit, required String auth}) {
+      {bool? unreadOnly, int? page, int? limit, required String auth}) {
     return _GetPrivateMessages(
       unreadOnly: unreadOnly,
       page: page,
@@ -4147,7 +4397,7 @@ const $GetPrivateMessages = _$GetPrivateMessagesTearOff();
 
 /// @nodoc
 mixin _$GetPrivateMessages {
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
@@ -4163,7 +4413,7 @@ abstract class $GetPrivateMessagesCopyWith<$Res> {
   factory $GetPrivateMessagesCopyWith(
           GetPrivateMessages value, $Res Function(GetPrivateMessages) then) =
       _$GetPrivateMessagesCopyWithImpl<$Res>;
-  $Res call({bool unreadOnly, int? page, int? limit, String auth});
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
@@ -4186,7 +4436,7 @@ class _$GetPrivateMessagesCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -4210,7 +4460,7 @@ abstract class _$GetPrivateMessagesCopyWith<$Res>
           _GetPrivateMessages value, $Res Function(_GetPrivateMessages) then) =
       __$GetPrivateMessagesCopyWithImpl<$Res>;
   @override
-  $Res call({bool unreadOnly, int? page, int? limit, String auth});
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
@@ -4235,7 +4485,7 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -4257,14 +4507,14 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetPrivateMessages extends _GetPrivateMessages {
   const _$_GetPrivateMessages(
-      {required this.unreadOnly, this.page, this.limit, required this.auth})
+      {this.unreadOnly, this.page, this.limit, required this.auth})
       : super._();
 
   factory _$_GetPrivateMessages.fromJson(Map<String, dynamic> json) =>
       _$_$_GetPrivateMessagesFromJson(json);
 
   @override
-  final bool unreadOnly;
+  final bool? unreadOnly;
   @override
   final int? page;
   @override
@@ -4313,7 +4563,7 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 
 abstract class _GetPrivateMessages extends GetPrivateMessages {
   const factory _GetPrivateMessages(
-      {required bool unreadOnly,
+      {bool? unreadOnly,
       int? page,
       int? limit,
       required String auth}) = _$_GetPrivateMessages;
@@ -4323,7 +4573,7 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
       _$_GetPrivateMessages.fromJson;
 
   @override
-  bool get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override

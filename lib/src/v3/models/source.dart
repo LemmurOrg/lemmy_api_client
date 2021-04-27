@@ -16,7 +16,7 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
   factory PersonSafe({
     required int id,
     required String name,
-    String? preferredUsername,
+    String? displayName,
     String? avatar,
     required bool banned,
     required DateTime published,
@@ -30,6 +30,7 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
     required String sharedInboxUrl,
     String? matrixUserId,
     required bool admin,
+    required bool botAccount,
   }) = _PersonSafe;
 
   PersonSafe._();
@@ -54,7 +55,10 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
         required PostListingType defaultListingType,
     required String lang,
     required bool showAvatars,
+    required bool showScores,
     required bool sendNotificationsToEmail,
+    required bool showReadPosts,
+    required bool showBotAccounts,
   }) = _LocalUserSettings;
 
   LocalUserSettings._();
@@ -70,6 +74,7 @@ class Site extends WithInstanceHost with _$Site {
   factory Site({
     required int id,
     required String name,
+    String? sidebar,
     String? description,
     required int creatorId,
     required DateTime published,
@@ -77,6 +82,7 @@ class Site extends WithInstanceHost with _$Site {
     required bool enableDownvotes,
     required bool openRegistration,
     required bool enableNsfw,
+    required bool communityCreationAdminOnly,
     String? icon,
     String? banner,
   }) = _Site;
@@ -361,7 +367,6 @@ class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
     required String name,
     required String title,
     String? description,
-    required int creatorId,
     required bool removed,
     required DateTime published,
     DateTime? updated,

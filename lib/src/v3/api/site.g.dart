@@ -9,12 +9,19 @@ part of 'site.dart';
 _$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
   return _$_Search(
     q: json['q'] as String,
-    type: SearchType.fromJson(json['type_'] as String),
+    type: json['type_'] == null
+        ? null
+        : SearchType.fromJson(json['type_'] as String),
+    listingType: json['listing_type'] == null
+        ? null
+        : PostListingType.fromJson(json['listing_type'] as String),
     communityId: json['community_id'] as int?,
     communityName: json['community_name'] as String?,
-    sort: SortType.fromJson(json['sort'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
+    creatorId: json['creator_id'] as int?,
     auth: json['auth'] as String?,
   );
 }
@@ -22,7 +29,6 @@ _$_Search _$_$_SearchFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) {
   final val = <String, dynamic>{
     'q': instance.q,
-    'type_': instance.type.toJson(),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -31,11 +37,14 @@ Map<String, dynamic> _$_$_SearchToJson(_$_Search instance) {
     }
   }
 
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('listing_type', instance.listingType?.toJson());
   writeNotNull('community_id', instance.communityId);
   writeNotNull('community_name', instance.communityName);
-  val['sort'] = instance.sort.toJson();
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
+  writeNotNull('creator_id', instance.creatorId);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -68,12 +77,14 @@ Map<String, dynamic> _$_$_GetModlogToJson(_$_GetModlog instance) {
 _$_CreateSite _$_$_CreateSiteFromJson(Map<String, dynamic> json) {
   return _$_CreateSite(
     name: json['name'] as String,
+    sidebar: json['sidebar'] as String?,
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
-    enableDownvotes: json['enable_downvotes'] as bool,
-    openRegistration: json['open_registration'] as bool,
-    enableNsfw: json['enable_nsfw'] as bool,
+    enableDownvotes: json['enable_downvotes'] as bool?,
+    openRegistration: json['open_registration'] as bool?,
+    enableNsfw: json['enable_nsfw'] as bool?,
+    communityCreationAdminOnly: json['community_creation_admin_only'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -89,33 +100,36 @@ Map<String, dynamic> _$_$_CreateSiteToJson(_$_CreateSite instance) {
     }
   }
 
+  writeNotNull('sidebar', instance.sidebar);
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
-  val['enable_downvotes'] = instance.enableDownvotes;
-  val['open_registration'] = instance.openRegistration;
-  val['enable_nsfw'] = instance.enableNsfw;
+  writeNotNull('enable_downvotes', instance.enableDownvotes);
+  writeNotNull('open_registration', instance.openRegistration);
+  writeNotNull('enable_nsfw', instance.enableNsfw);
+  writeNotNull(
+      'community_creation_admin_only', instance.communityCreationAdminOnly);
   val['auth'] = instance.auth;
   return val;
 }
 
 _$_EditSite _$_$_EditSiteFromJson(Map<String, dynamic> json) {
   return _$_EditSite(
-    name: json['name'] as String,
+    name: json['name'] as String?,
+    sidebar: json['sidebar'] as String?,
     description: json['description'] as String?,
     icon: json['icon'] as String?,
     banner: json['banner'] as String?,
-    enableDownvotes: json['enable_downvotes'] as bool,
-    openRegistration: json['open_registration'] as bool,
-    enableNsfw: json['enable_nsfw'] as bool,
+    enableDownvotes: json['enable_downvotes'] as bool?,
+    openRegistration: json['open_registration'] as bool?,
+    enableNsfw: json['enable_nsfw'] as bool?,
+    communityCreationAdminOnly: json['community_creation_admin_only'] as bool?,
     auth: json['auth'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_EditSiteToJson(_$_EditSite instance) {
-  final val = <String, dynamic>{
-    'name': instance.name,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -123,12 +137,16 @@ Map<String, dynamic> _$_$_EditSiteToJson(_$_EditSite instance) {
     }
   }
 
+  writeNotNull('name', instance.name);
+  writeNotNull('sidebar', instance.sidebar);
   writeNotNull('description', instance.description);
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
-  val['enable_downvotes'] = instance.enableDownvotes;
-  val['open_registration'] = instance.openRegistration;
-  val['enable_nsfw'] = instance.enableNsfw;
+  writeNotNull('enable_downvotes', instance.enableDownvotes);
+  writeNotNull('open_registration', instance.openRegistration);
+  writeNotNull('enable_nsfw', instance.enableNsfw);
+  writeNotNull(
+      'community_creation_admin_only', instance.communityCreationAdminOnly);
   val['auth'] = instance.auth;
   return val;
 }

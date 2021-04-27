@@ -111,9 +111,12 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           .responseFactory(json)),
   'ListPostReports': (json) => WsEventListPostReports(
       const ListPostReports(auth: '').responseFactory(json)),
-  'Search': (json) => WsEventSearch(
-      const Search(q: '', type: SearchType.all, sort: SortType.hot)
-          .responseFactory(json)),
+  'Search': (json) => WsEventSearch(const Search(
+          q: '',
+          type: SearchType.all,
+          listingType: PostListingType.all,
+          sort: SortType.hot)
+      .responseFactory(json)),
   'GetModlog': (json) =>
       WsEventGetModlog(const GetModlog().responseFactory(json)),
   'CreateSite': (json) => WsEventCreateSite(const CreateSite(
@@ -154,6 +157,12 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           sendNotificationsToEmail: true,
           auth: '')
       .responseFactory(json)),
+  'ChangePassword': (json) => WsEventChangePassword(const ChangePassword(
+        newPassword: '',
+        newPasswordVerify: '',
+        oldPassword: '',
+        auth: '',
+      ).responseFactory(json)),
   'GetPersonDetails': (json) => WsEventGetPersonDetails(
       const GetPersonDetails(sort: SortType.hot, savedOnly: true)
           .responseFactory(json)),
@@ -398,6 +407,10 @@ class WsEventGetCaptcha extends WsEvent<Captcha> {
 
 class WsEventSaveUserSettings extends WsEvent<Jwt> {
   const WsEventSaveUserSettings(Jwt data) : super(data);
+}
+
+class WsEventChangePassword extends WsEvent<Jwt> {
+  const WsEventChangePassword(Jwt data) : super(data);
 }
 
 class WsEventGetPersonDetails extends WsEvent<FullPersonView> {

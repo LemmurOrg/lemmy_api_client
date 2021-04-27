@@ -24,11 +24,9 @@ class GetCommunity
   factory GetCommunity.fromJson(Map<String, dynamic> json) =>
       _$GetCommunityFromJson(json);
 
-  @override
-  String path() => '/community';
+  final path = '/community';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   FullCommunityView responseFactory(Map<String, dynamic> json) =>
@@ -55,11 +53,9 @@ class CreateCommunity
   factory CreateCommunity.fromJson(Map<String, dynamic> json) =>
       _$CreateCommunityFromJson(json);
 
-  @override
-  String path() => '/community';
+  final path = '/community';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   CommunityView responseFactory(Map<String, dynamic> json) =>
@@ -72,8 +68,8 @@ class ListCommunities
     implements LemmyApiQuery<List<CommunityView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ListCommunities({
-    @JsonKey(name: 'type_') required PostListingType type,
-    required SortType sort,
+    @JsonKey(name: 'type_') PostListingType? type,
+    SortType? sort,
     int? page,
     int? limit,
     String? auth,
@@ -84,11 +80,9 @@ class ListCommunities
   factory ListCommunities.fromJson(Map<String, dynamic> json) =>
       _$ListCommunitiesFromJson(json);
 
-  @override
-  String path() => '/community/list';
+  final path = '/community/list';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<CommunityView> responseFactory(Map<String, dynamic> json) =>
@@ -106,7 +100,7 @@ class BanFromCommunity
     required int communityId,
     required int personId,
     required bool ban,
-    required bool removeData,
+    bool? removeData,
     String? reason,
     int? expires,
     required String auth,
@@ -117,11 +111,9 @@ class BanFromCommunity
   factory BanFromCommunity.fromJson(Map<String, dynamic> json) =>
       _$BanFromCommunityFromJson(json);
 
-  @override
-  String path() => '/community/ban_user';
+  final path = '/community/ban_user';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   BannedCommunityUser responseFactory(Map<String, dynamic> json) =>
@@ -145,11 +137,9 @@ class AddModToCommunity
   factory AddModToCommunity.fromJson(Map<String, dynamic> json) =>
       _$AddModToCommunityFromJson(json);
 
-  @override
-  String path() => '/community/mod';
+  final path = '/community/mod';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   List<CommunityModeratorView> responseFactory(Map<String, dynamic> json) =>
@@ -165,7 +155,7 @@ class EditCommunity
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory EditCommunity({
     required int communityId,
-    required String title,
+    String? title,
     String? description,
     String? icon,
     String? banner,
@@ -178,11 +168,9 @@ class EditCommunity
   factory EditCommunity.fromJson(Map<String, dynamic> json) =>
       _$EditCommunityFromJson(json);
 
-  @override
-  String path() => '/community';
+  final path = '/community';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   CommunityView responseFactory(Map<String, dynamic> json) =>
@@ -205,11 +193,9 @@ class DeleteCommunity
   factory DeleteCommunity.fromJson(Map<String, dynamic> json) =>
       _$DeleteCommunityFromJson(json);
 
-  @override
-  String path() => '/community/delete';
+  final path = '/community/delete';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   CommunityView responseFactory(Map<String, dynamic> json) =>
@@ -234,11 +220,9 @@ class RemoveCommunity
   factory RemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$RemoveCommunityFromJson(json);
 
-  @override
-  String path() => '/community/remove';
+  final path = '/community/remove';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   CommunityView responseFactory(Map<String, dynamic> json) =>
@@ -261,11 +245,9 @@ class FollowCommunity
   factory FollowCommunity.fromJson(Map<String, dynamic> json) =>
       _$FollowCommunityFromJson(json);
 
-  @override
-  String path() => '/community/follow';
+  final path = '/community/follow';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   CommunityView responseFactory(Map<String, dynamic> json) =>
@@ -286,11 +268,9 @@ class GetFollowedCommunities
   factory GetFollowedCommunities.fromJson(Map<String, dynamic> json) =>
       _$GetFollowedCommunitiesFromJson(json);
 
-  @override
-  String path() => '/user/followed_communities';
+  final path = '/user/followed_communities';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<CommunityFollowerView> responseFactory(Map<String, dynamic> json) =>
@@ -315,11 +295,9 @@ class TransferCommunity
   factory TransferCommunity.fromJson(Map<String, dynamic> json) =>
       _$TransferCommunityFromJson(json);
 
-  @override
-  String path() => '/community/transfer';
+  final path = '/community/transfer';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullCommunityView responseFactory(Map<String, dynamic> json) =>

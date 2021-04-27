@@ -33,7 +33,7 @@ _$_CreatePost _$_$_CreatePostFromJson(Map<String, dynamic> json) {
     name: json['name'] as String,
     url: json['url'] as String?,
     body: json['body'] as String?,
-    nsfw: json['nsfw'] as bool,
+    nsfw: json['nsfw'] as bool?,
     communityId: json['community_id'] as int,
     auth: json['auth'] as String,
   );
@@ -52,7 +52,7 @@ Map<String, dynamic> _$_$_CreatePostToJson(_$_CreatePost instance) {
 
   writeNotNull('url', instance.url);
   writeNotNull('body', instance.body);
-  val['nsfw'] = instance.nsfw;
+  writeNotNull('nsfw', instance.nsfw);
   val['community_id'] = instance.communityId;
   val['auth'] = instance.auth;
   return val;
@@ -60,22 +60,22 @@ Map<String, dynamic> _$_$_CreatePostToJson(_$_CreatePost instance) {
 
 _$_GetPosts _$_$_GetPostsFromJson(Map<String, dynamic> json) {
   return _$_GetPosts(
-    type: PostListingType.fromJson(json['type_'] as String),
-    sort: SortType.fromJson(json['sort'] as String),
+    type: json['type_'] == null
+        ? null
+        : PostListingType.fromJson(json['type_'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
     communityId: json['community_id'] as int?,
     communityName: json['community_name'] as String?,
-    savedOnly: json['saved_only'] as bool,
+    savedOnly: json['saved_only'] as bool?,
     auth: json['auth'] as String?,
   );
 }
 
 Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
-  final val = <String, dynamic>{
-    'type_': instance.type.toJson(),
-    'sort': instance.sort.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -83,11 +83,13 @@ Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
     }
   }
 
+  writeNotNull('type_', instance.type?.toJson());
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
   writeNotNull('community_name', instance.communityName);
-  val['saved_only'] = instance.savedOnly;
+  writeNotNull('saved_only', instance.savedOnly);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -110,10 +112,10 @@ Map<String, dynamic> _$_$_CreatePostLikeToJson(_$_CreatePostLike instance) =>
 _$_EditPost _$_$_EditPostFromJson(Map<String, dynamic> json) {
   return _$_EditPost(
     postId: json['post_id'] as int,
-    name: json['name'] as String,
+    name: json['name'] as String?,
     url: json['url'] as String?,
     body: json['body'] as String?,
-    nsfw: json['nsfw'] as bool,
+    nsfw: json['nsfw'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -121,7 +123,6 @@ _$_EditPost _$_$_EditPostFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_EditPostToJson(_$_EditPost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
-    'name': instance.name,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -130,9 +131,10 @@ Map<String, dynamic> _$_$_EditPostToJson(_$_EditPost instance) {
     }
   }
 
+  writeNotNull('name', instance.name);
   writeNotNull('url', instance.url);
   writeNotNull('body', instance.body);
-  val['nsfw'] = instance.nsfw;
+  writeNotNull('nsfw', instance.nsfw);
   val['auth'] = instance.auth;
   return val;
 }

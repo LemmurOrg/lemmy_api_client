@@ -1,8 +1,8 @@
 enum HttpMethod { get, put, post }
 
 abstract class LemmyApiQuery<T> {
-  String path();
-  HttpMethod httpMethod();
+  abstract final String path;
+  abstract final HttpMethod httpMethod;
 
   Map<String, dynamic> toJson();
 

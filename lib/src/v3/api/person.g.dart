@@ -59,32 +59,30 @@ Map<String, dynamic> _$_$_GetCaptchaToJson(_$_GetCaptcha instance) =>
 
 _$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
   return _$_SaveUserSettings(
-    showNsfw: json['show_nsfw'] as bool,
-    theme: json['theme'] as String,
+    showNsfw: json['show_nsfw'] as bool?,
+    theme: json['theme'] as String?,
     defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
     defaultListingType:
         postListingTypeFromIndex(json['default_listing_type'] as int),
-    lang: json['lang'] as String,
+    lang: json['lang'] as String?,
     avatar: json['avatar'] as String?,
     banner: json['banner'] as String?,
-    preferredUsername: json['preferred_username'] as String?,
+    displayName: json['display_name'] as String?,
     email: json['email'] as String?,
     bio: json['bio'] as String?,
     matrixUserId: json['matrix_user_id'] as String?,
-    newPassword: json['new_password'] as String?,
-    newPasswordVerify: json['new_password_verify'] as String?,
-    oldPassword: json['old_password'] as String?,
-    showAvatars: json['show_avatars'] as bool,
-    sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
+    showAvatars: json['show_avatars'] as bool?,
+    showScores: json['show_scores'] as bool?,
+    sendNotificationsToEmail: json['send_notifications_to_email'] as bool?,
+    showReadPosts: json['show_read_posts'] as bool?,
+    botAccount: json['bot_account'] as bool?,
+    showBotAccounts: json['show_bot_accounts'] as bool?,
     auth: json['auth'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
-  final val = <String, dynamic>{
-    'show_nsfw': instance.showNsfw,
-    'theme': instance.theme,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -92,34 +90,56 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
     }
   }
 
+  writeNotNull('show_nsfw', instance.showNsfw);
+  writeNotNull('theme', instance.theme);
   writeNotNull('default_sort_type', sortTypeToIndex(instance.defaultSortType));
   writeNotNull('default_listing_type',
       postListingTypeToIndex(instance.defaultListingType));
-  val['lang'] = instance.lang;
+  writeNotNull('lang', instance.lang);
   writeNotNull('avatar', instance.avatar);
   writeNotNull('banner', instance.banner);
-  writeNotNull('preferred_username', instance.preferredUsername);
+  writeNotNull('display_name', instance.displayName);
   writeNotNull('email', instance.email);
   writeNotNull('bio', instance.bio);
   writeNotNull('matrix_user_id', instance.matrixUserId);
-  writeNotNull('new_password', instance.newPassword);
-  writeNotNull('new_password_verify', instance.newPasswordVerify);
-  writeNotNull('old_password', instance.oldPassword);
-  val['show_avatars'] = instance.showAvatars;
-  val['send_notifications_to_email'] = instance.sendNotificationsToEmail;
+  writeNotNull('show_avatars', instance.showAvatars);
+  writeNotNull('show_scores', instance.showScores);
+  writeNotNull(
+      'send_notifications_to_email', instance.sendNotificationsToEmail);
+  writeNotNull('show_read_posts', instance.showReadPosts);
+  writeNotNull('bot_account', instance.botAccount);
+  writeNotNull('show_bot_accounts', instance.showBotAccounts);
   val['auth'] = instance.auth;
   return val;
 }
+
+_$_ChangePassword _$_$_ChangePasswordFromJson(Map<String, dynamic> json) {
+  return _$_ChangePassword(
+    newPassword: json['new_password'] as String,
+    newPasswordVerify: json['new_password_verify'] as String,
+    oldPassword: json['old_password'] as String,
+    auth: json['auth'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_ChangePasswordToJson(_$_ChangePassword instance) =>
+    <String, dynamic>{
+      'new_password': instance.newPassword,
+      'new_password_verify': instance.newPasswordVerify,
+      'old_password': instance.oldPassword,
+      'auth': instance.auth,
+    };
 
 _$_GetPersonDetails _$_$_GetPersonDetailsFromJson(Map<String, dynamic> json) {
   return _$_GetPersonDetails(
     personId: json['person_id'] as int?,
     username: json['username'] as String?,
-    sort: SortType.fromJson(json['sort'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
     communityId: json['community_id'] as int?,
-    savedOnly: json['saved_only'] as bool,
+    savedOnly: json['saved_only'] as bool?,
     auth: json['auth'] as String?,
   );
 }
@@ -135,11 +155,11 @@ Map<String, dynamic> _$_$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
 
   writeNotNull('person_id', instance.personId);
   writeNotNull('username', instance.username);
-  val['sort'] = instance.sort.toJson();
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   writeNotNull('community_id', instance.communityId);
-  val['saved_only'] = instance.savedOnly;
+  writeNotNull('saved_only', instance.savedOnly);
   writeNotNull('auth', instance.auth);
   return val;
 }
@@ -174,7 +194,7 @@ _$_BanPerson _$_$_BanPersonFromJson(Map<String, dynamic> json) {
   return _$_BanPerson(
     personId: json['person_id'] as int,
     ban: json['ban'] as bool,
-    removeData: json['remove_data'] as bool,
+    removeData: json['remove_data'] as bool?,
     reason: json['reason'] as String?,
     expires: json['expires'] as int?,
     auth: json['auth'] as String,
@@ -185,7 +205,6 @@ Map<String, dynamic> _$_$_BanPersonToJson(_$_BanPerson instance) {
   final val = <String, dynamic>{
     'person_id': instance.personId,
     'ban': instance.ban,
-    'remove_data': instance.removeData,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -194,6 +213,7 @@ Map<String, dynamic> _$_$_BanPersonToJson(_$_BanPerson instance) {
     }
   }
 
+  writeNotNull('remove_data', instance.removeData);
   writeNotNull('reason', instance.reason);
   writeNotNull('expires', instance.expires);
   val['auth'] = instance.auth;
@@ -202,18 +222,17 @@ Map<String, dynamic> _$_$_BanPersonToJson(_$_BanPerson instance) {
 
 _$_GetReplies _$_$_GetRepliesFromJson(Map<String, dynamic> json) {
   return _$_GetReplies(
-    sort: SortType.fromJson(json['sort'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
-    unreadOnly: json['unread_only'] as bool,
+    unreadOnly: json['unread_only'] as bool?,
     auth: json['auth'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
-  final val = <String, dynamic>{
-    'sort': instance.sort.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -221,28 +240,28 @@ Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
     }
   }
 
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
-  val['unread_only'] = instance.unreadOnly;
+  writeNotNull('unread_only', instance.unreadOnly);
   val['auth'] = instance.auth;
   return val;
 }
 
 _$_GetPersonMentions _$_$_GetPersonMentionsFromJson(Map<String, dynamic> json) {
   return _$_GetPersonMentions(
-    sort: SortType.fromJson(json['sort'] as String),
+    sort:
+        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
     page: json['page'] as int?,
     limit: json['limit'] as int?,
-    unreadOnly: json['unread_only'] as bool,
+    unreadOnly: json['unread_only'] as bool?,
     auth: json['auth'] as String,
   );
 }
 
 Map<String, dynamic> _$_$_GetPersonMentionsToJson(
     _$_GetPersonMentions instance) {
-  final val = <String, dynamic>{
-    'sort': instance.sort.toJson(),
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -250,9 +269,10 @@ Map<String, dynamic> _$_$_GetPersonMentionsToJson(
     }
   }
 
+  writeNotNull('sort', instance.sort?.toJson());
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
-  val['unread_only'] = instance.unreadOnly;
+  writeNotNull('unread_only', instance.unreadOnly);
   val['auth'] = instance.auth;
   return val;
 }
@@ -384,7 +404,7 @@ Map<String, dynamic> _$_$_MarkPrivateMessageAsReadToJson(
 _$_GetPrivateMessages _$_$_GetPrivateMessagesFromJson(
     Map<String, dynamic> json) {
   return _$_GetPrivateMessages(
-    unreadOnly: json['unread_only'] as bool,
+    unreadOnly: json['unread_only'] as bool?,
     page: json['page'] as int?,
     limit: json['limit'] as int?,
     auth: json['auth'] as String,
@@ -393,9 +413,7 @@ _$_GetPrivateMessages _$_$_GetPrivateMessagesFromJson(
 
 Map<String, dynamic> _$_$_GetPrivateMessagesToJson(
     _$_GetPrivateMessages instance) {
-  final val = <String, dynamic>{
-    'unread_only': instance.unreadOnly,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -403,6 +421,7 @@ Map<String, dynamic> _$_$_GetPrivateMessagesToJson(
     }
   }
 
+  writeNotNull('unread_only', instance.unreadOnly);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
   val['auth'] = instance.auth;

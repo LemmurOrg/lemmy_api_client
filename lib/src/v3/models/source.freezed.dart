@@ -23,7 +23,7 @@ class _$PersonSafeTearOff {
   _PersonSafe call(
       {required int id,
       required String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       required bool banned,
       required DateTime published,
@@ -36,11 +36,12 @@ class _$PersonSafeTearOff {
       required String inboxUrl,
       required String sharedInboxUrl,
       String? matrixUserId,
-      required bool admin}) {
+      required bool admin,
+      required bool botAccount}) {
     return _PersonSafe(
       id: id,
       name: name,
-      preferredUsername: preferredUsername,
+      displayName: displayName,
       avatar: avatar,
       banned: banned,
       published: published,
@@ -54,6 +55,7 @@ class _$PersonSafeTearOff {
       sharedInboxUrl: sharedInboxUrl,
       matrixUserId: matrixUserId,
       admin: admin,
+      botAccount: botAccount,
     );
   }
 
@@ -69,7 +71,7 @@ const $PersonSafe = _$PersonSafeTearOff();
 mixin _$PersonSafe {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   String? get avatar => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
@@ -83,6 +85,7 @@ mixin _$PersonSafe {
   String get sharedInboxUrl => throw _privateConstructorUsedError;
   String? get matrixUserId => throw _privateConstructorUsedError;
   bool get admin => throw _privateConstructorUsedError;
+  bool get botAccount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -98,7 +101,7 @@ abstract class $PersonSafeCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       bool banned,
       DateTime published,
@@ -111,7 +114,8 @@ abstract class $PersonSafeCopyWith<$Res> {
       String inboxUrl,
       String sharedInboxUrl,
       String? matrixUserId,
-      bool admin});
+      bool admin,
+      bool botAccount});
 }
 
 /// @nodoc
@@ -126,7 +130,7 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? avatar = freezed,
     Object? banned = freezed,
     Object? published = freezed,
@@ -140,6 +144,7 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
     Object? sharedInboxUrl = freezed,
     Object? matrixUserId = freezed,
     Object? admin = freezed,
+    Object? botAccount = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -150,9 +155,9 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       avatar: avatar == freezed
           ? _value.avatar
@@ -206,6 +211,10 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
               as bool,
+      botAccount: botAccount == freezed
+          ? _value.botAccount
+          : botAccount // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -219,7 +228,7 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       bool banned,
       DateTime published,
@@ -232,7 +241,8 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
       String inboxUrl,
       String sharedInboxUrl,
       String? matrixUserId,
-      bool admin});
+      bool admin,
+      bool botAccount});
 }
 
 /// @nodoc
@@ -249,7 +259,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
-    Object? preferredUsername = freezed,
+    Object? displayName = freezed,
     Object? avatar = freezed,
     Object? banned = freezed,
     Object? published = freezed,
@@ -263,6 +273,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
     Object? sharedInboxUrl = freezed,
     Object? matrixUserId = freezed,
     Object? admin = freezed,
+    Object? botAccount = freezed,
   }) {
     return _then(_PersonSafe(
       id: id == freezed
@@ -273,9 +284,9 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      preferredUsername: preferredUsername == freezed
-          ? _value.preferredUsername
-          : preferredUsername // ignore: cast_nullable_to_non_nullable
+      displayName: displayName == freezed
+          ? _value.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
       avatar: avatar == freezed
           ? _value.avatar
@@ -329,6 +340,10 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.admin
           : admin // ignore: cast_nullable_to_non_nullable
               as bool,
+      botAccount: botAccount == freezed
+          ? _value.botAccount
+          : botAccount // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -342,7 +357,7 @@ class _$_PersonSafe extends _PersonSafe {
   _$_PersonSafe(
       {required this.id,
       required this.name,
-      this.preferredUsername,
+      this.displayName,
       this.avatar,
       required this.banned,
       required this.published,
@@ -355,7 +370,8 @@ class _$_PersonSafe extends _PersonSafe {
       required this.inboxUrl,
       required this.sharedInboxUrl,
       this.matrixUserId,
-      required this.admin})
+      required this.admin,
+      required this.botAccount})
       : super._();
 
   factory _$_PersonSafe.fromJson(Map<String, dynamic> json) =>
@@ -366,7 +382,7 @@ class _$_PersonSafe extends _PersonSafe {
   @override
   final String name;
   @override
-  final String? preferredUsername;
+  final String? displayName;
   @override
   final String? avatar;
   @override
@@ -393,10 +409,12 @@ class _$_PersonSafe extends _PersonSafe {
   final String? matrixUserId;
   @override
   final bool admin;
+  @override
+  final bool botAccount;
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, preferredUsername: $preferredUsername, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin)';
+    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount)';
   }
 
   @override
@@ -407,9 +425,9 @@ class _$_PersonSafe extends _PersonSafe {
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.preferredUsername, preferredUsername) ||
+            (identical(other.displayName, displayName) ||
                 const DeepCollectionEquality()
-                    .equals(other.preferredUsername, preferredUsername)) &&
+                    .equals(other.displayName, displayName)) &&
             (identical(other.avatar, avatar) ||
                 const DeepCollectionEquality().equals(other.avatar, avatar)) &&
             (identical(other.banned, banned) ||
@@ -442,7 +460,10 @@ class _$_PersonSafe extends _PersonSafe {
                 const DeepCollectionEquality()
                     .equals(other.matrixUserId, matrixUserId)) &&
             (identical(other.admin, admin) ||
-                const DeepCollectionEquality().equals(other.admin, admin)));
+                const DeepCollectionEquality().equals(other.admin, admin)) &&
+            (identical(other.botAccount, botAccount) ||
+                const DeepCollectionEquality()
+                    .equals(other.botAccount, botAccount)));
   }
 
   @override
@@ -450,7 +471,7 @@ class _$_PersonSafe extends _PersonSafe {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(preferredUsername) ^
+      const DeepCollectionEquality().hash(displayName) ^
       const DeepCollectionEquality().hash(avatar) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(published) ^
@@ -463,7 +484,8 @@ class _$_PersonSafe extends _PersonSafe {
       const DeepCollectionEquality().hash(inboxUrl) ^
       const DeepCollectionEquality().hash(sharedInboxUrl) ^
       const DeepCollectionEquality().hash(matrixUserId) ^
-      const DeepCollectionEquality().hash(admin);
+      const DeepCollectionEquality().hash(admin) ^
+      const DeepCollectionEquality().hash(botAccount);
 
   @JsonKey(ignore: true)
   @override
@@ -480,7 +502,7 @@ abstract class _PersonSafe extends PersonSafe {
   factory _PersonSafe(
       {required int id,
       required String name,
-      String? preferredUsername,
+      String? displayName,
       String? avatar,
       required bool banned,
       required DateTime published,
@@ -493,7 +515,8 @@ abstract class _PersonSafe extends PersonSafe {
       required String inboxUrl,
       required String sharedInboxUrl,
       String? matrixUserId,
-      required bool admin}) = _$_PersonSafe;
+      required bool admin,
+      required bool botAccount}) = _$_PersonSafe;
   _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
@@ -504,7 +527,7 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  String? get preferredUsername => throw _privateConstructorUsedError;
+  String? get displayName => throw _privateConstructorUsedError;
   @override
   String? get avatar => throw _privateConstructorUsedError;
   @override
@@ -532,6 +555,8 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   bool get admin => throw _privateConstructorUsedError;
   @override
+  bool get botAccount => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PersonSafeCopyWith<_PersonSafe> get copyWith =>
       throw _privateConstructorUsedError;
@@ -557,7 +582,10 @@ class _$LocalUserSettingsTearOff {
           required PostListingType defaultListingType,
       required String lang,
       required bool showAvatars,
-      required bool sendNotificationsToEmail}) {
+      required bool showScores,
+      required bool sendNotificationsToEmail,
+      required bool showReadPosts,
+      required bool showBotAccounts}) {
     return _LocalUserSettings(
       id: id,
       personId: personId,
@@ -568,7 +596,10 @@ class _$LocalUserSettingsTearOff {
       defaultListingType: defaultListingType,
       lang: lang,
       showAvatars: showAvatars,
+      showScores: showScores,
       sendNotificationsToEmail: sendNotificationsToEmail,
+      showReadPosts: showReadPosts,
+      showBotAccounts: showBotAccounts,
     );
   }
 
@@ -593,7 +624,10 @@ mixin _$LocalUserSettings {
   PostListingType get defaultListingType => throw _privateConstructorUsedError;
   String get lang => throw _privateConstructorUsedError;
   bool get showAvatars => throw _privateConstructorUsedError;
+  bool get showScores => throw _privateConstructorUsedError;
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool get showReadPosts => throw _privateConstructorUsedError;
+  bool get showBotAccounts => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -618,7 +652,10 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
           PostListingType defaultListingType,
       String lang,
       bool showAvatars,
-      bool sendNotificationsToEmail});
+      bool showScores,
+      bool sendNotificationsToEmail,
+      bool showReadPosts,
+      bool showBotAccounts});
 }
 
 /// @nodoc
@@ -641,7 +678,10 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? defaultListingType = freezed,
     Object? lang = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
+    Object? showReadPosts = freezed,
+    Object? showBotAccounts = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -680,9 +720,21 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showReadPosts: showReadPosts == freezed
+          ? _value.showReadPosts
+          : showReadPosts // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showBotAccounts: showBotAccounts == freezed
+          ? _value.showBotAccounts
+          : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -707,7 +759,10 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
           PostListingType defaultListingType,
       String lang,
       bool showAvatars,
-      bool sendNotificationsToEmail});
+      bool showScores,
+      bool sendNotificationsToEmail,
+      bool showReadPosts,
+      bool showBotAccounts});
 }
 
 /// @nodoc
@@ -732,7 +787,10 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? defaultListingType = freezed,
     Object? lang = freezed,
     Object? showAvatars = freezed,
+    Object? showScores = freezed,
     Object? sendNotificationsToEmail = freezed,
+    Object? showReadPosts = freezed,
+    Object? showBotAccounts = freezed,
   }) {
     return _then(_LocalUserSettings(
       id: id == freezed
@@ -771,9 +829,21 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showAvatars
           : showAvatars // ignore: cast_nullable_to_non_nullable
               as bool,
+      showScores: showScores == freezed
+          ? _value.showScores
+          : showScores // ignore: cast_nullable_to_non_nullable
+              as bool,
       sendNotificationsToEmail: sendNotificationsToEmail == freezed
           ? _value.sendNotificationsToEmail
           : sendNotificationsToEmail // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showReadPosts: showReadPosts == freezed
+          ? _value.showReadPosts
+          : showReadPosts // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showBotAccounts: showBotAccounts == freezed
+          ? _value.showBotAccounts
+          : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -797,7 +867,10 @@ class _$_LocalUserSettings extends _LocalUserSettings {
           required this.defaultListingType,
       required this.lang,
       required this.showAvatars,
-      required this.sendNotificationsToEmail})
+      required this.showScores,
+      required this.sendNotificationsToEmail,
+      required this.showReadPosts,
+      required this.showBotAccounts})
       : super._();
 
   factory _$_LocalUserSettings.fromJson(Map<String, dynamic> json) =>
@@ -824,11 +897,17 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @override
   final bool showAvatars;
   @override
+  final bool showScores;
+  @override
   final bool sendNotificationsToEmail;
+  @override
+  final bool showReadPosts;
+  @override
+  final bool showBotAccounts;
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, sendNotificationsToEmail: $sendNotificationsToEmail)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts)';
   }
 
   @override
@@ -858,10 +937,20 @@ class _$_LocalUserSettings extends _LocalUserSettings {
             (identical(other.showAvatars, showAvatars) ||
                 const DeepCollectionEquality()
                     .equals(other.showAvatars, showAvatars)) &&
+            (identical(other.showScores, showScores) ||
+                const DeepCollectionEquality()
+                    .equals(other.showScores, showScores)) &&
             (identical(
                     other.sendNotificationsToEmail, sendNotificationsToEmail) ||
                 const DeepCollectionEquality().equals(
-                    other.sendNotificationsToEmail, sendNotificationsToEmail)));
+                    other.sendNotificationsToEmail,
+                    sendNotificationsToEmail)) &&
+            (identical(other.showReadPosts, showReadPosts) ||
+                const DeepCollectionEquality()
+                    .equals(other.showReadPosts, showReadPosts)) &&
+            (identical(other.showBotAccounts, showBotAccounts) ||
+                const DeepCollectionEquality()
+                    .equals(other.showBotAccounts, showBotAccounts)));
   }
 
   @override
@@ -876,7 +965,10 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       const DeepCollectionEquality().hash(defaultListingType) ^
       const DeepCollectionEquality().hash(lang) ^
       const DeepCollectionEquality().hash(showAvatars) ^
-      const DeepCollectionEquality().hash(sendNotificationsToEmail);
+      const DeepCollectionEquality().hash(showScores) ^
+      const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
+      const DeepCollectionEquality().hash(showReadPosts) ^
+      const DeepCollectionEquality().hash(showBotAccounts);
 
   @JsonKey(ignore: true)
   @override
@@ -902,7 +994,10 @@ abstract class _LocalUserSettings extends LocalUserSettings {
           required PostListingType defaultListingType,
       required String lang,
       required bool showAvatars,
-      required bool sendNotificationsToEmail}) = _$_LocalUserSettings;
+      required bool showScores,
+      required bool sendNotificationsToEmail,
+      required bool showReadPosts,
+      required bool showBotAccounts}) = _$_LocalUserSettings;
   _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
@@ -929,7 +1024,13 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   @override
   bool get showAvatars => throw _privateConstructorUsedError;
   @override
+  bool get showScores => throw _privateConstructorUsedError;
+  @override
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  @override
+  bool get showReadPosts => throw _privateConstructorUsedError;
+  @override
+  bool get showBotAccounts => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>
@@ -947,6 +1048,7 @@ class _$SiteTearOff {
   _Site call(
       {required int id,
       required String name,
+      String? sidebar,
       String? description,
       required int creatorId,
       required DateTime published,
@@ -954,11 +1056,13 @@ class _$SiteTearOff {
       required bool enableDownvotes,
       required bool openRegistration,
       required bool enableNsfw,
+      required bool communityCreationAdminOnly,
       String? icon,
       String? banner}) {
     return _Site(
       id: id,
       name: name,
+      sidebar: sidebar,
       description: description,
       creatorId: creatorId,
       published: published,
@@ -966,6 +1070,7 @@ class _$SiteTearOff {
       enableDownvotes: enableDownvotes,
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
+      communityCreationAdminOnly: communityCreationAdminOnly,
       icon: icon,
       banner: banner,
     );
@@ -983,6 +1088,7 @@ const $Site = _$SiteTearOff();
 mixin _$Site {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   int get creatorId => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
@@ -990,6 +1096,7 @@ mixin _$Site {
   bool get enableDownvotes => throw _privateConstructorUsedError;
   bool get openRegistration => throw _privateConstructorUsedError;
   bool get enableNsfw => throw _privateConstructorUsedError;
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
 
@@ -1005,6 +1112,7 @@ abstract class $SiteCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
+      String? sidebar,
       String? description,
       int creatorId,
       DateTime published,
@@ -1012,6 +1120,7 @@ abstract class $SiteCopyWith<$Res> {
       bool enableDownvotes,
       bool openRegistration,
       bool enableNsfw,
+      bool communityCreationAdminOnly,
       String? icon,
       String? banner});
 }
@@ -1028,6 +1137,7 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? creatorId = freezed,
     Object? published = freezed,
@@ -1035,6 +1145,7 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
   }) {
@@ -1047,6 +1158,10 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -1074,6 +1189,10 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
       enableNsfw: enableNsfw == freezed
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool,
       icon: icon == freezed
           ? _value.icon
@@ -1095,6 +1214,7 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
+      String? sidebar,
       String? description,
       int creatorId,
       DateTime published,
@@ -1102,6 +1222,7 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       bool enableDownvotes,
       bool openRegistration,
       bool enableNsfw,
+      bool communityCreationAdminOnly,
       String? icon,
       String? banner});
 }
@@ -1119,6 +1240,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? name = freezed,
+    Object? sidebar = freezed,
     Object? description = freezed,
     Object? creatorId = freezed,
     Object? published = freezed,
@@ -1126,6 +1248,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? enableDownvotes = freezed,
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
+    Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
   }) {
@@ -1138,6 +1261,10 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
+      sidebar: sidebar == freezed
+          ? _value.sidebar
+          : sidebar // ignore: cast_nullable_to_non_nullable
+              as String?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -1165,6 +1292,10 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
       enableNsfw: enableNsfw == freezed
           ? _value.enableNsfw
           : enableNsfw // ignore: cast_nullable_to_non_nullable
+              as bool,
+      communityCreationAdminOnly: communityCreationAdminOnly == freezed
+          ? _value.communityCreationAdminOnly
+          : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool,
       icon: icon == freezed
           ? _value.icon
@@ -1187,6 +1318,7 @@ class _$_Site extends _Site {
   _$_Site(
       {required this.id,
       required this.name,
+      this.sidebar,
       this.description,
       required this.creatorId,
       required this.published,
@@ -1194,6 +1326,7 @@ class _$_Site extends _Site {
       required this.enableDownvotes,
       required this.openRegistration,
       required this.enableNsfw,
+      required this.communityCreationAdminOnly,
       this.icon,
       this.banner})
       : super._();
@@ -1205,6 +1338,8 @@ class _$_Site extends _Site {
   final int id;
   @override
   final String name;
+  @override
+  final String? sidebar;
   @override
   final String? description;
   @override
@@ -1220,13 +1355,15 @@ class _$_Site extends _Site {
   @override
   final bool enableNsfw;
   @override
+  final bool communityCreationAdminOnly;
+  @override
   final String? icon;
   @override
   final String? banner;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, icon: $icon, banner: $banner)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner)';
   }
 
   @override
@@ -1237,6 +1374,9 @@ class _$_Site extends _Site {
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.sidebar, sidebar) ||
+                const DeepCollectionEquality()
+                    .equals(other.sidebar, sidebar)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
@@ -1258,6 +1398,11 @@ class _$_Site extends _Site {
             (identical(other.enableNsfw, enableNsfw) ||
                 const DeepCollectionEquality()
                     .equals(other.enableNsfw, enableNsfw)) &&
+            (identical(other.communityCreationAdminOnly,
+                    communityCreationAdminOnly) ||
+                const DeepCollectionEquality().equals(
+                    other.communityCreationAdminOnly,
+                    communityCreationAdminOnly)) &&
             (identical(other.icon, icon) ||
                 const DeepCollectionEquality().equals(other.icon, icon)) &&
             (identical(other.banner, banner) ||
@@ -1269,6 +1414,7 @@ class _$_Site extends _Site {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(sidebar) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(creatorId) ^
       const DeepCollectionEquality().hash(published) ^
@@ -1276,6 +1422,7 @@ class _$_Site extends _Site {
       const DeepCollectionEquality().hash(enableDownvotes) ^
       const DeepCollectionEquality().hash(openRegistration) ^
       const DeepCollectionEquality().hash(enableNsfw) ^
+      const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(icon) ^
       const DeepCollectionEquality().hash(banner);
 
@@ -1294,6 +1441,7 @@ abstract class _Site extends Site {
   factory _Site(
       {required int id,
       required String name,
+      String? sidebar,
       String? description,
       required int creatorId,
       required DateTime published,
@@ -1301,6 +1449,7 @@ abstract class _Site extends Site {
       required bool enableDownvotes,
       required bool openRegistration,
       required bool enableNsfw,
+      required bool communityCreationAdminOnly,
       String? icon,
       String? banner}) = _$_Site;
   _Site._() : super._();
@@ -1311,6 +1460,8 @@ abstract class _Site extends Site {
   int get id => throw _privateConstructorUsedError;
   @override
   String get name => throw _privateConstructorUsedError;
+  @override
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override
@@ -1325,6 +1476,8 @@ abstract class _Site extends Site {
   bool get openRegistration => throw _privateConstructorUsedError;
   @override
   bool get enableNsfw => throw _privateConstructorUsedError;
+  @override
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
   String? get icon => throw _privateConstructorUsedError;
   @override
@@ -5535,7 +5688,6 @@ class _$CommunitySafeTearOff {
       required String name,
       required String title,
       String? description,
-      required int creatorId,
       required bool removed,
       required DateTime published,
       DateTime? updated,
@@ -5550,7 +5702,6 @@ class _$CommunitySafeTearOff {
       name: name,
       title: title,
       description: description,
-      creatorId: creatorId,
       removed: removed,
       published: published,
       updated: updated,
@@ -5577,7 +5728,6 @@ mixin _$CommunitySafe {
   String get name => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
   bool get removed => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
@@ -5604,7 +5754,6 @@ abstract class $CommunitySafeCopyWith<$Res> {
       String name,
       String title,
       String? description,
-      int creatorId,
       bool removed,
       DateTime published,
       DateTime? updated,
@@ -5631,7 +5780,6 @@ class _$CommunitySafeCopyWithImpl<$Res>
     Object? name = freezed,
     Object? title = freezed,
     Object? description = freezed,
-    Object? creatorId = freezed,
     Object? removed = freezed,
     Object? published = freezed,
     Object? updated = freezed,
@@ -5659,10 +5807,6 @@ class _$CommunitySafeCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
       removed: removed == freezed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
@@ -5715,7 +5859,6 @@ abstract class _$CommunitySafeCopyWith<$Res>
       String name,
       String title,
       String? description,
-      int creatorId,
       bool removed,
       DateTime published,
       DateTime? updated,
@@ -5744,7 +5887,6 @@ class __$CommunitySafeCopyWithImpl<$Res>
     Object? name = freezed,
     Object? title = freezed,
     Object? description = freezed,
-    Object? creatorId = freezed,
     Object? removed = freezed,
     Object? published = freezed,
     Object? updated = freezed,
@@ -5772,10 +5914,6 @@ class __$CommunitySafeCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
       removed: removed == freezed
           ? _value.removed
           : removed // ignore: cast_nullable_to_non_nullable
@@ -5827,7 +5965,6 @@ class _$_CommunitySafe extends _CommunitySafe {
       required this.name,
       required this.title,
       this.description,
-      required this.creatorId,
       required this.removed,
       required this.published,
       this.updated,
@@ -5851,8 +5988,6 @@ class _$_CommunitySafe extends _CommunitySafe {
   @override
   final String? description;
   @override
-  final int creatorId;
-  @override
   final bool removed;
   @override
   final DateTime published;
@@ -5873,7 +6008,7 @@ class _$_CommunitySafe extends _CommunitySafe {
 
   @override
   String toString() {
-    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, creatorId: $creatorId, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner)';
+    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner)';
   }
 
   @override
@@ -5889,9 +6024,6 @@ class _$_CommunitySafe extends _CommunitySafe {
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.creatorId, creatorId) ||
-                const DeepCollectionEquality()
-                    .equals(other.creatorId, creatorId)) &&
             (identical(other.removed, removed) ||
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
@@ -5924,7 +6056,6 @@ class _$_CommunitySafe extends _CommunitySafe {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(creatorId) ^
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated) ^
@@ -5952,7 +6083,6 @@ abstract class _CommunitySafe extends CommunitySafe {
       required String name,
       required String title,
       String? description,
-      required int creatorId,
       required bool removed,
       required DateTime published,
       DateTime? updated,
@@ -5975,8 +6105,6 @@ abstract class _CommunitySafe extends CommunitySafe {
   String get title => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
-  @override
-  int get creatorId => throw _privateConstructorUsedError;
   @override
   bool get removed => throw _privateConstructorUsedError;
   @override

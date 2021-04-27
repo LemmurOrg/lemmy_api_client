@@ -25,11 +25,9 @@ class CreateComment
   factory CreateComment.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentFromJson(json);
 
-  @override
-  String path() => '/comment';
+  final path = '/comment';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -50,11 +48,9 @@ class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
   factory EditComment.fromJson(Map<String, dynamic> json) =>
       _$EditCommentFromJson(json);
 
-  @override
-  String path() => '/comment';
+  final path = '/comment';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -76,11 +72,9 @@ class DeleteComment
   factory DeleteComment.fromJson(Map<String, dynamic> json) =>
       _$DeleteCommentFromJson(json);
 
-  @override
-  String path() => '/comment/delete';
+  final path = '/comment/delete';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -103,11 +97,9 @@ class RemoveComment
   factory RemoveComment.fromJson(Map<String, dynamic> json) =>
       _$RemoveCommentFromJson(json);
 
-  @override
-  String path() => '/comment/remove';
+  final path = '/comment/remove';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -129,11 +121,9 @@ class MarkCommentAsRead
   factory MarkCommentAsRead.fromJson(Map<String, dynamic> json) =>
       _$MarkCommentAsReadFromJson(json);
 
-  @override
-  String path() => '/comment/mark_as_read';
+  final path = '/comment/mark_as_read';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -153,11 +143,9 @@ class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
   factory SaveComment.fromJson(Map<String, dynamic> json) =>
       _$SaveCommentFromJson(json);
 
-  @override
-  String path() => '/comment/save';
+  final path = '/comment/save';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.put;
+  final httpMethod = HttpMethod.put;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -179,11 +167,9 @@ class CreateCommentLike
   factory CreateCommentLike.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentLikeFromJson(json);
 
-  @override
-  String path() => '/comment/like';
+  final path = '/comment/like';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.post;
+  final httpMethod = HttpMethod.post;
 
   @override
   FullCommentView responseFactory(Map<String, dynamic> json) =>
@@ -196,13 +182,13 @@ class GetComments
     implements LemmyApiQuery<List<CommentView>> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetComments({
-    @JsonKey(name: 'type_') required CommentListingType type,
-    required SortType sort,
+    @JsonKey(name: 'type_') CommentListingType? type,
+    SortType? sort,
     int? page,
     int? limit,
     int? communityId,
     String? communityName,
-    required bool savedOnly,
+    bool? savedOnly,
     String? auth,
   }) = _GetComments;
 
@@ -210,11 +196,9 @@ class GetComments
   factory GetComments.fromJson(Map<String, dynamic> json) =>
       _$GetCommentsFromJson(json);
 
-  @override
-  String path() => '/comment/list';
+  final path = '/comment/list';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<CommentView> responseFactory(Map<String, dynamic> json) =>
@@ -239,11 +223,9 @@ class CreateCommentReport
   factory CreateCommentReport.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentReportFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
@@ -265,11 +247,9 @@ class ResolveCommentReport
   factory ResolveCommentReport.fromJson(Map<String, dynamic> json) =>
       _$ResolveCommentReportFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   ResolveCommentReportResponse responseFactory(Map<String, dynamic> json) =>
@@ -293,11 +273,9 @@ class ListCommentReports
   factory ListCommentReports.fromJson(Map<String, dynamic> json) =>
       _$ListCommentReportsFromJson(json);
 
-  @override
-  String path() => 'xyz';
+  final path = 'xyz';
 
-  @override
-  HttpMethod httpMethod() => HttpMethod.get;
+  final httpMethod = HttpMethod.get;
 
   @override
   List<CommentReportView> responseFactory(Map<String, dynamic> json) =>

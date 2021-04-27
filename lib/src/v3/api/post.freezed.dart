@@ -187,7 +187,7 @@ class _$CreatePostTearOff {
       {required String name,
       String? url,
       String? body,
-      required bool nsfw,
+      bool? nsfw,
       required int communityId,
       required String auth}) {
     return _CreatePost(
@@ -213,7 +213,7 @@ mixin _$CreatePost {
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
@@ -232,7 +232,7 @@ abstract class $CreatePostCopyWith<$Res> {
       {String name,
       String? url,
       String? body,
-      bool nsfw,
+      bool? nsfw,
       int communityId,
       String auth});
 }
@@ -270,7 +270,7 @@ class _$CreatePostCopyWithImpl<$Res> implements $CreatePostCopyWith<$Res> {
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -293,7 +293,7 @@ abstract class _$CreatePostCopyWith<$Res> implements $CreatePostCopyWith<$Res> {
       {String name,
       String? url,
       String? body,
-      bool nsfw,
+      bool? nsfw,
       int communityId,
       String auth});
 }
@@ -333,7 +333,7 @@ class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -354,7 +354,7 @@ class _$_CreatePost extends _CreatePost {
       {required this.name,
       this.url,
       this.body,
-      required this.nsfw,
+      this.nsfw,
       required this.communityId,
       required this.auth})
       : super._();
@@ -369,7 +369,7 @@ class _$_CreatePost extends _CreatePost {
   @override
   final String? body;
   @override
-  final bool nsfw;
+  final bool? nsfw;
   @override
   final int communityId;
   @override
@@ -425,7 +425,7 @@ abstract class _CreatePost extends CreatePost {
       {required String name,
       String? url,
       String? body,
-      required bool nsfw,
+      bool? nsfw,
       required int communityId,
       required String auth}) = _$_CreatePost;
   const _CreatePost._() : super._();
@@ -440,7 +440,7 @@ abstract class _CreatePost extends CreatePost {
   @override
   String? get body => throw _privateConstructorUsedError;
   @override
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
   int get communityId => throw _privateConstructorUsedError;
   @override
@@ -460,13 +460,13 @@ class _$GetPostsTearOff {
   const _$GetPostsTearOff();
 
   _GetPosts call(
-      {@JsonKey(name: 'type_') required PostListingType type,
-      required SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) {
     return _GetPosts(
       type: type,
@@ -491,13 +491,13 @@ const $GetPosts = _$GetPostsTearOff();
 /// @nodoc
 mixin _$GetPosts {
   @JsonKey(name: 'type_')
-  PostListingType get type => throw _privateConstructorUsedError;
-  SortType get sort => throw _privateConstructorUsedError;
+  PostListingType? get type => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
   int? get communityId => throw _privateConstructorUsedError;
   String? get communityName => throw _privateConstructorUsedError;
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -511,13 +511,13 @@ abstract class $GetPostsCopyWith<$Res> {
   factory $GetPostsCopyWith(GetPosts value, $Res Function(GetPosts) then) =
       _$GetPostsCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'type_') PostListingType type,
-      SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -544,11 +544,11 @@ class _$GetPostsCopyWithImpl<$Res> implements $GetPostsCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -568,7 +568,7 @@ class _$GetPostsCopyWithImpl<$Res> implements $GetPostsCopyWith<$Res> {
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -583,13 +583,13 @@ abstract class _$GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
       __$GetPostsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'type_') PostListingType type,
-      SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      bool savedOnly,
+      bool? savedOnly,
       String? auth});
 }
 
@@ -617,11 +617,11 @@ class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as PostListingType,
+              as PostListingType?,
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
-              as SortType,
+              as SortType?,
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -641,7 +641,7 @@ class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
       savedOnly: savedOnly == freezed
           ? _value.savedOnly
           : savedOnly // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -655,13 +655,13 @@ class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetPosts extends _GetPosts {
   const _$_GetPosts(
-      {@JsonKey(name: 'type_') required this.type,
-      required this.sort,
+      {@JsonKey(name: 'type_') this.type,
+      this.sort,
       this.page,
       this.limit,
       this.communityId,
       this.communityName,
-      required this.savedOnly,
+      this.savedOnly,
       this.auth})
       : super._();
 
@@ -670,9 +670,9 @@ class _$_GetPosts extends _GetPosts {
 
   @override
   @JsonKey(name: 'type_')
-  final PostListingType type;
+  final PostListingType? type;
   @override
-  final SortType sort;
+  final SortType? sort;
   @override
   final int? page;
   @override
@@ -682,7 +682,7 @@ class _$_GetPosts extends _GetPosts {
   @override
   final String? communityName;
   @override
-  final bool savedOnly;
+  final bool? savedOnly;
   @override
   final String? auth;
 
@@ -741,13 +741,13 @@ class _$_GetPosts extends _GetPosts {
 
 abstract class _GetPosts extends GetPosts {
   const factory _GetPosts(
-      {@JsonKey(name: 'type_') required PostListingType type,
-      required SortType sort,
+      {@JsonKey(name: 'type_') PostListingType? type,
+      SortType? sort,
       int? page,
       int? limit,
       int? communityId,
       String? communityName,
-      required bool savedOnly,
+      bool? savedOnly,
       String? auth}) = _$_GetPosts;
   const _GetPosts._() : super._();
 
@@ -755,9 +755,9 @@ abstract class _GetPosts extends GetPosts {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType get type => throw _privateConstructorUsedError;
+  PostListingType? get type => throw _privateConstructorUsedError;
   @override
-  SortType get sort => throw _privateConstructorUsedError;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
   int? get page => throw _privateConstructorUsedError;
   @override
@@ -767,7 +767,7 @@ abstract class _GetPosts extends GetPosts {
   @override
   String? get communityName => throw _privateConstructorUsedError;
   @override
-  bool get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   @override
   String? get auth => throw _privateConstructorUsedError;
   @override
@@ -982,10 +982,10 @@ class _$EditPostTearOff {
 
   _EditPost call(
       {required int postId,
-      required String name,
+      String? name,
       String? url,
       String? body,
-      required bool nsfw,
+      bool? nsfw,
       required String auth}) {
     return _EditPost(
       postId: postId,
@@ -1008,10 +1008,10 @@ const $EditPost = _$EditPostTearOff();
 /// @nodoc
 mixin _$EditPost {
   int get postId => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get body => throw _privateConstructorUsedError;
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1026,10 +1026,10 @@ abstract class $EditPostCopyWith<$Res> {
       _$EditPostCopyWithImpl<$Res>;
   $Res call(
       {int postId,
-      String name,
+      String? name,
       String? url,
       String? body,
-      bool nsfw,
+      bool? nsfw,
       String auth});
 }
 
@@ -1058,7 +1058,7 @@ class _$EditPostCopyWithImpl<$Res> implements $EditPostCopyWith<$Res> {
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1070,7 +1070,7 @@ class _$EditPostCopyWithImpl<$Res> implements $EditPostCopyWith<$Res> {
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1086,10 +1086,10 @@ abstract class _$EditPostCopyWith<$Res> implements $EditPostCopyWith<$Res> {
   @override
   $Res call(
       {int postId,
-      String name,
+      String? name,
       String? url,
       String? body,
-      bool nsfw,
+      bool? nsfw,
       String auth});
 }
 
@@ -1119,7 +1119,7 @@ class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1131,7 +1131,7 @@ class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
       nsfw: nsfw == freezed
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1146,10 +1146,10 @@ class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
 class _$_EditPost extends _EditPost {
   const _$_EditPost(
       {required this.postId,
-      required this.name,
+      this.name,
       this.url,
       this.body,
-      required this.nsfw,
+      this.nsfw,
       required this.auth})
       : super._();
 
@@ -1159,13 +1159,13 @@ class _$_EditPost extends _EditPost {
   @override
   final int postId;
   @override
-  final String name;
+  final String? name;
   @override
   final String? url;
   @override
   final String? body;
   @override
-  final bool nsfw;
+  final bool? nsfw;
   @override
   final String auth;
 
@@ -1216,10 +1216,10 @@ class _$_EditPost extends _EditPost {
 abstract class _EditPost extends EditPost {
   const factory _EditPost(
       {required int postId,
-      required String name,
+      String? name,
       String? url,
       String? body,
-      required bool nsfw,
+      bool? nsfw,
       required String auth}) = _$_EditPost;
   const _EditPost._() : super._();
 
@@ -1228,13 +1228,13 @@ abstract class _EditPost extends EditPost {
   @override
   int get postId => throw _privateConstructorUsedError;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
   @override
   String? get body => throw _privateConstructorUsedError;
   @override
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
   String get auth => throw _privateConstructorUsedError;
   @override
