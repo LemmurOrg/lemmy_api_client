@@ -358,6 +358,34 @@ class CommunityModeratorView with _$CommunityModeratorView {
 }
 
 @freezed
+class PersonBlockView with _$PersonBlockView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory PersonBlockView({
+    required PersonSafe person,
+    required PersonSafe recipient,
+    required String instanceHost,
+  }) = _PersonBlockView;
+
+  PersonBlockView._();
+  factory PersonBlockView.fromJson(Map<String, dynamic> json) =>
+      _$PersonBlockViewFromJson(json);
+}
+
+@freezed
+class CommunityBlockView with _$CommunityBlockView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory CommunityBlockView({
+    required PersonSafe person,
+    required CommunitySafe community,
+    required String instanceHost,
+  }) = _CommunityBlockView;
+
+  CommunityBlockView._();
+  factory CommunityBlockView.fromJson(Map<String, dynamic> json) =>
+      _$CommunityBlockViewFromJson(json);
+}
+
+@freezed
 class CommunityPersonBanView with _$CommunityPersonBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityPersonBanView({

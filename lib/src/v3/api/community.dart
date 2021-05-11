@@ -303,3 +303,28 @@ class TransferCommunity
   FullCommunityView responseFactory(Map<String, dynamic> json) =>
       FullCommunityView.fromJson(json);
 }
+
+@freezed
+class BlockCommunity
+    with _$BlockCommunity
+    implements LemmyApiQuery<CommunityView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory BlockCommunity({
+    required int communityId,
+    required bool block,
+    required String auth,
+  }) = _BlockCommunity;
+
+  const BlockCommunity._();
+
+  factory BlockCommunity.fromJson(Map<String, dynamic> json) =>
+      _$BlockCommunityFromJson(json);
+
+  final path = '/community/block';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  CommunityView responseFactory(Map<String, dynamic> json) =>
+      CommunityView.fromJson(json['community_view']);
+}

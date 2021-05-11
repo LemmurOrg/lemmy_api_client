@@ -154,6 +154,8 @@ class FullPersonView with _$FullPersonView {
   factory FullPersonView({
     required PersonViewSafe personView,
     required List<CommunityFollowerView> follows,
+    required List<CommunityBlockView> communityBlocks,
+    required List<PersonBlockView> personBlocks,
     required List<CommunityModeratorView> moderates,
     required List<CommentView> comments,
     required List<PostView> posts,
@@ -210,6 +212,7 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
       _$ResolveObjectResponseFromJson(json);
 }
 
+@freezed
 class SiteMetadata with _$SiteMetadata {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SiteMetadata({
@@ -223,6 +226,20 @@ class SiteMetadata with _$SiteMetadata {
   SiteMetadata._();
   factory SiteMetadata.fromJson(Map<String, dynamic> json) =>
       _$SiteMetadataFromJson(json);
+}
+
+@freezed
+class BlockedPerson with _$BlockedPerson {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory BlockedPerson({
+    required PersonViewSafe personView,
+    required bool blocked,
+    required String instanceHost,
+  }) = _BlockedPerson;
+
+  BlockedPerson._();
+  factory BlockedPerson.fromJson(Map<String, dynamic> json) =>
+      _$BlockedPersonFromJson(json);
 }
 
 // TODO: this does not seem to exist yet

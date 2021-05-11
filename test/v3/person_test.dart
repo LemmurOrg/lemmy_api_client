@@ -200,6 +200,57 @@ void main() {
       });
 
       group('GetReportCount', () {});
+
+      group('GetBlockedPersons', () {
+        test(
+          'correctly fetches',
+          () => run(GetBlockedPersons(auth: goodAuth)),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const GetBlockedPersons(auth: badAuth)),
+        );
+      });
+
+      group('GetBlockedCommunities', () {
+        test(
+          'correctly fetches',
+          () => run(GetBlockedCommunities(auth: goodAuth)),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const GetBlockedCommunities(auth: badAuth)),
+        );
+      });
+
+      group('BlockPerson', () {
+        test(
+          'correctly fetches',
+          () => run(BlockPerson(
+            personId: goodPersonId,
+            block: false,
+            auth: goodAuth,
+          )),
+        );
+        test(
+          'bad auth',
+          () => lemmyThrows(const BlockPerson(
+            personId: goodPersonId,
+            block: false,
+            auth: badAuth,
+          )),
+        );
+        test(
+          'bad person id',
+          () => lemmyThrows(BlockPerson(
+            personId: badPersonId,
+            block: false,
+            auth: goodAuth,
+          )),
+        );
+      });
     });
   });
 }

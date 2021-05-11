@@ -97,6 +97,33 @@ void main() {
       });
 
       group('TransferCommunity', () {});
+
+      group('BlockCommunity', () {
+        test(
+          'correctly fetches',
+          () => run(BlockCommunity(
+            communityId: goodCommunityId,
+            block: false,
+            auth: goodAuth,
+          )),
+        );
+        test(
+          'bad auth',
+          () => lemmyThrows(const BlockCommunity(
+            communityId: goodCommunityId,
+            block: false,
+            auth: badAuth,
+          )),
+        );
+        test(
+          'bad community id',
+          () => lemmyThrows(BlockCommunity(
+            communityId: badCommunityId,
+            block: false,
+            auth: goodAuth,
+          )),
+        );
+      });
     });
   });
 }

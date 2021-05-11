@@ -210,6 +210,16 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
       WsEventResolveObject(const ResolveObject(q: '').responseFactory(json)),
   'GetSiteMetadata': (json) => WsEventGetSiteMetadata(
       const GetSiteMetadata(url: '').responseFactory(json)),
+  'BlockPerson': (json) => WsEventBlockPerson(
+      const BlockPerson(personId: 0, block: true, auth: '')
+          .responseFactory(json)),
+  'GetBlockedPersons': (json) => WsEventGetBlockedPersons(
+      const GetBlockedPersons(auth: '').responseFactory(json)),
+  'BlockCommunity': (json) => WsEventBlockCommunity(
+      const BlockCommunity(communityId: 0, block: true, auth: '')
+          .responseFactory(json)),
+  'GetBlockedCommunities': (json) => WsEventGetBlockedCommunities(
+      const GetBlockedCommunities(auth: '').responseFactory(json)),
 };
 
 class WsEvent<T> {
@@ -487,4 +497,21 @@ class WsEventResolveObject extends WsEvent<ResolveObjectResponse> {
 
 class WsEventGetSiteMetadata extends WsEvent<SiteMetadata> {
   const WsEventGetSiteMetadata(SiteMetadata data) : super(data);
+}
+
+class WsEventBlockPerson extends WsEvent<BlockedPerson> {
+  const WsEventBlockPerson(BlockedPerson data) : super(data);
+}
+
+class WsEventGetBlockedPersons extends WsEvent<List<PersonBlockView>> {
+  const WsEventGetBlockedPersons(List<PersonBlockView> data) : super(data);
+}
+
+class WsEventBlockCommunity extends WsEvent<CommunityView> {
+  const WsEventBlockCommunity(CommunityView data) : super(data);
+}
+
+class WsEventGetBlockedCommunities extends WsEvent<List<CommunityBlockView>> {
+  const WsEventGetBlockedCommunities(List<CommunityBlockView> data)
+      : super(data);
 }

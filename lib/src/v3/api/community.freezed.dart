@@ -2598,3 +2598,200 @@ abstract class _TransferCommunity extends TransferCommunity {
   _$TransferCommunityCopyWith<_TransferCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+BlockCommunity _$BlockCommunityFromJson(Map<String, dynamic> json) {
+  return _BlockCommunity.fromJson(json);
+}
+
+/// @nodoc
+class _$BlockCommunityTearOff {
+  const _$BlockCommunityTearOff();
+
+  _BlockCommunity call(
+      {required int communityId, required bool block, required String auth}) {
+    return _BlockCommunity(
+      communityId: communityId,
+      block: block,
+      auth: auth,
+    );
+  }
+
+  BlockCommunity fromJson(Map<String, Object> json) {
+    return BlockCommunity.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $BlockCommunity = _$BlockCommunityTearOff();
+
+/// @nodoc
+mixin _$BlockCommunity {
+  int get communityId => throw _privateConstructorUsedError;
+  bool get block => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BlockCommunityCopyWith<BlockCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BlockCommunityCopyWith<$Res> {
+  factory $BlockCommunityCopyWith(
+          BlockCommunity value, $Res Function(BlockCommunity) then) =
+      _$BlockCommunityCopyWithImpl<$Res>;
+  $Res call({int communityId, bool block, String auth});
+}
+
+/// @nodoc
+class _$BlockCommunityCopyWithImpl<$Res>
+    implements $BlockCommunityCopyWith<$Res> {
+  _$BlockCommunityCopyWithImpl(this._value, this._then);
+
+  final BlockCommunity _value;
+  // ignore: unused_field
+  final $Res Function(BlockCommunity) _then;
+
+  @override
+  $Res call({
+    Object? communityId = freezed,
+    Object? block = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      block: block == freezed
+          ? _value.block
+          : block // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$BlockCommunityCopyWith<$Res>
+    implements $BlockCommunityCopyWith<$Res> {
+  factory _$BlockCommunityCopyWith(
+          _BlockCommunity value, $Res Function(_BlockCommunity) then) =
+      __$BlockCommunityCopyWithImpl<$Res>;
+  @override
+  $Res call({int communityId, bool block, String auth});
+}
+
+/// @nodoc
+class __$BlockCommunityCopyWithImpl<$Res>
+    extends _$BlockCommunityCopyWithImpl<$Res>
+    implements _$BlockCommunityCopyWith<$Res> {
+  __$BlockCommunityCopyWithImpl(
+      _BlockCommunity _value, $Res Function(_BlockCommunity) _then)
+      : super(_value, (v) => _then(v as _BlockCommunity));
+
+  @override
+  _BlockCommunity get _value => super._value as _BlockCommunity;
+
+  @override
+  $Res call({
+    Object? communityId = freezed,
+    Object? block = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_BlockCommunity(
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      block: block == freezed
+          ? _value.block
+          : block // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_BlockCommunity extends _BlockCommunity {
+  const _$_BlockCommunity(
+      {required this.communityId, required this.block, required this.auth})
+      : super._();
+
+  factory _$_BlockCommunity.fromJson(Map<String, dynamic> json) =>
+      _$_$_BlockCommunityFromJson(json);
+
+  @override
+  final int communityId;
+  @override
+  final bool block;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'BlockCommunity(communityId: $communityId, block: $block, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _BlockCommunity &&
+            (identical(other.communityId, communityId) ||
+                const DeepCollectionEquality()
+                    .equals(other.communityId, communityId)) &&
+            (identical(other.block, block) ||
+                const DeepCollectionEquality().equals(other.block, block)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(communityId) ^
+      const DeepCollectionEquality().hash(block) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @JsonKey(ignore: true)
+  @override
+  _$BlockCommunityCopyWith<_BlockCommunity> get copyWith =>
+      __$BlockCommunityCopyWithImpl<_BlockCommunity>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_BlockCommunityToJson(this);
+  }
+}
+
+abstract class _BlockCommunity extends BlockCommunity {
+  const factory _BlockCommunity(
+      {required int communityId,
+      required bool block,
+      required String auth}) = _$_BlockCommunity;
+  const _BlockCommunity._() : super._();
+
+  factory _BlockCommunity.fromJson(Map<String, dynamic> json) =
+      _$_BlockCommunity.fromJson;
+
+  @override
+  int get communityId => throw _privateConstructorUsedError;
+  @override
+  bool get block => throw _privateConstructorUsedError;
+  @override
+  String get auth => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$BlockCommunityCopyWith<_BlockCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}

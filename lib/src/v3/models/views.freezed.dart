@@ -6636,6 +6636,454 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
       throw _privateConstructorUsedError;
 }
 
+PersonBlockView _$PersonBlockViewFromJson(Map<String, dynamic> json) {
+  return _PersonBlockView.fromJson(json);
+}
+
+/// @nodoc
+class _$PersonBlockViewTearOff {
+  const _$PersonBlockViewTearOff();
+
+  _PersonBlockView call(
+      {required PersonSafe person,
+      required PersonSafe recipient,
+      required String instanceHost}) {
+    return _PersonBlockView(
+      person: person,
+      recipient: recipient,
+      instanceHost: instanceHost,
+    );
+  }
+
+  PersonBlockView fromJson(Map<String, Object> json) {
+    return PersonBlockView.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $PersonBlockView = _$PersonBlockViewTearOff();
+
+/// @nodoc
+mixin _$PersonBlockView {
+  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get recipient => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PersonBlockViewCopyWith<PersonBlockView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PersonBlockViewCopyWith<$Res> {
+  factory $PersonBlockViewCopyWith(
+          PersonBlockView value, $Res Function(PersonBlockView) then) =
+      _$PersonBlockViewCopyWithImpl<$Res>;
+  $Res call({PersonSafe person, PersonSafe recipient, String instanceHost});
+
+  $PersonSafeCopyWith<$Res> get person;
+  $PersonSafeCopyWith<$Res> get recipient;
+}
+
+/// @nodoc
+class _$PersonBlockViewCopyWithImpl<$Res>
+    implements $PersonBlockViewCopyWith<$Res> {
+  _$PersonBlockViewCopyWithImpl(this._value, this._then);
+
+  final PersonBlockView _value;
+  // ignore: unused_field
+  final $Res Function(PersonBlockView) _then;
+
+  @override
+  $Res call({
+    Object? person = freezed,
+    Object? recipient = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res> get person {
+    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+      return _then(_value.copyWith(person: value));
+    });
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res> get recipient {
+    return $PersonSafeCopyWith<$Res>(_value.recipient, (value) {
+      return _then(_value.copyWith(recipient: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$PersonBlockViewCopyWith<$Res>
+    implements $PersonBlockViewCopyWith<$Res> {
+  factory _$PersonBlockViewCopyWith(
+          _PersonBlockView value, $Res Function(_PersonBlockView) then) =
+      __$PersonBlockViewCopyWithImpl<$Res>;
+  @override
+  $Res call({PersonSafe person, PersonSafe recipient, String instanceHost});
+
+  @override
+  $PersonSafeCopyWith<$Res> get person;
+  @override
+  $PersonSafeCopyWith<$Res> get recipient;
+}
+
+/// @nodoc
+class __$PersonBlockViewCopyWithImpl<$Res>
+    extends _$PersonBlockViewCopyWithImpl<$Res>
+    implements _$PersonBlockViewCopyWith<$Res> {
+  __$PersonBlockViewCopyWithImpl(
+      _PersonBlockView _value, $Res Function(_PersonBlockView) _then)
+      : super(_value, (v) => _then(v as _PersonBlockView));
+
+  @override
+  _PersonBlockView get _value => super._value as _PersonBlockView;
+
+  @override
+  $Res call({
+    Object? person = freezed,
+    Object? recipient = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_PersonBlockView(
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_PersonBlockView extends _PersonBlockView {
+  _$_PersonBlockView(
+      {required this.person,
+      required this.recipient,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_PersonBlockView.fromJson(Map<String, dynamic> json) =>
+      _$_$_PersonBlockViewFromJson(json);
+
+  @override
+  final PersonSafe person;
+  @override
+  final PersonSafe recipient;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'PersonBlockView(person: $person, recipient: $recipient, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _PersonBlockView &&
+            (identical(other.person, person) ||
+                const DeepCollectionEquality().equals(other.person, person)) &&
+            (identical(other.recipient, recipient) ||
+                const DeepCollectionEquality()
+                    .equals(other.recipient, recipient)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(person) ^
+      const DeepCollectionEquality().hash(recipient) ^
+      const DeepCollectionEquality().hash(instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  _$PersonBlockViewCopyWith<_PersonBlockView> get copyWith =>
+      __$PersonBlockViewCopyWithImpl<_PersonBlockView>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_PersonBlockViewToJson(this);
+  }
+}
+
+abstract class _PersonBlockView extends PersonBlockView {
+  factory _PersonBlockView(
+      {required PersonSafe person,
+      required PersonSafe recipient,
+      required String instanceHost}) = _$_PersonBlockView;
+  _PersonBlockView._() : super._();
+
+  factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
+      _$_PersonBlockView.fromJson;
+
+  @override
+  PersonSafe get person => throw _privateConstructorUsedError;
+  @override
+  PersonSafe get recipient => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$PersonBlockViewCopyWith<_PersonBlockView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
+  return _CommunityBlockView.fromJson(json);
+}
+
+/// @nodoc
+class _$CommunityBlockViewTearOff {
+  const _$CommunityBlockViewTearOff();
+
+  _CommunityBlockView call(
+      {required PersonSafe person,
+      required CommunitySafe community,
+      required String instanceHost}) {
+    return _CommunityBlockView(
+      person: person,
+      community: community,
+      instanceHost: instanceHost,
+    );
+  }
+
+  CommunityBlockView fromJson(Map<String, Object> json) {
+    return CommunityBlockView.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $CommunityBlockView = _$CommunityBlockViewTearOff();
+
+/// @nodoc
+mixin _$CommunityBlockView {
+  PersonSafe get person => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CommunityBlockViewCopyWith<CommunityBlockView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CommunityBlockViewCopyWith<$Res> {
+  factory $CommunityBlockViewCopyWith(
+          CommunityBlockView value, $Res Function(CommunityBlockView) then) =
+      _$CommunityBlockViewCopyWithImpl<$Res>;
+  $Res call({PersonSafe person, CommunitySafe community, String instanceHost});
+
+  $PersonSafeCopyWith<$Res> get person;
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class _$CommunityBlockViewCopyWithImpl<$Res>
+    implements $CommunityBlockViewCopyWith<$Res> {
+  _$CommunityBlockViewCopyWithImpl(this._value, this._then);
+
+  final CommunityBlockView _value;
+  // ignore: unused_field
+  final $Res Function(CommunityBlockView) _then;
+
+  @override
+  $Res call({
+    Object? person = freezed,
+    Object? community = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res> get person {
+    return $PersonSafeCopyWith<$Res>(_value.person, (value) {
+      return _then(_value.copyWith(person: value));
+    });
+  }
+
+  @override
+  $CommunitySafeCopyWith<$Res> get community {
+    return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
+      return _then(_value.copyWith(community: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$CommunityBlockViewCopyWith<$Res>
+    implements $CommunityBlockViewCopyWith<$Res> {
+  factory _$CommunityBlockViewCopyWith(
+          _CommunityBlockView value, $Res Function(_CommunityBlockView) then) =
+      __$CommunityBlockViewCopyWithImpl<$Res>;
+  @override
+  $Res call({PersonSafe person, CommunitySafe community, String instanceHost});
+
+  @override
+  $PersonSafeCopyWith<$Res> get person;
+  @override
+  $CommunitySafeCopyWith<$Res> get community;
+}
+
+/// @nodoc
+class __$CommunityBlockViewCopyWithImpl<$Res>
+    extends _$CommunityBlockViewCopyWithImpl<$Res>
+    implements _$CommunityBlockViewCopyWith<$Res> {
+  __$CommunityBlockViewCopyWithImpl(
+      _CommunityBlockView _value, $Res Function(_CommunityBlockView) _then)
+      : super(_value, (v) => _then(v as _CommunityBlockView));
+
+  @override
+  _CommunityBlockView get _value => super._value as _CommunityBlockView;
+
+  @override
+  $Res call({
+    Object? person = freezed,
+    Object? community = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_CommunityBlockView(
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_CommunityBlockView extends _CommunityBlockView {
+  _$_CommunityBlockView(
+      {required this.person,
+      required this.community,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_CommunityBlockView.fromJson(Map<String, dynamic> json) =>
+      _$_$_CommunityBlockViewFromJson(json);
+
+  @override
+  final PersonSafe person;
+  @override
+  final CommunitySafe community;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'CommunityBlockView(person: $person, community: $community, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _CommunityBlockView &&
+            (identical(other.person, person) ||
+                const DeepCollectionEquality().equals(other.person, person)) &&
+            (identical(other.community, community) ||
+                const DeepCollectionEquality()
+                    .equals(other.community, community)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(person) ^
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  _$CommunityBlockViewCopyWith<_CommunityBlockView> get copyWith =>
+      __$CommunityBlockViewCopyWithImpl<_CommunityBlockView>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_CommunityBlockViewToJson(this);
+  }
+}
+
+abstract class _CommunityBlockView extends CommunityBlockView {
+  factory _CommunityBlockView(
+      {required PersonSafe person,
+      required CommunitySafe community,
+      required String instanceHost}) = _$_CommunityBlockView;
+  _CommunityBlockView._() : super._();
+
+  factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
+      _$_CommunityBlockView.fromJson;
+
+  @override
+  PersonSafe get person => throw _privateConstructorUsedError;
+  @override
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$CommunityBlockViewCopyWith<_CommunityBlockView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 CommunityPersonBanView _$CommunityPersonBanViewFromJson(
     Map<String, dynamic> json) {
   return _CommunityPersonBanView.fromJson(json);

@@ -500,6 +500,39 @@ Map<String, dynamic> _$_$_CommunityModeratorViewToJson(
       'instance_host': instance.instanceHost,
     };
 
+_$_PersonBlockView _$_$_PersonBlockViewFromJson(Map<String, dynamic> json) {
+  return _$_PersonBlockView(
+    person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
+    recipient: PersonSafe.fromJson(json['recipient'] as Map<String, dynamic>),
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_PersonBlockViewToJson(_$_PersonBlockView instance) =>
+    <String, dynamic>{
+      'person': instance.person.toJson(),
+      'recipient': instance.recipient.toJson(),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_CommunityBlockView _$_$_CommunityBlockViewFromJson(
+    Map<String, dynamic> json) {
+  return _$_CommunityBlockView(
+    person: PersonSafe.fromJson(json['person'] as Map<String, dynamic>),
+    community:
+        CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_CommunityBlockViewToJson(
+        _$_CommunityBlockView instance) =>
+    <String, dynamic>{
+      'person': instance.person.toJson(),
+      'community': instance.community.toJson(),
+      'instance_host': instance.instanceHost,
+    };
+
 _$_CommunityPersonBanView _$_$_CommunityPersonBanViewFromJson(
     Map<String, dynamic> json) {
   return _$_CommunityPersonBanView(

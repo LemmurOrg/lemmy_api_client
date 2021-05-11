@@ -237,6 +237,12 @@ _$_FullPersonView _$_$_FullPersonViewFromJson(Map<String, dynamic> json) {
     follows: (json['follows'] as List<dynamic>)
         .map((e) => CommunityFollowerView.fromJson(e as Map<String, dynamic>))
         .toList(),
+    communityBlocks: (json['community_blocks'] as List<dynamic>)
+        .map((e) => CommunityBlockView.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    personBlocks: (json['person_blocks'] as List<dynamic>)
+        .map((e) => PersonBlockView.fromJson(e as Map<String, dynamic>))
+        .toList(),
     moderates: (json['moderates'] as List<dynamic>)
         .map((e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -254,6 +260,9 @@ Map<String, dynamic> _$_$_FullPersonViewToJson(_$_FullPersonView instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
       'follows': instance.follows.map((e) => e.toJson()).toList(),
+      'community_blocks':
+          instance.communityBlocks.map((e) => e.toJson()).toList(),
+      'person_blocks': instance.personBlocks.map((e) => e.toJson()).toList(),
       'moderates': instance.moderates.map((e) => e.toJson()).toList(),
       'comments': instance.comments.map((e) => e.toJson()).toList(),
       'posts': instance.posts.map((e) => e.toJson()).toList(),
@@ -320,6 +329,41 @@ Map<String, dynamic> _$_$_ResolveObjectResponseToJson(
       'post': instance.post?.toJson(),
       'community': instance.community?.toJson(),
       'person': instance.person?.toJson(),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_SiteMetadata _$_$_SiteMetadataFromJson(Map<String, dynamic> json) {
+  return _$_SiteMetadata(
+    title: json['title'] as String?,
+    description: json['description'] as String?,
+    image: json['image'] as String?,
+    html: json['html'] as String?,
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_SiteMetadataToJson(_$_SiteMetadata instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+      'description': instance.description,
+      'image': instance.image,
+      'html': instance.html,
+      'instance_host': instance.instanceHost,
+    };
+
+_$_BlockedPerson _$_$_BlockedPersonFromJson(Map<String, dynamic> json) {
+  return _$_BlockedPerson(
+    personView:
+        PersonViewSafe.fromJson(json['person_view'] as Map<String, dynamic>),
+    blocked: json['blocked'] as bool,
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_BlockedPersonToJson(_$_BlockedPerson instance) =>
+    <String, dynamic>{
+      'person_view': instance.personView.toJson(),
+      'blocked': instance.blocked,
       'instance_host': instance.instanceHost,
     };
 

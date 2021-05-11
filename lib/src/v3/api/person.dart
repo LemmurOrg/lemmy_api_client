@@ -496,6 +496,79 @@ class GetPrivateMessages
           .toList();
 }
 
+@freezed
+class GetBlockedPersons
+    with _$GetBlockedPersons
+    implements LemmyApiQuery<List<PersonBlockView>> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetBlockedPersons({
+    required String auth,
+  }) = _GetBlockedPersons;
+
+  const GetBlockedPersons._();
+
+  factory GetBlockedPersons.fromJson(Map<String, dynamic> json) =>
+      _$GetBlockedPersonsFromJson(json);
+
+  final path = '/user/block';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  List<PersonBlockView> responseFactory(Map<String, dynamic> json) =>
+      (json['persons'] as List)
+          .map((dynamic e) => PersonBlockView.fromJson(e))
+          .toList();
+}
+
+@freezed
+class GetBlockedCommunities
+    with _$GetBlockedCommunities
+    implements LemmyApiQuery<List<CommunityBlockView>> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetBlockedCommunities({
+    required String auth,
+  }) = _GetBlockedCommunities;
+
+  const GetBlockedCommunities._();
+
+  factory GetBlockedCommunities.fromJson(Map<String, dynamic> json) =>
+      _$GetBlockedCommunitiesFromJson(json);
+
+  final path = '/user/blocked_communities';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  List<CommunityBlockView> responseFactory(Map<String, dynamic> json) =>
+      (json['communities'] as List)
+          .map((dynamic e) => CommunityBlockView.fromJson(e))
+          .toList();
+}
+
+@freezed
+class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory BlockPerson({
+    required int personId,
+    required bool block,
+    required String auth,
+  }) = _BlockPerson;
+
+  const BlockPerson._();
+
+  factory BlockPerson.fromJson(Map<String, dynamic> json) =>
+      _$BlockPersonFromJson(json);
+
+  final path = '/user/block';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  BlockedPerson responseFactory(Map<String, dynamic> json) =>
+      BlockedPerson.fromJson(json);
+}
+
 // TODO: this does not seem to exist yet
 @freezed
 class GetReportCount
