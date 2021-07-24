@@ -67,6 +67,7 @@ _$_LocalUserSettings _$_$_LocalUserSettingsFromJson(Map<String, dynamic> json) {
     sendNotificationsToEmail: json['send_notifications_to_email'] as bool,
     showReadPosts: json['show_read_posts'] as bool,
     showBotAccounts: json['show_bot_accounts'] as bool,
+    showNewPostNotifs: json['show_new_post_notifs'] as bool,
   )..instanceHost = json['instance_host'] as String;
 }
 
@@ -88,6 +89,7 @@ Map<String, dynamic> _$_$_LocalUserSettingsToJson(
       'send_notifications_to_email': instance.sendNotificationsToEmail,
       'show_read_posts': instance.showReadPosts,
       'show_bot_accounts': instance.showBotAccounts,
+      'show_new_post_notifs': instance.showNewPostNotifs,
     };
 
 _$_Site _$_$_SiteFromJson(Map<String, dynamic> json) {

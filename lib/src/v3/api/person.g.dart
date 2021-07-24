@@ -77,6 +77,7 @@ _$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
     showReadPosts: json['show_read_posts'] as bool?,
     botAccount: json['bot_account'] as bool?,
     showBotAccounts: json['show_bot_accounts'] as bool?,
+    showNewPostNotifs: json['show_new_post_notifs'] as bool?,
     auth: json['auth'] as String,
   );
 }
@@ -109,6 +110,7 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   writeNotNull('show_read_posts', instance.showReadPosts);
   writeNotNull('bot_account', instance.botAccount);
   writeNotNull('show_bot_accounts', instance.showBotAccounts);
+  writeNotNull('show_new_post_notifs', instance.showNewPostNotifs);
   val['auth'] = instance.auth;
   return val;
 }

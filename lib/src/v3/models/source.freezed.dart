@@ -585,7 +585,8 @@ class _$LocalUserSettingsTearOff {
       required bool showScores,
       required bool sendNotificationsToEmail,
       required bool showReadPosts,
-      required bool showBotAccounts}) {
+      required bool showBotAccounts,
+      required bool showNewPostNotifs}) {
     return _LocalUserSettings(
       id: id,
       personId: personId,
@@ -600,6 +601,7 @@ class _$LocalUserSettingsTearOff {
       sendNotificationsToEmail: sendNotificationsToEmail,
       showReadPosts: showReadPosts,
       showBotAccounts: showBotAccounts,
+      showNewPostNotifs: showNewPostNotifs,
     );
   }
 
@@ -628,6 +630,7 @@ mixin _$LocalUserSettings {
   bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   bool get showReadPosts => throw _privateConstructorUsedError;
   bool get showBotAccounts => throw _privateConstructorUsedError;
+  bool get showNewPostNotifs => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -655,7 +658,8 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
       bool showScores,
       bool sendNotificationsToEmail,
       bool showReadPosts,
-      bool showBotAccounts});
+      bool showBotAccounts,
+      bool showNewPostNotifs});
 }
 
 /// @nodoc
@@ -682,6 +686,7 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? sendNotificationsToEmail = freezed,
     Object? showReadPosts = freezed,
     Object? showBotAccounts = freezed,
+    Object? showNewPostNotifs = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -736,6 +741,10 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool,
+      showNewPostNotifs: showNewPostNotifs == freezed
+          ? _value.showNewPostNotifs
+          : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -762,7 +771,8 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
       bool showScores,
       bool sendNotificationsToEmail,
       bool showReadPosts,
-      bool showBotAccounts});
+      bool showBotAccounts,
+      bool showNewPostNotifs});
 }
 
 /// @nodoc
@@ -791,6 +801,7 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? sendNotificationsToEmail = freezed,
     Object? showReadPosts = freezed,
     Object? showBotAccounts = freezed,
+    Object? showNewPostNotifs = freezed,
   }) {
     return _then(_LocalUserSettings(
       id: id == freezed
@@ -845,6 +856,10 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showBotAccounts
           : showBotAccounts // ignore: cast_nullable_to_non_nullable
               as bool,
+      showNewPostNotifs: showNewPostNotifs == freezed
+          ? _value.showNewPostNotifs
+          : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -870,7 +885,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       required this.showScores,
       required this.sendNotificationsToEmail,
       required this.showReadPosts,
-      required this.showBotAccounts})
+      required this.showBotAccounts,
+      required this.showNewPostNotifs})
       : super._();
 
   factory _$_LocalUserSettings.fromJson(Map<String, dynamic> json) =>
@@ -904,10 +920,12 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   final bool showReadPosts;
   @override
   final bool showBotAccounts;
+  @override
+  final bool showNewPostNotifs;
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs)';
   }
 
   @override
@@ -950,7 +968,10 @@ class _$_LocalUserSettings extends _LocalUserSettings {
                     .equals(other.showReadPosts, showReadPosts)) &&
             (identical(other.showBotAccounts, showBotAccounts) ||
                 const DeepCollectionEquality()
-                    .equals(other.showBotAccounts, showBotAccounts)));
+                    .equals(other.showBotAccounts, showBotAccounts)) &&
+            (identical(other.showNewPostNotifs, showNewPostNotifs) ||
+                const DeepCollectionEquality()
+                    .equals(other.showNewPostNotifs, showNewPostNotifs)));
   }
 
   @override
@@ -968,7 +989,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       const DeepCollectionEquality().hash(showScores) ^
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
       const DeepCollectionEquality().hash(showReadPosts) ^
-      const DeepCollectionEquality().hash(showBotAccounts);
+      const DeepCollectionEquality().hash(showBotAccounts) ^
+      const DeepCollectionEquality().hash(showNewPostNotifs);
 
   @JsonKey(ignore: true)
   @override
@@ -997,7 +1019,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       required bool showScores,
       required bool sendNotificationsToEmail,
       required bool showReadPosts,
-      required bool showBotAccounts}) = _$_LocalUserSettings;
+      required bool showBotAccounts,
+      required bool showNewPostNotifs}) = _$_LocalUserSettings;
   _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
@@ -1031,6 +1054,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   bool get showReadPosts => throw _privateConstructorUsedError;
   @override
   bool get showBotAccounts => throw _privateConstructorUsedError;
+  @override
+  bool get showNewPostNotifs => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>
