@@ -59,6 +59,7 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
     required bool sendNotificationsToEmail,
     required bool showReadPosts,
     required bool showBotAccounts,
+    required bool showNewPostNotifs,
   }) = _LocalUserSettings;
 
   LocalUserSettings._();

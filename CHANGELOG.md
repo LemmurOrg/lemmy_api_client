@@ -1,3 +1,9 @@
+## Unreleased
+
+### Added
+
+- Add show post notifs option
+
 ## v0.15.0 - 2021-04-27
 
 ### Added
