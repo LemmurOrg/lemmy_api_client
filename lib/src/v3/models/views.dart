@@ -36,6 +36,7 @@ class PersonMentionView with _$PersonMentionView {
     required bool creatorBannedFromCommunity,
     required bool subscribed,
     required bool saved,
+    required bool creatorBlocked,
     VoteType? myVote,
     required String instanceHost,
   }) = _PersonMentionView;
@@ -102,6 +103,7 @@ class PostView with _$PostView {
     required bool subscribed,
     required bool saved,
     required bool read,
+    required bool creatorBlocked,
     VoteType? myVote,
     required String instanceHost,
   }) = _PostView;
@@ -142,6 +144,7 @@ class CommentView with _$CommentView {
     required bool creatorBannedFromCommunity,
     required bool subscribed,
     required bool saved,
+    required bool creatorBlocked,
     VoteType? myVote,
     required String instanceHost,
   }) = _CommentView;
@@ -362,7 +365,7 @@ class PersonBlockView with _$PersonBlockView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PersonBlockView({
     required PersonSafe person,
-    required PersonSafe recipient,
+    required PersonSafe target,
     required String instanceHost,
   }) = _PersonBlockView;
 
@@ -405,6 +408,7 @@ class CommunityView with _$CommunityView {
   factory CommunityView({
     required CommunitySafe community,
     required bool subscribed,
+    required bool blocked,
     required CommunityAggregates counts,
     required String instanceHost,
   }) = _CommunityView;

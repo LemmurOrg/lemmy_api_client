@@ -172,8 +172,7 @@ _$_FullSiteView _$_$_FullSiteViewFromJson(Map<String, dynamic> json) {
     version: json['version'] as String,
     myUser: json['my_user'] == null
         ? null
-        : LocalUserSettingsView.fromJson(
-            json['my_user'] as Map<String, dynamic>),
+        : MyUserInfo.fromJson(json['my_user'] as Map<String, dynamic>),
     federatedInstances: json['federated_instances'] == null
         ? null
         : FederatedInstances.fromJson(
@@ -191,6 +190,37 @@ Map<String, dynamic> _$_$_FullSiteViewToJson(_$_FullSiteView instance) =>
       'version': instance.version,
       'my_user': instance.myUser?.toJson(),
       'federated_instances': instance.federatedInstances?.toJson(),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_MyUserInfo _$_$_MyUserInfoFromJson(Map<String, dynamic> json) {
+  return _$_MyUserInfo(
+    localUserView: LocalUserSettingsView.fromJson(
+        json['local_user_view'] as Map<String, dynamic>),
+    follows: (json['follows'] as List<dynamic>)
+        .map((e) => CommunityFollowerView.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    moderates: (json['moderates'] as List<dynamic>)
+        .map((e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    communityBlocks: (json['community_blocks'] as List<dynamic>)
+        .map((e) => CommunityBlockView.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    personBlocks: (json['person_blocks'] as List<dynamic>)
+        .map((e) => PersonBlockView.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_MyUserInfoToJson(_$_MyUserInfo instance) =>
+    <String, dynamic>{
+      'local_user_view': instance.localUserView.toJson(),
+      'follows': instance.follows.map((e) => e.toJson()).toList(),
+      'moderates': instance.moderates.map((e) => e.toJson()).toList(),
+      'community_blocks':
+          instance.communityBlocks.map((e) => e.toJson()).toList(),
+      'person_blocks': instance.personBlocks.map((e) => e.toJson()).toList(),
       'instance_host': instance.instanceHost,
     };
 
@@ -234,15 +264,6 @@ _$_FullPersonView _$_$_FullPersonViewFromJson(Map<String, dynamic> json) {
   return _$_FullPersonView(
     personView:
         PersonViewSafe.fromJson(json['person_view'] as Map<String, dynamic>),
-    follows: (json['follows'] as List<dynamic>)
-        .map((e) => CommunityFollowerView.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    communityBlocks: (json['community_blocks'] as List<dynamic>)
-        .map((e) => CommunityBlockView.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    personBlocks: (json['person_blocks'] as List<dynamic>)
-        .map((e) => PersonBlockView.fromJson(e as Map<String, dynamic>))
-        .toList(),
     moderates: (json['moderates'] as List<dynamic>)
         .map((e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -259,10 +280,6 @@ _$_FullPersonView _$_$_FullPersonViewFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_FullPersonViewToJson(_$_FullPersonView instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
-      'follows': instance.follows.map((e) => e.toJson()).toList(),
-      'community_blocks':
-          instance.communityBlocks.map((e) => e.toJson()).toList(),
-      'person_blocks': instance.personBlocks.map((e) => e.toJson()).toList(),
       'moderates': instance.moderates.map((e) => e.toJson()).toList(),
       'comments': instance.comments.map((e) => e.toJson()).toList(),
       'posts': instance.posts.map((e) => e.toJson()).toList(),
@@ -363,6 +380,23 @@ _$_BlockedPerson _$_$_BlockedPersonFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_BlockedPersonToJson(_$_BlockedPerson instance) =>
     <String, dynamic>{
       'person_view': instance.personView.toJson(),
+      'blocked': instance.blocked,
+      'instance_host': instance.instanceHost,
+    };
+
+_$_BlockedCommunity _$_$_BlockedCommunityFromJson(Map<String, dynamic> json) {
+  return _$_BlockedCommunity(
+    communityView:
+        CommunityView.fromJson(json['community_view'] as Map<String, dynamic>),
+    blocked: json['blocked'] as bool,
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_BlockedCommunityToJson(
+        _$_BlockedCommunity instance) =>
+    <String, dynamic>{
+      'community_view': instance.communityView.toJson(),
       'blocked': instance.blocked,
       'instance_host': instance.instanceHost,
     };

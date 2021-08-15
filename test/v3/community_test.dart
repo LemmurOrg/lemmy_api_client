@@ -81,21 +81,6 @@ void main() {
         // );
       });
 
-      group('GetFollowedCommunities', () {
-        test(
-          'correctly fetches',
-          () => run(GetFollowedCommunities(
-            auth: goodAuth,
-          )),
-        );
-        test(
-          'bad auth',
-          () => lemmyThrows(const GetFollowedCommunities(
-            auth: badAuth,
-          )),
-        );
-      });
-
       group('TransferCommunity', () {});
 
       group('BlockCommunity', () {

@@ -71,8 +71,6 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'FollowCommunity': (json) => WsEventFollowCommunity(
       const FollowCommunity(communityId: 0, follow: true, auth: '')
           .responseFactory(json)),
-  'GetFollowedCommunities': (json) => WsEventGetFollowedCommunities(
-      const GetFollowedCommunities(auth: '').responseFactory(json)),
   'TransferCommunity': (json) => WsEventTransferCommunity(
       const TransferCommunity(communityId: 0, personId: 0, auth: '')
           .responseFactory(json)),
@@ -213,13 +211,9 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'BlockPerson': (json) => WsEventBlockPerson(
       const BlockPerson(personId: 0, block: true, auth: '')
           .responseFactory(json)),
-  'GetBlockedPersons': (json) => WsEventGetBlockedPersons(
-      const GetBlockedPersons(auth: '').responseFactory(json)),
   'BlockCommunity': (json) => WsEventBlockCommunity(
       const BlockCommunity(communityId: 0, block: true, auth: '')
           .responseFactory(json)),
-  'GetBlockedCommunities': (json) => WsEventGetBlockedCommunities(
-      const GetBlockedCommunities(auth: '').responseFactory(json)),
 };
 
 class WsEvent<T> {
@@ -310,12 +304,6 @@ class WsEventRemoveCommunity extends WsEvent<CommunityView> {
 
 class WsEventFollowCommunity extends WsEvent<CommunityView> {
   const WsEventFollowCommunity(CommunityView data) : super(data);
-}
-
-class WsEventGetFollowedCommunities
-    extends WsEvent<List<CommunityFollowerView>> {
-  const WsEventGetFollowedCommunities(List<CommunityFollowerView> data)
-      : super(data);
 }
 
 class WsEventTransferCommunity extends WsEvent<FullCommunityView> {
@@ -503,15 +491,6 @@ class WsEventBlockPerson extends WsEvent<BlockedPerson> {
   const WsEventBlockPerson(BlockedPerson data) : super(data);
 }
 
-class WsEventGetBlockedPersons extends WsEvent<List<PersonBlockView>> {
-  const WsEventGetBlockedPersons(List<PersonBlockView> data) : super(data);
-}
-
-class WsEventBlockCommunity extends WsEvent<CommunityView> {
-  const WsEventBlockCommunity(CommunityView data) : super(data);
-}
-
-class WsEventGetBlockedCommunities extends WsEvent<List<CommunityBlockView>> {
-  const WsEventGetBlockedCommunities(List<CommunityBlockView> data)
-      : super(data);
+class WsEventBlockCommunity extends WsEvent<BlockedCommunity> {
+  const WsEventBlockCommunity(BlockedCommunity data) : super(data);
 }
