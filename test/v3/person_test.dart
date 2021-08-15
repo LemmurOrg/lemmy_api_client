@@ -201,30 +201,6 @@ void main() {
 
       group('GetReportCount', () {});
 
-      group('GetBlockedPersons', () {
-        test(
-          'correctly fetches',
-          () => run(GetBlockedPersons(auth: goodAuth)),
-        );
-
-        test(
-          'bad auth',
-          () => lemmyThrows(const GetBlockedPersons(auth: badAuth)),
-        );
-      });
-
-      group('GetBlockedCommunities', () {
-        test(
-          'correctly fetches',
-          () => run(GetBlockedCommunities(auth: goodAuth)),
-        );
-
-        test(
-          'bad auth',
-          () => lemmyThrows(const GetBlockedCommunities(auth: badAuth)),
-        );
-      });
-
       group('BlockPerson', () {
         test(
           'correctly fetches',
