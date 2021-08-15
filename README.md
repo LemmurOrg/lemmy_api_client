@@ -7,7 +7,7 @@
 [![](https://img.shields.io/pub/v/lemmy_api_client.svg?logo=dart)](https://pub.dev/packages/lemmy_api_client)
 [![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
 
-A Dart client for the [Lemmy API](https://join.lemmy.ml/docs/en/contributing/websocket_http_api.html)
+A Dart client for the [Lemmy API](https://join-lemmy.org/docs/en/client_development/http_api.html)
 
 </div>
 
