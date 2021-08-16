@@ -6,6 +6,7 @@
 - Add `ResolveObject` endpoint
 - Add `GetSiteMetadata` endpoint
 - Add `ModTransferCommunity`
+- Add blocking actions
 
 ### Changed
 
