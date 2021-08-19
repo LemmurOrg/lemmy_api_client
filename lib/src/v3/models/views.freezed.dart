@@ -3498,6 +3498,313 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
       throw _privateConstructorUsedError;
 }
 
+ModTransferCommunityView _$ModTransferCommunityViewFromJson(
+    Map<String, dynamic> json) {
+  return _ModTransferCommunityView.fromJson(json);
+}
+
+/// @nodoc
+class _$ModTransferCommunityViewTearOff {
+  const _$ModTransferCommunityViewTearOff();
+
+  _ModTransferCommunityView call(
+      {required ModTransferCommunity modTransferCommunity,
+      required PersonSafe moderator,
+      required CommunitySafe community,
+      required PersonSafe moddedPerson,
+      required String instanceHost}) {
+    return _ModTransferCommunityView(
+      modTransferCommunity: modTransferCommunity,
+      moderator: moderator,
+      community: community,
+      moddedPerson: moddedPerson,
+      instanceHost: instanceHost,
+    );
+  }
+
+  ModTransferCommunityView fromJson(Map<String, Object> json) {
+    return ModTransferCommunityView.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ModTransferCommunityView = _$ModTransferCommunityViewTearOff();
+
+/// @nodoc
+mixin _$ModTransferCommunityView {
+  ModTransferCommunity get modTransferCommunity =>
+      throw _privateConstructorUsedError;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModTransferCommunityViewCopyWith<ModTransferCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModTransferCommunityViewCopyWith<$Res> {
+  factory $ModTransferCommunityViewCopyWith(ModTransferCommunityView value,
+          $Res Function(ModTransferCommunityView) then) =
+      _$ModTransferCommunityViewCopyWithImpl<$Res>;
+  $Res call(
+      {ModTransferCommunity modTransferCommunity,
+      PersonSafe moderator,
+      CommunitySafe community,
+      PersonSafe moddedPerson,
+      String instanceHost});
+
+  $ModTransferCommunityCopyWith<$Res> get modTransferCommunity;
+  $PersonSafeCopyWith<$Res> get moderator;
+  $CommunitySafeCopyWith<$Res> get community;
+  $PersonSafeCopyWith<$Res> get moddedPerson;
+}
+
+/// @nodoc
+class _$ModTransferCommunityViewCopyWithImpl<$Res>
+    implements $ModTransferCommunityViewCopyWith<$Res> {
+  _$ModTransferCommunityViewCopyWithImpl(this._value, this._then);
+
+  final ModTransferCommunityView _value;
+  // ignore: unused_field
+  final $Res Function(ModTransferCommunityView) _then;
+
+  @override
+  $Res call({
+    Object? modTransferCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
+    Object? moddedPerson = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      modTransferCommunity: modTransferCommunity == freezed
+          ? _value.modTransferCommunity
+          : modTransferCommunity // ignore: cast_nullable_to_non_nullable
+              as ModTransferCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moddedPerson: moddedPerson == freezed
+          ? _value.moddedPerson
+          : moddedPerson // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+
+  @override
+  $ModTransferCommunityCopyWith<$Res> get modTransferCommunity {
+    return $ModTransferCommunityCopyWith<$Res>(_value.modTransferCommunity,
+        (value) {
+      return _then(_value.copyWith(modTransferCommunity: value));
+    });
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res> get moderator {
+    return $PersonSafeCopyWith<$Res>(_value.moderator, (value) {
+      return _then(_value.copyWith(moderator: value));
+    });
+  }
+
+  @override
+  $CommunitySafeCopyWith<$Res> get community {
+    return $CommunitySafeCopyWith<$Res>(_value.community, (value) {
+      return _then(_value.copyWith(community: value));
+    });
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res> get moddedPerson {
+    return $PersonSafeCopyWith<$Res>(_value.moddedPerson, (value) {
+      return _then(_value.copyWith(moddedPerson: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ModTransferCommunityViewCopyWith<$Res>
+    implements $ModTransferCommunityViewCopyWith<$Res> {
+  factory _$ModTransferCommunityViewCopyWith(_ModTransferCommunityView value,
+          $Res Function(_ModTransferCommunityView) then) =
+      __$ModTransferCommunityViewCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {ModTransferCommunity modTransferCommunity,
+      PersonSafe moderator,
+      CommunitySafe community,
+      PersonSafe moddedPerson,
+      String instanceHost});
+
+  @override
+  $ModTransferCommunityCopyWith<$Res> get modTransferCommunity;
+  @override
+  $PersonSafeCopyWith<$Res> get moderator;
+  @override
+  $CommunitySafeCopyWith<$Res> get community;
+  @override
+  $PersonSafeCopyWith<$Res> get moddedPerson;
+}
+
+/// @nodoc
+class __$ModTransferCommunityViewCopyWithImpl<$Res>
+    extends _$ModTransferCommunityViewCopyWithImpl<$Res>
+    implements _$ModTransferCommunityViewCopyWith<$Res> {
+  __$ModTransferCommunityViewCopyWithImpl(_ModTransferCommunityView _value,
+      $Res Function(_ModTransferCommunityView) _then)
+      : super(_value, (v) => _then(v as _ModTransferCommunityView));
+
+  @override
+  _ModTransferCommunityView get _value =>
+      super._value as _ModTransferCommunityView;
+
+  @override
+  $Res call({
+    Object? modTransferCommunity = freezed,
+    Object? moderator = freezed,
+    Object? community = freezed,
+    Object? moddedPerson = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_ModTransferCommunityView(
+      modTransferCommunity: modTransferCommunity == freezed
+          ? _value.modTransferCommunity
+          : modTransferCommunity // ignore: cast_nullable_to_non_nullable
+              as ModTransferCommunity,
+      moderator: moderator == freezed
+          ? _value.moderator
+          : moderator // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunitySafe,
+      moddedPerson: moddedPerson == freezed
+          ? _value.moddedPerson
+          : moddedPerson // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_ModTransferCommunityView extends _ModTransferCommunityView {
+  _$_ModTransferCommunityView(
+      {required this.modTransferCommunity,
+      required this.moderator,
+      required this.community,
+      required this.moddedPerson,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$_$_ModTransferCommunityViewFromJson(json);
+
+  @override
+  final ModTransferCommunity modTransferCommunity;
+  @override
+  final PersonSafe moderator;
+  @override
+  final CommunitySafe community;
+  @override
+  final PersonSafe moddedPerson;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'ModTransferCommunityView(modTransferCommunity: $modTransferCommunity, moderator: $moderator, community: $community, moddedPerson: $moddedPerson, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ModTransferCommunityView &&
+            (identical(other.modTransferCommunity, modTransferCommunity) ||
+                const DeepCollectionEquality().equals(
+                    other.modTransferCommunity, modTransferCommunity)) &&
+            (identical(other.moderator, moderator) ||
+                const DeepCollectionEquality()
+                    .equals(other.moderator, moderator)) &&
+            (identical(other.community, community) ||
+                const DeepCollectionEquality()
+                    .equals(other.community, community)) &&
+            (identical(other.moddedPerson, moddedPerson) ||
+                const DeepCollectionEquality()
+                    .equals(other.moddedPerson, moddedPerson)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(modTransferCommunity) ^
+      const DeepCollectionEquality().hash(moderator) ^
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(moddedPerson) ^
+      const DeepCollectionEquality().hash(instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ModTransferCommunityViewCopyWith<_ModTransferCommunityView> get copyWith =>
+      __$ModTransferCommunityViewCopyWithImpl<_ModTransferCommunityView>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ModTransferCommunityViewToJson(this);
+  }
+}
+
+abstract class _ModTransferCommunityView extends ModTransferCommunityView {
+  factory _ModTransferCommunityView(
+      {required ModTransferCommunity modTransferCommunity,
+      required PersonSafe moderator,
+      required CommunitySafe community,
+      required PersonSafe moddedPerson,
+      required String instanceHost}) = _$_ModTransferCommunityView;
+  _ModTransferCommunityView._() : super._();
+
+  factory _ModTransferCommunityView.fromJson(Map<String, dynamic> json) =
+      _$_ModTransferCommunityView.fromJson;
+
+  @override
+  ModTransferCommunity get modTransferCommunity =>
+      throw _privateConstructorUsedError;
+  @override
+  PersonSafe get moderator => throw _privateConstructorUsedError;
+  @override
+  CommunitySafe get community => throw _privateConstructorUsedError;
+  @override
+  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ModTransferCommunityViewCopyWith<_ModTransferCommunityView> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
   return _ModAddView.fromJson(json);
 }

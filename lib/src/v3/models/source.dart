@@ -355,6 +355,26 @@ class ModAddCommunity with _$ModAddCommunity {
 }
 
 @freezed
+class ModTransferCommunity with _$ModTransferCommunity {
+  @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory ModTransferCommunity({
+    required int id,
+    required int modPersonId,
+    required int otherPersonId,
+    required int communityId,
+    bool? removed,
+    @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
+  }) = _ModTransferCommunity;
+
+  ModTransferCommunity._();
+  factory ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
+      _$ModTransferCommunityFromJson(json);
+}
+
+@freezed
 class ModAdd with _$ModAdd {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()

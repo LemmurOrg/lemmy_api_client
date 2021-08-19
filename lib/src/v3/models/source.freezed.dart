@@ -5829,6 +5829,319 @@ abstract class _ModAddCommunity extends ModAddCommunity {
       throw _privateConstructorUsedError;
 }
 
+ModTransferCommunity _$ModTransferCommunityFromJson(Map<String, dynamic> json) {
+  return _ModTransferCommunity.fromJson(json);
+}
+
+/// @nodoc
+class _$ModTransferCommunityTearOff {
+  const _$ModTransferCommunityTearOff();
+
+  _ModTransferCommunity call(
+      {required int id,
+      required int modPersonId,
+      required int otherPersonId,
+      required int communityId,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
+    return _ModTransferCommunity(
+      id: id,
+      modPersonId: modPersonId,
+      otherPersonId: otherPersonId,
+      communityId: communityId,
+      removed: removed,
+      when: when,
+      instanceHost: instanceHost,
+    );
+  }
+
+  ModTransferCommunity fromJson(Map<String, Object> json) {
+    return ModTransferCommunity.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ModTransferCommunity = _$ModTransferCommunityTearOff();
+
+/// @nodoc
+mixin _$ModTransferCommunity {
+  int get id => throw _privateConstructorUsedError;
+  int get modPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId => throw _privateConstructorUsedError;
+  int get communityId => throw _privateConstructorUsedError;
+  bool? get removed => throw _privateConstructorUsedError;
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ModTransferCommunityCopyWith<ModTransferCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ModTransferCommunityCopyWith<$Res> {
+  factory $ModTransferCommunityCopyWith(ModTransferCommunity value,
+          $Res Function(ModTransferCommunity) then) =
+      _$ModTransferCommunityCopyWithImpl<$Res>;
+  $Res call(
+      {int id,
+      int modPersonId,
+      int otherPersonId,
+      int communityId,
+      bool? removed,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$ModTransferCommunityCopyWithImpl<$Res>
+    implements $ModTransferCommunityCopyWith<$Res> {
+  _$ModTransferCommunityCopyWithImpl(this._value, this._then);
+
+  final ModTransferCommunity _value;
+  // ignore: unused_field
+  final $Res Function(ModTransferCommunity) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
+    Object? communityId = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ModTransferCommunityCopyWith<$Res>
+    implements $ModTransferCommunityCopyWith<$Res> {
+  factory _$ModTransferCommunityCopyWith(_ModTransferCommunity value,
+          $Res Function(_ModTransferCommunity) then) =
+      __$ModTransferCommunityCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {int id,
+      int modPersonId,
+      int otherPersonId,
+      int communityId,
+      bool? removed,
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$ModTransferCommunityCopyWithImpl<$Res>
+    extends _$ModTransferCommunityCopyWithImpl<$Res>
+    implements _$ModTransferCommunityCopyWith<$Res> {
+  __$ModTransferCommunityCopyWithImpl(
+      _ModTransferCommunity _value, $Res Function(_ModTransferCommunity) _then)
+      : super(_value, (v) => _then(v as _ModTransferCommunity));
+
+  @override
+  _ModTransferCommunity get _value => super._value as _ModTransferCommunity;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? modPersonId = freezed,
+    Object? otherPersonId = freezed,
+    Object? communityId = freezed,
+    Object? removed = freezed,
+    Object? when = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_ModTransferCommunity(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      modPersonId: modPersonId == freezed
+          ? _value.modPersonId
+          : modPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      otherPersonId: otherPersonId == freezed
+          ? _value.otherPersonId
+          : otherPersonId // ignore: cast_nullable_to_non_nullable
+              as int,
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
+              as int,
+      removed: removed == freezed
+          ? _value.removed
+          : removed // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      when: when == freezed
+          ? _value.when
+          : when // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_ModTransferCommunity extends _ModTransferCommunity {
+  _$_ModTransferCommunity(
+      {required this.id,
+      required this.modPersonId,
+      required this.otherPersonId,
+      required this.communityId,
+      this.removed,
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
+      _$_$_ModTransferCommunityFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int modPersonId;
+  @override
+  final int otherPersonId;
+  @override
+  final int communityId;
+  @override
+  final bool? removed;
+  @override
+  @JsonKey(name: 'when_')
+  final DateTime when;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'ModTransferCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, removed: $removed, when: $when, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ModTransferCommunity &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.modPersonId, modPersonId) ||
+                const DeepCollectionEquality()
+                    .equals(other.modPersonId, modPersonId)) &&
+            (identical(other.otherPersonId, otherPersonId) ||
+                const DeepCollectionEquality()
+                    .equals(other.otherPersonId, otherPersonId)) &&
+            (identical(other.communityId, communityId) ||
+                const DeepCollectionEquality()
+                    .equals(other.communityId, communityId)) &&
+            (identical(other.removed, removed) ||
+                const DeepCollectionEquality()
+                    .equals(other.removed, removed)) &&
+            (identical(other.when, when) ||
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(modPersonId) ^
+      const DeepCollectionEquality().hash(otherPersonId) ^
+      const DeepCollectionEquality().hash(communityId) ^
+      const DeepCollectionEquality().hash(removed) ^
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ModTransferCommunityCopyWith<_ModTransferCommunity> get copyWith =>
+      __$ModTransferCommunityCopyWithImpl<_ModTransferCommunity>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ModTransferCommunityToJson(this);
+  }
+}
+
+abstract class _ModTransferCommunity extends ModTransferCommunity {
+  factory _ModTransferCommunity(
+      {required int id,
+      required int modPersonId,
+      required int otherPersonId,
+      required int communityId,
+      bool? removed,
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModTransferCommunity;
+  _ModTransferCommunity._() : super._();
+
+  factory _ModTransferCommunity.fromJson(Map<String, dynamic> json) =
+      _$_ModTransferCommunity.fromJson;
+
+  @override
+  int get id => throw _privateConstructorUsedError;
+  @override
+  int get modPersonId => throw _privateConstructorUsedError;
+  @override
+  int get otherPersonId => throw _privateConstructorUsedError;
+  @override
+  int get communityId => throw _privateConstructorUsedError;
+  @override
+  bool? get removed => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'when_')
+  DateTime get when => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ModTransferCommunityCopyWith<_ModTransferCommunity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ModAdd _$ModAddFromJson(Map<String, dynamic> json) {
   return _ModAdd.fromJson(json);
 }

@@ -187,6 +187,22 @@ class ModAddCommunityView with _$ModAddCommunityView {
 }
 
 @freezed
+class ModTransferCommunityView with _$ModTransferCommunityView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory ModTransferCommunityView({
+    required ModTransferCommunity modTransferCommunity,
+    required PersonSafe moderator,
+    required CommunitySafe community,
+    required PersonSafe moddedPerson,
+    required String instanceHost,
+  }) = _ModTransferCommunityView;
+
+  ModTransferCommunityView._();
+  factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
+      _$ModTransferCommunityViewFromJson(json);
+}
+
+@freezed
 class ModAddView with _$ModAddView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddView({
