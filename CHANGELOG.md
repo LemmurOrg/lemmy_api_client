@@ -4,6 +4,7 @@
 
 - Add show post notifs option
 - Add `ResolveObject` endpoint
+- Add `GetSiteMetadata` endpoint
 
 ### Changed
 
