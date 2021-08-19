@@ -208,6 +208,8 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
       const GetReportCount(auth: '').responseFactory(json)),
   'ResolveObject': (json) =>
       WsEventResolveObject(const ResolveObject(q: '').responseFactory(json)),
+  'GetSiteMetadata': (json) => WsEventGetSiteMetadata(
+      const GetSiteMetadata(url: '').responseFactory(json)),
 };
 
 class WsEvent<T> {
@@ -481,4 +483,8 @@ class WsEventGetReportCount extends WsEvent<GetReportCountResponse> {
 
 class WsEventResolveObject extends WsEvent<ResolveObjectResponse> {
   const WsEventResolveObject(ResolveObjectResponse data) : super(data);
+}
+
+class WsEventGetSiteMetadata extends WsEvent<SiteMetadata> {
+  const WsEventGetSiteMetadata(SiteMetadata data) : super(data);
 }

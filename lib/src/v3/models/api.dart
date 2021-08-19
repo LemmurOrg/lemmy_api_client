@@ -194,19 +194,34 @@ class BannedPerson with _$BannedPerson {
 }
 
 @freezed
-class ResolveObjectResponse extends WithInstanceHost
-    with _$ResolveObjectResponse {
+class ResolveObjectResponse with _$ResolveObjectResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolveObjectResponse({
     CommentView? comment,
     PostView? post,
     CommunityView? community,
     PersonViewSafe? person,
+    required String instanceHost,
   }) = _ResolveObjectResponse;
 
   ResolveObjectResponse._();
   factory ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
       _$ResolveObjectResponseFromJson(json);
+}
+
+class SiteMetadata with _$SiteMetadata {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory SiteMetadata({
+    String? title,
+    String? description,
+    String? image,
+    String? html,
+    required String instanceHost,
+  }) = _SiteMetadata;
+
+  SiteMetadata._();
+  factory SiteMetadata.fromJson(Map<String, dynamic> json) =>
+      _$SiteMetadataFromJson(json);
 }
 
 // TODO: this does not seem to exist yet

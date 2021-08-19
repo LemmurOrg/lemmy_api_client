@@ -239,6 +239,28 @@ class SavePost with _$SavePost implements LemmyApiQuery<PostView> {
       PostView.fromJson(json['post_view']);
 }
 
+@freezed
+class GetSiteMetadata
+    with _$GetSiteMetadata
+    implements LemmyApiQuery<SiteMetadata> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetSiteMetadata({
+    required String url,
+  }) = _GetSiteMetadata;
+
+  const GetSiteMetadata._();
+  factory GetSiteMetadata.fromJson(Map<String, dynamic> json) =>
+      _$GetSiteMetadataFromJson(json);
+
+  final path = '/post/site_metadata';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  SiteMetadata responseFactory(Map<String, dynamic> json) =>
+      SiteMetadata.fromJson(json['metadata']);
+}
+
 // TODO: this does not seem to exist yet
 @freezed
 class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<bool> {

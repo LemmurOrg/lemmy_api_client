@@ -3017,12 +3017,14 @@ class _$ResolveObjectResponseTearOff {
       {CommentView? comment,
       PostView? post,
       CommunityView? community,
-      PersonViewSafe? person}) {
+      PersonViewSafe? person,
+      required String instanceHost}) {
     return _ResolveObjectResponse(
       comment: comment,
       post: post,
       community: community,
       person: person,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3040,6 +3042,7 @@ mixin _$ResolveObjectResponse {
   PostView? get post => throw _privateConstructorUsedError;
   CommunityView? get community => throw _privateConstructorUsedError;
   PersonViewSafe? get person => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3056,7 +3059,8 @@ abstract class $ResolveObjectResponseCopyWith<$Res> {
       {CommentView? comment,
       PostView? post,
       CommunityView? community,
-      PersonViewSafe? person});
+      PersonViewSafe? person,
+      String instanceHost});
 
   $CommentViewCopyWith<$Res>? get comment;
   $PostViewCopyWith<$Res>? get post;
@@ -3079,6 +3083,7 @@ class _$ResolveObjectResponseCopyWithImpl<$Res>
     Object? post = freezed,
     Object? community = freezed,
     Object? person = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       comment: comment == freezed
@@ -3097,6 +3102,10 @@ class _$ResolveObjectResponseCopyWithImpl<$Res>
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -3156,7 +3165,8 @@ abstract class _$ResolveObjectResponseCopyWith<$Res>
       {CommentView? comment,
       PostView? post,
       CommunityView? community,
-      PersonViewSafe? person});
+      PersonViewSafe? person,
+      String instanceHost});
 
   @override
   $CommentViewCopyWith<$Res>? get comment;
@@ -3185,6 +3195,7 @@ class __$ResolveObjectResponseCopyWithImpl<$Res>
     Object? post = freezed,
     Object? community = freezed,
     Object? person = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ResolveObjectResponse(
       comment: comment == freezed
@@ -3203,6 +3214,10 @@ class __$ResolveObjectResponseCopyWithImpl<$Res>
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
               as PersonViewSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3212,7 +3227,11 @@ class __$ResolveObjectResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResolveObjectResponse extends _ResolveObjectResponse {
   _$_ResolveObjectResponse(
-      {this.comment, this.post, this.community, this.person})
+      {this.comment,
+      this.post,
+      this.community,
+      this.person,
+      required this.instanceHost})
       : super._();
 
   factory _$_ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
@@ -3226,10 +3245,12 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
   final CommunityView? community;
   @override
   final PersonViewSafe? person;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ResolveObjectResponse(comment: $comment, post: $post, community: $community, person: $person)';
+    return 'ResolveObjectResponse(comment: $comment, post: $post, community: $community, person: $person, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3245,7 +3266,10 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
                 const DeepCollectionEquality()
                     .equals(other.community, community)) &&
             (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)));
+                const DeepCollectionEquality().equals(other.person, person)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3254,7 +3278,8 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(post) ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(person);
+      const DeepCollectionEquality().hash(person) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3273,7 +3298,8 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
       {CommentView? comment,
       PostView? post,
       CommunityView? community,
-      PersonViewSafe? person}) = _$_ResolveObjectResponse;
+      PersonViewSafe? person,
+      required String instanceHost}) = _$_ResolveObjectResponse;
   _ResolveObjectResponse._() : super._();
 
   factory _ResolveObjectResponse.fromJson(Map<String, dynamic> json) =
@@ -3287,6 +3313,8 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
   CommunityView? get community => throw _privateConstructorUsedError;
   @override
   PersonViewSafe? get person => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ResolveObjectResponseCopyWith<_ResolveObjectResponse> get copyWith =>

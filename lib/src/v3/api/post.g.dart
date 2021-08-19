@@ -225,6 +225,17 @@ Map<String, dynamic> _$_$_SavePostToJson(_$_SavePost instance) =>
       'auth': instance.auth,
     };
 
+_$_GetSiteMetadata _$_$_GetSiteMetadataFromJson(Map<String, dynamic> json) {
+  return _$_GetSiteMetadata(
+    url: json['url'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_GetSiteMetadataToJson(_$_GetSiteMetadata instance) =>
+    <String, dynamic>{
+      'url': instance.url,
+    };
+
 _$_CreatePostReport _$_$_CreatePostReportFromJson(Map<String, dynamic> json) {
   return _$_CreatePostReport(
     postId: json['post_id'] as int,
