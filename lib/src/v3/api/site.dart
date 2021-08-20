@@ -205,3 +205,27 @@ class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
   String responseFactory(Map<String, dynamic> json) =>
       json['config_hjson'] as String;
 }
+
+@freezed
+class ResolveObject
+    with _$ResolveObject
+    implements LemmyApiQuery<ResolveObjectResponse> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory ResolveObject({
+    required String q,
+    String? auth,
+  }) = _ResolveObject;
+
+  const ResolveObject._();
+
+  factory ResolveObject.fromJson(Map<String, dynamic> json) =>
+      _$ResolveObjectFromJson(json);
+
+  final path = '/resolve_object';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  ResolveObjectResponse responseFactory(Map<String, dynamic> json) =>
+      ResolveObjectResponse.fromJson(json);
+}

@@ -288,6 +288,34 @@ Map<String, dynamic> _$_$_BannedPersonToJson(_$_BannedPerson instance) =>
       'instance_host': instance.instanceHost,
     };
 
+_$_ResolveObjectResponse _$_$_ResolveObjectResponseFromJson(
+    Map<String, dynamic> json) {
+  return _$_ResolveObjectResponse(
+    comment: json['comment'] == null
+        ? null
+        : CommentView.fromJson(json['comment'] as Map<String, dynamic>),
+    post: json['post'] == null
+        ? null
+        : PostView.fromJson(json['post'] as Map<String, dynamic>),
+    community: json['community'] == null
+        ? null
+        : CommunityView.fromJson(json['community'] as Map<String, dynamic>),
+    person: json['person'] == null
+        ? null
+        : PersonViewSafe.fromJson(json['person'] as Map<String, dynamic>),
+  )..instanceHost = json['instance_host'] as String;
+}
+
+Map<String, dynamic> _$_$_ResolveObjectResponseToJson(
+        _$_ResolveObjectResponse instance) =>
+    <String, dynamic>{
+      'instance_host': instance.instanceHost,
+      'comment': instance.comment?.toJson(),
+      'post': instance.post?.toJson(),
+      'community': instance.community?.toJson(),
+      'person': instance.person?.toJson(),
+    };
+
 _$_GetReportCountResponse _$_$_GetReportCountResponseFromJson(
     Map<String, dynamic> json) {
   return _$_GetReportCountResponse(
