@@ -21,10 +21,13 @@ class _$PersonViewSafeTearOff {
   const _$PersonViewSafeTearOff();
 
   _PersonViewSafe call(
-      {required PersonSafe person, required PersonAggregates counts}) {
+      {required PersonSafe person,
+      required PersonAggregates counts,
+      required String instanceHost}) {
     return _PersonViewSafe(
       person: person,
       counts: counts,
+      instanceHost: instanceHost,
     );
   }
 
@@ -40,6 +43,7 @@ const $PersonViewSafe = _$PersonViewSafeTearOff();
 mixin _$PersonViewSafe {
   PersonSafe get person => throw _privateConstructorUsedError;
   PersonAggregates get counts => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -52,7 +56,7 @@ abstract class $PersonViewSafeCopyWith<$Res> {
   factory $PersonViewSafeCopyWith(
           PersonViewSafe value, $Res Function(PersonViewSafe) then) =
       _$PersonViewSafeCopyWithImpl<$Res>;
-  $Res call({PersonSafe person, PersonAggregates counts});
+  $Res call({PersonSafe person, PersonAggregates counts, String instanceHost});
 
   $PersonSafeCopyWith<$Res> get person;
   $PersonAggregatesCopyWith<$Res> get counts;
@@ -71,6 +75,7 @@ class _$PersonViewSafeCopyWithImpl<$Res>
   $Res call({
     Object? person = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       person: person == freezed
@@ -81,6 +86,10 @@ class _$PersonViewSafeCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as PersonAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -106,7 +115,7 @@ abstract class _$PersonViewSafeCopyWith<$Res>
           _PersonViewSafe value, $Res Function(_PersonViewSafe) then) =
       __$PersonViewSafeCopyWithImpl<$Res>;
   @override
-  $Res call({PersonSafe person, PersonAggregates counts});
+  $Res call({PersonSafe person, PersonAggregates counts, String instanceHost});
 
   @override
   $PersonSafeCopyWith<$Res> get person;
@@ -129,6 +138,7 @@ class __$PersonViewSafeCopyWithImpl<$Res>
   $Res call({
     Object? person = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PersonViewSafe(
       person: person == freezed
@@ -139,6 +149,10 @@ class __$PersonViewSafeCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as PersonAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -147,7 +161,9 @@ class __$PersonViewSafeCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PersonViewSafe extends _PersonViewSafe {
-  _$_PersonViewSafe({required this.person, required this.counts}) : super._();
+  _$_PersonViewSafe(
+      {required this.person, required this.counts, required this.instanceHost})
+      : super._();
 
   factory _$_PersonViewSafe.fromJson(Map<String, dynamic> json) =>
       _$_$_PersonViewSafeFromJson(json);
@@ -156,10 +172,12 @@ class _$_PersonViewSafe extends _PersonViewSafe {
   final PersonSafe person;
   @override
   final PersonAggregates counts;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PersonViewSafe(person: $person, counts: $counts)';
+    return 'PersonViewSafe(person: $person, counts: $counts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -169,14 +187,18 @@ class _$_PersonViewSafe extends _PersonViewSafe {
             (identical(other.person, person) ||
                 const DeepCollectionEquality().equals(other.person, person)) &&
             (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)));
+                const DeepCollectionEquality().equals(other.counts, counts)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(counts);
+      const DeepCollectionEquality().hash(counts) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -192,7 +214,8 @@ class _$_PersonViewSafe extends _PersonViewSafe {
 abstract class _PersonViewSafe extends PersonViewSafe {
   factory _PersonViewSafe(
       {required PersonSafe person,
-      required PersonAggregates counts}) = _$_PersonViewSafe;
+      required PersonAggregates counts,
+      required String instanceHost}) = _$_PersonViewSafe;
   _PersonViewSafe._() : super._();
 
   factory _PersonViewSafe.fromJson(Map<String, dynamic> json) =
@@ -202,6 +225,8 @@ abstract class _PersonViewSafe extends PersonViewSafe {
   PersonSafe get person => throw _privateConstructorUsedError;
   @override
   PersonAggregates get counts => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonViewSafeCopyWith<_PersonViewSafe> get copyWith =>
@@ -227,7 +252,8 @@ class _$PersonMentionViewTearOff {
       required bool creatorBannedFromCommunity,
       required bool subscribed,
       required bool saved,
-      VoteType? myVote}) {
+      VoteType? myVote,
+      required String instanceHost}) {
     return _PersonMentionView(
       personMention: personMention,
       comment: comment,
@@ -240,6 +266,7 @@ class _$PersonMentionViewTearOff {
       subscribed: subscribed,
       saved: saved,
       myVote: myVote,
+      instanceHost: instanceHost,
     );
   }
 
@@ -264,6 +291,7 @@ mixin _$PersonMentionView {
   bool get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
   VoteType? get myVote => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -287,7 +315,8 @@ abstract class $PersonMentionViewCopyWith<$Res> {
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType? myVote});
+      VoteType? myVote,
+      String instanceHost});
 
   $PersonMentionCopyWith<$Res> get personMention;
   $CommentCopyWith<$Res> get comment;
@@ -320,6 +349,7 @@ class _$PersonMentionViewCopyWithImpl<$Res>
     Object? subscribed = freezed,
     Object? saved = freezed,
     Object? myVote = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       personMention: personMention == freezed
@@ -366,6 +396,10 @@ class _$PersonMentionViewCopyWithImpl<$Res>
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as VoteType?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -437,7 +471,8 @@ abstract class _$PersonMentionViewCopyWith<$Res>
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType? myVote});
+      VoteType? myVote,
+      String instanceHost});
 
   @override
   $PersonMentionCopyWith<$Res> get personMention;
@@ -479,6 +514,7 @@ class __$PersonMentionViewCopyWithImpl<$Res>
     Object? subscribed = freezed,
     Object? saved = freezed,
     Object? myVote = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PersonMentionView(
       personMention: personMention == freezed
@@ -525,6 +561,10 @@ class __$PersonMentionViewCopyWithImpl<$Res>
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as VoteType?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -544,7 +584,8 @@ class _$_PersonMentionView extends _PersonMentionView {
       required this.creatorBannedFromCommunity,
       required this.subscribed,
       required this.saved,
-      this.myVote})
+      this.myVote,
+      required this.instanceHost})
       : super._();
 
   factory _$_PersonMentionView.fromJson(Map<String, dynamic> json) =>
@@ -572,10 +613,12 @@ class _$_PersonMentionView extends _PersonMentionView {
   final bool saved;
   @override
   final VoteType? myVote;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PersonMentionView(personMention: $personMention, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, myVote: $myVote)';
+    return 'PersonMentionView(personMention: $personMention, comment: $comment, creator: $creator, post: $post, community: $community, recipient: $recipient, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, myVote: $myVote, instanceHost: $instanceHost)';
   }
 
   @override
@@ -612,7 +655,10 @@ class _$_PersonMentionView extends _PersonMentionView {
             (identical(other.saved, saved) ||
                 const DeepCollectionEquality().equals(other.saved, saved)) &&
             (identical(other.myVote, myVote) ||
-                const DeepCollectionEquality().equals(other.myVote, myVote)));
+                const DeepCollectionEquality().equals(other.myVote, myVote)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -628,7 +674,8 @@ class _$_PersonMentionView extends _PersonMentionView {
       const DeepCollectionEquality().hash(creatorBannedFromCommunity) ^
       const DeepCollectionEquality().hash(subscribed) ^
       const DeepCollectionEquality().hash(saved) ^
-      const DeepCollectionEquality().hash(myVote);
+      const DeepCollectionEquality().hash(myVote) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -653,7 +700,8 @@ abstract class _PersonMentionView extends PersonMentionView {
       required bool creatorBannedFromCommunity,
       required bool subscribed,
       required bool saved,
-      VoteType? myVote}) = _$_PersonMentionView;
+      VoteType? myVote,
+      required String instanceHost}) = _$_PersonMentionView;
   _PersonMentionView._() : super._();
 
   factory _PersonMentionView.fromJson(Map<String, dynamic> json) =
@@ -682,6 +730,8 @@ abstract class _PersonMentionView extends PersonMentionView {
   @override
   VoteType? get myVote => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PersonMentionViewCopyWith<_PersonMentionView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -699,11 +749,13 @@ class _$LocalUserSettingsViewTearOff {
   _LocalUserSettingsView call(
       {required LocalUserSettings localUser,
       required PersonSafe person,
-      required PersonAggregates counts}) {
+      required PersonAggregates counts,
+      required String instanceHost}) {
     return _LocalUserSettingsView(
       localUser: localUser,
       person: person,
       counts: counts,
+      instanceHost: instanceHost,
     );
   }
 
@@ -720,6 +772,7 @@ mixin _$LocalUserSettingsView {
   LocalUserSettings get localUser => throw _privateConstructorUsedError;
   PersonSafe get person => throw _privateConstructorUsedError;
   PersonAggregates get counts => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -735,7 +788,8 @@ abstract class $LocalUserSettingsViewCopyWith<$Res> {
   $Res call(
       {LocalUserSettings localUser,
       PersonSafe person,
-      PersonAggregates counts});
+      PersonAggregates counts,
+      String instanceHost});
 
   $LocalUserSettingsCopyWith<$Res> get localUser;
   $PersonSafeCopyWith<$Res> get person;
@@ -756,6 +810,7 @@ class _$LocalUserSettingsViewCopyWithImpl<$Res>
     Object? localUser = freezed,
     Object? person = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       localUser: localUser == freezed
@@ -770,6 +825,10 @@ class _$LocalUserSettingsViewCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as PersonAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -805,7 +864,8 @@ abstract class _$LocalUserSettingsViewCopyWith<$Res>
   $Res call(
       {LocalUserSettings localUser,
       PersonSafe person,
-      PersonAggregates counts});
+      PersonAggregates counts,
+      String instanceHost});
 
   @override
   $LocalUserSettingsCopyWith<$Res> get localUser;
@@ -831,6 +891,7 @@ class __$LocalUserSettingsViewCopyWithImpl<$Res>
     Object? localUser = freezed,
     Object? person = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_LocalUserSettingsView(
       localUser: localUser == freezed
@@ -845,6 +906,10 @@ class __$LocalUserSettingsViewCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as PersonAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -854,7 +919,10 @@ class __$LocalUserSettingsViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_LocalUserSettingsView extends _LocalUserSettingsView {
   _$_LocalUserSettingsView(
-      {required this.localUser, required this.person, required this.counts})
+      {required this.localUser,
+      required this.person,
+      required this.counts,
+      required this.instanceHost})
       : super._();
 
   factory _$_LocalUserSettingsView.fromJson(Map<String, dynamic> json) =>
@@ -866,10 +934,12 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
   final PersonSafe person;
   @override
   final PersonAggregates counts;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'LocalUserSettingsView(localUser: $localUser, person: $person, counts: $counts)';
+    return 'LocalUserSettingsView(localUser: $localUser, person: $person, counts: $counts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -882,7 +952,10 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
             (identical(other.person, person) ||
                 const DeepCollectionEquality().equals(other.person, person)) &&
             (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)));
+                const DeepCollectionEquality().equals(other.counts, counts)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -890,7 +963,8 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(localUser) ^
       const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(counts);
+      const DeepCollectionEquality().hash(counts) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -908,7 +982,8 @@ abstract class _LocalUserSettingsView extends LocalUserSettingsView {
   factory _LocalUserSettingsView(
       {required LocalUserSettings localUser,
       required PersonSafe person,
-      required PersonAggregates counts}) = _$_LocalUserSettingsView;
+      required PersonAggregates counts,
+      required String instanceHost}) = _$_LocalUserSettingsView;
   _LocalUserSettingsView._() : super._();
 
   factory _LocalUserSettingsView.fromJson(Map<String, dynamic> json) =
@@ -920,6 +995,8 @@ abstract class _LocalUserSettingsView extends LocalUserSettingsView {
   PersonSafe get person => throw _privateConstructorUsedError;
   @override
   PersonAggregates get counts => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsViewCopyWith<_LocalUserSettingsView> get copyWith =>
@@ -937,11 +1014,13 @@ class _$SiteViewTearOff {
   _SiteView call(
       {required Site site,
       required PersonSafe creator,
-      required SiteAggregates counts}) {
+      required SiteAggregates counts,
+      required String instanceHost}) {
     return _SiteView(
       site: site,
       creator: creator,
       counts: counts,
+      instanceHost: instanceHost,
     );
   }
 
@@ -958,6 +1037,7 @@ mixin _$SiteView {
   Site get site => throw _privateConstructorUsedError;
   PersonSafe get creator => throw _privateConstructorUsedError;
   SiteAggregates get counts => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -969,7 +1049,11 @@ mixin _$SiteView {
 abstract class $SiteViewCopyWith<$Res> {
   factory $SiteViewCopyWith(SiteView value, $Res Function(SiteView) then) =
       _$SiteViewCopyWithImpl<$Res>;
-  $Res call({Site site, PersonSafe creator, SiteAggregates counts});
+  $Res call(
+      {Site site,
+      PersonSafe creator,
+      SiteAggregates counts,
+      String instanceHost});
 
   $SiteCopyWith<$Res> get site;
   $PersonSafeCopyWith<$Res> get creator;
@@ -989,6 +1073,7 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
     Object? site = freezed,
     Object? creator = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       site: site == freezed
@@ -1003,6 +1088,10 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as SiteAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -1033,7 +1122,11 @@ abstract class _$SiteViewCopyWith<$Res> implements $SiteViewCopyWith<$Res> {
   factory _$SiteViewCopyWith(_SiteView value, $Res Function(_SiteView) then) =
       __$SiteViewCopyWithImpl<$Res>;
   @override
-  $Res call({Site site, PersonSafe creator, SiteAggregates counts});
+  $Res call(
+      {Site site,
+      PersonSafe creator,
+      SiteAggregates counts,
+      String instanceHost});
 
   @override
   $SiteCopyWith<$Res> get site;
@@ -1057,6 +1150,7 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
     Object? site = freezed,
     Object? creator = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_SiteView(
       site: site == freezed
@@ -1071,6 +1165,10 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as SiteAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1079,7 +1177,11 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SiteView extends _SiteView {
-  _$_SiteView({required this.site, required this.creator, required this.counts})
+  _$_SiteView(
+      {required this.site,
+      required this.creator,
+      required this.counts,
+      required this.instanceHost})
       : super._();
 
   factory _$_SiteView.fromJson(Map<String, dynamic> json) =>
@@ -1091,10 +1193,12 @@ class _$_SiteView extends _SiteView {
   final PersonSafe creator;
   @override
   final SiteAggregates counts;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'SiteView(site: $site, creator: $creator, counts: $counts)';
+    return 'SiteView(site: $site, creator: $creator, counts: $counts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1107,7 +1211,10 @@ class _$_SiteView extends _SiteView {
                 const DeepCollectionEquality()
                     .equals(other.creator, creator)) &&
             (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)));
+                const DeepCollectionEquality().equals(other.counts, counts)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1115,7 +1222,8 @@ class _$_SiteView extends _SiteView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(site) ^
       const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(counts);
+      const DeepCollectionEquality().hash(counts) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1132,7 +1240,8 @@ abstract class _SiteView extends SiteView {
   factory _SiteView(
       {required Site site,
       required PersonSafe creator,
-      required SiteAggregates counts}) = _$_SiteView;
+      required SiteAggregates counts,
+      required String instanceHost}) = _$_SiteView;
   _SiteView._() : super._();
 
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
@@ -1143,6 +1252,8 @@ abstract class _SiteView extends SiteView {
   PersonSafe get creator => throw _privateConstructorUsedError;
   @override
   SiteAggregates get counts => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SiteViewCopyWith<_SiteView> get copyWith =>
@@ -1160,11 +1271,13 @@ class _$PrivateMessageViewTearOff {
   _PrivateMessageView call(
       {required PrivateMessage privateMessage,
       required PersonSafe creator,
-      required PersonSafe recipient}) {
+      required PersonSafe recipient,
+      required String instanceHost}) {
     return _PrivateMessageView(
       privateMessage: privateMessage,
       creator: creator,
       recipient: recipient,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1181,6 +1294,7 @@ mixin _$PrivateMessageView {
   PrivateMessage get privateMessage => throw _privateConstructorUsedError;
   PersonSafe get creator => throw _privateConstructorUsedError;
   PersonSafe get recipient => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1196,7 +1310,8 @@ abstract class $PrivateMessageViewCopyWith<$Res> {
   $Res call(
       {PrivateMessage privateMessage,
       PersonSafe creator,
-      PersonSafe recipient});
+      PersonSafe recipient,
+      String instanceHost});
 
   $PrivateMessageCopyWith<$Res> get privateMessage;
   $PersonSafeCopyWith<$Res> get creator;
@@ -1217,6 +1332,7 @@ class _$PrivateMessageViewCopyWithImpl<$Res>
     Object? privateMessage = freezed,
     Object? creator = freezed,
     Object? recipient = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       privateMessage: privateMessage == freezed
@@ -1231,6 +1347,10 @@ class _$PrivateMessageViewCopyWithImpl<$Res>
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -1266,7 +1386,8 @@ abstract class _$PrivateMessageViewCopyWith<$Res>
   $Res call(
       {PrivateMessage privateMessage,
       PersonSafe creator,
-      PersonSafe recipient});
+      PersonSafe recipient,
+      String instanceHost});
 
   @override
   $PrivateMessageCopyWith<$Res> get privateMessage;
@@ -1292,6 +1413,7 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
     Object? privateMessage = freezed,
     Object? creator = freezed,
     Object? recipient = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PrivateMessageView(
       privateMessage: privateMessage == freezed
@@ -1306,6 +1428,10 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1317,7 +1443,8 @@ class _$_PrivateMessageView extends _PrivateMessageView {
   _$_PrivateMessageView(
       {required this.privateMessage,
       required this.creator,
-      required this.recipient})
+      required this.recipient,
+      required this.instanceHost})
       : super._();
 
   factory _$_PrivateMessageView.fromJson(Map<String, dynamic> json) =>
@@ -1329,10 +1456,12 @@ class _$_PrivateMessageView extends _PrivateMessageView {
   final PersonSafe creator;
   @override
   final PersonSafe recipient;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PrivateMessageView(privateMessage: $privateMessage, creator: $creator, recipient: $recipient)';
+    return 'PrivateMessageView(privateMessage: $privateMessage, creator: $creator, recipient: $recipient, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1347,7 +1476,10 @@ class _$_PrivateMessageView extends _PrivateMessageView {
                     .equals(other.creator, creator)) &&
             (identical(other.recipient, recipient) ||
                 const DeepCollectionEquality()
-                    .equals(other.recipient, recipient)));
+                    .equals(other.recipient, recipient)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1355,7 +1487,8 @@ class _$_PrivateMessageView extends _PrivateMessageView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(privateMessage) ^
       const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(recipient);
+      const DeepCollectionEquality().hash(recipient) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1372,7 +1505,8 @@ abstract class _PrivateMessageView extends PrivateMessageView {
   factory _PrivateMessageView(
       {required PrivateMessage privateMessage,
       required PersonSafe creator,
-      required PersonSafe recipient}) = _$_PrivateMessageView;
+      required PersonSafe recipient,
+      required String instanceHost}) = _$_PrivateMessageView;
   _PrivateMessageView._() : super._();
 
   factory _PrivateMessageView.fromJson(Map<String, dynamic> json) =
@@ -1384,6 +1518,8 @@ abstract class _PrivateMessageView extends PrivateMessageView {
   PersonSafe get creator => throw _privateConstructorUsedError;
   @override
   PersonSafe get recipient => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PrivateMessageViewCopyWith<_PrivateMessageView> get copyWith =>
@@ -1407,7 +1543,8 @@ class _$PostViewTearOff {
       required bool subscribed,
       required bool saved,
       required bool read,
-      VoteType? myVote}) {
+      VoteType? myVote,
+      required String instanceHost}) {
     return _PostView(
       post: post,
       creator: creator,
@@ -1418,6 +1555,7 @@ class _$PostViewTearOff {
       saved: saved,
       read: read,
       myVote: myVote,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1440,6 +1578,7 @@ mixin _$PostView {
   bool get saved => throw _privateConstructorUsedError;
   bool get read => throw _privateConstructorUsedError;
   VoteType? get myVote => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1460,7 +1599,8 @@ abstract class $PostViewCopyWith<$Res> {
       bool subscribed,
       bool saved,
       bool read,
-      VoteType? myVote});
+      VoteType? myVote,
+      String instanceHost});
 
   $PostCopyWith<$Res> get post;
   $PersonSafeCopyWith<$Res> get creator;
@@ -1487,6 +1627,7 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
     Object? saved = freezed,
     Object? read = freezed,
     Object? myVote = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       post: post == freezed
@@ -1525,6 +1666,10 @@ class _$PostViewCopyWithImpl<$Res> implements $PostViewCopyWith<$Res> {
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as VoteType?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -1571,7 +1716,8 @@ abstract class _$PostViewCopyWith<$Res> implements $PostViewCopyWith<$Res> {
       bool subscribed,
       bool saved,
       bool read,
-      VoteType? myVote});
+      VoteType? myVote,
+      String instanceHost});
 
   @override
   $PostCopyWith<$Res> get post;
@@ -1603,6 +1749,7 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
     Object? saved = freezed,
     Object? read = freezed,
     Object? myVote = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PostView(
       post: post == freezed
@@ -1641,6 +1788,10 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as VoteType?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1658,7 +1809,8 @@ class _$_PostView extends _PostView {
       required this.subscribed,
       required this.saved,
       required this.read,
-      this.myVote})
+      this.myVote,
+      required this.instanceHost})
       : super._();
 
   factory _$_PostView.fromJson(Map<String, dynamic> json) =>
@@ -1682,10 +1834,12 @@ class _$_PostView extends _PostView {
   final bool read;
   @override
   final VoteType? myVote;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, myVote: $myVote)';
+    return 'PostView(post: $post, creator: $creator, community: $community, creatorBannedFromCommunity: $creatorBannedFromCommunity, counts: $counts, subscribed: $subscribed, saved: $saved, read: $read, myVote: $myVote, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1715,7 +1869,10 @@ class _$_PostView extends _PostView {
             (identical(other.read, read) ||
                 const DeepCollectionEquality().equals(other.read, read)) &&
             (identical(other.myVote, myVote) ||
-                const DeepCollectionEquality().equals(other.myVote, myVote)));
+                const DeepCollectionEquality().equals(other.myVote, myVote)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1729,7 +1886,8 @@ class _$_PostView extends _PostView {
       const DeepCollectionEquality().hash(subscribed) ^
       const DeepCollectionEquality().hash(saved) ^
       const DeepCollectionEquality().hash(read) ^
-      const DeepCollectionEquality().hash(myVote);
+      const DeepCollectionEquality().hash(myVote) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1752,7 +1910,8 @@ abstract class _PostView extends PostView {
       required bool subscribed,
       required bool saved,
       required bool read,
-      VoteType? myVote}) = _$_PostView;
+      VoteType? myVote,
+      required String instanceHost}) = _$_PostView;
   _PostView._() : super._();
 
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
@@ -1776,6 +1935,8 @@ abstract class _PostView extends PostView {
   @override
   VoteType? get myVote => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PostViewCopyWith<_PostView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1795,7 +1956,8 @@ class _$PostReportViewTearOff {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe postCreator,
-      PersonSafe? resolver}) {
+      PersonSafe? resolver,
+      required String instanceHost}) {
     return _PostReportView(
       postReport: postReport,
       post: post,
@@ -1803,6 +1965,7 @@ class _$PostReportViewTearOff {
       creator: creator,
       postCreator: postCreator,
       resolver: resolver,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1822,6 +1985,7 @@ mixin _$PostReportView {
   PersonSafe get creator => throw _privateConstructorUsedError;
   PersonSafe get postCreator => throw _privateConstructorUsedError;
   PersonSafe? get resolver => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1840,7 +2004,8 @@ abstract class $PostReportViewCopyWith<$Res> {
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe postCreator,
-      PersonSafe? resolver});
+      PersonSafe? resolver,
+      String instanceHost});
 
   $PostReportCopyWith<$Res> get postReport;
   $PostCopyWith<$Res> get post;
@@ -1867,6 +2032,7 @@ class _$PostReportViewCopyWithImpl<$Res>
     Object? creator = freezed,
     Object? postCreator = freezed,
     Object? resolver = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       postReport: postReport == freezed
@@ -1893,6 +2059,10 @@ class _$PostReportViewCopyWithImpl<$Res>
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
               as PersonSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -1956,7 +2126,8 @@ abstract class _$PostReportViewCopyWith<$Res>
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe postCreator,
-      PersonSafe? resolver});
+      PersonSafe? resolver,
+      String instanceHost});
 
   @override
   $PostReportCopyWith<$Res> get postReport;
@@ -1991,6 +2162,7 @@ class __$PostReportViewCopyWithImpl<$Res>
     Object? creator = freezed,
     Object? postCreator = freezed,
     Object? resolver = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PostReportView(
       postReport: postReport == freezed
@@ -2017,6 +2189,10 @@ class __$PostReportViewCopyWithImpl<$Res>
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
               as PersonSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2031,7 +2207,8 @@ class _$_PostReportView extends _PostReportView {
       required this.community,
       required this.creator,
       required this.postCreator,
-      this.resolver})
+      this.resolver,
+      required this.instanceHost})
       : super._();
 
   factory _$_PostReportView.fromJson(Map<String, dynamic> json) =>
@@ -2049,10 +2226,12 @@ class _$_PostReportView extends _PostReportView {
   final PersonSafe postCreator;
   @override
   final PersonSafe? resolver;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PostReportView(postReport: $postReport, post: $post, community: $community, creator: $creator, postCreator: $postCreator, resolver: $resolver)';
+    return 'PostReportView(postReport: $postReport, post: $post, community: $community, creator: $creator, postCreator: $postCreator, resolver: $resolver, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2075,7 +2254,10 @@ class _$_PostReportView extends _PostReportView {
                     .equals(other.postCreator, postCreator)) &&
             (identical(other.resolver, resolver) ||
                 const DeepCollectionEquality()
-                    .equals(other.resolver, resolver)));
+                    .equals(other.resolver, resolver)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2086,7 +2268,8 @@ class _$_PostReportView extends _PostReportView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(creator) ^
       const DeepCollectionEquality().hash(postCreator) ^
-      const DeepCollectionEquality().hash(resolver);
+      const DeepCollectionEquality().hash(resolver) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2106,7 +2289,8 @@ abstract class _PostReportView extends PostReportView {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe postCreator,
-      PersonSafe? resolver}) = _$_PostReportView;
+      PersonSafe? resolver,
+      required String instanceHost}) = _$_PostReportView;
   _PostReportView._() : super._();
 
   factory _PostReportView.fromJson(Map<String, dynamic> json) =
@@ -2124,6 +2308,8 @@ abstract class _PostReportView extends PostReportView {
   PersonSafe get postCreator => throw _privateConstructorUsedError;
   @override
   PersonSafe? get resolver => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostReportViewCopyWith<_PostReportView> get copyWith =>
@@ -2148,7 +2334,8 @@ class _$CommentViewTearOff {
       required bool creatorBannedFromCommunity,
       required bool subscribed,
       required bool saved,
-      VoteType? myVote}) {
+      VoteType? myVote,
+      required String instanceHost}) {
     return _CommentView(
       comment: comment,
       creator: creator,
@@ -2160,6 +2347,7 @@ class _$CommentViewTearOff {
       subscribed: subscribed,
       saved: saved,
       myVote: myVote,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2183,6 +2371,7 @@ mixin _$CommentView {
   bool get subscribed => throw _privateConstructorUsedError;
   bool get saved => throw _privateConstructorUsedError;
   VoteType? get myVote => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2205,7 +2394,8 @@ abstract class $CommentViewCopyWith<$Res> {
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType? myVote});
+      VoteType? myVote,
+      String instanceHost});
 
   $CommentCopyWith<$Res> get comment;
   $PersonSafeCopyWith<$Res> get creator;
@@ -2235,6 +2425,7 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
     Object? subscribed = freezed,
     Object? saved = freezed,
     Object? myVote = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       comment: comment == freezed
@@ -2277,6 +2468,10 @@ class _$CommentViewCopyWithImpl<$Res> implements $CommentViewCopyWith<$Res> {
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as VoteType?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -2344,7 +2539,8 @@ abstract class _$CommentViewCopyWith<$Res>
       bool creatorBannedFromCommunity,
       bool subscribed,
       bool saved,
-      VoteType? myVote});
+      VoteType? myVote,
+      String instanceHost});
 
   @override
   $CommentCopyWith<$Res> get comment;
@@ -2382,6 +2578,7 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
     Object? subscribed = freezed,
     Object? saved = freezed,
     Object? myVote = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommentView(
       comment: comment == freezed
@@ -2424,6 +2621,10 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
           ? _value.myVote
           : myVote // ignore: cast_nullable_to_non_nullable
               as VoteType?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2442,7 +2643,8 @@ class _$_CommentView extends _CommentView {
       required this.creatorBannedFromCommunity,
       required this.subscribed,
       required this.saved,
-      this.myVote})
+      this.myVote,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommentView.fromJson(Map<String, dynamic> json) =>
@@ -2468,10 +2670,12 @@ class _$_CommentView extends _CommentView {
   final bool saved;
   @override
   final VoteType? myVote;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommentView(comment: $comment, creator: $creator, recipient: $recipient, post: $post, community: $community, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, myVote: $myVote)';
+    return 'CommentView(comment: $comment, creator: $creator, recipient: $recipient, post: $post, community: $community, counts: $counts, creatorBannedFromCommunity: $creatorBannedFromCommunity, subscribed: $subscribed, saved: $saved, myVote: $myVote, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2505,7 +2709,10 @@ class _$_CommentView extends _CommentView {
             (identical(other.saved, saved) ||
                 const DeepCollectionEquality().equals(other.saved, saved)) &&
             (identical(other.myVote, myVote) ||
-                const DeepCollectionEquality().equals(other.myVote, myVote)));
+                const DeepCollectionEquality().equals(other.myVote, myVote)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2520,7 +2727,8 @@ class _$_CommentView extends _CommentView {
       const DeepCollectionEquality().hash(creatorBannedFromCommunity) ^
       const DeepCollectionEquality().hash(subscribed) ^
       const DeepCollectionEquality().hash(saved) ^
-      const DeepCollectionEquality().hash(myVote);
+      const DeepCollectionEquality().hash(myVote) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2544,7 +2752,8 @@ abstract class _CommentView extends CommentView {
       required bool creatorBannedFromCommunity,
       required bool subscribed,
       required bool saved,
-      VoteType? myVote}) = _$_CommentView;
+      VoteType? myVote,
+      required String instanceHost}) = _$_CommentView;
   _CommentView._() : super._();
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
@@ -2571,6 +2780,8 @@ abstract class _CommentView extends CommentView {
   @override
   VoteType? get myVote => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$CommentViewCopyWith<_CommentView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2591,7 +2802,8 @@ class _$CommentReportViewTearOff {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe commentCreator,
-      PersonSafe? resolver}) {
+      PersonSafe? resolver,
+      required String instanceHost}) {
     return _CommentReportView(
       commentReport: commentReport,
       comment: comment,
@@ -2600,6 +2812,7 @@ class _$CommentReportViewTearOff {
       creator: creator,
       commentCreator: commentCreator,
       resolver: resolver,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2620,6 +2833,7 @@ mixin _$CommentReportView {
   PersonSafe get creator => throw _privateConstructorUsedError;
   PersonSafe get commentCreator => throw _privateConstructorUsedError;
   PersonSafe? get resolver => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2639,7 +2853,8 @@ abstract class $CommentReportViewCopyWith<$Res> {
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe commentCreator,
-      PersonSafe? resolver});
+      PersonSafe? resolver,
+      String instanceHost});
 
   $CommentReportCopyWith<$Res> get commentReport;
   $CommentCopyWith<$Res> get comment;
@@ -2668,6 +2883,7 @@ class _$CommentReportViewCopyWithImpl<$Res>
     Object? creator = freezed,
     Object? commentCreator = freezed,
     Object? resolver = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       commentReport: commentReport == freezed
@@ -2698,6 +2914,10 @@ class _$CommentReportViewCopyWithImpl<$Res>
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
               as PersonSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -2769,7 +2989,8 @@ abstract class _$CommentReportViewCopyWith<$Res>
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe commentCreator,
-      PersonSafe? resolver});
+      PersonSafe? resolver,
+      String instanceHost});
 
   @override
   $CommentReportCopyWith<$Res> get commentReport;
@@ -2807,6 +3028,7 @@ class __$CommentReportViewCopyWithImpl<$Res>
     Object? creator = freezed,
     Object? commentCreator = freezed,
     Object? resolver = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommentReportView(
       commentReport: commentReport == freezed
@@ -2837,6 +3059,10 @@ class __$CommentReportViewCopyWithImpl<$Res>
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
               as PersonSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2852,7 +3078,8 @@ class _$_CommentReportView extends _CommentReportView {
       required this.community,
       required this.creator,
       required this.commentCreator,
-      this.resolver})
+      this.resolver,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommentReportView.fromJson(Map<String, dynamic> json) =>
@@ -2872,10 +3099,12 @@ class _$_CommentReportView extends _CommentReportView {
   final PersonSafe commentCreator;
   @override
   final PersonSafe? resolver;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommentReportView(commentReport: $commentReport, comment: $comment, post: $post, community: $community, creator: $creator, commentCreator: $commentCreator, resolver: $resolver)';
+    return 'CommentReportView(commentReport: $commentReport, comment: $comment, post: $post, community: $community, creator: $creator, commentCreator: $commentCreator, resolver: $resolver, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2901,7 +3130,10 @@ class _$_CommentReportView extends _CommentReportView {
                     .equals(other.commentCreator, commentCreator)) &&
             (identical(other.resolver, resolver) ||
                 const DeepCollectionEquality()
-                    .equals(other.resolver, resolver)));
+                    .equals(other.resolver, resolver)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2913,7 +3145,8 @@ class _$_CommentReportView extends _CommentReportView {
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(creator) ^
       const DeepCollectionEquality().hash(commentCreator) ^
-      const DeepCollectionEquality().hash(resolver);
+      const DeepCollectionEquality().hash(resolver) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2934,7 +3167,8 @@ abstract class _CommentReportView extends CommentReportView {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe commentCreator,
-      PersonSafe? resolver}) = _$_CommentReportView;
+      PersonSafe? resolver,
+      required String instanceHost}) = _$_CommentReportView;
   _CommentReportView._() : super._();
 
   factory _CommentReportView.fromJson(Map<String, dynamic> json) =
@@ -2955,6 +3189,8 @@ abstract class _CommentReportView extends CommentReportView {
   @override
   PersonSafe? get resolver => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$CommentReportViewCopyWith<_CommentReportView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2972,12 +3208,14 @@ class _$ModAddCommunityViewTearOff {
       {required ModAddCommunity modAddCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
-      required PersonSafe moddedPerson}) {
+      required PersonSafe moddedPerson,
+      required String instanceHost}) {
     return _ModAddCommunityView(
       modAddCommunity: modAddCommunity,
       moderator: moderator,
       community: community,
       moddedPerson: moddedPerson,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2995,6 +3233,7 @@ mixin _$ModAddCommunityView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3011,7 +3250,8 @@ abstract class $ModAddCommunityViewCopyWith<$Res> {
       {ModAddCommunity modAddCommunity,
       PersonSafe moderator,
       CommunitySafe community,
-      PersonSafe moddedPerson});
+      PersonSafe moddedPerson,
+      String instanceHost});
 
   $ModAddCommunityCopyWith<$Res> get modAddCommunity;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -3034,6 +3274,7 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? community = freezed,
     Object? moddedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modAddCommunity: modAddCommunity == freezed
@@ -3052,6 +3293,10 @@ class _$ModAddCommunityViewCopyWithImpl<$Res>
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -3095,7 +3340,8 @@ abstract class _$ModAddCommunityViewCopyWith<$Res>
       {ModAddCommunity modAddCommunity,
       PersonSafe moderator,
       CommunitySafe community,
-      PersonSafe moddedPerson});
+      PersonSafe moddedPerson,
+      String instanceHost});
 
   @override
   $ModAddCommunityCopyWith<$Res> get modAddCommunity;
@@ -3124,6 +3370,7 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? community = freezed,
     Object? moddedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModAddCommunityView(
       modAddCommunity: modAddCommunity == freezed
@@ -3142,6 +3389,10 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3154,7 +3405,8 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
       {required this.modAddCommunity,
       required this.moderator,
       required this.community,
-      required this.moddedPerson})
+      required this.moddedPerson,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
@@ -3168,10 +3420,12 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
   final CommunitySafe community;
   @override
   final PersonSafe moddedPerson;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModAddCommunityView(modAddCommunity: $modAddCommunity, moderator: $moderator, community: $community, moddedPerson: $moddedPerson)';
+    return 'ModAddCommunityView(modAddCommunity: $modAddCommunity, moderator: $moderator, community: $community, moddedPerson: $moddedPerson, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3189,7 +3443,10 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
                     .equals(other.community, community)) &&
             (identical(other.moddedPerson, moddedPerson) ||
                 const DeepCollectionEquality()
-                    .equals(other.moddedPerson, moddedPerson)));
+                    .equals(other.moddedPerson, moddedPerson)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3198,7 +3455,8 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
       const DeepCollectionEquality().hash(modAddCommunity) ^
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(moddedPerson);
+      const DeepCollectionEquality().hash(moddedPerson) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3217,7 +3475,8 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
       {required ModAddCommunity modAddCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
-      required PersonSafe moddedPerson}) = _$_ModAddCommunityView;
+      required PersonSafe moddedPerson,
+      required String instanceHost}) = _$_ModAddCommunityView;
   _ModAddCommunityView._() : super._();
 
   factory _ModAddCommunityView.fromJson(Map<String, dynamic> json) =
@@ -3231,6 +3490,8 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   @override
   PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddCommunityViewCopyWith<_ModAddCommunityView> get copyWith =>
@@ -3248,11 +3509,13 @@ class _$ModAddViewTearOff {
   _ModAddView call(
       {required ModAdd modAdd,
       required PersonSafe moderator,
-      required PersonSafe moddedPerson}) {
+      required PersonSafe moddedPerson,
+      required String instanceHost}) {
     return _ModAddView(
       modAdd: modAdd,
       moderator: moderator,
       moddedPerson: moddedPerson,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3269,6 +3532,7 @@ mixin _$ModAddView {
   ModAdd get modAdd => throw _privateConstructorUsedError;
   PersonSafe get moderator => throw _privateConstructorUsedError;
   PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3281,7 +3545,11 @@ abstract class $ModAddViewCopyWith<$Res> {
   factory $ModAddViewCopyWith(
           ModAddView value, $Res Function(ModAddView) then) =
       _$ModAddViewCopyWithImpl<$Res>;
-  $Res call({ModAdd modAdd, PersonSafe moderator, PersonSafe moddedPerson});
+  $Res call(
+      {ModAdd modAdd,
+      PersonSafe moderator,
+      PersonSafe moddedPerson,
+      String instanceHost});
 
   $ModAddCopyWith<$Res> get modAdd;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -3301,6 +3569,7 @@ class _$ModAddViewCopyWithImpl<$Res> implements $ModAddViewCopyWith<$Res> {
     Object? modAdd = freezed,
     Object? moderator = freezed,
     Object? moddedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modAdd: modAdd == freezed
@@ -3315,6 +3584,10 @@ class _$ModAddViewCopyWithImpl<$Res> implements $ModAddViewCopyWith<$Res> {
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -3346,7 +3619,11 @@ abstract class _$ModAddViewCopyWith<$Res> implements $ModAddViewCopyWith<$Res> {
           _ModAddView value, $Res Function(_ModAddView) then) =
       __$ModAddViewCopyWithImpl<$Res>;
   @override
-  $Res call({ModAdd modAdd, PersonSafe moderator, PersonSafe moddedPerson});
+  $Res call(
+      {ModAdd modAdd,
+      PersonSafe moderator,
+      PersonSafe moddedPerson,
+      String instanceHost});
 
   @override
   $ModAddCopyWith<$Res> get modAdd;
@@ -3371,6 +3648,7 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
     Object? modAdd = freezed,
     Object? moderator = freezed,
     Object? moddedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModAddView(
       modAdd: modAdd == freezed
@@ -3385,6 +3663,10 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
           ? _value.moddedPerson
           : moddedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3396,7 +3678,8 @@ class _$_ModAddView extends _ModAddView {
   _$_ModAddView(
       {required this.modAdd,
       required this.moderator,
-      required this.moddedPerson})
+      required this.moddedPerson,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModAddView.fromJson(Map<String, dynamic> json) =>
@@ -3408,10 +3691,12 @@ class _$_ModAddView extends _ModAddView {
   final PersonSafe moderator;
   @override
   final PersonSafe moddedPerson;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModAddView(modAdd: $modAdd, moderator: $moderator, moddedPerson: $moddedPerson)';
+    return 'ModAddView(modAdd: $modAdd, moderator: $moderator, moddedPerson: $moddedPerson, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3425,7 +3710,10 @@ class _$_ModAddView extends _ModAddView {
                     .equals(other.moderator, moderator)) &&
             (identical(other.moddedPerson, moddedPerson) ||
                 const DeepCollectionEquality()
-                    .equals(other.moddedPerson, moddedPerson)));
+                    .equals(other.moddedPerson, moddedPerson)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3433,7 +3721,8 @@ class _$_ModAddView extends _ModAddView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(modAdd) ^
       const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(moddedPerson);
+      const DeepCollectionEquality().hash(moddedPerson) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3450,7 +3739,8 @@ abstract class _ModAddView extends ModAddView {
   factory _ModAddView(
       {required ModAdd modAdd,
       required PersonSafe moderator,
-      required PersonSafe moddedPerson}) = _$_ModAddView;
+      required PersonSafe moddedPerson,
+      required String instanceHost}) = _$_ModAddView;
   _ModAddView._() : super._();
 
   factory _ModAddView.fromJson(Map<String, dynamic> json) =
@@ -3462,6 +3752,8 @@ abstract class _ModAddView extends ModAddView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
   PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddViewCopyWith<_ModAddView> get copyWith =>
@@ -3481,12 +3773,14 @@ class _$ModBanFromCommunityViewTearOff {
       {required ModBanFromCommunity modBanFromCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
-      required PersonSafe bannedPerson}) {
+      required PersonSafe bannedPerson,
+      required String instanceHost}) {
     return _ModBanFromCommunityView(
       modBanFromCommunity: modBanFromCommunity,
       moderator: moderator,
       community: community,
       bannedPerson: bannedPerson,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3505,6 +3799,7 @@ mixin _$ModBanFromCommunityView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3521,7 +3816,8 @@ abstract class $ModBanFromCommunityViewCopyWith<$Res> {
       {ModBanFromCommunity modBanFromCommunity,
       PersonSafe moderator,
       CommunitySafe community,
-      PersonSafe bannedPerson});
+      PersonSafe bannedPerson,
+      String instanceHost});
 
   $ModBanFromCommunityCopyWith<$Res> get modBanFromCommunity;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -3544,6 +3840,7 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? community = freezed,
     Object? bannedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modBanFromCommunity: modBanFromCommunity == freezed
@@ -3562,6 +3859,10 @@ class _$ModBanFromCommunityViewCopyWithImpl<$Res>
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -3606,7 +3907,8 @@ abstract class _$ModBanFromCommunityViewCopyWith<$Res>
       {ModBanFromCommunity modBanFromCommunity,
       PersonSafe moderator,
       CommunitySafe community,
-      PersonSafe bannedPerson});
+      PersonSafe bannedPerson,
+      String instanceHost});
 
   @override
   $ModBanFromCommunityCopyWith<$Res> get modBanFromCommunity;
@@ -3636,6 +3938,7 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? community = freezed,
     Object? bannedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModBanFromCommunityView(
       modBanFromCommunity: modBanFromCommunity == freezed
@@ -3654,6 +3957,10 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3666,7 +3973,8 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
       {required this.modBanFromCommunity,
       required this.moderator,
       required this.community,
-      required this.bannedPerson})
+      required this.bannedPerson,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
@@ -3680,10 +3988,12 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
   final CommunitySafe community;
   @override
   final PersonSafe bannedPerson;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModBanFromCommunityView(modBanFromCommunity: $modBanFromCommunity, moderator: $moderator, community: $community, bannedPerson: $bannedPerson)';
+    return 'ModBanFromCommunityView(modBanFromCommunity: $modBanFromCommunity, moderator: $moderator, community: $community, bannedPerson: $bannedPerson, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3701,7 +4011,10 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
                     .equals(other.community, community)) &&
             (identical(other.bannedPerson, bannedPerson) ||
                 const DeepCollectionEquality()
-                    .equals(other.bannedPerson, bannedPerson)));
+                    .equals(other.bannedPerson, bannedPerson)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3710,7 +4023,8 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
       const DeepCollectionEquality().hash(modBanFromCommunity) ^
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(bannedPerson);
+      const DeepCollectionEquality().hash(bannedPerson) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3729,7 +4043,8 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
       {required ModBanFromCommunity modBanFromCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
-      required PersonSafe bannedPerson}) = _$_ModBanFromCommunityView;
+      required PersonSafe bannedPerson,
+      required String instanceHost}) = _$_ModBanFromCommunityView;
   _ModBanFromCommunityView._() : super._();
 
   factory _ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =
@@ -3744,6 +4059,8 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   @override
   PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModBanFromCommunityViewCopyWith<_ModBanFromCommunityView> get copyWith =>
@@ -3761,11 +4078,13 @@ class _$ModBanViewTearOff {
   _ModBanView call(
       {required ModBan modBan,
       required PersonSafe moderator,
-      required PersonSafe bannedPerson}) {
+      required PersonSafe bannedPerson,
+      required String instanceHost}) {
     return _ModBanView(
       modBan: modBan,
       moderator: moderator,
       bannedPerson: bannedPerson,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3782,6 +4101,7 @@ mixin _$ModBanView {
   ModBan get modBan => throw _privateConstructorUsedError;
   PersonSafe get moderator => throw _privateConstructorUsedError;
   PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3794,7 +4114,11 @@ abstract class $ModBanViewCopyWith<$Res> {
   factory $ModBanViewCopyWith(
           ModBanView value, $Res Function(ModBanView) then) =
       _$ModBanViewCopyWithImpl<$Res>;
-  $Res call({ModBan modBan, PersonSafe moderator, PersonSafe bannedPerson});
+  $Res call(
+      {ModBan modBan,
+      PersonSafe moderator,
+      PersonSafe bannedPerson,
+      String instanceHost});
 
   $ModBanCopyWith<$Res> get modBan;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -3814,6 +4138,7 @@ class _$ModBanViewCopyWithImpl<$Res> implements $ModBanViewCopyWith<$Res> {
     Object? modBan = freezed,
     Object? moderator = freezed,
     Object? bannedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modBan: modBan == freezed
@@ -3828,6 +4153,10 @@ class _$ModBanViewCopyWithImpl<$Res> implements $ModBanViewCopyWith<$Res> {
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -3859,7 +4188,11 @@ abstract class _$ModBanViewCopyWith<$Res> implements $ModBanViewCopyWith<$Res> {
           _ModBanView value, $Res Function(_ModBanView) then) =
       __$ModBanViewCopyWithImpl<$Res>;
   @override
-  $Res call({ModBan modBan, PersonSafe moderator, PersonSafe bannedPerson});
+  $Res call(
+      {ModBan modBan,
+      PersonSafe moderator,
+      PersonSafe bannedPerson,
+      String instanceHost});
 
   @override
   $ModBanCopyWith<$Res> get modBan;
@@ -3884,6 +4217,7 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
     Object? modBan = freezed,
     Object? moderator = freezed,
     Object? bannedPerson = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModBanView(
       modBan: modBan == freezed
@@ -3898,6 +4232,10 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
           ? _value.bannedPerson
           : bannedPerson // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3909,7 +4247,8 @@ class _$_ModBanView extends _ModBanView {
   _$_ModBanView(
       {required this.modBan,
       required this.moderator,
-      required this.bannedPerson})
+      required this.bannedPerson,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModBanView.fromJson(Map<String, dynamic> json) =>
@@ -3921,10 +4260,12 @@ class _$_ModBanView extends _ModBanView {
   final PersonSafe moderator;
   @override
   final PersonSafe bannedPerson;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModBanView(modBan: $modBan, moderator: $moderator, bannedPerson: $bannedPerson)';
+    return 'ModBanView(modBan: $modBan, moderator: $moderator, bannedPerson: $bannedPerson, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3938,7 +4279,10 @@ class _$_ModBanView extends _ModBanView {
                     .equals(other.moderator, moderator)) &&
             (identical(other.bannedPerson, bannedPerson) ||
                 const DeepCollectionEquality()
-                    .equals(other.bannedPerson, bannedPerson)));
+                    .equals(other.bannedPerson, bannedPerson)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3946,7 +4290,8 @@ class _$_ModBanView extends _ModBanView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(modBan) ^
       const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(bannedPerson);
+      const DeepCollectionEquality().hash(bannedPerson) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3963,7 +4308,8 @@ abstract class _ModBanView extends ModBanView {
   factory _ModBanView(
       {required ModBan modBan,
       required PersonSafe moderator,
-      required PersonSafe bannedPerson}) = _$_ModBanView;
+      required PersonSafe bannedPerson,
+      required String instanceHost}) = _$_ModBanView;
   _ModBanView._() : super._();
 
   factory _ModBanView.fromJson(Map<String, dynamic> json) =
@@ -3975,6 +4321,8 @@ abstract class _ModBanView extends ModBanView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
   PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModBanViewCopyWith<_ModBanView> get copyWith =>
@@ -3993,12 +4341,14 @@ class _$ModLockPostViewTearOff {
       {required ModLockPost modLockPost,
       required PersonSafe moderator,
       required Post post,
-      required CommunitySafe community}) {
+      required CommunitySafe community,
+      required String instanceHost}) {
     return _ModLockPostView(
       modLockPost: modLockPost,
       moderator: moderator,
       post: post,
       community: community,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4016,6 +4366,7 @@ mixin _$ModLockPostView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4032,7 +4383,8 @@ abstract class $ModLockPostViewCopyWith<$Res> {
       {ModLockPost modLockPost,
       PersonSafe moderator,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   $ModLockPostCopyWith<$Res> get modLockPost;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -4055,6 +4407,7 @@ class _$ModLockPostViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modLockPost: modLockPost == freezed
@@ -4073,6 +4426,10 @@ class _$ModLockPostViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -4116,7 +4473,8 @@ abstract class _$ModLockPostViewCopyWith<$Res>
       {ModLockPost modLockPost,
       PersonSafe moderator,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   @override
   $ModLockPostCopyWith<$Res> get modLockPost;
@@ -4145,6 +4503,7 @@ class __$ModLockPostViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModLockPostView(
       modLockPost: modLockPost == freezed
@@ -4163,6 +4522,10 @@ class __$ModLockPostViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4175,7 +4538,8 @@ class _$_ModLockPostView extends _ModLockPostView {
       {required this.modLockPost,
       required this.moderator,
       required this.post,
-      required this.community})
+      required this.community,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModLockPostView.fromJson(Map<String, dynamic> json) =>
@@ -4189,10 +4553,12 @@ class _$_ModLockPostView extends _ModLockPostView {
   final Post post;
   @override
   final CommunitySafe community;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModLockPostView(modLockPost: $modLockPost, moderator: $moderator, post: $post, community: $community)';
+    return 'ModLockPostView(modLockPost: $modLockPost, moderator: $moderator, post: $post, community: $community, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4209,7 +4575,10 @@ class _$_ModLockPostView extends _ModLockPostView {
                 const DeepCollectionEquality().equals(other.post, post)) &&
             (identical(other.community, community) ||
                 const DeepCollectionEquality()
-                    .equals(other.community, community)));
+                    .equals(other.community, community)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -4218,7 +4587,8 @@ class _$_ModLockPostView extends _ModLockPostView {
       const DeepCollectionEquality().hash(modLockPost) ^
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community);
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4236,7 +4606,8 @@ abstract class _ModLockPostView extends ModLockPostView {
       {required ModLockPost modLockPost,
       required PersonSafe moderator,
       required Post post,
-      required CommunitySafe community}) = _$_ModLockPostView;
+      required CommunitySafe community,
+      required String instanceHost}) = _$_ModLockPostView;
   _ModLockPostView._() : super._();
 
   factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
@@ -4250,6 +4621,8 @@ abstract class _ModLockPostView extends ModLockPostView {
   Post get post => throw _privateConstructorUsedError;
   @override
   CommunitySafe get community => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModLockPostViewCopyWith<_ModLockPostView> get copyWith =>
@@ -4270,7 +4643,8 @@ class _$ModRemoveCommentViewTearOff {
       required Comment comment,
       required PersonSafe commenter,
       required Post post,
-      required CommunitySafe community}) {
+      required CommunitySafe community,
+      required String instanceHost}) {
     return _ModRemoveCommentView(
       modRemoveComment: modRemoveComment,
       moderator: moderator,
@@ -4278,6 +4652,7 @@ class _$ModRemoveCommentViewTearOff {
       commenter: commenter,
       post: post,
       community: community,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4297,6 +4672,7 @@ mixin _$ModRemoveCommentView {
   PersonSafe get commenter => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4315,7 +4691,8 @@ abstract class $ModRemoveCommentViewCopyWith<$Res> {
       Comment comment,
       PersonSafe commenter,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   $ModRemoveCommentCopyWith<$Res> get modRemoveComment;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -4342,6 +4719,7 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
     Object? commenter = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modRemoveComment: modRemoveComment == freezed
@@ -4368,6 +4746,10 @@ class _$ModRemoveCommentViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -4427,7 +4809,8 @@ abstract class _$ModRemoveCommentViewCopyWith<$Res>
       Comment comment,
       PersonSafe commenter,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   @override
   $ModRemoveCommentCopyWith<$Res> get modRemoveComment;
@@ -4462,6 +4845,7 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
     Object? commenter = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModRemoveCommentView(
       modRemoveComment: modRemoveComment == freezed
@@ -4488,6 +4872,10 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4502,7 +4890,8 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
       required this.comment,
       required this.commenter,
       required this.post,
-      required this.community})
+      required this.community,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
@@ -4520,10 +4909,12 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
   final Post post;
   @override
   final CommunitySafe community;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModRemoveCommentView(modRemoveComment: $modRemoveComment, moderator: $moderator, comment: $comment, commenter: $commenter, post: $post, community: $community)';
+    return 'ModRemoveCommentView(modRemoveComment: $modRemoveComment, moderator: $moderator, comment: $comment, commenter: $commenter, post: $post, community: $community, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4546,7 +4937,10 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
                 const DeepCollectionEquality().equals(other.post, post)) &&
             (identical(other.community, community) ||
                 const DeepCollectionEquality()
-                    .equals(other.community, community)));
+                    .equals(other.community, community)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -4557,7 +4951,8 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
       const DeepCollectionEquality().hash(comment) ^
       const DeepCollectionEquality().hash(commenter) ^
       const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community);
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4578,7 +4973,8 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       required Comment comment,
       required PersonSafe commenter,
       required Post post,
-      required CommunitySafe community}) = _$_ModRemoveCommentView;
+      required CommunitySafe community,
+      required String instanceHost}) = _$_ModRemoveCommentView;
   _ModRemoveCommentView._() : super._();
 
   factory _ModRemoveCommentView.fromJson(Map<String, dynamic> json) =
@@ -4597,6 +4993,8 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
   @override
   CommunitySafe get community => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ModRemoveCommentViewCopyWith<_ModRemoveCommentView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -4614,11 +5012,13 @@ class _$ModRemoveCommunityViewTearOff {
   _ModRemoveCommunityView call(
       {required ModRemoveCommunity modRemoveCommunity,
       required PersonSafe moderator,
-      required CommunitySafe community}) {
+      required CommunitySafe community,
+      required String instanceHost}) {
     return _ModRemoveCommunityView(
       modRemoveCommunity: modRemoveCommunity,
       moderator: moderator,
       community: community,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4636,6 +5036,7 @@ mixin _$ModRemoveCommunityView {
       throw _privateConstructorUsedError;
   PersonSafe get moderator => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4651,7 +5052,8 @@ abstract class $ModRemoveCommunityViewCopyWith<$Res> {
   $Res call(
       {ModRemoveCommunity modRemoveCommunity,
       PersonSafe moderator,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   $ModRemoveCommunityCopyWith<$Res> get modRemoveCommunity;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -4672,6 +5074,7 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res>
     Object? modRemoveCommunity = freezed,
     Object? moderator = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modRemoveCommunity: modRemoveCommunity == freezed
@@ -4686,6 +5089,10 @@ class _$ModRemoveCommunityViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -4722,7 +5129,8 @@ abstract class _$ModRemoveCommunityViewCopyWith<$Res>
   $Res call(
       {ModRemoveCommunity modRemoveCommunity,
       PersonSafe moderator,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   @override
   $ModRemoveCommunityCopyWith<$Res> get modRemoveCommunity;
@@ -4748,6 +5156,7 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
     Object? modRemoveCommunity = freezed,
     Object? moderator = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModRemoveCommunityView(
       modRemoveCommunity: modRemoveCommunity == freezed
@@ -4762,6 +5171,10 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4773,7 +5186,8 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
   _$_ModRemoveCommunityView(
       {required this.modRemoveCommunity,
       required this.moderator,
-      required this.community})
+      required this.community,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
@@ -4785,10 +5199,12 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
   final PersonSafe moderator;
   @override
   final CommunitySafe community;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModRemoveCommunityView(modRemoveCommunity: $modRemoveCommunity, moderator: $moderator, community: $community)';
+    return 'ModRemoveCommunityView(modRemoveCommunity: $modRemoveCommunity, moderator: $moderator, community: $community, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4803,7 +5219,10 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
                     .equals(other.moderator, moderator)) &&
             (identical(other.community, community) ||
                 const DeepCollectionEquality()
-                    .equals(other.community, community)));
+                    .equals(other.community, community)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -4811,7 +5230,8 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(modRemoveCommunity) ^
       const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(community);
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4829,7 +5249,8 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   factory _ModRemoveCommunityView(
       {required ModRemoveCommunity modRemoveCommunity,
       required PersonSafe moderator,
-      required CommunitySafe community}) = _$_ModRemoveCommunityView;
+      required CommunitySafe community,
+      required String instanceHost}) = _$_ModRemoveCommunityView;
   _ModRemoveCommunityView._() : super._();
 
   factory _ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =
@@ -4842,6 +5263,8 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
   CommunitySafe get community => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommunityViewCopyWith<_ModRemoveCommunityView> get copyWith =>
@@ -4860,12 +5283,14 @@ class _$ModRemovePostViewTearOff {
       {required ModRemovePost modRemovePost,
       required PersonSafe moderator,
       required Post post,
-      required CommunitySafe community}) {
+      required CommunitySafe community,
+      required String instanceHost}) {
     return _ModRemovePostView(
       modRemovePost: modRemovePost,
       moderator: moderator,
       post: post,
       community: community,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4883,6 +5308,7 @@ mixin _$ModRemovePostView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4899,7 +5325,8 @@ abstract class $ModRemovePostViewCopyWith<$Res> {
       {ModRemovePost modRemovePost,
       PersonSafe moderator,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   $ModRemovePostCopyWith<$Res> get modRemovePost;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -4922,6 +5349,7 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modRemovePost: modRemovePost == freezed
@@ -4940,6 +5368,10 @@ class _$ModRemovePostViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -4983,7 +5415,8 @@ abstract class _$ModRemovePostViewCopyWith<$Res>
       {ModRemovePost modRemovePost,
       PersonSafe moderator,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   @override
   $ModRemovePostCopyWith<$Res> get modRemovePost;
@@ -5012,6 +5445,7 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModRemovePostView(
       modRemovePost: modRemovePost == freezed
@@ -5030,6 +5464,10 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5042,7 +5480,8 @@ class _$_ModRemovePostView extends _ModRemovePostView {
       {required this.modRemovePost,
       required this.moderator,
       required this.post,
-      required this.community})
+      required this.community,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModRemovePostView.fromJson(Map<String, dynamic> json) =>
@@ -5056,10 +5495,12 @@ class _$_ModRemovePostView extends _ModRemovePostView {
   final Post post;
   @override
   final CommunitySafe community;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModRemovePostView(modRemovePost: $modRemovePost, moderator: $moderator, post: $post, community: $community)';
+    return 'ModRemovePostView(modRemovePost: $modRemovePost, moderator: $moderator, post: $post, community: $community, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5076,7 +5517,10 @@ class _$_ModRemovePostView extends _ModRemovePostView {
                 const DeepCollectionEquality().equals(other.post, post)) &&
             (identical(other.community, community) ||
                 const DeepCollectionEquality()
-                    .equals(other.community, community)));
+                    .equals(other.community, community)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -5085,7 +5529,8 @@ class _$_ModRemovePostView extends _ModRemovePostView {
       const DeepCollectionEquality().hash(modRemovePost) ^
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community);
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5103,7 +5548,8 @@ abstract class _ModRemovePostView extends ModRemovePostView {
       {required ModRemovePost modRemovePost,
       required PersonSafe moderator,
       required Post post,
-      required CommunitySafe community}) = _$_ModRemovePostView;
+      required CommunitySafe community,
+      required String instanceHost}) = _$_ModRemovePostView;
   _ModRemovePostView._() : super._();
 
   factory _ModRemovePostView.fromJson(Map<String, dynamic> json) =
@@ -5117,6 +5563,8 @@ abstract class _ModRemovePostView extends ModRemovePostView {
   Post get post => throw _privateConstructorUsedError;
   @override
   CommunitySafe get community => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemovePostViewCopyWith<_ModRemovePostView> get copyWith =>
@@ -5135,12 +5583,14 @@ class _$ModStickyPostViewTearOff {
       {required ModStickyPost modStickyPost,
       required PersonSafe moderator,
       required Post post,
-      required CommunitySafe community}) {
+      required CommunitySafe community,
+      required String instanceHost}) {
     return _ModStickyPostView(
       modStickyPost: modStickyPost,
       moderator: moderator,
       post: post,
       community: community,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5158,6 +5608,7 @@ mixin _$ModStickyPostView {
   PersonSafe get moderator => throw _privateConstructorUsedError;
   Post get post => throw _privateConstructorUsedError;
   CommunitySafe get community => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5174,7 +5625,8 @@ abstract class $ModStickyPostViewCopyWith<$Res> {
       {ModStickyPost modStickyPost,
       PersonSafe moderator,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   $ModStickyPostCopyWith<$Res> get modStickyPost;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -5197,6 +5649,7 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       modStickyPost: modStickyPost == freezed
@@ -5215,6 +5668,10 @@ class _$ModStickyPostViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -5258,7 +5715,8 @@ abstract class _$ModStickyPostViewCopyWith<$Res>
       {ModStickyPost modStickyPost,
       PersonSafe moderator,
       Post post,
-      CommunitySafe community});
+      CommunitySafe community,
+      String instanceHost});
 
   @override
   $ModStickyPostCopyWith<$Res> get modStickyPost;
@@ -5287,6 +5745,7 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
     Object? moderator = freezed,
     Object? post = freezed,
     Object? community = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModStickyPostView(
       modStickyPost: modStickyPost == freezed
@@ -5305,6 +5764,10 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
           ? _value.community
           : community // ignore: cast_nullable_to_non_nullable
               as CommunitySafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5317,7 +5780,8 @@ class _$_ModStickyPostView extends _ModStickyPostView {
       {required this.modStickyPost,
       required this.moderator,
       required this.post,
-      required this.community})
+      required this.community,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModStickyPostView.fromJson(Map<String, dynamic> json) =>
@@ -5331,10 +5795,12 @@ class _$_ModStickyPostView extends _ModStickyPostView {
   final Post post;
   @override
   final CommunitySafe community;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModStickyPostView(modStickyPost: $modStickyPost, moderator: $moderator, post: $post, community: $community)';
+    return 'ModStickyPostView(modStickyPost: $modStickyPost, moderator: $moderator, post: $post, community: $community, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5351,7 +5817,10 @@ class _$_ModStickyPostView extends _ModStickyPostView {
                 const DeepCollectionEquality().equals(other.post, post)) &&
             (identical(other.community, community) ||
                 const DeepCollectionEquality()
-                    .equals(other.community, community)));
+                    .equals(other.community, community)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -5360,7 +5829,8 @@ class _$_ModStickyPostView extends _ModStickyPostView {
       const DeepCollectionEquality().hash(modStickyPost) ^
       const DeepCollectionEquality().hash(moderator) ^
       const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community);
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5378,7 +5848,8 @@ abstract class _ModStickyPostView extends ModStickyPostView {
       {required ModStickyPost modStickyPost,
       required PersonSafe moderator,
       required Post post,
-      required CommunitySafe community}) = _$_ModStickyPostView;
+      required CommunitySafe community,
+      required String instanceHost}) = _$_ModStickyPostView;
   _ModStickyPostView._() : super._();
 
   factory _ModStickyPostView.fromJson(Map<String, dynamic> json) =
@@ -5392,6 +5863,8 @@ abstract class _ModStickyPostView extends ModStickyPostView {
   Post get post => throw _privateConstructorUsedError;
   @override
   CommunitySafe get community => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModStickyPostViewCopyWith<_ModStickyPostView> get copyWith =>
@@ -5408,10 +5881,13 @@ class _$CommunityFollowerViewTearOff {
   const _$CommunityFollowerViewTearOff();
 
   _CommunityFollowerView call(
-      {required CommunitySafe community, required PersonSafe follower}) {
+      {required CommunitySafe community,
+      required PersonSafe follower,
+      required String instanceHost}) {
     return _CommunityFollowerView(
       community: community,
       follower: follower,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5427,6 +5903,7 @@ const $CommunityFollowerView = _$CommunityFollowerViewTearOff();
 mixin _$CommunityFollowerView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get follower => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5439,7 +5916,8 @@ abstract class $CommunityFollowerViewCopyWith<$Res> {
   factory $CommunityFollowerViewCopyWith(CommunityFollowerView value,
           $Res Function(CommunityFollowerView) then) =
       _$CommunityFollowerViewCopyWithImpl<$Res>;
-  $Res call({CommunitySafe community, PersonSafe follower});
+  $Res call(
+      {CommunitySafe community, PersonSafe follower, String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
   $PersonSafeCopyWith<$Res> get follower;
@@ -5458,6 +5936,7 @@ class _$CommunityFollowerViewCopyWithImpl<$Res>
   $Res call({
     Object? community = freezed,
     Object? follower = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       community: community == freezed
@@ -5468,6 +5947,10 @@ class _$CommunityFollowerViewCopyWithImpl<$Res>
           ? _value.follower
           : follower // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -5493,7 +5976,8 @@ abstract class _$CommunityFollowerViewCopyWith<$Res>
           $Res Function(_CommunityFollowerView) then) =
       __$CommunityFollowerViewCopyWithImpl<$Res>;
   @override
-  $Res call({CommunitySafe community, PersonSafe follower});
+  $Res call(
+      {CommunitySafe community, PersonSafe follower, String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
@@ -5516,6 +6000,7 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
   $Res call({
     Object? community = freezed,
     Object? follower = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommunityFollowerView(
       community: community == freezed
@@ -5526,6 +6011,10 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
           ? _value.follower
           : follower // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5534,7 +6023,10 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityFollowerView extends _CommunityFollowerView {
-  _$_CommunityFollowerView({required this.community, required this.follower})
+  _$_CommunityFollowerView(
+      {required this.community,
+      required this.follower,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
@@ -5544,10 +6036,12 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
   final CommunitySafe community;
   @override
   final PersonSafe follower;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommunityFollowerView(community: $community, follower: $follower)';
+    return 'CommunityFollowerView(community: $community, follower: $follower, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5559,14 +6053,18 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
                     .equals(other.community, community)) &&
             (identical(other.follower, follower) ||
                 const DeepCollectionEquality()
-                    .equals(other.follower, follower)));
+                    .equals(other.follower, follower)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(follower);
+      const DeepCollectionEquality().hash(follower) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5583,7 +6081,8 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 abstract class _CommunityFollowerView extends CommunityFollowerView {
   factory _CommunityFollowerView(
       {required CommunitySafe community,
-      required PersonSafe follower}) = _$_CommunityFollowerView;
+      required PersonSafe follower,
+      required String instanceHost}) = _$_CommunityFollowerView;
   _CommunityFollowerView._() : super._();
 
   factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
@@ -5593,6 +6092,8 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   @override
   PersonSafe get follower => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityFollowerViewCopyWith<_CommunityFollowerView> get copyWith =>
@@ -5609,10 +6110,13 @@ class _$CommunityModeratorViewTearOff {
   const _$CommunityModeratorViewTearOff();
 
   _CommunityModeratorView call(
-      {required CommunitySafe community, required PersonSafe moderator}) {
+      {required CommunitySafe community,
+      required PersonSafe moderator,
+      required String instanceHost}) {
     return _CommunityModeratorView(
       community: community,
       moderator: moderator,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5628,6 +6132,7 @@ const $CommunityModeratorView = _$CommunityModeratorViewTearOff();
 mixin _$CommunityModeratorView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get moderator => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5640,7 +6145,8 @@ abstract class $CommunityModeratorViewCopyWith<$Res> {
   factory $CommunityModeratorViewCopyWith(CommunityModeratorView value,
           $Res Function(CommunityModeratorView) then) =
       _$CommunityModeratorViewCopyWithImpl<$Res>;
-  $Res call({CommunitySafe community, PersonSafe moderator});
+  $Res call(
+      {CommunitySafe community, PersonSafe moderator, String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
   $PersonSafeCopyWith<$Res> get moderator;
@@ -5659,6 +6165,7 @@ class _$CommunityModeratorViewCopyWithImpl<$Res>
   $Res call({
     Object? community = freezed,
     Object? moderator = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       community: community == freezed
@@ -5669,6 +6176,10 @@ class _$CommunityModeratorViewCopyWithImpl<$Res>
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -5694,7 +6205,8 @@ abstract class _$CommunityModeratorViewCopyWith<$Res>
           $Res Function(_CommunityModeratorView) then) =
       __$CommunityModeratorViewCopyWithImpl<$Res>;
   @override
-  $Res call({CommunitySafe community, PersonSafe moderator});
+  $Res call(
+      {CommunitySafe community, PersonSafe moderator, String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
@@ -5717,6 +6229,7 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
   $Res call({
     Object? community = freezed,
     Object? moderator = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommunityModeratorView(
       community: community == freezed
@@ -5727,6 +6240,10 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
           ? _value.moderator
           : moderator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5735,7 +6252,10 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityModeratorView extends _CommunityModeratorView {
-  _$_CommunityModeratorView({required this.community, required this.moderator})
+  _$_CommunityModeratorView(
+      {required this.community,
+      required this.moderator,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
@@ -5745,10 +6265,12 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
   final CommunitySafe community;
   @override
   final PersonSafe moderator;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommunityModeratorView(community: $community, moderator: $moderator)';
+    return 'CommunityModeratorView(community: $community, moderator: $moderator, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5760,14 +6282,18 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
                     .equals(other.community, community)) &&
             (identical(other.moderator, moderator) ||
                 const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)));
+                    .equals(other.moderator, moderator)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(moderator);
+      const DeepCollectionEquality().hash(moderator) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5784,7 +6310,8 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 abstract class _CommunityModeratorView extends CommunityModeratorView {
   factory _CommunityModeratorView(
       {required CommunitySafe community,
-      required PersonSafe moderator}) = _$_CommunityModeratorView;
+      required PersonSafe moderator,
+      required String instanceHost}) = _$_CommunityModeratorView;
   _CommunityModeratorView._() : super._();
 
   factory _CommunityModeratorView.fromJson(Map<String, dynamic> json) =
@@ -5794,6 +6321,8 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   @override
   PersonSafe get moderator => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityModeratorViewCopyWith<_CommunityModeratorView> get copyWith =>
@@ -5810,10 +6339,13 @@ class _$CommunityPersonBanViewTearOff {
   const _$CommunityPersonBanViewTearOff();
 
   _CommunityPersonBanView call(
-      {required CommunitySafe community, required PersonSafe person}) {
+      {required CommunitySafe community,
+      required PersonSafe person,
+      required String instanceHost}) {
     return _CommunityPersonBanView(
       community: community,
       person: person,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5829,6 +6361,7 @@ const $CommunityPersonBanView = _$CommunityPersonBanViewTearOff();
 mixin _$CommunityPersonBanView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get person => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5841,7 +6374,7 @@ abstract class $CommunityPersonBanViewCopyWith<$Res> {
   factory $CommunityPersonBanViewCopyWith(CommunityPersonBanView value,
           $Res Function(CommunityPersonBanView) then) =
       _$CommunityPersonBanViewCopyWithImpl<$Res>;
-  $Res call({CommunitySafe community, PersonSafe person});
+  $Res call({CommunitySafe community, PersonSafe person, String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
   $PersonSafeCopyWith<$Res> get person;
@@ -5860,6 +6393,7 @@ class _$CommunityPersonBanViewCopyWithImpl<$Res>
   $Res call({
     Object? community = freezed,
     Object? person = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       community: community == freezed
@@ -5870,6 +6404,10 @@ class _$CommunityPersonBanViewCopyWithImpl<$Res>
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -5895,7 +6433,7 @@ abstract class _$CommunityPersonBanViewCopyWith<$Res>
           $Res Function(_CommunityPersonBanView) then) =
       __$CommunityPersonBanViewCopyWithImpl<$Res>;
   @override
-  $Res call({CommunitySafe community, PersonSafe person});
+  $Res call({CommunitySafe community, PersonSafe person, String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
@@ -5918,6 +6456,7 @@ class __$CommunityPersonBanViewCopyWithImpl<$Res>
   $Res call({
     Object? community = freezed,
     Object? person = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommunityPersonBanView(
       community: community == freezed
@@ -5928,6 +6467,10 @@ class __$CommunityPersonBanViewCopyWithImpl<$Res>
           ? _value.person
           : person // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5936,7 +6479,10 @@ class __$CommunityPersonBanViewCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_CommunityPersonBanView extends _CommunityPersonBanView {
-  _$_CommunityPersonBanView({required this.community, required this.person})
+  _$_CommunityPersonBanView(
+      {required this.community,
+      required this.person,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommunityPersonBanView.fromJson(Map<String, dynamic> json) =>
@@ -5946,10 +6492,12 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
   final CommunitySafe community;
   @override
   final PersonSafe person;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommunityPersonBanView(community: $community, person: $person)';
+    return 'CommunityPersonBanView(community: $community, person: $person, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5960,14 +6508,18 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
                 const DeepCollectionEquality()
                     .equals(other.community, community)) &&
             (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)));
+                const DeepCollectionEquality().equals(other.person, person)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(person);
+      const DeepCollectionEquality().hash(person) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5984,7 +6536,8 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
 abstract class _CommunityPersonBanView extends CommunityPersonBanView {
   factory _CommunityPersonBanView(
       {required CommunitySafe community,
-      required PersonSafe person}) = _$_CommunityPersonBanView;
+      required PersonSafe person,
+      required String instanceHost}) = _$_CommunityPersonBanView;
   _CommunityPersonBanView._() : super._();
 
   factory _CommunityPersonBanView.fromJson(Map<String, dynamic> json) =
@@ -5994,6 +6547,8 @@ abstract class _CommunityPersonBanView extends CommunityPersonBanView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   @override
   PersonSafe get person => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityPersonBanViewCopyWith<_CommunityPersonBanView> get copyWith =>
@@ -6011,11 +6566,13 @@ class _$CommunityViewTearOff {
   _CommunityView call(
       {required CommunitySafe community,
       required bool subscribed,
-      required CommunityAggregates counts}) {
+      required CommunityAggregates counts,
+      required String instanceHost}) {
     return _CommunityView(
       community: community,
       subscribed: subscribed,
       counts: counts,
+      instanceHost: instanceHost,
     );
   }
 
@@ -6032,6 +6589,7 @@ mixin _$CommunityView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   bool get subscribed => throw _privateConstructorUsedError;
   CommunityAggregates get counts => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6045,7 +6603,10 @@ abstract class $CommunityViewCopyWith<$Res> {
           CommunityView value, $Res Function(CommunityView) then) =
       _$CommunityViewCopyWithImpl<$Res>;
   $Res call(
-      {CommunitySafe community, bool subscribed, CommunityAggregates counts});
+      {CommunitySafe community,
+      bool subscribed,
+      CommunityAggregates counts,
+      String instanceHost});
 
   $CommunitySafeCopyWith<$Res> get community;
   $CommunityAggregatesCopyWith<$Res> get counts;
@@ -6065,6 +6626,7 @@ class _$CommunityViewCopyWithImpl<$Res>
     Object? community = freezed,
     Object? subscribed = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       community: community == freezed
@@ -6079,6 +6641,10 @@ class _$CommunityViewCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as CommunityAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -6105,7 +6671,10 @@ abstract class _$CommunityViewCopyWith<$Res>
       __$CommunityViewCopyWithImpl<$Res>;
   @override
   $Res call(
-      {CommunitySafe community, bool subscribed, CommunityAggregates counts});
+      {CommunitySafe community,
+      bool subscribed,
+      CommunityAggregates counts,
+      String instanceHost});
 
   @override
   $CommunitySafeCopyWith<$Res> get community;
@@ -6129,6 +6698,7 @@ class __$CommunityViewCopyWithImpl<$Res>
     Object? community = freezed,
     Object? subscribed = freezed,
     Object? counts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommunityView(
       community: community == freezed
@@ -6143,6 +6713,10 @@ class __$CommunityViewCopyWithImpl<$Res>
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
               as CommunityAggregates,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6152,7 +6726,10 @@ class __$CommunityViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_CommunityView extends _CommunityView {
   _$_CommunityView(
-      {required this.community, required this.subscribed, required this.counts})
+      {required this.community,
+      required this.subscribed,
+      required this.counts,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommunityView.fromJson(Map<String, dynamic> json) =>
@@ -6164,10 +6741,12 @@ class _$_CommunityView extends _CommunityView {
   final bool subscribed;
   @override
   final CommunityAggregates counts;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommunityView(community: $community, subscribed: $subscribed, counts: $counts)';
+    return 'CommunityView(community: $community, subscribed: $subscribed, counts: $counts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -6181,7 +6760,10 @@ class _$_CommunityView extends _CommunityView {
                 const DeepCollectionEquality()
                     .equals(other.subscribed, subscribed)) &&
             (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)));
+                const DeepCollectionEquality().equals(other.counts, counts)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -6189,7 +6771,8 @@ class _$_CommunityView extends _CommunityView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(subscribed) ^
-      const DeepCollectionEquality().hash(counts);
+      const DeepCollectionEquality().hash(counts) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6206,7 +6789,8 @@ abstract class _CommunityView extends CommunityView {
   factory _CommunityView(
       {required CommunitySafe community,
       required bool subscribed,
-      required CommunityAggregates counts}) = _$_CommunityView;
+      required CommunityAggregates counts,
+      required String instanceHost}) = _$_CommunityView;
   _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
@@ -6218,6 +6802,8 @@ abstract class _CommunityView extends CommunityView {
   bool get subscribed => throw _privateConstructorUsedError;
   @override
   CommunityAggregates get counts => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityViewCopyWith<_CommunityView> get copyWith =>

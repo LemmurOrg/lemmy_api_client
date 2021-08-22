@@ -2,14 +2,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
 import '../../utils/force_utc_datetime.dart';
-import '../../utils/with_instance_host.dart';
 import '../../utils/workaround_settings_index.dart';
 
 part 'source.freezed.dart';
 part 'source.g.dart';
 
 @freezed
-class PersonSafe extends WithInstanceHost with _$PersonSafe {
+class PersonSafe with _$PersonSafe {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -31,6 +30,7 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
     String? matrixUserId,
     required bool admin,
     required bool botAccount,
+    required String instanceHost,
   }) = _PersonSafe;
 
   PersonSafe._();
@@ -39,7 +39,7 @@ class PersonSafe extends WithInstanceHost with _$PersonSafe {
 }
 
 @freezed
-class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
+class LocalUserSettings with _$LocalUserSettings {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -60,6 +60,7 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
     required bool showReadPosts,
     required bool showBotAccounts,
     required bool showNewPostNotifs,
+    required String instanceHost,
   }) = _LocalUserSettings;
 
   LocalUserSettings._();
@@ -68,7 +69,7 @@ class LocalUserSettings extends WithInstanceHost with _$LocalUserSettings {
 }
 
 @freezed
-class Site extends WithInstanceHost with _$Site {
+class Site with _$Site {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -86,6 +87,7 @@ class Site extends WithInstanceHost with _$Site {
     required bool communityCreationAdminOnly,
     String? icon,
     String? banner,
+    required String instanceHost,
   }) = _Site;
 
   Site._();
@@ -93,7 +95,7 @@ class Site extends WithInstanceHost with _$Site {
 }
 
 @freezed
-class PrivateMessage extends WithInstanceHost with _$PrivateMessage {
+class PrivateMessage with _$PrivateMessage {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -108,6 +110,7 @@ class PrivateMessage extends WithInstanceHost with _$PrivateMessage {
     DateTime? updated,
     required String apId,
     required bool local,
+    required String instanceHost,
   }) = _PrivateMessage;
 
   PrivateMessage._();
@@ -116,7 +119,7 @@ class PrivateMessage extends WithInstanceHost with _$PrivateMessage {
 }
 
 @freezed
-class PostReport extends WithInstanceHost with _$PostReport {
+class PostReport with _$PostReport {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -132,6 +135,7 @@ class PostReport extends WithInstanceHost with _$PostReport {
     int? resolverId,
     required DateTime published,
     DateTime? updated,
+    required String instanceHost,
   }) = _PostReport;
 
   PostReport._();
@@ -140,7 +144,7 @@ class PostReport extends WithInstanceHost with _$PostReport {
 }
 
 @freezed
-class Post extends WithInstanceHost with _$Post {
+class Post with _$Post {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -164,6 +168,7 @@ class Post extends WithInstanceHost with _$Post {
     String? thumbnailUrl,
     required String apId,
     required bool local,
+    required String instanceHost,
   }) = _Post;
 
   Post._();
@@ -171,8 +176,7 @@ class Post extends WithInstanceHost with _$Post {
 }
 
 @freezed
-class PasswordResetRequest extends WithInstanceHost
-    with _$PasswordResetRequest {
+class PasswordResetRequest with _$PasswordResetRequest {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -181,6 +185,7 @@ class PasswordResetRequest extends WithInstanceHost
     required int localUserId,
     required String tokenEncrypted,
     required DateTime published,
+    required String instanceHost,
   }) = _PasswordResetRequest;
 
   PasswordResetRequest._();
@@ -189,7 +194,7 @@ class PasswordResetRequest extends WithInstanceHost
 }
 
 @freezed
-class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
+class ModRemovePost with _$ModRemovePost {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -200,6 +205,7 @@ class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
     String? reason,
     bool? removed,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModRemovePost;
 
   ModRemovePost._();
@@ -208,7 +214,7 @@ class ModRemovePost extends WithInstanceHost with _$ModRemovePost {
 }
 
 @freezed
-class ModLockPost extends WithInstanceHost with _$ModLockPost {
+class ModLockPost with _$ModLockPost {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -218,6 +224,7 @@ class ModLockPost extends WithInstanceHost with _$ModLockPost {
     required int postId,
     bool? locked,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModLockPost;
 
   ModLockPost._();
@@ -226,7 +233,7 @@ class ModLockPost extends WithInstanceHost with _$ModLockPost {
 }
 
 @freezed
-class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
+class ModStickyPost with _$ModStickyPost {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -236,6 +243,7 @@ class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
     required int postId,
     bool? stickied,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModStickyPost;
 
   ModStickyPost._();
@@ -244,7 +252,7 @@ class ModStickyPost extends WithInstanceHost with _$ModStickyPost {
 }
 
 @freezed
-class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
+class ModRemoveComment with _$ModRemoveComment {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -255,6 +263,7 @@ class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
     String? reason,
     bool? removed,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModRemoveComment;
 
   ModRemoveComment._();
@@ -263,7 +272,7 @@ class ModRemoveComment extends WithInstanceHost with _$ModRemoveComment {
 }
 
 @freezed
-class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
+class ModRemoveCommunity with _$ModRemoveCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -275,6 +284,7 @@ class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
     bool? removed,
     DateTime? expires,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModRemoveCommunity;
 
   ModRemoveCommunity._();
@@ -283,7 +293,7 @@ class ModRemoveCommunity extends WithInstanceHost with _$ModRemoveCommunity {
 }
 
 @freezed
-class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
+class ModBanFromCommunity with _$ModBanFromCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -296,6 +306,7 @@ class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
     bool? banned,
     DateTime? expires,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModBanFromCommunity;
 
   ModBanFromCommunity._();
@@ -304,7 +315,7 @@ class ModBanFromCommunity extends WithInstanceHost with _$ModBanFromCommunity {
 }
 
 @freezed
-class ModBan extends WithInstanceHost with _$ModBan {
+class ModBan with _$ModBan {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -316,6 +327,7 @@ class ModBan extends WithInstanceHost with _$ModBan {
     bool? banned,
     DateTime? expires,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModBan;
 
   ModBan._();
@@ -323,7 +335,7 @@ class ModBan extends WithInstanceHost with _$ModBan {
 }
 
 @freezed
-class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
+class ModAddCommunity with _$ModAddCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -334,6 +346,7 @@ class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
     required int communityId,
     bool? removed,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModAddCommunity;
 
   ModAddCommunity._();
@@ -342,7 +355,7 @@ class ModAddCommunity extends WithInstanceHost with _$ModAddCommunity {
 }
 
 @freezed
-class ModAdd extends WithInstanceHost with _$ModAdd {
+class ModAdd with _$ModAdd {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -352,6 +365,7 @@ class ModAdd extends WithInstanceHost with _$ModAdd {
     required int otherPersonId,
     bool? removed,
     @JsonKey(name: 'when_') required DateTime when,
+    required String instanceHost,
   }) = _ModAdd;
 
   ModAdd._();
@@ -359,7 +373,7 @@ class ModAdd extends WithInstanceHost with _$ModAdd {
 }
 
 @freezed
-class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
+class CommunitySafe with _$CommunitySafe {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -377,6 +391,7 @@ class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
     required bool local,
     String? icon,
     String? banner,
+    required String instanceHost,
   }) = _CommunitySafe;
 
   CommunitySafe._();
@@ -385,7 +400,7 @@ class CommunitySafe extends WithInstanceHost with _$CommunitySafe {
 }
 
 @freezed
-class CommentReport extends WithInstanceHost with _$CommentReport {
+class CommentReport with _$CommentReport {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -399,6 +414,7 @@ class CommentReport extends WithInstanceHost with _$CommentReport {
     int? resolverId,
     required DateTime published,
     DateTime? updated,
+    required String instanceHost,
   }) = _CommentReport;
 
   CommentReport._();
@@ -407,7 +423,7 @@ class CommentReport extends WithInstanceHost with _$CommentReport {
 }
 
 @freezed
-class Comment extends WithInstanceHost with _$Comment {
+class Comment with _$Comment {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -424,6 +440,7 @@ class Comment extends WithInstanceHost with _$Comment {
     required bool deleted,
     required String apId,
     required bool local,
+    required String instanceHost,
   }) = _Comment;
 
   Comment._();
@@ -432,7 +449,7 @@ class Comment extends WithInstanceHost with _$Comment {
 }
 
 @freezed
-class PersonMention extends WithInstanceHost with _$PersonMention {
+class PersonMention with _$PersonMention {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -442,6 +459,7 @@ class PersonMention extends WithInstanceHost with _$PersonMention {
     required int commentId,
     required bool read,
     required DateTime published,
+    required String instanceHost,
   }) = _PersonMention;
 
   PersonMention._();

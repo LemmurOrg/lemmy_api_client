@@ -2,7 +2,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../enums.dart';
-import '../../utils/with_instance_host.dart';
 import 'aggregates.dart';
 import 'source.dart';
 
@@ -10,11 +9,12 @@ part 'views.freezed.dart';
 part 'views.g.dart';
 
 @freezed
-class PersonViewSafe extends WithInstanceHost with _$PersonViewSafe {
+class PersonViewSafe with _$PersonViewSafe {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PersonViewSafe({
     required PersonSafe person,
     required PersonAggregates counts,
+    required String instanceHost,
   }) = _PersonViewSafe;
 
   PersonViewSafe._();
@@ -23,7 +23,7 @@ class PersonViewSafe extends WithInstanceHost with _$PersonViewSafe {
 }
 
 @freezed
-class PersonMentionView extends WithInstanceHost with _$PersonMentionView {
+class PersonMentionView with _$PersonMentionView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PersonMentionView({
     required PersonMention personMention,
@@ -37,6 +37,7 @@ class PersonMentionView extends WithInstanceHost with _$PersonMentionView {
     required bool subscribed,
     required bool saved,
     VoteType? myVote,
+    required String instanceHost,
   }) = _PersonMentionView;
 
   PersonMentionView._();
@@ -45,13 +46,13 @@ class PersonMentionView extends WithInstanceHost with _$PersonMentionView {
 }
 
 @freezed
-class LocalUserSettingsView extends WithInstanceHost
-    with _$LocalUserSettingsView {
+class LocalUserSettingsView with _$LocalUserSettingsView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory LocalUserSettingsView({
     required LocalUserSettings localUser,
     required PersonSafe person,
     required PersonAggregates counts,
+    required String instanceHost,
   }) = _LocalUserSettingsView;
 
   LocalUserSettingsView._();
@@ -60,12 +61,13 @@ class LocalUserSettingsView extends WithInstanceHost
 }
 
 @freezed
-class SiteView extends WithInstanceHost with _$SiteView {
+class SiteView with _$SiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SiteView({
     required Site site,
     required PersonSafe creator,
     required SiteAggregates counts,
+    required String instanceHost,
   }) = _SiteView;
 
   SiteView._();
@@ -74,12 +76,13 @@ class SiteView extends WithInstanceHost with _$SiteView {
 }
 
 @freezed
-class PrivateMessageView extends WithInstanceHost with _$PrivateMessageView {
+class PrivateMessageView with _$PrivateMessageView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PrivateMessageView({
     required PrivateMessage privateMessage,
     required PersonSafe creator,
     required PersonSafe recipient,
+    required String instanceHost,
   }) = _PrivateMessageView;
 
   PrivateMessageView._();
@@ -88,7 +91,7 @@ class PrivateMessageView extends WithInstanceHost with _$PrivateMessageView {
 }
 
 @freezed
-class PostView extends WithInstanceHost with _$PostView {
+class PostView with _$PostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostView({
     required Post post,
@@ -100,6 +103,7 @@ class PostView extends WithInstanceHost with _$PostView {
     required bool saved,
     required bool read,
     VoteType? myVote,
+    required String instanceHost,
   }) = _PostView;
 
   PostView._();
@@ -108,7 +112,7 @@ class PostView extends WithInstanceHost with _$PostView {
 }
 
 @freezed
-class PostReportView extends WithInstanceHost with _$PostReportView {
+class PostReportView with _$PostReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PostReportView({
     required PostReport postReport,
@@ -117,6 +121,7 @@ class PostReportView extends WithInstanceHost with _$PostReportView {
     required PersonSafe creator,
     required PersonSafe postCreator,
     PersonSafe? resolver,
+    required String instanceHost,
   }) = _PostReportView;
 
   PostReportView._();
@@ -125,7 +130,7 @@ class PostReportView extends WithInstanceHost with _$PostReportView {
 }
 
 @freezed
-class CommentView extends WithInstanceHost with _$CommentView {
+class CommentView with _$CommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentView({
     required Comment comment,
@@ -138,6 +143,7 @@ class CommentView extends WithInstanceHost with _$CommentView {
     required bool subscribed,
     required bool saved,
     VoteType? myVote,
+    required String instanceHost,
   }) = _CommentView;
 
   CommentView._();
@@ -146,7 +152,7 @@ class CommentView extends WithInstanceHost with _$CommentView {
 }
 
 @freezed
-class CommentReportView extends WithInstanceHost with _$CommentReportView {
+class CommentReportView with _$CommentReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommentReportView({
     required CommentReport commentReport,
@@ -156,6 +162,7 @@ class CommentReportView extends WithInstanceHost with _$CommentReportView {
     required PersonSafe creator,
     required PersonSafe commentCreator,
     PersonSafe? resolver,
+    required String instanceHost,
   }) = _CommentReportView;
 
   CommentReportView._();
@@ -164,13 +171,14 @@ class CommentReportView extends WithInstanceHost with _$CommentReportView {
 }
 
 @freezed
-class ModAddCommunityView extends WithInstanceHost with _$ModAddCommunityView {
+class ModAddCommunityView with _$ModAddCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddCommunityView({
     required ModAddCommunity modAddCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
     required PersonSafe moddedPerson,
+    required String instanceHost,
   }) = _ModAddCommunityView;
 
   ModAddCommunityView._();
@@ -179,12 +187,13 @@ class ModAddCommunityView extends WithInstanceHost with _$ModAddCommunityView {
 }
 
 @freezed
-class ModAddView extends WithInstanceHost with _$ModAddView {
+class ModAddView with _$ModAddView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModAddView({
     required ModAdd modAdd,
     required PersonSafe moderator,
     required PersonSafe moddedPerson,
+    required String instanceHost,
   }) = _ModAddView;
 
   ModAddView._();
@@ -193,14 +202,14 @@ class ModAddView extends WithInstanceHost with _$ModAddView {
 }
 
 @freezed
-class ModBanFromCommunityView extends WithInstanceHost
-    with _$ModBanFromCommunityView {
+class ModBanFromCommunityView with _$ModBanFromCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
     required PersonSafe bannedPerson,
+    required String instanceHost,
   }) = _ModBanFromCommunityView;
 
   ModBanFromCommunityView._();
@@ -209,12 +218,13 @@ class ModBanFromCommunityView extends WithInstanceHost
 }
 
 @freezed
-class ModBanView extends WithInstanceHost with _$ModBanView {
+class ModBanView with _$ModBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModBanView({
     required ModBan modBan,
     required PersonSafe moderator,
     required PersonSafe bannedPerson,
+    required String instanceHost,
   }) = _ModBanView;
 
   ModBanView._();
@@ -223,13 +233,14 @@ class ModBanView extends WithInstanceHost with _$ModBanView {
 }
 
 @freezed
-class ModLockPostView extends WithInstanceHost with _$ModLockPostView {
+class ModLockPostView with _$ModLockPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModLockPostView({
     required ModLockPost modLockPost,
     required PersonSafe moderator,
     required Post post,
     required CommunitySafe community,
+    required String instanceHost,
   }) = _ModLockPostView;
 
   ModLockPostView._();
@@ -238,8 +249,7 @@ class ModLockPostView extends WithInstanceHost with _$ModLockPostView {
 }
 
 @freezed
-class ModRemoveCommentView extends WithInstanceHost
-    with _$ModRemoveCommentView {
+class ModRemoveCommentView with _$ModRemoveCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
@@ -248,6 +258,7 @@ class ModRemoveCommentView extends WithInstanceHost
     required PersonSafe commenter,
     required Post post,
     required CommunitySafe community,
+    required String instanceHost,
   }) = _ModRemoveCommentView;
 
   ModRemoveCommentView._();
@@ -256,13 +267,13 @@ class ModRemoveCommentView extends WithInstanceHost
 }
 
 @freezed
-class ModRemoveCommunityView extends WithInstanceHost
-    with _$ModRemoveCommunityView {
+class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemoveCommunityView({
     required ModRemoveCommunity modRemoveCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
+    required String instanceHost,
   }) = _ModRemoveCommunityView;
 
   ModRemoveCommunityView._();
@@ -271,13 +282,14 @@ class ModRemoveCommunityView extends WithInstanceHost
 }
 
 @freezed
-class ModRemovePostView extends WithInstanceHost with _$ModRemovePostView {
+class ModRemovePostView with _$ModRemovePostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModRemovePostView({
     required ModRemovePost modRemovePost,
     required PersonSafe moderator,
     required Post post,
     required CommunitySafe community,
+    required String instanceHost,
   }) = _ModRemovePostView;
 
   ModRemovePostView._();
@@ -286,13 +298,14 @@ class ModRemovePostView extends WithInstanceHost with _$ModRemovePostView {
 }
 
 @freezed
-class ModStickyPostView extends WithInstanceHost with _$ModStickyPostView {
+class ModStickyPostView with _$ModStickyPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ModStickyPostView({
     required ModStickyPost modStickyPost,
     required PersonSafe moderator,
     required Post post,
     required CommunitySafe community,
+    required String instanceHost,
   }) = _ModStickyPostView;
 
   ModStickyPostView._();
@@ -301,12 +314,12 @@ class ModStickyPostView extends WithInstanceHost with _$ModStickyPostView {
 }
 
 @freezed
-class CommunityFollowerView extends WithInstanceHost
-    with _$CommunityFollowerView {
+class CommunityFollowerView with _$CommunityFollowerView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityFollowerView({
     required CommunitySafe community,
     required PersonSafe follower,
+    required String instanceHost,
   }) = _CommunityFollowerView;
 
   CommunityFollowerView._();
@@ -315,12 +328,12 @@ class CommunityFollowerView extends WithInstanceHost
 }
 
 @freezed
-class CommunityModeratorView extends WithInstanceHost
-    with _$CommunityModeratorView {
+class CommunityModeratorView with _$CommunityModeratorView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityModeratorView({
     required CommunitySafe community,
     required PersonSafe moderator,
+    required String instanceHost,
   }) = _CommunityModeratorView;
 
   CommunityModeratorView._();
@@ -329,12 +342,12 @@ class CommunityModeratorView extends WithInstanceHost
 }
 
 @freezed
-class CommunityPersonBanView extends WithInstanceHost
-    with _$CommunityPersonBanView {
+class CommunityPersonBanView with _$CommunityPersonBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityPersonBanView({
     required CommunitySafe community,
     required PersonSafe person,
+    required String instanceHost,
   }) = _CommunityPersonBanView;
 
   CommunityPersonBanView._();
@@ -343,12 +356,13 @@ class CommunityPersonBanView extends WithInstanceHost
 }
 
 @freezed
-class CommunityView extends WithInstanceHost with _$CommunityView {
+class CommunityView with _$CommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory CommunityView({
     required CommunitySafe community,
     required bool subscribed,
     required CommunityAggregates counts,
+    required String instanceHost,
   }) = _CommunityView;
 
   CommunityView._();

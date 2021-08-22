@@ -37,7 +37,8 @@ class _$PersonSafeTearOff {
       required String sharedInboxUrl,
       String? matrixUserId,
       required bool admin,
-      required bool botAccount}) {
+      required bool botAccount,
+      required String instanceHost}) {
     return _PersonSafe(
       id: id,
       name: name,
@@ -56,6 +57,7 @@ class _$PersonSafeTearOff {
       matrixUserId: matrixUserId,
       admin: admin,
       botAccount: botAccount,
+      instanceHost: instanceHost,
     );
   }
 
@@ -86,6 +88,7 @@ mixin _$PersonSafe {
   String? get matrixUserId => throw _privateConstructorUsedError;
   bool get admin => throw _privateConstructorUsedError;
   bool get botAccount => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -115,7 +118,8 @@ abstract class $PersonSafeCopyWith<$Res> {
       String sharedInboxUrl,
       String? matrixUserId,
       bool admin,
-      bool botAccount});
+      bool botAccount,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -145,6 +149,7 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
     Object? matrixUserId = freezed,
     Object? admin = freezed,
     Object? botAccount = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -215,6 +220,10 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -242,7 +251,8 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
       String sharedInboxUrl,
       String? matrixUserId,
       bool admin,
-      bool botAccount});
+      bool botAccount,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -274,6 +284,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
     Object? matrixUserId = freezed,
     Object? admin = freezed,
     Object? botAccount = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PersonSafe(
       id: id == freezed
@@ -344,6 +355,10 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -371,7 +386,8 @@ class _$_PersonSafe extends _PersonSafe {
       required this.sharedInboxUrl,
       this.matrixUserId,
       required this.admin,
-      required this.botAccount})
+      required this.botAccount,
+      required this.instanceHost})
       : super._();
 
   factory _$_PersonSafe.fromJson(Map<String, dynamic> json) =>
@@ -411,10 +427,12 @@ class _$_PersonSafe extends _PersonSafe {
   final bool admin;
   @override
   final bool botAccount;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount)';
+    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, instanceHost: $instanceHost)';
   }
 
   @override
@@ -463,7 +481,10 @@ class _$_PersonSafe extends _PersonSafe {
                 const DeepCollectionEquality().equals(other.admin, admin)) &&
             (identical(other.botAccount, botAccount) ||
                 const DeepCollectionEquality()
-                    .equals(other.botAccount, botAccount)));
+                    .equals(other.botAccount, botAccount)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -485,7 +506,8 @@ class _$_PersonSafe extends _PersonSafe {
       const DeepCollectionEquality().hash(sharedInboxUrl) ^
       const DeepCollectionEquality().hash(matrixUserId) ^
       const DeepCollectionEquality().hash(admin) ^
-      const DeepCollectionEquality().hash(botAccount);
+      const DeepCollectionEquality().hash(botAccount) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -516,7 +538,8 @@ abstract class _PersonSafe extends PersonSafe {
       required String sharedInboxUrl,
       String? matrixUserId,
       required bool admin,
-      required bool botAccount}) = _$_PersonSafe;
+      required bool botAccount,
+      required String instanceHost}) = _$_PersonSafe;
   _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
@@ -557,6 +580,8 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   bool get botAccount => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PersonSafeCopyWith<_PersonSafe> get copyWith =>
       throw _privateConstructorUsedError;
@@ -586,7 +611,8 @@ class _$LocalUserSettingsTearOff {
       required bool sendNotificationsToEmail,
       required bool showReadPosts,
       required bool showBotAccounts,
-      required bool showNewPostNotifs}) {
+      required bool showNewPostNotifs,
+      required String instanceHost}) {
     return _LocalUserSettings(
       id: id,
       personId: personId,
@@ -602,6 +628,7 @@ class _$LocalUserSettingsTearOff {
       showReadPosts: showReadPosts,
       showBotAccounts: showBotAccounts,
       showNewPostNotifs: showNewPostNotifs,
+      instanceHost: instanceHost,
     );
   }
 
@@ -631,6 +658,7 @@ mixin _$LocalUserSettings {
   bool get showReadPosts => throw _privateConstructorUsedError;
   bool get showBotAccounts => throw _privateConstructorUsedError;
   bool get showNewPostNotifs => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -659,7 +687,8 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
       bool sendNotificationsToEmail,
       bool showReadPosts,
       bool showBotAccounts,
-      bool showNewPostNotifs});
+      bool showNewPostNotifs,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -687,6 +716,7 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? showReadPosts = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -745,6 +775,10 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -772,7 +806,8 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
       bool sendNotificationsToEmail,
       bool showReadPosts,
       bool showBotAccounts,
-      bool showNewPostNotifs});
+      bool showNewPostNotifs,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -802,6 +837,7 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? showReadPosts = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_LocalUserSettings(
       id: id == freezed
@@ -860,6 +896,10 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -886,7 +926,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       required this.sendNotificationsToEmail,
       required this.showReadPosts,
       required this.showBotAccounts,
-      required this.showNewPostNotifs})
+      required this.showNewPostNotifs,
+      required this.instanceHost})
       : super._();
 
   factory _$_LocalUserSettings.fromJson(Map<String, dynamic> json) =>
@@ -922,10 +963,12 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   final bool showBotAccounts;
   @override
   final bool showNewPostNotifs;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, instanceHost: $instanceHost)';
   }
 
   @override
@@ -971,7 +1014,10 @@ class _$_LocalUserSettings extends _LocalUserSettings {
                     .equals(other.showBotAccounts, showBotAccounts)) &&
             (identical(other.showNewPostNotifs, showNewPostNotifs) ||
                 const DeepCollectionEquality()
-                    .equals(other.showNewPostNotifs, showNewPostNotifs)));
+                    .equals(other.showNewPostNotifs, showNewPostNotifs)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -990,7 +1036,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       const DeepCollectionEquality().hash(sendNotificationsToEmail) ^
       const DeepCollectionEquality().hash(showReadPosts) ^
       const DeepCollectionEquality().hash(showBotAccounts) ^
-      const DeepCollectionEquality().hash(showNewPostNotifs);
+      const DeepCollectionEquality().hash(showNewPostNotifs) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1020,7 +1067,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       required bool sendNotificationsToEmail,
       required bool showReadPosts,
       required bool showBotAccounts,
-      required bool showNewPostNotifs}) = _$_LocalUserSettings;
+      required bool showNewPostNotifs,
+      required String instanceHost}) = _$_LocalUserSettings;
   _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
@@ -1057,6 +1105,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   @override
   bool get showNewPostNotifs => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1083,7 +1133,8 @@ class _$SiteTearOff {
       required bool enableNsfw,
       required bool communityCreationAdminOnly,
       String? icon,
-      String? banner}) {
+      String? banner,
+      required String instanceHost}) {
     return _Site(
       id: id,
       name: name,
@@ -1098,6 +1149,7 @@ class _$SiteTearOff {
       communityCreationAdminOnly: communityCreationAdminOnly,
       icon: icon,
       banner: banner,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1124,6 +1176,7 @@ mixin _$Site {
   bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1147,7 +1200,8 @@ abstract class $SiteCopyWith<$Res> {
       bool enableNsfw,
       bool communityCreationAdminOnly,
       String? icon,
-      String? banner});
+      String? banner,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1173,6 +1227,7 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -1227,6 +1282,10 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1249,7 +1308,8 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       bool enableNsfw,
       bool communityCreationAdminOnly,
       String? icon,
-      String? banner});
+      String? banner,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1276,6 +1336,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_Site(
       id: id == freezed
@@ -1330,6 +1391,10 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1353,7 +1418,8 @@ class _$_Site extends _Site {
       required this.enableNsfw,
       required this.communityCreationAdminOnly,
       this.icon,
-      this.banner})
+      this.banner,
+      required this.instanceHost})
       : super._();
 
   factory _$_Site.fromJson(Map<String, dynamic> json) =>
@@ -1385,10 +1451,12 @@ class _$_Site extends _Site {
   final String? icon;
   @override
   final String? banner;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1431,7 +1499,10 @@ class _$_Site extends _Site {
             (identical(other.icon, icon) ||
                 const DeepCollectionEquality().equals(other.icon, icon)) &&
             (identical(other.banner, banner) ||
-                const DeepCollectionEquality().equals(other.banner, banner)));
+                const DeepCollectionEquality().equals(other.banner, banner)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1449,7 +1520,8 @@ class _$_Site extends _Site {
       const DeepCollectionEquality().hash(enableNsfw) ^
       const DeepCollectionEquality().hash(communityCreationAdminOnly) ^
       const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(banner);
+      const DeepCollectionEquality().hash(banner) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1476,7 +1548,8 @@ abstract class _Site extends Site {
       required bool enableNsfw,
       required bool communityCreationAdminOnly,
       String? icon,
-      String? banner}) = _$_Site;
+      String? banner,
+      required String instanceHost}) = _$_Site;
   _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
@@ -1508,6 +1581,8 @@ abstract class _Site extends Site {
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$SiteCopyWith<_Site> get copyWith => throw _privateConstructorUsedError;
 }
@@ -1530,7 +1605,8 @@ class _$PrivateMessageTearOff {
       required DateTime published,
       DateTime? updated,
       required String apId,
-      required bool local}) {
+      required bool local,
+      required String instanceHost}) {
     return _PrivateMessage(
       id: id,
       creatorId: creatorId,
@@ -1542,6 +1618,7 @@ class _$PrivateMessageTearOff {
       updated: updated,
       apId: apId,
       local: local,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1565,6 +1642,7 @@ mixin _$PrivateMessage {
   DateTime? get updated => throw _privateConstructorUsedError;
   String get apId => throw _privateConstructorUsedError;
   bool get local => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1587,7 +1665,8 @@ abstract class $PrivateMessageCopyWith<$Res> {
       DateTime published,
       DateTime? updated,
       String apId,
-      bool local});
+      bool local,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1611,6 +1690,7 @@ class _$PrivateMessageCopyWithImpl<$Res>
     Object? updated = freezed,
     Object? apId = freezed,
     Object? local = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -1653,6 +1733,10 @@ class _$PrivateMessageCopyWithImpl<$Res>
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1674,7 +1758,8 @@ abstract class _$PrivateMessageCopyWith<$Res>
       DateTime published,
       DateTime? updated,
       String apId,
-      bool local});
+      bool local,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1700,6 +1785,7 @@ class __$PrivateMessageCopyWithImpl<$Res>
     Object? updated = freezed,
     Object? apId = freezed,
     Object? local = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PrivateMessage(
       id: id == freezed
@@ -1742,6 +1828,10 @@ class __$PrivateMessageCopyWithImpl<$Res>
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1762,7 +1852,8 @@ class _$_PrivateMessage extends _PrivateMessage {
       required this.published,
       this.updated,
       required this.apId,
-      required this.local})
+      required this.local,
+      required this.instanceHost})
       : super._();
 
   factory _$_PrivateMessage.fromJson(Map<String, dynamic> json) =>
@@ -1788,10 +1879,12 @@ class _$_PrivateMessage extends _PrivateMessage {
   final String apId;
   @override
   final bool local;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PrivateMessage(id: $id, creatorId: $creatorId, recipientId: $recipientId, content: $content, deleted: $deleted, read: $read, published: $published, updated: $updated, apId: $apId, local: $local)';
+    return 'PrivateMessage(id: $id, creatorId: $creatorId, recipientId: $recipientId, content: $content, deleted: $deleted, read: $read, published: $published, updated: $updated, apId: $apId, local: $local, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1823,7 +1916,10 @@ class _$_PrivateMessage extends _PrivateMessage {
             (identical(other.apId, apId) ||
                 const DeepCollectionEquality().equals(other.apId, apId)) &&
             (identical(other.local, local) ||
-                const DeepCollectionEquality().equals(other.local, local)));
+                const DeepCollectionEquality().equals(other.local, local)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1838,7 +1934,8 @@ class _$_PrivateMessage extends _PrivateMessage {
       const DeepCollectionEquality().hash(published) ^
       const DeepCollectionEquality().hash(updated) ^
       const DeepCollectionEquality().hash(apId) ^
-      const DeepCollectionEquality().hash(local);
+      const DeepCollectionEquality().hash(local) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1862,7 +1959,8 @@ abstract class _PrivateMessage extends PrivateMessage {
       required DateTime published,
       DateTime? updated,
       required String apId,
-      required bool local}) = _$_PrivateMessage;
+      required bool local,
+      required String instanceHost}) = _$_PrivateMessage;
   _PrivateMessage._() : super._();
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
@@ -1889,6 +1987,8 @@ abstract class _PrivateMessage extends PrivateMessage {
   @override
   bool get local => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PrivateMessageCopyWith<_PrivateMessage> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1913,7 +2013,8 @@ class _$PostReportTearOff {
       required bool resolved,
       int? resolverId,
       required DateTime published,
-      DateTime? updated}) {
+      DateTime? updated,
+      required String instanceHost}) {
     return _PostReport(
       id: id,
       creatorId: creatorId,
@@ -1926,6 +2027,7 @@ class _$PostReportTearOff {
       resolverId: resolverId,
       published: published,
       updated: updated,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1950,6 +2052,7 @@ mixin _$PostReport {
   int? get resolverId => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1973,7 +2076,8 @@ abstract class $PostReportCopyWith<$Res> {
       bool resolved,
       int? resolverId,
       DateTime published,
-      DateTime? updated});
+      DateTime? updated,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1997,6 +2101,7 @@ class _$PostReportCopyWithImpl<$Res> implements $PostReportCopyWith<$Res> {
     Object? resolverId = freezed,
     Object? published = freezed,
     Object? updated = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -2043,6 +2148,10 @@ class _$PostReportCopyWithImpl<$Res> implements $PostReportCopyWith<$Res> {
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2064,7 +2173,8 @@ abstract class _$PostReportCopyWith<$Res> implements $PostReportCopyWith<$Res> {
       bool resolved,
       int? resolverId,
       DateTime published,
-      DateTime? updated});
+      DateTime? updated,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -2090,6 +2200,7 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
     Object? resolverId = freezed,
     Object? published = freezed,
     Object? updated = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PostReport(
       id: id == freezed
@@ -2136,6 +2247,10 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2157,7 +2272,8 @@ class _$_PostReport extends _PostReport {
       required this.resolved,
       this.resolverId,
       required this.published,
-      this.updated})
+      this.updated,
+      required this.instanceHost})
       : super._();
 
   factory _$_PostReport.fromJson(Map<String, dynamic> json) =>
@@ -2185,10 +2301,12 @@ class _$_PostReport extends _PostReport {
   final DateTime published;
   @override
   final DateTime? updated;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PostReport(id: $id, creatorId: $creatorId, postId: $postId, originalPostName: $originalPostName, originalPostUrl: $originalPostUrl, originalPostBody: $originalPostBody, reason: $reason, resolved: $resolved, resolverId: $resolverId, published: $published, updated: $updated)';
+    return 'PostReport(id: $id, creatorId: $creatorId, postId: $postId, originalPostName: $originalPostName, originalPostUrl: $originalPostUrl, originalPostBody: $originalPostBody, reason: $reason, resolved: $resolved, resolverId: $resolverId, published: $published, updated: $updated, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2223,7 +2341,11 @@ class _$_PostReport extends _PostReport {
                 const DeepCollectionEquality()
                     .equals(other.published, published)) &&
             (identical(other.updated, updated) ||
-                const DeepCollectionEquality().equals(other.updated, updated)));
+                const DeepCollectionEquality()
+                    .equals(other.updated, updated)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2239,7 +2361,8 @@ class _$_PostReport extends _PostReport {
       const DeepCollectionEquality().hash(resolved) ^
       const DeepCollectionEquality().hash(resolverId) ^
       const DeepCollectionEquality().hash(published) ^
-      const DeepCollectionEquality().hash(updated);
+      const DeepCollectionEquality().hash(updated) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2264,7 +2387,8 @@ abstract class _PostReport extends PostReport {
       required bool resolved,
       int? resolverId,
       required DateTime published,
-      DateTime? updated}) = _$_PostReport;
+      DateTime? updated,
+      required String instanceHost}) = _$_PostReport;
   _PostReport._() : super._();
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
@@ -2292,6 +2416,8 @@ abstract class _PostReport extends PostReport {
   DateTime get published => throw _privateConstructorUsedError;
   @override
   DateTime? get updated => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostReportCopyWith<_PostReport> get copyWith =>
@@ -2325,7 +2451,8 @@ class _$PostTearOff {
       String? embedHtml,
       String? thumbnailUrl,
       required String apId,
-      required bool local}) {
+      required bool local,
+      required String instanceHost}) {
     return _Post(
       id: id,
       name: name,
@@ -2346,6 +2473,7 @@ class _$PostTearOff {
       thumbnailUrl: thumbnailUrl,
       apId: apId,
       local: local,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2378,6 +2506,7 @@ mixin _$Post {
   String? get thumbnailUrl => throw _privateConstructorUsedError;
   String get apId => throw _privateConstructorUsedError;
   bool get local => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2407,7 +2536,8 @@ abstract class $PostCopyWith<$Res> {
       String? embedHtml,
       String? thumbnailUrl,
       String apId,
-      bool local});
+      bool local,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -2439,6 +2569,7 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
     Object? thumbnailUrl = freezed,
     Object? apId = freezed,
     Object? local = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -2517,6 +2648,10 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2545,7 +2680,8 @@ abstract class _$PostCopyWith<$Res> implements $PostCopyWith<$Res> {
       String? embedHtml,
       String? thumbnailUrl,
       String apId,
-      bool local});
+      bool local,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -2578,6 +2714,7 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
     Object? thumbnailUrl = freezed,
     Object? apId = freezed,
     Object? local = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_Post(
       id: id == freezed
@@ -2656,6 +2793,10 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2685,7 +2826,8 @@ class _$_Post extends _Post {
       this.embedHtml,
       this.thumbnailUrl,
       required this.apId,
-      required this.local})
+      required this.local,
+      required this.instanceHost})
       : super._();
 
   factory _$_Post.fromJson(Map<String, dynamic> json) =>
@@ -2729,10 +2871,12 @@ class _$_Post extends _Post {
   final String apId;
   @override
   final bool local;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, stickied: $stickied, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local)';
+    return 'Post(id: $id, name: $name, url: $url, body: $body, creatorId: $creatorId, communityId: $communityId, removed: $removed, locked: $locked, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, stickied: $stickied, embedTitle: $embedTitle, embedDescription: $embedDescription, embedHtml: $embedHtml, thumbnailUrl: $thumbnailUrl, apId: $apId, local: $local, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2787,7 +2931,10 @@ class _$_Post extends _Post {
             (identical(other.apId, apId) ||
                 const DeepCollectionEquality().equals(other.apId, apId)) &&
             (identical(other.local, local) ||
-                const DeepCollectionEquality().equals(other.local, local)));
+                const DeepCollectionEquality().equals(other.local, local)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2811,7 +2958,8 @@ class _$_Post extends _Post {
       const DeepCollectionEquality().hash(embedHtml) ^
       const DeepCollectionEquality().hash(thumbnailUrl) ^
       const DeepCollectionEquality().hash(apId) ^
-      const DeepCollectionEquality().hash(local);
+      const DeepCollectionEquality().hash(local) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2844,7 +2992,8 @@ abstract class _Post extends Post {
       String? embedHtml,
       String? thumbnailUrl,
       required String apId,
-      required bool local}) = _$_Post;
+      required bool local,
+      required String instanceHost}) = _$_Post;
   _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
@@ -2888,6 +3037,8 @@ abstract class _Post extends Post {
   @override
   bool get local => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$PostCopyWith<_Post> get copyWith => throw _privateConstructorUsedError;
 }
@@ -2904,12 +3055,14 @@ class _$PasswordResetRequestTearOff {
       {required int id,
       required int localUserId,
       required String tokenEncrypted,
-      required DateTime published}) {
+      required DateTime published,
+      required String instanceHost}) {
     return _PasswordResetRequest(
       id: id,
       localUserId: localUserId,
       tokenEncrypted: tokenEncrypted,
       published: published,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2927,6 +3080,7 @@ mixin _$PasswordResetRequest {
   int get localUserId => throw _privateConstructorUsedError;
   String get tokenEncrypted => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2940,7 +3094,11 @@ abstract class $PasswordResetRequestCopyWith<$Res> {
           $Res Function(PasswordResetRequest) then) =
       _$PasswordResetRequestCopyWithImpl<$Res>;
   $Res call(
-      {int id, int localUserId, String tokenEncrypted, DateTime published});
+      {int id,
+      int localUserId,
+      String tokenEncrypted,
+      DateTime published,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -2958,6 +3116,7 @@ class _$PasswordResetRequestCopyWithImpl<$Res>
     Object? localUserId = freezed,
     Object? tokenEncrypted = freezed,
     Object? published = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -2976,6 +3135,10 @@ class _$PasswordResetRequestCopyWithImpl<$Res>
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2988,7 +3151,11 @@ abstract class _$PasswordResetRequestCopyWith<$Res>
       __$PasswordResetRequestCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id, int localUserId, String tokenEncrypted, DateTime published});
+      {int id,
+      int localUserId,
+      String tokenEncrypted,
+      DateTime published,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3008,6 +3175,7 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
     Object? localUserId = freezed,
     Object? tokenEncrypted = freezed,
     Object? published = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PasswordResetRequest(
       id: id == freezed
@@ -3026,6 +3194,10 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3040,7 +3212,8 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
       {required this.id,
       required this.localUserId,
       required this.tokenEncrypted,
-      required this.published})
+      required this.published,
+      required this.instanceHost})
       : super._();
 
   factory _$_PasswordResetRequest.fromJson(Map<String, dynamic> json) =>
@@ -3054,10 +3227,12 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
   final String tokenEncrypted;
   @override
   final DateTime published;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PasswordResetRequest(id: $id, localUserId: $localUserId, tokenEncrypted: $tokenEncrypted, published: $published)';
+    return 'PasswordResetRequest(id: $id, localUserId: $localUserId, tokenEncrypted: $tokenEncrypted, published: $published, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3074,7 +3249,10 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
                     .equals(other.tokenEncrypted, tokenEncrypted)) &&
             (identical(other.published, published) ||
                 const DeepCollectionEquality()
-                    .equals(other.published, published)));
+                    .equals(other.published, published)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3083,7 +3261,8 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(localUserId) ^
       const DeepCollectionEquality().hash(tokenEncrypted) ^
-      const DeepCollectionEquality().hash(published);
+      const DeepCollectionEquality().hash(published) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3102,7 +3281,8 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
       {required int id,
       required int localUserId,
       required String tokenEncrypted,
-      required DateTime published}) = _$_PasswordResetRequest;
+      required DateTime published,
+      required String instanceHost}) = _$_PasswordResetRequest;
   _PasswordResetRequest._() : super._();
 
   factory _PasswordResetRequest.fromJson(Map<String, dynamic> json) =
@@ -3116,6 +3296,8 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
   String get tokenEncrypted => throw _privateConstructorUsedError;
   @override
   DateTime get published => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PasswordResetRequestCopyWith<_PasswordResetRequest> get copyWith =>
@@ -3136,7 +3318,8 @@ class _$ModRemovePostTearOff {
       required int postId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModRemovePost(
       id: id,
       modPersonId: modPersonId,
@@ -3144,6 +3327,7 @@ class _$ModRemovePostTearOff {
       reason: reason,
       removed: removed,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3164,6 +3348,7 @@ mixin _$ModRemovePost {
   bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3182,7 +3367,8 @@ abstract class $ModRemovePostCopyWith<$Res> {
       int postId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3202,6 +3388,7 @@ class _$ModRemovePostCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -3228,6 +3415,10 @@ class _$ModRemovePostCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3245,7 +3436,8 @@ abstract class _$ModRemovePostCopyWith<$Res>
       int postId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3267,6 +3459,7 @@ class __$ModRemovePostCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModRemovePost(
       id: id == freezed
@@ -3293,6 +3486,10 @@ class __$ModRemovePostCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3309,7 +3506,8 @@ class _$_ModRemovePost extends _ModRemovePost {
       required this.postId,
       this.reason,
       this.removed,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModRemovePost.fromJson(Map<String, dynamic> json) =>
@@ -3328,10 +3526,12 @@ class _$_ModRemovePost extends _ModRemovePost {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModRemovePost(id: $id, modPersonId: $modPersonId, postId: $postId, reason: $reason, removed: $removed, when: $when)';
+    return 'ModRemovePost(id: $id, modPersonId: $modPersonId, postId: $postId, reason: $reason, removed: $removed, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3351,7 +3551,10 @@ class _$_ModRemovePost extends _ModRemovePost {
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3362,7 +3565,8 @@ class _$_ModRemovePost extends _ModRemovePost {
       const DeepCollectionEquality().hash(postId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(removed) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3382,7 +3586,8 @@ abstract class _ModRemovePost extends ModRemovePost {
       required int postId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemovePost;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModRemovePost;
   _ModRemovePost._() : super._();
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
@@ -3402,6 +3607,8 @@ abstract class _ModRemovePost extends ModRemovePost {
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ModRemovePostCopyWith<_ModRemovePost> get copyWith =>
       throw _privateConstructorUsedError;
@@ -3420,13 +3627,15 @@ class _$ModLockPostTearOff {
       required int modPersonId,
       required int postId,
       bool? locked,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModLockPost(
       id: id,
       modPersonId: modPersonId,
       postId: postId,
       locked: locked,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3446,6 +3655,7 @@ mixin _$ModLockPost {
   bool? get locked => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3463,7 +3673,8 @@ abstract class $ModLockPostCopyWith<$Res> {
       int modPersonId,
       int postId,
       bool? locked,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3481,6 +3692,7 @@ class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
     Object? postId = freezed,
     Object? locked = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -3503,6 +3715,10 @@ class _$ModLockPostCopyWithImpl<$Res> implements $ModLockPostCopyWith<$Res> {
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3519,7 +3735,8 @@ abstract class _$ModLockPostCopyWith<$Res>
       int modPersonId,
       int postId,
       bool? locked,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3539,6 +3756,7 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
     Object? postId = freezed,
     Object? locked = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModLockPost(
       id: id == freezed
@@ -3561,6 +3779,10 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3576,7 +3798,8 @@ class _$_ModLockPost extends _ModLockPost {
       required this.modPersonId,
       required this.postId,
       this.locked,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModLockPost.fromJson(Map<String, dynamic> json) =>
@@ -3593,10 +3816,12 @@ class _$_ModLockPost extends _ModLockPost {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModLockPost(id: $id, modPersonId: $modPersonId, postId: $postId, locked: $locked, when: $when)';
+    return 'ModLockPost(id: $id, modPersonId: $modPersonId, postId: $postId, locked: $locked, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3613,7 +3838,10 @@ class _$_ModLockPost extends _ModLockPost {
             (identical(other.locked, locked) ||
                 const DeepCollectionEquality().equals(other.locked, locked)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3623,7 +3851,8 @@ class _$_ModLockPost extends _ModLockPost {
       const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(postId) ^
       const DeepCollectionEquality().hash(locked) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3642,7 +3871,8 @@ abstract class _ModLockPost extends ModLockPost {
       required int modPersonId,
       required int postId,
       bool? locked,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModLockPost;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModLockPost;
   _ModLockPost._() : super._();
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
@@ -3659,6 +3889,8 @@ abstract class _ModLockPost extends ModLockPost {
   @override
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModLockPostCopyWith<_ModLockPost> get copyWith =>
@@ -3678,13 +3910,15 @@ class _$ModStickyPostTearOff {
       required int modPersonId,
       required int postId,
       bool? stickied,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModStickyPost(
       id: id,
       modPersonId: modPersonId,
       postId: postId,
       stickied: stickied,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3704,6 +3938,7 @@ mixin _$ModStickyPost {
   bool? get stickied => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3721,7 +3956,8 @@ abstract class $ModStickyPostCopyWith<$Res> {
       int modPersonId,
       int postId,
       bool? stickied,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3740,6 +3976,7 @@ class _$ModStickyPostCopyWithImpl<$Res>
     Object? postId = freezed,
     Object? stickied = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -3762,6 +3999,10 @@ class _$ModStickyPostCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3778,7 +4019,8 @@ abstract class _$ModStickyPostCopyWith<$Res>
       int modPersonId,
       int postId,
       bool? stickied,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -3799,6 +4041,7 @@ class __$ModStickyPostCopyWithImpl<$Res>
     Object? postId = freezed,
     Object? stickied = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModStickyPost(
       id: id == freezed
@@ -3821,6 +4064,10 @@ class __$ModStickyPostCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3836,7 +4083,8 @@ class _$_ModStickyPost extends _ModStickyPost {
       required this.modPersonId,
       required this.postId,
       this.stickied,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModStickyPost.fromJson(Map<String, dynamic> json) =>
@@ -3853,10 +4101,12 @@ class _$_ModStickyPost extends _ModStickyPost {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModStickyPost(id: $id, modPersonId: $modPersonId, postId: $postId, stickied: $stickied, when: $when)';
+    return 'ModStickyPost(id: $id, modPersonId: $modPersonId, postId: $postId, stickied: $stickied, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3874,7 +4124,10 @@ class _$_ModStickyPost extends _ModStickyPost {
                 const DeepCollectionEquality()
                     .equals(other.stickied, stickied)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -3884,7 +4137,8 @@ class _$_ModStickyPost extends _ModStickyPost {
       const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(postId) ^
       const DeepCollectionEquality().hash(stickied) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3903,7 +4157,8 @@ abstract class _ModStickyPost extends ModStickyPost {
       required int modPersonId,
       required int postId,
       bool? stickied,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModStickyPost;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModStickyPost;
   _ModStickyPost._() : super._();
 
   factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
@@ -3920,6 +4175,8 @@ abstract class _ModStickyPost extends ModStickyPost {
   @override
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModStickyPostCopyWith<_ModStickyPost> get copyWith =>
@@ -3940,7 +4197,8 @@ class _$ModRemoveCommentTearOff {
       required int commentId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModRemoveComment(
       id: id,
       modPersonId: modPersonId,
@@ -3948,6 +4206,7 @@ class _$ModRemoveCommentTearOff {
       reason: reason,
       removed: removed,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3968,6 +4227,7 @@ mixin _$ModRemoveComment {
   bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3986,7 +4246,8 @@ abstract class $ModRemoveCommentCopyWith<$Res> {
       int commentId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4006,6 +4267,7 @@ class _$ModRemoveCommentCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -4032,6 +4294,10 @@ class _$ModRemoveCommentCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4049,7 +4315,8 @@ abstract class _$ModRemoveCommentCopyWith<$Res>
       int commentId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4071,6 +4338,7 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModRemoveComment(
       id: id == freezed
@@ -4097,6 +4365,10 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4113,7 +4385,8 @@ class _$_ModRemoveComment extends _ModRemoveComment {
       required this.commentId,
       this.reason,
       this.removed,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModRemoveComment.fromJson(Map<String, dynamic> json) =>
@@ -4132,10 +4405,12 @@ class _$_ModRemoveComment extends _ModRemoveComment {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModRemoveComment(id: $id, modPersonId: $modPersonId, commentId: $commentId, reason: $reason, removed: $removed, when: $when)';
+    return 'ModRemoveComment(id: $id, modPersonId: $modPersonId, commentId: $commentId, reason: $reason, removed: $removed, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4156,7 +4431,10 @@ class _$_ModRemoveComment extends _ModRemoveComment {
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -4167,7 +4445,8 @@ class _$_ModRemoveComment extends _ModRemoveComment {
       const DeepCollectionEquality().hash(commentId) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(removed) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4187,7 +4466,8 @@ abstract class _ModRemoveComment extends ModRemoveComment {
       required int commentId,
       String? reason,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemoveComment;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModRemoveComment;
   _ModRemoveComment._() : super._();
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
@@ -4206,6 +4486,8 @@ abstract class _ModRemoveComment extends ModRemoveComment {
   @override
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommentCopyWith<_ModRemoveComment> get copyWith =>
@@ -4227,7 +4509,8 @@ class _$ModRemoveCommunityTearOff {
       String? reason,
       bool? removed,
       DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModRemoveCommunity(
       id: id,
       modPersonId: modPersonId,
@@ -4236,6 +4519,7 @@ class _$ModRemoveCommunityTearOff {
       removed: removed,
       expires: expires,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4257,6 +4541,7 @@ mixin _$ModRemoveCommunity {
   DateTime? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4276,7 +4561,8 @@ abstract class $ModRemoveCommunityCopyWith<$Res> {
       String? reason,
       bool? removed,
       DateTime? expires,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4297,6 +4583,7 @@ class _$ModRemoveCommunityCopyWithImpl<$Res>
     Object? removed = freezed,
     Object? expires = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -4327,6 +4614,10 @@ class _$ModRemoveCommunityCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4345,7 +4636,8 @@ abstract class _$ModRemoveCommunityCopyWith<$Res>
       String? reason,
       bool? removed,
       DateTime? expires,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4368,6 +4660,7 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
     Object? removed = freezed,
     Object? expires = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModRemoveCommunity(
       id: id == freezed
@@ -4398,6 +4691,10 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4415,7 +4712,8 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
       this.reason,
       this.removed,
       this.expires,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
@@ -4436,10 +4734,12 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModRemoveCommunity(id: $id, modPersonId: $modPersonId, communityId: $communityId, reason: $reason, removed: $removed, expires: $expires, when: $when)';
+    return 'ModRemoveCommunity(id: $id, modPersonId: $modPersonId, communityId: $communityId, reason: $reason, removed: $removed, expires: $expires, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4463,7 +4763,10 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
                 const DeepCollectionEquality()
                     .equals(other.expires, expires)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -4475,7 +4778,8 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(removed) ^
       const DeepCollectionEquality().hash(expires) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4496,7 +4800,8 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
       String? reason,
       bool? removed,
       DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModRemoveCommunity;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModRemoveCommunity;
   _ModRemoveCommunity._() : super._();
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
@@ -4517,6 +4822,8 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   @override
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommunityCopyWith<_ModRemoveCommunity> get copyWith =>
@@ -4539,7 +4846,8 @@ class _$ModBanFromCommunityTearOff {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModBanFromCommunity(
       id: id,
       modPersonId: modPersonId,
@@ -4549,6 +4857,7 @@ class _$ModBanFromCommunityTearOff {
       banned: banned,
       expires: expires,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4571,6 +4880,7 @@ mixin _$ModBanFromCommunity {
   DateTime? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4591,7 +4901,8 @@ abstract class $ModBanFromCommunityCopyWith<$Res> {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4613,6 +4924,7 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
     Object? banned = freezed,
     Object? expires = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -4647,6 +4959,10 @@ class _$ModBanFromCommunityCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4666,7 +4982,8 @@ abstract class _$ModBanFromCommunityCopyWith<$Res>
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4690,6 +5007,7 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
     Object? banned = freezed,
     Object? expires = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModBanFromCommunity(
       id: id == freezed
@@ -4724,6 +5042,10 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4742,7 +5064,8 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
       this.reason,
       this.banned,
       this.expires,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
@@ -4765,10 +5088,12 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModBanFromCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, reason: $reason, banned: $banned, expires: $expires, when: $when)';
+    return 'ModBanFromCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, reason: $reason, banned: $banned, expires: $expires, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4794,7 +5119,10 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
                 const DeepCollectionEquality()
                     .equals(other.expires, expires)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -4807,7 +5135,8 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(expires) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4830,7 +5159,8 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModBanFromCommunity;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModBanFromCommunity;
   _ModBanFromCommunity._() : super._();
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
@@ -4854,6 +5184,8 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ModBanFromCommunityCopyWith<_ModBanFromCommunity> get copyWith =>
       throw _privateConstructorUsedError;
@@ -4874,7 +5206,8 @@ class _$ModBanTearOff {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModBan(
       id: id,
       modPersonId: modPersonId,
@@ -4883,6 +5216,7 @@ class _$ModBanTearOff {
       banned: banned,
       expires: expires,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4904,6 +5238,7 @@ mixin _$ModBan {
   DateTime? get expires => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4921,7 +5256,8 @@ abstract class $ModBanCopyWith<$Res> {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -4941,6 +5277,7 @@ class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
     Object? banned = freezed,
     Object? expires = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -4971,6 +5308,10 @@ class _$ModBanCopyWithImpl<$Res> implements $ModBanCopyWith<$Res> {
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4987,7 +5328,8 @@ abstract class _$ModBanCopyWith<$Res> implements $ModBanCopyWith<$Res> {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5008,6 +5350,7 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
     Object? banned = freezed,
     Object? expires = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModBan(
       id: id == freezed
@@ -5038,6 +5381,10 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5055,7 +5402,8 @@ class _$_ModBan extends _ModBan {
       this.reason,
       this.banned,
       this.expires,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModBan.fromJson(Map<String, dynamic> json) =>
@@ -5076,10 +5424,12 @@ class _$_ModBan extends _ModBan {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModBan(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, reason: $reason, banned: $banned, expires: $expires, when: $when)';
+    return 'ModBan(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, reason: $reason, banned: $banned, expires: $expires, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5102,7 +5452,10 @@ class _$_ModBan extends _ModBan {
                 const DeepCollectionEquality()
                     .equals(other.expires, expires)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -5114,7 +5467,8 @@ class _$_ModBan extends _ModBan {
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(expires) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5135,7 +5489,8 @@ abstract class _ModBan extends ModBan {
       String? reason,
       bool? banned,
       DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModBan;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModBan;
   _ModBan._() : super._();
 
   factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
@@ -5156,6 +5511,8 @@ abstract class _ModBan extends ModBan {
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ModBanCopyWith<_ModBan> get copyWith => throw _privateConstructorUsedError;
 }
@@ -5174,7 +5531,8 @@ class _$ModAddCommunityTearOff {
       required int otherPersonId,
       required int communityId,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModAddCommunity(
       id: id,
       modPersonId: modPersonId,
@@ -5182,6 +5540,7 @@ class _$ModAddCommunityTearOff {
       communityId: communityId,
       removed: removed,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5202,6 +5561,7 @@ mixin _$ModAddCommunity {
   bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5220,7 +5580,8 @@ abstract class $ModAddCommunityCopyWith<$Res> {
       int otherPersonId,
       int communityId,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5240,6 +5601,7 @@ class _$ModAddCommunityCopyWithImpl<$Res>
     Object? communityId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -5266,6 +5628,10 @@ class _$ModAddCommunityCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5283,7 +5649,8 @@ abstract class _$ModAddCommunityCopyWith<$Res>
       int otherPersonId,
       int communityId,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5305,6 +5672,7 @@ class __$ModAddCommunityCopyWithImpl<$Res>
     Object? communityId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModAddCommunity(
       id: id == freezed
@@ -5331,6 +5699,10 @@ class __$ModAddCommunityCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5347,7 +5719,8 @@ class _$_ModAddCommunity extends _ModAddCommunity {
       required this.otherPersonId,
       required this.communityId,
       this.removed,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModAddCommunity.fromJson(Map<String, dynamic> json) =>
@@ -5366,10 +5739,12 @@ class _$_ModAddCommunity extends _ModAddCommunity {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModAddCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, removed: $removed, when: $when)';
+    return 'ModAddCommunity(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, communityId: $communityId, removed: $removed, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5391,7 +5766,10 @@ class _$_ModAddCommunity extends _ModAddCommunity {
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -5402,7 +5780,8 @@ class _$_ModAddCommunity extends _ModAddCommunity {
       const DeepCollectionEquality().hash(otherPersonId) ^
       const DeepCollectionEquality().hash(communityId) ^
       const DeepCollectionEquality().hash(removed) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5422,7 +5801,8 @@ abstract class _ModAddCommunity extends ModAddCommunity {
       required int otherPersonId,
       required int communityId,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModAddCommunity;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModAddCommunity;
   _ModAddCommunity._() : super._();
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
@@ -5442,6 +5822,8 @@ abstract class _ModAddCommunity extends ModAddCommunity {
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ModAddCommunityCopyWith<_ModAddCommunity> get copyWith =>
       throw _privateConstructorUsedError;
@@ -5460,13 +5842,15 @@ class _$ModAddTearOff {
       required int modPersonId,
       required int otherPersonId,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) {
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) {
     return _ModAdd(
       id: id,
       modPersonId: modPersonId,
       otherPersonId: otherPersonId,
       removed: removed,
       when: when,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5486,6 +5870,7 @@ mixin _$ModAdd {
   bool? get removed => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5501,7 +5886,8 @@ abstract class $ModAddCopyWith<$Res> {
       int modPersonId,
       int otherPersonId,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5519,6 +5905,7 @@ class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
     Object? otherPersonId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -5541,6 +5928,10 @@ class _$ModAddCopyWithImpl<$Res> implements $ModAddCopyWith<$Res> {
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5555,7 +5946,8 @@ abstract class _$ModAddCopyWith<$Res> implements $ModAddCopyWith<$Res> {
       int modPersonId,
       int otherPersonId,
       bool? removed,
-      @JsonKey(name: 'when_') DateTime when});
+      @JsonKey(name: 'when_') DateTime when,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5574,6 +5966,7 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
     Object? otherPersonId = freezed,
     Object? removed = freezed,
     Object? when = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ModAdd(
       id: id == freezed
@@ -5596,6 +5989,10 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5611,7 +6008,8 @@ class _$_ModAdd extends _ModAdd {
       required this.modPersonId,
       required this.otherPersonId,
       this.removed,
-      @JsonKey(name: 'when_') required this.when})
+      @JsonKey(name: 'when_') required this.when,
+      required this.instanceHost})
       : super._();
 
   factory _$_ModAdd.fromJson(Map<String, dynamic> json) =>
@@ -5628,10 +6026,12 @@ class _$_ModAdd extends _ModAdd {
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ModAdd(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, removed: $removed, when: $when)';
+    return 'ModAdd(id: $id, modPersonId: $modPersonId, otherPersonId: $otherPersonId, removed: $removed, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
@@ -5650,7 +6050,10 @@ class _$_ModAdd extends _ModAdd {
                 const DeepCollectionEquality()
                     .equals(other.removed, removed)) &&
             (identical(other.when, when) ||
-                const DeepCollectionEquality().equals(other.when, when)));
+                const DeepCollectionEquality().equals(other.when, when)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -5660,7 +6063,8 @@ class _$_ModAdd extends _ModAdd {
       const DeepCollectionEquality().hash(modPersonId) ^
       const DeepCollectionEquality().hash(otherPersonId) ^
       const DeepCollectionEquality().hash(removed) ^
-      const DeepCollectionEquality().hash(when);
+      const DeepCollectionEquality().hash(when) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5679,7 +6083,8 @@ abstract class _ModAdd extends ModAdd {
       required int modPersonId,
       required int otherPersonId,
       bool? removed,
-      @JsonKey(name: 'when_') required DateTime when}) = _$_ModAdd;
+      @JsonKey(name: 'when_') required DateTime when,
+      required String instanceHost}) = _$_ModAdd;
   _ModAdd._() : super._();
 
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
@@ -5695,6 +6100,8 @@ abstract class _ModAdd extends ModAdd {
   @override
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddCopyWith<_ModAdd> get copyWith => throw _privateConstructorUsedError;
@@ -5721,7 +6128,8 @@ class _$CommunitySafeTearOff {
       required String actorId,
       required bool local,
       String? icon,
-      String? banner}) {
+      String? banner,
+      required String instanceHost}) {
     return _CommunitySafe(
       id: id,
       name: name,
@@ -5736,6 +6144,7 @@ class _$CommunitySafeTearOff {
       local: local,
       icon: icon,
       banner: banner,
+      instanceHost: instanceHost,
     );
   }
 
@@ -5762,6 +6171,7 @@ mixin _$CommunitySafe {
   bool get local => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5787,7 +6197,8 @@ abstract class $CommunitySafeCopyWith<$Res> {
       String actorId,
       bool local,
       String? icon,
-      String? banner});
+      String? banner,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5814,6 +6225,7 @@ class _$CommunitySafeCopyWithImpl<$Res>
     Object? local = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -5868,6 +6280,10 @@ class _$CommunitySafeCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5892,7 +6308,8 @@ abstract class _$CommunitySafeCopyWith<$Res>
       String actorId,
       bool local,
       String? icon,
-      String? banner});
+      String? banner,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -5921,6 +6338,7 @@ class __$CommunitySafeCopyWithImpl<$Res>
     Object? local = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommunitySafe(
       id: id == freezed
@@ -5975,6 +6393,10 @@ class __$CommunitySafeCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -5998,7 +6420,8 @@ class _$_CommunitySafe extends _CommunitySafe {
       required this.actorId,
       required this.local,
       this.icon,
-      this.banner})
+      this.banner,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommunitySafe.fromJson(Map<String, dynamic> json) =>
@@ -6030,10 +6453,12 @@ class _$_CommunitySafe extends _CommunitySafe {
   final String? icon;
   @override
   final String? banner;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner)';
+    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner, instanceHost: $instanceHost)';
   }
 
   @override
@@ -6071,7 +6496,10 @@ class _$_CommunitySafe extends _CommunitySafe {
             (identical(other.icon, icon) ||
                 const DeepCollectionEquality().equals(other.icon, icon)) &&
             (identical(other.banner, banner) ||
-                const DeepCollectionEquality().equals(other.banner, banner)));
+                const DeepCollectionEquality().equals(other.banner, banner)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -6089,7 +6517,8 @@ class _$_CommunitySafe extends _CommunitySafe {
       const DeepCollectionEquality().hash(actorId) ^
       const DeepCollectionEquality().hash(local) ^
       const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(banner);
+      const DeepCollectionEquality().hash(banner) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6116,7 +6545,8 @@ abstract class _CommunitySafe extends CommunitySafe {
       required String actorId,
       required bool local,
       String? icon,
-      String? banner}) = _$_CommunitySafe;
+      String? banner,
+      required String instanceHost}) = _$_CommunitySafe;
   _CommunitySafe._() : super._();
 
   factory _CommunitySafe.fromJson(Map<String, dynamic> json) =
@@ -6149,6 +6579,8 @@ abstract class _CommunitySafe extends CommunitySafe {
   @override
   String? get banner => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$CommunitySafeCopyWith<_CommunitySafe> get copyWith =>
       throw _privateConstructorUsedError;
@@ -6171,7 +6603,8 @@ class _$CommentReportTearOff {
       required bool resolved,
       int? resolverId,
       required DateTime published,
-      DateTime? updated}) {
+      DateTime? updated,
+      required String instanceHost}) {
     return _CommentReport(
       id: id,
       creatorId: creatorId,
@@ -6182,6 +6615,7 @@ class _$CommentReportTearOff {
       resolverId: resolverId,
       published: published,
       updated: updated,
+      instanceHost: instanceHost,
     );
   }
 
@@ -6204,6 +6638,7 @@ mixin _$CommentReport {
   int? get resolverId => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6225,7 +6660,8 @@ abstract class $CommentReportCopyWith<$Res> {
       bool resolved,
       int? resolverId,
       DateTime published,
-      DateTime? updated});
+      DateTime? updated,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -6248,6 +6684,7 @@ class _$CommentReportCopyWithImpl<$Res>
     Object? resolverId = freezed,
     Object? published = freezed,
     Object? updated = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -6286,6 +6723,10 @@ class _$CommentReportCopyWithImpl<$Res>
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6306,7 +6747,8 @@ abstract class _$CommentReportCopyWith<$Res>
       bool resolved,
       int? resolverId,
       DateTime published,
-      DateTime? updated});
+      DateTime? updated,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -6331,6 +6773,7 @@ class __$CommentReportCopyWithImpl<$Res>
     Object? resolverId = freezed,
     Object? published = freezed,
     Object? updated = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_CommentReport(
       id: id == freezed
@@ -6369,6 +6812,10 @@ class __$CommentReportCopyWithImpl<$Res>
           ? _value.updated
           : updated // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6388,7 +6835,8 @@ class _$_CommentReport extends _CommentReport {
       required this.resolved,
       this.resolverId,
       required this.published,
-      this.updated})
+      this.updated,
+      required this.instanceHost})
       : super._();
 
   factory _$_CommentReport.fromJson(Map<String, dynamic> json) =>
@@ -6412,10 +6860,12 @@ class _$_CommentReport extends _CommentReport {
   final DateTime published;
   @override
   final DateTime? updated;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'CommentReport(id: $id, creatorId: $creatorId, commentId: $commentId, originalCommentText: $originalCommentText, reason: $reason, resolved: $resolved, resolverId: $resolverId, published: $published, updated: $updated)';
+    return 'CommentReport(id: $id, creatorId: $creatorId, commentId: $commentId, originalCommentText: $originalCommentText, reason: $reason, resolved: $resolved, resolverId: $resolverId, published: $published, updated: $updated, instanceHost: $instanceHost)';
   }
 
   @override
@@ -6445,7 +6895,11 @@ class _$_CommentReport extends _CommentReport {
                 const DeepCollectionEquality()
                     .equals(other.published, published)) &&
             (identical(other.updated, updated) ||
-                const DeepCollectionEquality().equals(other.updated, updated)));
+                const DeepCollectionEquality()
+                    .equals(other.updated, updated)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -6459,7 +6913,8 @@ class _$_CommentReport extends _CommentReport {
       const DeepCollectionEquality().hash(resolved) ^
       const DeepCollectionEquality().hash(resolverId) ^
       const DeepCollectionEquality().hash(published) ^
-      const DeepCollectionEquality().hash(updated);
+      const DeepCollectionEquality().hash(updated) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6482,7 +6937,8 @@ abstract class _CommentReport extends CommentReport {
       required bool resolved,
       int? resolverId,
       required DateTime published,
-      DateTime? updated}) = _$_CommentReport;
+      DateTime? updated,
+      required String instanceHost}) = _$_CommentReport;
   _CommentReport._() : super._();
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
@@ -6506,6 +6962,8 @@ abstract class _CommentReport extends CommentReport {
   DateTime get published => throw _privateConstructorUsedError;
   @override
   DateTime? get updated => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommentReportCopyWith<_CommentReport> get copyWith =>
@@ -6532,7 +6990,8 @@ class _$CommentTearOff {
       DateTime? updated,
       required bool deleted,
       required String apId,
-      required bool local}) {
+      required bool local,
+      required String instanceHost}) {
     return _Comment(
       id: id,
       creatorId: creatorId,
@@ -6546,6 +7005,7 @@ class _$CommentTearOff {
       deleted: deleted,
       apId: apId,
       local: local,
+      instanceHost: instanceHost,
     );
   }
 
@@ -6571,6 +7031,7 @@ mixin _$Comment {
   bool get deleted => throw _privateConstructorUsedError;
   String get apId => throw _privateConstructorUsedError;
   bool get local => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6593,7 +7054,8 @@ abstract class $CommentCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       String apId,
-      bool local});
+      bool local,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -6618,6 +7080,7 @@ class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
     Object? deleted = freezed,
     Object? apId = freezed,
     Object? local = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -6668,6 +7131,10 @@ class _$CommentCopyWithImpl<$Res> implements $CommentCopyWith<$Res> {
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6689,7 +7156,8 @@ abstract class _$CommentCopyWith<$Res> implements $CommentCopyWith<$Res> {
       DateTime? updated,
       bool deleted,
       String apId,
-      bool local});
+      bool local,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -6715,6 +7183,7 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
     Object? deleted = freezed,
     Object? apId = freezed,
     Object? local = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_Comment(
       id: id == freezed
@@ -6765,6 +7234,10 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
           ? _value.local
           : local // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -6787,7 +7260,8 @@ class _$_Comment extends _Comment {
       this.updated,
       required this.deleted,
       required this.apId,
-      required this.local})
+      required this.local,
+      required this.instanceHost})
       : super._();
 
   factory _$_Comment.fromJson(Map<String, dynamic> json) =>
@@ -6817,10 +7291,12 @@ class _$_Comment extends _Comment {
   final String apId;
   @override
   final bool local;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, parentId: $parentId, content: $content, removed: $removed, read: $read, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local)';
+    return 'Comment(id: $id, creatorId: $creatorId, postId: $postId, parentId: $parentId, content: $content, removed: $removed, read: $read, published: $published, updated: $updated, deleted: $deleted, apId: $apId, local: $local, instanceHost: $instanceHost)';
   }
 
   @override
@@ -6857,7 +7333,10 @@ class _$_Comment extends _Comment {
             (identical(other.apId, apId) ||
                 const DeepCollectionEquality().equals(other.apId, apId)) &&
             (identical(other.local, local) ||
-                const DeepCollectionEquality().equals(other.local, local)));
+                const DeepCollectionEquality().equals(other.local, local)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -6874,7 +7353,8 @@ class _$_Comment extends _Comment {
       const DeepCollectionEquality().hash(updated) ^
       const DeepCollectionEquality().hash(deleted) ^
       const DeepCollectionEquality().hash(apId) ^
-      const DeepCollectionEquality().hash(local);
+      const DeepCollectionEquality().hash(local) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6900,7 +7380,8 @@ abstract class _Comment extends Comment {
       DateTime? updated,
       required bool deleted,
       required String apId,
-      required bool local}) = _$_Comment;
+      required bool local,
+      required String instanceHost}) = _$_Comment;
   _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
@@ -6930,6 +7411,8 @@ abstract class _Comment extends Comment {
   @override
   bool get local => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$CommentCopyWith<_Comment> get copyWith =>
       throw _privateConstructorUsedError;
@@ -6948,13 +7431,15 @@ class _$PersonMentionTearOff {
       required int recipientId,
       required int commentId,
       required bool read,
-      required DateTime published}) {
+      required DateTime published,
+      required String instanceHost}) {
     return _PersonMention(
       id: id,
       recipientId: recipientId,
       commentId: commentId,
       read: read,
       published: published,
+      instanceHost: instanceHost,
     );
   }
 
@@ -6973,6 +7458,7 @@ mixin _$PersonMention {
   int get commentId => throw _privateConstructorUsedError;
   bool get read => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6986,7 +7472,12 @@ abstract class $PersonMentionCopyWith<$Res> {
           PersonMention value, $Res Function(PersonMention) then) =
       _$PersonMentionCopyWithImpl<$Res>;
   $Res call(
-      {int id, int recipientId, int commentId, bool read, DateTime published});
+      {int id,
+      int recipientId,
+      int commentId,
+      bool read,
+      DateTime published,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -7005,6 +7496,7 @@ class _$PersonMentionCopyWithImpl<$Res>
     Object? commentId = freezed,
     Object? read = freezed,
     Object? published = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -7027,6 +7519,10 @@ class _$PersonMentionCopyWithImpl<$Res>
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -7039,7 +7535,12 @@ abstract class _$PersonMentionCopyWith<$Res>
       __$PersonMentionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id, int recipientId, int commentId, bool read, DateTime published});
+      {int id,
+      int recipientId,
+      int commentId,
+      bool read,
+      DateTime published,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -7060,6 +7561,7 @@ class __$PersonMentionCopyWithImpl<$Res>
     Object? commentId = freezed,
     Object? read = freezed,
     Object? published = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PersonMention(
       id: id == freezed
@@ -7082,6 +7584,10 @@ class __$PersonMentionCopyWithImpl<$Res>
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -7097,7 +7603,8 @@ class _$_PersonMention extends _PersonMention {
       required this.recipientId,
       required this.commentId,
       required this.read,
-      required this.published})
+      required this.published,
+      required this.instanceHost})
       : super._();
 
   factory _$_PersonMention.fromJson(Map<String, dynamic> json) =>
@@ -7113,10 +7620,12 @@ class _$_PersonMention extends _PersonMention {
   final bool read;
   @override
   final DateTime published;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PersonMention(id: $id, recipientId: $recipientId, commentId: $commentId, read: $read, published: $published)';
+    return 'PersonMention(id: $id, recipientId: $recipientId, commentId: $commentId, read: $read, published: $published, instanceHost: $instanceHost)';
   }
 
   @override
@@ -7135,7 +7644,10 @@ class _$_PersonMention extends _PersonMention {
                 const DeepCollectionEquality().equals(other.read, read)) &&
             (identical(other.published, published) ||
                 const DeepCollectionEquality()
-                    .equals(other.published, published)));
+                    .equals(other.published, published)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -7145,7 +7657,8 @@ class _$_PersonMention extends _PersonMention {
       const DeepCollectionEquality().hash(recipientId) ^
       const DeepCollectionEquality().hash(commentId) ^
       const DeepCollectionEquality().hash(read) ^
-      const DeepCollectionEquality().hash(published);
+      const DeepCollectionEquality().hash(published) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -7164,7 +7677,8 @@ abstract class _PersonMention extends PersonMention {
       required int recipientId,
       required int commentId,
       required bool read,
-      required DateTime published}) = _$_PersonMention;
+      required DateTime published,
+      required String instanceHost}) = _$_PersonMention;
   _PersonMention._() : super._();
 
   factory _PersonMention.fromJson(Map<String, dynamic> json) =
@@ -7180,6 +7694,8 @@ abstract class _PersonMention extends PersonMention {
   bool get read => throw _privateConstructorUsedError;
   @override
   DateTime get published => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonMentionCopyWith<_PersonMention> get copyWith =>
