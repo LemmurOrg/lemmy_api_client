@@ -34,13 +34,13 @@ class LemmyApiV3 {
           return http.post(
             Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: {'Content-Type': 'application/json'},
+            headers: const {'Content-Type': 'application/json'},
           );
         case HttpMethod.put:
           return http.put(
             Uri.https(host, '$extraPath${query.path}'),
             body: jsonEncode(query.toJson()),
-            headers: {'Content-Type': 'application/json'},
+            headers: const {'Content-Type': 'application/json'},
           );
       }
     }();
