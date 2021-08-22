@@ -6,6 +6,7 @@ import 'package:web_socket_channel/status.dart' as status;
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import '../exceptions.dart';
+import '../utils/response_ok.dart';
 import 'api/websockets.dart';
 import 'query.dart';
 
@@ -46,7 +47,7 @@ class LemmyApiV3 {
     }();
 
     // if status code is not \in [200; 300) then throw an exception with a correct message
-    if (res.statusCode < 200 || res.statusCode >= 300) {
+    if (!res.ok) {
       final String errorMessage = () {
         try {
           final Map<String, dynamic> json = jsonDecode(res.body);
