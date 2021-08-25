@@ -2,19 +2,19 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../enums.dart';
-import '../../utils/with_instance_host.dart';
 import 'views.dart';
 
 part 'api.freezed.dart';
 part 'api.g.dart';
 
 @freezed
-class FullCommunityView extends WithInstanceHost with _$FullCommunityView {
+class FullCommunityView with _$FullCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullCommunityView({
     required CommunityView communityView,
     required List<CommunityModeratorView> moderators,
     required int online,
+    required String instanceHost,
   }) = _FullCommunityView;
 
   FullCommunityView._();
@@ -24,7 +24,7 @@ class FullCommunityView extends WithInstanceHost with _$FullCommunityView {
 }
 
 @freezed
-class FullPostView extends WithInstanceHost with _$FullPostView {
+class FullPostView with _$FullPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullPostView({
     required PostView postView,
@@ -32,6 +32,7 @@ class FullPostView extends WithInstanceHost with _$FullPostView {
     required List<CommentView> comments,
     required List<CommunityModeratorView> moderators,
     required int online,
+    required String instanceHost,
   }) = _FullPostView;
 
   FullPostView._();
@@ -40,7 +41,7 @@ class FullPostView extends WithInstanceHost with _$FullPostView {
 }
 
 @freezed
-class SearchResults extends WithInstanceHost with _$SearchResults {
+class SearchResults with _$SearchResults {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SearchResults({
     @JsonKey(name: 'type_') required SearchType type,
@@ -48,6 +49,7 @@ class SearchResults extends WithInstanceHost with _$SearchResults {
     required List<PostView> posts,
     required List<CommunityView> communities,
     required List<PersonViewSafe> users,
+    required String instanceHost,
   }) = _SearchResults;
 
   SearchResults._();
@@ -57,7 +59,7 @@ class SearchResults extends WithInstanceHost with _$SearchResults {
 }
 
 @freezed
-class Modlog extends WithInstanceHost with _$Modlog {
+class Modlog with _$Modlog {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory Modlog({
     required List<ModRemovePostView> removedPosts,
@@ -69,6 +71,7 @@ class Modlog extends WithInstanceHost with _$Modlog {
     required List<ModBanView> banned,
     required List<ModAddCommunityView> addedToCommunity,
     required List<ModAddView> added,
+    required String instanceHost,
   }) = _Modlog;
 
   Modlog._();
@@ -77,12 +80,13 @@ class Modlog extends WithInstanceHost with _$Modlog {
 }
 
 @freezed
-class FullCommentView extends WithInstanceHost with _$FullCommentView {
+class FullCommentView with _$FullCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullCommentView({
     required CommentView commentView,
     required List<int> recipientIds,
     String? formId,
+    required String instanceHost,
   }) = _FullCommentView;
 
   FullCommentView._();
@@ -91,7 +95,7 @@ class FullCommentView extends WithInstanceHost with _$FullCommentView {
 }
 
 @freezed
-class FullSiteView extends WithInstanceHost with _$FullSiteView {
+class FullSiteView with _$FullSiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullSiteView({
     SiteView? siteView,
@@ -101,6 +105,7 @@ class FullSiteView extends WithInstanceHost with _$FullSiteView {
     required String version,
     LocalUserSettingsView? myUser,
     FederatedInstances? federatedInstances,
+    required String instanceHost,
   }) = _FullSiteView;
 
   FullSiteView._();
@@ -110,12 +115,13 @@ class FullSiteView extends WithInstanceHost with _$FullSiteView {
 }
 
 @freezed
-class FederatedInstances extends WithInstanceHost with _$FederatedInstances {
+class FederatedInstances with _$FederatedInstances {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FederatedInstances({
     required List<String> linked,
     List<String>? allowed,
     List<String>? blocked,
+    required String instanceHost,
   }) = _FederatedInstances;
 
   FederatedInstances._();
@@ -142,7 +148,7 @@ class Captcha with _$Captcha {
 }
 
 @freezed
-class FullPersonView extends WithInstanceHost with _$FullPersonView {
+class FullPersonView with _$FullPersonView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullPersonView({
     required PersonViewSafe personView,
@@ -150,6 +156,7 @@ class FullPersonView extends WithInstanceHost with _$FullPersonView {
     required List<CommunityModeratorView> moderates,
     required List<CommentView> comments,
     required List<PostView> posts,
+    required String instanceHost,
   }) = _FullPersonView;
 
   FullPersonView._();
@@ -158,11 +165,12 @@ class FullPersonView extends WithInstanceHost with _$FullPersonView {
 }
 
 @freezed
-class BannedCommunityUser extends WithInstanceHost with _$BannedCommunityUser {
+class BannedCommunityUser with _$BannedCommunityUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedCommunityUser({
     required PersonViewSafe personView,
     required bool banned,
+    required String instanceHost,
   }) = _BannedCommunityUser;
 
   BannedCommunityUser._();
@@ -172,11 +180,12 @@ class BannedCommunityUser extends WithInstanceHost with _$BannedCommunityUser {
 }
 
 @freezed
-class BannedPerson extends WithInstanceHost with _$BannedPerson {
+class BannedPerson with _$BannedPerson {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory BannedPerson({
     required PersonViewSafe personView,
     required bool banned,
+    required String instanceHost,
   }) = _BannedPerson;
 
   BannedPerson._();
@@ -186,13 +195,13 @@ class BannedPerson extends WithInstanceHost with _$BannedPerson {
 
 // TODO: this does not seem to exist yet
 @freezed
-class GetReportCountResponse extends WithInstanceHost
-    with _$GetReportCountResponse {
+class GetReportCountResponse with _$GetReportCountResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory GetReportCountResponse({
     int? community,
     required int commentReports,
     required int postReports,
+    required String instanceHost,
   }) = _GetReportCountResponse;
 
   GetReportCountResponse._();
@@ -202,12 +211,12 @@ class GetReportCountResponse extends WithInstanceHost
 
 // TODO: this does not seem to exist yet
 @freezed
-class ResolveCommentReportResponse extends WithInstanceHost
-    with _$ResolveCommentReportResponse {
+class ResolveCommentReportResponse with _$ResolveCommentReportResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolveCommentReportResponse({
     required int reportId,
     required bool resolved,
+    required String instanceHost,
   }) = _ResolveCommentReportResponse;
 
   ResolveCommentReportResponse._();
@@ -217,12 +226,12 @@ class ResolveCommentReportResponse extends WithInstanceHost
 
 // TODO: this does not seem to exist yet
 @freezed
-class ResolvePostReportResponse extends WithInstanceHost
-    with _$ResolvePostReportResponse {
+class ResolvePostReportResponse with _$ResolvePostReportResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory ResolvePostReportResponse({
     required int reportId,
     required bool resolved,
+    required String instanceHost,
   }) = _ResolvePostReportResponse;
 
   ResolvePostReportResponse._();

@@ -23,11 +23,13 @@ class _$FullCommunityViewTearOff {
   _FullCommunityView call(
       {required CommunityView communityView,
       required List<CommunityModeratorView> moderators,
-      required int online}) {
+      required int online,
+      required String instanceHost}) {
     return _FullCommunityView(
       communityView: communityView,
       moderators: moderators,
       online: online,
+      instanceHost: instanceHost,
     );
   }
 
@@ -45,6 +47,7 @@ mixin _$FullCommunityView {
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,7 +63,8 @@ abstract class $FullCommunityViewCopyWith<$Res> {
   $Res call(
       {CommunityView communityView,
       List<CommunityModeratorView> moderators,
-      int online});
+      int online,
+      String instanceHost});
 
   $CommunityViewCopyWith<$Res> get communityView;
 }
@@ -79,6 +83,7 @@ class _$FullCommunityViewCopyWithImpl<$Res>
     Object? communityView = freezed,
     Object? moderators = freezed,
     Object? online = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       communityView: communityView == freezed
@@ -93,6 +98,10 @@ class _$FullCommunityViewCopyWithImpl<$Res>
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -114,7 +123,8 @@ abstract class _$FullCommunityViewCopyWith<$Res>
   $Res call(
       {CommunityView communityView,
       List<CommunityModeratorView> moderators,
-      int online});
+      int online,
+      String instanceHost});
 
   @override
   $CommunityViewCopyWith<$Res> get communityView;
@@ -136,6 +146,7 @@ class __$FullCommunityViewCopyWithImpl<$Res>
     Object? communityView = freezed,
     Object? moderators = freezed,
     Object? online = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_FullCommunityView(
       communityView: communityView == freezed
@@ -150,6 +161,10 @@ class __$FullCommunityViewCopyWithImpl<$Res>
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -161,7 +176,8 @@ class _$_FullCommunityView extends _FullCommunityView {
   _$_FullCommunityView(
       {required this.communityView,
       required this.moderators,
-      required this.online})
+      required this.online,
+      required this.instanceHost})
       : super._();
 
   factory _$_FullCommunityView.fromJson(Map<String, dynamic> json) =>
@@ -173,10 +189,12 @@ class _$_FullCommunityView extends _FullCommunityView {
   final List<CommunityModeratorView> moderators;
   @override
   final int online;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'FullCommunityView(communityView: $communityView, moderators: $moderators, online: $online)';
+    return 'FullCommunityView(communityView: $communityView, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
   }
 
   @override
@@ -190,7 +208,10 @@ class _$_FullCommunityView extends _FullCommunityView {
                 const DeepCollectionEquality()
                     .equals(other.moderators, moderators)) &&
             (identical(other.online, online) ||
-                const DeepCollectionEquality().equals(other.online, online)));
+                const DeepCollectionEquality().equals(other.online, online)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -198,7 +219,8 @@ class _$_FullCommunityView extends _FullCommunityView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(communityView) ^
       const DeepCollectionEquality().hash(moderators) ^
-      const DeepCollectionEquality().hash(online);
+      const DeepCollectionEquality().hash(online) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -215,7 +237,8 @@ abstract class _FullCommunityView extends FullCommunityView {
   factory _FullCommunityView(
       {required CommunityView communityView,
       required List<CommunityModeratorView> moderators,
-      required int online}) = _$_FullCommunityView;
+      required int online,
+      required String instanceHost}) = _$_FullCommunityView;
   _FullCommunityView._() : super._();
 
   factory _FullCommunityView.fromJson(Map<String, dynamic> json) =
@@ -228,6 +251,8 @@ abstract class _FullCommunityView extends FullCommunityView {
       throw _privateConstructorUsedError;
   @override
   int get online => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullCommunityViewCopyWith<_FullCommunityView> get copyWith =>
@@ -247,13 +272,15 @@ class _$FullPostViewTearOff {
       required CommunityView communityView,
       required List<CommentView> comments,
       required List<CommunityModeratorView> moderators,
-      required int online}) {
+      required int online,
+      required String instanceHost}) {
     return _FullPostView(
       postView: postView,
       communityView: communityView,
       comments: comments,
       moderators: moderators,
       online: online,
+      instanceHost: instanceHost,
     );
   }
 
@@ -273,6 +300,7 @@ mixin _$FullPostView {
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -290,7 +318,8 @@ abstract class $FullPostViewCopyWith<$Res> {
       CommunityView communityView,
       List<CommentView> comments,
       List<CommunityModeratorView> moderators,
-      int online});
+      int online,
+      String instanceHost});
 
   $PostViewCopyWith<$Res> get postView;
   $CommunityViewCopyWith<$Res> get communityView;
@@ -311,6 +340,7 @@ class _$FullPostViewCopyWithImpl<$Res> implements $FullPostViewCopyWith<$Res> {
     Object? comments = freezed,
     Object? moderators = freezed,
     Object? online = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       postView: postView == freezed
@@ -333,6 +363,10 @@ class _$FullPostViewCopyWithImpl<$Res> implements $FullPostViewCopyWith<$Res> {
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -363,7 +397,8 @@ abstract class _$FullPostViewCopyWith<$Res>
       CommunityView communityView,
       List<CommentView> comments,
       List<CommunityModeratorView> moderators,
-      int online});
+      int online,
+      String instanceHost});
 
   @override
   $PostViewCopyWith<$Res> get postView;
@@ -388,6 +423,7 @@ class __$FullPostViewCopyWithImpl<$Res> extends _$FullPostViewCopyWithImpl<$Res>
     Object? comments = freezed,
     Object? moderators = freezed,
     Object? online = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_FullPostView(
       postView: postView == freezed
@@ -410,6 +446,10 @@ class __$FullPostViewCopyWithImpl<$Res> extends _$FullPostViewCopyWithImpl<$Res>
           ? _value.online
           : online // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -423,7 +463,8 @@ class _$_FullPostView extends _FullPostView {
       required this.communityView,
       required this.comments,
       required this.moderators,
-      required this.online})
+      required this.online,
+      required this.instanceHost})
       : super._();
 
   factory _$_FullPostView.fromJson(Map<String, dynamic> json) =>
@@ -439,10 +480,12 @@ class _$_FullPostView extends _FullPostView {
   final List<CommunityModeratorView> moderators;
   @override
   final int online;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'FullPostView(postView: $postView, communityView: $communityView, comments: $comments, moderators: $moderators, online: $online)';
+    return 'FullPostView(postView: $postView, communityView: $communityView, comments: $comments, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
   }
 
   @override
@@ -462,7 +505,10 @@ class _$_FullPostView extends _FullPostView {
                 const DeepCollectionEquality()
                     .equals(other.moderators, moderators)) &&
             (identical(other.online, online) ||
-                const DeepCollectionEquality().equals(other.online, online)));
+                const DeepCollectionEquality().equals(other.online, online)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -472,7 +518,8 @@ class _$_FullPostView extends _FullPostView {
       const DeepCollectionEquality().hash(communityView) ^
       const DeepCollectionEquality().hash(comments) ^
       const DeepCollectionEquality().hash(moderators) ^
-      const DeepCollectionEquality().hash(online);
+      const DeepCollectionEquality().hash(online) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -491,7 +538,8 @@ abstract class _FullPostView extends FullPostView {
       required CommunityView communityView,
       required List<CommentView> comments,
       required List<CommunityModeratorView> moderators,
-      required int online}) = _$_FullPostView;
+      required int online,
+      required String instanceHost}) = _$_FullPostView;
   _FullPostView._() : super._();
 
   factory _FullPostView.fromJson(Map<String, dynamic> json) =
@@ -508,6 +556,8 @@ abstract class _FullPostView extends FullPostView {
       throw _privateConstructorUsedError;
   @override
   int get online => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullPostViewCopyWith<_FullPostView> get copyWith =>
@@ -527,13 +577,15 @@ class _$SearchResultsTearOff {
       required List<CommentView> comments,
       required List<PostView> posts,
       required List<CommunityView> communities,
-      required List<PersonViewSafe> users}) {
+      required List<PersonViewSafe> users,
+      required String instanceHost}) {
     return _SearchResults(
       type: type,
       comments: comments,
       posts: posts,
       communities: communities,
       users: users,
+      instanceHost: instanceHost,
     );
   }
 
@@ -553,6 +605,7 @@ mixin _$SearchResults {
   List<PostView> get posts => throw _privateConstructorUsedError;
   List<CommunityView> get communities => throw _privateConstructorUsedError;
   List<PersonViewSafe> get users => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -570,7 +623,8 @@ abstract class $SearchResultsCopyWith<$Res> {
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityView> communities,
-      List<PersonViewSafe> users});
+      List<PersonViewSafe> users,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -589,6 +643,7 @@ class _$SearchResultsCopyWithImpl<$Res>
     Object? posts = freezed,
     Object? communities = freezed,
     Object? users = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       type: type == freezed
@@ -611,6 +666,10 @@ class _$SearchResultsCopyWithImpl<$Res>
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -627,7 +686,8 @@ abstract class _$SearchResultsCopyWith<$Res>
       List<CommentView> comments,
       List<PostView> posts,
       List<CommunityView> communities,
-      List<PersonViewSafe> users});
+      List<PersonViewSafe> users,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -648,6 +708,7 @@ class __$SearchResultsCopyWithImpl<$Res>
     Object? posts = freezed,
     Object? communities = freezed,
     Object? users = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_SearchResults(
       type: type == freezed
@@ -670,6 +731,10 @@ class __$SearchResultsCopyWithImpl<$Res>
           ? _value.users
           : users // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -683,7 +748,8 @@ class _$_SearchResults extends _SearchResults {
       required this.comments,
       required this.posts,
       required this.communities,
-      required this.users})
+      required this.users,
+      required this.instanceHost})
       : super._();
 
   factory _$_SearchResults.fromJson(Map<String, dynamic> json) =>
@@ -700,10 +766,12 @@ class _$_SearchResults extends _SearchResults {
   final List<CommunityView> communities;
   @override
   final List<PersonViewSafe> users;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'SearchResults(type: $type, comments: $comments, posts: $posts, communities: $communities, users: $users)';
+    return 'SearchResults(type: $type, comments: $comments, posts: $posts, communities: $communities, users: $users, instanceHost: $instanceHost)';
   }
 
   @override
@@ -721,7 +789,10 @@ class _$_SearchResults extends _SearchResults {
                 const DeepCollectionEquality()
                     .equals(other.communities, communities)) &&
             (identical(other.users, users) ||
-                const DeepCollectionEquality().equals(other.users, users)));
+                const DeepCollectionEquality().equals(other.users, users)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -731,7 +802,8 @@ class _$_SearchResults extends _SearchResults {
       const DeepCollectionEquality().hash(comments) ^
       const DeepCollectionEquality().hash(posts) ^
       const DeepCollectionEquality().hash(communities) ^
-      const DeepCollectionEquality().hash(users);
+      const DeepCollectionEquality().hash(users) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -750,7 +822,8 @@ abstract class _SearchResults extends SearchResults {
       required List<CommentView> comments,
       required List<PostView> posts,
       required List<CommunityView> communities,
-      required List<PersonViewSafe> users}) = _$_SearchResults;
+      required List<PersonViewSafe> users,
+      required String instanceHost}) = _$_SearchResults;
   _SearchResults._() : super._();
 
   factory _SearchResults.fromJson(Map<String, dynamic> json) =
@@ -767,6 +840,8 @@ abstract class _SearchResults extends SearchResults {
   List<CommunityView> get communities => throw _privateConstructorUsedError;
   @override
   List<PersonViewSafe> get users => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SearchResultsCopyWith<_SearchResults> get copyWith =>
@@ -790,7 +865,8 @@ class _$ModlogTearOff {
       required List<ModBanFromCommunityView> bannedFromCommunity,
       required List<ModBanView> banned,
       required List<ModAddCommunityView> addedToCommunity,
-      required List<ModAddView> added}) {
+      required List<ModAddView> added,
+      required String instanceHost}) {
     return _Modlog(
       removedPosts: removedPosts,
       lockedPosts: lockedPosts,
@@ -801,6 +877,7 @@ class _$ModlogTearOff {
       banned: banned,
       addedToCommunity: addedToCommunity,
       added: added,
+      instanceHost: instanceHost,
     );
   }
 
@@ -829,6 +906,7 @@ mixin _$Modlog {
   List<ModAddCommunityView> get addedToCommunity =>
       throw _privateConstructorUsedError;
   List<ModAddView> get added => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -848,7 +926,8 @@ abstract class $ModlogCopyWith<$Res> {
       List<ModBanFromCommunityView> bannedFromCommunity,
       List<ModBanView> banned,
       List<ModAddCommunityView> addedToCommunity,
-      List<ModAddView> added});
+      List<ModAddView> added,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -870,6 +949,7 @@ class _$ModlogCopyWithImpl<$Res> implements $ModlogCopyWith<$Res> {
     Object? banned = freezed,
     Object? addedToCommunity = freezed,
     Object? added = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       removedPosts: removedPosts == freezed
@@ -908,6 +988,10 @@ class _$ModlogCopyWithImpl<$Res> implements $ModlogCopyWith<$Res> {
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as List<ModAddView>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -926,7 +1010,8 @@ abstract class _$ModlogCopyWith<$Res> implements $ModlogCopyWith<$Res> {
       List<ModBanFromCommunityView> bannedFromCommunity,
       List<ModBanView> banned,
       List<ModAddCommunityView> addedToCommunity,
-      List<ModAddView> added});
+      List<ModAddView> added,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -949,6 +1034,7 @@ class __$ModlogCopyWithImpl<$Res> extends _$ModlogCopyWithImpl<$Res>
     Object? banned = freezed,
     Object? addedToCommunity = freezed,
     Object? added = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_Modlog(
       removedPosts: removedPosts == freezed
@@ -987,6 +1073,10 @@ class __$ModlogCopyWithImpl<$Res> extends _$ModlogCopyWithImpl<$Res>
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
               as List<ModAddView>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1004,7 +1094,8 @@ class _$_Modlog extends _Modlog {
       required this.bannedFromCommunity,
       required this.banned,
       required this.addedToCommunity,
-      required this.added})
+      required this.added,
+      required this.instanceHost})
       : super._();
 
   factory _$_Modlog.fromJson(Map<String, dynamic> json) =>
@@ -1028,10 +1119,12 @@ class _$_Modlog extends _Modlog {
   final List<ModAddCommunityView> addedToCommunity;
   @override
   final List<ModAddView> added;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, stickiedPosts: $stickiedPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, added: $added)';
+    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, stickiedPosts: $stickiedPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, added: $added, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1062,7 +1155,10 @@ class _$_Modlog extends _Modlog {
                 const DeepCollectionEquality()
                     .equals(other.addedToCommunity, addedToCommunity)) &&
             (identical(other.added, added) ||
-                const DeepCollectionEquality().equals(other.added, added)));
+                const DeepCollectionEquality().equals(other.added, added)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1076,7 +1172,8 @@ class _$_Modlog extends _Modlog {
       const DeepCollectionEquality().hash(bannedFromCommunity) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(addedToCommunity) ^
-      const DeepCollectionEquality().hash(added);
+      const DeepCollectionEquality().hash(added) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1099,7 +1196,8 @@ abstract class _Modlog extends Modlog {
       required List<ModBanFromCommunityView> bannedFromCommunity,
       required List<ModBanView> banned,
       required List<ModAddCommunityView> addedToCommunity,
-      required List<ModAddView> added}) = _$_Modlog;
+      required List<ModAddView> added,
+      required String instanceHost}) = _$_Modlog;
   _Modlog._() : super._();
 
   factory _Modlog.fromJson(Map<String, dynamic> json) = _$_Modlog.fromJson;
@@ -1129,6 +1227,8 @@ abstract class _Modlog extends Modlog {
   @override
   List<ModAddView> get added => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$ModlogCopyWith<_Modlog> get copyWith => throw _privateConstructorUsedError;
 }
@@ -1144,11 +1244,13 @@ class _$FullCommentViewTearOff {
   _FullCommentView call(
       {required CommentView commentView,
       required List<int> recipientIds,
-      String? formId}) {
+      String? formId,
+      required String instanceHost}) {
     return _FullCommentView(
       commentView: commentView,
       recipientIds: recipientIds,
       formId: formId,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1165,6 +1267,7 @@ mixin _$FullCommentView {
   CommentView get commentView => throw _privateConstructorUsedError;
   List<int> get recipientIds => throw _privateConstructorUsedError;
   String? get formId => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1177,7 +1280,11 @@ abstract class $FullCommentViewCopyWith<$Res> {
   factory $FullCommentViewCopyWith(
           FullCommentView value, $Res Function(FullCommentView) then) =
       _$FullCommentViewCopyWithImpl<$Res>;
-  $Res call({CommentView commentView, List<int> recipientIds, String? formId});
+  $Res call(
+      {CommentView commentView,
+      List<int> recipientIds,
+      String? formId,
+      String instanceHost});
 
   $CommentViewCopyWith<$Res> get commentView;
 }
@@ -1196,6 +1303,7 @@ class _$FullCommentViewCopyWithImpl<$Res>
     Object? commentView = freezed,
     Object? recipientIds = freezed,
     Object? formId = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       commentView: commentView == freezed
@@ -1210,6 +1318,10 @@ class _$FullCommentViewCopyWithImpl<$Res>
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -1228,7 +1340,11 @@ abstract class _$FullCommentViewCopyWith<$Res>
           _FullCommentView value, $Res Function(_FullCommentView) then) =
       __$FullCommentViewCopyWithImpl<$Res>;
   @override
-  $Res call({CommentView commentView, List<int> recipientIds, String? formId});
+  $Res call(
+      {CommentView commentView,
+      List<int> recipientIds,
+      String? formId,
+      String instanceHost});
 
   @override
   $CommentViewCopyWith<$Res> get commentView;
@@ -1250,6 +1366,7 @@ class __$FullCommentViewCopyWithImpl<$Res>
     Object? commentView = freezed,
     Object? recipientIds = freezed,
     Object? formId = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_FullCommentView(
       commentView: commentView == freezed
@@ -1264,6 +1381,10 @@ class __$FullCommentViewCopyWithImpl<$Res>
           ? _value.formId
           : formId // ignore: cast_nullable_to_non_nullable
               as String?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1273,7 +1394,10 @@ class __$FullCommentViewCopyWithImpl<$Res>
 /// @nodoc
 class _$_FullCommentView extends _FullCommentView {
   _$_FullCommentView(
-      {required this.commentView, required this.recipientIds, this.formId})
+      {required this.commentView,
+      required this.recipientIds,
+      this.formId,
+      required this.instanceHost})
       : super._();
 
   factory _$_FullCommentView.fromJson(Map<String, dynamic> json) =>
@@ -1285,10 +1409,12 @@ class _$_FullCommentView extends _FullCommentView {
   final List<int> recipientIds;
   @override
   final String? formId;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'FullCommentView(commentView: $commentView, recipientIds: $recipientIds, formId: $formId)';
+    return 'FullCommentView(commentView: $commentView, recipientIds: $recipientIds, formId: $formId, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1302,7 +1428,10 @@ class _$_FullCommentView extends _FullCommentView {
                 const DeepCollectionEquality()
                     .equals(other.recipientIds, recipientIds)) &&
             (identical(other.formId, formId) ||
-                const DeepCollectionEquality().equals(other.formId, formId)));
+                const DeepCollectionEquality().equals(other.formId, formId)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1310,7 +1439,8 @@ class _$_FullCommentView extends _FullCommentView {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(commentView) ^
       const DeepCollectionEquality().hash(recipientIds) ^
-      const DeepCollectionEquality().hash(formId);
+      const DeepCollectionEquality().hash(formId) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1327,7 +1457,8 @@ abstract class _FullCommentView extends FullCommentView {
   factory _FullCommentView(
       {required CommentView commentView,
       required List<int> recipientIds,
-      String? formId}) = _$_FullCommentView;
+      String? formId,
+      required String instanceHost}) = _$_FullCommentView;
   _FullCommentView._() : super._();
 
   factory _FullCommentView.fromJson(Map<String, dynamic> json) =
@@ -1339,6 +1470,8 @@ abstract class _FullCommentView extends FullCommentView {
   List<int> get recipientIds => throw _privateConstructorUsedError;
   @override
   String? get formId => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullCommentViewCopyWith<_FullCommentView> get copyWith =>
@@ -1360,7 +1493,8 @@ class _$FullSiteViewTearOff {
       required int online,
       required String version,
       LocalUserSettingsView? myUser,
-      FederatedInstances? federatedInstances}) {
+      FederatedInstances? federatedInstances,
+      required String instanceHost}) {
     return _FullSiteView(
       siteView: siteView,
       admins: admins,
@@ -1369,6 +1503,7 @@ class _$FullSiteViewTearOff {
       version: version,
       myUser: myUser,
       federatedInstances: federatedInstances,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1390,6 +1525,7 @@ mixin _$FullSiteView {
   LocalUserSettingsView? get myUser => throw _privateConstructorUsedError;
   FederatedInstances? get federatedInstances =>
       throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1409,7 +1545,8 @@ abstract class $FullSiteViewCopyWith<$Res> {
       int online,
       String version,
       LocalUserSettingsView? myUser,
-      FederatedInstances? federatedInstances});
+      FederatedInstances? federatedInstances,
+      String instanceHost});
 
   $SiteViewCopyWith<$Res>? get siteView;
   $LocalUserSettingsViewCopyWith<$Res>? get myUser;
@@ -1433,6 +1570,7 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
     Object? version = freezed,
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       siteView: siteView == freezed
@@ -1463,6 +1601,10 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
           ? _value.federatedInstances
           : federatedInstances // ignore: cast_nullable_to_non_nullable
               as FederatedInstances?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -1515,7 +1657,8 @@ abstract class _$FullSiteViewCopyWith<$Res>
       int online,
       String version,
       LocalUserSettingsView? myUser,
-      FederatedInstances? federatedInstances});
+      FederatedInstances? federatedInstances,
+      String instanceHost});
 
   @override
   $SiteViewCopyWith<$Res>? get siteView;
@@ -1544,6 +1687,7 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
     Object? version = freezed,
     Object? myUser = freezed,
     Object? federatedInstances = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_FullSiteView(
       siteView: siteView == freezed
@@ -1574,6 +1718,10 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
           ? _value.federatedInstances
           : federatedInstances // ignore: cast_nullable_to_non_nullable
               as FederatedInstances?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1589,7 +1737,8 @@ class _$_FullSiteView extends _FullSiteView {
       required this.online,
       required this.version,
       this.myUser,
-      this.federatedInstances})
+      this.federatedInstances,
+      required this.instanceHost})
       : super._();
 
   factory _$_FullSiteView.fromJson(Map<String, dynamic> json) =>
@@ -1609,10 +1758,12 @@ class _$_FullSiteView extends _FullSiteView {
   final LocalUserSettingsView? myUser;
   @override
   final FederatedInstances? federatedInstances;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'FullSiteView(siteView: $siteView, admins: $admins, banned: $banned, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances)';
+    return 'FullSiteView(siteView: $siteView, admins: $admins, banned: $banned, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1635,7 +1786,10 @@ class _$_FullSiteView extends _FullSiteView {
                 const DeepCollectionEquality().equals(other.myUser, myUser)) &&
             (identical(other.federatedInstances, federatedInstances) ||
                 const DeepCollectionEquality()
-                    .equals(other.federatedInstances, federatedInstances)));
+                    .equals(other.federatedInstances, federatedInstances)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1647,7 +1801,8 @@ class _$_FullSiteView extends _FullSiteView {
       const DeepCollectionEquality().hash(online) ^
       const DeepCollectionEquality().hash(version) ^
       const DeepCollectionEquality().hash(myUser) ^
-      const DeepCollectionEquality().hash(federatedInstances);
+      const DeepCollectionEquality().hash(federatedInstances) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1668,7 +1823,8 @@ abstract class _FullSiteView extends FullSiteView {
       required int online,
       required String version,
       LocalUserSettingsView? myUser,
-      FederatedInstances? federatedInstances}) = _$_FullSiteView;
+      FederatedInstances? federatedInstances,
+      required String instanceHost}) = _$_FullSiteView;
   _FullSiteView._() : super._();
 
   factory _FullSiteView.fromJson(Map<String, dynamic> json) =
@@ -1690,6 +1846,8 @@ abstract class _FullSiteView extends FullSiteView {
   FederatedInstances? get federatedInstances =>
       throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$FullSiteViewCopyWith<_FullSiteView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1706,11 +1864,13 @@ class _$FederatedInstancesTearOff {
   _FederatedInstances call(
       {required List<String> linked,
       List<String>? allowed,
-      List<String>? blocked}) {
+      List<String>? blocked,
+      required String instanceHost}) {
     return _FederatedInstances(
       linked: linked,
       allowed: allowed,
       blocked: blocked,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1727,6 +1887,7 @@ mixin _$FederatedInstances {
   List<String> get linked => throw _privateConstructorUsedError;
   List<String>? get allowed => throw _privateConstructorUsedError;
   List<String>? get blocked => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1740,7 +1901,10 @@ abstract class $FederatedInstancesCopyWith<$Res> {
           FederatedInstances value, $Res Function(FederatedInstances) then) =
       _$FederatedInstancesCopyWithImpl<$Res>;
   $Res call(
-      {List<String> linked, List<String>? allowed, List<String>? blocked});
+      {List<String> linked,
+      List<String>? allowed,
+      List<String>? blocked,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1757,6 +1921,7 @@ class _$FederatedInstancesCopyWithImpl<$Res>
     Object? linked = freezed,
     Object? allowed = freezed,
     Object? blocked = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       linked: linked == freezed
@@ -1771,6 +1936,10 @@ class _$FederatedInstancesCopyWithImpl<$Res>
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1783,7 +1952,10 @@ abstract class _$FederatedInstancesCopyWith<$Res>
       __$FederatedInstancesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<String> linked, List<String>? allowed, List<String>? blocked});
+      {List<String> linked,
+      List<String>? allowed,
+      List<String>? blocked,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1802,6 +1974,7 @@ class __$FederatedInstancesCopyWithImpl<$Res>
     Object? linked = freezed,
     Object? allowed = freezed,
     Object? blocked = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_FederatedInstances(
       linked: linked == freezed
@@ -1816,6 +1989,10 @@ class __$FederatedInstancesCopyWithImpl<$Res>
           ? _value.blocked
           : blocked // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1824,7 +2001,11 @@ class __$FederatedInstancesCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_FederatedInstances extends _FederatedInstances {
-  _$_FederatedInstances({required this.linked, this.allowed, this.blocked})
+  _$_FederatedInstances(
+      {required this.linked,
+      this.allowed,
+      this.blocked,
+      required this.instanceHost})
       : super._();
 
   factory _$_FederatedInstances.fromJson(Map<String, dynamic> json) =>
@@ -1836,10 +2017,12 @@ class _$_FederatedInstances extends _FederatedInstances {
   final List<String>? allowed;
   @override
   final List<String>? blocked;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'FederatedInstances(linked: $linked, allowed: $allowed, blocked: $blocked)';
+    return 'FederatedInstances(linked: $linked, allowed: $allowed, blocked: $blocked, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1852,7 +2035,11 @@ class _$_FederatedInstances extends _FederatedInstances {
                 const DeepCollectionEquality()
                     .equals(other.allowed, allowed)) &&
             (identical(other.blocked, blocked) ||
-                const DeepCollectionEquality().equals(other.blocked, blocked)));
+                const DeepCollectionEquality()
+                    .equals(other.blocked, blocked)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -1860,7 +2047,8 @@ class _$_FederatedInstances extends _FederatedInstances {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(linked) ^
       const DeepCollectionEquality().hash(allowed) ^
-      const DeepCollectionEquality().hash(blocked);
+      const DeepCollectionEquality().hash(blocked) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1877,7 +2065,8 @@ abstract class _FederatedInstances extends FederatedInstances {
   factory _FederatedInstances(
       {required List<String> linked,
       List<String>? allowed,
-      List<String>? blocked}) = _$_FederatedInstances;
+      List<String>? blocked,
+      required String instanceHost}) = _$_FederatedInstances;
   _FederatedInstances._() : super._();
 
   factory _FederatedInstances.fromJson(Map<String, dynamic> json) =
@@ -1889,6 +2078,8 @@ abstract class _FederatedInstances extends FederatedInstances {
   List<String>? get allowed => throw _privateConstructorUsedError;
   @override
   List<String>? get blocked => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FederatedInstancesCopyWith<_FederatedInstances> get copyWith =>
@@ -2102,13 +2293,15 @@ class _$FullPersonViewTearOff {
       required List<CommunityFollowerView> follows,
       required List<CommunityModeratorView> moderates,
       required List<CommentView> comments,
-      required List<PostView> posts}) {
+      required List<PostView> posts,
+      required String instanceHost}) {
     return _FullPersonView(
       personView: personView,
       follows: follows,
       moderates: moderates,
       comments: comments,
       posts: posts,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2128,6 +2321,7 @@ mixin _$FullPersonView {
       throw _privateConstructorUsedError;
   List<CommentView> get comments => throw _privateConstructorUsedError;
   List<PostView> get posts => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2145,7 +2339,8 @@ abstract class $FullPersonViewCopyWith<$Res> {
       List<CommunityFollowerView> follows,
       List<CommunityModeratorView> moderates,
       List<CommentView> comments,
-      List<PostView> posts});
+      List<PostView> posts,
+      String instanceHost});
 
   $PersonViewSafeCopyWith<$Res> get personView;
 }
@@ -2166,6 +2361,7 @@ class _$FullPersonViewCopyWithImpl<$Res>
     Object? moderates = freezed,
     Object? comments = freezed,
     Object? posts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       personView: personView == freezed
@@ -2188,6 +2384,10 @@ class _$FullPersonViewCopyWithImpl<$Res>
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<PostView>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -2211,7 +2411,8 @@ abstract class _$FullPersonViewCopyWith<$Res>
       List<CommunityFollowerView> follows,
       List<CommunityModeratorView> moderates,
       List<CommentView> comments,
-      List<PostView> posts});
+      List<PostView> posts,
+      String instanceHost});
 
   @override
   $PersonViewSafeCopyWith<$Res> get personView;
@@ -2235,6 +2436,7 @@ class __$FullPersonViewCopyWithImpl<$Res>
     Object? moderates = freezed,
     Object? comments = freezed,
     Object? posts = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_FullPersonView(
       personView: personView == freezed
@@ -2257,6 +2459,10 @@ class __$FullPersonViewCopyWithImpl<$Res>
           ? _value.posts
           : posts // ignore: cast_nullable_to_non_nullable
               as List<PostView>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2270,7 +2476,8 @@ class _$_FullPersonView extends _FullPersonView {
       required this.follows,
       required this.moderates,
       required this.comments,
-      required this.posts})
+      required this.posts,
+      required this.instanceHost})
       : super._();
 
   factory _$_FullPersonView.fromJson(Map<String, dynamic> json) =>
@@ -2286,10 +2493,12 @@ class _$_FullPersonView extends _FullPersonView {
   final List<CommentView> comments;
   @override
   final List<PostView> posts;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'FullPersonView(personView: $personView, follows: $follows, moderates: $moderates, comments: $comments, posts: $posts)';
+    return 'FullPersonView(personView: $personView, follows: $follows, moderates: $moderates, comments: $comments, posts: $posts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2309,7 +2518,10 @@ class _$_FullPersonView extends _FullPersonView {
                 const DeepCollectionEquality()
                     .equals(other.comments, comments)) &&
             (identical(other.posts, posts) ||
-                const DeepCollectionEquality().equals(other.posts, posts)));
+                const DeepCollectionEquality().equals(other.posts, posts)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2319,7 +2531,8 @@ class _$_FullPersonView extends _FullPersonView {
       const DeepCollectionEquality().hash(follows) ^
       const DeepCollectionEquality().hash(moderates) ^
       const DeepCollectionEquality().hash(comments) ^
-      const DeepCollectionEquality().hash(posts);
+      const DeepCollectionEquality().hash(posts) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2338,7 +2551,8 @@ abstract class _FullPersonView extends FullPersonView {
       required List<CommunityFollowerView> follows,
       required List<CommunityModeratorView> moderates,
       required List<CommentView> comments,
-      required List<PostView> posts}) = _$_FullPersonView;
+      required List<PostView> posts,
+      required String instanceHost}) = _$_FullPersonView;
   _FullPersonView._() : super._();
 
   factory _FullPersonView.fromJson(Map<String, dynamic> json) =
@@ -2356,6 +2570,8 @@ abstract class _FullPersonView extends FullPersonView {
   @override
   List<PostView> get posts => throw _privateConstructorUsedError;
   @override
+  String get instanceHost => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$FullPersonViewCopyWith<_FullPersonView> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2370,10 +2586,13 @@ class _$BannedCommunityUserTearOff {
   const _$BannedCommunityUserTearOff();
 
   _BannedCommunityUser call(
-      {required PersonViewSafe personView, required bool banned}) {
+      {required PersonViewSafe personView,
+      required bool banned,
+      required String instanceHost}) {
     return _BannedCommunityUser(
       personView: personView,
       banned: banned,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2389,6 +2608,7 @@ const $BannedCommunityUser = _$BannedCommunityUserTearOff();
 mixin _$BannedCommunityUser {
   PersonViewSafe get personView => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2401,7 +2621,7 @@ abstract class $BannedCommunityUserCopyWith<$Res> {
   factory $BannedCommunityUserCopyWith(
           BannedCommunityUser value, $Res Function(BannedCommunityUser) then) =
       _$BannedCommunityUserCopyWithImpl<$Res>;
-  $Res call({PersonViewSafe personView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   $PersonViewSafeCopyWith<$Res> get personView;
 }
@@ -2419,6 +2639,7 @@ class _$BannedCommunityUserCopyWithImpl<$Res>
   $Res call({
     Object? personView = freezed,
     Object? banned = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       personView: personView == freezed
@@ -2429,6 +2650,10 @@ class _$BannedCommunityUserCopyWithImpl<$Res>
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -2447,7 +2672,7 @@ abstract class _$BannedCommunityUserCopyWith<$Res>
           $Res Function(_BannedCommunityUser) then) =
       __$BannedCommunityUserCopyWithImpl<$Res>;
   @override
-  $Res call({PersonViewSafe personView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   @override
   $PersonViewSafeCopyWith<$Res> get personView;
@@ -2468,6 +2693,7 @@ class __$BannedCommunityUserCopyWithImpl<$Res>
   $Res call({
     Object? personView = freezed,
     Object? banned = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_BannedCommunityUser(
       personView: personView == freezed
@@ -2478,6 +2704,10 @@ class __$BannedCommunityUserCopyWithImpl<$Res>
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2486,7 +2716,10 @@ class __$BannedCommunityUserCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_BannedCommunityUser extends _BannedCommunityUser {
-  _$_BannedCommunityUser({required this.personView, required this.banned})
+  _$_BannedCommunityUser(
+      {required this.personView,
+      required this.banned,
+      required this.instanceHost})
       : super._();
 
   factory _$_BannedCommunityUser.fromJson(Map<String, dynamic> json) =>
@@ -2496,10 +2729,12 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
   final PersonViewSafe personView;
   @override
   final bool banned;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'BannedCommunityUser(personView: $personView, banned: $banned)';
+    return 'BannedCommunityUser(personView: $personView, banned: $banned, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2510,14 +2745,18 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
                 const DeepCollectionEquality()
                     .equals(other.personView, personView)) &&
             (identical(other.banned, banned) ||
-                const DeepCollectionEquality().equals(other.banned, banned)));
+                const DeepCollectionEquality().equals(other.banned, banned)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(personView) ^
-      const DeepCollectionEquality().hash(banned);
+      const DeepCollectionEquality().hash(banned) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2534,7 +2773,8 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
 abstract class _BannedCommunityUser extends BannedCommunityUser {
   factory _BannedCommunityUser(
       {required PersonViewSafe personView,
-      required bool banned}) = _$_BannedCommunityUser;
+      required bool banned,
+      required String instanceHost}) = _$_BannedCommunityUser;
   _BannedCommunityUser._() : super._();
 
   factory _BannedCommunityUser.fromJson(Map<String, dynamic> json) =
@@ -2544,6 +2784,8 @@ abstract class _BannedCommunityUser extends BannedCommunityUser {
   PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
   bool get banned => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BannedCommunityUserCopyWith<_BannedCommunityUser> get copyWith =>
@@ -2559,10 +2801,13 @@ class _$BannedPersonTearOff {
   const _$BannedPersonTearOff();
 
   _BannedPerson call(
-      {required PersonViewSafe personView, required bool banned}) {
+      {required PersonViewSafe personView,
+      required bool banned,
+      required String instanceHost}) {
     return _BannedPerson(
       personView: personView,
       banned: banned,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2578,6 +2823,7 @@ const $BannedPerson = _$BannedPersonTearOff();
 mixin _$BannedPerson {
   PersonViewSafe get personView => throw _privateConstructorUsedError;
   bool get banned => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2590,7 +2836,7 @@ abstract class $BannedPersonCopyWith<$Res> {
   factory $BannedPersonCopyWith(
           BannedPerson value, $Res Function(BannedPerson) then) =
       _$BannedPersonCopyWithImpl<$Res>;
-  $Res call({PersonViewSafe personView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   $PersonViewSafeCopyWith<$Res> get personView;
 }
@@ -2607,6 +2853,7 @@ class _$BannedPersonCopyWithImpl<$Res> implements $BannedPersonCopyWith<$Res> {
   $Res call({
     Object? personView = freezed,
     Object? banned = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       personView: personView == freezed
@@ -2617,6 +2864,10 @@ class _$BannedPersonCopyWithImpl<$Res> implements $BannedPersonCopyWith<$Res> {
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 
@@ -2635,7 +2886,7 @@ abstract class _$BannedPersonCopyWith<$Res>
           _BannedPerson value, $Res Function(_BannedPerson) then) =
       __$BannedPersonCopyWithImpl<$Res>;
   @override
-  $Res call({PersonViewSafe personView, bool banned});
+  $Res call({PersonViewSafe personView, bool banned, String instanceHost});
 
   @override
   $PersonViewSafeCopyWith<$Res> get personView;
@@ -2655,6 +2906,7 @@ class __$BannedPersonCopyWithImpl<$Res> extends _$BannedPersonCopyWithImpl<$Res>
   $Res call({
     Object? personView = freezed,
     Object? banned = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_BannedPerson(
       personView: personView == freezed
@@ -2665,6 +2917,10 @@ class __$BannedPersonCopyWithImpl<$Res> extends _$BannedPersonCopyWithImpl<$Res>
           ? _value.banned
           : banned // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2673,7 +2929,11 @@ class __$BannedPersonCopyWithImpl<$Res> extends _$BannedPersonCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_BannedPerson extends _BannedPerson {
-  _$_BannedPerson({required this.personView, required this.banned}) : super._();
+  _$_BannedPerson(
+      {required this.personView,
+      required this.banned,
+      required this.instanceHost})
+      : super._();
 
   factory _$_BannedPerson.fromJson(Map<String, dynamic> json) =>
       _$_$_BannedPersonFromJson(json);
@@ -2682,10 +2942,12 @@ class _$_BannedPerson extends _BannedPerson {
   final PersonViewSafe personView;
   @override
   final bool banned;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'BannedPerson(personView: $personView, banned: $banned)';
+    return 'BannedPerson(personView: $personView, banned: $banned, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2696,14 +2958,18 @@ class _$_BannedPerson extends _BannedPerson {
                 const DeepCollectionEquality()
                     .equals(other.personView, personView)) &&
             (identical(other.banned, banned) ||
-                const DeepCollectionEquality().equals(other.banned, banned)));
+                const DeepCollectionEquality().equals(other.banned, banned)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(personView) ^
-      const DeepCollectionEquality().hash(banned);
+      const DeepCollectionEquality().hash(banned) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2719,7 +2985,8 @@ class _$_BannedPerson extends _BannedPerson {
 abstract class _BannedPerson extends BannedPerson {
   factory _BannedPerson(
       {required PersonViewSafe personView,
-      required bool banned}) = _$_BannedPerson;
+      required bool banned,
+      required String instanceHost}) = _$_BannedPerson;
   _BannedPerson._() : super._();
 
   factory _BannedPerson.fromJson(Map<String, dynamic> json) =
@@ -2729,6 +2996,8 @@ abstract class _BannedPerson extends BannedPerson {
   PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
   bool get banned => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BannedPersonCopyWith<_BannedPerson> get copyWith =>
@@ -2745,11 +3014,15 @@ class _$GetReportCountResponseTearOff {
   const _$GetReportCountResponseTearOff();
 
   _GetReportCountResponse call(
-      {int? community, required int commentReports, required int postReports}) {
+      {int? community,
+      required int commentReports,
+      required int postReports,
+      required String instanceHost}) {
     return _GetReportCountResponse(
       community: community,
       commentReports: commentReports,
       postReports: postReports,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2766,6 +3039,7 @@ mixin _$GetReportCountResponse {
   int? get community => throw _privateConstructorUsedError;
   int get commentReports => throw _privateConstructorUsedError;
   int get postReports => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2778,7 +3052,11 @@ abstract class $GetReportCountResponseCopyWith<$Res> {
   factory $GetReportCountResponseCopyWith(GetReportCountResponse value,
           $Res Function(GetReportCountResponse) then) =
       _$GetReportCountResponseCopyWithImpl<$Res>;
-  $Res call({int? community, int commentReports, int postReports});
+  $Res call(
+      {int? community,
+      int commentReports,
+      int postReports,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -2795,6 +3073,7 @@ class _$GetReportCountResponseCopyWithImpl<$Res>
     Object? community = freezed,
     Object? commentReports = freezed,
     Object? postReports = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       community: community == freezed
@@ -2809,6 +3088,10 @@ class _$GetReportCountResponseCopyWithImpl<$Res>
           ? _value.postReports
           : postReports // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2820,7 +3103,11 @@ abstract class _$GetReportCountResponseCopyWith<$Res>
           $Res Function(_GetReportCountResponse) then) =
       __$GetReportCountResponseCopyWithImpl<$Res>;
   @override
-  $Res call({int? community, int commentReports, int postReports});
+  $Res call(
+      {int? community,
+      int commentReports,
+      int postReports,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -2839,6 +3126,7 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
     Object? community = freezed,
     Object? commentReports = freezed,
     Object? postReports = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_GetReportCountResponse(
       community: community == freezed
@@ -2853,6 +3141,10 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
           ? _value.postReports
           : postReports // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -2862,7 +3154,10 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_GetReportCountResponse extends _GetReportCountResponse {
   _$_GetReportCountResponse(
-      {this.community, required this.commentReports, required this.postReports})
+      {this.community,
+      required this.commentReports,
+      required this.postReports,
+      required this.instanceHost})
       : super._();
 
   factory _$_GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
@@ -2874,10 +3169,12 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
   final int commentReports;
   @override
   final int postReports;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'GetReportCountResponse(community: $community, commentReports: $commentReports, postReports: $postReports)';
+    return 'GetReportCountResponse(community: $community, commentReports: $commentReports, postReports: $postReports, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2892,7 +3189,10 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
                     .equals(other.commentReports, commentReports)) &&
             (identical(other.postReports, postReports) ||
                 const DeepCollectionEquality()
-                    .equals(other.postReports, postReports)));
+                    .equals(other.postReports, postReports)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
@@ -2900,7 +3200,8 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(community) ^
       const DeepCollectionEquality().hash(commentReports) ^
-      const DeepCollectionEquality().hash(postReports);
+      const DeepCollectionEquality().hash(postReports) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2918,7 +3219,8 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   factory _GetReportCountResponse(
       {int? community,
       required int commentReports,
-      required int postReports}) = _$_GetReportCountResponse;
+      required int postReports,
+      required String instanceHost}) = _$_GetReportCountResponse;
   _GetReportCountResponse._() : super._();
 
   factory _GetReportCountResponse.fromJson(Map<String, dynamic> json) =
@@ -2930,6 +3232,8 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   int get commentReports => throw _privateConstructorUsedError;
   @override
   int get postReports => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetReportCountResponseCopyWith<_GetReportCountResponse> get copyWith =>
@@ -2946,10 +3250,13 @@ class _$ResolveCommentReportResponseTearOff {
   const _$ResolveCommentReportResponseTearOff();
 
   _ResolveCommentReportResponse call(
-      {required int reportId, required bool resolved}) {
+      {required int reportId,
+      required bool resolved,
+      required String instanceHost}) {
     return _ResolveCommentReportResponse(
       reportId: reportId,
       resolved: resolved,
+      instanceHost: instanceHost,
     );
   }
 
@@ -2965,6 +3272,7 @@ const $ResolveCommentReportResponse = _$ResolveCommentReportResponseTearOff();
 mixin _$ResolveCommentReportResponse {
   int get reportId => throw _privateConstructorUsedError;
   bool get resolved => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2978,7 +3286,7 @@ abstract class $ResolveCommentReportResponseCopyWith<$Res> {
           ResolveCommentReportResponse value,
           $Res Function(ResolveCommentReportResponse) then) =
       _$ResolveCommentReportResponseCopyWithImpl<$Res>;
-  $Res call({int reportId, bool resolved});
+  $Res call({int reportId, bool resolved, String instanceHost});
 }
 
 /// @nodoc
@@ -2994,6 +3302,7 @@ class _$ResolveCommentReportResponseCopyWithImpl<$Res>
   $Res call({
     Object? reportId = freezed,
     Object? resolved = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       reportId: reportId == freezed
@@ -3004,6 +3313,10 @@ class _$ResolveCommentReportResponseCopyWithImpl<$Res>
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3016,7 +3329,7 @@ abstract class _$ResolveCommentReportResponseCopyWith<$Res>
           $Res Function(_ResolveCommentReportResponse) then) =
       __$ResolveCommentReportResponseCopyWithImpl<$Res>;
   @override
-  $Res call({int reportId, bool resolved});
+  $Res call({int reportId, bool resolved, String instanceHost});
 }
 
 /// @nodoc
@@ -3036,6 +3349,7 @@ class __$ResolveCommentReportResponseCopyWithImpl<$Res>
   $Res call({
     Object? reportId = freezed,
     Object? resolved = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ResolveCommentReportResponse(
       reportId: reportId == freezed
@@ -3046,6 +3360,10 @@ class __$ResolveCommentReportResponseCopyWithImpl<$Res>
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3055,7 +3373,9 @@ class __$ResolveCommentReportResponseCopyWithImpl<$Res>
 /// @nodoc
 class _$_ResolveCommentReportResponse extends _ResolveCommentReportResponse {
   _$_ResolveCommentReportResponse(
-      {required this.reportId, required this.resolved})
+      {required this.reportId,
+      required this.resolved,
+      required this.instanceHost})
       : super._();
 
   factory _$_ResolveCommentReportResponse.fromJson(Map<String, dynamic> json) =>
@@ -3065,10 +3385,12 @@ class _$_ResolveCommentReportResponse extends _ResolveCommentReportResponse {
   final int reportId;
   @override
   final bool resolved;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ResolveCommentReportResponse(reportId: $reportId, resolved: $resolved)';
+    return 'ResolveCommentReportResponse(reportId: $reportId, resolved: $resolved, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3080,14 +3402,18 @@ class _$_ResolveCommentReportResponse extends _ResolveCommentReportResponse {
                     .equals(other.reportId, reportId)) &&
             (identical(other.resolved, resolved) ||
                 const DeepCollectionEquality()
-                    .equals(other.resolved, resolved)));
+                    .equals(other.resolved, resolved)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(reportId) ^
-      const DeepCollectionEquality().hash(resolved);
+      const DeepCollectionEquality().hash(resolved) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3105,7 +3431,8 @@ abstract class _ResolveCommentReportResponse
     extends ResolveCommentReportResponse {
   factory _ResolveCommentReportResponse(
       {required int reportId,
-      required bool resolved}) = _$_ResolveCommentReportResponse;
+      required bool resolved,
+      required String instanceHost}) = _$_ResolveCommentReportResponse;
   _ResolveCommentReportResponse._() : super._();
 
   factory _ResolveCommentReportResponse.fromJson(Map<String, dynamic> json) =
@@ -3115,6 +3442,8 @@ abstract class _ResolveCommentReportResponse
   int get reportId => throw _privateConstructorUsedError;
   @override
   bool get resolved => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ResolveCommentReportResponseCopyWith<_ResolveCommentReportResponse>
@@ -3131,10 +3460,13 @@ class _$ResolvePostReportResponseTearOff {
   const _$ResolvePostReportResponseTearOff();
 
   _ResolvePostReportResponse call(
-      {required int reportId, required bool resolved}) {
+      {required int reportId,
+      required bool resolved,
+      required String instanceHost}) {
     return _ResolvePostReportResponse(
       reportId: reportId,
       resolved: resolved,
+      instanceHost: instanceHost,
     );
   }
 
@@ -3150,6 +3482,7 @@ const $ResolvePostReportResponse = _$ResolvePostReportResponseTearOff();
 mixin _$ResolvePostReportResponse {
   int get reportId => throw _privateConstructorUsedError;
   bool get resolved => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3162,7 +3495,7 @@ abstract class $ResolvePostReportResponseCopyWith<$Res> {
   factory $ResolvePostReportResponseCopyWith(ResolvePostReportResponse value,
           $Res Function(ResolvePostReportResponse) then) =
       _$ResolvePostReportResponseCopyWithImpl<$Res>;
-  $Res call({int reportId, bool resolved});
+  $Res call({int reportId, bool resolved, String instanceHost});
 }
 
 /// @nodoc
@@ -3178,6 +3511,7 @@ class _$ResolvePostReportResponseCopyWithImpl<$Res>
   $Res call({
     Object? reportId = freezed,
     Object? resolved = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       reportId: reportId == freezed
@@ -3188,6 +3522,10 @@ class _$ResolvePostReportResponseCopyWithImpl<$Res>
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3199,7 +3537,7 @@ abstract class _$ResolvePostReportResponseCopyWith<$Res>
           $Res Function(_ResolvePostReportResponse) then) =
       __$ResolvePostReportResponseCopyWithImpl<$Res>;
   @override
-  $Res call({int reportId, bool resolved});
+  $Res call({int reportId, bool resolved, String instanceHost});
 }
 
 /// @nodoc
@@ -3218,6 +3556,7 @@ class __$ResolvePostReportResponseCopyWithImpl<$Res>
   $Res call({
     Object? reportId = freezed,
     Object? resolved = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_ResolvePostReportResponse(
       reportId: reportId == freezed
@@ -3228,6 +3567,10 @@ class __$ResolvePostReportResponseCopyWithImpl<$Res>
           ? _value.resolved
           : resolved // ignore: cast_nullable_to_non_nullable
               as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -3236,7 +3579,10 @@ class __$ResolvePostReportResponseCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ResolvePostReportResponse extends _ResolvePostReportResponse {
-  _$_ResolvePostReportResponse({required this.reportId, required this.resolved})
+  _$_ResolvePostReportResponse(
+      {required this.reportId,
+      required this.resolved,
+      required this.instanceHost})
       : super._();
 
   factory _$_ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =>
@@ -3246,10 +3592,12 @@ class _$_ResolvePostReportResponse extends _ResolvePostReportResponse {
   final int reportId;
   @override
   final bool resolved;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'ResolvePostReportResponse(reportId: $reportId, resolved: $resolved)';
+    return 'ResolvePostReportResponse(reportId: $reportId, resolved: $resolved, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3261,14 +3609,18 @@ class _$_ResolvePostReportResponse extends _ResolvePostReportResponse {
                     .equals(other.reportId, reportId)) &&
             (identical(other.resolved, resolved) ||
                 const DeepCollectionEquality()
-                    .equals(other.resolved, resolved)));
+                    .equals(other.resolved, resolved)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(reportId) ^
-      const DeepCollectionEquality().hash(resolved);
+      const DeepCollectionEquality().hash(resolved) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3286,7 +3638,8 @@ class _$_ResolvePostReportResponse extends _ResolvePostReportResponse {
 abstract class _ResolvePostReportResponse extends ResolvePostReportResponse {
   factory _ResolvePostReportResponse(
       {required int reportId,
-      required bool resolved}) = _$_ResolvePostReportResponse;
+      required bool resolved,
+      required String instanceHost}) = _$_ResolvePostReportResponse;
   _ResolvePostReportResponse._() : super._();
 
   factory _ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =
@@ -3296,6 +3649,8 @@ abstract class _ResolvePostReportResponse extends ResolvePostReportResponse {
   int get reportId => throw _privateConstructorUsedError;
   @override
   bool get resolved => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ResolvePostReportResponseCopyWith<_ResolvePostReportResponse>

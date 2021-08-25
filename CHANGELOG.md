@@ -4,6 +4,10 @@
 
 - Add show post notifs option
 
+### Changed
+
+- Models with `instanceHost` now take it explicitly in the constructor
+
 ## v0.15.0 - 2021-04-27
 
 ### Added

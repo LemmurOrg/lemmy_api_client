@@ -26,12 +26,13 @@ _$_PictrsUpload _$_$_PictrsUploadFromJson(Map<String, dynamic> json) {
     files: (json['files'] as List<dynamic>)
         .map((e) => PictrsUploadFile.fromJson(e as Map<String, dynamic>))
         .toList(),
-  )..instanceHost = json['instance_host'] as String;
+    instanceHost: json['instance_host'] as String,
+  );
 }
 
 Map<String, dynamic> _$_$_PictrsUploadToJson(_$_PictrsUpload instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'msg': instance.msg,
       'files': instance.files.map((e) => e.toJson()).toList(),
+      'instance_host': instance.instanceHost,
     };

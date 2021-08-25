@@ -196,10 +196,13 @@ class _$PictrsUploadTearOff {
   const _$PictrsUploadTearOff();
 
   _PictrsUpload call(
-      {required String msg, required List<PictrsUploadFile> files}) {
+      {required String msg,
+      required List<PictrsUploadFile> files,
+      required String instanceHost}) {
     return _PictrsUpload(
       msg: msg,
       files: files,
+      instanceHost: instanceHost,
     );
   }
 
@@ -215,6 +218,7 @@ const $PictrsUpload = _$PictrsUploadTearOff();
 mixin _$PictrsUpload {
   String get msg => throw _privateConstructorUsedError;
   List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -227,7 +231,7 @@ abstract class $PictrsUploadCopyWith<$Res> {
   factory $PictrsUploadCopyWith(
           PictrsUpload value, $Res Function(PictrsUpload) then) =
       _$PictrsUploadCopyWithImpl<$Res>;
-  $Res call({String msg, List<PictrsUploadFile> files});
+  $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
 
 /// @nodoc
@@ -242,6 +246,7 @@ class _$PictrsUploadCopyWithImpl<$Res> implements $PictrsUploadCopyWith<$Res> {
   $Res call({
     Object? msg = freezed,
     Object? files = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       msg: msg == freezed
@@ -252,6 +257,10 @@ class _$PictrsUploadCopyWithImpl<$Res> implements $PictrsUploadCopyWith<$Res> {
           ? _value.files
           : files // ignore: cast_nullable_to_non_nullable
               as List<PictrsUploadFile>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -263,7 +272,7 @@ abstract class _$PictrsUploadCopyWith<$Res>
           _PictrsUpload value, $Res Function(_PictrsUpload) then) =
       __$PictrsUploadCopyWithImpl<$Res>;
   @override
-  $Res call({String msg, List<PictrsUploadFile> files});
+  $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
 
 /// @nodoc
@@ -280,6 +289,7 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
   $Res call({
     Object? msg = freezed,
     Object? files = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_PictrsUpload(
       msg: msg == freezed
@@ -290,6 +300,10 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
           ? _value.files
           : files // ignore: cast_nullable_to_non_nullable
               as List<PictrsUploadFile>,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -298,7 +312,9 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PictrsUpload extends _PictrsUpload {
-  _$_PictrsUpload({required this.msg, required this.files}) : super._();
+  _$_PictrsUpload(
+      {required this.msg, required this.files, required this.instanceHost})
+      : super._();
 
   factory _$_PictrsUpload.fromJson(Map<String, dynamic> json) =>
       _$_$_PictrsUploadFromJson(json);
@@ -307,10 +323,12 @@ class _$_PictrsUpload extends _PictrsUpload {
   final String msg;
   @override
   final List<PictrsUploadFile> files;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'PictrsUpload(msg: $msg, files: $files)';
+    return 'PictrsUpload(msg: $msg, files: $files, instanceHost: $instanceHost)';
   }
 
   @override
@@ -320,14 +338,18 @@ class _$_PictrsUpload extends _PictrsUpload {
             (identical(other.msg, msg) ||
                 const DeepCollectionEquality().equals(other.msg, msg)) &&
             (identical(other.files, files) ||
-                const DeepCollectionEquality().equals(other.files, files)));
+                const DeepCollectionEquality().equals(other.files, files)) &&
+            (identical(other.instanceHost, instanceHost) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceHost, instanceHost)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(msg) ^
-      const DeepCollectionEquality().hash(files);
+      const DeepCollectionEquality().hash(files) ^
+      const DeepCollectionEquality().hash(instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -343,7 +365,8 @@ class _$_PictrsUpload extends _PictrsUpload {
 abstract class _PictrsUpload extends PictrsUpload {
   factory _PictrsUpload(
       {required String msg,
-      required List<PictrsUploadFile> files}) = _$_PictrsUpload;
+      required List<PictrsUploadFile> files,
+      required String instanceHost}) = _$_PictrsUpload;
   _PictrsUpload._() : super._();
 
   factory _PictrsUpload.fromJson(Map<String, dynamic> json) =
@@ -353,6 +376,8 @@ abstract class _PictrsUpload extends PictrsUpload {
   String get msg => throw _privateConstructorUsedError;
   @override
   List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
+  @override
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>

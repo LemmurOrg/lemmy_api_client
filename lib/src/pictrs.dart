@@ -4,14 +4,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
 
 import 'exceptions.dart';
-import 'utils/with_instance_host.dart';
+import 'utils/response_ok.dart';
 
 part 'pictrs.freezed.dart';
 part 'pictrs.g.dart';
-
-extension on http.Response {
-  bool get ok => statusCode >= 200 && statusCode < 300;
-}
 
 class PictrsApi {
   final String host;
@@ -68,11 +64,12 @@ class PictrsUploadFile with _$PictrsUploadFile {
 }
 
 @freezed
-class PictrsUpload extends WithInstanceHost with _$PictrsUpload {
+class PictrsUpload with _$PictrsUpload {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory PictrsUpload({
     required String msg,
     required List<PictrsUploadFile> files,
+    required String instanceHost,
   }) = _PictrsUpload;
 
   PictrsUpload._();
