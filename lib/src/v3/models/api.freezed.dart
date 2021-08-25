@@ -3004,6 +3004,295 @@ abstract class _BannedPerson extends BannedPerson {
       throw _privateConstructorUsedError;
 }
 
+ResolveObjectResponse _$ResolveObjectResponseFromJson(
+    Map<String, dynamic> json) {
+  return _ResolveObjectResponse.fromJson(json);
+}
+
+/// @nodoc
+class _$ResolveObjectResponseTearOff {
+  const _$ResolveObjectResponseTearOff();
+
+  _ResolveObjectResponse call(
+      {CommentView? comment,
+      PostView? post,
+      CommunityView? community,
+      PersonViewSafe? person}) {
+    return _ResolveObjectResponse(
+      comment: comment,
+      post: post,
+      community: community,
+      person: person,
+    );
+  }
+
+  ResolveObjectResponse fromJson(Map<String, Object> json) {
+    return ResolveObjectResponse.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ResolveObjectResponse = _$ResolveObjectResponseTearOff();
+
+/// @nodoc
+mixin _$ResolveObjectResponse {
+  CommentView? get comment => throw _privateConstructorUsedError;
+  PostView? get post => throw _privateConstructorUsedError;
+  CommunityView? get community => throw _privateConstructorUsedError;
+  PersonViewSafe? get person => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResolveObjectResponseCopyWith<ResolveObjectResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ResolveObjectResponseCopyWith<$Res> {
+  factory $ResolveObjectResponseCopyWith(ResolveObjectResponse value,
+          $Res Function(ResolveObjectResponse) then) =
+      _$ResolveObjectResponseCopyWithImpl<$Res>;
+  $Res call(
+      {CommentView? comment,
+      PostView? post,
+      CommunityView? community,
+      PersonViewSafe? person});
+
+  $CommentViewCopyWith<$Res>? get comment;
+  $PostViewCopyWith<$Res>? get post;
+  $CommunityViewCopyWith<$Res>? get community;
+  $PersonViewSafeCopyWith<$Res>? get person;
+}
+
+/// @nodoc
+class _$ResolveObjectResponseCopyWithImpl<$Res>
+    implements $ResolveObjectResponseCopyWith<$Res> {
+  _$ResolveObjectResponseCopyWithImpl(this._value, this._then);
+
+  final ResolveObjectResponse _value;
+  // ignore: unused_field
+  final $Res Function(ResolveObjectResponse) _then;
+
+  @override
+  $Res call({
+    Object? comment = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? person = freezed,
+  }) {
+    return _then(_value.copyWith(
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as CommentView?,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as PostView?,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunityView?,
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe?,
+    ));
+  }
+
+  @override
+  $CommentViewCopyWith<$Res>? get comment {
+    if (_value.comment == null) {
+      return null;
+    }
+
+    return $CommentViewCopyWith<$Res>(_value.comment!, (value) {
+      return _then(_value.copyWith(comment: value));
+    });
+  }
+
+  @override
+  $PostViewCopyWith<$Res>? get post {
+    if (_value.post == null) {
+      return null;
+    }
+
+    return $PostViewCopyWith<$Res>(_value.post!, (value) {
+      return _then(_value.copyWith(post: value));
+    });
+  }
+
+  @override
+  $CommunityViewCopyWith<$Res>? get community {
+    if (_value.community == null) {
+      return null;
+    }
+
+    return $CommunityViewCopyWith<$Res>(_value.community!, (value) {
+      return _then(_value.copyWith(community: value));
+    });
+  }
+
+  @override
+  $PersonViewSafeCopyWith<$Res>? get person {
+    if (_value.person == null) {
+      return null;
+    }
+
+    return $PersonViewSafeCopyWith<$Res>(_value.person!, (value) {
+      return _then(_value.copyWith(person: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ResolveObjectResponseCopyWith<$Res>
+    implements $ResolveObjectResponseCopyWith<$Res> {
+  factory _$ResolveObjectResponseCopyWith(_ResolveObjectResponse value,
+          $Res Function(_ResolveObjectResponse) then) =
+      __$ResolveObjectResponseCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {CommentView? comment,
+      PostView? post,
+      CommunityView? community,
+      PersonViewSafe? person});
+
+  @override
+  $CommentViewCopyWith<$Res>? get comment;
+  @override
+  $PostViewCopyWith<$Res>? get post;
+  @override
+  $CommunityViewCopyWith<$Res>? get community;
+  @override
+  $PersonViewSafeCopyWith<$Res>? get person;
+}
+
+/// @nodoc
+class __$ResolveObjectResponseCopyWithImpl<$Res>
+    extends _$ResolveObjectResponseCopyWithImpl<$Res>
+    implements _$ResolveObjectResponseCopyWith<$Res> {
+  __$ResolveObjectResponseCopyWithImpl(_ResolveObjectResponse _value,
+      $Res Function(_ResolveObjectResponse) _then)
+      : super(_value, (v) => _then(v as _ResolveObjectResponse));
+
+  @override
+  _ResolveObjectResponse get _value => super._value as _ResolveObjectResponse;
+
+  @override
+  $Res call({
+    Object? comment = freezed,
+    Object? post = freezed,
+    Object? community = freezed,
+    Object? person = freezed,
+  }) {
+    return _then(_ResolveObjectResponse(
+      comment: comment == freezed
+          ? _value.comment
+          : comment // ignore: cast_nullable_to_non_nullable
+              as CommentView?,
+      post: post == freezed
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as PostView?,
+      community: community == freezed
+          ? _value.community
+          : community // ignore: cast_nullable_to_non_nullable
+              as CommunityView?,
+      person: person == freezed
+          ? _value.person
+          : person // ignore: cast_nullable_to_non_nullable
+              as PersonViewSafe?,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+
+/// @nodoc
+class _$_ResolveObjectResponse extends _ResolveObjectResponse {
+  _$_ResolveObjectResponse(
+      {this.comment, this.post, this.community, this.person})
+      : super._();
+
+  factory _$_ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
+      _$_$_ResolveObjectResponseFromJson(json);
+
+  @override
+  final CommentView? comment;
+  @override
+  final PostView? post;
+  @override
+  final CommunityView? community;
+  @override
+  final PersonViewSafe? person;
+
+  @override
+  String toString() {
+    return 'ResolveObjectResponse(comment: $comment, post: $post, community: $community, person: $person)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ResolveObjectResponse &&
+            (identical(other.comment, comment) ||
+                const DeepCollectionEquality()
+                    .equals(other.comment, comment)) &&
+            (identical(other.post, post) ||
+                const DeepCollectionEquality().equals(other.post, post)) &&
+            (identical(other.community, community) ||
+                const DeepCollectionEquality()
+                    .equals(other.community, community)) &&
+            (identical(other.person, person) ||
+                const DeepCollectionEquality().equals(other.person, person)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(comment) ^
+      const DeepCollectionEquality().hash(post) ^
+      const DeepCollectionEquality().hash(community) ^
+      const DeepCollectionEquality().hash(person);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ResolveObjectResponseCopyWith<_ResolveObjectResponse> get copyWith =>
+      __$ResolveObjectResponseCopyWithImpl<_ResolveObjectResponse>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ResolveObjectResponseToJson(this);
+  }
+}
+
+abstract class _ResolveObjectResponse extends ResolveObjectResponse {
+  factory _ResolveObjectResponse(
+      {CommentView? comment,
+      PostView? post,
+      CommunityView? community,
+      PersonViewSafe? person}) = _$_ResolveObjectResponse;
+  _ResolveObjectResponse._() : super._();
+
+  factory _ResolveObjectResponse.fromJson(Map<String, dynamic> json) =
+      _$_ResolveObjectResponse.fromJson;
+
+  @override
+  CommentView? get comment => throw _privateConstructorUsedError;
+  @override
+  PostView? get post => throw _privateConstructorUsedError;
+  @override
+  CommunityView? get community => throw _privateConstructorUsedError;
+  @override
+  PersonViewSafe? get person => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ResolveObjectResponseCopyWith<_ResolveObjectResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 GetReportCountResponse _$GetReportCountResponseFromJson(
     Map<String, dynamic> json) {
   return _GetReportCountResponse.fromJson(json);

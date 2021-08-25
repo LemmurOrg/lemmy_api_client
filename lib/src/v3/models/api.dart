@@ -193,6 +193,22 @@ class BannedPerson with _$BannedPerson {
       _$BannedPersonFromJson(json);
 }
 
+@freezed
+class ResolveObjectResponse extends WithInstanceHost
+    with _$ResolveObjectResponse {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory ResolveObjectResponse({
+    CommentView? comment,
+    PostView? post,
+    CommunityView? community,
+    PersonViewSafe? person,
+  }) = _ResolveObjectResponse;
+
+  ResolveObjectResponse._();
+  factory ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
+      _$ResolveObjectResponseFromJson(json);
+}
+
 // TODO: this does not seem to exist yet
 @freezed
 class GetReportCountResponse with _$GetReportCountResponse {

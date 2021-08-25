@@ -1989,3 +1989,175 @@ abstract class _SaveSiteConfig extends SaveSiteConfig {
   _$SaveSiteConfigCopyWith<_SaveSiteConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+ResolveObject _$ResolveObjectFromJson(Map<String, dynamic> json) {
+  return _ResolveObject.fromJson(json);
+}
+
+/// @nodoc
+class _$ResolveObjectTearOff {
+  const _$ResolveObjectTearOff();
+
+  _ResolveObject call({required String q, String? auth}) {
+    return _ResolveObject(
+      q: q,
+      auth: auth,
+    );
+  }
+
+  ResolveObject fromJson(Map<String, Object> json) {
+    return ResolveObject.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ResolveObject = _$ResolveObjectTearOff();
+
+/// @nodoc
+mixin _$ResolveObject {
+  String get q => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResolveObjectCopyWith<ResolveObject> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ResolveObjectCopyWith<$Res> {
+  factory $ResolveObjectCopyWith(
+          ResolveObject value, $Res Function(ResolveObject) then) =
+      _$ResolveObjectCopyWithImpl<$Res>;
+  $Res call({String q, String? auth});
+}
+
+/// @nodoc
+class _$ResolveObjectCopyWithImpl<$Res>
+    implements $ResolveObjectCopyWith<$Res> {
+  _$ResolveObjectCopyWithImpl(this._value, this._then);
+
+  final ResolveObject _value;
+  // ignore: unused_field
+  final $Res Function(ResolveObject) _then;
+
+  @override
+  $Res call({
+    Object? q = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      q: q == freezed
+          ? _value.q
+          : q // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ResolveObjectCopyWith<$Res>
+    implements $ResolveObjectCopyWith<$Res> {
+  factory _$ResolveObjectCopyWith(
+          _ResolveObject value, $Res Function(_ResolveObject) then) =
+      __$ResolveObjectCopyWithImpl<$Res>;
+  @override
+  $Res call({String q, String? auth});
+}
+
+/// @nodoc
+class __$ResolveObjectCopyWithImpl<$Res>
+    extends _$ResolveObjectCopyWithImpl<$Res>
+    implements _$ResolveObjectCopyWith<$Res> {
+  __$ResolveObjectCopyWithImpl(
+      _ResolveObject _value, $Res Function(_ResolveObject) _then)
+      : super(_value, (v) => _then(v as _ResolveObject));
+
+  @override
+  _ResolveObject get _value => super._value as _ResolveObject;
+
+  @override
+  $Res call({
+    Object? q = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_ResolveObject(
+      q: q == freezed
+          ? _value.q
+          : q // ignore: cast_nullable_to_non_nullable
+              as String,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_ResolveObject extends _ResolveObject {
+  const _$_ResolveObject({required this.q, this.auth}) : super._();
+
+  factory _$_ResolveObject.fromJson(Map<String, dynamic> json) =>
+      _$_$_ResolveObjectFromJson(json);
+
+  @override
+  final String q;
+  @override
+  final String? auth;
+
+  @override
+  String toString() {
+    return 'ResolveObject(q: $q, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ResolveObject &&
+            (identical(other.q, q) ||
+                const DeepCollectionEquality().equals(other.q, q)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(q) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ResolveObjectCopyWith<_ResolveObject> get copyWith =>
+      __$ResolveObjectCopyWithImpl<_ResolveObject>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ResolveObjectToJson(this);
+  }
+}
+
+abstract class _ResolveObject extends ResolveObject {
+  const factory _ResolveObject({required String q, String? auth}) =
+      _$_ResolveObject;
+  const _ResolveObject._() : super._();
+
+  factory _ResolveObject.fromJson(Map<String, dynamic> json) =
+      _$_ResolveObject.fromJson;
+
+  @override
+  String get q => throw _privateConstructorUsedError;
+  @override
+  String? get auth => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ResolveObjectCopyWith<_ResolveObject> get copyWith =>
+      throw _privateConstructorUsedError;
+}

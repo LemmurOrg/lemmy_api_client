@@ -206,6 +206,8 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           .responseFactory(json)),
   'GetReportCount': (json) => WsEventGetReportCount(
       const GetReportCount(auth: '').responseFactory(json)),
+  'ResolveObject': (json) =>
+      WsEventResolveObject(const ResolveObject(q: '').responseFactory(json)),
 };
 
 class WsEvent<T> {
@@ -475,4 +477,8 @@ class WsEventGetPrivateMessages extends WsEvent<List<PrivateMessageView>> {
 
 class WsEventGetReportCount extends WsEvent<GetReportCountResponse> {
   const WsEventGetReportCount(GetReportCountResponse data) : super(data);
+}
+
+class WsEventResolveObject extends WsEvent<ResolveObjectResponse> {
+  const WsEventResolveObject(ResolveObjectResponse data) : super(data);
 }

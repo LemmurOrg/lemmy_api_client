@@ -3,6 +3,7 @@
 ### Added
 
 - Add show post notifs option
+- Add `ResolveObject` endpoint
 
 ### Changed
 

@@ -206,3 +206,25 @@ Map<String, dynamic> _$_$_SaveSiteConfigToJson(_$_SaveSiteConfig instance) =>
       'config_hjson': instance.configHjson,
       'auth': instance.auth,
     };
+
+_$_ResolveObject _$_$_ResolveObjectFromJson(Map<String, dynamic> json) {
+  return _$_ResolveObject(
+    q: json['q'] as String,
+    auth: json['auth'] as String?,
+  );
+}
+
+Map<String, dynamic> _$_$_ResolveObjectToJson(_$_ResolveObject instance) {
+  final val = <String, dynamic>{
+    'q': instance.q,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('auth', instance.auth);
+  return val;
+}
