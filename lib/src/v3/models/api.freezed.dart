@@ -865,6 +865,7 @@ class _$ModlogTearOff {
       required List<ModBanFromCommunityView> bannedFromCommunity,
       required List<ModBanView> banned,
       required List<ModAddCommunityView> addedToCommunity,
+      required List<ModTransferCommunityView> transferredToCommunity,
       required List<ModAddView> added,
       required String instanceHost}) {
     return _Modlog(
@@ -876,6 +877,7 @@ class _$ModlogTearOff {
       bannedFromCommunity: bannedFromCommunity,
       banned: banned,
       addedToCommunity: addedToCommunity,
+      transferredToCommunity: transferredToCommunity,
       added: added,
       instanceHost: instanceHost,
     );
@@ -905,6 +907,8 @@ mixin _$Modlog {
   List<ModBanView> get banned => throw _privateConstructorUsedError;
   List<ModAddCommunityView> get addedToCommunity =>
       throw _privateConstructorUsedError;
+  List<ModTransferCommunityView> get transferredToCommunity =>
+      throw _privateConstructorUsedError;
   List<ModAddView> get added => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -926,6 +930,7 @@ abstract class $ModlogCopyWith<$Res> {
       List<ModBanFromCommunityView> bannedFromCommunity,
       List<ModBanView> banned,
       List<ModAddCommunityView> addedToCommunity,
+      List<ModTransferCommunityView> transferredToCommunity,
       List<ModAddView> added,
       String instanceHost});
 }
@@ -948,6 +953,7 @@ class _$ModlogCopyWithImpl<$Res> implements $ModlogCopyWith<$Res> {
     Object? bannedFromCommunity = freezed,
     Object? banned = freezed,
     Object? addedToCommunity = freezed,
+    Object? transferredToCommunity = freezed,
     Object? added = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -984,6 +990,10 @@ class _$ModlogCopyWithImpl<$Res> implements $ModlogCopyWith<$Res> {
           ? _value.addedToCommunity
           : addedToCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModAddCommunityView>,
+      transferredToCommunity: transferredToCommunity == freezed
+          ? _value.transferredToCommunity
+          : transferredToCommunity // ignore: cast_nullable_to_non_nullable
+              as List<ModTransferCommunityView>,
       added: added == freezed
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
@@ -1010,6 +1020,7 @@ abstract class _$ModlogCopyWith<$Res> implements $ModlogCopyWith<$Res> {
       List<ModBanFromCommunityView> bannedFromCommunity,
       List<ModBanView> banned,
       List<ModAddCommunityView> addedToCommunity,
+      List<ModTransferCommunityView> transferredToCommunity,
       List<ModAddView> added,
       String instanceHost});
 }
@@ -1033,6 +1044,7 @@ class __$ModlogCopyWithImpl<$Res> extends _$ModlogCopyWithImpl<$Res>
     Object? bannedFromCommunity = freezed,
     Object? banned = freezed,
     Object? addedToCommunity = freezed,
+    Object? transferredToCommunity = freezed,
     Object? added = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -1069,6 +1081,10 @@ class __$ModlogCopyWithImpl<$Res> extends _$ModlogCopyWithImpl<$Res>
           ? _value.addedToCommunity
           : addedToCommunity // ignore: cast_nullable_to_non_nullable
               as List<ModAddCommunityView>,
+      transferredToCommunity: transferredToCommunity == freezed
+          ? _value.transferredToCommunity
+          : transferredToCommunity // ignore: cast_nullable_to_non_nullable
+              as List<ModTransferCommunityView>,
       added: added == freezed
           ? _value.added
           : added // ignore: cast_nullable_to_non_nullable
@@ -1094,6 +1110,7 @@ class _$_Modlog extends _Modlog {
       required this.bannedFromCommunity,
       required this.banned,
       required this.addedToCommunity,
+      required this.transferredToCommunity,
       required this.added,
       required this.instanceHost})
       : super._();
@@ -1118,13 +1135,15 @@ class _$_Modlog extends _Modlog {
   @override
   final List<ModAddCommunityView> addedToCommunity;
   @override
+  final List<ModTransferCommunityView> transferredToCommunity;
+  @override
   final List<ModAddView> added;
   @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, stickiedPosts: $stickiedPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, added: $added, instanceHost: $instanceHost)';
+    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, stickiedPosts: $stickiedPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, transferredToCommunity: $transferredToCommunity, added: $added, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1154,6 +1173,9 @@ class _$_Modlog extends _Modlog {
             (identical(other.addedToCommunity, addedToCommunity) ||
                 const DeepCollectionEquality()
                     .equals(other.addedToCommunity, addedToCommunity)) &&
+            (identical(other.transferredToCommunity, transferredToCommunity) ||
+                const DeepCollectionEquality().equals(
+                    other.transferredToCommunity, transferredToCommunity)) &&
             (identical(other.added, added) ||
                 const DeepCollectionEquality().equals(other.added, added)) &&
             (identical(other.instanceHost, instanceHost) ||
@@ -1172,6 +1194,7 @@ class _$_Modlog extends _Modlog {
       const DeepCollectionEquality().hash(bannedFromCommunity) ^
       const DeepCollectionEquality().hash(banned) ^
       const DeepCollectionEquality().hash(addedToCommunity) ^
+      const DeepCollectionEquality().hash(transferredToCommunity) ^
       const DeepCollectionEquality().hash(added) ^
       const DeepCollectionEquality().hash(instanceHost);
 
@@ -1196,6 +1219,7 @@ abstract class _Modlog extends Modlog {
       required List<ModBanFromCommunityView> bannedFromCommunity,
       required List<ModBanView> banned,
       required List<ModAddCommunityView> addedToCommunity,
+      required List<ModTransferCommunityView> transferredToCommunity,
       required List<ModAddView> added,
       required String instanceHost}) = _$_Modlog;
   _Modlog._() : super._();
@@ -1223,6 +1247,9 @@ abstract class _Modlog extends Modlog {
   List<ModBanView> get banned => throw _privateConstructorUsedError;
   @override
   List<ModAddCommunityView> get addedToCommunity =>
+      throw _privateConstructorUsedError;
+  @override
+  List<ModTransferCommunityView> get transferredToCommunity =>
       throw _privateConstructorUsedError;
   @override
   List<ModAddView> get added => throw _privateConstructorUsedError;

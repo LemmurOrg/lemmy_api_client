@@ -108,6 +108,10 @@ _$_Modlog _$_$_ModlogFromJson(Map<String, dynamic> json) {
     addedToCommunity: (json['added_to_community'] as List<dynamic>)
         .map((e) => ModAddCommunityView.fromJson(e as Map<String, dynamic>))
         .toList(),
+    transferredToCommunity: (json['transferred_to_community'] as List<dynamic>)
+        .map(
+            (e) => ModTransferCommunityView.fromJson(e as Map<String, dynamic>))
+        .toList(),
     added: (json['added'] as List<dynamic>)
         .map((e) => ModAddView.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -128,6 +132,8 @@ Map<String, dynamic> _$_$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
       'banned': instance.banned.map((e) => e.toJson()).toList(),
       'added_to_community':
           instance.addedToCommunity.map((e) => e.toJson()).toList(),
+      'transferred_to_community':
+          instance.transferredToCommunity.map((e) => e.toJson()).toList(),
       'added': instance.added.map((e) => e.toJson()).toList(),
       'instance_host': instance.instanceHost,
     };

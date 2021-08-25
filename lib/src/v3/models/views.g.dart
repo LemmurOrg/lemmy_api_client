@@ -267,6 +267,30 @@ Map<String, dynamic> _$_$_ModAddCommunityViewToJson(
       'instance_host': instance.instanceHost,
     };
 
+_$_ModTransferCommunityView _$_$_ModTransferCommunityViewFromJson(
+    Map<String, dynamic> json) {
+  return _$_ModTransferCommunityView(
+    modTransferCommunity: ModTransferCommunity.fromJson(
+        json['mod_transfer_community'] as Map<String, dynamic>),
+    moderator: PersonSafe.fromJson(json['moderator'] as Map<String, dynamic>),
+    community:
+        CommunitySafe.fromJson(json['community'] as Map<String, dynamic>),
+    moddedPerson:
+        PersonSafe.fromJson(json['modded_person'] as Map<String, dynamic>),
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_ModTransferCommunityViewToJson(
+        _$_ModTransferCommunityView instance) =>
+    <String, dynamic>{
+      'mod_transfer_community': instance.modTransferCommunity.toJson(),
+      'moderator': instance.moderator.toJson(),
+      'community': instance.community.toJson(),
+      'modded_person': instance.moddedPerson.toJson(),
+      'instance_host': instance.instanceHost,
+    };
+
 _$_ModAddView _$_$_ModAddViewFromJson(Map<String, dynamic> json) {
   return _$_ModAddView(
     modAdd: ModAdd.fromJson(json['mod_add'] as Map<String, dynamic>),

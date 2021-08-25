@@ -462,6 +462,31 @@ Map<String, dynamic> _$_$_ModAddCommunityToJson(_$_ModAddCommunity instance) =>
       'instance_host': instance.instanceHost,
     };
 
+_$_ModTransferCommunity _$_$_ModTransferCommunityFromJson(
+    Map<String, dynamic> json) {
+  return _$_ModTransferCommunity(
+    id: json['id'] as int,
+    modPersonId: json['mod_person_id'] as int,
+    otherPersonId: json['other_person_id'] as int,
+    communityId: json['community_id'] as int,
+    removed: json['removed'] as bool?,
+    when: const ForceUtcDateTime().fromJson(json['when_'] as String),
+    instanceHost: json['instance_host'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_ModTransferCommunityToJson(
+        _$_ModTransferCommunity instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'mod_person_id': instance.modPersonId,
+      'other_person_id': instance.otherPersonId,
+      'community_id': instance.communityId,
+      'removed': instance.removed,
+      'when_': const ForceUtcDateTime().toJson(instance.when),
+      'instance_host': instance.instanceHost,
+    };
+
 _$_ModAdd _$_$_ModAddFromJson(Map<String, dynamic> json) {
   return _$_ModAdd(
     id: json['id'] as int,

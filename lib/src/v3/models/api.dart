@@ -70,6 +70,7 @@ class Modlog with _$Modlog {
     required List<ModBanFromCommunityView> bannedFromCommunity,
     required List<ModBanView> banned,
     required List<ModAddCommunityView> addedToCommunity,
+    required List<ModTransferCommunityView> transferredToCommunity,
     required List<ModAddView> added,
     required String instanceHost,
   }) = _Modlog;
