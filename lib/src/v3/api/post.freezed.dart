@@ -2229,6 +2229,157 @@ abstract class _SavePost extends SavePost {
       throw _privateConstructorUsedError;
 }
 
+GetSiteMetadata _$GetSiteMetadataFromJson(Map<String, dynamic> json) {
+  return _GetSiteMetadata.fromJson(json);
+}
+
+/// @nodoc
+class _$GetSiteMetadataTearOff {
+  const _$GetSiteMetadataTearOff();
+
+  _GetSiteMetadata call({required String url}) {
+    return _GetSiteMetadata(
+      url: url,
+    );
+  }
+
+  GetSiteMetadata fromJson(Map<String, Object> json) {
+    return GetSiteMetadata.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $GetSiteMetadata = _$GetSiteMetadataTearOff();
+
+/// @nodoc
+mixin _$GetSiteMetadata {
+  String get url => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetSiteMetadataCopyWith<GetSiteMetadata> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetSiteMetadataCopyWith<$Res> {
+  factory $GetSiteMetadataCopyWith(
+          GetSiteMetadata value, $Res Function(GetSiteMetadata) then) =
+      _$GetSiteMetadataCopyWithImpl<$Res>;
+  $Res call({String url});
+}
+
+/// @nodoc
+class _$GetSiteMetadataCopyWithImpl<$Res>
+    implements $GetSiteMetadataCopyWith<$Res> {
+  _$GetSiteMetadataCopyWithImpl(this._value, this._then);
+
+  final GetSiteMetadata _value;
+  // ignore: unused_field
+  final $Res Function(GetSiteMetadata) _then;
+
+  @override
+  $Res call({
+    Object? url = freezed,
+  }) {
+    return _then(_value.copyWith(
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetSiteMetadataCopyWith<$Res>
+    implements $GetSiteMetadataCopyWith<$Res> {
+  factory _$GetSiteMetadataCopyWith(
+          _GetSiteMetadata value, $Res Function(_GetSiteMetadata) then) =
+      __$GetSiteMetadataCopyWithImpl<$Res>;
+  @override
+  $Res call({String url});
+}
+
+/// @nodoc
+class __$GetSiteMetadataCopyWithImpl<$Res>
+    extends _$GetSiteMetadataCopyWithImpl<$Res>
+    implements _$GetSiteMetadataCopyWith<$Res> {
+  __$GetSiteMetadataCopyWithImpl(
+      _GetSiteMetadata _value, $Res Function(_GetSiteMetadata) _then)
+      : super(_value, (v) => _then(v as _GetSiteMetadata));
+
+  @override
+  _GetSiteMetadata get _value => super._value as _GetSiteMetadata;
+
+  @override
+  $Res call({
+    Object? url = freezed,
+  }) {
+    return _then(_GetSiteMetadata(
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_GetSiteMetadata extends _GetSiteMetadata {
+  const _$_GetSiteMetadata({required this.url}) : super._();
+
+  factory _$_GetSiteMetadata.fromJson(Map<String, dynamic> json) =>
+      _$_$_GetSiteMetadataFromJson(json);
+
+  @override
+  final String url;
+
+  @override
+  String toString() {
+    return 'GetSiteMetadata(url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetSiteMetadata &&
+            (identical(other.url, url) ||
+                const DeepCollectionEquality().equals(other.url, url)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(url);
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetSiteMetadataCopyWith<_GetSiteMetadata> get copyWith =>
+      __$GetSiteMetadataCopyWithImpl<_GetSiteMetadata>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_GetSiteMetadataToJson(this);
+  }
+}
+
+abstract class _GetSiteMetadata extends GetSiteMetadata {
+  const factory _GetSiteMetadata({required String url}) = _$_GetSiteMetadata;
+  const _GetSiteMetadata._() : super._();
+
+  factory _GetSiteMetadata.fromJson(Map<String, dynamic> json) =
+      _$_GetSiteMetadata.fromJson;
+
+  @override
+  String get url => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$GetSiteMetadataCopyWith<_GetSiteMetadata> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 CreatePostReport _$CreatePostReportFromJson(Map<String, dynamic> json) {
   return _CreatePostReport.fromJson(json);
 }

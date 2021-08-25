@@ -303,17 +303,18 @@ _$_ResolveObjectResponse _$_$_ResolveObjectResponseFromJson(
     person: json['person'] == null
         ? null
         : PersonViewSafe.fromJson(json['person'] as Map<String, dynamic>),
-  )..instanceHost = json['instance_host'] as String;
+    instanceHost: json['instance_host'] as String,
+  );
 }
 
 Map<String, dynamic> _$_$_ResolveObjectResponseToJson(
         _$_ResolveObjectResponse instance) =>
     <String, dynamic>{
-      'instance_host': instance.instanceHost,
       'comment': instance.comment?.toJson(),
       'post': instance.post?.toJson(),
       'community': instance.community?.toJson(),
       'person': instance.person?.toJson(),
+      'instance_host': instance.instanceHost,
     };
 
 _$_GetReportCountResponse _$_$_GetReportCountResponseFromJson(
