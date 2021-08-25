@@ -104,7 +104,7 @@ class FullSiteView with _$FullSiteView {
     required List<PersonViewSafe> banned,
     required int online,
     required String version,
-    LocalUserSettingsView? myUser,
+    MyUserInfo? myUser,
     FederatedInstances? federatedInstances,
     required String instanceHost,
   }) = _FullSiteView;
@@ -113,6 +113,24 @@ class FullSiteView with _$FullSiteView {
 
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
+}
+
+@freezed
+class MyUserInfo with _$MyUserInfo {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory MyUserInfo({
+    required LocalUserSettingsView localUserView,
+    required List<CommunityFollowerView> follows,
+    required List<CommunityModeratorView> moderates,
+    required List<CommunityBlockView> communityBlocks,
+    required List<PersonBlockView> personBlocks,
+    required String instanceHost,
+  }) = _MyUserInfo;
+
+  MyUserInfo._();
+
+  factory MyUserInfo.fromJson(Map<String, dynamic> json) =>
+      _$MyUserInfoFromJson(json);
 }
 
 @freezed
@@ -153,7 +171,6 @@ class FullPersonView with _$FullPersonView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory FullPersonView({
     required PersonViewSafe personView,
-    required List<CommunityFollowerView> follows,
     required List<CommunityModeratorView> moderates,
     required List<CommentView> comments,
     required List<PostView> posts,
@@ -210,6 +227,7 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
       _$ResolveObjectResponseFromJson(json);
 }
 
+@freezed
 class SiteMetadata with _$SiteMetadata {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory SiteMetadata({
@@ -223,6 +241,34 @@ class SiteMetadata with _$SiteMetadata {
   SiteMetadata._();
   factory SiteMetadata.fromJson(Map<String, dynamic> json) =>
       _$SiteMetadataFromJson(json);
+}
+
+@freezed
+class BlockedPerson with _$BlockedPerson {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory BlockedPerson({
+    required PersonViewSafe personView,
+    required bool blocked,
+    required String instanceHost,
+  }) = _BlockedPerson;
+
+  BlockedPerson._();
+  factory BlockedPerson.fromJson(Map<String, dynamic> json) =>
+      _$BlockedPersonFromJson(json);
+}
+
+@freezed
+class BlockedCommunity with _$BlockedCommunity {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory BlockedCommunity({
+    required CommunityView communityView,
+    required bool blocked,
+    required String instanceHost,
+  }) = _BlockedCommunity;
+
+  BlockedCommunity._();
+  factory BlockedCommunity.fromJson(Map<String, dynamic> json) =>
+      _$BlockedCommunityFromJson(json);
 }
 
 // TODO: this does not seem to exist yet

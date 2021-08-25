@@ -430,6 +430,21 @@ Map<String, dynamic> _$_$_GetPrivateMessagesToJson(
   return val;
 }
 
+_$_BlockPerson _$_$_BlockPersonFromJson(Map<String, dynamic> json) {
+  return _$_BlockPerson(
+    personId: json['person_id'] as int,
+    block: json['block'] as bool,
+    auth: json['auth'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_BlockPersonToJson(_$_BlockPerson instance) =>
+    <String, dynamic>{
+      'person_id': instance.personId,
+      'block': instance.block,
+      'auth': instance.auth,
+    };
+
 _$_GetReportCount _$_$_GetReportCountFromJson(Map<String, dynamic> json) {
   return _$_GetReportCount(
     community: json['community'] as int?,

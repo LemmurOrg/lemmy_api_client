@@ -4611,6 +4611,201 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
       throw _privateConstructorUsedError;
 }
 
+BlockPerson _$BlockPersonFromJson(Map<String, dynamic> json) {
+  return _BlockPerson.fromJson(json);
+}
+
+/// @nodoc
+class _$BlockPersonTearOff {
+  const _$BlockPersonTearOff();
+
+  _BlockPerson call(
+      {required int personId, required bool block, required String auth}) {
+    return _BlockPerson(
+      personId: personId,
+      block: block,
+      auth: auth,
+    );
+  }
+
+  BlockPerson fromJson(Map<String, Object> json) {
+    return BlockPerson.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $BlockPerson = _$BlockPersonTearOff();
+
+/// @nodoc
+mixin _$BlockPerson {
+  int get personId => throw _privateConstructorUsedError;
+  bool get block => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BlockPersonCopyWith<BlockPerson> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BlockPersonCopyWith<$Res> {
+  factory $BlockPersonCopyWith(
+          BlockPerson value, $Res Function(BlockPerson) then) =
+      _$BlockPersonCopyWithImpl<$Res>;
+  $Res call({int personId, bool block, String auth});
+}
+
+/// @nodoc
+class _$BlockPersonCopyWithImpl<$Res> implements $BlockPersonCopyWith<$Res> {
+  _$BlockPersonCopyWithImpl(this._value, this._then);
+
+  final BlockPerson _value;
+  // ignore: unused_field
+  final $Res Function(BlockPerson) _then;
+
+  @override
+  $Res call({
+    Object? personId = freezed,
+    Object? block = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
+              as int,
+      block: block == freezed
+          ? _value.block
+          : block // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$BlockPersonCopyWith<$Res>
+    implements $BlockPersonCopyWith<$Res> {
+  factory _$BlockPersonCopyWith(
+          _BlockPerson value, $Res Function(_BlockPerson) then) =
+      __$BlockPersonCopyWithImpl<$Res>;
+  @override
+  $Res call({int personId, bool block, String auth});
+}
+
+/// @nodoc
+class __$BlockPersonCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res>
+    implements _$BlockPersonCopyWith<$Res> {
+  __$BlockPersonCopyWithImpl(
+      _BlockPerson _value, $Res Function(_BlockPerson) _then)
+      : super(_value, (v) => _then(v as _BlockPerson));
+
+  @override
+  _BlockPerson get _value => super._value as _BlockPerson;
+
+  @override
+  $Res call({
+    Object? personId = freezed,
+    Object? block = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_BlockPerson(
+      personId: personId == freezed
+          ? _value.personId
+          : personId // ignore: cast_nullable_to_non_nullable
+              as int,
+      block: block == freezed
+          ? _value.block
+          : block // ignore: cast_nullable_to_non_nullable
+              as bool,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+
+/// @nodoc
+class _$_BlockPerson extends _BlockPerson {
+  const _$_BlockPerson(
+      {required this.personId, required this.block, required this.auth})
+      : super._();
+
+  factory _$_BlockPerson.fromJson(Map<String, dynamic> json) =>
+      _$_$_BlockPersonFromJson(json);
+
+  @override
+  final int personId;
+  @override
+  final bool block;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'BlockPerson(personId: $personId, block: $block, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _BlockPerson &&
+            (identical(other.personId, personId) ||
+                const DeepCollectionEquality()
+                    .equals(other.personId, personId)) &&
+            (identical(other.block, block) ||
+                const DeepCollectionEquality().equals(other.block, block)) &&
+            (identical(other.auth, auth) ||
+                const DeepCollectionEquality().equals(other.auth, auth)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(personId) ^
+      const DeepCollectionEquality().hash(block) ^
+      const DeepCollectionEquality().hash(auth);
+
+  @JsonKey(ignore: true)
+  @override
+  _$BlockPersonCopyWith<_BlockPerson> get copyWith =>
+      __$BlockPersonCopyWithImpl<_BlockPerson>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_BlockPersonToJson(this);
+  }
+}
+
+abstract class _BlockPerson extends BlockPerson {
+  const factory _BlockPerson(
+      {required int personId,
+      required bool block,
+      required String auth}) = _$_BlockPerson;
+  const _BlockPerson._() : super._();
+
+  factory _BlockPerson.fromJson(Map<String, dynamic> json) =
+      _$_BlockPerson.fromJson;
+
+  @override
+  int get personId => throw _privateConstructorUsedError;
+  @override
+  bool get block => throw _privateConstructorUsedError;
+  @override
+  String get auth => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$BlockPersonCopyWith<_BlockPerson> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
   return _GetReportCount.fromJson(json);
 }

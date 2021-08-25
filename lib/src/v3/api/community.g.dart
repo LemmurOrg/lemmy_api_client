@@ -231,19 +231,6 @@ Map<String, dynamic> _$_$_FollowCommunityToJson(_$_FollowCommunity instance) =>
       'auth': instance.auth,
     };
 
-_$_GetFollowedCommunities _$_$_GetFollowedCommunitiesFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetFollowedCommunities(
-    auth: json['auth'] as String,
-  );
-}
-
-Map<String, dynamic> _$_$_GetFollowedCommunitiesToJson(
-        _$_GetFollowedCommunities instance) =>
-    <String, dynamic>{
-      'auth': instance.auth,
-    };
-
 _$_TransferCommunity _$_$_TransferCommunityFromJson(Map<String, dynamic> json) {
   return _$_TransferCommunity(
     communityId: json['community_id'] as int,
@@ -257,5 +244,20 @@ Map<String, dynamic> _$_$_TransferCommunityToJson(
     <String, dynamic>{
       'community_id': instance.communityId,
       'person_id': instance.personId,
+      'auth': instance.auth,
+    };
+
+_$_BlockCommunity _$_$_BlockCommunityFromJson(Map<String, dynamic> json) {
+  return _$_BlockCommunity(
+    communityId: json['community_id'] as int,
+    block: json['block'] as bool,
+    auth: json['auth'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_BlockCommunityToJson(_$_BlockCommunity instance) =>
+    <String, dynamic>{
+      'community_id': instance.communityId,
+      'block': instance.block,
       'auth': instance.auth,
     };
