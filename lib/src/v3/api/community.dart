@@ -255,31 +255,6 @@ class FollowCommunity
 }
 
 @freezed
-class GetFollowedCommunities
-    with _$GetFollowedCommunities
-    implements LemmyApiQuery<List<CommunityFollowerView>> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  const factory GetFollowedCommunities({
-    required String auth,
-  }) = _GetFollowedCommunities;
-
-  const GetFollowedCommunities._();
-
-  factory GetFollowedCommunities.fromJson(Map<String, dynamic> json) =>
-      _$GetFollowedCommunitiesFromJson(json);
-
-  final path = '/user/followed_communities';
-
-  final httpMethod = HttpMethod.get;
-
-  @override
-  List<CommunityFollowerView> responseFactory(Map<String, dynamic> json) =>
-      (json['communities'] as List)
-          .map((dynamic e) => CommunityFollowerView.fromJson(e))
-          .toList();
-}
-
-@freezed
 class TransferCommunity
     with _$TransferCommunity
     implements LemmyApiQuery<FullCommunityView> {
@@ -302,4 +277,29 @@ class TransferCommunity
   @override
   FullCommunityView responseFactory(Map<String, dynamic> json) =>
       FullCommunityView.fromJson(json);
+}
+
+@freezed
+class BlockCommunity
+    with _$BlockCommunity
+    implements LemmyApiQuery<BlockedCommunity> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory BlockCommunity({
+    required int communityId,
+    required bool block,
+    required String auth,
+  }) = _BlockCommunity;
+
+  const BlockCommunity._();
+
+  factory BlockCommunity.fromJson(Map<String, dynamic> json) =>
+      _$BlockCommunityFromJson(json);
+
+  final path = '/community/block';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  BlockedCommunity responseFactory(Map<String, dynamic> json) =>
+      BlockedCommunity.fromJson(json);
 }

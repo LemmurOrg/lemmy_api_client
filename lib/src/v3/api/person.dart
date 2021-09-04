@@ -496,6 +496,29 @@ class GetPrivateMessages
           .toList();
 }
 
+@freezed
+class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory BlockPerson({
+    required int personId,
+    required bool block,
+    required String auth,
+  }) = _BlockPerson;
+
+  const BlockPerson._();
+
+  factory BlockPerson.fromJson(Map<String, dynamic> json) =>
+      _$BlockPersonFromJson(json);
+
+  final path = '/user/block';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  BlockedPerson responseFactory(Map<String, dynamic> json) =>
+      BlockedPerson.fromJson(json);
+}
+
 // TODO: this does not seem to exist yet
 @freezed
 class GetReportCount

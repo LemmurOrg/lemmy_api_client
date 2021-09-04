@@ -81,22 +81,34 @@ void main() {
         // );
       });
 
-      group('GetFollowedCommunities', () {
+      group('TransferCommunity', () {});
+
+      group('BlockCommunity', () {
         test(
           'correctly fetches',
-          () => run(GetFollowedCommunities(
+          () => run(BlockCommunity(
+            communityId: goodCommunityId,
+            block: false,
             auth: goodAuth,
           )),
         );
         test(
           'bad auth',
-          () => lemmyThrows(const GetFollowedCommunities(
+          () => lemmyThrows(const BlockCommunity(
+            communityId: goodCommunityId,
+            block: false,
             auth: badAuth,
           )),
         );
+        // test(
+        //   'bad community id',
+        //   () => lemmyThrows(BlockCommunity(
+        //     communityId: badCommunityId,
+        //     block: false,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
-
-      group('TransferCommunity', () {});
     });
   });
 }

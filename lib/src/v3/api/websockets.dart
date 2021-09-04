@@ -71,8 +71,6 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'FollowCommunity': (json) => WsEventFollowCommunity(
       const FollowCommunity(communityId: 0, follow: true, auth: '')
           .responseFactory(json)),
-  'GetFollowedCommunities': (json) => WsEventGetFollowedCommunities(
-      const GetFollowedCommunities(auth: '').responseFactory(json)),
   'TransferCommunity': (json) => WsEventTransferCommunity(
       const TransferCommunity(communityId: 0, personId: 0, auth: '')
           .responseFactory(json)),
@@ -206,6 +204,16 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
           .responseFactory(json)),
   'GetReportCount': (json) => WsEventGetReportCount(
       const GetReportCount(auth: '').responseFactory(json)),
+  'ResolveObject': (json) =>
+      WsEventResolveObject(const ResolveObject(q: '').responseFactory(json)),
+  'GetSiteMetadata': (json) => WsEventGetSiteMetadata(
+      const GetSiteMetadata(url: '').responseFactory(json)),
+  'BlockPerson': (json) => WsEventBlockPerson(
+      const BlockPerson(personId: 0, block: true, auth: '')
+          .responseFactory(json)),
+  'BlockCommunity': (json) => WsEventBlockCommunity(
+      const BlockCommunity(communityId: 0, block: true, auth: '')
+          .responseFactory(json)),
 };
 
 class WsEvent<T> {
@@ -296,12 +304,6 @@ class WsEventRemoveCommunity extends WsEvent<CommunityView> {
 
 class WsEventFollowCommunity extends WsEvent<CommunityView> {
   const WsEventFollowCommunity(CommunityView data) : super(data);
-}
-
-class WsEventGetFollowedCommunities
-    extends WsEvent<List<CommunityFollowerView>> {
-  const WsEventGetFollowedCommunities(List<CommunityFollowerView> data)
-      : super(data);
 }
 
 class WsEventTransferCommunity extends WsEvent<FullCommunityView> {
@@ -475,4 +477,20 @@ class WsEventGetPrivateMessages extends WsEvent<List<PrivateMessageView>> {
 
 class WsEventGetReportCount extends WsEvent<GetReportCountResponse> {
   const WsEventGetReportCount(GetReportCountResponse data) : super(data);
+}
+
+class WsEventResolveObject extends WsEvent<ResolveObjectResponse> {
+  const WsEventResolveObject(ResolveObjectResponse data) : super(data);
+}
+
+class WsEventGetSiteMetadata extends WsEvent<SiteMetadata> {
+  const WsEventGetSiteMetadata(SiteMetadata data) : super(data);
+}
+
+class WsEventBlockPerson extends WsEvent<BlockedPerson> {
+  const WsEventBlockPerson(BlockedPerson data) : super(data);
+}
+
+class WsEventBlockCommunity extends WsEvent<BlockedCommunity> {
+  const WsEventBlockCommunity(BlockedCommunity data) : super(data);
 }

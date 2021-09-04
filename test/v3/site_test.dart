@@ -95,6 +95,32 @@ void main() {
         );
       });
 
+      group('ResolveObject', () {
+        test(
+          'correctly fetches',
+          () => run(ResolveObject(
+            q: '!main@lemmy.ml',
+            auth: goodAuth,
+          )),
+        );
+
+        test(
+          'bad query',
+          () => lemmyThrows(const ResolveObject(
+            q: 'qpoqwewq91.asd',
+            auth: badAuth,
+          )),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(const ResolveObject(
+            q: '',
+            auth: badAuth,
+          )),
+        );
+      });
+
       group('TransferSite', () {});
 
       group('GetSiteConfig', () {});

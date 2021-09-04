@@ -18,7 +18,7 @@ Future<void> lemmyThrows(LemmyApiQuery query) async {
 const goodCommunityName = 'lemmy';
 const badCommunityName = '--';
 
-const goodPersonId = 229;
+const goodPersonId = 13709;
 const badPersonId = -1;
 
 const goodModPersonId = 8169;
