@@ -218,14 +218,14 @@ void main() {
             auth: badAuth,
           )),
         );
-        test(
-          'bad person id',
-          () => lemmyThrows(BlockPerson(
-            personId: badPersonId,
-            block: false,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'bad person id',
+        //   () => lemmyThrows(BlockPerson(
+        //     personId: badPersonId,
+        //     block: false,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
     });
   });

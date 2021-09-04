@@ -301,5 +301,5 @@ class BlockCommunity
 
   @override
   BlockedCommunity responseFactory(Map<String, dynamic> json) =>
-      BlockedCommunity.fromJson(json['community_view']);
+      BlockedCommunity.fromJson(json);
 }

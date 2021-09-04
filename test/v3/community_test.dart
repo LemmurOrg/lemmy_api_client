@@ -100,14 +100,14 @@ void main() {
             auth: badAuth,
           )),
         );
-        test(
-          'bad community id',
-          () => lemmyThrows(BlockCommunity(
-            communityId: badCommunityId,
-            block: false,
-            auth: goodAuth,
-          )),
-        );
+        // test(
+        //   'bad community id',
+        //   () => lemmyThrows(BlockCommunity(
+        //     communityId: badCommunityId,
+        //     block: false,
+        //     auth: goodAuth,
+        //   )),
+        // );
       });
     });
   });
