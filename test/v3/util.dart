@@ -7,12 +7,16 @@ final run = const LemmyApiV3('lemmy.ml').run;
 
 /// checks if the LemmyApiQuery will throw and will have a correct i18n string set as a message
 Future<void> lemmyThrows(LemmyApiQuery query) async {
-  try {
-    await run<dynamic>(query);
-    fail('no error was thrown');
-  } on LemmyApiException catch (err) {
-    expect(err.message, matches(RegExp(r'^([a-z]+_)*[a-z]+$')));
-  }
+  await expectLater(
+    () => run<dynamic>(query),
+    throwsA(
+      isA<LemmyApiException>().having(
+        (e) => e.message,
+        'lemmy error message',
+        matches(RegExp(r'^([a-z]+_)*[a-z]+$')),
+      ),
+    ),
+  );
 }
 
 const goodCommunityName = 'lemmy';

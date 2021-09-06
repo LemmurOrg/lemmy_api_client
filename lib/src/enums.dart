@@ -70,7 +70,6 @@ class SortType {
 
   static const SortType active = SortType._('Active');
   static const SortType hot = SortType._('Hot');
-  // ignore: constant_identifier_names
   static const SortType new_ = SortType._('New');
   static const SortType topDay = SortType._('TopDay');
   static const SortType topWeek = SortType._('TopWeek');

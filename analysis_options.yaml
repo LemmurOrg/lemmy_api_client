@@ -32,16 +32,20 @@ linter:
     - cast_nullable_to_non_nullable
     - constant_identifier_names
     - curly_braces_in_flow_control_structures
+    - depend_on_referenced_packages
     - directives_ordering
     - empty_catches
     - empty_constructor_bodies
+    - eol_at_end_of_file
     - exhaustive_cases
     - file_names
     - hash_and_equals
     - implementation_imports
+    - invariant_booleans
     - library_names
     - library_prefixes
     - non_constant_identifier_names
+    - noop_primitive_operations
     - null_check_on_nullable_type_parameter
     - omit_local_variable_types
     - one_member_abstracts
@@ -58,7 +62,6 @@ linter:
     - prefer_constructors_over_static_methods
     - prefer_contains
     - prefer_equal_for_default_values
-    - prefer_expression_function_bodies
     - prefer_final_fields
     - prefer_final_in_for_each
     - prefer_final_locals
@@ -81,6 +84,7 @@ linter:
     - prefer_spread_collections
     - prefer_typing_uninitialized_variables
     - recursive_getters
+    # - require_trailing_commas
     - sized_box_for_whitespace
     - slash_for_doc_comments
     - sort_child_properties_last
@@ -104,6 +108,7 @@ linter:
     - unnecessary_this
     - use_full_hex_values_for_flutter_colors
     - use_is_even_rather_than_modulo
+    - use_test_throws_matchers
     - use_raw_strings
     - use_rethrow_when_possible
     - use_setters_to_change_properties
