@@ -32,8 +32,12 @@ class PictrsApi {
   }
 
   Future<void> delete(PictrsUploadFile pictrsFile) async {
-    final res = await http.get(Uri.https(host,
-        '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}'));
+    final res = await http.get(
+      Uri.https(
+        host,
+        '$extraPath/delete/${pictrsFile.deleteToken}/${pictrsFile.file}',
+      ),
+    );
 
     if (!res.ok) {
       switch (res.statusCode) {

@@ -16,8 +16,10 @@ Future<void> main(List<String> args) async {
 
   await runGitCommands(version);
 
-  print('Before pushing review the changes with `git show`. '
-      'Once reviewed and pushed, push the new tag with `git push --tags`');
+  print(
+    'Before pushing review the changes with `git show`. '
+    'Once reviewed and pushed, push the new tag with `git push --tags`',
+  );
 }
 
 Future<void> assertNoStagedGit() async {
@@ -101,7 +103,8 @@ Future<void> updateChangelog(Version version) async {
   confirm('Changelog looks good?\n$currentChangelog\n');
 
   await changelogFile.writeAsString(
-      changelogContents.replaceFirst('Unreleased', 'v$version - $dateString'));
+    changelogContents.replaceFirst('Unreleased', 'v$version - $dateString'),
+  );
 }
 
 Future<void> runGitCommands(Version version) async {

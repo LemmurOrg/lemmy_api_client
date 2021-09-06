@@ -9,25 +9,29 @@ void main() {
       group('Search', () {
         test(
           'correctly fetches',
-          () => run(Search(
-            q: 'q',
-            type: SearchType.all,
-            listingType: PostListingType.all,
-            sort: SortType.active,
-            communityId: goodCommunityId,
-            auth: goodAuth,
-          )),
+          () => run(
+            Search(
+              q: 'q',
+              type: SearchType.all,
+              listingType: PostListingType.all,
+              sort: SortType.active,
+              communityId: goodCommunityId,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const Search(
-            q: 'q',
-            type: SearchType.all,
-            listingType: PostListingType.all,
-            sort: SortType.active,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const Search(
+              q: 'q',
+              type: SearchType.all,
+              listingType: PostListingType.all,
+              sort: SortType.active,
+              auth: badAuth,
+            ),
+          ),
         );
 
         // test(
@@ -54,10 +58,12 @@ void main() {
       group('GetModlog', () {
         test(
           'correctly fetches',
-          () => run(const GetModlog(
-            modPersonId: goodModPersonId,
-            communityId: goodCommunityId,
-          )),
+          () => run(
+            const GetModlog(
+              modPersonId: goodModPersonId,
+              communityId: goodCommunityId,
+            ),
+          ),
         );
 
         // test(
@@ -82,42 +88,44 @@ void main() {
       group('GetSite', () {
         test(
           'correctly fetches',
-          () => run(GetSite(
-            auth: goodAuth,
-          )),
+          () => run(GetSite(auth: goodAuth)),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const GetSite(
-            auth: badAuth,
-          )),
+          () => lemmyThrows(const GetSite(auth: badAuth)),
         );
       });
 
       group('ResolveObject', () {
         test(
           'correctly fetches',
-          () => run(ResolveObject(
-            q: '!main@lemmy.ml',
-            auth: goodAuth,
-          )),
+          () => run(
+            ResolveObject(
+              q: '!main@lemmy.ml',
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad query',
-          () => lemmyThrows(const ResolveObject(
-            q: 'qpoqwewq91.asd',
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const ResolveObject(
+              q: 'qpoqwewq91.asd',
+              auth: badAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const ResolveObject(
-            q: '',
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const ResolveObject(
+              q: '',
+              auth: badAuth,
+            ),
+          ),
         );
       });
 

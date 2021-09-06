@@ -23,14 +23,16 @@ class LemmyApiV3 {
     final res = await () {
       switch (query.httpMethod) {
         case HttpMethod.get:
-          return http.get(Uri.https(
-            host,
-            '$extraPath${query.path}',
-            <String, String>{
-              for (final entry in query.toJson().entries)
-                entry.key: entry.value.toString()
-            },
-          ));
+          return http.get(
+            Uri.https(
+              host,
+              '$extraPath${query.path}',
+              <String, String>{
+                for (final entry in query.toJson().entries)
+                  entry.key: entry.value.toString()
+              },
+            ),
+          );
         case HttpMethod.post:
           return http.post(
             Uri.https(host, '$extraPath${query.path}'),

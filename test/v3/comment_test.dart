@@ -11,29 +11,35 @@ void main() {
       group('EditComment', () {
         test(
           'correctly edits',
-          () => run(EditComment(
-            content: 'content',
-            commentId: goodMyCommentId,
-            auth: goodAuth,
-          )),
+          () => run(
+            EditComment(
+              content: 'content',
+              commentId: goodMyCommentId,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const EditComment(
-            content: 'content',
-            commentId: goodMyCommentId,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const EditComment(
+              content: 'content',
+              commentId: goodMyCommentId,
+              auth: badAuth,
+            ),
+          ),
         );
 
         test(
           'not my comment',
-          () => lemmyThrows(EditComment(
-            content: 'content',
-            commentId: badMyCommentId,
-            auth: goodAuth,
-          )),
+          () => lemmyThrows(
+            EditComment(
+              content: 'content',
+              commentId: badMyCommentId,
+              auth: goodAuth,
+            ),
+          ),
         );
       });
 
@@ -46,49 +52,59 @@ void main() {
       group('SaveComment', () {
         test(
           'correctly saves',
-          () => run(SaveComment(
-            commentId: goodCommentId,
-            save: true,
-            auth: goodAuth,
-          )),
+          () => run(
+            SaveComment(
+              commentId: goodCommentId,
+              save: true,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const SaveComment(
-            commentId: goodCommentId,
-            save: true,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const SaveComment(
+              commentId: goodCommentId,
+              save: true,
+              auth: badAuth,
+            ),
+          ),
         );
 
         test(
           'bad commentId',
-          () => lemmyThrows(SaveComment(
-            commentId: badCommentId,
-            save: true,
-            auth: goodAuth,
-          )),
+          () => lemmyThrows(
+            SaveComment(
+              commentId: badCommentId,
+              save: true,
+              auth: goodAuth,
+            ),
+          ),
         );
       });
 
       group('CreateCommentLike', () {
         test(
           'correctly likes',
-          () => run(CreateCommentLike(
-            commentId: goodCommentId,
-            score: VoteType.up,
-            auth: goodAuth,
-          )),
+          () => run(
+            CreateCommentLike(
+              commentId: goodCommentId,
+              score: VoteType.up,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const CreateCommentLike(
-            commentId: goodCommentId,
-            score: VoteType.up,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const CreateCommentLike(
+              commentId: goodCommentId,
+              score: VoteType.up,
+              auth: badAuth,
+            ),
+          ),
         );
 
         // test(
@@ -104,13 +120,15 @@ void main() {
       group('GetComments', () {
         test(
           'correctly fetches',
-          () => run(GetComments(
-            type: CommentListingType.all,
-            sort: SortType.active,
-            communityName: goodCommunityName,
-            savedOnly: false,
-            auth: goodAuth,
-          )),
+          () => run(
+            GetComments(
+              type: CommentListingType.all,
+              sort: SortType.active,
+              communityName: goodCommunityName,
+              savedOnly: false,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         // test(
@@ -133,12 +151,14 @@ void main() {
 
         test(
           'bad token',
-          () => lemmyThrows(const GetComments(
-            type: CommentListingType.all,
-            sort: SortType.active,
-            savedOnly: false,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const GetComments(
+              type: CommentListingType.all,
+              sort: SortType.active,
+              savedOnly: false,
+              auth: badAuth,
+            ),
+          ),
         );
       });
 

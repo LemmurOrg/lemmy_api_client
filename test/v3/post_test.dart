@@ -9,25 +9,31 @@ void main() {
       group('GetPost', () {
         test(
           'correctly fetches',
-          () => run(GetPost(
-            id: goodPostId,
-            auth: goodAuth,
-          )),
+          () => run(
+            GetPost(
+              id: goodPostId,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const GetPost(
-            id: goodPostId,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const GetPost(
+              id: goodPostId,
+              auth: badAuth,
+            ),
+          ),
         );
 
         test(
           'bad id',
-          () => lemmyThrows(const GetPost(
-            id: badPostId,
-          )),
+          () => lemmyThrows(
+            const GetPost(
+              id: badPostId,
+            ),
+          ),
         );
       });
 
@@ -36,22 +42,26 @@ void main() {
       group('GetPosts', () {
         test(
           'correctly fetches',
-          () => run(GetPosts(
-            type: PostListingType.all,
-            sort: SortType.active,
-            savedOnly: false,
-            auth: goodAuth,
-          )),
+          () => run(
+            GetPosts(
+              type: PostListingType.all,
+              sort: SortType.active,
+              savedOnly: false,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const GetPosts(
-            type: PostListingType.all,
-            sort: SortType.active,
-            savedOnly: false,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const GetPosts(
+              type: PostListingType.all,
+              sort: SortType.active,
+              savedOnly: false,
+              auth: badAuth,
+            ),
+          ),
         );
 
         // test(
@@ -76,20 +86,24 @@ void main() {
       group('CreatePostLike', () {
         test(
           'correctly likes',
-          () => run(CreatePostLike(
-            postId: goodPostId,
-            score: VoteType.down,
-            auth: goodAuth,
-          )),
+          () => run(
+            CreatePostLike(
+              postId: goodPostId,
+              score: VoteType.down,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const CreatePostLike(
-            postId: goodPostId,
-            score: VoteType.down,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const CreatePostLike(
+              postId: goodPostId,
+              score: VoteType.down,
+              auth: badAuth,
+            ),
+          ),
         );
 
         // test(
@@ -115,50 +129,57 @@ void main() {
       group('SavePost', () {
         test(
           'correctly saves',
-          () => run(SavePost(
-            postId: goodPostId,
-            save: true,
-            auth: goodAuth,
-          )),
+          () => run(
+            SavePost(
+              postId: goodPostId,
+              save: true,
+              auth: goodAuth,
+            ),
+          ),
         );
 
         test(
           'bad auth',
-          () => lemmyThrows(const SavePost(
-            postId: goodPostId,
-            save: true,
-            auth: badAuth,
-          )),
+          () => lemmyThrows(
+            const SavePost(
+              postId: goodPostId,
+              save: true,
+              auth: badAuth,
+            ),
+          ),
         );
 
         test(
           'bad postId',
-          () => lemmyThrows(SavePost(
-            postId: badPostId,
-            save: true,
-            auth: goodAuth,
-          )),
+          () => lemmyThrows(
+            SavePost(
+              postId: badPostId,
+              save: true,
+              auth: goodAuth,
+            ),
+          ),
         );
       });
 
       group('GetSiteMetadata', () {
-        test(
-          'correctly fetches',
-          () async {
-            final metadata = await run(const GetSiteMetadata(
+        test('correctly fetches', () async {
+          final metadata = await run(
+            const GetSiteMetadata(
               url: 'https://www.youtube.com/watch?v=mFyUrebJbDg',
-            ));
+            ),
+          );
 
-            expect(metadata.title, 'SO SAD THAT STEVE JOBS DIED OF LIGMA');
-            expect(
-              metadata.description,
-              'Stolen from apparently this https://youtu.be/maAIWplFWUwI think I actually just'
-              " saved this off twitter or something so I don't know who really made it.",
-            );
-            expect(metadata.image,
-                'https://i.ytimg.com/vi/mFyUrebJbDg/hqdefault.jpg');
-          },
-        );
+          expect(metadata.title, 'SO SAD THAT STEVE JOBS DIED OF LIGMA');
+          expect(
+            metadata.description,
+            'Stolen from apparently this https://youtu.be/maAIWplFWUwI think I actually just'
+            " saved this off twitter or something so I don't know who really made it.",
+          );
+          expect(
+            metadata.image,
+            'https://i.ytimg.com/vi/mFyUrebJbDg/hqdefault.jpg',
+          );
+        });
 
         // test(
         //   'handles 404 urls',

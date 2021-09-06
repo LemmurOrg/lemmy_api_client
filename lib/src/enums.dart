@@ -17,7 +17,9 @@ class VoteType {
         return down;
       default:
         throw LemmyApiException(
-            'Unexpected VoteType value "$value", this is likely a LemmyApiClient error, please open an issue');
+          'Unexpected VoteType value "$value", '
+          'this is likely a LemmyApiClient error, please open an issue',
+        );
     }
   }
 
