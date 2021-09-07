@@ -17,7 +17,9 @@ class VoteType {
         return down;
       default:
         throw LemmyApiException(
-            'Unexpected VoteType value "$value", this is likely a LemmyApiClient error, please open an issue');
+          'Unexpected VoteType value "$value", '
+          'this is likely a LemmyApiClient error, please open an issue',
+        );
     }
   }
 
@@ -70,7 +72,6 @@ class SortType {
 
   static const SortType active = SortType._('Active');
   static const SortType hot = SortType._('Hot');
-  // ignore: constant_identifier_names
   static const SortType new_ = SortType._('New');
   static const SortType topDay = SortType._('TopDay');
   static const SortType topWeek = SortType._('TopWeek');
