@@ -408,3 +408,19 @@ Map<String, dynamic> _$$_GetReportCountResponseToJson(
       'post_reports': instance.postReports,
       'instance_host': instance.instanceHost,
     };
+
+_$_GetUnreadCountResponse _$$_GetUnreadCountResponseFromJson(
+        Map<String, dynamic> json) =>
+    _$_GetUnreadCountResponse(
+      replies: json['replies'] as int,
+      mentions: json['mentions'] as int,
+      privateMessages: json['private_messages'] as int,
+    );
+
+Map<String, dynamic> _$$_GetUnreadCountResponseToJson(
+        _$_GetUnreadCountResponse instance) =>
+    <String, dynamic>{
+      'replies': instance.replies,
+      'mentions': instance.mentions,
+      'private_messages': instance.privateMessages,
+    };

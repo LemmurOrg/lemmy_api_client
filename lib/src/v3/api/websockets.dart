@@ -309,6 +309,9 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
         const BlockCommunity(communityId: 0, block: true, auth: '')
             .responseFactory(json),
       ),
+  'GetUnreadCount': (json) => WsEventGetUnreadCount(
+        const GetUnreadCount(auth: '').responseFactory(json),
+      ),
 };
 
 class WsEvent<T> {
@@ -584,4 +587,8 @@ class WsEventBlockPerson extends WsEvent<BlockedPerson> {
 
 class WsEventBlockCommunity extends WsEvent<BlockedCommunity> {
   const WsEventBlockCommunity(BlockedCommunity data) : super(data);
+}
+
+class WsEventGetUnreadCount extends WsEvent<GetUnreadCountResponse> {
+  const WsEventGetUnreadCount(GetUnreadCountResponse data) : super(data);
 }

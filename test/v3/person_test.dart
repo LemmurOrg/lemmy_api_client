@@ -243,6 +243,22 @@ void main() {
         );
       });
 
+      group('GetUnreadCount', () {
+        test(
+          'correctly fetches',
+          () => run(
+            GetUnreadCount(auth: goodAuth),
+          ),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const GetUnreadCount(auth: badAuth),
+          ),
+        );
+      });
+
       group('BlockPerson', () {
         test(
           'correctly fetches',

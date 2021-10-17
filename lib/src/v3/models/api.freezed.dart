@@ -4412,3 +4412,202 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   _$GetReportCountResponseCopyWith<_GetReportCountResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+GetUnreadCountResponse _$GetUnreadCountResponseFromJson(
+    Map<String, dynamic> json) {
+  return _GetUnreadCountResponse.fromJson(json);
+}
+
+/// @nodoc
+class _$GetUnreadCountResponseTearOff {
+  const _$GetUnreadCountResponseTearOff();
+
+  _GetUnreadCountResponse call(
+      {required int replies,
+      required int mentions,
+      required int privateMessages}) {
+    return _GetUnreadCountResponse(
+      replies: replies,
+      mentions: mentions,
+      privateMessages: privateMessages,
+    );
+  }
+
+  GetUnreadCountResponse fromJson(Map<String, Object?> json) {
+    return GetUnreadCountResponse.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $GetUnreadCountResponse = _$GetUnreadCountResponseTearOff();
+
+/// @nodoc
+mixin _$GetUnreadCountResponse {
+  int get replies => throw _privateConstructorUsedError;
+  int get mentions => throw _privateConstructorUsedError;
+  int get privateMessages => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetUnreadCountResponseCopyWith<GetUnreadCountResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetUnreadCountResponseCopyWith<$Res> {
+  factory $GetUnreadCountResponseCopyWith(GetUnreadCountResponse value,
+          $Res Function(GetUnreadCountResponse) then) =
+      _$GetUnreadCountResponseCopyWithImpl<$Res>;
+  $Res call({int replies, int mentions, int privateMessages});
+}
+
+/// @nodoc
+class _$GetUnreadCountResponseCopyWithImpl<$Res>
+    implements $GetUnreadCountResponseCopyWith<$Res> {
+  _$GetUnreadCountResponseCopyWithImpl(this._value, this._then);
+
+  final GetUnreadCountResponse _value;
+  // ignore: unused_field
+  final $Res Function(GetUnreadCountResponse) _then;
+
+  @override
+  $Res call({
+    Object? replies = freezed,
+    Object? mentions = freezed,
+    Object? privateMessages = freezed,
+  }) {
+    return _then(_value.copyWith(
+      replies: replies == freezed
+          ? _value.replies
+          : replies // ignore: cast_nullable_to_non_nullable
+              as int,
+      mentions: mentions == freezed
+          ? _value.mentions
+          : mentions // ignore: cast_nullable_to_non_nullable
+              as int,
+      privateMessages: privateMessages == freezed
+          ? _value.privateMessages
+          : privateMessages // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetUnreadCountResponseCopyWith<$Res>
+    implements $GetUnreadCountResponseCopyWith<$Res> {
+  factory _$GetUnreadCountResponseCopyWith(_GetUnreadCountResponse value,
+          $Res Function(_GetUnreadCountResponse) then) =
+      __$GetUnreadCountResponseCopyWithImpl<$Res>;
+  @override
+  $Res call({int replies, int mentions, int privateMessages});
+}
+
+/// @nodoc
+class __$GetUnreadCountResponseCopyWithImpl<$Res>
+    extends _$GetUnreadCountResponseCopyWithImpl<$Res>
+    implements _$GetUnreadCountResponseCopyWith<$Res> {
+  __$GetUnreadCountResponseCopyWithImpl(_GetUnreadCountResponse _value,
+      $Res Function(_GetUnreadCountResponse) _then)
+      : super(_value, (v) => _then(v as _GetUnreadCountResponse));
+
+  @override
+  _GetUnreadCountResponse get _value => super._value as _GetUnreadCountResponse;
+
+  @override
+  $Res call({
+    Object? replies = freezed,
+    Object? mentions = freezed,
+    Object? privateMessages = freezed,
+  }) {
+    return _then(_GetUnreadCountResponse(
+      replies: replies == freezed
+          ? _value.replies
+          : replies // ignore: cast_nullable_to_non_nullable
+              as int,
+      mentions: mentions == freezed
+          ? _value.mentions
+          : mentions // ignore: cast_nullable_to_non_nullable
+              as int,
+      privateMessages: privateMessages == freezed
+          ? _value.privateMessages
+          : privateMessages // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class _$_GetUnreadCountResponse extends _GetUnreadCountResponse {
+  _$_GetUnreadCountResponse(
+      {required this.replies,
+      required this.mentions,
+      required this.privateMessages})
+      : super._();
+
+  factory _$_GetUnreadCountResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_GetUnreadCountResponseFromJson(json);
+
+  @override
+  final int replies;
+  @override
+  final int mentions;
+  @override
+  final int privateMessages;
+
+  @override
+  String toString() {
+    return 'GetUnreadCountResponse(replies: $replies, mentions: $mentions, privateMessages: $privateMessages)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _GetUnreadCountResponse &&
+            (identical(other.replies, replies) || other.replies == replies) &&
+            (identical(other.mentions, mentions) ||
+                other.mentions == mentions) &&
+            (identical(other.privateMessages, privateMessages) ||
+                other.privateMessages == privateMessages));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, replies, mentions, privateMessages);
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetUnreadCountResponseCopyWith<_GetUnreadCountResponse> get copyWith =>
+      __$GetUnreadCountResponseCopyWithImpl<_GetUnreadCountResponse>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetUnreadCountResponseToJson(this);
+  }
+}
+
+abstract class _GetUnreadCountResponse extends GetUnreadCountResponse {
+  factory _GetUnreadCountResponse(
+      {required int replies,
+      required int mentions,
+      required int privateMessages}) = _$_GetUnreadCountResponse;
+  _GetUnreadCountResponse._() : super._();
+
+  factory _GetUnreadCountResponse.fromJson(Map<String, dynamic> json) =
+      _$_GetUnreadCountResponse.fromJson;
+
+  @override
+  int get replies;
+  @override
+  int get mentions;
+  @override
+  int get privateMessages;
+  @override
+  @JsonKey(ignore: true)
+  _$GetUnreadCountResponseCopyWith<_GetUnreadCountResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}

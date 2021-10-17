@@ -425,6 +425,16 @@ Map<String, dynamic> _$$_BlockPersonToJson(_$_BlockPerson instance) =>
       'auth': instance.auth,
     };
 
+_$_GetUnreadCount _$$_GetUnreadCountFromJson(Map<String, dynamic> json) =>
+    _$_GetUnreadCount(
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_GetUnreadCountToJson(_$_GetUnreadCount instance) =>
+    <String, dynamic>{
+      'auth': instance.auth,
+    };
+
 _$_GetReportCount _$$_GetReportCountFromJson(Map<String, dynamic> json) =>
     _$_GetReportCount(
       communityId: json['community_id'] as int?,

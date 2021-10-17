@@ -285,3 +285,17 @@ class GetReportCountResponse with _$GetReportCountResponse {
   factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountResponseFromJson(json);
 }
+
+@freezed
+class GetUnreadCountResponse with _$GetUnreadCountResponse {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  factory GetUnreadCountResponse({
+    required int replies,
+    required int mentions,
+    required int privateMessages,
+  }) = _GetUnreadCountResponse;
+
+  GetUnreadCountResponse._();
+  factory GetUnreadCountResponse.fromJson(Map<String, dynamic> json) =>
+      _$GetUnreadCountResponseFromJson(json);
+}

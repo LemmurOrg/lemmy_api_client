@@ -4679,6 +4679,156 @@ abstract class _BlockPerson extends BlockPerson {
       throw _privateConstructorUsedError;
 }
 
+GetUnreadCount _$GetUnreadCountFromJson(Map<String, dynamic> json) {
+  return _GetUnreadCount.fromJson(json);
+}
+
+/// @nodoc
+class _$GetUnreadCountTearOff {
+  const _$GetUnreadCountTearOff();
+
+  _GetUnreadCount call({required String auth}) {
+    return _GetUnreadCount(
+      auth: auth,
+    );
+  }
+
+  GetUnreadCount fromJson(Map<String, Object?> json) {
+    return GetUnreadCount.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $GetUnreadCount = _$GetUnreadCountTearOff();
+
+/// @nodoc
+mixin _$GetUnreadCount {
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetUnreadCountCopyWith<GetUnreadCount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetUnreadCountCopyWith<$Res> {
+  factory $GetUnreadCountCopyWith(
+          GetUnreadCount value, $Res Function(GetUnreadCount) then) =
+      _$GetUnreadCountCopyWithImpl<$Res>;
+  $Res call({String auth});
+}
+
+/// @nodoc
+class _$GetUnreadCountCopyWithImpl<$Res>
+    implements $GetUnreadCountCopyWith<$Res> {
+  _$GetUnreadCountCopyWithImpl(this._value, this._then);
+
+  final GetUnreadCount _value;
+  // ignore: unused_field
+  final $Res Function(GetUnreadCount) _then;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetUnreadCountCopyWith<$Res>
+    implements $GetUnreadCountCopyWith<$Res> {
+  factory _$GetUnreadCountCopyWith(
+          _GetUnreadCount value, $Res Function(_GetUnreadCount) then) =
+      __$GetUnreadCountCopyWithImpl<$Res>;
+  @override
+  $Res call({String auth});
+}
+
+/// @nodoc
+class __$GetUnreadCountCopyWithImpl<$Res>
+    extends _$GetUnreadCountCopyWithImpl<$Res>
+    implements _$GetUnreadCountCopyWith<$Res> {
+  __$GetUnreadCountCopyWithImpl(
+      _GetUnreadCount _value, $Res Function(_GetUnreadCount) _then)
+      : super(_value, (v) => _then(v as _GetUnreadCount));
+
+  @override
+  _GetUnreadCount get _value => super._value as _GetUnreadCount;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_GetUnreadCount(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_GetUnreadCount extends _GetUnreadCount {
+  const _$_GetUnreadCount({required this.auth}) : super._();
+
+  factory _$_GetUnreadCount.fromJson(Map<String, dynamic> json) =>
+      _$$_GetUnreadCountFromJson(json);
+
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'GetUnreadCount(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _GetUnreadCount &&
+            (identical(other.auth, auth) || other.auth == auth));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, auth);
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetUnreadCountCopyWith<_GetUnreadCount> get copyWith =>
+      __$GetUnreadCountCopyWithImpl<_GetUnreadCount>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetUnreadCountToJson(this);
+  }
+}
+
+abstract class _GetUnreadCount extends GetUnreadCount {
+  const factory _GetUnreadCount({required String auth}) = _$_GetUnreadCount;
+  const _GetUnreadCount._() : super._();
+
+  factory _GetUnreadCount.fromJson(Map<String, dynamic> json) =
+      _$_GetUnreadCount.fromJson;
+
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$GetUnreadCountCopyWith<_GetUnreadCount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
   return _GetReportCount.fromJson(json);
 }

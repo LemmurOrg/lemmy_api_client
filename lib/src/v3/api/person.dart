@@ -521,6 +521,29 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
 }
 
 @freezed
+class GetUnreadCount
+    with _$GetUnreadCount
+    implements LemmyApiQuery<GetUnreadCountResponse> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetUnreadCount({
+    required String auth,
+  }) = _GetUnreadCount;
+
+  const GetUnreadCount._();
+
+  factory GetUnreadCount.fromJson(Map<String, dynamic> json) =>
+      _$GetUnreadCountFromJson(json);
+
+  final path = '/user/unread_count';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  GetUnreadCountResponse responseFactory(Map<String, dynamic> json) =>
+      GetUnreadCountResponse.fromJson(json);
+}
+
+@freezed
 class GetReportCount
     with _$GetReportCount
     implements LemmyApiQuery<GetReportCountResponse> {
