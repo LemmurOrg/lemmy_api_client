@@ -40,6 +40,7 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
     required bool showNsfw,
     String? captchaUuid,
     String? captchaAnswer,
+    String? honeypot,
   }) = _Register;
 
   const Register._();

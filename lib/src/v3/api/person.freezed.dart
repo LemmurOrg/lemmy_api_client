@@ -190,7 +190,8 @@ class _$RegisterTearOff {
       required String passwordVerify,
       required bool showNsfw,
       String? captchaUuid,
-      String? captchaAnswer}) {
+      String? captchaAnswer,
+      String? honeypot}) {
     return _Register(
       username: username,
       email: email,
@@ -199,6 +200,7 @@ class _$RegisterTearOff {
       showNsfw: showNsfw,
       captchaUuid: captchaUuid,
       captchaAnswer: captchaAnswer,
+      honeypot: honeypot,
     );
   }
 
@@ -219,6 +221,7 @@ mixin _$Register {
   bool get showNsfw => throw _privateConstructorUsedError;
   String? get captchaUuid => throw _privateConstructorUsedError;
   String? get captchaAnswer => throw _privateConstructorUsedError;
+  String? get honeypot => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -237,7 +240,8 @@ abstract class $RegisterCopyWith<$Res> {
       String passwordVerify,
       bool showNsfw,
       String? captchaUuid,
-      String? captchaAnswer});
+      String? captchaAnswer,
+      String? honeypot});
 }
 
 /// @nodoc
@@ -257,6 +261,7 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
     Object? showNsfw = freezed,
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
+    Object? honeypot = freezed,
   }) {
     return _then(_value.copyWith(
       username: username == freezed
@@ -287,6 +292,10 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
           ? _value.captchaAnswer
           : captchaAnswer // ignore: cast_nullable_to_non_nullable
               as String?,
+      honeypot: honeypot == freezed
+          ? _value.honeypot
+          : honeypot // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -303,7 +312,8 @@ abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
       String passwordVerify,
       bool showNsfw,
       String? captchaUuid,
-      String? captchaAnswer});
+      String? captchaAnswer,
+      String? honeypot});
 }
 
 /// @nodoc
@@ -324,6 +334,7 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
     Object? showNsfw = freezed,
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
+    Object? honeypot = freezed,
   }) {
     return _then(_Register(
       username: username == freezed
@@ -354,6 +365,10 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
           ? _value.captchaAnswer
           : captchaAnswer // ignore: cast_nullable_to_non_nullable
               as String?,
+      honeypot: honeypot == freezed
+          ? _value.honeypot
+          : honeypot // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -369,7 +384,8 @@ class _$_Register extends _Register {
       required this.passwordVerify,
       required this.showNsfw,
       this.captchaUuid,
-      this.captchaAnswer})
+      this.captchaAnswer,
+      this.honeypot})
       : super._();
 
   factory _$_Register.fromJson(Map<String, dynamic> json) =>
@@ -389,10 +405,12 @@ class _$_Register extends _Register {
   final String? captchaUuid;
   @override
   final String? captchaAnswer;
+  @override
+  final String? honeypot;
 
   @override
   String toString() {
-    return 'Register(username: $username, email: $email, password: $password, passwordVerify: $passwordVerify, showNsfw: $showNsfw, captchaUuid: $captchaUuid, captchaAnswer: $captchaAnswer)';
+    return 'Register(username: $username, email: $email, password: $password, passwordVerify: $passwordVerify, showNsfw: $showNsfw, captchaUuid: $captchaUuid, captchaAnswer: $captchaAnswer, honeypot: $honeypot)';
   }
 
   @override
@@ -412,12 +430,14 @@ class _$_Register extends _Register {
             (identical(other.captchaUuid, captchaUuid) ||
                 other.captchaUuid == captchaUuid) &&
             (identical(other.captchaAnswer, captchaAnswer) ||
-                other.captchaAnswer == captchaAnswer));
+                other.captchaAnswer == captchaAnswer) &&
+            (identical(other.honeypot, honeypot) ||
+                other.honeypot == honeypot));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, username, email, password,
-      passwordVerify, showNsfw, captchaUuid, captchaAnswer);
+      passwordVerify, showNsfw, captchaUuid, captchaAnswer, honeypot);
 
   @JsonKey(ignore: true)
   @override
@@ -438,7 +458,8 @@ abstract class _Register extends Register {
       required String passwordVerify,
       required bool showNsfw,
       String? captchaUuid,
-      String? captchaAnswer}) = _$_Register;
+      String? captchaAnswer,
+      String? honeypot}) = _$_Register;
   const _Register._() : super._();
 
   factory _Register.fromJson(Map<String, dynamic> json) = _$_Register.fromJson;
@@ -457,6 +478,8 @@ abstract class _Register extends Register {
   String? get captchaUuid;
   @override
   String? get captchaAnswer;
+  @override
+  String? get honeypot;
   @override
   @JsonKey(ignore: true)
   _$RegisterCopyWith<_Register> get copyWith =>

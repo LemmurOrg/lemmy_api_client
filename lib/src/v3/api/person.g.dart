@@ -24,6 +24,7 @@ _$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
       showNsfw: json['show_nsfw'] as bool,
       captchaUuid: json['captcha_uuid'] as String?,
       captchaAnswer: json['captcha_answer'] as String?,
+      honeypot: json['honeypot'] as String?,
     );
 
 Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
@@ -43,6 +44,7 @@ Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
   val['show_nsfw'] = instance.showNsfw;
   writeNotNull('captcha_uuid', instance.captchaUuid);
   writeNotNull('captcha_answer', instance.captchaAnswer);
+  writeNotNull('honeypot', instance.honeypot);
   return val;
 }
 

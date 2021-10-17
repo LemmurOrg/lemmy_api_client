@@ -34,6 +34,7 @@ _$_CreatePost _$$_CreatePostFromJson(Map<String, dynamic> json) =>
       nsfw: json['nsfw'] as bool?,
       communityId: json['community_id'] as int,
       auth: json['auth'] as String,
+      honeypot: json['honeypot'] as String?,
     );
 
 Map<String, dynamic> _$$_CreatePostToJson(_$_CreatePost instance) {
@@ -52,6 +53,7 @@ Map<String, dynamic> _$$_CreatePostToJson(_$_CreatePost instance) {
   writeNotNull('nsfw', instance.nsfw);
   val['community_id'] = instance.communityId;
   val['auth'] = instance.auth;
+  writeNotNull('honeypot', instance.honeypot);
   return val;
 }
 
