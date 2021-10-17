@@ -349,15 +349,12 @@ class WsEventGetComments extends WsEvent<List<CommentView>> {
   const WsEventGetComments(List<CommentView> data) : super(data);
 }
 
-class WsEventCreateCommentReport extends WsEvent<bool> {
-  // ignore: avoid_positional_boolean_parameters
-  const WsEventCreateCommentReport(bool data) : super(data);
+class WsEventCreateCommentReport extends WsEvent<CommentReportView> {
+  const WsEventCreateCommentReport(CommentReportView data) : super(data);
 }
 
-class WsEventResolveCommentReport
-    extends WsEvent<ResolveCommentReportResponse> {
-  const WsEventResolveCommentReport(ResolveCommentReportResponse data)
-      : super(data);
+class WsEventResolveCommentReport extends WsEvent<CommentReportView> {
+  const WsEventResolveCommentReport(CommentReportView data) : super(data);
 }
 
 class WsEventListCommentReports extends WsEvent<List<CommentReportView>> {
@@ -445,13 +442,12 @@ class WsEventSavePost extends WsEvent<PostView> {
   const WsEventSavePost(PostView data) : super(data);
 }
 
-class WsEventCreatePostReport extends WsEvent<bool> {
-  // ignore: avoid_positional_boolean_parameters
-  const WsEventCreatePostReport(bool data) : super(data);
+class WsEventCreatePostReport extends WsEvent<PostReportView> {
+  const WsEventCreatePostReport(PostReportView data) : super(data);
 }
 
-class WsEventResolvePostReport extends WsEvent<ResolvePostReportResponse> {
-  const WsEventResolvePostReport(ResolvePostReportResponse data) : super(data);
+class WsEventResolvePostReport extends WsEvent<PostReportView> {
+  const WsEventResolvePostReport(PostReportView data) : super(data);
 }
 
 class WsEventListPostReports extends WsEvent<List<PostReportView>> {

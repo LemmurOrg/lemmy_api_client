@@ -2152,11 +2152,16 @@ class _$ListCommentReportsTearOff {
   const _$ListCommentReportsTearOff();
 
   _ListCommentReports call(
-      {int? page, int? limit, int? community, required String auth}) {
+      {int? page,
+      int? limit,
+      int? communityId,
+      bool? unresolvedOnly,
+      required String auth}) {
     return _ListCommentReports(
       page: page,
       limit: limit,
-      community: community,
+      communityId: communityId,
+      unresolvedOnly: unresolvedOnly,
       auth: auth,
     );
   }
@@ -2173,7 +2178,8 @@ const $ListCommentReports = _$ListCommentReportsTearOff();
 mixin _$ListCommentReports {
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
-  int? get community => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
+  bool? get unresolvedOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2187,7 +2193,12 @@ abstract class $ListCommentReportsCopyWith<$Res> {
   factory $ListCommentReportsCopyWith(
           ListCommentReports value, $Res Function(ListCommentReports) then) =
       _$ListCommentReportsCopyWithImpl<$Res>;
-  $Res call({int? page, int? limit, int? community, String auth});
+  $Res call(
+      {int? page,
+      int? limit,
+      int? communityId,
+      bool? unresolvedOnly,
+      String auth});
 }
 
 /// @nodoc
@@ -2203,7 +2214,8 @@ class _$ListCommentReportsCopyWithImpl<$Res>
   $Res call({
     Object? page = freezed,
     Object? limit = freezed,
-    Object? community = freezed,
+    Object? communityId = freezed,
+    Object? unresolvedOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2215,10 +2227,14 @@ class _$ListCommentReportsCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
+      unresolvedOnly: unresolvedOnly == freezed
+          ? _value.unresolvedOnly
+          : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2234,7 +2250,12 @@ abstract class _$ListCommentReportsCopyWith<$Res>
           _ListCommentReports value, $Res Function(_ListCommentReports) then) =
       __$ListCommentReportsCopyWithImpl<$Res>;
   @override
-  $Res call({int? page, int? limit, int? community, String auth});
+  $Res call(
+      {int? page,
+      int? limit,
+      int? communityId,
+      bool? unresolvedOnly,
+      String auth});
 }
 
 /// @nodoc
@@ -2252,7 +2273,8 @@ class __$ListCommentReportsCopyWithImpl<$Res>
   $Res call({
     Object? page = freezed,
     Object? limit = freezed,
-    Object? community = freezed,
+    Object? communityId = freezed,
+    Object? unresolvedOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_ListCommentReports(
@@ -2264,10 +2286,14 @@ class __$ListCommentReportsCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
+      unresolvedOnly: unresolvedOnly == freezed
+          ? _value.unresolvedOnly
+          : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2281,7 +2307,11 @@ class __$ListCommentReportsCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_ListCommentReports extends _ListCommentReports {
   const _$_ListCommentReports(
-      {this.page, this.limit, this.community, required this.auth})
+      {this.page,
+      this.limit,
+      this.communityId,
+      this.unresolvedOnly,
+      required this.auth})
       : super._();
 
   factory _$_ListCommentReports.fromJson(Map<String, dynamic> json) =>
@@ -2292,13 +2322,15 @@ class _$_ListCommentReports extends _ListCommentReports {
   @override
   final int? limit;
   @override
-  final int? community;
+  final int? communityId;
+  @override
+  final bool? unresolvedOnly;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'ListCommentReports(page: $page, limit: $limit, community: $community, auth: $auth)';
+    return 'ListCommentReports(page: $page, limit: $limit, communityId: $communityId, unresolvedOnly: $unresolvedOnly, auth: $auth)';
   }
 
   @override
@@ -2308,13 +2340,16 @@ class _$_ListCommentReports extends _ListCommentReports {
             other is _ListCommentReports &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.unresolvedOnly, unresolvedOnly) ||
+                other.unresolvedOnly == unresolvedOnly) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, page, limit, community, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2331,7 +2366,8 @@ abstract class _ListCommentReports extends ListCommentReports {
   const factory _ListCommentReports(
       {int? page,
       int? limit,
-      int? community,
+      int? communityId,
+      bool? unresolvedOnly,
       required String auth}) = _$_ListCommentReports;
   const _ListCommentReports._() : super._();
 
@@ -2343,7 +2379,9 @@ abstract class _ListCommentReports extends ListCommentReports {
   @override
   int? get limit;
   @override
-  int? get community;
+  int? get communityId;
+  @override
+  bool? get unresolvedOnly;
   @override
   String get auth;
   @override

@@ -261,9 +261,10 @@ class GetSiteMetadata
       SiteMetadata.fromJson(json['metadata']);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
-class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<bool> {
+class CreatePostReport
+    with _$CreatePostReport
+    implements LemmyApiQuery<PostReportView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreatePostReport({
     required int postId,
@@ -275,19 +276,19 @@ class CreatePostReport with _$CreatePostReport implements LemmyApiQuery<bool> {
   factory CreatePostReport.fromJson(Map<String, dynamic> json) =>
       _$CreatePostReportFromJson(json);
 
-  final path = 'xyz';
+  final path = '/post/report';
 
-  final httpMethod = HttpMethod.get;
+  final httpMethod = HttpMethod.post;
 
   @override
-  bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
+  PostReportView responseFactory(Map<String, dynamic> json) =>
+      PostReportView.fromJson(json['post_report_view']);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class ResolvePostReport
     with _$ResolvePostReport
-    implements LemmyApiQuery<ResolvePostReportResponse> {
+    implements LemmyApiQuery<PostReportView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ResolvePostReport({
     required int reportId,
@@ -299,16 +300,15 @@ class ResolvePostReport
   factory ResolvePostReport.fromJson(Map<String, dynamic> json) =>
       _$ResolvePostReportFromJson(json);
 
-  final path = 'xyz';
+  final path = '/post/report/resolve';
 
-  final httpMethod = HttpMethod.get;
+  final httpMethod = HttpMethod.put;
 
   @override
-  ResolvePostReportResponse responseFactory(Map<String, dynamic> json) =>
-      ResolvePostReportResponse.fromJson(json);
+  PostReportView responseFactory(Map<String, dynamic> json) =>
+      PostReportView.fromJson(json['post_report_view']);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class ListPostReports
     with _$ListPostReports
@@ -317,7 +317,8 @@ class ListPostReports
   const factory ListPostReports({
     int? page,
     int? limit,
-    int? community,
+    int? communityId,
+    bool? unresolvedOnly,
     required String auth,
   }) = _ListPostReports;
 
@@ -325,11 +326,13 @@ class ListPostReports
   factory ListPostReports.fromJson(Map<String, dynamic> json) =>
       _$ListPostReportsFromJson(json);
 
-  final path = 'xyz';
+  final path = '/post/report/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
   List<PostReportView> responseFactory(Map<String, dynamic> json) =>
-      (json as List).map((dynamic e) => PostReportView.fromJson(json)).toList();
+      (json['post_reports'] as List)
+          .map((dynamic e) => PostReportView.fromJson(e))
+          .toList();
 }

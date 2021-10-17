@@ -2690,11 +2690,16 @@ class _$ListPostReportsTearOff {
   const _$ListPostReportsTearOff();
 
   _ListPostReports call(
-      {int? page, int? limit, int? community, required String auth}) {
+      {int? page,
+      int? limit,
+      int? communityId,
+      bool? unresolvedOnly,
+      required String auth}) {
     return _ListPostReports(
       page: page,
       limit: limit,
-      community: community,
+      communityId: communityId,
+      unresolvedOnly: unresolvedOnly,
       auth: auth,
     );
   }
@@ -2711,7 +2716,8 @@ const $ListPostReports = _$ListPostReportsTearOff();
 mixin _$ListPostReports {
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
-  int? get community => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
+  bool? get unresolvedOnly => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2725,7 +2731,12 @@ abstract class $ListPostReportsCopyWith<$Res> {
   factory $ListPostReportsCopyWith(
           ListPostReports value, $Res Function(ListPostReports) then) =
       _$ListPostReportsCopyWithImpl<$Res>;
-  $Res call({int? page, int? limit, int? community, String auth});
+  $Res call(
+      {int? page,
+      int? limit,
+      int? communityId,
+      bool? unresolvedOnly,
+      String auth});
 }
 
 /// @nodoc
@@ -2741,7 +2752,8 @@ class _$ListPostReportsCopyWithImpl<$Res>
   $Res call({
     Object? page = freezed,
     Object? limit = freezed,
-    Object? community = freezed,
+    Object? communityId = freezed,
+    Object? unresolvedOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -2753,10 +2765,14 @@ class _$ListPostReportsCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
+      unresolvedOnly: unresolvedOnly == freezed
+          ? _value.unresolvedOnly
+          : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2772,7 +2788,12 @@ abstract class _$ListPostReportsCopyWith<$Res>
           _ListPostReports value, $Res Function(_ListPostReports) then) =
       __$ListPostReportsCopyWithImpl<$Res>;
   @override
-  $Res call({int? page, int? limit, int? community, String auth});
+  $Res call(
+      {int? page,
+      int? limit,
+      int? communityId,
+      bool? unresolvedOnly,
+      String auth});
 }
 
 /// @nodoc
@@ -2790,7 +2811,8 @@ class __$ListPostReportsCopyWithImpl<$Res>
   $Res call({
     Object? page = freezed,
     Object? limit = freezed,
-    Object? community = freezed,
+    Object? communityId = freezed,
+    Object? unresolvedOnly = freezed,
     Object? auth = freezed,
   }) {
     return _then(_ListPostReports(
@@ -2802,10 +2824,14 @@ class __$ListPostReportsCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
+      unresolvedOnly: unresolvedOnly == freezed
+          ? _value.unresolvedOnly
+          : unresolvedOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2819,7 +2845,11 @@ class __$ListPostReportsCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_ListPostReports extends _ListPostReports {
   const _$_ListPostReports(
-      {this.page, this.limit, this.community, required this.auth})
+      {this.page,
+      this.limit,
+      this.communityId,
+      this.unresolvedOnly,
+      required this.auth})
       : super._();
 
   factory _$_ListPostReports.fromJson(Map<String, dynamic> json) =>
@@ -2830,13 +2860,15 @@ class _$_ListPostReports extends _ListPostReports {
   @override
   final int? limit;
   @override
-  final int? community;
+  final int? communityId;
+  @override
+  final bool? unresolvedOnly;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'ListPostReports(page: $page, limit: $limit, community: $community, auth: $auth)';
+    return 'ListPostReports(page: $page, limit: $limit, communityId: $communityId, unresolvedOnly: $unresolvedOnly, auth: $auth)';
   }
 
   @override
@@ -2846,13 +2878,16 @@ class _$_ListPostReports extends _ListPostReports {
             other is _ListPostReports &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
+            (identical(other.unresolvedOnly, unresolvedOnly) ||
+                other.unresolvedOnly == unresolvedOnly) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, page, limit, community, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2869,7 +2904,8 @@ abstract class _ListPostReports extends ListPostReports {
   const factory _ListPostReports(
       {int? page,
       int? limit,
-      int? community,
+      int? communityId,
+      bool? unresolvedOnly,
       required String auth}) = _$_ListPostReports;
   const _ListPostReports._() : super._();
 
@@ -2881,7 +2917,9 @@ abstract class _ListPostReports extends ListPostReports {
   @override
   int? get limit;
   @override
-  int? get community;
+  int? get communityId;
+  @override
+  bool? get unresolvedOnly;
   @override
   String get auth;
   @override

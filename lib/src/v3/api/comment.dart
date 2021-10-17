@@ -207,11 +207,10 @@ class GetComments
           .toList();
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class CreateCommentReport
     with _$CreateCommentReport
-    implements LemmyApiQuery<bool> {
+    implements LemmyApiQuery<CommentReportView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory CreateCommentReport({
     required int commentId,
@@ -223,19 +222,19 @@ class CreateCommentReport
   factory CreateCommentReport.fromJson(Map<String, dynamic> json) =>
       _$CreateCommentReportFromJson(json);
 
-  final path = 'xyz';
+  final path = '/comment/report';
 
-  final httpMethod = HttpMethod.get;
+  final httpMethod = HttpMethod.post;
 
   @override
-  bool responseFactory(Map<String, dynamic> json) => json['success'] as bool;
+  CommentReportView responseFactory(Map<String, dynamic> json) =>
+      CommentReportView.fromJson(json['comment_report_view']);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class ResolveCommentReport
     with _$ResolveCommentReport
-    implements LemmyApiQuery<ResolveCommentReportResponse> {
+    implements LemmyApiQuery<CommentReportView> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory ResolveCommentReport({
     required int reportId,
@@ -247,16 +246,15 @@ class ResolveCommentReport
   factory ResolveCommentReport.fromJson(Map<String, dynamic> json) =>
       _$ResolveCommentReportFromJson(json);
 
-  final path = 'xyz';
+  final path = '/comment/report/resolve';
 
-  final httpMethod = HttpMethod.get;
+  final httpMethod = HttpMethod.put;
 
   @override
-  ResolveCommentReportResponse responseFactory(Map<String, dynamic> json) =>
-      ResolveCommentReportResponse.fromJson(json);
+  CommentReportView responseFactory(Map<String, dynamic> json) =>
+      CommentReportView.fromJson(json['comment_report_view']);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class ListCommentReports
     with _$ListCommentReports
@@ -265,7 +263,8 @@ class ListCommentReports
   const factory ListCommentReports({
     int? page,
     int? limit,
-    int? community,
+    int? communityId,
+    bool? unresolvedOnly,
     required String auth,
   }) = _ListCommentReports;
 
@@ -273,13 +272,13 @@ class ListCommentReports
   factory ListCommentReports.fromJson(Map<String, dynamic> json) =>
       _$ListCommentReportsFromJson(json);
 
-  final path = 'xyz';
+  final path = '/comment/report/list';
 
   final httpMethod = HttpMethod.get;
 
   @override
   List<CommentReportView> responseFactory(Map<String, dynamic> json) =>
-      (json['comments'] as List)
+      (json['comment_reports'] as List)
           .map((dynamic e) => CommentReportView.fromJson(e))
           .toList();
 }

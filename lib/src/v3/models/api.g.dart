@@ -394,7 +394,7 @@ Map<String, dynamic> _$$_BlockedCommunityToJson(_$_BlockedCommunity instance) =>
 _$_GetReportCountResponse _$$_GetReportCountResponseFromJson(
         Map<String, dynamic> json) =>
     _$_GetReportCountResponse(
-      community: json['community'] as int?,
+      communityId: json['community_id'] as int?,
       commentReports: json['comment_reports'] as int,
       postReports: json['post_reports'] as int,
       instanceHost: json['instance_host'] as String,
@@ -403,40 +403,8 @@ _$_GetReportCountResponse _$$_GetReportCountResponseFromJson(
 Map<String, dynamic> _$$_GetReportCountResponseToJson(
         _$_GetReportCountResponse instance) =>
     <String, dynamic>{
-      'community': instance.community,
+      'community_id': instance.communityId,
       'comment_reports': instance.commentReports,
       'post_reports': instance.postReports,
-      'instance_host': instance.instanceHost,
-    };
-
-_$_ResolveCommentReportResponse _$$_ResolveCommentReportResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_ResolveCommentReportResponse(
-      reportId: json['report_id'] as int,
-      resolved: json['resolved'] as bool,
-      instanceHost: json['instance_host'] as String,
-    );
-
-Map<String, dynamic> _$$_ResolveCommentReportResponseToJson(
-        _$_ResolveCommentReportResponse instance) =>
-    <String, dynamic>{
-      'report_id': instance.reportId,
-      'resolved': instance.resolved,
-      'instance_host': instance.instanceHost,
-    };
-
-_$_ResolvePostReportResponse _$$_ResolvePostReportResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_ResolvePostReportResponse(
-      reportId: json['report_id'] as int,
-      resolved: json['resolved'] as bool,
-      instanceHost: json['instance_host'] as String,
-    );
-
-Map<String, dynamic> _$$_ResolvePostReportResponseToJson(
-        _$_ResolvePostReportResponse instance) =>
-    <String, dynamic>{
-      'report_id': instance.reportId,
-      'resolved': instance.resolved,
       'instance_host': instance.instanceHost,
     };

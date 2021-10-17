@@ -162,11 +162,71 @@ void main() {
         );
       });
 
-      group('CreateCommentReport', () {});
+      group('CreateCommentReport', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const CreateCommentReport(
+              commentId: badCommentId,
+              reason: '',
+              auth: badAuth,
+            ),
+          ),
+        );
 
-      group('ResolveCommentReport', () {});
+        test(
+          'bad commentId',
+          () => lemmyThrows(
+            CreateCommentReport(
+              commentId: badCommentId,
+              reason: '',
+              auth: goodAuth,
+            ),
+          ),
+        );
+      });
 
-      group('ListCommentReports', () {});
+      group('ResolveCommentReport', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const ResolveCommentReport(
+              reportId: 0,
+              resolved: true,
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
+
+      group('ListCommentReports', () {
+        test(
+          'correctly fetches',
+          () => run(
+            ListCommentReports(
+              communityId: goodCommunityId,
+              auth: goodAuth,
+            ),
+          ),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const ListCommentReports(auth: badAuth),
+          ),
+        );
+
+        test(
+          'bad communityId',
+          () => lemmyThrows(
+            const ListCommentReports(
+              communityId: badCommunityId,
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
     });
   });
 }

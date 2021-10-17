@@ -1953,6 +1953,9 @@ class _$PostReportViewTearOff {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe postCreator,
+      required bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      required PostAggregates counts,
       PersonSafe? resolver,
       required String instanceHost}) {
     return _PostReportView(
@@ -1961,6 +1964,9 @@ class _$PostReportViewTearOff {
       community: community,
       creator: creator,
       postCreator: postCreator,
+      creatorBannedFromCommunity: creatorBannedFromCommunity,
+      myVote: myVote,
+      counts: counts,
       resolver: resolver,
       instanceHost: instanceHost,
     );
@@ -1981,6 +1987,9 @@ mixin _$PostReportView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get creator => throw _privateConstructorUsedError;
   PersonSafe get postCreator => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  VoteType? get myVote => throw _privateConstructorUsedError;
+  PostAggregates get counts => throw _privateConstructorUsedError;
   PersonSafe? get resolver => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -2001,6 +2010,9 @@ abstract class $PostReportViewCopyWith<$Res> {
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe postCreator,
+      bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      PostAggregates counts,
       PersonSafe? resolver,
       String instanceHost});
 
@@ -2009,6 +2021,7 @@ abstract class $PostReportViewCopyWith<$Res> {
   $CommunitySafeCopyWith<$Res> get community;
   $PersonSafeCopyWith<$Res> get creator;
   $PersonSafeCopyWith<$Res> get postCreator;
+  $PostAggregatesCopyWith<$Res> get counts;
   $PersonSafeCopyWith<$Res>? get resolver;
 }
 
@@ -2028,6 +2041,9 @@ class _$PostReportViewCopyWithImpl<$Res>
     Object? community = freezed,
     Object? creator = freezed,
     Object? postCreator = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? myVote = freezed,
+    Object? counts = freezed,
     Object? resolver = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -2052,6 +2068,18 @@ class _$PostReportViewCopyWithImpl<$Res>
           ? _value.postCreator
           : postCreator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as PostAggregates,
       resolver: resolver == freezed
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
@@ -2099,6 +2127,13 @@ class _$PostReportViewCopyWithImpl<$Res>
   }
 
   @override
+  $PostAggregatesCopyWith<$Res> get counts {
+    return $PostAggregatesCopyWith<$Res>(_value.counts, (value) {
+      return _then(_value.copyWith(counts: value));
+    });
+  }
+
+  @override
   $PersonSafeCopyWith<$Res>? get resolver {
     if (_value.resolver == null) {
       return null;
@@ -2123,6 +2158,9 @@ abstract class _$PostReportViewCopyWith<$Res>
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe postCreator,
+      bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      PostAggregates counts,
       PersonSafe? resolver,
       String instanceHost});
 
@@ -2136,6 +2174,8 @@ abstract class _$PostReportViewCopyWith<$Res>
   $PersonSafeCopyWith<$Res> get creator;
   @override
   $PersonSafeCopyWith<$Res> get postCreator;
+  @override
+  $PostAggregatesCopyWith<$Res> get counts;
   @override
   $PersonSafeCopyWith<$Res>? get resolver;
 }
@@ -2158,6 +2198,9 @@ class __$PostReportViewCopyWithImpl<$Res>
     Object? community = freezed,
     Object? creator = freezed,
     Object? postCreator = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? myVote = freezed,
+    Object? counts = freezed,
     Object? resolver = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -2182,6 +2225,18 @@ class __$PostReportViewCopyWithImpl<$Res>
           ? _value.postCreator
           : postCreator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as PostAggregates,
       resolver: resolver == freezed
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
@@ -2204,6 +2259,9 @@ class _$_PostReportView extends _PostReportView {
       required this.community,
       required this.creator,
       required this.postCreator,
+      required this.creatorBannedFromCommunity,
+      this.myVote,
+      required this.counts,
       this.resolver,
       required this.instanceHost})
       : super._();
@@ -2222,13 +2280,19 @@ class _$_PostReportView extends _PostReportView {
   @override
   final PersonSafe postCreator;
   @override
+  final bool creatorBannedFromCommunity;
+  @override
+  final VoteType? myVote;
+  @override
+  final PostAggregates counts;
+  @override
   final PersonSafe? resolver;
   @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'PostReportView(postReport: $postReport, post: $post, community: $community, creator: $creator, postCreator: $postCreator, resolver: $resolver, instanceHost: $instanceHost)';
+    return 'PostReportView(postReport: $postReport, post: $post, community: $community, creator: $creator, postCreator: $postCreator, creatorBannedFromCommunity: $creatorBannedFromCommunity, myVote: $myVote, counts: $counts, resolver: $resolver, instanceHost: $instanceHost)';
   }
 
   @override
@@ -2244,6 +2308,12 @@ class _$_PostReportView extends _PostReportView {
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.postCreator, postCreator) ||
                 other.postCreator == postCreator) &&
+            (identical(other.creatorBannedFromCommunity,
+                    creatorBannedFromCommunity) ||
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
+            (identical(other.myVote, myVote) || other.myVote == myVote) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.resolver, resolver) ||
                 other.resolver == resolver) &&
             (identical(other.instanceHost, instanceHost) ||
@@ -2251,8 +2321,18 @@ class _$_PostReportView extends _PostReportView {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, postReport, post, community,
-      creator, postCreator, resolver, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      postReport,
+      post,
+      community,
+      creator,
+      postCreator,
+      creatorBannedFromCommunity,
+      myVote,
+      counts,
+      resolver,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2272,6 +2352,9 @@ abstract class _PostReportView extends PostReportView {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe postCreator,
+      required bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      required PostAggregates counts,
       PersonSafe? resolver,
       required String instanceHost}) = _$_PostReportView;
   _PostReportView._() : super._();
@@ -2289,6 +2372,12 @@ abstract class _PostReportView extends PostReportView {
   PersonSafe get creator;
   @override
   PersonSafe get postCreator;
+  @override
+  bool get creatorBannedFromCommunity;
+  @override
+  VoteType? get myVote;
+  @override
+  PostAggregates get counts;
   @override
   PersonSafe? get resolver;
   @override
@@ -2797,6 +2886,9 @@ class _$CommentReportViewTearOff {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe commentCreator,
+      required bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      required CommentAggregates counts,
       PersonSafe? resolver,
       required String instanceHost}) {
     return _CommentReportView(
@@ -2806,6 +2898,9 @@ class _$CommentReportViewTearOff {
       community: community,
       creator: creator,
       commentCreator: commentCreator,
+      creatorBannedFromCommunity: creatorBannedFromCommunity,
+      myVote: myVote,
+      counts: counts,
       resolver: resolver,
       instanceHost: instanceHost,
     );
@@ -2827,6 +2922,9 @@ mixin _$CommentReportView {
   CommunitySafe get community => throw _privateConstructorUsedError;
   PersonSafe get creator => throw _privateConstructorUsedError;
   PersonSafe get commentCreator => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  VoteType? get myVote => throw _privateConstructorUsedError;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
   PersonSafe? get resolver => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -2848,6 +2946,9 @@ abstract class $CommentReportViewCopyWith<$Res> {
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe commentCreator,
+      bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      CommentAggregates counts,
       PersonSafe? resolver,
       String instanceHost});
 
@@ -2857,6 +2958,7 @@ abstract class $CommentReportViewCopyWith<$Res> {
   $CommunitySafeCopyWith<$Res> get community;
   $PersonSafeCopyWith<$Res> get creator;
   $PersonSafeCopyWith<$Res> get commentCreator;
+  $CommentAggregatesCopyWith<$Res> get counts;
   $PersonSafeCopyWith<$Res>? get resolver;
 }
 
@@ -2877,6 +2979,9 @@ class _$CommentReportViewCopyWithImpl<$Res>
     Object? community = freezed,
     Object? creator = freezed,
     Object? commentCreator = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? myVote = freezed,
+    Object? counts = freezed,
     Object? resolver = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -2905,6 +3010,18 @@ class _$CommentReportViewCopyWithImpl<$Res>
           ? _value.commentCreator
           : commentCreator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       resolver: resolver == freezed
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
@@ -2959,6 +3076,13 @@ class _$CommentReportViewCopyWithImpl<$Res>
   }
 
   @override
+  $CommentAggregatesCopyWith<$Res> get counts {
+    return $CommentAggregatesCopyWith<$Res>(_value.counts, (value) {
+      return _then(_value.copyWith(counts: value));
+    });
+  }
+
+  @override
   $PersonSafeCopyWith<$Res>? get resolver {
     if (_value.resolver == null) {
       return null;
@@ -2984,6 +3108,9 @@ abstract class _$CommentReportViewCopyWith<$Res>
       CommunitySafe community,
       PersonSafe creator,
       PersonSafe commentCreator,
+      bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      CommentAggregates counts,
       PersonSafe? resolver,
       String instanceHost});
 
@@ -2999,6 +3126,8 @@ abstract class _$CommentReportViewCopyWith<$Res>
   $PersonSafeCopyWith<$Res> get creator;
   @override
   $PersonSafeCopyWith<$Res> get commentCreator;
+  @override
+  $CommentAggregatesCopyWith<$Res> get counts;
   @override
   $PersonSafeCopyWith<$Res>? get resolver;
 }
@@ -3022,6 +3151,9 @@ class __$CommentReportViewCopyWithImpl<$Res>
     Object? community = freezed,
     Object? creator = freezed,
     Object? commentCreator = freezed,
+    Object? creatorBannedFromCommunity = freezed,
+    Object? myVote = freezed,
+    Object? counts = freezed,
     Object? resolver = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -3050,6 +3182,18 @@ class __$CommentReportViewCopyWithImpl<$Res>
           ? _value.commentCreator
           : commentCreator // ignore: cast_nullable_to_non_nullable
               as PersonSafe,
+      creatorBannedFromCommunity: creatorBannedFromCommunity == freezed
+          ? _value.creatorBannedFromCommunity
+          : creatorBannedFromCommunity // ignore: cast_nullable_to_non_nullable
+              as bool,
+      myVote: myVote == freezed
+          ? _value.myVote
+          : myVote // ignore: cast_nullable_to_non_nullable
+              as VoteType?,
+      counts: counts == freezed
+          ? _value.counts
+          : counts // ignore: cast_nullable_to_non_nullable
+              as CommentAggregates,
       resolver: resolver == freezed
           ? _value.resolver
           : resolver // ignore: cast_nullable_to_non_nullable
@@ -3073,6 +3217,9 @@ class _$_CommentReportView extends _CommentReportView {
       required this.community,
       required this.creator,
       required this.commentCreator,
+      required this.creatorBannedFromCommunity,
+      this.myVote,
+      required this.counts,
       this.resolver,
       required this.instanceHost})
       : super._();
@@ -3093,13 +3240,19 @@ class _$_CommentReportView extends _CommentReportView {
   @override
   final PersonSafe commentCreator;
   @override
+  final bool creatorBannedFromCommunity;
+  @override
+  final VoteType? myVote;
+  @override
+  final CommentAggregates counts;
+  @override
   final PersonSafe? resolver;
   @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'CommentReportView(commentReport: $commentReport, comment: $comment, post: $post, community: $community, creator: $creator, commentCreator: $commentCreator, resolver: $resolver, instanceHost: $instanceHost)';
+    return 'CommentReportView(commentReport: $commentReport, comment: $comment, post: $post, community: $community, creator: $creator, commentCreator: $commentCreator, creatorBannedFromCommunity: $creatorBannedFromCommunity, myVote: $myVote, counts: $counts, resolver: $resolver, instanceHost: $instanceHost)';
   }
 
   @override
@@ -3116,6 +3269,12 @@ class _$_CommentReportView extends _CommentReportView {
             (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.commentCreator, commentCreator) ||
                 other.commentCreator == commentCreator) &&
+            (identical(other.creatorBannedFromCommunity,
+                    creatorBannedFromCommunity) ||
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
+            (identical(other.myVote, myVote) || other.myVote == myVote) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.resolver, resolver) ||
                 other.resolver == resolver) &&
             (identical(other.instanceHost, instanceHost) ||
@@ -3123,8 +3282,19 @@ class _$_CommentReportView extends _CommentReportView {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentReport, comment, post,
-      community, creator, commentCreator, resolver, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      commentReport,
+      comment,
+      post,
+      community,
+      creator,
+      commentCreator,
+      creatorBannedFromCommunity,
+      myVote,
+      counts,
+      resolver,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3145,6 +3315,9 @@ abstract class _CommentReportView extends CommentReportView {
       required CommunitySafe community,
       required PersonSafe creator,
       required PersonSafe commentCreator,
+      required bool creatorBannedFromCommunity,
+      VoteType? myVote,
+      required CommentAggregates counts,
       PersonSafe? resolver,
       required String instanceHost}) = _$_CommentReportView;
   _CommentReportView._() : super._();
@@ -3164,6 +3337,12 @@ abstract class _CommentReportView extends CommentReportView {
   PersonSafe get creator;
   @override
   PersonSafe get commentCreator;
+  @override
+  bool get creatorBannedFromCommunity;
+  @override
+  VoteType? get myVote;
+  @override
+  CommentAggregates get counts;
   @override
   PersonSafe? get resolver;
   @override

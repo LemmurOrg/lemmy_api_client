@@ -214,7 +214,8 @@ _$_ListCommentReports _$$_ListCommentReportsFromJson(
     _$_ListCommentReports(
       page: json['page'] as int?,
       limit: json['limit'] as int?,
-      community: json['community'] as int?,
+      communityId: json['community_id'] as int?,
+      unresolvedOnly: json['unresolved_only'] as bool?,
       auth: json['auth'] as String,
     );
 
@@ -230,7 +231,8 @@ Map<String, dynamic> _$$_ListCommentReportsToJson(
 
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
-  writeNotNull('community', instance.community);
+  writeNotNull('community_id', instance.communityId);
+  writeNotNull('unresolved_only', instance.unresolvedOnly);
   val['auth'] = instance.auth;
   return val;
 }

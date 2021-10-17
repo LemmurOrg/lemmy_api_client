@@ -122,6 +122,9 @@ class PostReportView with _$PostReportView {
     required CommunitySafe community,
     required PersonSafe creator,
     required PersonSafe postCreator,
+    required bool creatorBannedFromCommunity,
+    VoteType? myVote,
+    required PostAggregates counts,
     PersonSafe? resolver,
     required String instanceHost,
   }) = _PostReportView;
@@ -164,6 +167,9 @@ class CommentReportView with _$CommentReportView {
     required CommunitySafe community,
     required PersonSafe creator,
     required PersonSafe commentCreator,
+    required bool creatorBannedFromCommunity,
+    VoteType? myVote,
+    required CommentAggregates counts,
     PersonSafe? resolver,
     required String instanceHost,
   }) = _CommentReportView;

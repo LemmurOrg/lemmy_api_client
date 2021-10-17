@@ -155,6 +155,11 @@ _$_PostReportView _$$_PostReportViewFromJson(Map<String, dynamic> json) =>
       creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
       postCreator:
           PersonSafe.fromJson(json['post_creator'] as Map<String, dynamic>),
+      creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      myVote: json['my_vote'] == null
+          ? null
+          : VoteType.fromJson(json['my_vote'] as int),
+      counts: PostAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       resolver: json['resolver'] == null
           ? null
           : PersonSafe.fromJson(json['resolver'] as Map<String, dynamic>),
@@ -168,6 +173,9 @@ Map<String, dynamic> _$$_PostReportViewToJson(_$_PostReportView instance) =>
       'community': instance.community.toJson(),
       'creator': instance.creator.toJson(),
       'post_creator': instance.postCreator.toJson(),
+      'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'my_vote': instance.myVote?.toJson(),
+      'counts': instance.counts.toJson(),
       'resolver': instance.resolver?.toJson(),
       'instance_host': instance.instanceHost,
     };
@@ -221,6 +229,12 @@ _$_CommentReportView _$$_CommentReportViewFromJson(Map<String, dynamic> json) =>
       creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
       commentCreator:
           PersonSafe.fromJson(json['comment_creator'] as Map<String, dynamic>),
+      creatorBannedFromCommunity: json['creator_banned_from_community'] as bool,
+      myVote: json['my_vote'] == null
+          ? null
+          : VoteType.fromJson(json['my_vote'] as int),
+      counts:
+          CommentAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       resolver: json['resolver'] == null
           ? null
           : PersonSafe.fromJson(json['resolver'] as Map<String, dynamic>),
@@ -236,6 +250,9 @@ Map<String, dynamic> _$$_CommentReportViewToJson(
       'community': instance.community.toJson(),
       'creator': instance.creator.toJson(),
       'comment_creator': instance.commentCreator.toJson(),
+      'creator_banned_from_community': instance.creatorBannedFromCommunity,
+      'my_vote': instance.myVote?.toJson(),
+      'counts': instance.counts.toJson(),
       'resolver': instance.resolver?.toJson(),
       'instance_host': instance.instanceHost,
     };

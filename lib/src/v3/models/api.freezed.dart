@@ -4193,12 +4193,12 @@ class _$GetReportCountResponseTearOff {
   const _$GetReportCountResponseTearOff();
 
   _GetReportCountResponse call(
-      {int? community,
+      {int? communityId,
       required int commentReports,
       required int postReports,
       required String instanceHost}) {
     return _GetReportCountResponse(
-      community: community,
+      communityId: communityId,
       commentReports: commentReports,
       postReports: postReports,
       instanceHost: instanceHost,
@@ -4215,7 +4215,7 @@ const $GetReportCountResponse = _$GetReportCountResponseTearOff();
 
 /// @nodoc
 mixin _$GetReportCountResponse {
-  int? get community => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
   int get commentReports => throw _privateConstructorUsedError;
   int get postReports => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
@@ -4232,7 +4232,7 @@ abstract class $GetReportCountResponseCopyWith<$Res> {
           $Res Function(GetReportCountResponse) then) =
       _$GetReportCountResponseCopyWithImpl<$Res>;
   $Res call(
-      {int? community,
+      {int? communityId,
       int commentReports,
       int postReports,
       String instanceHost});
@@ -4249,15 +4249,15 @@ class _$GetReportCountResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? community = freezed,
+    Object? communityId = freezed,
     Object? commentReports = freezed,
     Object? postReports = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
       commentReports: commentReports == freezed
           ? _value.commentReports
@@ -4283,7 +4283,7 @@ abstract class _$GetReportCountResponseCopyWith<$Res>
       __$GetReportCountResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? community,
+      {int? communityId,
       int commentReports,
       int postReports,
       String instanceHost});
@@ -4302,15 +4302,15 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? community = freezed,
+    Object? communityId = freezed,
     Object? commentReports = freezed,
     Object? postReports = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_GetReportCountResponse(
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
       commentReports: commentReports == freezed
           ? _value.commentReports
@@ -4333,7 +4333,7 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_GetReportCountResponse extends _GetReportCountResponse {
   _$_GetReportCountResponse(
-      {this.community,
+      {this.communityId,
       required this.commentReports,
       required this.postReports,
       required this.instanceHost})
@@ -4343,7 +4343,7 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
       _$$_GetReportCountResponseFromJson(json);
 
   @override
-  final int? community;
+  final int? communityId;
   @override
   final int commentReports;
   @override
@@ -4353,7 +4353,7 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
 
   @override
   String toString() {
-    return 'GetReportCountResponse(community: $community, commentReports: $commentReports, postReports: $postReports, instanceHost: $instanceHost)';
+    return 'GetReportCountResponse(communityId: $communityId, commentReports: $commentReports, postReports: $postReports, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4361,8 +4361,8 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetReportCountResponse &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
             (identical(other.commentReports, commentReports) ||
                 other.commentReports == commentReports) &&
             (identical(other.postReports, postReports) ||
@@ -4373,7 +4373,7 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, community, commentReports, postReports, instanceHost);
+      runtimeType, communityId, commentReports, postReports, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4389,7 +4389,7 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
 
 abstract class _GetReportCountResponse extends GetReportCountResponse {
   factory _GetReportCountResponse(
-      {int? community,
+      {int? communityId,
       required int commentReports,
       required int postReports,
       required String instanceHost}) = _$_GetReportCountResponse;
@@ -4399,7 +4399,7 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
       _$_GetReportCountResponse.fromJson;
 
   @override
-  int? get community;
+  int? get communityId;
   @override
   int get commentReports;
   @override
@@ -4410,411 +4410,4 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   @JsonKey(ignore: true)
   _$GetReportCountResponseCopyWith<_GetReportCountResponse> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-ResolveCommentReportResponse _$ResolveCommentReportResponseFromJson(
-    Map<String, dynamic> json) {
-  return _ResolveCommentReportResponse.fromJson(json);
-}
-
-/// @nodoc
-class _$ResolveCommentReportResponseTearOff {
-  const _$ResolveCommentReportResponseTearOff();
-
-  _ResolveCommentReportResponse call(
-      {required int reportId,
-      required bool resolved,
-      required String instanceHost}) {
-    return _ResolveCommentReportResponse(
-      reportId: reportId,
-      resolved: resolved,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ResolveCommentReportResponse fromJson(Map<String, Object?> json) {
-    return ResolveCommentReportResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResolveCommentReportResponse = _$ResolveCommentReportResponseTearOff();
-
-/// @nodoc
-mixin _$ResolveCommentReportResponse {
-  int get reportId => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
-  String get instanceHost => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ResolveCommentReportResponseCopyWith<ResolveCommentReportResponse>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ResolveCommentReportResponseCopyWith<$Res> {
-  factory $ResolveCommentReportResponseCopyWith(
-          ResolveCommentReportResponse value,
-          $Res Function(ResolveCommentReportResponse) then) =
-      _$ResolveCommentReportResponseCopyWithImpl<$Res>;
-  $Res call({int reportId, bool resolved, String instanceHost});
-}
-
-/// @nodoc
-class _$ResolveCommentReportResponseCopyWithImpl<$Res>
-    implements $ResolveCommentReportResponseCopyWith<$Res> {
-  _$ResolveCommentReportResponseCopyWithImpl(this._value, this._then);
-
-  final ResolveCommentReportResponse _value;
-  // ignore: unused_field
-  final $Res Function(ResolveCommentReportResponse) _then;
-
-  @override
-  $Res call({
-    Object? reportId = freezed,
-    Object? resolved = freezed,
-    Object? instanceHost = freezed,
-  }) {
-    return _then(_value.copyWith(
-      reportId: reportId == freezed
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as int,
-      resolved: resolved == freezed
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: instanceHost == freezed
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$ResolveCommentReportResponseCopyWith<$Res>
-    implements $ResolveCommentReportResponseCopyWith<$Res> {
-  factory _$ResolveCommentReportResponseCopyWith(
-          _ResolveCommentReportResponse value,
-          $Res Function(_ResolveCommentReportResponse) then) =
-      __$ResolveCommentReportResponseCopyWithImpl<$Res>;
-  @override
-  $Res call({int reportId, bool resolved, String instanceHost});
-}
-
-/// @nodoc
-class __$ResolveCommentReportResponseCopyWithImpl<$Res>
-    extends _$ResolveCommentReportResponseCopyWithImpl<$Res>
-    implements _$ResolveCommentReportResponseCopyWith<$Res> {
-  __$ResolveCommentReportResponseCopyWithImpl(
-      _ResolveCommentReportResponse _value,
-      $Res Function(_ResolveCommentReportResponse) _then)
-      : super(_value, (v) => _then(v as _ResolveCommentReportResponse));
-
-  @override
-  _ResolveCommentReportResponse get _value =>
-      super._value as _ResolveCommentReportResponse;
-
-  @override
-  $Res call({
-    Object? reportId = freezed,
-    Object? resolved = freezed,
-    Object? instanceHost = freezed,
-  }) {
-    return _then(_ResolveCommentReportResponse(
-      reportId: reportId == freezed
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as int,
-      resolved: resolved == freezed
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: instanceHost == freezed
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(fieldRename: FieldRename.snake)
-class _$_ResolveCommentReportResponse extends _ResolveCommentReportResponse {
-  _$_ResolveCommentReportResponse(
-      {required this.reportId,
-      required this.resolved,
-      required this.instanceHost})
-      : super._();
-
-  factory _$_ResolveCommentReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ResolveCommentReportResponseFromJson(json);
-
-  @override
-  final int reportId;
-  @override
-  final bool resolved;
-  @override
-  final String instanceHost;
-
-  @override
-  String toString() {
-    return 'ResolveCommentReportResponse(reportId: $reportId, resolved: $resolved, instanceHost: $instanceHost)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _ResolveCommentReportResponse &&
-            (identical(other.reportId, reportId) ||
-                other.reportId == reportId) &&
-            (identical(other.resolved, resolved) ||
-                other.resolved == resolved) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, reportId, resolved, instanceHost);
-
-  @JsonKey(ignore: true)
-  @override
-  _$ResolveCommentReportResponseCopyWith<_ResolveCommentReportResponse>
-      get copyWith => __$ResolveCommentReportResponseCopyWithImpl<
-          _ResolveCommentReportResponse>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_ResolveCommentReportResponseToJson(this);
-  }
-}
-
-abstract class _ResolveCommentReportResponse
-    extends ResolveCommentReportResponse {
-  factory _ResolveCommentReportResponse(
-      {required int reportId,
-      required bool resolved,
-      required String instanceHost}) = _$_ResolveCommentReportResponse;
-  _ResolveCommentReportResponse._() : super._();
-
-  factory _ResolveCommentReportResponse.fromJson(Map<String, dynamic> json) =
-      _$_ResolveCommentReportResponse.fromJson;
-
-  @override
-  int get reportId;
-  @override
-  bool get resolved;
-  @override
-  String get instanceHost;
-  @override
-  @JsonKey(ignore: true)
-  _$ResolveCommentReportResponseCopyWith<_ResolveCommentReportResponse>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-ResolvePostReportResponse _$ResolvePostReportResponseFromJson(
-    Map<String, dynamic> json) {
-  return _ResolvePostReportResponse.fromJson(json);
-}
-
-/// @nodoc
-class _$ResolvePostReportResponseTearOff {
-  const _$ResolvePostReportResponseTearOff();
-
-  _ResolvePostReportResponse call(
-      {required int reportId,
-      required bool resolved,
-      required String instanceHost}) {
-    return _ResolvePostReportResponse(
-      reportId: reportId,
-      resolved: resolved,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ResolvePostReportResponse fromJson(Map<String, Object?> json) {
-    return ResolvePostReportResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResolvePostReportResponse = _$ResolvePostReportResponseTearOff();
-
-/// @nodoc
-mixin _$ResolvePostReportResponse {
-  int get reportId => throw _privateConstructorUsedError;
-  bool get resolved => throw _privateConstructorUsedError;
-  String get instanceHost => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ResolvePostReportResponseCopyWith<ResolvePostReportResponse> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ResolvePostReportResponseCopyWith<$Res> {
-  factory $ResolvePostReportResponseCopyWith(ResolvePostReportResponse value,
-          $Res Function(ResolvePostReportResponse) then) =
-      _$ResolvePostReportResponseCopyWithImpl<$Res>;
-  $Res call({int reportId, bool resolved, String instanceHost});
-}
-
-/// @nodoc
-class _$ResolvePostReportResponseCopyWithImpl<$Res>
-    implements $ResolvePostReportResponseCopyWith<$Res> {
-  _$ResolvePostReportResponseCopyWithImpl(this._value, this._then);
-
-  final ResolvePostReportResponse _value;
-  // ignore: unused_field
-  final $Res Function(ResolvePostReportResponse) _then;
-
-  @override
-  $Res call({
-    Object? reportId = freezed,
-    Object? resolved = freezed,
-    Object? instanceHost = freezed,
-  }) {
-    return _then(_value.copyWith(
-      reportId: reportId == freezed
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as int,
-      resolved: resolved == freezed
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: instanceHost == freezed
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-abstract class _$ResolvePostReportResponseCopyWith<$Res>
-    implements $ResolvePostReportResponseCopyWith<$Res> {
-  factory _$ResolvePostReportResponseCopyWith(_ResolvePostReportResponse value,
-          $Res Function(_ResolvePostReportResponse) then) =
-      __$ResolvePostReportResponseCopyWithImpl<$Res>;
-  @override
-  $Res call({int reportId, bool resolved, String instanceHost});
-}
-
-/// @nodoc
-class __$ResolvePostReportResponseCopyWithImpl<$Res>
-    extends _$ResolvePostReportResponseCopyWithImpl<$Res>
-    implements _$ResolvePostReportResponseCopyWith<$Res> {
-  __$ResolvePostReportResponseCopyWithImpl(_ResolvePostReportResponse _value,
-      $Res Function(_ResolvePostReportResponse) _then)
-      : super(_value, (v) => _then(v as _ResolvePostReportResponse));
-
-  @override
-  _ResolvePostReportResponse get _value =>
-      super._value as _ResolvePostReportResponse;
-
-  @override
-  $Res call({
-    Object? reportId = freezed,
-    Object? resolved = freezed,
-    Object? instanceHost = freezed,
-  }) {
-    return _then(_ResolvePostReportResponse(
-      reportId: reportId == freezed
-          ? _value.reportId
-          : reportId // ignore: cast_nullable_to_non_nullable
-              as int,
-      resolved: resolved == freezed
-          ? _value.resolved
-          : resolved // ignore: cast_nullable_to_non_nullable
-              as bool,
-      instanceHost: instanceHost == freezed
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(fieldRename: FieldRename.snake)
-class _$_ResolvePostReportResponse extends _ResolvePostReportResponse {
-  _$_ResolvePostReportResponse(
-      {required this.reportId,
-      required this.resolved,
-      required this.instanceHost})
-      : super._();
-
-  factory _$_ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ResolvePostReportResponseFromJson(json);
-
-  @override
-  final int reportId;
-  @override
-  final bool resolved;
-  @override
-  final String instanceHost;
-
-  @override
-  String toString() {
-    return 'ResolvePostReportResponse(reportId: $reportId, resolved: $resolved, instanceHost: $instanceHost)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _ResolvePostReportResponse &&
-            (identical(other.reportId, reportId) ||
-                other.reportId == reportId) &&
-            (identical(other.resolved, resolved) ||
-                other.resolved == resolved) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, reportId, resolved, instanceHost);
-
-  @JsonKey(ignore: true)
-  @override
-  _$ResolvePostReportResponseCopyWith<_ResolvePostReportResponse>
-      get copyWith =>
-          __$ResolvePostReportResponseCopyWithImpl<_ResolvePostReportResponse>(
-              this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_ResolvePostReportResponseToJson(this);
-  }
-}
-
-abstract class _ResolvePostReportResponse extends ResolvePostReportResponse {
-  factory _ResolvePostReportResponse(
-      {required int reportId,
-      required bool resolved,
-      required String instanceHost}) = _$_ResolvePostReportResponse;
-  _ResolvePostReportResponse._() : super._();
-
-  factory _ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =
-      _$_ResolvePostReportResponse.fromJson;
-
-  @override
-  int get reportId;
-  @override
-  bool get resolved;
-  @override
-  String get instanceHost;
-  @override
-  @JsonKey(ignore: true)
-  _$ResolvePostReportResponseCopyWith<_ResolvePostReportResponse>
-      get copyWith => throw _privateConstructorUsedError;
 }

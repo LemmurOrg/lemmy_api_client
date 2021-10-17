@@ -189,11 +189,71 @@ void main() {
         // );
       });
 
-      group('CreatePostReport', () {});
+      group('CreatePostReport', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const CreatePostReport(
+              postId: badPostId,
+              reason: '',
+              auth: badAuth,
+            ),
+          ),
+        );
 
-      group('ResolvePostReport', () {});
+        test(
+          'bad postId',
+          () => lemmyThrows(
+            CreatePostReport(
+              postId: badPostId,
+              reason: '',
+              auth: goodAuth,
+            ),
+          ),
+        );
+      });
 
-      group('ListPostReports', () {});
+      group('ResolvePostReport', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const ResolvePostReport(
+              reportId: 0,
+              resolved: true,
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
+
+      group('ListPostReports', () {
+        test(
+          'correctly fetches',
+          () => run(
+            ListPostReports(
+              communityId: goodCommunityId,
+              auth: goodAuth,
+            ),
+          ),
+        );
+
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const ListPostReports(auth: badAuth),
+          ),
+        );
+
+        test(
+          'bad communityId',
+          () => lemmyThrows(
+            const ListPostReports(
+              communityId: badCommunityId,
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
     });
   });
 }

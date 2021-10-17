@@ -223,7 +223,25 @@ void main() {
         );
       });
 
-      group('GetReportCount', () {});
+      group('GetReportCount', () {
+        test(
+          'correctly fetches',
+          () => run(
+            GetReportCount(
+              communityId: goodCommunityId,
+              auth: goodAuth,
+            ),
+          ),
+        );
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const GetReportCount(
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
 
       group('BlockPerson', () {
         test(

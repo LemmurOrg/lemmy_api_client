@@ -425,7 +425,7 @@ Map<String, dynamic> _$$_BlockPersonToJson(_$_BlockPerson instance) =>
 
 _$_GetReportCount _$$_GetReportCountFromJson(Map<String, dynamic> json) =>
     _$_GetReportCount(
-      community: json['community'] as int?,
+      communityId: json['community_id'] as int?,
       auth: json['auth'] as String,
     );
 
@@ -438,7 +438,7 @@ Map<String, dynamic> _$$_GetReportCountToJson(_$_GetReportCount instance) {
     }
   }
 
-  writeNotNull('community', instance.community);
+  writeNotNull('community_id', instance.communityId);
   val['auth'] = instance.auth;
   return val;
 }

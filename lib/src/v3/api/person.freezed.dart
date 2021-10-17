@@ -4664,9 +4664,9 @@ GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
 class _$GetReportCountTearOff {
   const _$GetReportCountTearOff();
 
-  _GetReportCount call({int? community, required String auth}) {
+  _GetReportCount call({int? communityId, required String auth}) {
     return _GetReportCount(
-      community: community,
+      communityId: communityId,
       auth: auth,
     );
   }
@@ -4681,7 +4681,7 @@ const $GetReportCount = _$GetReportCountTearOff();
 
 /// @nodoc
 mixin _$GetReportCount {
-  int? get community => throw _privateConstructorUsedError;
+  int? get communityId => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4695,7 +4695,7 @@ abstract class $GetReportCountCopyWith<$Res> {
   factory $GetReportCountCopyWith(
           GetReportCount value, $Res Function(GetReportCount) then) =
       _$GetReportCountCopyWithImpl<$Res>;
-  $Res call({int? community, String auth});
+  $Res call({int? communityId, String auth});
 }
 
 /// @nodoc
@@ -4709,13 +4709,13 @@ class _$GetReportCountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? community = freezed,
+    Object? communityId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
       auth: auth == freezed
           ? _value.auth
@@ -4732,7 +4732,7 @@ abstract class _$GetReportCountCopyWith<$Res>
           _GetReportCount value, $Res Function(_GetReportCount) then) =
       __$GetReportCountCopyWithImpl<$Res>;
   @override
-  $Res call({int? community, String auth});
+  $Res call({int? communityId, String auth});
 }
 
 /// @nodoc
@@ -4748,13 +4748,13 @@ class __$GetReportCountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? community = freezed,
+    Object? communityId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_GetReportCount(
-      community: community == freezed
-          ? _value.community
-          : community // ignore: cast_nullable_to_non_nullable
+      communityId: communityId == freezed
+          ? _value.communityId
+          : communityId // ignore: cast_nullable_to_non_nullable
               as int?,
       auth: auth == freezed
           ? _value.auth
@@ -4768,19 +4768,19 @@ class __$GetReportCountCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_GetReportCount extends _GetReportCount {
-  const _$_GetReportCount({this.community, required this.auth}) : super._();
+  const _$_GetReportCount({this.communityId, required this.auth}) : super._();
 
   factory _$_GetReportCount.fromJson(Map<String, dynamic> json) =>
       _$$_GetReportCountFromJson(json);
 
   @override
-  final int? community;
+  final int? communityId;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'GetReportCount(community: $community, auth: $auth)';
+    return 'GetReportCount(communityId: $communityId, auth: $auth)';
   }
 
   @override
@@ -4788,13 +4788,13 @@ class _$_GetReportCount extends _GetReportCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetReportCount &&
-            (identical(other.community, community) ||
-                other.community == community) &&
+            (identical(other.communityId, communityId) ||
+                other.communityId == communityId) &&
             (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, community, auth);
+  int get hashCode => Object.hash(runtimeType, communityId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -4808,7 +4808,7 @@ class _$_GetReportCount extends _GetReportCount {
 }
 
 abstract class _GetReportCount extends GetReportCount {
-  const factory _GetReportCount({int? community, required String auth}) =
+  const factory _GetReportCount({int? communityId, required String auth}) =
       _$_GetReportCount;
   const _GetReportCount._() : super._();
 
@@ -4816,7 +4816,7 @@ abstract class _GetReportCount extends GetReportCount {
       _$_GetReportCount.fromJson;
 
   @override
-  int? get community;
+  int? get communityId;
   @override
   String get auth;
   @override
