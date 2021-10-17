@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'post.dart';
 
@@ -27,7 +28,7 @@ class _$GetPostTearOff {
     );
   }
 
-  GetPost fromJson(Map<String, Object> json) {
+  GetPost fromJson(Map<String, Object?> json) {
     return GetPost.fromJson(json);
   }
 }
@@ -113,14 +114,14 @@ class __$GetPostCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_GetPost extends _GetPost {
   const _$_GetPost({required this.id, this.auth}) : super._();
 
   factory _$_GetPost.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetPostFromJson(json);
+      _$$_GetPostFromJson(json);
 
   @override
   final int id;
@@ -135,18 +136,14 @@ class _$_GetPost extends _GetPost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetPost &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _GetPost &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, id, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -155,7 +152,7 @@ class _$_GetPost extends _GetPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetPostToJson(this);
+    return _$$_GetPostToJson(this);
   }
 }
 
@@ -166,9 +163,9 @@ abstract class _GetPost extends GetPost {
   factory _GetPost.fromJson(Map<String, dynamic> json) = _$_GetPost.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$GetPostCopyWith<_GetPost> get copyWith =>
@@ -200,7 +197,7 @@ class _$CreatePostTearOff {
     );
   }
 
-  CreatePost fromJson(Map<String, Object> json) {
+  CreatePost fromJson(Map<String, Object?> json) {
     return CreatePost.fromJson(json);
   }
 }
@@ -346,9 +343,9 @@ class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_CreatePost extends _CreatePost {
   const _$_CreatePost(
       {required this.name,
@@ -360,7 +357,7 @@ class _$_CreatePost extends _CreatePost {
       : super._();
 
   factory _$_CreatePost.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreatePostFromJson(json);
+      _$$_CreatePostFromJson(json);
 
   @override
   final String name;
@@ -383,31 +380,20 @@ class _$_CreatePost extends _CreatePost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CreatePost &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.body, body) ||
-                const DeepCollectionEquality().equals(other.body, body)) &&
-            (identical(other.nsfw, nsfw) ||
-                const DeepCollectionEquality().equals(other.nsfw, nsfw)) &&
+        (other.runtimeType == runtimeType &&
+            other is _CreatePost &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.communityId == communityId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(body) ^
-      const DeepCollectionEquality().hash(nsfw) ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(auth);
+      Object.hash(runtimeType, name, url, body, nsfw, communityId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -416,7 +402,7 @@ class _$_CreatePost extends _CreatePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreatePostToJson(this);
+    return _$$_CreatePostToJson(this);
   }
 }
 
@@ -434,17 +420,17 @@ abstract class _CreatePost extends CreatePost {
       _$_CreatePost.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get body => throw _privateConstructorUsedError;
+  String? get body;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$CreatePostCopyWith<_CreatePost> get copyWith =>
@@ -480,7 +466,7 @@ class _$GetPostsTearOff {
     );
   }
 
-  GetPosts fromJson(Map<String, Object> json) {
+  GetPosts fromJson(Map<String, Object?> json) {
     return GetPosts.fromJson(json);
   }
 }
@@ -650,9 +636,9 @@ class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_GetPosts extends _GetPosts {
   const _$_GetPosts(
       {@JsonKey(name: 'type_') this.type,
@@ -666,7 +652,7 @@ class _$_GetPosts extends _GetPosts {
       : super._();
 
   factory _$_GetPosts.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetPostsFromJson(json);
+      _$$_GetPostsFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
@@ -694,39 +680,24 @@ class _$_GetPosts extends _GetPosts {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetPosts &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.sort, sort) ||
-                const DeepCollectionEquality().equals(other.sort, sort)) &&
-            (identical(other.page, page) ||
-                const DeepCollectionEquality().equals(other.page, page)) &&
-            (identical(other.limit, limit) ||
-                const DeepCollectionEquality().equals(other.limit, limit)) &&
+        (other.runtimeType == runtimeType &&
+            other is _GetPosts &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
+                other.communityId == communityId) &&
             (identical(other.communityName, communityName) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityName, communityName)) &&
+                other.communityName == communityName) &&
             (identical(other.savedOnly, savedOnly) ||
-                const DeepCollectionEquality()
-                    .equals(other.savedOnly, savedOnly)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.savedOnly == savedOnly) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(sort) ^
-      const DeepCollectionEquality().hash(page) ^
-      const DeepCollectionEquality().hash(limit) ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(communityName) ^
-      const DeepCollectionEquality().hash(savedOnly) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, type, sort, page, limit,
+      communityId, communityName, savedOnly, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -735,7 +706,7 @@ class _$_GetPosts extends _GetPosts {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetPostsToJson(this);
+    return _$$_GetPostsToJson(this);
   }
 }
 
@@ -755,21 +726,21 @@ abstract class _GetPosts extends GetPosts {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type => throw _privateConstructorUsedError;
+  PostListingType? get type;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  String? get communityName => throw _privateConstructorUsedError;
+  String? get communityName;
   @override
-  bool? get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$GetPostsCopyWith<_GetPosts> get copyWith =>
@@ -793,7 +764,7 @@ class _$CreatePostLikeTearOff {
     );
   }
 
-  CreatePostLike fromJson(Map<String, Object> json) {
+  CreatePostLike fromJson(Map<String, Object?> json) {
     return CreatePostLike.fromJson(json);
   }
 }
@@ -897,16 +868,16 @@ class __$CreatePostLikeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_CreatePostLike extends _CreatePostLike {
   const _$_CreatePostLike(
       {required this.postId, required this.score, required this.auth})
       : super._();
 
   factory _$_CreatePostLike.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreatePostLikeFromJson(json);
+      _$$_CreatePostLikeFromJson(json);
 
   @override
   final int postId;
@@ -923,21 +894,15 @@ class _$_CreatePostLike extends _CreatePostLike {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CreatePostLike &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _CreatePostLike &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(score) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, score, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -946,7 +911,7 @@ class _$_CreatePostLike extends _CreatePostLike {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreatePostLikeToJson(this);
+    return _$$_CreatePostLikeToJson(this);
   }
 }
 
@@ -961,11 +926,11 @@ abstract class _CreatePostLike extends CreatePostLike {
       _$_CreatePostLike.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  VoteType get score => throw _privateConstructorUsedError;
+  VoteType get score;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$CreatePostLikeCopyWith<_CreatePostLike> get copyWith =>
@@ -997,7 +962,7 @@ class _$EditPostTearOff {
     );
   }
 
-  EditPost fromJson(Map<String, Object> json) {
+  EditPost fromJson(Map<String, Object?> json) {
     return EditPost.fromJson(json);
   }
 }
@@ -1140,9 +1105,9 @@ class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_EditPost extends _EditPost {
   const _$_EditPost(
       {required this.postId,
@@ -1154,7 +1119,7 @@ class _$_EditPost extends _EditPost {
       : super._();
 
   factory _$_EditPost.fromJson(Map<String, dynamic> json) =>
-      _$_$_EditPostFromJson(json);
+      _$$_EditPostFromJson(json);
 
   @override
   final int postId;
@@ -1177,30 +1142,19 @@ class _$_EditPost extends _EditPost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _EditPost &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.body, body) ||
-                const DeepCollectionEquality().equals(other.body, body)) &&
-            (identical(other.nsfw, nsfw) ||
-                const DeepCollectionEquality().equals(other.nsfw, nsfw)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _EditPost &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.body, body) || other.body == body) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(body) ^
-      const DeepCollectionEquality().hash(nsfw) ^
-      const DeepCollectionEquality().hash(auth);
+      Object.hash(runtimeType, postId, name, url, body, nsfw, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1209,7 +1163,7 @@ class _$_EditPost extends _EditPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EditPostToJson(this);
+    return _$$_EditPostToJson(this);
   }
 }
 
@@ -1226,17 +1180,17 @@ abstract class _EditPost extends EditPost {
   factory _EditPost.fromJson(Map<String, dynamic> json) = _$_EditPost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get body => throw _privateConstructorUsedError;
+  String? get body;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$EditPostCopyWith<_EditPost> get copyWith =>
@@ -1260,7 +1214,7 @@ class _$DeletePostTearOff {
     );
   }
 
-  DeletePost fromJson(Map<String, Object> json) {
+  DeletePost fromJson(Map<String, Object?> json) {
     return DeletePost.fromJson(json);
   }
 }
@@ -1361,16 +1315,16 @@ class __$DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_DeletePost extends _DeletePost {
   const _$_DeletePost(
       {required this.postId, required this.deleted, required this.auth})
       : super._();
 
   factory _$_DeletePost.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeletePostFromJson(json);
+      _$$_DeletePostFromJson(json);
 
   @override
   final int postId;
@@ -1387,22 +1341,15 @@ class _$_DeletePost extends _DeletePost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeletePost &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.deleted, deleted) ||
-                const DeepCollectionEquality()
-                    .equals(other.deleted, deleted)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _DeletePost &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(deleted) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, deleted, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1411,7 +1358,7 @@ class _$_DeletePost extends _DeletePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeletePostToJson(this);
+    return _$$_DeletePostToJson(this);
   }
 }
 
@@ -1426,11 +1373,11 @@ abstract class _DeletePost extends DeletePost {
       _$_DeletePost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$DeletePostCopyWith<_DeletePost> get copyWith =>
@@ -1458,7 +1405,7 @@ class _$RemovePostTearOff {
     );
   }
 
-  RemovePost fromJson(Map<String, Object> json) {
+  RemovePost fromJson(Map<String, Object?> json) {
     return RemovePost.fromJson(json);
   }
 }
@@ -1570,9 +1517,9 @@ class __$RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_RemovePost extends _RemovePost {
   const _$_RemovePost(
       {required this.postId,
@@ -1582,7 +1529,7 @@ class _$_RemovePost extends _RemovePost {
       : super._();
 
   factory _$_RemovePost.fromJson(Map<String, dynamic> json) =>
-      _$_$_RemovePostFromJson(json);
+      _$$_RemovePostFromJson(json);
 
   @override
   final int postId;
@@ -1601,25 +1548,16 @@ class _$_RemovePost extends _RemovePost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RemovePost &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.removed, removed) ||
-                const DeepCollectionEquality()
-                    .equals(other.removed, removed)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _RemovePost &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(removed) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, removed, reason, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1628,7 +1566,7 @@ class _$_RemovePost extends _RemovePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RemovePostToJson(this);
+    return _$$_RemovePostToJson(this);
   }
 }
 
@@ -1644,13 +1582,13 @@ abstract class _RemovePost extends RemovePost {
       _$_RemovePost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$RemovePostCopyWith<_RemovePost> get copyWith =>
@@ -1674,7 +1612,7 @@ class _$LockPostTearOff {
     );
   }
 
-  LockPost fromJson(Map<String, Object> json) {
+  LockPost fromJson(Map<String, Object?> json) {
     return LockPost.fromJson(json);
   }
 }
@@ -1772,16 +1710,16 @@ class __$LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_LockPost extends _LockPost {
   const _$_LockPost(
       {required this.postId, required this.locked, required this.auth})
       : super._();
 
   factory _$_LockPost.fromJson(Map<String, dynamic> json) =>
-      _$_$_LockPostFromJson(json);
+      _$$_LockPostFromJson(json);
 
   @override
   final int postId;
@@ -1798,21 +1736,15 @@ class _$_LockPost extends _LockPost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _LockPost &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.locked, locked) ||
-                const DeepCollectionEquality().equals(other.locked, locked)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _LockPost &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.locked, locked) || other.locked == locked) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(locked) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, locked, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1821,7 +1753,7 @@ class _$_LockPost extends _LockPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LockPostToJson(this);
+    return _$$_LockPostToJson(this);
   }
 }
 
@@ -1835,11 +1767,11 @@ abstract class _LockPost extends LockPost {
   factory _LockPost.fromJson(Map<String, dynamic> json) = _$_LockPost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get locked => throw _privateConstructorUsedError;
+  bool get locked;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$LockPostCopyWith<_LockPost> get copyWith =>
@@ -1863,7 +1795,7 @@ class _$StickyPostTearOff {
     );
   }
 
-  StickyPost fromJson(Map<String, Object> json) {
+  StickyPost fromJson(Map<String, Object?> json) {
     return StickyPost.fromJson(json);
   }
 }
@@ -1964,16 +1896,16 @@ class __$StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_StickyPost extends _StickyPost {
   const _$_StickyPost(
       {required this.postId, required this.stickied, required this.auth})
       : super._();
 
   factory _$_StickyPost.fromJson(Map<String, dynamic> json) =>
-      _$_$_StickyPostFromJson(json);
+      _$$_StickyPostFromJson(json);
 
   @override
   final int postId;
@@ -1990,22 +1922,16 @@ class _$_StickyPost extends _StickyPost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _StickyPost &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
+        (other.runtimeType == runtimeType &&
+            other is _StickyPost &&
+            (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.stickied, stickied) ||
-                const DeepCollectionEquality()
-                    .equals(other.stickied, stickied)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.stickied == stickied) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(stickied) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, stickied, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2014,7 +1940,7 @@ class _$_StickyPost extends _StickyPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StickyPostToJson(this);
+    return _$$_StickyPostToJson(this);
   }
 }
 
@@ -2029,11 +1955,11 @@ abstract class _StickyPost extends StickyPost {
       _$_StickyPost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get stickied => throw _privateConstructorUsedError;
+  bool get stickied;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$StickyPostCopyWith<_StickyPost> get copyWith =>
@@ -2057,7 +1983,7 @@ class _$SavePostTearOff {
     );
   }
 
-  SavePost fromJson(Map<String, Object> json) {
+  SavePost fromJson(Map<String, Object?> json) {
     return SavePost.fromJson(json);
   }
 }
@@ -2155,16 +2081,16 @@ class __$SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_SavePost extends _SavePost {
   const _$_SavePost(
       {required this.postId, required this.save, required this.auth})
       : super._();
 
   factory _$_SavePost.fromJson(Map<String, dynamic> json) =>
-      _$_$_SavePostFromJson(json);
+      _$$_SavePostFromJson(json);
 
   @override
   final int postId;
@@ -2181,21 +2107,15 @@ class _$_SavePost extends _SavePost {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SavePost &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.save, save) ||
-                const DeepCollectionEquality().equals(other.save, save)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _SavePost &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.save, save) || other.save == save) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(save) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, save, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2204,7 +2124,7 @@ class _$_SavePost extends _SavePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SavePostToJson(this);
+    return _$$_SavePostToJson(this);
   }
 }
 
@@ -2218,11 +2138,11 @@ abstract class _SavePost extends SavePost {
   factory _SavePost.fromJson(Map<String, dynamic> json) = _$_SavePost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get save => throw _privateConstructorUsedError;
+  bool get save;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$SavePostCopyWith<_SavePost> get copyWith =>
@@ -2243,7 +2163,7 @@ class _$GetSiteMetadataTearOff {
     );
   }
 
-  GetSiteMetadata fromJson(Map<String, Object> json) {
+  GetSiteMetadata fromJson(Map<String, Object?> json) {
     return GetSiteMetadata.fromJson(json);
   }
 }
@@ -2325,14 +2245,14 @@ class __$GetSiteMetadataCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_GetSiteMetadata extends _GetSiteMetadata {
   const _$_GetSiteMetadata({required this.url}) : super._();
 
   factory _$_GetSiteMetadata.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetSiteMetadataFromJson(json);
+      _$$_GetSiteMetadataFromJson(json);
 
   @override
   final String url;
@@ -2345,14 +2265,13 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetSiteMetadata &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)));
+        (other.runtimeType == runtimeType &&
+            other is _GetSiteMetadata &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(url);
+  int get hashCode => Object.hash(runtimeType, url);
 
   @JsonKey(ignore: true)
   @override
@@ -2361,7 +2280,7 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetSiteMetadataToJson(this);
+    return _$$_GetSiteMetadataToJson(this);
   }
 }
 
@@ -2373,7 +2292,7 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
       _$_GetSiteMetadata.fromJson;
 
   @override
-  String get url => throw _privateConstructorUsedError;
+  String get url;
   @override
   @JsonKey(ignore: true)
   _$GetSiteMetadataCopyWith<_GetSiteMetadata> get copyWith =>
@@ -2397,7 +2316,7 @@ class _$CreatePostReportTearOff {
     );
   }
 
-  CreatePostReport fromJson(Map<String, Object> json) {
+  CreatePostReport fromJson(Map<String, Object?> json) {
     return CreatePostReport.fromJson(json);
   }
 }
@@ -2501,16 +2420,16 @@ class __$CreatePostReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_CreatePostReport extends _CreatePostReport {
   const _$_CreatePostReport(
       {required this.postId, required this.reason, required this.auth})
       : super._();
 
   factory _$_CreatePostReport.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreatePostReportFromJson(json);
+      _$$_CreatePostReportFromJson(json);
 
   @override
   final int postId;
@@ -2527,21 +2446,15 @@ class _$_CreatePostReport extends _CreatePostReport {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CreatePostReport &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _CreatePostReport &&
+            (identical(other.postId, postId) || other.postId == postId) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, postId, reason, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2550,7 +2463,7 @@ class _$_CreatePostReport extends _CreatePostReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreatePostReportToJson(this);
+    return _$$_CreatePostReportToJson(this);
   }
 }
 
@@ -2565,11 +2478,11 @@ abstract class _CreatePostReport extends CreatePostReport {
       _$_CreatePostReport.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String get reason => throw _privateConstructorUsedError;
+  String get reason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$CreatePostReportCopyWith<_CreatePostReport> get copyWith =>
@@ -2593,7 +2506,7 @@ class _$ResolvePostReportTearOff {
     );
   }
 
-  ResolvePostReport fromJson(Map<String, Object> json) {
+  ResolvePostReport fromJson(Map<String, Object?> json) {
     return ResolvePostReport.fromJson(json);
   }
 }
@@ -2697,16 +2610,16 @@ class __$ResolvePostReportCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_ResolvePostReport extends _ResolvePostReport {
   const _$_ResolvePostReport(
       {required this.reportId, required this.resolved, required this.auth})
       : super._();
 
   factory _$_ResolvePostReport.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResolvePostReportFromJson(json);
+      _$$_ResolvePostReportFromJson(json);
 
   @override
   final int reportId;
@@ -2723,23 +2636,17 @@ class _$_ResolvePostReport extends _ResolvePostReport {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResolvePostReport &&
+        (other.runtimeType == runtimeType &&
+            other is _ResolvePostReport &&
             (identical(other.reportId, reportId) ||
-                const DeepCollectionEquality()
-                    .equals(other.reportId, reportId)) &&
+                other.reportId == reportId) &&
             (identical(other.resolved, resolved) ||
-                const DeepCollectionEquality()
-                    .equals(other.resolved, resolved)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.resolved == resolved) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(reportId) ^
-      const DeepCollectionEquality().hash(resolved) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2748,7 +2655,7 @@ class _$_ResolvePostReport extends _ResolvePostReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResolvePostReportToJson(this);
+    return _$$_ResolvePostReportToJson(this);
   }
 }
 
@@ -2763,11 +2670,11 @@ abstract class _ResolvePostReport extends ResolvePostReport {
       _$_ResolvePostReport.fromJson;
 
   @override
-  int get reportId => throw _privateConstructorUsedError;
+  int get reportId;
   @override
-  bool get resolved => throw _privateConstructorUsedError;
+  bool get resolved;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$ResolvePostReportCopyWith<_ResolvePostReport> get copyWith =>
@@ -2792,7 +2699,7 @@ class _$ListPostReportsTearOff {
     );
   }
 
-  ListPostReports fromJson(Map<String, Object> json) {
+  ListPostReports fromJson(Map<String, Object?> json) {
     return ListPostReports.fromJson(json);
   }
 }
@@ -2907,16 +2814,16 @@ class __$ListPostReportsCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_ListPostReports extends _ListPostReports {
   const _$_ListPostReports(
       {this.page, this.limit, this.community, required this.auth})
       : super._();
 
   factory _$_ListPostReports.fromJson(Map<String, dynamic> json) =>
-      _$_$_ListPostReportsFromJson(json);
+      _$$_ListPostReportsFromJson(json);
 
   @override
   final int? page;
@@ -2935,25 +2842,17 @@ class _$_ListPostReports extends _ListPostReports {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ListPostReports &&
-            (identical(other.page, page) ||
-                const DeepCollectionEquality().equals(other.page, page)) &&
-            (identical(other.limit, limit) ||
-                const DeepCollectionEquality().equals(other.limit, limit)) &&
+        (other.runtimeType == runtimeType &&
+            other is _ListPostReports &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.community == community) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(page) ^
-      const DeepCollectionEquality().hash(limit) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, page, limit, community, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2962,7 +2861,7 @@ class _$_ListPostReports extends _ListPostReports {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ListPostReportsToJson(this);
+    return _$$_ListPostReportsToJson(this);
   }
 }
 
@@ -2978,13 +2877,13 @@ abstract class _ListPostReports extends ListPostReports {
       _$_ListPostReports.fromJson;
 
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get community => throw _privateConstructorUsedError;
+  int? get community;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$ListPostReportsCopyWith<_ListPostReports> get copyWith =>

@@ -7,13 +7,13 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  json_annotation: ^4.0.1
+  json_annotation: ^4.3.0
   http: ^0.13.1
-  freezed_annotation: ^0.14.1
+  freezed_annotation: ^0.15.0
   web_socket_channel: ^2.0.0
 
 dev_dependencies:
-  build_runner: ^1.12.2
-  freezed: ^0.14.1+1
-  json_serializable: ^4.1.0
+  build_runner: ^2.1.4
+  freezed: ^0.15.0+1
+  json_serializable: ^6.0.0
   test: ^1.16.8

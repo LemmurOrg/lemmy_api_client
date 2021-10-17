@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'views.dart';
 
@@ -31,7 +32,7 @@ class _$PersonViewSafeTearOff {
     );
   }
 
-  PersonViewSafe fromJson(Map<String, Object> json) {
+  PersonViewSafe fromJson(Map<String, Object?> json) {
     return PersonViewSafe.fromJson(json);
   }
 }
@@ -157,16 +158,16 @@ class __$PersonViewSafeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonViewSafe extends _PersonViewSafe {
   _$_PersonViewSafe(
       {required this.person, required this.counts, required this.instanceHost})
       : super._();
 
   factory _$_PersonViewSafe.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonViewSafeFromJson(json);
+      _$$_PersonViewSafeFromJson(json);
 
   @override
   final PersonSafe person;
@@ -183,22 +184,16 @@ class _$_PersonViewSafe extends _PersonViewSafe {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PersonViewSafe &&
-            (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+        (other.runtimeType == runtimeType &&
+            other is _PersonViewSafe &&
+            (identical(other.person, person) || other.person == person) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, person, counts, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -207,7 +202,7 @@ class _$_PersonViewSafe extends _PersonViewSafe {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PersonViewSafeToJson(this);
+    return _$$_PersonViewSafeToJson(this);
   }
 }
 
@@ -222,11 +217,11 @@ abstract class _PersonViewSafe extends PersonViewSafe {
       _$_PersonViewSafe.fromJson;
 
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  PersonAggregates get counts => throw _privateConstructorUsedError;
+  PersonAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PersonViewSafeCopyWith<_PersonViewSafe> get copyWith =>
@@ -272,7 +267,7 @@ class _$PersonMentionViewTearOff {
     );
   }
 
-  PersonMentionView fromJson(Map<String, Object> json) {
+  PersonMentionView fromJson(Map<String, Object?> json) {
     return PersonMentionView.fromJson(json);
   }
 }
@@ -584,9 +579,9 @@ class __$PersonMentionViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonMentionView extends _PersonMentionView {
   _$_PersonMentionView(
       {required this.personMention,
@@ -605,7 +600,7 @@ class _$_PersonMentionView extends _PersonMentionView {
       : super._();
 
   factory _$_PersonMentionView.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonMentionViewFromJson(json);
+      _$$_PersonMentionViewFromJson(json);
 
   @override
   final PersonMention personMention;
@@ -642,62 +637,48 @@ class _$_PersonMentionView extends _PersonMentionView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PersonMentionView &&
+        (other.runtimeType == runtimeType &&
+            other is _PersonMentionView &&
             (identical(other.personMention, personMention) ||
-                const DeepCollectionEquality()
-                    .equals(other.personMention, personMention)) &&
-            (identical(other.comment, comment) ||
-                const DeepCollectionEquality()
-                    .equals(other.comment, comment)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.personMention == personMention) &&
+            (identical(other.comment, comment) || other.comment == comment) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.recipient, recipient) ||
-                const DeepCollectionEquality()
-                    .equals(other.recipient, recipient)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+                other.recipient == recipient) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.creatorBannedFromCommunity,
                     creatorBannedFromCommunity) ||
-                const DeepCollectionEquality().equals(
-                    other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity)) &&
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
             (identical(other.subscribed, subscribed) ||
-                const DeepCollectionEquality()
-                    .equals(other.subscribed, subscribed)) &&
-            (identical(other.saved, saved) ||
-                const DeepCollectionEquality().equals(other.saved, saved)) &&
+                other.subscribed == subscribed) &&
+            (identical(other.saved, saved) || other.saved == saved) &&
             (identical(other.creatorBlocked, creatorBlocked) ||
-                const DeepCollectionEquality()
-                    .equals(other.creatorBlocked, creatorBlocked)) &&
-            (identical(other.myVote, myVote) ||
-                const DeepCollectionEquality().equals(other.myVote, myVote)) &&
+                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.myVote, myVote) || other.myVote == myVote) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(personMention) ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(recipient) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(creatorBannedFromCommunity) ^
-      const DeepCollectionEquality().hash(subscribed) ^
-      const DeepCollectionEquality().hash(saved) ^
-      const DeepCollectionEquality().hash(creatorBlocked) ^
-      const DeepCollectionEquality().hash(myVote) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      personMention,
+      comment,
+      creator,
+      post,
+      community,
+      recipient,
+      counts,
+      creatorBannedFromCommunity,
+      subscribed,
+      saved,
+      creatorBlocked,
+      myVote,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -706,7 +687,7 @@ class _$_PersonMentionView extends _PersonMentionView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PersonMentionViewToJson(this);
+    return _$$_PersonMentionViewToJson(this);
   }
 }
 
@@ -731,31 +712,31 @@ abstract class _PersonMentionView extends PersonMentionView {
       _$_PersonMentionView.fromJson;
 
   @override
-  PersonMention get personMention => throw _privateConstructorUsedError;
+  PersonMention get personMention;
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  PersonSafe get recipient;
   @override
-  CommentAggregates get counts => throw _privateConstructorUsedError;
+  CommentAggregates get counts;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get saved => throw _privateConstructorUsedError;
+  bool get saved;
   @override
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+  bool get creatorBlocked;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PersonMentionViewCopyWith<_PersonMentionView> get copyWith =>
@@ -784,7 +765,7 @@ class _$LocalUserSettingsViewTearOff {
     );
   }
 
-  LocalUserSettingsView fromJson(Map<String, Object> json) {
+  LocalUserSettingsView fromJson(Map<String, Object?> json) {
     return LocalUserSettingsView.fromJson(json);
   }
 }
@@ -939,9 +920,9 @@ class __$LocalUserSettingsViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_LocalUserSettingsView extends _LocalUserSettingsView {
   _$_LocalUserSettingsView(
       {required this.localUser,
@@ -951,7 +932,7 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
       : super._();
 
   factory _$_LocalUserSettingsView.fromJson(Map<String, dynamic> json) =>
-      _$_$_LocalUserSettingsViewFromJson(json);
+      _$$_LocalUserSettingsViewFromJson(json);
 
   @override
   final LocalUserSettings localUser;
@@ -970,26 +951,19 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _LocalUserSettingsView &&
+        (other.runtimeType == runtimeType &&
+            other is _LocalUserSettingsView &&
             (identical(other.localUser, localUser) ||
-                const DeepCollectionEquality()
-                    .equals(other.localUser, localUser)) &&
-            (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+                other.localUser == localUser) &&
+            (identical(other.person, person) || other.person == person) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(localUser) ^
-      const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(instanceHost);
+      Object.hash(runtimeType, localUser, person, counts, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -999,7 +973,7 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LocalUserSettingsViewToJson(this);
+    return _$$_LocalUserSettingsViewToJson(this);
   }
 }
 
@@ -1015,13 +989,13 @@ abstract class _LocalUserSettingsView extends LocalUserSettingsView {
       _$_LocalUserSettingsView.fromJson;
 
   @override
-  LocalUserSettings get localUser => throw _privateConstructorUsedError;
+  LocalUserSettings get localUser;
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  PersonAggregates get counts => throw _privateConstructorUsedError;
+  PersonAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsViewCopyWith<_LocalUserSettingsView> get copyWith =>
@@ -1049,7 +1023,7 @@ class _$SiteViewTearOff {
     );
   }
 
-  SiteView fromJson(Map<String, Object> json) {
+  SiteView fromJson(Map<String, Object?> json) {
     return SiteView.fromJson(json);
   }
 }
@@ -1198,9 +1172,9 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_SiteView extends _SiteView {
   _$_SiteView(
       {required this.site,
@@ -1210,7 +1184,7 @@ class _$_SiteView extends _SiteView {
       : super._();
 
   factory _$_SiteView.fromJson(Map<String, dynamic> json) =>
-      _$_$_SiteViewFromJson(json);
+      _$$_SiteViewFromJson(json);
 
   @override
   final Site site;
@@ -1229,26 +1203,18 @@ class _$_SiteView extends _SiteView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SiteView &&
-            (identical(other.site, site) ||
-                const DeepCollectionEquality().equals(other.site, site)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+        (other.runtimeType == runtimeType &&
+            other is _SiteView &&
+            (identical(other.site, site) || other.site == site) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(site) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(instanceHost);
+      Object.hash(runtimeType, site, creator, counts, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1257,7 +1223,7 @@ class _$_SiteView extends _SiteView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SiteViewToJson(this);
+    return _$$_SiteViewToJson(this);
   }
 }
 
@@ -1272,13 +1238,13 @@ abstract class _SiteView extends SiteView {
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
   @override
-  Site get site => throw _privateConstructorUsedError;
+  Site get site;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  SiteAggregates get counts => throw _privateConstructorUsedError;
+  SiteAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$SiteViewCopyWith<_SiteView> get copyWith =>
@@ -1306,7 +1272,7 @@ class _$PrivateMessageViewTearOff {
     );
   }
 
-  PrivateMessageView fromJson(Map<String, Object> json) {
+  PrivateMessageView fromJson(Map<String, Object?> json) {
     return PrivateMessageView.fromJson(json);
   }
 }
@@ -1461,9 +1427,9 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PrivateMessageView extends _PrivateMessageView {
   _$_PrivateMessageView(
       {required this.privateMessage,
@@ -1473,7 +1439,7 @@ class _$_PrivateMessageView extends _PrivateMessageView {
       : super._();
 
   factory _$_PrivateMessageView.fromJson(Map<String, dynamic> json) =>
-      _$_$_PrivateMessageViewFromJson(json);
+      _$$_PrivateMessageViewFromJson(json);
 
   @override
   final PrivateMessage privateMessage;
@@ -1492,28 +1458,20 @@ class _$_PrivateMessageView extends _PrivateMessageView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PrivateMessageView &&
+        (other.runtimeType == runtimeType &&
+            other is _PrivateMessageView &&
             (identical(other.privateMessage, privateMessage) ||
-                const DeepCollectionEquality()
-                    .equals(other.privateMessage, privateMessage)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
+                other.privateMessage == privateMessage) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.recipient, recipient) ||
-                const DeepCollectionEquality()
-                    .equals(other.recipient, recipient)) &&
+                other.recipient == recipient) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(privateMessage) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(recipient) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType, privateMessage, creator, recipient, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1522,7 +1480,7 @@ class _$_PrivateMessageView extends _PrivateMessageView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PrivateMessageViewToJson(this);
+    return _$$_PrivateMessageViewToJson(this);
   }
 }
 
@@ -1538,13 +1496,13 @@ abstract class _PrivateMessageView extends PrivateMessageView {
       _$_PrivateMessageView.fromJson;
 
   @override
-  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
+  PrivateMessage get privateMessage;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  PersonSafe get recipient;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PrivateMessageViewCopyWith<_PrivateMessageView> get copyWith =>
@@ -1586,7 +1544,7 @@ class _$PostViewTearOff {
     );
   }
 
-  PostView fromJson(Map<String, Object> json) {
+  PostView fromJson(Map<String, Object?> json) {
     return PostView.fromJson(json);
   }
 }
@@ -1836,9 +1794,9 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PostView extends _PostView {
   _$_PostView(
       {required this.post,
@@ -1855,7 +1813,7 @@ class _$_PostView extends _PostView {
       : super._();
 
   factory _$_PostView.fromJson(Map<String, dynamic> json) =>
-      _$_$_PostViewFromJson(json);
+      _$$_PostViewFromJson(json);
 
   @override
   final Post post;
@@ -1888,53 +1846,42 @@ class _$_PostView extends _PostView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PostView &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
+        (other.runtimeType == runtimeType &&
+            other is _PostView &&
+            (identical(other.post, post) || other.post == post) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.creatorBannedFromCommunity,
                     creatorBannedFromCommunity) ||
-                const DeepCollectionEquality().equals(
-                    other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.subscribed, subscribed) ||
-                const DeepCollectionEquality()
-                    .equals(other.subscribed, subscribed)) &&
-            (identical(other.saved, saved) ||
-                const DeepCollectionEquality().equals(other.saved, saved)) &&
-            (identical(other.read, read) ||
-                const DeepCollectionEquality().equals(other.read, read)) &&
+                other.subscribed == subscribed) &&
+            (identical(other.saved, saved) || other.saved == saved) &&
+            (identical(other.read, read) || other.read == read) &&
             (identical(other.creatorBlocked, creatorBlocked) ||
-                const DeepCollectionEquality()
-                    .equals(other.creatorBlocked, creatorBlocked)) &&
-            (identical(other.myVote, myVote) ||
-                const DeepCollectionEquality().equals(other.myVote, myVote)) &&
+                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.myVote, myVote) || other.myVote == myVote) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(creatorBannedFromCommunity) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(subscribed) ^
-      const DeepCollectionEquality().hash(saved) ^
-      const DeepCollectionEquality().hash(read) ^
-      const DeepCollectionEquality().hash(creatorBlocked) ^
-      const DeepCollectionEquality().hash(myVote) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      post,
+      creator,
+      community,
+      creatorBannedFromCommunity,
+      counts,
+      subscribed,
+      saved,
+      read,
+      creatorBlocked,
+      myVote,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -1943,7 +1890,7 @@ class _$_PostView extends _PostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PostViewToJson(this);
+    return _$$_PostViewToJson(this);
   }
 }
 
@@ -1965,27 +1912,27 @@ abstract class _PostView extends PostView {
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  PostAggregates get counts => throw _privateConstructorUsedError;
+  PostAggregates get counts;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get saved => throw _privateConstructorUsedError;
+  bool get saved;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+  bool get creatorBlocked;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PostViewCopyWith<_PostView> get copyWith =>
@@ -2019,7 +1966,7 @@ class _$PostReportViewTearOff {
     );
   }
 
-  PostReportView fromJson(Map<String, Object> json) {
+  PostReportView fromJson(Map<String, Object?> json) {
     return PostReportView.fromJson(json);
   }
 }
@@ -2247,9 +2194,9 @@ class __$PostReportViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PostReportView extends _PostReportView {
   _$_PostReportView(
       {required this.postReport,
@@ -2262,7 +2209,7 @@ class _$_PostReportView extends _PostReportView {
       : super._();
 
   factory _$_PostReportView.fromJson(Map<String, dynamic> json) =>
-      _$_$_PostReportViewFromJson(json);
+      _$$_PostReportViewFromJson(json);
 
   @override
   final PostReport postReport;
@@ -2287,39 +2234,25 @@ class _$_PostReportView extends _PostReportView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PostReportView &&
+        (other.runtimeType == runtimeType &&
+            other is _PostReportView &&
             (identical(other.postReport, postReport) ||
-                const DeepCollectionEquality()
-                    .equals(other.postReport, postReport)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.postReport == postReport) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
+                other.community == community) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.postCreator, postCreator) ||
-                const DeepCollectionEquality()
-                    .equals(other.postCreator, postCreator)) &&
+                other.postCreator == postCreator) &&
             (identical(other.resolver, resolver) ||
-                const DeepCollectionEquality()
-                    .equals(other.resolver, resolver)) &&
+                other.resolver == resolver) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(postReport) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(postCreator) ^
-      const DeepCollectionEquality().hash(resolver) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, postReport, post, community,
+      creator, postCreator, resolver, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2328,7 +2261,7 @@ class _$_PostReportView extends _PostReportView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PostReportViewToJson(this);
+    return _$$_PostReportViewToJson(this);
   }
 }
 
@@ -2347,19 +2280,19 @@ abstract class _PostReportView extends PostReportView {
       _$_PostReportView.fromJson;
 
   @override
-  PostReport get postReport => throw _privateConstructorUsedError;
+  PostReport get postReport;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe get postCreator => throw _privateConstructorUsedError;
+  PersonSafe get postCreator;
   @override
-  PersonSafe? get resolver => throw _privateConstructorUsedError;
+  PersonSafe? get resolver;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PostReportViewCopyWith<_PostReportView> get copyWith =>
@@ -2403,7 +2336,7 @@ class _$CommentViewTearOff {
     );
   }
 
-  CommentView fromJson(Map<String, Object> json) {
+  CommentView fromJson(Map<String, Object?> json) {
     return CommentView.fromJson(json);
   }
 }
@@ -2694,9 +2627,9 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommentView extends _CommentView {
   _$_CommentView(
       {required this.comment,
@@ -2714,7 +2647,7 @@ class _$_CommentView extends _CommentView {
       : super._();
 
   factory _$_CommentView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommentViewFromJson(json);
+      _$$_CommentViewFromJson(json);
 
   @override
   final Comment comment;
@@ -2749,58 +2682,45 @@ class _$_CommentView extends _CommentView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommentView &&
-            (identical(other.comment, comment) ||
-                const DeepCollectionEquality()
-                    .equals(other.comment, comment)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
+        (other.runtimeType == runtimeType &&
+            other is _CommentView &&
+            (identical(other.comment, comment) || other.comment == comment) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.recipient, recipient) ||
-                const DeepCollectionEquality()
-                    .equals(other.recipient, recipient)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.recipient == recipient) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+                other.community == community) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.creatorBannedFromCommunity,
                     creatorBannedFromCommunity) ||
-                const DeepCollectionEquality().equals(
-                    other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity)) &&
+                other.creatorBannedFromCommunity ==
+                    creatorBannedFromCommunity) &&
             (identical(other.subscribed, subscribed) ||
-                const DeepCollectionEquality()
-                    .equals(other.subscribed, subscribed)) &&
-            (identical(other.saved, saved) ||
-                const DeepCollectionEquality().equals(other.saved, saved)) &&
+                other.subscribed == subscribed) &&
+            (identical(other.saved, saved) || other.saved == saved) &&
             (identical(other.creatorBlocked, creatorBlocked) ||
-                const DeepCollectionEquality()
-                    .equals(other.creatorBlocked, creatorBlocked)) &&
-            (identical(other.myVote, myVote) ||
-                const DeepCollectionEquality().equals(other.myVote, myVote)) &&
+                other.creatorBlocked == creatorBlocked) &&
+            (identical(other.myVote, myVote) || other.myVote == myVote) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(recipient) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(creatorBannedFromCommunity) ^
-      const DeepCollectionEquality().hash(subscribed) ^
-      const DeepCollectionEquality().hash(saved) ^
-      const DeepCollectionEquality().hash(creatorBlocked) ^
-      const DeepCollectionEquality().hash(myVote) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      comment,
+      creator,
+      recipient,
+      post,
+      community,
+      counts,
+      creatorBannedFromCommunity,
+      subscribed,
+      saved,
+      creatorBlocked,
+      myVote,
+      instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -2809,7 +2729,7 @@ class _$_CommentView extends _CommentView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommentViewToJson(this);
+    return _$$_CommentViewToJson(this);
   }
 }
 
@@ -2833,29 +2753,29 @@ abstract class _CommentView extends CommentView {
       _$_CommentView.fromJson;
 
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe? get recipient => throw _privateConstructorUsedError;
+  PersonSafe? get recipient;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  CommentAggregates get counts => throw _privateConstructorUsedError;
+  CommentAggregates get counts;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get saved => throw _privateConstructorUsedError;
+  bool get saved;
   @override
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+  bool get creatorBlocked;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommentViewCopyWith<_CommentView> get copyWith =>
@@ -2891,7 +2811,7 @@ class _$CommentReportViewTearOff {
     );
   }
 
-  CommentReportView fromJson(Map<String, Object> json) {
+  CommentReportView fromJson(Map<String, Object?> json) {
     return CommentReportView.fromJson(json);
   }
 }
@@ -3142,9 +3062,9 @@ class __$CommentReportViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommentReportView extends _CommentReportView {
   _$_CommentReportView(
       {required this.commentReport,
@@ -3158,7 +3078,7 @@ class _$_CommentReportView extends _CommentReportView {
       : super._();
 
   factory _$_CommentReportView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommentReportViewFromJson(json);
+      _$$_CommentReportViewFromJson(json);
 
   @override
   final CommentReport commentReport;
@@ -3185,43 +3105,26 @@ class _$_CommentReportView extends _CommentReportView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommentReportView &&
+        (other.runtimeType == runtimeType &&
+            other is _CommentReportView &&
             (identical(other.commentReport, commentReport) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentReport, commentReport)) &&
-            (identical(other.comment, comment) ||
-                const DeepCollectionEquality()
-                    .equals(other.comment, comment)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.commentReport == commentReport) &&
+            (identical(other.comment, comment) || other.comment == comment) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
-            (identical(other.creator, creator) ||
-                const DeepCollectionEquality()
-                    .equals(other.creator, creator)) &&
+                other.community == community) &&
+            (identical(other.creator, creator) || other.creator == creator) &&
             (identical(other.commentCreator, commentCreator) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentCreator, commentCreator)) &&
+                other.commentCreator == commentCreator) &&
             (identical(other.resolver, resolver) ||
-                const DeepCollectionEquality()
-                    .equals(other.resolver, resolver)) &&
+                other.resolver == resolver) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(commentReport) ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(creator) ^
-      const DeepCollectionEquality().hash(commentCreator) ^
-      const DeepCollectionEquality().hash(resolver) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, commentReport, comment, post,
+      community, creator, commentCreator, resolver, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3230,7 +3133,7 @@ class _$_CommentReportView extends _CommentReportView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommentReportViewToJson(this);
+    return _$$_CommentReportViewToJson(this);
   }
 }
 
@@ -3250,21 +3153,21 @@ abstract class _CommentReportView extends CommentReportView {
       _$_CommentReportView.fromJson;
 
   @override
-  CommentReport get commentReport => throw _privateConstructorUsedError;
+  CommentReport get commentReport;
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe get commentCreator => throw _privateConstructorUsedError;
+  PersonSafe get commentCreator;
   @override
-  PersonSafe? get resolver => throw _privateConstructorUsedError;
+  PersonSafe? get resolver;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommentReportViewCopyWith<_CommentReportView> get copyWith =>
@@ -3294,7 +3197,7 @@ class _$ModAddCommunityViewTearOff {
     );
   }
 
-  ModAddCommunityView fromJson(Map<String, Object> json) {
+  ModAddCommunityView fromJson(Map<String, Object?> json) {
     return ModAddCommunityView.fromJson(json);
   }
 }
@@ -3472,9 +3375,9 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModAddCommunityView extends _ModAddCommunityView {
   _$_ModAddCommunityView(
       {required this.modAddCommunity,
@@ -3485,7 +3388,7 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
       : super._();
 
   factory _$_ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModAddCommunityViewFromJson(json);
+      _$$_ModAddCommunityViewFromJson(json);
 
   @override
   final ModAddCommunity modAddCommunity;
@@ -3506,32 +3409,23 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModAddCommunityView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModAddCommunityView &&
             (identical(other.modAddCommunity, modAddCommunity) ||
-                const DeepCollectionEquality()
-                    .equals(other.modAddCommunity, modAddCommunity)) &&
+                other.modAddCommunity == modAddCommunity) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.moddedPerson, moddedPerson) ||
-                const DeepCollectionEquality()
-                    .equals(other.moddedPerson, moddedPerson)) &&
+                other.moddedPerson == moddedPerson) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modAddCommunity) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(moddedPerson) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, modAddCommunity, moderator,
+      community, moddedPerson, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3541,7 +3435,7 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModAddCommunityViewToJson(this);
+    return _$$_ModAddCommunityViewToJson(this);
   }
 }
 
@@ -3558,15 +3452,15 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
       _$_ModAddCommunityView.fromJson;
 
   @override
-  ModAddCommunity get modAddCommunity => throw _privateConstructorUsedError;
+  ModAddCommunity get modAddCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModAddCommunityViewCopyWith<_ModAddCommunityView> get copyWith =>
@@ -3597,7 +3491,7 @@ class _$ModTransferCommunityViewTearOff {
     );
   }
 
-  ModTransferCommunityView fromJson(Map<String, Object> json) {
+  ModTransferCommunityView fromJson(Map<String, Object?> json) {
     return ModTransferCommunityView.fromJson(json);
   }
 }
@@ -3778,9 +3672,9 @@ class __$ModTransferCommunityViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModTransferCommunityView extends _ModTransferCommunityView {
   _$_ModTransferCommunityView(
       {required this.modTransferCommunity,
@@ -3791,7 +3685,7 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
       : super._();
 
   factory _$_ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModTransferCommunityViewFromJson(json);
+      _$$_ModTransferCommunityViewFromJson(json);
 
   @override
   final ModTransferCommunity modTransferCommunity;
@@ -3812,32 +3706,23 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModTransferCommunityView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModTransferCommunityView &&
             (identical(other.modTransferCommunity, modTransferCommunity) ||
-                const DeepCollectionEquality().equals(
-                    other.modTransferCommunity, modTransferCommunity)) &&
+                other.modTransferCommunity == modTransferCommunity) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.moddedPerson, moddedPerson) ||
-                const DeepCollectionEquality()
-                    .equals(other.moddedPerson, moddedPerson)) &&
+                other.moddedPerson == moddedPerson) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modTransferCommunity) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(moddedPerson) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, modTransferCommunity, moderator,
+      community, moddedPerson, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -3847,7 +3732,7 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModTransferCommunityViewToJson(this);
+    return _$$_ModTransferCommunityViewToJson(this);
   }
 }
 
@@ -3864,16 +3749,15 @@ abstract class _ModTransferCommunityView extends ModTransferCommunityView {
       _$_ModTransferCommunityView.fromJson;
 
   @override
-  ModTransferCommunity get modTransferCommunity =>
-      throw _privateConstructorUsedError;
+  ModTransferCommunity get modTransferCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModTransferCommunityViewCopyWith<_ModTransferCommunityView> get copyWith =>
@@ -3901,7 +3785,7 @@ class _$ModAddViewTearOff {
     );
   }
 
-  ModAddView fromJson(Map<String, Object> json) {
+  ModAddView fromJson(Map<String, Object?> json) {
     return ModAddView.fromJson(json);
   }
 }
@@ -4053,9 +3937,9 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModAddView extends _ModAddView {
   _$_ModAddView(
       {required this.modAdd,
@@ -4065,7 +3949,7 @@ class _$_ModAddView extends _ModAddView {
       : super._();
 
   factory _$_ModAddView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModAddViewFromJson(json);
+      _$$_ModAddViewFromJson(json);
 
   @override
   final ModAdd modAdd;
@@ -4084,27 +3968,20 @@ class _$_ModAddView extends _ModAddView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModAddView &&
-            (identical(other.modAdd, modAdd) ||
-                const DeepCollectionEquality().equals(other.modAdd, modAdd)) &&
+        (other.runtimeType == runtimeType &&
+            other is _ModAddView &&
+            (identical(other.modAdd, modAdd) || other.modAdd == modAdd) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.moddedPerson, moddedPerson) ||
-                const DeepCollectionEquality()
-                    .equals(other.moddedPerson, moddedPerson)) &&
+                other.moddedPerson == moddedPerson) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modAdd) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(moddedPerson) ^
-      const DeepCollectionEquality().hash(instanceHost);
+      Object.hash(runtimeType, modAdd, moderator, moddedPerson, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4113,7 +3990,7 @@ class _$_ModAddView extends _ModAddView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModAddViewToJson(this);
+    return _$$_ModAddViewToJson(this);
   }
 }
 
@@ -4129,13 +4006,13 @@ abstract class _ModAddView extends ModAddView {
       _$_ModAddView.fromJson;
 
   @override
-  ModAdd get modAdd => throw _privateConstructorUsedError;
+  ModAdd get modAdd;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModAddViewCopyWith<_ModAddView> get copyWith =>
@@ -4166,7 +4043,7 @@ class _$ModBanFromCommunityViewTearOff {
     );
   }
 
-  ModBanFromCommunityView fromJson(Map<String, Object> json) {
+  ModBanFromCommunityView fromJson(Map<String, Object?> json) {
     return ModBanFromCommunityView.fromJson(json);
   }
 }
@@ -4347,9 +4224,9 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
   _$_ModBanFromCommunityView(
       {required this.modBanFromCommunity,
@@ -4360,7 +4237,7 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
       : super._();
 
   factory _$_ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModBanFromCommunityViewFromJson(json);
+      _$$_ModBanFromCommunityViewFromJson(json);
 
   @override
   final ModBanFromCommunity modBanFromCommunity;
@@ -4381,32 +4258,23 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModBanFromCommunityView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModBanFromCommunityView &&
             (identical(other.modBanFromCommunity, modBanFromCommunity) ||
-                const DeepCollectionEquality()
-                    .equals(other.modBanFromCommunity, modBanFromCommunity)) &&
+                other.modBanFromCommunity == modBanFromCommunity) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.bannedPerson, bannedPerson) ||
-                const DeepCollectionEquality()
-                    .equals(other.bannedPerson, bannedPerson)) &&
+                other.bannedPerson == bannedPerson) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modBanFromCommunity) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(bannedPerson) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, modBanFromCommunity, moderator,
+      community, bannedPerson, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4416,7 +4284,7 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModBanFromCommunityViewToJson(this);
+    return _$$_ModBanFromCommunityViewToJson(this);
   }
 }
 
@@ -4433,16 +4301,15 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
       _$_ModBanFromCommunityView.fromJson;
 
   @override
-  ModBanFromCommunity get modBanFromCommunity =>
-      throw _privateConstructorUsedError;
+  ModBanFromCommunity get modBanFromCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  PersonSafe get bannedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModBanFromCommunityViewCopyWith<_ModBanFromCommunityView> get copyWith =>
@@ -4470,7 +4337,7 @@ class _$ModBanViewTearOff {
     );
   }
 
-  ModBanView fromJson(Map<String, Object> json) {
+  ModBanView fromJson(Map<String, Object?> json) {
     return ModBanView.fromJson(json);
   }
 }
@@ -4622,9 +4489,9 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModBanView extends _ModBanView {
   _$_ModBanView(
       {required this.modBan,
@@ -4634,7 +4501,7 @@ class _$_ModBanView extends _ModBanView {
       : super._();
 
   factory _$_ModBanView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModBanViewFromJson(json);
+      _$$_ModBanViewFromJson(json);
 
   @override
   final ModBan modBan;
@@ -4653,27 +4520,20 @@ class _$_ModBanView extends _ModBanView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModBanView &&
-            (identical(other.modBan, modBan) ||
-                const DeepCollectionEquality().equals(other.modBan, modBan)) &&
+        (other.runtimeType == runtimeType &&
+            other is _ModBanView &&
+            (identical(other.modBan, modBan) || other.modBan == modBan) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.bannedPerson, bannedPerson) ||
-                const DeepCollectionEquality()
-                    .equals(other.bannedPerson, bannedPerson)) &&
+                other.bannedPerson == bannedPerson) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modBan) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(bannedPerson) ^
-      const DeepCollectionEquality().hash(instanceHost);
+      Object.hash(runtimeType, modBan, moderator, bannedPerson, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4682,7 +4542,7 @@ class _$_ModBanView extends _ModBanView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModBanViewToJson(this);
+    return _$$_ModBanViewToJson(this);
   }
 }
 
@@ -4698,13 +4558,13 @@ abstract class _ModBanView extends ModBanView {
       _$_ModBanView.fromJson;
 
   @override
-  ModBan get modBan => throw _privateConstructorUsedError;
+  ModBan get modBan;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  PersonSafe get bannedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModBanViewCopyWith<_ModBanView> get copyWith =>
@@ -4734,7 +4594,7 @@ class _$ModLockPostViewTearOff {
     );
   }
 
-  ModLockPostView fromJson(Map<String, Object> json) {
+  ModLockPostView fromJson(Map<String, Object?> json) {
     return ModLockPostView.fromJson(json);
   }
 }
@@ -4912,9 +4772,9 @@ class __$ModLockPostViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModLockPostView extends _ModLockPostView {
   _$_ModLockPostView(
       {required this.modLockPost,
@@ -4925,7 +4785,7 @@ class _$_ModLockPostView extends _ModLockPostView {
       : super._();
 
   factory _$_ModLockPostView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModLockPostViewFromJson(json);
+      _$$_ModLockPostViewFromJson(json);
 
   @override
   final ModLockPost modLockPost;
@@ -4946,31 +4806,22 @@ class _$_ModLockPostView extends _ModLockPostView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModLockPostView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModLockPostView &&
             (identical(other.modLockPost, modLockPost) ||
-                const DeepCollectionEquality()
-                    .equals(other.modLockPost, modLockPost)) &&
+                other.modLockPost == modLockPost) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.moderator == moderator) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modLockPost) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType, modLockPost, moderator, post, community, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -4979,7 +4830,7 @@ class _$_ModLockPostView extends _ModLockPostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModLockPostViewToJson(this);
+    return _$$_ModLockPostViewToJson(this);
   }
 }
 
@@ -4996,15 +4847,15 @@ abstract class _ModLockPostView extends ModLockPostView {
       _$_ModLockPostView.fromJson;
 
   @override
-  ModLockPost get modLockPost => throw _privateConstructorUsedError;
+  ModLockPost get modLockPost;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModLockPostViewCopyWith<_ModLockPostView> get copyWith =>
@@ -5038,7 +4889,7 @@ class _$ModRemoveCommentViewTearOff {
     );
   }
 
-  ModRemoveCommentView fromJson(Map<String, Object> json) {
+  ModRemoveCommentView fromJson(Map<String, Object?> json) {
     return ModRemoveCommentView.fromJson(json);
   }
 }
@@ -5262,9 +5113,9 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemoveCommentView extends _ModRemoveCommentView {
   _$_ModRemoveCommentView(
       {required this.modRemoveComment,
@@ -5277,7 +5128,7 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
       : super._();
 
   factory _$_ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModRemoveCommentViewFromJson(json);
+      _$$_ModRemoveCommentViewFromJson(json);
 
   @override
   final ModRemoveComment modRemoveComment;
@@ -5302,39 +5153,25 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModRemoveCommentView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModRemoveCommentView &&
             (identical(other.modRemoveComment, modRemoveComment) ||
-                const DeepCollectionEquality()
-                    .equals(other.modRemoveComment, modRemoveComment)) &&
+                other.modRemoveComment == modRemoveComment) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
-            (identical(other.comment, comment) ||
-                const DeepCollectionEquality()
-                    .equals(other.comment, comment)) &&
+                other.moderator == moderator) &&
+            (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.commenter, commenter) ||
-                const DeepCollectionEquality()
-                    .equals(other.commenter, commenter)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.commenter == commenter) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modRemoveComment) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(commenter) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, modRemoveComment, moderator,
+      comment, commenter, post, community, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5344,7 +5181,7 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModRemoveCommentViewToJson(this);
+    return _$$_ModRemoveCommentViewToJson(this);
   }
 }
 
@@ -5363,19 +5200,19 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       _$_ModRemoveCommentView.fromJson;
 
   @override
-  ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
+  ModRemoveComment get modRemoveComment;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  PersonSafe get commenter => throw _privateConstructorUsedError;
+  PersonSafe get commenter;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommentViewCopyWith<_ModRemoveCommentView> get copyWith =>
@@ -5404,7 +5241,7 @@ class _$ModRemoveCommunityViewTearOff {
     );
   }
 
-  ModRemoveCommunityView fromJson(Map<String, Object> json) {
+  ModRemoveCommunityView fromJson(Map<String, Object?> json) {
     return ModRemoveCommunityView.fromJson(json);
   }
 }
@@ -5561,9 +5398,9 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
   _$_ModRemoveCommunityView(
       {required this.modRemoveCommunity,
@@ -5573,7 +5410,7 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
       : super._();
 
   factory _$_ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModRemoveCommunityViewFromJson(json);
+      _$$_ModRemoveCommunityViewFromJson(json);
 
   @override
   final ModRemoveCommunity modRemoveCommunity;
@@ -5592,28 +5429,21 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModRemoveCommunityView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModRemoveCommunityView &&
             (identical(other.modRemoveCommunity, modRemoveCommunity) ||
-                const DeepCollectionEquality()
-                    .equals(other.modRemoveCommunity, modRemoveCommunity)) &&
+                other.modRemoveCommunity == modRemoveCommunity) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modRemoveCommunity) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType, modRemoveCommunity, moderator, community, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5623,7 +5453,7 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModRemoveCommunityViewToJson(this);
+    return _$$_ModRemoveCommunityViewToJson(this);
   }
 }
 
@@ -5639,14 +5469,13 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
       _$_ModRemoveCommunityView.fromJson;
 
   @override
-  ModRemoveCommunity get modRemoveCommunity =>
-      throw _privateConstructorUsedError;
+  ModRemoveCommunity get modRemoveCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommunityViewCopyWith<_ModRemoveCommunityView> get copyWith =>
@@ -5676,7 +5505,7 @@ class _$ModRemovePostViewTearOff {
     );
   }
 
-  ModRemovePostView fromJson(Map<String, Object> json) {
+  ModRemovePostView fromJson(Map<String, Object?> json) {
     return ModRemovePostView.fromJson(json);
   }
 }
@@ -5854,9 +5683,9 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemovePostView extends _ModRemovePostView {
   _$_ModRemovePostView(
       {required this.modRemovePost,
@@ -5867,7 +5696,7 @@ class _$_ModRemovePostView extends _ModRemovePostView {
       : super._();
 
   factory _$_ModRemovePostView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModRemovePostViewFromJson(json);
+      _$$_ModRemovePostViewFromJson(json);
 
   @override
   final ModRemovePost modRemovePost;
@@ -5888,31 +5717,22 @@ class _$_ModRemovePostView extends _ModRemovePostView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModRemovePostView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModRemovePostView &&
             (identical(other.modRemovePost, modRemovePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.modRemovePost, modRemovePost)) &&
+                other.modRemovePost == modRemovePost) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.moderator == moderator) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modRemovePost) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType, modRemovePost, moderator, post, community, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -5921,7 +5741,7 @@ class _$_ModRemovePostView extends _ModRemovePostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModRemovePostViewToJson(this);
+    return _$$_ModRemovePostViewToJson(this);
   }
 }
 
@@ -5938,15 +5758,15 @@ abstract class _ModRemovePostView extends ModRemovePostView {
       _$_ModRemovePostView.fromJson;
 
   @override
-  ModRemovePost get modRemovePost => throw _privateConstructorUsedError;
+  ModRemovePost get modRemovePost;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModRemovePostViewCopyWith<_ModRemovePostView> get copyWith =>
@@ -5976,7 +5796,7 @@ class _$ModStickyPostViewTearOff {
     );
   }
 
-  ModStickyPostView fromJson(Map<String, Object> json) {
+  ModStickyPostView fromJson(Map<String, Object?> json) {
     return ModStickyPostView.fromJson(json);
   }
 }
@@ -6154,9 +5974,9 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModStickyPostView extends _ModStickyPostView {
   _$_ModStickyPostView(
       {required this.modStickyPost,
@@ -6167,7 +5987,7 @@ class _$_ModStickyPostView extends _ModStickyPostView {
       : super._();
 
   factory _$_ModStickyPostView.fromJson(Map<String, dynamic> json) =>
-      _$_$_ModStickyPostViewFromJson(json);
+      _$$_ModStickyPostViewFromJson(json);
 
   @override
   final ModStickyPost modStickyPost;
@@ -6188,31 +6008,22 @@ class _$_ModStickyPostView extends _ModStickyPostView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ModStickyPostView &&
+        (other.runtimeType == runtimeType &&
+            other is _ModStickyPostView &&
             (identical(other.modStickyPost, modStickyPost) ||
-                const DeepCollectionEquality()
-                    .equals(other.modStickyPost, modStickyPost)) &&
+                other.modStickyPost == modStickyPost) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
-            (identical(other.post, post) ||
-                const DeepCollectionEquality().equals(other.post, post)) &&
+                other.moderator == moderator) &&
+            (identical(other.post, post) || other.post == post) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(modStickyPost) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(post) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType, modStickyPost, moderator, post, community, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6221,7 +6032,7 @@ class _$_ModStickyPostView extends _ModStickyPostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ModStickyPostViewToJson(this);
+    return _$$_ModStickyPostViewToJson(this);
   }
 }
 
@@ -6238,15 +6049,15 @@ abstract class _ModStickyPostView extends ModStickyPostView {
       _$_ModStickyPostView.fromJson;
 
   @override
-  ModStickyPost get modStickyPost => throw _privateConstructorUsedError;
+  ModStickyPost get modStickyPost;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$ModStickyPostViewCopyWith<_ModStickyPostView> get copyWith =>
@@ -6273,7 +6084,7 @@ class _$CommunityFollowerViewTearOff {
     );
   }
 
-  CommunityFollowerView fromJson(Map<String, Object> json) {
+  CommunityFollowerView fromJson(Map<String, Object?> json) {
     return CommunityFollowerView.fromJson(json);
   }
 }
@@ -6401,9 +6212,9 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityFollowerView extends _CommunityFollowerView {
   _$_CommunityFollowerView(
       {required this.community,
@@ -6412,7 +6223,7 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
       : super._();
 
   factory _$_CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunityFollowerViewFromJson(json);
+      _$$_CommunityFollowerViewFromJson(json);
 
   @override
   final CommunitySafe community;
@@ -6429,24 +6240,19 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunityFollowerView &&
+        (other.runtimeType == runtimeType &&
+            other is _CommunityFollowerView &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.follower, follower) ||
-                const DeepCollectionEquality()
-                    .equals(other.follower, follower)) &&
+                other.follower == follower) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(follower) ^
-      const DeepCollectionEquality().hash(instanceHost);
+      Object.hash(runtimeType, community, follower, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6456,7 +6262,7 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunityFollowerViewToJson(this);
+    return _$$_CommunityFollowerViewToJson(this);
   }
 }
 
@@ -6471,11 +6277,11 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
       _$_CommunityFollowerView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get follower => throw _privateConstructorUsedError;
+  PersonSafe get follower;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommunityFollowerViewCopyWith<_CommunityFollowerView> get copyWith =>
@@ -6502,7 +6308,7 @@ class _$CommunityModeratorViewTearOff {
     );
   }
 
-  CommunityModeratorView fromJson(Map<String, Object> json) {
+  CommunityModeratorView fromJson(Map<String, Object?> json) {
     return CommunityModeratorView.fromJson(json);
   }
 }
@@ -6630,9 +6436,9 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityModeratorView extends _CommunityModeratorView {
   _$_CommunityModeratorView(
       {required this.community,
@@ -6641,7 +6447,7 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
       : super._();
 
   factory _$_CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunityModeratorViewFromJson(json);
+      _$$_CommunityModeratorViewFromJson(json);
 
   @override
   final CommunitySafe community;
@@ -6658,24 +6464,19 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunityModeratorView &&
+        (other.runtimeType == runtimeType &&
+            other is _CommunityModeratorView &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.moderator, moderator) ||
-                const DeepCollectionEquality()
-                    .equals(other.moderator, moderator)) &&
+                other.moderator == moderator) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(moderator) ^
-      const DeepCollectionEquality().hash(instanceHost);
+      Object.hash(runtimeType, community, moderator, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6685,7 +6486,7 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunityModeratorViewToJson(this);
+    return _$$_CommunityModeratorViewToJson(this);
   }
 }
 
@@ -6700,11 +6501,11 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
       _$_CommunityModeratorView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommunityModeratorViewCopyWith<_CommunityModeratorView> get copyWith =>
@@ -6730,7 +6531,7 @@ class _$PersonBlockViewTearOff {
     );
   }
 
-  PersonBlockView fromJson(Map<String, Object> json) {
+  PersonBlockView fromJson(Map<String, Object?> json) {
     return PersonBlockView.fromJson(json);
   }
 }
@@ -6856,16 +6657,16 @@ class __$PersonBlockViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonBlockView extends _PersonBlockView {
   _$_PersonBlockView(
       {required this.person, required this.target, required this.instanceHost})
       : super._();
 
   factory _$_PersonBlockView.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonBlockViewFromJson(json);
+      _$$_PersonBlockViewFromJson(json);
 
   @override
   final PersonSafe person;
@@ -6882,22 +6683,16 @@ class _$_PersonBlockView extends _PersonBlockView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PersonBlockView &&
-            (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)) &&
-            (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)) &&
+        (other.runtimeType == runtimeType &&
+            other is _PersonBlockView &&
+            (identical(other.person, person) || other.person == person) &&
+            (identical(other.target, target) || other.target == target) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, person, target, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -6906,7 +6701,7 @@ class _$_PersonBlockView extends _PersonBlockView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PersonBlockViewToJson(this);
+    return _$$_PersonBlockViewToJson(this);
   }
 }
 
@@ -6921,11 +6716,11 @@ abstract class _PersonBlockView extends PersonBlockView {
       _$_PersonBlockView.fromJson;
 
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  PersonSafe get target => throw _privateConstructorUsedError;
+  PersonSafe get target;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PersonBlockViewCopyWith<_PersonBlockView> get copyWith =>
@@ -6951,7 +6746,7 @@ class _$CommunityBlockViewTearOff {
     );
   }
 
-  CommunityBlockView fromJson(Map<String, Object> json) {
+  CommunityBlockView fromJson(Map<String, Object?> json) {
     return CommunityBlockView.fromJson(json);
   }
 }
@@ -7077,9 +6872,9 @@ class __$CommunityBlockViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityBlockView extends _CommunityBlockView {
   _$_CommunityBlockView(
       {required this.person,
@@ -7088,7 +6883,7 @@ class _$_CommunityBlockView extends _CommunityBlockView {
       : super._();
 
   factory _$_CommunityBlockView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunityBlockViewFromJson(json);
+      _$$_CommunityBlockViewFromJson(json);
 
   @override
   final PersonSafe person;
@@ -7105,23 +6900,17 @@ class _$_CommunityBlockView extends _CommunityBlockView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunityBlockView &&
-            (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)) &&
+        (other.runtimeType == runtimeType &&
+            other is _CommunityBlockView &&
+            (identical(other.person, person) || other.person == person) &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, person, community, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -7130,7 +6919,7 @@ class _$_CommunityBlockView extends _CommunityBlockView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunityBlockViewToJson(this);
+    return _$$_CommunityBlockViewToJson(this);
   }
 }
 
@@ -7145,11 +6934,11 @@ abstract class _CommunityBlockView extends CommunityBlockView {
       _$_CommunityBlockView.fromJson;
 
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommunityBlockViewCopyWith<_CommunityBlockView> get copyWith =>
@@ -7176,7 +6965,7 @@ class _$CommunityPersonBanViewTearOff {
     );
   }
 
-  CommunityPersonBanView fromJson(Map<String, Object> json) {
+  CommunityPersonBanView fromJson(Map<String, Object?> json) {
     return CommunityPersonBanView.fromJson(json);
   }
 }
@@ -7302,9 +7091,9 @@ class __$CommunityPersonBanViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityPersonBanView extends _CommunityPersonBanView {
   _$_CommunityPersonBanView(
       {required this.community,
@@ -7313,7 +7102,7 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
       : super._();
 
   factory _$_CommunityPersonBanView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunityPersonBanViewFromJson(json);
+      _$$_CommunityPersonBanViewFromJson(json);
 
   @override
   final CommunitySafe community;
@@ -7330,23 +7119,17 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunityPersonBanView &&
+        (other.runtimeType == runtimeType &&
+            other is _CommunityPersonBanView &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
-            (identical(other.person, person) ||
-                const DeepCollectionEquality().equals(other.person, person)) &&
+                other.community == community) &&
+            (identical(other.person, person) || other.person == person) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(person) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, community, person, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -7356,7 +7139,7 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunityPersonBanViewToJson(this);
+    return _$$_CommunityPersonBanViewToJson(this);
   }
 }
 
@@ -7371,11 +7154,11 @@ abstract class _CommunityPersonBanView extends CommunityPersonBanView {
       _$_CommunityPersonBanView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommunityPersonBanViewCopyWith<_CommunityPersonBanView> get copyWith =>
@@ -7405,7 +7188,7 @@ class _$CommunityViewTearOff {
     );
   }
 
-  CommunityView fromJson(Map<String, Object> json) {
+  CommunityView fromJson(Map<String, Object?> json) {
     return CommunityView.fromJson(json);
   }
 }
@@ -7563,9 +7346,9 @@ class __$CommunityViewCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityView extends _CommunityView {
   _$_CommunityView(
       {required this.community,
@@ -7576,7 +7359,7 @@ class _$_CommunityView extends _CommunityView {
       : super._();
 
   factory _$_CommunityView.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunityViewFromJson(json);
+      _$$_CommunityViewFromJson(json);
 
   @override
   final CommunitySafe community;
@@ -7597,31 +7380,21 @@ class _$_CommunityView extends _CommunityView {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunityView &&
+        (other.runtimeType == runtimeType &&
+            other is _CommunityView &&
             (identical(other.community, community) ||
-                const DeepCollectionEquality()
-                    .equals(other.community, community)) &&
+                other.community == community) &&
             (identical(other.subscribed, subscribed) ||
-                const DeepCollectionEquality()
-                    .equals(other.subscribed, subscribed)) &&
-            (identical(other.blocked, blocked) ||
-                const DeepCollectionEquality()
-                    .equals(other.blocked, blocked)) &&
-            (identical(other.counts, counts) ||
-                const DeepCollectionEquality().equals(other.counts, counts)) &&
+                other.subscribed == subscribed) &&
+            (identical(other.blocked, blocked) || other.blocked == blocked) &&
+            (identical(other.counts, counts) || other.counts == counts) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(community) ^
-      const DeepCollectionEquality().hash(subscribed) ^
-      const DeepCollectionEquality().hash(blocked) ^
-      const DeepCollectionEquality().hash(counts) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType, community, subscribed, blocked, counts, instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -7630,7 +7403,7 @@ class _$_CommunityView extends _CommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunityViewToJson(this);
+    return _$$_CommunityViewToJson(this);
   }
 }
 
@@ -7647,15 +7420,15 @@ abstract class _CommunityView extends CommunityView {
       _$_CommunityView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get blocked => throw _privateConstructorUsedError;
+  bool get blocked;
   @override
-  CommunityAggregates get counts => throw _privateConstructorUsedError;
+  CommunityAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$CommunityViewCopyWith<_CommunityView> get copyWith =>

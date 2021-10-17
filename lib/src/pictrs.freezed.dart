@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'pictrs.dart';
 
@@ -27,7 +28,7 @@ class _$PictrsUploadFileTearOff {
     );
   }
 
-  PictrsUploadFile fromJson(Map<String, Object> json) {
+  PictrsUploadFile fromJson(Map<String, Object?> json) {
     return PictrsUploadFile.fromJson(json);
   }
 }
@@ -120,15 +121,15 @@ class __$PictrsUploadFileCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PictrsUploadFile extends _PictrsUploadFile {
   const _$_PictrsUploadFile({required this.deleteToken, required this.file})
       : super._();
 
   factory _$_PictrsUploadFile.fromJson(Map<String, dynamic> json) =>
-      _$_$_PictrsUploadFileFromJson(json);
+      _$$_PictrsUploadFileFromJson(json);
 
   @override
   final String deleteToken;
@@ -143,19 +144,15 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PictrsUploadFile &&
+        (other.runtimeType == runtimeType &&
+            other is _PictrsUploadFile &&
             (identical(other.deleteToken, deleteToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.deleteToken, deleteToken)) &&
-            (identical(other.file, file) ||
-                const DeepCollectionEquality().equals(other.file, file)));
+                other.deleteToken == deleteToken) &&
+            (identical(other.file, file) || other.file == file));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(deleteToken) ^
-      const DeepCollectionEquality().hash(file);
+  int get hashCode => Object.hash(runtimeType, deleteToken, file);
 
   @JsonKey(ignore: true)
   @override
@@ -164,7 +161,7 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PictrsUploadFileToJson(this);
+    return _$$_PictrsUploadFileToJson(this);
   }
 }
 
@@ -178,9 +175,9 @@ abstract class _PictrsUploadFile extends PictrsUploadFile {
       _$_PictrsUploadFile.fromJson;
 
   @override
-  String get deleteToken => throw _privateConstructorUsedError;
+  String get deleteToken;
   @override
-  String get file => throw _privateConstructorUsedError;
+  String get file;
   @override
   @JsonKey(ignore: true)
   _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith =>
@@ -206,7 +203,7 @@ class _$PictrsUploadTearOff {
     );
   }
 
-  PictrsUpload fromJson(Map<String, Object> json) {
+  PictrsUpload fromJson(Map<String, Object?> json) {
     return PictrsUpload.fromJson(json);
   }
 }
@@ -308,16 +305,16 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PictrsUpload extends _PictrsUpload {
   _$_PictrsUpload(
       {required this.msg, required this.files, required this.instanceHost})
       : super._();
 
   factory _$_PictrsUpload.fromJson(Map<String, dynamic> json) =>
-      _$_$_PictrsUploadFromJson(json);
+      _$$_PictrsUploadFromJson(json);
 
   @override
   final String msg;
@@ -334,22 +331,17 @@ class _$_PictrsUpload extends _PictrsUpload {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PictrsUpload &&
-            (identical(other.msg, msg) ||
-                const DeepCollectionEquality().equals(other.msg, msg)) &&
-            (identical(other.files, files) ||
-                const DeepCollectionEquality().equals(other.files, files)) &&
+        (other.runtimeType == runtimeType &&
+            other is _PictrsUpload &&
+            (identical(other.msg, msg) || other.msg == msg) &&
+            const DeepCollectionEquality().equals(other.files, files) &&
             (identical(other.instanceHost, instanceHost) ||
-                const DeepCollectionEquality()
-                    .equals(other.instanceHost, instanceHost)));
+                other.instanceHost == instanceHost));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(msg) ^
-      const DeepCollectionEquality().hash(files) ^
-      const DeepCollectionEquality().hash(instanceHost);
+  int get hashCode => Object.hash(runtimeType, msg,
+      const DeepCollectionEquality().hash(files), instanceHost);
 
   @JsonKey(ignore: true)
   @override
@@ -358,7 +350,7 @@ class _$_PictrsUpload extends _PictrsUpload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PictrsUploadToJson(this);
+    return _$$_PictrsUploadToJson(this);
   }
 }
 
@@ -373,11 +365,11 @@ abstract class _PictrsUpload extends PictrsUpload {
       _$_PictrsUpload.fromJson;
 
   @override
-  String get msg => throw _privateConstructorUsedError;
+  String get msg;
   @override
-  List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
+  List<PictrsUploadFile> get files;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>

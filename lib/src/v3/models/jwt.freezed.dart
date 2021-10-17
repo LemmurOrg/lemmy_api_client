@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'jwt.dart';
 
@@ -28,7 +29,7 @@ class _$JwtPayloadTearOff {
     );
   }
 
-  JwtPayload fromJson(Map<String, Object> json) {
+  JwtPayload fromJson(Map<String, Object?> json) {
     return JwtPayload.fromJson(json);
   }
 }
@@ -129,15 +130,15 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_JwtPayload extends _JwtPayload {
   const _$_JwtPayload({required this.iat, required this.iss, required this.sub})
       : super._();
 
   factory _$_JwtPayload.fromJson(Map<String, dynamic> json) =>
-      _$_$_JwtPayloadFromJson(json);
+      _$$_JwtPayloadFromJson(json);
 
   @override
   final int iat;
@@ -154,21 +155,15 @@ class _$_JwtPayload extends _JwtPayload {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _JwtPayload &&
-            (identical(other.iat, iat) ||
-                const DeepCollectionEquality().equals(other.iat, iat)) &&
-            (identical(other.iss, iss) ||
-                const DeepCollectionEquality().equals(other.iss, iss)) &&
-            (identical(other.sub, sub) ||
-                const DeepCollectionEquality().equals(other.sub, sub)));
+        (other.runtimeType == runtimeType &&
+            other is _JwtPayload &&
+            (identical(other.iat, iat) || other.iat == iat) &&
+            (identical(other.iss, iss) || other.iss == iss) &&
+            (identical(other.sub, sub) || other.sub == sub));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(iat) ^
-      const DeepCollectionEquality().hash(iss) ^
-      const DeepCollectionEquality().hash(sub);
+  int get hashCode => Object.hash(runtimeType, iat, iss, sub);
 
   @JsonKey(ignore: true)
   @override
@@ -177,7 +172,7 @@ class _$_JwtPayload extends _JwtPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_JwtPayloadToJson(this);
+    return _$$_JwtPayloadToJson(this);
   }
 }
 
@@ -192,11 +187,11 @@ abstract class _JwtPayload extends JwtPayload {
       _$_JwtPayload.fromJson;
 
   @override
-  int get iat => throw _privateConstructorUsedError;
+  int get iat;
   @override
-  String get iss => throw _privateConstructorUsedError;
+  String get iss;
   @override
-  int get sub => throw _privateConstructorUsedError;
+  int get sub;
   @override
   @JsonKey(ignore: true)
   _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>

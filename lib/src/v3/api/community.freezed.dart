@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'community.dart';
 
@@ -28,7 +29,7 @@ class _$GetCommunityTearOff {
     );
   }
 
-  GetCommunity fromJson(Map<String, Object> json) {
+  GetCommunity fromJson(Map<String, Object?> json) {
     return GetCommunity.fromJson(json);
   }
 }
@@ -130,14 +131,14 @@ class __$GetCommunityCopyWithImpl<$Res> extends _$GetCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_GetCommunity extends _GetCommunity {
   const _$_GetCommunity({this.id, this.name, this.auth}) : super._();
 
   factory _$_GetCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_GetCommunityFromJson(json);
+      _$$_GetCommunityFromJson(json);
 
   @override
   final int? id;
@@ -154,21 +155,15 @@ class _$_GetCommunity extends _GetCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GetCommunity &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _GetCommunity &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, id, name, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -177,7 +172,7 @@ class _$_GetCommunity extends _GetCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_GetCommunityToJson(this);
+    return _$$_GetCommunityToJson(this);
   }
 }
 
@@ -190,11 +185,11 @@ abstract class _GetCommunity extends GetCommunity {
       _$_GetCommunity.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$GetCommunityCopyWith<_GetCommunity> get copyWith =>
@@ -228,7 +223,7 @@ class _$CreateCommunityTearOff {
     );
   }
 
-  CreateCommunity fromJson(Map<String, Object> json) {
+  CreateCommunity fromJson(Map<String, Object?> json) {
     return CreateCommunity.fromJson(json);
   }
 }
@@ -390,9 +385,9 @@ class __$CreateCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_CreateCommunity extends _CreateCommunity {
   const _$_CreateCommunity(
       {required this.name,
@@ -405,7 +400,7 @@ class _$_CreateCommunity extends _CreateCommunity {
       : super._();
 
   factory _$_CreateCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_CreateCommunityFromJson(json);
+      _$$_CreateCommunityFromJson(json);
 
   @override
   final String name;
@@ -430,34 +425,21 @@ class _$_CreateCommunity extends _CreateCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CreateCommunity &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+        (other.runtimeType == runtimeType &&
+            other is _CreateCommunity &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.banner, banner) ||
-                const DeepCollectionEquality().equals(other.banner, banner)) &&
-            (identical(other.nsfw, nsfw) ||
-                const DeepCollectionEquality().equals(other.nsfw, nsfw)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(banner) ^
-      const DeepCollectionEquality().hash(nsfw) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(
+      runtimeType, name, title, description, icon, banner, nsfw, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -466,7 +448,7 @@ class _$_CreateCommunity extends _CreateCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CreateCommunityToJson(this);
+    return _$$_CreateCommunityToJson(this);
   }
 }
 
@@ -485,19 +467,19 @@ abstract class _CreateCommunity extends CreateCommunity {
       _$_CreateCommunity.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$CreateCommunityCopyWith<_CreateCommunity> get copyWith =>
@@ -527,7 +509,7 @@ class _$ListCommunitiesTearOff {
     );
   }
 
-  ListCommunities fromJson(Map<String, Object> json) {
+  ListCommunities fromJson(Map<String, Object?> json) {
     return ListCommunities.fromJson(json);
   }
 }
@@ -664,9 +646,9 @@ class __$ListCommunitiesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_ListCommunities extends _ListCommunities {
   const _$_ListCommunities(
       {@JsonKey(name: 'type_') this.type,
@@ -677,7 +659,7 @@ class _$_ListCommunities extends _ListCommunities {
       : super._();
 
   factory _$_ListCommunities.fromJson(Map<String, dynamic> json) =>
-      _$_$_ListCommunitiesFromJson(json);
+      _$$_ListCommunitiesFromJson(json);
 
   @override
   @JsonKey(name: 'type_')
@@ -699,27 +681,17 @@ class _$_ListCommunities extends _ListCommunities {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ListCommunities &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.sort, sort) ||
-                const DeepCollectionEquality().equals(other.sort, sort)) &&
-            (identical(other.page, page) ||
-                const DeepCollectionEquality().equals(other.page, page)) &&
-            (identical(other.limit, limit) ||
-                const DeepCollectionEquality().equals(other.limit, limit)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+        (other.runtimeType == runtimeType &&
+            other is _ListCommunities &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.sort, sort) || other.sort == sort) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.limit, limit) || other.limit == limit) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(sort) ^
-      const DeepCollectionEquality().hash(page) ^
-      const DeepCollectionEquality().hash(limit) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, type, sort, page, limit, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -728,7 +700,7 @@ class _$_ListCommunities extends _ListCommunities {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ListCommunitiesToJson(this);
+    return _$$_ListCommunitiesToJson(this);
   }
 }
 
@@ -746,15 +718,15 @@ abstract class _ListCommunities extends ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type => throw _privateConstructorUsedError;
+  PostListingType? get type;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$ListCommunitiesCopyWith<_ListCommunities> get copyWith =>
@@ -788,7 +760,7 @@ class _$BanFromCommunityTearOff {
     );
   }
 
-  BanFromCommunity fromJson(Map<String, Object> json) {
+  BanFromCommunity fromJson(Map<String, Object?> json) {
     return BanFromCommunity.fromJson(json);
   }
 }
@@ -950,9 +922,9 @@ class __$BanFromCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_BanFromCommunity extends _BanFromCommunity {
   const _$_BanFromCommunity(
       {required this.communityId,
@@ -965,7 +937,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
       : super._();
 
   factory _$_BanFromCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_BanFromCommunityFromJson(json);
+      _$$_BanFromCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -990,37 +962,23 @@ class _$_BanFromCommunity extends _BanFromCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BanFromCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _BanFromCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
+                other.communityId == communityId) &&
             (identical(other.personId, personId) ||
-                const DeepCollectionEquality()
-                    .equals(other.personId, personId)) &&
-            (identical(other.ban, ban) ||
-                const DeepCollectionEquality().equals(other.ban, ban)) &&
+                other.personId == personId) &&
+            (identical(other.ban, ban) || other.ban == ban) &&
             (identical(other.removeData, removeData) ||
-                const DeepCollectionEquality()
-                    .equals(other.removeData, removeData)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.expires, expires) ||
-                const DeepCollectionEquality()
-                    .equals(other.expires, expires)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.removeData == removeData) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(personId) ^
-      const DeepCollectionEquality().hash(ban) ^
-      const DeepCollectionEquality().hash(removeData) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(expires) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, communityId, personId, ban,
+      removeData, reason, expires, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1029,7 +987,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BanFromCommunityToJson(this);
+    return _$$_BanFromCommunityToJson(this);
   }
 }
 
@@ -1048,19 +1006,19 @@ abstract class _BanFromCommunity extends BanFromCommunity {
       _$_BanFromCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get ban => throw _privateConstructorUsedError;
+  bool get ban;
   @override
-  bool? get removeData => throw _privateConstructorUsedError;
+  bool? get removeData;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  int? get expires => throw _privateConstructorUsedError;
+  int? get expires;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$BanFromCommunityCopyWith<_BanFromCommunity> get copyWith =>
@@ -1088,7 +1046,7 @@ class _$AddModToCommunityTearOff {
     );
   }
 
-  AddModToCommunity fromJson(Map<String, Object> json) {
+  AddModToCommunity fromJson(Map<String, Object?> json) {
     return AddModToCommunity.fromJson(json);
   }
 }
@@ -1203,9 +1161,9 @@ class __$AddModToCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_AddModToCommunity extends _AddModToCommunity {
   const _$_AddModToCommunity(
       {required this.communityId,
@@ -1215,7 +1173,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
       : super._();
 
   factory _$_AddModToCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_AddModToCommunityFromJson(json);
+      _$$_AddModToCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1234,26 +1192,19 @@ class _$_AddModToCommunity extends _AddModToCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _AddModToCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _AddModToCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
+                other.communityId == communityId) &&
             (identical(other.personId, personId) ||
-                const DeepCollectionEquality()
-                    .equals(other.personId, personId)) &&
-            (identical(other.added, added) ||
-                const DeepCollectionEquality().equals(other.added, added)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.personId == personId) &&
+            (identical(other.added, added) || other.added == added) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(personId) ^
-      const DeepCollectionEquality().hash(added) ^
-      const DeepCollectionEquality().hash(auth);
+      Object.hash(runtimeType, communityId, personId, added, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1262,7 +1213,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AddModToCommunityToJson(this);
+    return _$$_AddModToCommunityToJson(this);
   }
 }
 
@@ -1278,13 +1229,13 @@ abstract class _AddModToCommunity extends AddModToCommunity {
       _$_AddModToCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get added => throw _privateConstructorUsedError;
+  bool get added;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$AddModToCommunityCopyWith<_AddModToCommunity> get copyWith =>
@@ -1318,7 +1269,7 @@ class _$EditCommunityTearOff {
     );
   }
 
-  EditCommunity fromJson(Map<String, Object> json) {
+  EditCommunity fromJson(Map<String, Object?> json) {
     return EditCommunity.fromJson(json);
   }
 }
@@ -1480,9 +1431,9 @@ class __$EditCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_EditCommunity extends _EditCommunity {
   const _$_EditCommunity(
       {required this.communityId,
@@ -1495,7 +1446,7 @@ class _$_EditCommunity extends _EditCommunity {
       : super._();
 
   factory _$_EditCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_EditCommunityFromJson(json);
+      _$$_EditCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1520,35 +1471,22 @@ class _$_EditCommunity extends _EditCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _EditCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _EditCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+                other.communityId == communityId) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.icon, icon) ||
-                const DeepCollectionEquality().equals(other.icon, icon)) &&
-            (identical(other.banner, banner) ||
-                const DeepCollectionEquality().equals(other.banner, banner)) &&
-            (identical(other.nsfw, nsfw) ||
-                const DeepCollectionEquality().equals(other.nsfw, nsfw)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.description == description) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
+            (identical(other.banner, banner) || other.banner == banner) &&
+            (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(icon) ^
-      const DeepCollectionEquality().hash(banner) ^
-      const DeepCollectionEquality().hash(nsfw) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(
+      runtimeType, communityId, title, description, icon, banner, nsfw, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1557,7 +1495,7 @@ class _$_EditCommunity extends _EditCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EditCommunityToJson(this);
+    return _$$_EditCommunityToJson(this);
   }
 }
 
@@ -1576,19 +1514,19 @@ abstract class _EditCommunity extends EditCommunity {
       _$_EditCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$EditCommunityCopyWith<_EditCommunity> get copyWith =>
@@ -1612,7 +1550,7 @@ class _$DeleteCommunityTearOff {
     );
   }
 
-  DeleteCommunity fromJson(Map<String, Object> json) {
+  DeleteCommunity fromJson(Map<String, Object?> json) {
     return DeleteCommunity.fromJson(json);
   }
 }
@@ -1716,16 +1654,16 @@ class __$DeleteCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_DeleteCommunity extends _DeleteCommunity {
   const _$_DeleteCommunity(
       {required this.communityId, required this.deleted, required this.auth})
       : super._();
 
   factory _$_DeleteCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeleteCommunityFromJson(json);
+      _$$_DeleteCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1742,23 +1680,16 @@ class _$_DeleteCommunity extends _DeleteCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeleteCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _DeleteCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
-            (identical(other.deleted, deleted) ||
-                const DeepCollectionEquality()
-                    .equals(other.deleted, deleted)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.communityId == communityId) &&
+            (identical(other.deleted, deleted) || other.deleted == deleted) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(deleted) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, communityId, deleted, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -1767,7 +1698,7 @@ class _$_DeleteCommunity extends _DeleteCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeleteCommunityToJson(this);
+    return _$$_DeleteCommunityToJson(this);
   }
 }
 
@@ -1782,11 +1713,11 @@ abstract class _DeleteCommunity extends DeleteCommunity {
       _$_DeleteCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$DeleteCommunityCopyWith<_DeleteCommunity> get copyWith =>
@@ -1816,7 +1747,7 @@ class _$RemoveCommunityTearOff {
     );
   }
 
-  RemoveCommunity fromJson(Map<String, Object> json) {
+  RemoveCommunity fromJson(Map<String, Object?> json) {
     return RemoveCommunity.fromJson(json);
   }
 }
@@ -1952,9 +1883,9 @@ class __$RemoveCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_RemoveCommunity extends _RemoveCommunity {
   const _$_RemoveCommunity(
       {required this.communityId,
@@ -1965,7 +1896,7 @@ class _$_RemoveCommunity extends _RemoveCommunity {
       : super._();
 
   factory _$_RemoveCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_RemoveCommunityFromJson(json);
+      _$$_RemoveCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -1986,30 +1917,19 @@ class _$_RemoveCommunity extends _RemoveCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RemoveCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _RemoveCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
-            (identical(other.removed, removed) ||
-                const DeepCollectionEquality()
-                    .equals(other.removed, removed)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.expires, expires) ||
-                const DeepCollectionEquality()
-                    .equals(other.expires, expires)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.communityId == communityId) &&
+            (identical(other.removed, removed) || other.removed == removed) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.expires, expires) || other.expires == expires) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(removed) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(expires) ^
-      const DeepCollectionEquality().hash(auth);
+      Object.hash(runtimeType, communityId, removed, reason, expires, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2018,7 +1938,7 @@ class _$_RemoveCommunity extends _RemoveCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RemoveCommunityToJson(this);
+    return _$$_RemoveCommunityToJson(this);
   }
 }
 
@@ -2035,15 +1955,15 @@ abstract class _RemoveCommunity extends RemoveCommunity {
       _$_RemoveCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  int? get expires => throw _privateConstructorUsedError;
+  int? get expires;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$RemoveCommunityCopyWith<_RemoveCommunity> get copyWith =>
@@ -2067,7 +1987,7 @@ class _$FollowCommunityTearOff {
     );
   }
 
-  FollowCommunity fromJson(Map<String, Object> json) {
+  FollowCommunity fromJson(Map<String, Object?> json) {
     return FollowCommunity.fromJson(json);
   }
 }
@@ -2171,16 +2091,16 @@ class __$FollowCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_FollowCommunity extends _FollowCommunity {
   const _$_FollowCommunity(
       {required this.communityId, required this.follow, required this.auth})
       : super._();
 
   factory _$_FollowCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_FollowCommunityFromJson(json);
+      _$$_FollowCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -2197,22 +2117,16 @@ class _$_FollowCommunity extends _FollowCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FollowCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _FollowCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
-            (identical(other.follow, follow) ||
-                const DeepCollectionEquality().equals(other.follow, follow)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.communityId == communityId) &&
+            (identical(other.follow, follow) || other.follow == follow) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(follow) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, communityId, follow, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2221,7 +2135,7 @@ class _$_FollowCommunity extends _FollowCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FollowCommunityToJson(this);
+    return _$$_FollowCommunityToJson(this);
   }
 }
 
@@ -2236,11 +2150,11 @@ abstract class _FollowCommunity extends FollowCommunity {
       _$_FollowCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get follow => throw _privateConstructorUsedError;
+  bool get follow;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$FollowCommunityCopyWith<_FollowCommunity> get copyWith =>
@@ -2264,7 +2178,7 @@ class _$TransferCommunityTearOff {
     );
   }
 
-  TransferCommunity fromJson(Map<String, Object> json) {
+  TransferCommunity fromJson(Map<String, Object?> json) {
     return TransferCommunity.fromJson(json);
   }
 }
@@ -2368,16 +2282,16 @@ class __$TransferCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_TransferCommunity extends _TransferCommunity {
   const _$_TransferCommunity(
       {required this.communityId, required this.personId, required this.auth})
       : super._();
 
   factory _$_TransferCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_TransferCommunityFromJson(json);
+      _$$_TransferCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -2394,23 +2308,17 @@ class _$_TransferCommunity extends _TransferCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TransferCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _TransferCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
+                other.communityId == communityId) &&
             (identical(other.personId, personId) ||
-                const DeepCollectionEquality()
-                    .equals(other.personId, personId)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.personId == personId) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(personId) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, communityId, personId, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2419,7 +2327,7 @@ class _$_TransferCommunity extends _TransferCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TransferCommunityToJson(this);
+    return _$$_TransferCommunityToJson(this);
   }
 }
 
@@ -2434,11 +2342,11 @@ abstract class _TransferCommunity extends TransferCommunity {
       _$_TransferCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$TransferCommunityCopyWith<_TransferCommunity> get copyWith =>
@@ -2462,7 +2370,7 @@ class _$BlockCommunityTearOff {
     );
   }
 
-  BlockCommunity fromJson(Map<String, Object> json) {
+  BlockCommunity fromJson(Map<String, Object?> json) {
     return BlockCommunity.fromJson(json);
   }
 }
@@ -2566,16 +2474,16 @@ class __$BlockCommunityCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_BlockCommunity extends _BlockCommunity {
   const _$_BlockCommunity(
       {required this.communityId, required this.block, required this.auth})
       : super._();
 
   factory _$_BlockCommunity.fromJson(Map<String, dynamic> json) =>
-      _$_$_BlockCommunityFromJson(json);
+      _$$_BlockCommunityFromJson(json);
 
   @override
   final int communityId;
@@ -2592,22 +2500,16 @@ class _$_BlockCommunity extends _BlockCommunity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BlockCommunity &&
+        (other.runtimeType == runtimeType &&
+            other is _BlockCommunity &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
-            (identical(other.block, block) ||
-                const DeepCollectionEquality().equals(other.block, block)) &&
-            (identical(other.auth, auth) ||
-                const DeepCollectionEquality().equals(other.auth, auth)));
+                other.communityId == communityId) &&
+            (identical(other.block, block) || other.block == block) &&
+            (identical(other.auth, auth) || other.auth == auth));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(block) ^
-      const DeepCollectionEquality().hash(auth);
+  int get hashCode => Object.hash(runtimeType, communityId, block, auth);
 
   @JsonKey(ignore: true)
   @override
@@ -2616,7 +2518,7 @@ class _$_BlockCommunity extends _BlockCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BlockCommunityToJson(this);
+    return _$$_BlockCommunityToJson(this);
   }
 }
 
@@ -2631,11 +2533,11 @@ abstract class _BlockCommunity extends BlockCommunity {
       _$_BlockCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get block => throw _privateConstructorUsedError;
+  bool get block;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$BlockCommunityCopyWith<_BlockCommunity> get copyWith =>

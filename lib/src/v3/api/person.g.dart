@@ -6,31 +6,27 @@ part of 'person.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Login _$_$_LoginFromJson(Map<String, dynamic> json) {
-  return _$_Login(
-    usernameOrEmail: json['username_or_email'] as String,
-    password: json['password'] as String,
-  );
-}
+_$_Login _$$_LoginFromJson(Map<String, dynamic> json) => _$_Login(
+      usernameOrEmail: json['username_or_email'] as String,
+      password: json['password'] as String,
+    );
 
-Map<String, dynamic> _$_$_LoginToJson(_$_Login instance) => <String, dynamic>{
+Map<String, dynamic> _$$_LoginToJson(_$_Login instance) => <String, dynamic>{
       'username_or_email': instance.usernameOrEmail,
       'password': instance.password,
     };
 
-_$_Register _$_$_RegisterFromJson(Map<String, dynamic> json) {
-  return _$_Register(
-    username: json['username'] as String,
-    email: json['email'] as String?,
-    password: json['password'] as String,
-    passwordVerify: json['password_verify'] as String,
-    showNsfw: json['show_nsfw'] as bool,
-    captchaUuid: json['captcha_uuid'] as String?,
-    captchaAnswer: json['captcha_answer'] as String?,
-  );
-}
+_$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
+      username: json['username'] as String,
+      email: json['email'] as String?,
+      password: json['password'] as String,
+      passwordVerify: json['password_verify'] as String,
+      showNsfw: json['show_nsfw'] as bool,
+      captchaUuid: json['captcha_uuid'] as String?,
+      captchaAnswer: json['captcha_answer'] as String?,
+    );
 
-Map<String, dynamic> _$_$_RegisterToJson(_$_Register instance) {
+Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
   final val = <String, dynamic>{
     'username': instance.username,
   };
@@ -50,39 +46,37 @@ Map<String, dynamic> _$_$_RegisterToJson(_$_Register instance) {
   return val;
 }
 
-_$_GetCaptcha _$_$_GetCaptchaFromJson(Map<String, dynamic> json) {
-  return _$_GetCaptcha();
-}
+_$_GetCaptcha _$$_GetCaptchaFromJson(Map<String, dynamic> json) =>
+    _$_GetCaptcha();
 
-Map<String, dynamic> _$_$_GetCaptchaToJson(_$_GetCaptcha instance) =>
+Map<String, dynamic> _$$_GetCaptchaToJson(_$_GetCaptcha instance) =>
     <String, dynamic>{};
 
-_$_SaveUserSettings _$_$_SaveUserSettingsFromJson(Map<String, dynamic> json) {
-  return _$_SaveUserSettings(
-    showNsfw: json['show_nsfw'] as bool?,
-    theme: json['theme'] as String?,
-    defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
-    defaultListingType:
-        postListingTypeFromIndex(json['default_listing_type'] as int),
-    lang: json['lang'] as String?,
-    avatar: json['avatar'] as String?,
-    banner: json['banner'] as String?,
-    displayName: json['display_name'] as String?,
-    email: json['email'] as String?,
-    bio: json['bio'] as String?,
-    matrixUserId: json['matrix_user_id'] as String?,
-    showAvatars: json['show_avatars'] as bool?,
-    showScores: json['show_scores'] as bool?,
-    sendNotificationsToEmail: json['send_notifications_to_email'] as bool?,
-    showReadPosts: json['show_read_posts'] as bool?,
-    botAccount: json['bot_account'] as bool?,
-    showBotAccounts: json['show_bot_accounts'] as bool?,
-    showNewPostNotifs: json['show_new_post_notifs'] as bool?,
-    auth: json['auth'] as String,
-  );
-}
+_$_SaveUserSettings _$$_SaveUserSettingsFromJson(Map<String, dynamic> json) =>
+    _$_SaveUserSettings(
+      showNsfw: json['show_nsfw'] as bool?,
+      theme: json['theme'] as String?,
+      defaultSortType: sortTypeFromIndex(json['default_sort_type'] as int),
+      defaultListingType:
+          postListingTypeFromIndex(json['default_listing_type'] as int),
+      lang: json['lang'] as String?,
+      avatar: json['avatar'] as String?,
+      banner: json['banner'] as String?,
+      displayName: json['display_name'] as String?,
+      email: json['email'] as String?,
+      bio: json['bio'] as String?,
+      matrixUserId: json['matrix_user_id'] as String?,
+      showAvatars: json['show_avatars'] as bool?,
+      showScores: json['show_scores'] as bool?,
+      sendNotificationsToEmail: json['send_notifications_to_email'] as bool?,
+      showReadPosts: json['show_read_posts'] as bool?,
+      botAccount: json['bot_account'] as bool?,
+      showBotAccounts: json['show_bot_accounts'] as bool?,
+      showNewPostNotifs: json['show_new_post_notifs'] as bool?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
+Map<String, dynamic> _$$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -115,16 +109,15 @@ Map<String, dynamic> _$_$_SaveUserSettingsToJson(_$_SaveUserSettings instance) {
   return val;
 }
 
-_$_ChangePassword _$_$_ChangePasswordFromJson(Map<String, dynamic> json) {
-  return _$_ChangePassword(
-    newPassword: json['new_password'] as String,
-    newPasswordVerify: json['new_password_verify'] as String,
-    oldPassword: json['old_password'] as String,
-    auth: json['auth'] as String,
-  );
-}
+_$_ChangePassword _$$_ChangePasswordFromJson(Map<String, dynamic> json) =>
+    _$_ChangePassword(
+      newPassword: json['new_password'] as String,
+      newPasswordVerify: json['new_password_verify'] as String,
+      oldPassword: json['old_password'] as String,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_ChangePasswordToJson(_$_ChangePassword instance) =>
+Map<String, dynamic> _$$_ChangePasswordToJson(_$_ChangePassword instance) =>
     <String, dynamic>{
       'new_password': instance.newPassword,
       'new_password_verify': instance.newPasswordVerify,
@@ -132,21 +125,21 @@ Map<String, dynamic> _$_$_ChangePasswordToJson(_$_ChangePassword instance) =>
       'auth': instance.auth,
     };
 
-_$_GetPersonDetails _$_$_GetPersonDetailsFromJson(Map<String, dynamic> json) {
-  return _$_GetPersonDetails(
-    personId: json['person_id'] as int?,
-    username: json['username'] as String?,
-    sort:
-        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
-    page: json['page'] as int?,
-    limit: json['limit'] as int?,
-    communityId: json['community_id'] as int?,
-    savedOnly: json['saved_only'] as bool?,
-    auth: json['auth'] as String?,
-  );
-}
+_$_GetPersonDetails _$$_GetPersonDetailsFromJson(Map<String, dynamic> json) =>
+    _$_GetPersonDetails(
+      personId: json['person_id'] as int?,
+      username: json['username'] as String?,
+      sort: json['sort'] == null
+          ? null
+          : SortType.fromJson(json['sort'] as String),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      communityId: json['community_id'] as int?,
+      savedOnly: json['saved_only'] as bool?,
+      auth: json['auth'] as String?,
+    );
 
-Map<String, dynamic> _$_$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
+Map<String, dynamic> _$$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -166,44 +159,39 @@ Map<String, dynamic> _$_$_GetPersonDetailsToJson(_$_GetPersonDetails instance) {
   return val;
 }
 
-_$_MarkAllAsRead _$_$_MarkAllAsReadFromJson(Map<String, dynamic> json) {
-  return _$_MarkAllAsRead(
-    auth: json['auth'] as String,
-  );
-}
+_$_MarkAllAsRead _$$_MarkAllAsReadFromJson(Map<String, dynamic> json) =>
+    _$_MarkAllAsRead(
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_MarkAllAsReadToJson(_$_MarkAllAsRead instance) =>
+Map<String, dynamic> _$$_MarkAllAsReadToJson(_$_MarkAllAsRead instance) =>
     <String, dynamic>{
       'auth': instance.auth,
     };
 
-_$_AddAdmin _$_$_AddAdminFromJson(Map<String, dynamic> json) {
-  return _$_AddAdmin(
-    personId: json['person_id'] as int,
-    added: json['added'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_AddAdmin _$$_AddAdminFromJson(Map<String, dynamic> json) => _$_AddAdmin(
+      personId: json['person_id'] as int,
+      added: json['added'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_AddAdminToJson(_$_AddAdmin instance) =>
+Map<String, dynamic> _$$_AddAdminToJson(_$_AddAdmin instance) =>
     <String, dynamic>{
       'person_id': instance.personId,
       'added': instance.added,
       'auth': instance.auth,
     };
 
-_$_BanPerson _$_$_BanPersonFromJson(Map<String, dynamic> json) {
-  return _$_BanPerson(
-    personId: json['person_id'] as int,
-    ban: json['ban'] as bool,
-    removeData: json['remove_data'] as bool?,
-    reason: json['reason'] as String?,
-    expires: json['expires'] as int?,
-    auth: json['auth'] as String,
-  );
-}
+_$_BanPerson _$$_BanPersonFromJson(Map<String, dynamic> json) => _$_BanPerson(
+      personId: json['person_id'] as int,
+      ban: json['ban'] as bool,
+      removeData: json['remove_data'] as bool?,
+      reason: json['reason'] as String?,
+      expires: json['expires'] as int?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_BanPersonToJson(_$_BanPerson instance) {
+Map<String, dynamic> _$$_BanPersonToJson(_$_BanPerson instance) {
   final val = <String, dynamic>{
     'person_id': instance.personId,
     'ban': instance.ban,
@@ -222,18 +210,18 @@ Map<String, dynamic> _$_$_BanPersonToJson(_$_BanPerson instance) {
   return val;
 }
 
-_$_GetReplies _$_$_GetRepliesFromJson(Map<String, dynamic> json) {
-  return _$_GetReplies(
-    sort:
-        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
-    page: json['page'] as int?,
-    limit: json['limit'] as int?,
-    unreadOnly: json['unread_only'] as bool?,
-    auth: json['auth'] as String,
-  );
-}
+_$_GetReplies _$$_GetRepliesFromJson(Map<String, dynamic> json) =>
+    _$_GetReplies(
+      sort: json['sort'] == null
+          ? null
+          : SortType.fromJson(json['sort'] as String),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      unreadOnly: json['unread_only'] as bool?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
+Map<String, dynamic> _$$_GetRepliesToJson(_$_GetReplies instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -250,18 +238,18 @@ Map<String, dynamic> _$_$_GetRepliesToJson(_$_GetReplies instance) {
   return val;
 }
 
-_$_GetPersonMentions _$_$_GetPersonMentionsFromJson(Map<String, dynamic> json) {
-  return _$_GetPersonMentions(
-    sort:
-        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
-    page: json['page'] as int?,
-    limit: json['limit'] as int?,
-    unreadOnly: json['unread_only'] as bool?,
-    auth: json['auth'] as String,
-  );
-}
+_$_GetPersonMentions _$$_GetPersonMentionsFromJson(Map<String, dynamic> json) =>
+    _$_GetPersonMentions(
+      sort: json['sort'] == null
+          ? null
+          : SortType.fromJson(json['sort'] as String),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      unreadOnly: json['unread_only'] as bool?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_GetPersonMentionsToJson(
+Map<String, dynamic> _$$_GetPersonMentionsToJson(
     _$_GetPersonMentions instance) {
   final val = <String, dynamic>{};
 
@@ -279,16 +267,15 @@ Map<String, dynamic> _$_$_GetPersonMentionsToJson(
   return val;
 }
 
-_$_MarkPersonMentionAsRead _$_$_MarkPersonMentionAsReadFromJson(
-    Map<String, dynamic> json) {
-  return _$_MarkPersonMentionAsRead(
-    personMentionId: json['person_mention_id'] as int,
-    read: json['read'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_MarkPersonMentionAsRead _$$_MarkPersonMentionAsReadFromJson(
+        Map<String, dynamic> json) =>
+    _$_MarkPersonMentionAsRead(
+      personMentionId: json['person_mention_id'] as int,
+      read: json['read'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_MarkPersonMentionAsReadToJson(
+Map<String, dynamic> _$$_MarkPersonMentionAsReadToJson(
         _$_MarkPersonMentionAsRead instance) =>
     <String, dynamic>{
       'person_mention_id': instance.personMentionId,
@@ -296,55 +283,51 @@ Map<String, dynamic> _$_$_MarkPersonMentionAsReadToJson(
       'auth': instance.auth,
     };
 
-_$_DeleteAccount _$_$_DeleteAccountFromJson(Map<String, dynamic> json) {
-  return _$_DeleteAccount(
-    password: json['password'] as String,
-    auth: json['auth'] as String,
-  );
-}
+_$_DeleteAccount _$$_DeleteAccountFromJson(Map<String, dynamic> json) =>
+    _$_DeleteAccount(
+      password: json['password'] as String,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_DeleteAccountToJson(_$_DeleteAccount instance) =>
+Map<String, dynamic> _$$_DeleteAccountToJson(_$_DeleteAccount instance) =>
     <String, dynamic>{
       'password': instance.password,
       'auth': instance.auth,
     };
 
-_$_PasswordReset _$_$_PasswordResetFromJson(Map<String, dynamic> json) {
-  return _$_PasswordReset(
-    email: json['email'] as String,
-  );
-}
+_$_PasswordReset _$$_PasswordResetFromJson(Map<String, dynamic> json) =>
+    _$_PasswordReset(
+      email: json['email'] as String,
+    );
 
-Map<String, dynamic> _$_$_PasswordResetToJson(_$_PasswordReset instance) =>
+Map<String, dynamic> _$$_PasswordResetToJson(_$_PasswordReset instance) =>
     <String, dynamic>{
       'email': instance.email,
     };
 
-_$_PasswordChange _$_$_PasswordChangeFromJson(Map<String, dynamic> json) {
-  return _$_PasswordChange(
-    token: json['token'] as String,
-    password: json['password'] as String,
-    passwordVerify: json['password_verify'] as String,
-  );
-}
+_$_PasswordChange _$$_PasswordChangeFromJson(Map<String, dynamic> json) =>
+    _$_PasswordChange(
+      token: json['token'] as String,
+      password: json['password'] as String,
+      passwordVerify: json['password_verify'] as String,
+    );
 
-Map<String, dynamic> _$_$_PasswordChangeToJson(_$_PasswordChange instance) =>
+Map<String, dynamic> _$$_PasswordChangeToJson(_$_PasswordChange instance) =>
     <String, dynamic>{
       'token': instance.token,
       'password': instance.password,
       'password_verify': instance.passwordVerify,
     };
 
-_$_CreatePrivateMessage _$_$_CreatePrivateMessageFromJson(
-    Map<String, dynamic> json) {
-  return _$_CreatePrivateMessage(
-    content: json['content'] as String,
-    recipientId: json['recipient_id'] as int,
-    auth: json['auth'] as String,
-  );
-}
+_$_CreatePrivateMessage _$$_CreatePrivateMessageFromJson(
+        Map<String, dynamic> json) =>
+    _$_CreatePrivateMessage(
+      content: json['content'] as String,
+      recipientId: json['recipient_id'] as int,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_CreatePrivateMessageToJson(
+Map<String, dynamic> _$$_CreatePrivateMessageToJson(
         _$_CreatePrivateMessage instance) =>
     <String, dynamic>{
       'content': instance.content,
@@ -352,16 +335,15 @@ Map<String, dynamic> _$_$_CreatePrivateMessageToJson(
       'auth': instance.auth,
     };
 
-_$_EditPrivateMessage _$_$_EditPrivateMessageFromJson(
-    Map<String, dynamic> json) {
-  return _$_EditPrivateMessage(
-    privateMessageId: json['private_message_id'] as int,
-    content: json['content'] as String,
-    auth: json['auth'] as String,
-  );
-}
+_$_EditPrivateMessage _$$_EditPrivateMessageFromJson(
+        Map<String, dynamic> json) =>
+    _$_EditPrivateMessage(
+      privateMessageId: json['private_message_id'] as int,
+      content: json['content'] as String,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_EditPrivateMessageToJson(
+Map<String, dynamic> _$$_EditPrivateMessageToJson(
         _$_EditPrivateMessage instance) =>
     <String, dynamic>{
       'private_message_id': instance.privateMessageId,
@@ -369,16 +351,15 @@ Map<String, dynamic> _$_$_EditPrivateMessageToJson(
       'auth': instance.auth,
     };
 
-_$_DeletePrivateMessage _$_$_DeletePrivateMessageFromJson(
-    Map<String, dynamic> json) {
-  return _$_DeletePrivateMessage(
-    privateMessageId: json['private_message_id'] as int,
-    deleted: json['deleted'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_DeletePrivateMessage _$$_DeletePrivateMessageFromJson(
+        Map<String, dynamic> json) =>
+    _$_DeletePrivateMessage(
+      privateMessageId: json['private_message_id'] as int,
+      deleted: json['deleted'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_DeletePrivateMessageToJson(
+Map<String, dynamic> _$$_DeletePrivateMessageToJson(
         _$_DeletePrivateMessage instance) =>
     <String, dynamic>{
       'private_message_id': instance.privateMessageId,
@@ -386,16 +367,15 @@ Map<String, dynamic> _$_$_DeletePrivateMessageToJson(
       'auth': instance.auth,
     };
 
-_$_MarkPrivateMessageAsRead _$_$_MarkPrivateMessageAsReadFromJson(
-    Map<String, dynamic> json) {
-  return _$_MarkPrivateMessageAsRead(
-    privateMessageId: json['private_message_id'] as int,
-    read: json['read'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_MarkPrivateMessageAsRead _$$_MarkPrivateMessageAsReadFromJson(
+        Map<String, dynamic> json) =>
+    _$_MarkPrivateMessageAsRead(
+      privateMessageId: json['private_message_id'] as int,
+      read: json['read'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_MarkPrivateMessageAsReadToJson(
+Map<String, dynamic> _$$_MarkPrivateMessageAsReadToJson(
         _$_MarkPrivateMessageAsRead instance) =>
     <String, dynamic>{
       'private_message_id': instance.privateMessageId,
@@ -403,17 +383,16 @@ Map<String, dynamic> _$_$_MarkPrivateMessageAsReadToJson(
       'auth': instance.auth,
     };
 
-_$_GetPrivateMessages _$_$_GetPrivateMessagesFromJson(
-    Map<String, dynamic> json) {
-  return _$_GetPrivateMessages(
-    unreadOnly: json['unread_only'] as bool?,
-    page: json['page'] as int?,
-    limit: json['limit'] as int?,
-    auth: json['auth'] as String,
-  );
-}
+_$_GetPrivateMessages _$$_GetPrivateMessagesFromJson(
+        Map<String, dynamic> json) =>
+    _$_GetPrivateMessages(
+      unreadOnly: json['unread_only'] as bool?,
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_GetPrivateMessagesToJson(
+Map<String, dynamic> _$$_GetPrivateMessagesToJson(
     _$_GetPrivateMessages instance) {
   final val = <String, dynamic>{};
 
@@ -430,29 +409,27 @@ Map<String, dynamic> _$_$_GetPrivateMessagesToJson(
   return val;
 }
 
-_$_BlockPerson _$_$_BlockPersonFromJson(Map<String, dynamic> json) {
-  return _$_BlockPerson(
-    personId: json['person_id'] as int,
-    block: json['block'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_BlockPerson _$$_BlockPersonFromJson(Map<String, dynamic> json) =>
+    _$_BlockPerson(
+      personId: json['person_id'] as int,
+      block: json['block'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_BlockPersonToJson(_$_BlockPerson instance) =>
+Map<String, dynamic> _$$_BlockPersonToJson(_$_BlockPerson instance) =>
     <String, dynamic>{
       'person_id': instance.personId,
       'block': instance.block,
       'auth': instance.auth,
     };
 
-_$_GetReportCount _$_$_GetReportCountFromJson(Map<String, dynamic> json) {
-  return _$_GetReportCount(
-    community: json['community'] as int?,
-    auth: json['auth'] as String,
-  );
-}
+_$_GetReportCount _$$_GetReportCountFromJson(Map<String, dynamic> json) =>
+    _$_GetReportCount(
+      community: json['community'] as int?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_GetReportCountToJson(_$_GetReportCount instance) {
+Map<String, dynamic> _$$_GetReportCountToJson(_$_GetReportCount instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
