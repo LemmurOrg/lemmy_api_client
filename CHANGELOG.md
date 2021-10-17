@@ -3,6 +3,8 @@
 ### Added
 
 - Add reporting API
+- Add `GetUnreadCounts` endpoint
+- Add `honeypot` fields
 
 ### Changed
 
