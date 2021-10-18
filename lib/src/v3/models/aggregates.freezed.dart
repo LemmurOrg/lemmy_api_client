@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'aggregates.dart';
 
@@ -37,7 +38,7 @@ class _$PersonAggregatesTearOff {
     );
   }
 
-  PersonAggregates fromJson(Map<String, Object> json) {
+  PersonAggregates fromJson(Map<String, Object?> json) {
     return PersonAggregates.fromJson(json);
   }
 }
@@ -186,9 +187,9 @@ class __$PersonAggregatesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonAggregates extends _PersonAggregates {
   const _$_PersonAggregates(
       {required this.id,
@@ -200,7 +201,7 @@ class _$_PersonAggregates extends _PersonAggregates {
       : super._();
 
   factory _$_PersonAggregates.fromJson(Map<String, dynamic> json) =>
-      _$_$_PersonAggregatesFromJson(json);
+      _$$_PersonAggregatesFromJson(json);
 
   @override
   final int id;
@@ -223,35 +224,24 @@ class _$_PersonAggregates extends _PersonAggregates {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PersonAggregates &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _PersonAggregates &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.personId, personId) ||
-                const DeepCollectionEquality()
-                    .equals(other.personId, personId)) &&
+                other.personId == personId) &&
             (identical(other.postCount, postCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.postCount, postCount)) &&
+                other.postCount == postCount) &&
             (identical(other.postScore, postScore) ||
-                const DeepCollectionEquality()
-                    .equals(other.postScore, postScore)) &&
+                other.postScore == postScore) &&
             (identical(other.commentCount, commentCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentCount, commentCount)) &&
+                other.commentCount == commentCount) &&
             (identical(other.commentScore, commentScore) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentScore, commentScore)));
+                other.commentScore == commentScore));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(personId) ^
-      const DeepCollectionEquality().hash(postCount) ^
-      const DeepCollectionEquality().hash(postScore) ^
-      const DeepCollectionEquality().hash(commentCount) ^
-      const DeepCollectionEquality().hash(commentScore);
+  int get hashCode => Object.hash(runtimeType, id, personId, postCount,
+      postScore, commentCount, commentScore);
 
   @JsonKey(ignore: true)
   @override
@@ -260,7 +250,7 @@ class _$_PersonAggregates extends _PersonAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PersonAggregatesToJson(this);
+    return _$$_PersonAggregatesToJson(this);
   }
 }
 
@@ -278,17 +268,17 @@ abstract class _PersonAggregates extends PersonAggregates {
       _$_PersonAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  int get postCount => throw _privateConstructorUsedError;
+  int get postCount;
   @override
-  int get postScore => throw _privateConstructorUsedError;
+  int get postScore;
   @override
-  int get commentCount => throw _privateConstructorUsedError;
+  int get commentCount;
   @override
-  int get commentScore => throw _privateConstructorUsedError;
+  int get commentScore;
   @override
   @JsonKey(ignore: true)
   _$PersonAggregatesCopyWith<_PersonAggregates> get copyWith =>
@@ -328,7 +318,7 @@ class _$SiteAggregatesTearOff {
     );
   }
 
-  SiteAggregates fromJson(Map<String, Object> json) {
+  SiteAggregates fromJson(Map<String, Object?> json) {
     return SiteAggregates.fromJson(json);
   }
 }
@@ -529,9 +519,9 @@ class __$SiteAggregatesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_SiteAggregates extends _SiteAggregates {
   const _$_SiteAggregates(
       {required this.id,
@@ -547,7 +537,7 @@ class _$_SiteAggregates extends _SiteAggregates {
       : super._();
 
   factory _$_SiteAggregates.fromJson(Map<String, dynamic> json) =>
-      _$_$_SiteAggregatesFromJson(json);
+      _$$_SiteAggregatesFromJson(json);
 
   @override
   final int id;
@@ -578,48 +568,39 @@ class _$_SiteAggregates extends _SiteAggregates {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SiteAggregates &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.siteId, siteId) ||
-                const DeepCollectionEquality().equals(other.siteId, siteId)) &&
-            (identical(other.users, users) ||
-                const DeepCollectionEquality().equals(other.users, users)) &&
-            (identical(other.posts, posts) ||
-                const DeepCollectionEquality().equals(other.posts, posts)) &&
+        (other.runtimeType == runtimeType &&
+            other is _SiteAggregates &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.siteId, siteId) || other.siteId == siteId) &&
+            (identical(other.users, users) || other.users == users) &&
+            (identical(other.posts, posts) || other.posts == posts) &&
             (identical(other.comments, comments) ||
-                const DeepCollectionEquality()
-                    .equals(other.comments, comments)) &&
+                other.comments == comments) &&
             (identical(other.communities, communities) ||
-                const DeepCollectionEquality()
-                    .equals(other.communities, communities)) &&
+                other.communities == communities) &&
             (identical(other.usersActiveDay, usersActiveDay) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveDay, usersActiveDay)) &&
+                other.usersActiveDay == usersActiveDay) &&
             (identical(other.usersActiveWeek, usersActiveWeek) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveWeek, usersActiveWeek)) &&
+                other.usersActiveWeek == usersActiveWeek) &&
             (identical(other.usersActiveMonth, usersActiveMonth) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveMonth, usersActiveMonth)) &&
+                other.usersActiveMonth == usersActiveMonth) &&
             (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveHalfYear, usersActiveHalfYear)));
+                other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(siteId) ^
-      const DeepCollectionEquality().hash(users) ^
-      const DeepCollectionEquality().hash(posts) ^
-      const DeepCollectionEquality().hash(comments) ^
-      const DeepCollectionEquality().hash(communities) ^
-      const DeepCollectionEquality().hash(usersActiveDay) ^
-      const DeepCollectionEquality().hash(usersActiveWeek) ^
-      const DeepCollectionEquality().hash(usersActiveMonth) ^
-      const DeepCollectionEquality().hash(usersActiveHalfYear);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      siteId,
+      users,
+      posts,
+      comments,
+      communities,
+      usersActiveDay,
+      usersActiveWeek,
+      usersActiveMonth,
+      usersActiveHalfYear);
 
   @JsonKey(ignore: true)
   @override
@@ -628,7 +609,7 @@ class _$_SiteAggregates extends _SiteAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SiteAggregatesToJson(this);
+    return _$$_SiteAggregatesToJson(this);
   }
 }
 
@@ -650,25 +631,25 @@ abstract class _SiteAggregates extends SiteAggregates {
       _$_SiteAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get siteId => throw _privateConstructorUsedError;
+  int get siteId;
   @override
-  int get users => throw _privateConstructorUsedError;
+  int get users;
   @override
-  int get posts => throw _privateConstructorUsedError;
+  int get posts;
   @override
-  int get comments => throw _privateConstructorUsedError;
+  int get comments;
   @override
-  int get communities => throw _privateConstructorUsedError;
+  int get communities;
   @override
-  int get usersActiveDay => throw _privateConstructorUsedError;
+  int get usersActiveDay;
   @override
-  int get usersActiveWeek => throw _privateConstructorUsedError;
+  int get usersActiveWeek;
   @override
-  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int get usersActiveMonth;
   @override
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
+  int get usersActiveHalfYear;
   @override
   @JsonKey(ignore: true)
   _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
@@ -704,7 +685,7 @@ class _$PostAggregatesTearOff {
     );
   }
 
-  PostAggregates fromJson(Map<String, Object> json) {
+  PostAggregates fromJson(Map<String, Object?> json) {
     return PostAggregates.fromJson(json);
   }
 }
@@ -879,11 +860,11 @@ class __$PostAggregatesCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
+
 @ForceUtcDateTime()
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
-
-/// @nodoc
 class _$_PostAggregates extends _PostAggregates {
   const _$_PostAggregates(
       {required this.id,
@@ -897,7 +878,7 @@ class _$_PostAggregates extends _PostAggregates {
       : super._();
 
   factory _$_PostAggregates.fromJson(Map<String, dynamic> json) =>
-      _$_$_PostAggregatesFromJson(json);
+      _$$_PostAggregatesFromJson(json);
 
   @override
   final int id;
@@ -924,41 +905,25 @@ class _$_PostAggregates extends _PostAggregates {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PostAggregates &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.postId, postId) ||
-                const DeepCollectionEquality().equals(other.postId, postId)) &&
+        (other.runtimeType == runtimeType &&
+            other is _PostAggregates &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.postId, postId) || other.postId == postId) &&
             (identical(other.comments, comments) ||
-                const DeepCollectionEquality()
-                    .equals(other.comments, comments)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)) &&
-            (identical(other.upvotes, upvotes) ||
-                const DeepCollectionEquality()
-                    .equals(other.upvotes, upvotes)) &&
+                other.comments == comments) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
             (identical(other.downvotes, downvotes) ||
-                const DeepCollectionEquality()
-                    .equals(other.downvotes, downvotes)) &&
+                other.downvotes == downvotes) &&
             (identical(other.newestCommentTime, newestCommentTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.newestCommentTime, newestCommentTime)) &&
+                other.newestCommentTime == newestCommentTime) &&
             (identical(other.newestCommentTimeNecro, newestCommentTimeNecro) ||
-                const DeepCollectionEquality().equals(
-                    other.newestCommentTimeNecro, newestCommentTimeNecro)));
+                other.newestCommentTimeNecro == newestCommentTimeNecro));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(postId) ^
-      const DeepCollectionEquality().hash(comments) ^
-      const DeepCollectionEquality().hash(score) ^
-      const DeepCollectionEquality().hash(upvotes) ^
-      const DeepCollectionEquality().hash(downvotes) ^
-      const DeepCollectionEquality().hash(newestCommentTime) ^
-      const DeepCollectionEquality().hash(newestCommentTimeNecro);
+  int get hashCode => Object.hash(runtimeType, id, postId, comments, score,
+      upvotes, downvotes, newestCommentTime, newestCommentTimeNecro);
 
   @JsonKey(ignore: true)
   @override
@@ -967,7 +932,7 @@ class _$_PostAggregates extends _PostAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PostAggregatesToJson(this);
+    return _$$_PostAggregatesToJson(this);
   }
 }
 
@@ -987,21 +952,21 @@ abstract class _PostAggregates extends PostAggregates {
       _$_PostAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  int get comments => throw _privateConstructorUsedError;
+  int get comments;
   @override
-  int get score => throw _privateConstructorUsedError;
+  int get score;
   @override
-  int get upvotes => throw _privateConstructorUsedError;
+  int get upvotes;
   @override
-  int get downvotes => throw _privateConstructorUsedError;
+  int get downvotes;
   @override
-  DateTime get newestCommentTime => throw _privateConstructorUsedError;
+  DateTime get newestCommentTime;
   @override
-  DateTime get newestCommentTimeNecro => throw _privateConstructorUsedError;
+  DateTime get newestCommentTimeNecro;
   @override
   @JsonKey(ignore: true)
   _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
@@ -1039,7 +1004,7 @@ class _$CommunityAggregatesTearOff {
     );
   }
 
-  CommunityAggregates fromJson(Map<String, Object> json) {
+  CommunityAggregates fromJson(Map<String, Object?> json) {
     return CommunityAggregates.fromJson(json);
   }
 }
@@ -1227,9 +1192,9 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityAggregates extends _CommunityAggregates {
   const _$_CommunityAggregates(
       {required this.id,
@@ -1244,7 +1209,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
       : super._();
 
   factory _$_CommunityAggregates.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunityAggregatesFromJson(json);
+      _$$_CommunityAggregatesFromJson(json);
 
   @override
   final int id;
@@ -1273,46 +1238,38 @@ class _$_CommunityAggregates extends _CommunityAggregates {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunityAggregates &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _CommunityAggregates &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.communityId, communityId) ||
-                const DeepCollectionEquality()
-                    .equals(other.communityId, communityId)) &&
+                other.communityId == communityId) &&
             (identical(other.subscribers, subscribers) ||
-                const DeepCollectionEquality()
-                    .equals(other.subscribers, subscribers)) &&
-            (identical(other.posts, posts) ||
-                const DeepCollectionEquality().equals(other.posts, posts)) &&
+                other.subscribers == subscribers) &&
+            (identical(other.posts, posts) || other.posts == posts) &&
             (identical(other.comments, comments) ||
-                const DeepCollectionEquality()
-                    .equals(other.comments, comments)) &&
+                other.comments == comments) &&
             (identical(other.usersActiveDay, usersActiveDay) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveDay, usersActiveDay)) &&
+                other.usersActiveDay == usersActiveDay) &&
             (identical(other.usersActiveWeek, usersActiveWeek) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveWeek, usersActiveWeek)) &&
+                other.usersActiveWeek == usersActiveWeek) &&
             (identical(other.usersActiveMonth, usersActiveMonth) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveMonth, usersActiveMonth)) &&
+                other.usersActiveMonth == usersActiveMonth) &&
             (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
-                const DeepCollectionEquality()
-                    .equals(other.usersActiveHalfYear, usersActiveHalfYear)));
+                other.usersActiveHalfYear == usersActiveHalfYear));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(communityId) ^
-      const DeepCollectionEquality().hash(subscribers) ^
-      const DeepCollectionEquality().hash(posts) ^
-      const DeepCollectionEquality().hash(comments) ^
-      const DeepCollectionEquality().hash(usersActiveDay) ^
-      const DeepCollectionEquality().hash(usersActiveWeek) ^
-      const DeepCollectionEquality().hash(usersActiveMonth) ^
-      const DeepCollectionEquality().hash(usersActiveHalfYear);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      communityId,
+      subscribers,
+      posts,
+      comments,
+      usersActiveDay,
+      usersActiveWeek,
+      usersActiveMonth,
+      usersActiveHalfYear);
 
   @JsonKey(ignore: true)
   @override
@@ -1322,7 +1279,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunityAggregatesToJson(this);
+    return _$$_CommunityAggregatesToJson(this);
   }
 }
 
@@ -1343,23 +1300,23 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       _$_CommunityAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get subscribers => throw _privateConstructorUsedError;
+  int get subscribers;
   @override
-  int get posts => throw _privateConstructorUsedError;
+  int get posts;
   @override
-  int get comments => throw _privateConstructorUsedError;
+  int get comments;
   @override
-  int get usersActiveDay => throw _privateConstructorUsedError;
+  int get usersActiveDay;
   @override
-  int get usersActiveWeek => throw _privateConstructorUsedError;
+  int get usersActiveWeek;
   @override
-  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int get usersActiveMonth;
   @override
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
+  int get usersActiveHalfYear;
   @override
   @JsonKey(ignore: true)
   _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
@@ -1389,7 +1346,7 @@ class _$CommentAggregatesTearOff {
     );
   }
 
-  CommentAggregates fromJson(Map<String, Object> json) {
+  CommentAggregates fromJson(Map<String, Object?> json) {
     return CommentAggregates.fromJson(json);
   }
 }
@@ -1515,9 +1472,9 @@ class __$CommentAggregatesCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(fieldRename: FieldRename.snake)
-
 /// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommentAggregates extends _CommentAggregates {
   const _$_CommentAggregates(
       {required this.id,
@@ -1528,7 +1485,7 @@ class _$_CommentAggregates extends _CommentAggregates {
       : super._();
 
   factory _$_CommentAggregates.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommentAggregatesFromJson(json);
+      _$$_CommentAggregatesFromJson(json);
 
   @override
   final int id;
@@ -1549,30 +1506,20 @@ class _$_CommentAggregates extends _CommentAggregates {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommentAggregates &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+        (other.runtimeType == runtimeType &&
+            other is _CommentAggregates &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.commentId, commentId) ||
-                const DeepCollectionEquality()
-                    .equals(other.commentId, commentId)) &&
-            (identical(other.score, score) ||
-                const DeepCollectionEquality().equals(other.score, score)) &&
-            (identical(other.upvotes, upvotes) ||
-                const DeepCollectionEquality()
-                    .equals(other.upvotes, upvotes)) &&
+                other.commentId == commentId) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
             (identical(other.downvotes, downvotes) ||
-                const DeepCollectionEquality()
-                    .equals(other.downvotes, downvotes)));
+                other.downvotes == downvotes));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(commentId) ^
-      const DeepCollectionEquality().hash(score) ^
-      const DeepCollectionEquality().hash(upvotes) ^
-      const DeepCollectionEquality().hash(downvotes);
+      Object.hash(runtimeType, id, commentId, score, upvotes, downvotes);
 
   @JsonKey(ignore: true)
   @override
@@ -1581,7 +1528,7 @@ class _$_CommentAggregates extends _CommentAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommentAggregatesToJson(this);
+    return _$$_CommentAggregatesToJson(this);
   }
 }
 
@@ -1598,15 +1545,15 @@ abstract class _CommentAggregates extends CommentAggregates {
       _$_CommentAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  int get score => throw _privateConstructorUsedError;
+  int get score;
   @override
-  int get upvotes => throw _privateConstructorUsedError;
+  int get upvotes;
   @override
-  int get downvotes => throw _privateConstructorUsedError;
+  int get downvotes;
   @override
   @JsonKey(ignore: true)
   _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith =>

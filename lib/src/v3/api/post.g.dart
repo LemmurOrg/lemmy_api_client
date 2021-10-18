@@ -6,14 +6,12 @@ part of 'post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetPost _$_$_GetPostFromJson(Map<String, dynamic> json) {
-  return _$_GetPost(
-    id: json['id'] as int,
-    auth: json['auth'] as String?,
-  );
-}
+_$_GetPost _$$_GetPostFromJson(Map<String, dynamic> json) => _$_GetPost(
+      id: json['id'] as int,
+      auth: json['auth'] as String?,
+    );
 
-Map<String, dynamic> _$_$_GetPostToJson(_$_GetPost instance) {
+Map<String, dynamic> _$$_GetPostToJson(_$_GetPost instance) {
   final val = <String, dynamic>{
     'id': instance.id,
   };
@@ -28,18 +26,17 @@ Map<String, dynamic> _$_$_GetPostToJson(_$_GetPost instance) {
   return val;
 }
 
-_$_CreatePost _$_$_CreatePostFromJson(Map<String, dynamic> json) {
-  return _$_CreatePost(
-    name: json['name'] as String,
-    url: json['url'] as String?,
-    body: json['body'] as String?,
-    nsfw: json['nsfw'] as bool?,
-    communityId: json['community_id'] as int,
-    auth: json['auth'] as String,
-  );
-}
+_$_CreatePost _$$_CreatePostFromJson(Map<String, dynamic> json) =>
+    _$_CreatePost(
+      name: json['name'] as String,
+      url: json['url'] as String?,
+      body: json['body'] as String?,
+      nsfw: json['nsfw'] as bool?,
+      communityId: json['community_id'] as int,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_CreatePostToJson(_$_CreatePost instance) {
+Map<String, dynamic> _$$_CreatePostToJson(_$_CreatePost instance) {
   final val = <String, dynamic>{
     'name': instance.name,
   };
@@ -58,23 +55,22 @@ Map<String, dynamic> _$_$_CreatePostToJson(_$_CreatePost instance) {
   return val;
 }
 
-_$_GetPosts _$_$_GetPostsFromJson(Map<String, dynamic> json) {
-  return _$_GetPosts(
-    type: json['type_'] == null
-        ? null
-        : PostListingType.fromJson(json['type_'] as String),
-    sort:
-        json['sort'] == null ? null : SortType.fromJson(json['sort'] as String),
-    page: json['page'] as int?,
-    limit: json['limit'] as int?,
-    communityId: json['community_id'] as int?,
-    communityName: json['community_name'] as String?,
-    savedOnly: json['saved_only'] as bool?,
-    auth: json['auth'] as String?,
-  );
-}
+_$_GetPosts _$$_GetPostsFromJson(Map<String, dynamic> json) => _$_GetPosts(
+      type: json['type_'] == null
+          ? null
+          : PostListingType.fromJson(json['type_'] as String),
+      sort: json['sort'] == null
+          ? null
+          : SortType.fromJson(json['sort'] as String),
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      communityId: json['community_id'] as int?,
+      communityName: json['community_name'] as String?,
+      savedOnly: json['saved_only'] as bool?,
+      auth: json['auth'] as String?,
+    );
 
-Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
+Map<String, dynamic> _$$_GetPostsToJson(_$_GetPosts instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -94,33 +90,30 @@ Map<String, dynamic> _$_$_GetPostsToJson(_$_GetPosts instance) {
   return val;
 }
 
-_$_CreatePostLike _$_$_CreatePostLikeFromJson(Map<String, dynamic> json) {
-  return _$_CreatePostLike(
-    postId: json['post_id'] as int,
-    score: VoteType.fromJson(json['score'] as int),
-    auth: json['auth'] as String,
-  );
-}
+_$_CreatePostLike _$$_CreatePostLikeFromJson(Map<String, dynamic> json) =>
+    _$_CreatePostLike(
+      postId: json['post_id'] as int,
+      score: VoteType.fromJson(json['score'] as int),
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_CreatePostLikeToJson(_$_CreatePostLike instance) =>
+Map<String, dynamic> _$$_CreatePostLikeToJson(_$_CreatePostLike instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'score': instance.score.toJson(),
       'auth': instance.auth,
     };
 
-_$_EditPost _$_$_EditPostFromJson(Map<String, dynamic> json) {
-  return _$_EditPost(
-    postId: json['post_id'] as int,
-    name: json['name'] as String?,
-    url: json['url'] as String?,
-    body: json['body'] as String?,
-    nsfw: json['nsfw'] as bool?,
-    auth: json['auth'] as String,
-  );
-}
+_$_EditPost _$$_EditPostFromJson(Map<String, dynamic> json) => _$_EditPost(
+      postId: json['post_id'] as int,
+      name: json['name'] as String?,
+      url: json['url'] as String?,
+      body: json['body'] as String?,
+      nsfw: json['nsfw'] as bool?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_EditPostToJson(_$_EditPost instance) {
+Map<String, dynamic> _$$_EditPostToJson(_$_EditPost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
   };
@@ -139,31 +132,29 @@ Map<String, dynamic> _$_$_EditPostToJson(_$_EditPost instance) {
   return val;
 }
 
-_$_DeletePost _$_$_DeletePostFromJson(Map<String, dynamic> json) {
-  return _$_DeletePost(
-    postId: json['post_id'] as int,
-    deleted: json['deleted'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_DeletePost _$$_DeletePostFromJson(Map<String, dynamic> json) =>
+    _$_DeletePost(
+      postId: json['post_id'] as int,
+      deleted: json['deleted'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_DeletePostToJson(_$_DeletePost instance) =>
+Map<String, dynamic> _$$_DeletePostToJson(_$_DeletePost instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'deleted': instance.deleted,
       'auth': instance.auth,
     };
 
-_$_RemovePost _$_$_RemovePostFromJson(Map<String, dynamic> json) {
-  return _$_RemovePost(
-    postId: json['post_id'] as int,
-    removed: json['removed'] as bool,
-    reason: json['reason'] as String?,
-    auth: json['auth'] as String,
-  );
-}
+_$_RemovePost _$$_RemovePostFromJson(Map<String, dynamic> json) =>
+    _$_RemovePost(
+      postId: json['post_id'] as int,
+      removed: json['removed'] as bool,
+      reason: json['reason'] as String?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_RemovePostToJson(_$_RemovePost instance) {
+Map<String, dynamic> _$$_RemovePostToJson(_$_RemovePost instance) {
   final val = <String, dynamic>{
     'post_id': instance.postId,
     'removed': instance.removed,
@@ -180,87 +171,78 @@ Map<String, dynamic> _$_$_RemovePostToJson(_$_RemovePost instance) {
   return val;
 }
 
-_$_LockPost _$_$_LockPostFromJson(Map<String, dynamic> json) {
-  return _$_LockPost(
-    postId: json['post_id'] as int,
-    locked: json['locked'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_LockPost _$$_LockPostFromJson(Map<String, dynamic> json) => _$_LockPost(
+      postId: json['post_id'] as int,
+      locked: json['locked'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_LockPostToJson(_$_LockPost instance) =>
+Map<String, dynamic> _$$_LockPostToJson(_$_LockPost instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'locked': instance.locked,
       'auth': instance.auth,
     };
 
-_$_StickyPost _$_$_StickyPostFromJson(Map<String, dynamic> json) {
-  return _$_StickyPost(
-    postId: json['post_id'] as int,
-    stickied: json['stickied'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_StickyPost _$$_StickyPostFromJson(Map<String, dynamic> json) =>
+    _$_StickyPost(
+      postId: json['post_id'] as int,
+      stickied: json['stickied'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_StickyPostToJson(_$_StickyPost instance) =>
+Map<String, dynamic> _$$_StickyPostToJson(_$_StickyPost instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'stickied': instance.stickied,
       'auth': instance.auth,
     };
 
-_$_SavePost _$_$_SavePostFromJson(Map<String, dynamic> json) {
-  return _$_SavePost(
-    postId: json['post_id'] as int,
-    save: json['save'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_SavePost _$$_SavePostFromJson(Map<String, dynamic> json) => _$_SavePost(
+      postId: json['post_id'] as int,
+      save: json['save'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_SavePostToJson(_$_SavePost instance) =>
+Map<String, dynamic> _$$_SavePostToJson(_$_SavePost instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'save': instance.save,
       'auth': instance.auth,
     };
 
-_$_GetSiteMetadata _$_$_GetSiteMetadataFromJson(Map<String, dynamic> json) {
-  return _$_GetSiteMetadata(
-    url: json['url'] as String,
-  );
-}
+_$_GetSiteMetadata _$$_GetSiteMetadataFromJson(Map<String, dynamic> json) =>
+    _$_GetSiteMetadata(
+      url: json['url'] as String,
+    );
 
-Map<String, dynamic> _$_$_GetSiteMetadataToJson(_$_GetSiteMetadata instance) =>
+Map<String, dynamic> _$$_GetSiteMetadataToJson(_$_GetSiteMetadata instance) =>
     <String, dynamic>{
       'url': instance.url,
     };
 
-_$_CreatePostReport _$_$_CreatePostReportFromJson(Map<String, dynamic> json) {
-  return _$_CreatePostReport(
-    postId: json['post_id'] as int,
-    reason: json['reason'] as String,
-    auth: json['auth'] as String,
-  );
-}
+_$_CreatePostReport _$$_CreatePostReportFromJson(Map<String, dynamic> json) =>
+    _$_CreatePostReport(
+      postId: json['post_id'] as int,
+      reason: json['reason'] as String,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_CreatePostReportToJson(
-        _$_CreatePostReport instance) =>
+Map<String, dynamic> _$$_CreatePostReportToJson(_$_CreatePostReport instance) =>
     <String, dynamic>{
       'post_id': instance.postId,
       'reason': instance.reason,
       'auth': instance.auth,
     };
 
-_$_ResolvePostReport _$_$_ResolvePostReportFromJson(Map<String, dynamic> json) {
-  return _$_ResolvePostReport(
-    reportId: json['report_id'] as int,
-    resolved: json['resolved'] as bool,
-    auth: json['auth'] as String,
-  );
-}
+_$_ResolvePostReport _$$_ResolvePostReportFromJson(Map<String, dynamic> json) =>
+    _$_ResolvePostReport(
+      reportId: json['report_id'] as int,
+      resolved: json['resolved'] as bool,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_ResolvePostReportToJson(
+Map<String, dynamic> _$$_ResolvePostReportToJson(
         _$_ResolvePostReport instance) =>
     <String, dynamic>{
       'report_id': instance.reportId,
@@ -268,16 +250,16 @@ Map<String, dynamic> _$_$_ResolvePostReportToJson(
       'auth': instance.auth,
     };
 
-_$_ListPostReports _$_$_ListPostReportsFromJson(Map<String, dynamic> json) {
-  return _$_ListPostReports(
-    page: json['page'] as int?,
-    limit: json['limit'] as int?,
-    community: json['community'] as int?,
-    auth: json['auth'] as String,
-  );
-}
+_$_ListPostReports _$$_ListPostReportsFromJson(Map<String, dynamic> json) =>
+    _$_ListPostReports(
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      communityId: json['community_id'] as int?,
+      unresolvedOnly: json['unresolved_only'] as bool?,
+      auth: json['auth'] as String,
+    );
 
-Map<String, dynamic> _$_$_ListPostReportsToJson(_$_ListPostReports instance) {
+Map<String, dynamic> _$$_ListPostReportsToJson(_$_ListPostReports instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -288,7 +270,8 @@ Map<String, dynamic> _$_$_ListPostReportsToJson(_$_ListPostReports instance) {
 
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
-  writeNotNull('community', instance.community);
+  writeNotNull('community_id', instance.communityId);
+  writeNotNull('unresolved_only', instance.unresolvedOnly);
   val['auth'] = instance.auth;
   return val;
 }

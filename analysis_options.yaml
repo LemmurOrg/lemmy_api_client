@@ -121,3 +121,5 @@ analyzer:
     - "**/*.freezed.dart"
   strong-mode:
     implicit-dynamic: false
+  errors:
+    invalid_annotation_target: ignore

@@ -519,14 +519,13 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
       BlockedPerson.fromJson(json);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class GetReportCount
     with _$GetReportCount
     implements LemmyApiQuery<GetReportCountResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReportCount({
-    int? community,
+    int? communityId,
     required String auth,
   }) = _GetReportCount;
 
@@ -534,7 +533,7 @@ class GetReportCount
   factory GetReportCount.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountFromJson(json);
 
-  final path = 'xyz';
+  final path = '/user/report_count';
 
   final httpMethod = HttpMethod.get;
 

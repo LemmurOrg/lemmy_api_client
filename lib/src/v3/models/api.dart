@@ -271,12 +271,11 @@ class BlockedCommunity with _$BlockedCommunity {
       _$BlockedCommunityFromJson(json);
 }
 
-// TODO: this does not seem to exist yet
 @freezed
 class GetReportCountResponse with _$GetReportCountResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
   factory GetReportCountResponse({
-    int? community,
+    int? communityId,
     required int commentReports,
     required int postReports,
     required String instanceHost,
@@ -285,34 +284,4 @@ class GetReportCountResponse with _$GetReportCountResponse {
   GetReportCountResponse._();
   factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountResponseFromJson(json);
-}
-
-// TODO: this does not seem to exist yet
-@freezed
-class ResolveCommentReportResponse with _$ResolveCommentReportResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ResolveCommentReportResponse({
-    required int reportId,
-    required bool resolved,
-    required String instanceHost,
-  }) = _ResolveCommentReportResponse;
-
-  ResolveCommentReportResponse._();
-  factory ResolveCommentReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$ResolveCommentReportResponseFromJson(json);
-}
-
-// TODO: this does not seem to exist yet
-@freezed
-class ResolvePostReportResponse with _$ResolvePostReportResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ResolvePostReportResponse({
-    required int reportId,
-    required bool resolved,
-    required String instanceHost,
-  }) = _ResolvePostReportResponse;
-
-  ResolvePostReportResponse._();
-  factory ResolvePostReportResponse.fromJson(Map<String, dynamic> json) =>
-      _$ResolvePostReportResponseFromJson(json);
 }
