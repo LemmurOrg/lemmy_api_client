@@ -17,7 +17,7 @@ class FullCommunityView with _$FullCommunityView {
     required String instanceHost,
   }) = _FullCommunityView;
 
-  FullCommunityView._();
+  const FullCommunityView._();
 
   factory FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$FullCommunityViewFromJson(json);
@@ -35,7 +35,7 @@ class FullPostView with _$FullPostView {
     required String instanceHost,
   }) = _FullPostView;
 
-  FullPostView._();
+  const FullPostView._();
   factory FullPostView.fromJson(Map<String, dynamic> json) =>
       _$FullPostViewFromJson(json);
 }
@@ -52,7 +52,7 @@ class SearchResults with _$SearchResults {
     required String instanceHost,
   }) = _SearchResults;
 
-  SearchResults._();
+  const SearchResults._();
 
   factory SearchResults.fromJson(Map<String, dynamic> json) =>
       _$SearchResultsFromJson(json);
@@ -75,7 +75,7 @@ class Modlog with _$Modlog {
     required String instanceHost,
   }) = _Modlog;
 
-  Modlog._();
+  const Modlog._();
 
   factory Modlog.fromJson(Map<String, dynamic> json) => _$ModlogFromJson(json);
 }
@@ -90,7 +90,7 @@ class FullCommentView with _$FullCommentView {
     required String instanceHost,
   }) = _FullCommentView;
 
-  FullCommentView._();
+  const FullCommentView._();
   factory FullCommentView.fromJson(Map<String, dynamic> json) =>
       _$FullCommentViewFromJson(json);
 }
@@ -109,7 +109,7 @@ class FullSiteView with _$FullSiteView {
     required String instanceHost,
   }) = _FullSiteView;
 
-  FullSiteView._();
+  const FullSiteView._();
 
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
@@ -127,7 +127,7 @@ class MyUserInfo with _$MyUserInfo {
     required String instanceHost,
   }) = _MyUserInfo;
 
-  MyUserInfo._();
+  const MyUserInfo._();
 
   factory MyUserInfo.fromJson(Map<String, dynamic> json) =>
       _$MyUserInfoFromJson(json);
@@ -143,7 +143,7 @@ class FederatedInstances with _$FederatedInstances {
     required String instanceHost,
   }) = _FederatedInstances;
 
-  FederatedInstances._();
+  const FederatedInstances._();
 
   factory FederatedInstances.fromJson(Map<String, dynamic> json) =>
       _$FederatedInstancesFromJson(json);
@@ -161,7 +161,7 @@ class Captcha with _$Captcha {
     required String uuid,
   }) = _Captcha;
 
-  Captcha._();
+  const Captcha._();
   factory Captcha.fromJson(Map<String, dynamic> json) =>
       _$CaptchaFromJson(json);
 }
@@ -177,7 +177,7 @@ class FullPersonView with _$FullPersonView {
     required String instanceHost,
   }) = _FullPersonView;
 
-  FullPersonView._();
+  const FullPersonView._();
   factory FullPersonView.fromJson(Map<String, dynamic> json) =>
       _$FullPersonViewFromJson(json);
 }
@@ -191,7 +191,7 @@ class BannedCommunityUser with _$BannedCommunityUser {
     required String instanceHost,
   }) = _BannedCommunityUser;
 
-  BannedCommunityUser._();
+  const BannedCommunityUser._();
 
   factory BannedCommunityUser.fromJson(Map<String, dynamic> json) =>
       _$BannedCommunityUserFromJson(json);
@@ -206,7 +206,7 @@ class BannedPerson with _$BannedPerson {
     required String instanceHost,
   }) = _BannedPerson;
 
-  BannedPerson._();
+  const BannedPerson._();
   factory BannedPerson.fromJson(Map<String, dynamic> json) =>
       _$BannedPersonFromJson(json);
 }
@@ -222,7 +222,7 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
     required String instanceHost,
   }) = _ResolveObjectResponse;
 
-  ResolveObjectResponse._();
+  const ResolveObjectResponse._();
   factory ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
       _$ResolveObjectResponseFromJson(json);
 }
@@ -238,7 +238,7 @@ class SiteMetadata with _$SiteMetadata {
     required String instanceHost,
   }) = _SiteMetadata;
 
-  SiteMetadata._();
+  const SiteMetadata._();
   factory SiteMetadata.fromJson(Map<String, dynamic> json) =>
       _$SiteMetadataFromJson(json);
 }
@@ -252,7 +252,7 @@ class BlockedPerson with _$BlockedPerson {
     required String instanceHost,
   }) = _BlockedPerson;
 
-  BlockedPerson._();
+  const BlockedPerson._();
   factory BlockedPerson.fromJson(Map<String, dynamic> json) =>
       _$BlockedPersonFromJson(json);
 }
@@ -266,7 +266,7 @@ class BlockedCommunity with _$BlockedCommunity {
     required String instanceHost,
   }) = _BlockedCommunity;
 
-  BlockedCommunity._();
+  const BlockedCommunity._();
   factory BlockedCommunity.fromJson(Map<String, dynamic> json) =>
       _$BlockedCommunityFromJson(json);
 }
@@ -281,7 +281,7 @@ class GetReportCountResponse with _$GetReportCountResponse {
     required String instanceHost,
   }) = _GetReportCountResponse;
 
-  GetReportCountResponse._();
+  const GetReportCountResponse._();
   factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountResponseFromJson(json);
 }

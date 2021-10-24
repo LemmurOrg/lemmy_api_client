@@ -17,7 +17,7 @@ class PersonViewSafe with _$PersonViewSafe {
     required String instanceHost,
   }) = _PersonViewSafe;
 
-  PersonViewSafe._();
+  const PersonViewSafe._();
   factory PersonViewSafe.fromJson(Map<String, dynamic> json) =>
       _$PersonViewSafeFromJson(json);
 }
@@ -41,7 +41,7 @@ class PersonMentionView with _$PersonMentionView {
     required String instanceHost,
   }) = _PersonMentionView;
 
-  PersonMentionView._();
+  const PersonMentionView._();
   factory PersonMentionView.fromJson(Map<String, dynamic> json) =>
       _$PersonMentionViewFromJson(json);
 }
@@ -56,7 +56,7 @@ class LocalUserSettingsView with _$LocalUserSettingsView {
     required String instanceHost,
   }) = _LocalUserSettingsView;
 
-  LocalUserSettingsView._();
+  const LocalUserSettingsView._();
   factory LocalUserSettingsView.fromJson(Map<String, dynamic> json) =>
       _$LocalUserSettingsViewFromJson(json);
 }
@@ -71,7 +71,7 @@ class SiteView with _$SiteView {
     required String instanceHost,
   }) = _SiteView;
 
-  SiteView._();
+  const SiteView._();
   factory SiteView.fromJson(Map<String, dynamic> json) =>
       _$SiteViewFromJson(json);
 }
@@ -86,7 +86,7 @@ class PrivateMessageView with _$PrivateMessageView {
     required String instanceHost,
   }) = _PrivateMessageView;
 
-  PrivateMessageView._();
+  const PrivateMessageView._();
   factory PrivateMessageView.fromJson(Map<String, dynamic> json) =>
       _$PrivateMessageViewFromJson(json);
 }
@@ -108,7 +108,7 @@ class PostView with _$PostView {
     required String instanceHost,
   }) = _PostView;
 
-  PostView._();
+  const PostView._();
   factory PostView.fromJson(Map<String, dynamic> json) =>
       _$PostViewFromJson(json);
 }
@@ -129,7 +129,7 @@ class PostReportView with _$PostReportView {
     required String instanceHost,
   }) = _PostReportView;
 
-  PostReportView._();
+  const PostReportView._();
   factory PostReportView.fromJson(Map<String, dynamic> json) =>
       _$PostReportViewFromJson(json);
 }
@@ -152,7 +152,7 @@ class CommentView with _$CommentView {
     required String instanceHost,
   }) = _CommentView;
 
-  CommentView._();
+  const CommentView._();
   factory CommentView.fromJson(Map<String, dynamic> json) =>
       _$CommentViewFromJson(json);
 }
@@ -174,7 +174,7 @@ class CommentReportView with _$CommentReportView {
     required String instanceHost,
   }) = _CommentReportView;
 
-  CommentReportView._();
+  const CommentReportView._();
   factory CommentReportView.fromJson(Map<String, dynamic> json) =>
       _$CommentReportViewFromJson(json);
 }
@@ -190,7 +190,7 @@ class ModAddCommunityView with _$ModAddCommunityView {
     required String instanceHost,
   }) = _ModAddCommunityView;
 
-  ModAddCommunityView._();
+  const ModAddCommunityView._();
   factory ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModAddCommunityViewFromJson(json);
 }
@@ -206,7 +206,7 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
     required String instanceHost,
   }) = _ModTransferCommunityView;
 
-  ModTransferCommunityView._();
+  const ModTransferCommunityView._();
   factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModTransferCommunityViewFromJson(json);
 }
@@ -221,7 +221,7 @@ class ModAddView with _$ModAddView {
     required String instanceHost,
   }) = _ModAddView;
 
-  ModAddView._();
+  const ModAddView._();
   factory ModAddView.fromJson(Map<String, dynamic> json) =>
       _$ModAddViewFromJson(json);
 }
@@ -237,7 +237,7 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
     required String instanceHost,
   }) = _ModBanFromCommunityView;
 
-  ModBanFromCommunityView._();
+  const ModBanFromCommunityView._();
   factory ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModBanFromCommunityViewFromJson(json);
 }
@@ -252,7 +252,7 @@ class ModBanView with _$ModBanView {
     required String instanceHost,
   }) = _ModBanView;
 
-  ModBanView._();
+  const ModBanView._();
   factory ModBanView.fromJson(Map<String, dynamic> json) =>
       _$ModBanViewFromJson(json);
 }
@@ -268,7 +268,7 @@ class ModLockPostView with _$ModLockPostView {
     required String instanceHost,
   }) = _ModLockPostView;
 
-  ModLockPostView._();
+  const ModLockPostView._();
   factory ModLockPostView.fromJson(Map<String, dynamic> json) =>
       _$ModLockPostViewFromJson(json);
 }
@@ -286,7 +286,7 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
     required String instanceHost,
   }) = _ModRemoveCommentView;
 
-  ModRemoveCommentView._();
+  const ModRemoveCommentView._();
   factory ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommentViewFromJson(json);
 }
@@ -301,7 +301,7 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
     required String instanceHost,
   }) = _ModRemoveCommunityView;
 
-  ModRemoveCommunityView._();
+  const ModRemoveCommunityView._();
   factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommunityViewFromJson(json);
 }
@@ -317,7 +317,7 @@ class ModRemovePostView with _$ModRemovePostView {
     required String instanceHost,
   }) = _ModRemovePostView;
 
-  ModRemovePostView._();
+  const ModRemovePostView._();
   factory ModRemovePostView.fromJson(Map<String, dynamic> json) =>
       _$ModRemovePostViewFromJson(json);
 }
@@ -333,7 +333,7 @@ class ModStickyPostView with _$ModStickyPostView {
     required String instanceHost,
   }) = _ModStickyPostView;
 
-  ModStickyPostView._();
+  const ModStickyPostView._();
   factory ModStickyPostView.fromJson(Map<String, dynamic> json) =>
       _$ModStickyPostViewFromJson(json);
 }
@@ -347,7 +347,7 @@ class CommunityFollowerView with _$CommunityFollowerView {
     required String instanceHost,
   }) = _CommunityFollowerView;
 
-  CommunityFollowerView._();
+  const CommunityFollowerView._();
   factory CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
       _$CommunityFollowerViewFromJson(json);
 }
@@ -361,7 +361,7 @@ class CommunityModeratorView with _$CommunityModeratorView {
     required String instanceHost,
   }) = _CommunityModeratorView;
 
-  CommunityModeratorView._();
+  const CommunityModeratorView._();
   factory CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
       _$CommunityModeratorViewFromJson(json);
 }
@@ -375,7 +375,7 @@ class PersonBlockView with _$PersonBlockView {
     required String instanceHost,
   }) = _PersonBlockView;
 
-  PersonBlockView._();
+  const PersonBlockView._();
   factory PersonBlockView.fromJson(Map<String, dynamic> json) =>
       _$PersonBlockViewFromJson(json);
 }
@@ -389,7 +389,7 @@ class CommunityBlockView with _$CommunityBlockView {
     required String instanceHost,
   }) = _CommunityBlockView;
 
-  CommunityBlockView._();
+  const CommunityBlockView._();
   factory CommunityBlockView.fromJson(Map<String, dynamic> json) =>
       _$CommunityBlockViewFromJson(json);
 }
@@ -403,7 +403,7 @@ class CommunityPersonBanView with _$CommunityPersonBanView {
     required String instanceHost,
   }) = _CommunityPersonBanView;
 
-  CommunityPersonBanView._();
+  const CommunityPersonBanView._();
   factory CommunityPersonBanView.fromJson(Map<String, dynamic> json) =>
       _$CommunityPersonBanViewFromJson(json);
 }
@@ -419,7 +419,7 @@ class CommunityView with _$CommunityView {
     required String instanceHost,
   }) = _CommunityView;
 
-  CommunityView._();
+  const CommunityView._();
   factory CommunityView.fromJson(Map<String, dynamic> json) =>
       _$CommunityViewFromJson(json);
 }

@@ -76,7 +76,7 @@ class PictrsUpload with _$PictrsUpload {
     required String instanceHost,
   }) = _PictrsUpload;
 
-  PictrsUpload._();
+  const PictrsUpload._();
   factory PictrsUpload.fromJson(Map<String, dynamic> json) =>
       _$PictrsUploadFromJson(json);
 }

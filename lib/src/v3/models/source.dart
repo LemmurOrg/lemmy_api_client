@@ -33,7 +33,7 @@ class PersonSafe with _$PersonSafe {
     required String instanceHost,
   }) = _PersonSafe;
 
-  PersonSafe._();
+  const PersonSafe._();
   factory PersonSafe.fromJson(Map<String, dynamic> json) =>
       _$PersonSafeFromJson(json);
 }
@@ -63,7 +63,7 @@ class LocalUserSettings with _$LocalUserSettings {
     required String instanceHost,
   }) = _LocalUserSettings;
 
-  LocalUserSettings._();
+  const LocalUserSettings._();
   factory LocalUserSettings.fromJson(Map<String, dynamic> json) =>
       _$LocalUserSettingsFromJson(json);
 }
@@ -90,7 +90,7 @@ class Site with _$Site {
     required String instanceHost,
   }) = _Site;
 
-  Site._();
+  const Site._();
   factory Site.fromJson(Map<String, dynamic> json) => _$SiteFromJson(json);
 }
 
@@ -113,7 +113,7 @@ class PrivateMessage with _$PrivateMessage {
     required String instanceHost,
   }) = _PrivateMessage;
 
-  PrivateMessage._();
+  const PrivateMessage._();
   factory PrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$PrivateMessageFromJson(json);
 }
@@ -138,7 +138,7 @@ class PostReport with _$PostReport {
     required String instanceHost,
   }) = _PostReport;
 
-  PostReport._();
+  const PostReport._();
   factory PostReport.fromJson(Map<String, dynamic> json) =>
       _$PostReportFromJson(json);
 }
@@ -171,7 +171,7 @@ class Post with _$Post {
     required String instanceHost,
   }) = _Post;
 
-  Post._();
+  const Post._();
   factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 }
 
@@ -188,7 +188,7 @@ class PasswordResetRequest with _$PasswordResetRequest {
     required String instanceHost,
   }) = _PasswordResetRequest;
 
-  PasswordResetRequest._();
+  const PasswordResetRequest._();
   factory PasswordResetRequest.fromJson(Map<String, dynamic> json) =>
       _$PasswordResetRequestFromJson(json);
 }
@@ -208,7 +208,7 @@ class ModRemovePost with _$ModRemovePost {
     required String instanceHost,
   }) = _ModRemovePost;
 
-  ModRemovePost._();
+  const ModRemovePost._();
   factory ModRemovePost.fromJson(Map<String, dynamic> json) =>
       _$ModRemovePostFromJson(json);
 }
@@ -227,7 +227,7 @@ class ModLockPost with _$ModLockPost {
     required String instanceHost,
   }) = _ModLockPost;
 
-  ModLockPost._();
+  const ModLockPost._();
   factory ModLockPost.fromJson(Map<String, dynamic> json) =>
       _$ModLockPostFromJson(json);
 }
@@ -246,7 +246,7 @@ class ModStickyPost with _$ModStickyPost {
     required String instanceHost,
   }) = _ModStickyPost;
 
-  ModStickyPost._();
+  const ModStickyPost._();
   factory ModStickyPost.fromJson(Map<String, dynamic> json) =>
       _$ModStickyPostFromJson(json);
 }
@@ -266,7 +266,7 @@ class ModRemoveComment with _$ModRemoveComment {
     required String instanceHost,
   }) = _ModRemoveComment;
 
-  ModRemoveComment._();
+  const ModRemoveComment._();
   factory ModRemoveComment.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommentFromJson(json);
 }
@@ -287,7 +287,7 @@ class ModRemoveCommunity with _$ModRemoveCommunity {
     required String instanceHost,
   }) = _ModRemoveCommunity;
 
-  ModRemoveCommunity._();
+  const ModRemoveCommunity._();
   factory ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommunityFromJson(json);
 }
@@ -309,7 +309,7 @@ class ModBanFromCommunity with _$ModBanFromCommunity {
     required String instanceHost,
   }) = _ModBanFromCommunity;
 
-  ModBanFromCommunity._();
+  const ModBanFromCommunity._();
   factory ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModBanFromCommunityFromJson(json);
 }
@@ -330,7 +330,7 @@ class ModBan with _$ModBan {
     required String instanceHost,
   }) = _ModBan;
 
-  ModBan._();
+  const ModBan._();
   factory ModBan.fromJson(Map<String, dynamic> json) => _$ModBanFromJson(json);
 }
 
@@ -349,7 +349,7 @@ class ModAddCommunity with _$ModAddCommunity {
     required String instanceHost,
   }) = _ModAddCommunity;
 
-  ModAddCommunity._();
+  const ModAddCommunity._();
   factory ModAddCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModAddCommunityFromJson(json);
 }
@@ -369,7 +369,7 @@ class ModTransferCommunity with _$ModTransferCommunity {
     required String instanceHost,
   }) = _ModTransferCommunity;
 
-  ModTransferCommunity._();
+  const ModTransferCommunity._();
   factory ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModTransferCommunityFromJson(json);
 }
@@ -388,7 +388,7 @@ class ModAdd with _$ModAdd {
     required String instanceHost,
   }) = _ModAdd;
 
-  ModAdd._();
+  const ModAdd._();
   factory ModAdd.fromJson(Map<String, dynamic> json) => _$ModAddFromJson(json);
 }
 
@@ -414,7 +414,7 @@ class CommunitySafe with _$CommunitySafe {
     required String instanceHost,
   }) = _CommunitySafe;
 
-  CommunitySafe._();
+  const CommunitySafe._();
   factory CommunitySafe.fromJson(Map<String, dynamic> json) =>
       _$CommunitySafeFromJson(json);
 }
@@ -437,7 +437,7 @@ class CommentReport with _$CommentReport {
     required String instanceHost,
   }) = _CommentReport;
 
-  CommentReport._();
+  const CommentReport._();
   factory CommentReport.fromJson(Map<String, dynamic> json) =>
       _$CommentReportFromJson(json);
 }
@@ -463,7 +463,7 @@ class Comment with _$Comment {
     required String instanceHost,
   }) = _Comment;
 
-  Comment._();
+  const Comment._();
   factory Comment.fromJson(Map<String, dynamic> json) =>
       _$CommentFromJson(json);
 }
@@ -482,7 +482,7 @@ class PersonMention with _$PersonMention {
     required String instanceHost,
   }) = _PersonMention;
 
-  PersonMention._();
+  const PersonMention._();
   factory PersonMention.fromJson(Map<String, dynamic> json) =>
       _$PersonMentionFromJson(json);
 }
