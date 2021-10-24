@@ -70,7 +70,7 @@ class PictrsUploadFile with _$PictrsUploadFile {
 @freezed
 class PictrsUpload with _$PictrsUpload {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PictrsUpload({
+  const factory PictrsUpload({
     required String msg,
     required List<PictrsUploadFile> files,
     required String instanceHost,
