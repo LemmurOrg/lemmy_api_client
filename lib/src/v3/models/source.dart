@@ -12,7 +12,7 @@ class PersonSafe with _$PersonSafe {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PersonSafe({
+  const factory PersonSafe({
     required int id,
     required String name,
     String? displayName,
@@ -33,7 +33,7 @@ class PersonSafe with _$PersonSafe {
     required String instanceHost,
   }) = _PersonSafe;
 
-  PersonSafe._();
+  const PersonSafe._();
   factory PersonSafe.fromJson(Map<String, dynamic> json) =>
       _$PersonSafeFromJson(json);
 }
@@ -43,7 +43,7 @@ class LocalUserSettings with _$LocalUserSettings {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory LocalUserSettings({
+  const factory LocalUserSettings({
     required int id,
     required int personId,
     String? email,
@@ -63,7 +63,7 @@ class LocalUserSettings with _$LocalUserSettings {
     required String instanceHost,
   }) = _LocalUserSettings;
 
-  LocalUserSettings._();
+  const LocalUserSettings._();
   factory LocalUserSettings.fromJson(Map<String, dynamic> json) =>
       _$LocalUserSettingsFromJson(json);
 }
@@ -73,7 +73,7 @@ class Site with _$Site {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Site({
+  const factory Site({
     required int id,
     required String name,
     String? sidebar,
@@ -90,7 +90,7 @@ class Site with _$Site {
     required String instanceHost,
   }) = _Site;
 
-  Site._();
+  const Site._();
   factory Site.fromJson(Map<String, dynamic> json) => _$SiteFromJson(json);
 }
 
@@ -99,7 +99,7 @@ class PrivateMessage with _$PrivateMessage {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PrivateMessage({
+  const factory PrivateMessage({
     required int id,
     required int creatorId,
     required int recipientId,
@@ -113,7 +113,7 @@ class PrivateMessage with _$PrivateMessage {
     required String instanceHost,
   }) = _PrivateMessage;
 
-  PrivateMessage._();
+  const PrivateMessage._();
   factory PrivateMessage.fromJson(Map<String, dynamic> json) =>
       _$PrivateMessageFromJson(json);
 }
@@ -123,7 +123,7 @@ class PostReport with _$PostReport {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PostReport({
+  const factory PostReport({
     required int id,
     required int creatorId,
     required int postId,
@@ -138,7 +138,7 @@ class PostReport with _$PostReport {
     required String instanceHost,
   }) = _PostReport;
 
-  PostReport._();
+  const PostReport._();
   factory PostReport.fromJson(Map<String, dynamic> json) =>
       _$PostReportFromJson(json);
 }
@@ -148,7 +148,7 @@ class Post with _$Post {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Post({
+  const factory Post({
     required int id,
     required String name,
     String? url,
@@ -171,7 +171,7 @@ class Post with _$Post {
     required String instanceHost,
   }) = _Post;
 
-  Post._();
+  const Post._();
   factory Post.fromJson(Map<String, dynamic> json) => _$PostFromJson(json);
 }
 
@@ -180,7 +180,7 @@ class PasswordResetRequest with _$PasswordResetRequest {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PasswordResetRequest({
+  const factory PasswordResetRequest({
     required int id,
     required int localUserId,
     required String tokenEncrypted,
@@ -188,7 +188,7 @@ class PasswordResetRequest with _$PasswordResetRequest {
     required String instanceHost,
   }) = _PasswordResetRequest;
 
-  PasswordResetRequest._();
+  const PasswordResetRequest._();
   factory PasswordResetRequest.fromJson(Map<String, dynamic> json) =>
       _$PasswordResetRequestFromJson(json);
 }
@@ -198,7 +198,7 @@ class ModRemovePost with _$ModRemovePost {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModRemovePost({
+  const factory ModRemovePost({
     required int id,
     required int modPersonId,
     required int postId,
@@ -208,7 +208,7 @@ class ModRemovePost with _$ModRemovePost {
     required String instanceHost,
   }) = _ModRemovePost;
 
-  ModRemovePost._();
+  const ModRemovePost._();
   factory ModRemovePost.fromJson(Map<String, dynamic> json) =>
       _$ModRemovePostFromJson(json);
 }
@@ -218,7 +218,7 @@ class ModLockPost with _$ModLockPost {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModLockPost({
+  const factory ModLockPost({
     required int id,
     required int modPersonId,
     required int postId,
@@ -227,7 +227,7 @@ class ModLockPost with _$ModLockPost {
     required String instanceHost,
   }) = _ModLockPost;
 
-  ModLockPost._();
+  const ModLockPost._();
   factory ModLockPost.fromJson(Map<String, dynamic> json) =>
       _$ModLockPostFromJson(json);
 }
@@ -237,7 +237,7 @@ class ModStickyPost with _$ModStickyPost {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModStickyPost({
+  const factory ModStickyPost({
     required int id,
     required int modPersonId,
     required int postId,
@@ -246,7 +246,7 @@ class ModStickyPost with _$ModStickyPost {
     required String instanceHost,
   }) = _ModStickyPost;
 
-  ModStickyPost._();
+  const ModStickyPost._();
   factory ModStickyPost.fromJson(Map<String, dynamic> json) =>
       _$ModStickyPostFromJson(json);
 }
@@ -256,7 +256,7 @@ class ModRemoveComment with _$ModRemoveComment {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModRemoveComment({
+  const factory ModRemoveComment({
     required int id,
     required int modPersonId,
     required int commentId,
@@ -266,7 +266,7 @@ class ModRemoveComment with _$ModRemoveComment {
     required String instanceHost,
   }) = _ModRemoveComment;
 
-  ModRemoveComment._();
+  const ModRemoveComment._();
   factory ModRemoveComment.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommentFromJson(json);
 }
@@ -276,7 +276,7 @@ class ModRemoveCommunity with _$ModRemoveCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModRemoveCommunity({
+  const factory ModRemoveCommunity({
     required int id,
     required int modPersonId,
     required int communityId,
@@ -287,7 +287,7 @@ class ModRemoveCommunity with _$ModRemoveCommunity {
     required String instanceHost,
   }) = _ModRemoveCommunity;
 
-  ModRemoveCommunity._();
+  const ModRemoveCommunity._();
   factory ModRemoveCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommunityFromJson(json);
 }
@@ -297,7 +297,7 @@ class ModBanFromCommunity with _$ModBanFromCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModBanFromCommunity({
+  const factory ModBanFromCommunity({
     required int id,
     required int modPersonId,
     required int otherPersonId,
@@ -309,7 +309,7 @@ class ModBanFromCommunity with _$ModBanFromCommunity {
     required String instanceHost,
   }) = _ModBanFromCommunity;
 
-  ModBanFromCommunity._();
+  const ModBanFromCommunity._();
   factory ModBanFromCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModBanFromCommunityFromJson(json);
 }
@@ -319,7 +319,7 @@ class ModBan with _$ModBan {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModBan({
+  const factory ModBan({
     required int id,
     required int modPersonId,
     required int otherPersonId,
@@ -330,7 +330,7 @@ class ModBan with _$ModBan {
     required String instanceHost,
   }) = _ModBan;
 
-  ModBan._();
+  const ModBan._();
   factory ModBan.fromJson(Map<String, dynamic> json) => _$ModBanFromJson(json);
 }
 
@@ -339,7 +339,7 @@ class ModAddCommunity with _$ModAddCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModAddCommunity({
+  const factory ModAddCommunity({
     required int id,
     required int modPersonId,
     required int otherPersonId,
@@ -349,7 +349,7 @@ class ModAddCommunity with _$ModAddCommunity {
     required String instanceHost,
   }) = _ModAddCommunity;
 
-  ModAddCommunity._();
+  const ModAddCommunity._();
   factory ModAddCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModAddCommunityFromJson(json);
 }
@@ -359,7 +359,7 @@ class ModTransferCommunity with _$ModTransferCommunity {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModTransferCommunity({
+  const factory ModTransferCommunity({
     required int id,
     required int modPersonId,
     required int otherPersonId,
@@ -369,7 +369,7 @@ class ModTransferCommunity with _$ModTransferCommunity {
     required String instanceHost,
   }) = _ModTransferCommunity;
 
-  ModTransferCommunity._();
+  const ModTransferCommunity._();
   factory ModTransferCommunity.fromJson(Map<String, dynamic> json) =>
       _$ModTransferCommunityFromJson(json);
 }
@@ -379,7 +379,7 @@ class ModAdd with _$ModAdd {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModAdd({
+  const factory ModAdd({
     required int id,
     required int modPersonId,
     required int otherPersonId,
@@ -388,7 +388,7 @@ class ModAdd with _$ModAdd {
     required String instanceHost,
   }) = _ModAdd;
 
-  ModAdd._();
+  const ModAdd._();
   factory ModAdd.fromJson(Map<String, dynamic> json) => _$ModAddFromJson(json);
 }
 
@@ -397,7 +397,7 @@ class CommunitySafe with _$CommunitySafe {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunitySafe({
+  const factory CommunitySafe({
     required int id,
     required String name,
     required String title,
@@ -414,7 +414,7 @@ class CommunitySafe with _$CommunitySafe {
     required String instanceHost,
   }) = _CommunitySafe;
 
-  CommunitySafe._();
+  const CommunitySafe._();
   factory CommunitySafe.fromJson(Map<String, dynamic> json) =>
       _$CommunitySafeFromJson(json);
 }
@@ -424,7 +424,7 @@ class CommentReport with _$CommentReport {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommentReport({
+  const factory CommentReport({
     required int id,
     required int creatorId,
     required int commentId,
@@ -437,7 +437,7 @@ class CommentReport with _$CommentReport {
     required String instanceHost,
   }) = _CommentReport;
 
-  CommentReport._();
+  const CommentReport._();
   factory CommentReport.fromJson(Map<String, dynamic> json) =>
       _$CommentReportFromJson(json);
 }
@@ -447,7 +447,7 @@ class Comment with _$Comment {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Comment({
+  const factory Comment({
     required int id,
     required int creatorId,
     required int postId,
@@ -463,7 +463,7 @@ class Comment with _$Comment {
     required String instanceHost,
   }) = _Comment;
 
-  Comment._();
+  const Comment._();
   factory Comment.fromJson(Map<String, dynamic> json) =>
       _$CommentFromJson(json);
 }
@@ -473,7 +473,7 @@ class PersonMention with _$PersonMention {
   @ForceUtcDateTime()
   @ForceUtcDateTimeNullable()
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PersonMention({
+  const factory PersonMention({
     required int id,
     required int recipientId,
     required int commentId,
@@ -482,7 +482,7 @@ class PersonMention with _$PersonMention {
     required String instanceHost,
   }) = _PersonMention;
 
-  PersonMention._();
+  const PersonMention._();
   factory PersonMention.fromJson(Map<String, dynamic> json) =>
       _$PersonMentionFromJson(json);
 }

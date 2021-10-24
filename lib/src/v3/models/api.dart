@@ -10,14 +10,14 @@ part 'api.g.dart';
 @freezed
 class FullCommunityView with _$FullCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullCommunityView({
+  const factory FullCommunityView({
     required CommunityView communityView,
     required List<CommunityModeratorView> moderators,
     required int online,
     required String instanceHost,
   }) = _FullCommunityView;
 
-  FullCommunityView._();
+  const FullCommunityView._();
 
   factory FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$FullCommunityViewFromJson(json);
@@ -26,7 +26,7 @@ class FullCommunityView with _$FullCommunityView {
 @freezed
 class FullPostView with _$FullPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullPostView({
+  const factory FullPostView({
     required PostView postView,
     required CommunityView communityView,
     required List<CommentView> comments,
@@ -35,7 +35,7 @@ class FullPostView with _$FullPostView {
     required String instanceHost,
   }) = _FullPostView;
 
-  FullPostView._();
+  const FullPostView._();
   factory FullPostView.fromJson(Map<String, dynamic> json) =>
       _$FullPostViewFromJson(json);
 }
@@ -43,7 +43,7 @@ class FullPostView with _$FullPostView {
 @freezed
 class SearchResults with _$SearchResults {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory SearchResults({
+  const factory SearchResults({
     @JsonKey(name: 'type_') required SearchType type,
     required List<CommentView> comments,
     required List<PostView> posts,
@@ -52,7 +52,7 @@ class SearchResults with _$SearchResults {
     required String instanceHost,
   }) = _SearchResults;
 
-  SearchResults._();
+  const SearchResults._();
 
   factory SearchResults.fromJson(Map<String, dynamic> json) =>
       _$SearchResultsFromJson(json);
@@ -61,7 +61,7 @@ class SearchResults with _$SearchResults {
 @freezed
 class Modlog with _$Modlog {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Modlog({
+  const factory Modlog({
     required List<ModRemovePostView> removedPosts,
     required List<ModLockPostView> lockedPosts,
     required List<ModStickyPostView> stickiedPosts,
@@ -75,7 +75,7 @@ class Modlog with _$Modlog {
     required String instanceHost,
   }) = _Modlog;
 
-  Modlog._();
+  const Modlog._();
 
   factory Modlog.fromJson(Map<String, dynamic> json) => _$ModlogFromJson(json);
 }
@@ -83,14 +83,14 @@ class Modlog with _$Modlog {
 @freezed
 class FullCommentView with _$FullCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullCommentView({
+  const factory FullCommentView({
     required CommentView commentView,
     required List<int> recipientIds,
     String? formId,
     required String instanceHost,
   }) = _FullCommentView;
 
-  FullCommentView._();
+  const FullCommentView._();
   factory FullCommentView.fromJson(Map<String, dynamic> json) =>
       _$FullCommentViewFromJson(json);
 }
@@ -98,7 +98,7 @@ class FullCommentView with _$FullCommentView {
 @freezed
 class FullSiteView with _$FullSiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullSiteView({
+  const factory FullSiteView({
     SiteView? siteView,
     required List<PersonViewSafe> admins,
     required List<PersonViewSafe> banned,
@@ -109,7 +109,7 @@ class FullSiteView with _$FullSiteView {
     required String instanceHost,
   }) = _FullSiteView;
 
-  FullSiteView._();
+  const FullSiteView._();
 
   factory FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$FullSiteViewFromJson(json);
@@ -118,7 +118,7 @@ class FullSiteView with _$FullSiteView {
 @freezed
 class MyUserInfo with _$MyUserInfo {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory MyUserInfo({
+  const factory MyUserInfo({
     required LocalUserSettingsView localUserView,
     required List<CommunityFollowerView> follows,
     required List<CommunityModeratorView> moderates,
@@ -127,7 +127,7 @@ class MyUserInfo with _$MyUserInfo {
     required String instanceHost,
   }) = _MyUserInfo;
 
-  MyUserInfo._();
+  const MyUserInfo._();
 
   factory MyUserInfo.fromJson(Map<String, dynamic> json) =>
       _$MyUserInfoFromJson(json);
@@ -136,14 +136,14 @@ class MyUserInfo with _$MyUserInfo {
 @freezed
 class FederatedInstances with _$FederatedInstances {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FederatedInstances({
+  const factory FederatedInstances({
     required List<String> linked,
     List<String>? allowed,
     List<String>? blocked,
     required String instanceHost,
   }) = _FederatedInstances;
 
-  FederatedInstances._();
+  const FederatedInstances._();
 
   factory FederatedInstances.fromJson(Map<String, dynamic> json) =>
       _$FederatedInstancesFromJson(json);
@@ -152,7 +152,7 @@ class FederatedInstances with _$FederatedInstances {
 @freezed
 class Captcha with _$Captcha {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory Captcha({
+  const factory Captcha({
     /// A Base64 encoded png
     required String png,
 
@@ -161,7 +161,7 @@ class Captcha with _$Captcha {
     required String uuid,
   }) = _Captcha;
 
-  Captcha._();
+  const Captcha._();
   factory Captcha.fromJson(Map<String, dynamic> json) =>
       _$CaptchaFromJson(json);
 }
@@ -169,7 +169,7 @@ class Captcha with _$Captcha {
 @freezed
 class FullPersonView with _$FullPersonView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory FullPersonView({
+  const factory FullPersonView({
     required PersonViewSafe personView,
     required List<CommunityModeratorView> moderates,
     required List<CommentView> comments,
@@ -177,7 +177,7 @@ class FullPersonView with _$FullPersonView {
     required String instanceHost,
   }) = _FullPersonView;
 
-  FullPersonView._();
+  const FullPersonView._();
   factory FullPersonView.fromJson(Map<String, dynamic> json) =>
       _$FullPersonViewFromJson(json);
 }
@@ -185,13 +185,13 @@ class FullPersonView with _$FullPersonView {
 @freezed
 class BannedCommunityUser with _$BannedCommunityUser {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BannedCommunityUser({
+  const factory BannedCommunityUser({
     required PersonViewSafe personView,
     required bool banned,
     required String instanceHost,
   }) = _BannedCommunityUser;
 
-  BannedCommunityUser._();
+  const BannedCommunityUser._();
 
   factory BannedCommunityUser.fromJson(Map<String, dynamic> json) =>
       _$BannedCommunityUserFromJson(json);
@@ -200,13 +200,13 @@ class BannedCommunityUser with _$BannedCommunityUser {
 @freezed
 class BannedPerson with _$BannedPerson {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BannedPerson({
+  const factory BannedPerson({
     required PersonViewSafe personView,
     required bool banned,
     required String instanceHost,
   }) = _BannedPerson;
 
-  BannedPerson._();
+  const BannedPerson._();
   factory BannedPerson.fromJson(Map<String, dynamic> json) =>
       _$BannedPersonFromJson(json);
 }
@@ -214,7 +214,7 @@ class BannedPerson with _$BannedPerson {
 @freezed
 class ResolveObjectResponse with _$ResolveObjectResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ResolveObjectResponse({
+  const factory ResolveObjectResponse({
     CommentView? comment,
     PostView? post,
     CommunityView? community,
@@ -222,7 +222,7 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
     required String instanceHost,
   }) = _ResolveObjectResponse;
 
-  ResolveObjectResponse._();
+  const ResolveObjectResponse._();
   factory ResolveObjectResponse.fromJson(Map<String, dynamic> json) =>
       _$ResolveObjectResponseFromJson(json);
 }
@@ -230,7 +230,7 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
 @freezed
 class SiteMetadata with _$SiteMetadata {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory SiteMetadata({
+  const factory SiteMetadata({
     String? title,
     String? description,
     String? image,
@@ -238,7 +238,7 @@ class SiteMetadata with _$SiteMetadata {
     required String instanceHost,
   }) = _SiteMetadata;
 
-  SiteMetadata._();
+  const SiteMetadata._();
   factory SiteMetadata.fromJson(Map<String, dynamic> json) =>
       _$SiteMetadataFromJson(json);
 }
@@ -246,13 +246,13 @@ class SiteMetadata with _$SiteMetadata {
 @freezed
 class BlockedPerson with _$BlockedPerson {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BlockedPerson({
+  const factory BlockedPerson({
     required PersonViewSafe personView,
     required bool blocked,
     required String instanceHost,
   }) = _BlockedPerson;
 
-  BlockedPerson._();
+  const BlockedPerson._();
   factory BlockedPerson.fromJson(Map<String, dynamic> json) =>
       _$BlockedPersonFromJson(json);
 }
@@ -260,13 +260,13 @@ class BlockedPerson with _$BlockedPerson {
 @freezed
 class BlockedCommunity with _$BlockedCommunity {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory BlockedCommunity({
+  const factory BlockedCommunity({
     required CommunityView communityView,
     required bool blocked,
     required String instanceHost,
   }) = _BlockedCommunity;
 
-  BlockedCommunity._();
+  const BlockedCommunity._();
   factory BlockedCommunity.fromJson(Map<String, dynamic> json) =>
       _$BlockedCommunityFromJson(json);
 }
@@ -274,14 +274,14 @@ class BlockedCommunity with _$BlockedCommunity {
 @freezed
 class GetReportCountResponse with _$GetReportCountResponse {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory GetReportCountResponse({
+  const factory GetReportCountResponse({
     int? communityId,
     required int commentReports,
     required int postReports,
     required String instanceHost,
   }) = _GetReportCountResponse;
 
-  GetReportCountResponse._();
+  const GetReportCountResponse._();
   factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
       _$GetReportCountResponseFromJson(json);
 }

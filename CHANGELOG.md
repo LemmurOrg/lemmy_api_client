@@ -4,6 +4,10 @@
 
 - Add reporting API
 
+### Changed
+
+- Marked model constructors as `const`
+
 ## v0.16.0 - 2021-09-04
 
 ### Added

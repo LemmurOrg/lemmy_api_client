@@ -162,7 +162,7 @@ class __$PersonViewSafeCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonViewSafe extends _PersonViewSafe {
-  _$_PersonViewSafe(
+  const _$_PersonViewSafe(
       {required this.person, required this.counts, required this.instanceHost})
       : super._();
 
@@ -207,11 +207,11 @@ class _$_PersonViewSafe extends _PersonViewSafe {
 }
 
 abstract class _PersonViewSafe extends PersonViewSafe {
-  factory _PersonViewSafe(
+  const factory _PersonViewSafe(
       {required PersonSafe person,
       required PersonAggregates counts,
       required String instanceHost}) = _$_PersonViewSafe;
-  _PersonViewSafe._() : super._();
+  const _PersonViewSafe._() : super._();
 
   factory _PersonViewSafe.fromJson(Map<String, dynamic> json) =
       _$_PersonViewSafe.fromJson;
@@ -583,7 +583,7 @@ class __$PersonMentionViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonMentionView extends _PersonMentionView {
-  _$_PersonMentionView(
+  const _$_PersonMentionView(
       {required this.personMention,
       required this.comment,
       required this.creator,
@@ -692,7 +692,7 @@ class _$_PersonMentionView extends _PersonMentionView {
 }
 
 abstract class _PersonMentionView extends PersonMentionView {
-  factory _PersonMentionView(
+  const factory _PersonMentionView(
       {required PersonMention personMention,
       required Comment comment,
       required PersonSafe creator,
@@ -706,7 +706,7 @@ abstract class _PersonMentionView extends PersonMentionView {
       required bool creatorBlocked,
       VoteType? myVote,
       required String instanceHost}) = _$_PersonMentionView;
-  _PersonMentionView._() : super._();
+  const _PersonMentionView._() : super._();
 
   factory _PersonMentionView.fromJson(Map<String, dynamic> json) =
       _$_PersonMentionView.fromJson;
@@ -924,7 +924,7 @@ class __$LocalUserSettingsViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_LocalUserSettingsView extends _LocalUserSettingsView {
-  _$_LocalUserSettingsView(
+  const _$_LocalUserSettingsView(
       {required this.localUser,
       required this.person,
       required this.counts,
@@ -978,12 +978,12 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
 }
 
 abstract class _LocalUserSettingsView extends LocalUserSettingsView {
-  factory _LocalUserSettingsView(
+  const factory _LocalUserSettingsView(
       {required LocalUserSettings localUser,
       required PersonSafe person,
       required PersonAggregates counts,
       required String instanceHost}) = _$_LocalUserSettingsView;
-  _LocalUserSettingsView._() : super._();
+  const _LocalUserSettingsView._() : super._();
 
   factory _LocalUserSettingsView.fromJson(Map<String, dynamic> json) =
       _$_LocalUserSettingsView.fromJson;
@@ -1176,7 +1176,7 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_SiteView extends _SiteView {
-  _$_SiteView(
+  const _$_SiteView(
       {required this.site,
       required this.creator,
       required this.counts,
@@ -1228,12 +1228,12 @@ class _$_SiteView extends _SiteView {
 }
 
 abstract class _SiteView extends SiteView {
-  factory _SiteView(
+  const factory _SiteView(
       {required Site site,
       required PersonSafe creator,
       required SiteAggregates counts,
       required String instanceHost}) = _$_SiteView;
-  _SiteView._() : super._();
+  const _SiteView._() : super._();
 
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
@@ -1431,7 +1431,7 @@ class __$PrivateMessageViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PrivateMessageView extends _PrivateMessageView {
-  _$_PrivateMessageView(
+  const _$_PrivateMessageView(
       {required this.privateMessage,
       required this.creator,
       required this.recipient,
@@ -1485,12 +1485,12 @@ class _$_PrivateMessageView extends _PrivateMessageView {
 }
 
 abstract class _PrivateMessageView extends PrivateMessageView {
-  factory _PrivateMessageView(
+  const factory _PrivateMessageView(
       {required PrivateMessage privateMessage,
       required PersonSafe creator,
       required PersonSafe recipient,
       required String instanceHost}) = _$_PrivateMessageView;
-  _PrivateMessageView._() : super._();
+  const _PrivateMessageView._() : super._();
 
   factory _PrivateMessageView.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessageView.fromJson;
@@ -1798,7 +1798,7 @@ class __$PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PostView extends _PostView {
-  _$_PostView(
+  const _$_PostView(
       {required this.post,
       required this.creator,
       required this.community,
@@ -1895,7 +1895,7 @@ class _$_PostView extends _PostView {
 }
 
 abstract class _PostView extends PostView {
-  factory _PostView(
+  const factory _PostView(
       {required Post post,
       required PersonSafe creator,
       required CommunitySafe community,
@@ -1907,7 +1907,7 @@ abstract class _PostView extends PostView {
       required bool creatorBlocked,
       VoteType? myVote,
       required String instanceHost}) = _$_PostView;
-  _PostView._() : super._();
+  const _PostView._() : super._();
 
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
@@ -2253,7 +2253,7 @@ class __$PostReportViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PostReportView extends _PostReportView {
-  _$_PostReportView(
+  const _$_PostReportView(
       {required this.postReport,
       required this.post,
       required this.community,
@@ -2346,7 +2346,7 @@ class _$_PostReportView extends _PostReportView {
 }
 
 abstract class _PostReportView extends PostReportView {
-  factory _PostReportView(
+  const factory _PostReportView(
       {required PostReport postReport,
       required Post post,
       required CommunitySafe community,
@@ -2357,7 +2357,7 @@ abstract class _PostReportView extends PostReportView {
       required PostAggregates counts,
       PersonSafe? resolver,
       required String instanceHost}) = _$_PostReportView;
-  _PostReportView._() : super._();
+  const _PostReportView._() : super._();
 
   factory _PostReportView.fromJson(Map<String, dynamic> json) =
       _$_PostReportView.fromJson;
@@ -2720,7 +2720,7 @@ class __$CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommentView extends _CommentView {
-  _$_CommentView(
+  const _$_CommentView(
       {required this.comment,
       required this.creator,
       this.recipient,
@@ -2823,7 +2823,7 @@ class _$_CommentView extends _CommentView {
 }
 
 abstract class _CommentView extends CommentView {
-  factory _CommentView(
+  const factory _CommentView(
       {required Comment comment,
       required PersonSafe creator,
       PersonSafe? recipient,
@@ -2836,7 +2836,7 @@ abstract class _CommentView extends CommentView {
       required bool creatorBlocked,
       VoteType? myVote,
       required String instanceHost}) = _$_CommentView;
-  _CommentView._() : super._();
+  const _CommentView._() : super._();
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
       _$_CommentView.fromJson;
@@ -3210,7 +3210,7 @@ class __$CommentReportViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommentReportView extends _CommentReportView {
-  _$_CommentReportView(
+  const _$_CommentReportView(
       {required this.commentReport,
       required this.comment,
       required this.post,
@@ -3308,7 +3308,7 @@ class _$_CommentReportView extends _CommentReportView {
 }
 
 abstract class _CommentReportView extends CommentReportView {
-  factory _CommentReportView(
+  const factory _CommentReportView(
       {required CommentReport commentReport,
       required Comment comment,
       required Post post,
@@ -3320,7 +3320,7 @@ abstract class _CommentReportView extends CommentReportView {
       required CommentAggregates counts,
       PersonSafe? resolver,
       required String instanceHost}) = _$_CommentReportView;
-  _CommentReportView._() : super._();
+  const _CommentReportView._() : super._();
 
   factory _CommentReportView.fromJson(Map<String, dynamic> json) =
       _$_CommentReportView.fromJson;
@@ -3558,7 +3558,7 @@ class __$ModAddCommunityViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModAddCommunityView extends _ModAddCommunityView {
-  _$_ModAddCommunityView(
+  const _$_ModAddCommunityView(
       {required this.modAddCommunity,
       required this.moderator,
       required this.community,
@@ -3619,13 +3619,13 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
 }
 
 abstract class _ModAddCommunityView extends ModAddCommunityView {
-  factory _ModAddCommunityView(
+  const factory _ModAddCommunityView(
       {required ModAddCommunity modAddCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
       required PersonSafe moddedPerson,
       required String instanceHost}) = _$_ModAddCommunityView;
-  _ModAddCommunityView._() : super._();
+  const _ModAddCommunityView._() : super._();
 
   factory _ModAddCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunityView.fromJson;
@@ -3855,7 +3855,7 @@ class __$ModTransferCommunityViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModTransferCommunityView extends _ModTransferCommunityView {
-  _$_ModTransferCommunityView(
+  const _$_ModTransferCommunityView(
       {required this.modTransferCommunity,
       required this.moderator,
       required this.community,
@@ -3916,13 +3916,13 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
 }
 
 abstract class _ModTransferCommunityView extends ModTransferCommunityView {
-  factory _ModTransferCommunityView(
+  const factory _ModTransferCommunityView(
       {required ModTransferCommunity modTransferCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
       required PersonSafe moddedPerson,
       required String instanceHost}) = _$_ModTransferCommunityView;
-  _ModTransferCommunityView._() : super._();
+  const _ModTransferCommunityView._() : super._();
 
   factory _ModTransferCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModTransferCommunityView.fromJson;
@@ -4120,7 +4120,7 @@ class __$ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModAddView extends _ModAddView {
-  _$_ModAddView(
+  const _$_ModAddView(
       {required this.modAdd,
       required this.moderator,
       required this.moddedPerson,
@@ -4174,12 +4174,12 @@ class _$_ModAddView extends _ModAddView {
 }
 
 abstract class _ModAddView extends ModAddView {
-  factory _ModAddView(
+  const factory _ModAddView(
       {required ModAdd modAdd,
       required PersonSafe moderator,
       required PersonSafe moddedPerson,
       required String instanceHost}) = _$_ModAddView;
-  _ModAddView._() : super._();
+  const _ModAddView._() : super._();
 
   factory _ModAddView.fromJson(Map<String, dynamic> json) =
       _$_ModAddView.fromJson;
@@ -4407,7 +4407,7 @@ class __$ModBanFromCommunityViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
-  _$_ModBanFromCommunityView(
+  const _$_ModBanFromCommunityView(
       {required this.modBanFromCommunity,
       required this.moderator,
       required this.community,
@@ -4468,13 +4468,13 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
 }
 
 abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
-  factory _ModBanFromCommunityView(
+  const factory _ModBanFromCommunityView(
       {required ModBanFromCommunity modBanFromCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
       required PersonSafe bannedPerson,
       required String instanceHost}) = _$_ModBanFromCommunityView;
-  _ModBanFromCommunityView._() : super._();
+  const _ModBanFromCommunityView._() : super._();
 
   factory _ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunityView.fromJson;
@@ -4672,7 +4672,7 @@ class __$ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModBanView extends _ModBanView {
-  _$_ModBanView(
+  const _$_ModBanView(
       {required this.modBan,
       required this.moderator,
       required this.bannedPerson,
@@ -4726,12 +4726,12 @@ class _$_ModBanView extends _ModBanView {
 }
 
 abstract class _ModBanView extends ModBanView {
-  factory _ModBanView(
+  const factory _ModBanView(
       {required ModBan modBan,
       required PersonSafe moderator,
       required PersonSafe bannedPerson,
       required String instanceHost}) = _$_ModBanView;
-  _ModBanView._() : super._();
+  const _ModBanView._() : super._();
 
   factory _ModBanView.fromJson(Map<String, dynamic> json) =
       _$_ModBanView.fromJson;
@@ -4955,7 +4955,7 @@ class __$ModLockPostViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModLockPostView extends _ModLockPostView {
-  _$_ModLockPostView(
+  const _$_ModLockPostView(
       {required this.modLockPost,
       required this.moderator,
       required this.post,
@@ -5014,13 +5014,13 @@ class _$_ModLockPostView extends _ModLockPostView {
 }
 
 abstract class _ModLockPostView extends ModLockPostView {
-  factory _ModLockPostView(
+  const factory _ModLockPostView(
       {required ModLockPost modLockPost,
       required PersonSafe moderator,
       required Post post,
       required CommunitySafe community,
       required String instanceHost}) = _$_ModLockPostView;
-  _ModLockPostView._() : super._();
+  const _ModLockPostView._() : super._();
 
   factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
       _$_ModLockPostView.fromJson;
@@ -5296,7 +5296,7 @@ class __$ModRemoveCommentViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemoveCommentView extends _ModRemoveCommentView {
-  _$_ModRemoveCommentView(
+  const _$_ModRemoveCommentView(
       {required this.modRemoveComment,
       required this.moderator,
       required this.comment,
@@ -5365,7 +5365,7 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
 }
 
 abstract class _ModRemoveCommentView extends ModRemoveCommentView {
-  factory _ModRemoveCommentView(
+  const factory _ModRemoveCommentView(
       {required ModRemoveComment modRemoveComment,
       required PersonSafe moderator,
       required Comment comment,
@@ -5373,7 +5373,7 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       required Post post,
       required CommunitySafe community,
       required String instanceHost}) = _$_ModRemoveCommentView;
-  _ModRemoveCommentView._() : super._();
+  const _ModRemoveCommentView._() : super._();
 
   factory _ModRemoveCommentView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommentView.fromJson;
@@ -5581,7 +5581,7 @@ class __$ModRemoveCommunityViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
-  _$_ModRemoveCommunityView(
+  const _$_ModRemoveCommunityView(
       {required this.modRemoveCommunity,
       required this.moderator,
       required this.community,
@@ -5637,12 +5637,12 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
 }
 
 abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
-  factory _ModRemoveCommunityView(
+  const factory _ModRemoveCommunityView(
       {required ModRemoveCommunity modRemoveCommunity,
       required PersonSafe moderator,
       required CommunitySafe community,
       required String instanceHost}) = _$_ModRemoveCommunityView;
-  _ModRemoveCommunityView._() : super._();
+  const _ModRemoveCommunityView._() : super._();
 
   factory _ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunityView.fromJson;
@@ -5866,7 +5866,7 @@ class __$ModRemovePostViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemovePostView extends _ModRemovePostView {
-  _$_ModRemovePostView(
+  const _$_ModRemovePostView(
       {required this.modRemovePost,
       required this.moderator,
       required this.post,
@@ -5925,13 +5925,13 @@ class _$_ModRemovePostView extends _ModRemovePostView {
 }
 
 abstract class _ModRemovePostView extends ModRemovePostView {
-  factory _ModRemovePostView(
+  const factory _ModRemovePostView(
       {required ModRemovePost modRemovePost,
       required PersonSafe moderator,
       required Post post,
       required CommunitySafe community,
       required String instanceHost}) = _$_ModRemovePostView;
-  _ModRemovePostView._() : super._();
+  const _ModRemovePostView._() : super._();
 
   factory _ModRemovePostView.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePostView.fromJson;
@@ -6157,7 +6157,7 @@ class __$ModStickyPostViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModStickyPostView extends _ModStickyPostView {
-  _$_ModStickyPostView(
+  const _$_ModStickyPostView(
       {required this.modStickyPost,
       required this.moderator,
       required this.post,
@@ -6216,13 +6216,13 @@ class _$_ModStickyPostView extends _ModStickyPostView {
 }
 
 abstract class _ModStickyPostView extends ModStickyPostView {
-  factory _ModStickyPostView(
+  const factory _ModStickyPostView(
       {required ModStickyPost modStickyPost,
       required PersonSafe moderator,
       required Post post,
       required CommunitySafe community,
       required String instanceHost}) = _$_ModStickyPostView;
-  _ModStickyPostView._() : super._();
+  const _ModStickyPostView._() : super._();
 
   factory _ModStickyPostView.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPostView.fromJson;
@@ -6395,7 +6395,7 @@ class __$CommunityFollowerViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityFollowerView extends _CommunityFollowerView {
-  _$_CommunityFollowerView(
+  const _$_CommunityFollowerView(
       {required this.community,
       required this.follower,
       required this.instanceHost})
@@ -6446,11 +6446,11 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 }
 
 abstract class _CommunityFollowerView extends CommunityFollowerView {
-  factory _CommunityFollowerView(
+  const factory _CommunityFollowerView(
       {required CommunitySafe community,
       required PersonSafe follower,
       required String instanceHost}) = _$_CommunityFollowerView;
-  _CommunityFollowerView._() : super._();
+  const _CommunityFollowerView._() : super._();
 
   factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
       _$_CommunityFollowerView.fromJson;
@@ -6619,7 +6619,7 @@ class __$CommunityModeratorViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityModeratorView extends _CommunityModeratorView {
-  _$_CommunityModeratorView(
+  const _$_CommunityModeratorView(
       {required this.community,
       required this.moderator,
       required this.instanceHost})
@@ -6670,11 +6670,11 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 }
 
 abstract class _CommunityModeratorView extends CommunityModeratorView {
-  factory _CommunityModeratorView(
+  const factory _CommunityModeratorView(
       {required CommunitySafe community,
       required PersonSafe moderator,
       required String instanceHost}) = _$_CommunityModeratorView;
-  _CommunityModeratorView._() : super._();
+  const _CommunityModeratorView._() : super._();
 
   factory _CommunityModeratorView.fromJson(Map<String, dynamic> json) =
       _$_CommunityModeratorView.fromJson;
@@ -6840,7 +6840,7 @@ class __$PersonBlockViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonBlockView extends _PersonBlockView {
-  _$_PersonBlockView(
+  const _$_PersonBlockView(
       {required this.person, required this.target, required this.instanceHost})
       : super._();
 
@@ -6885,11 +6885,11 @@ class _$_PersonBlockView extends _PersonBlockView {
 }
 
 abstract class _PersonBlockView extends PersonBlockView {
-  factory _PersonBlockView(
+  const factory _PersonBlockView(
       {required PersonSafe person,
       required PersonSafe target,
       required String instanceHost}) = _$_PersonBlockView;
-  _PersonBlockView._() : super._();
+  const _PersonBlockView._() : super._();
 
   factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
       _$_PersonBlockView.fromJson;
@@ -7055,7 +7055,7 @@ class __$CommunityBlockViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityBlockView extends _CommunityBlockView {
-  _$_CommunityBlockView(
+  const _$_CommunityBlockView(
       {required this.person,
       required this.community,
       required this.instanceHost})
@@ -7103,11 +7103,11 @@ class _$_CommunityBlockView extends _CommunityBlockView {
 }
 
 abstract class _CommunityBlockView extends CommunityBlockView {
-  factory _CommunityBlockView(
+  const factory _CommunityBlockView(
       {required PersonSafe person,
       required CommunitySafe community,
       required String instanceHost}) = _$_CommunityBlockView;
-  _CommunityBlockView._() : super._();
+  const _CommunityBlockView._() : super._();
 
   factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
       _$_CommunityBlockView.fromJson;
@@ -7274,7 +7274,7 @@ class __$CommunityPersonBanViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityPersonBanView extends _CommunityPersonBanView {
-  _$_CommunityPersonBanView(
+  const _$_CommunityPersonBanView(
       {required this.community,
       required this.person,
       required this.instanceHost})
@@ -7323,11 +7323,11 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
 }
 
 abstract class _CommunityPersonBanView extends CommunityPersonBanView {
-  factory _CommunityPersonBanView(
+  const factory _CommunityPersonBanView(
       {required CommunitySafe community,
       required PersonSafe person,
       required String instanceHost}) = _$_CommunityPersonBanView;
-  _CommunityPersonBanView._() : super._();
+  const _CommunityPersonBanView._() : super._();
 
   factory _CommunityPersonBanView.fromJson(Map<String, dynamic> json) =
       _$_CommunityPersonBanView.fromJson;
@@ -7529,7 +7529,7 @@ class __$CommunityViewCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunityView extends _CommunityView {
-  _$_CommunityView(
+  const _$_CommunityView(
       {required this.community,
       required this.subscribed,
       required this.blocked,
@@ -7587,13 +7587,13 @@ class _$_CommunityView extends _CommunityView {
 }
 
 abstract class _CommunityView extends CommunityView {
-  factory _CommunityView(
+  const factory _CommunityView(
       {required CommunitySafe community,
       required bool subscribed,
       required bool blocked,
       required CommunityAggregates counts,
       required String instanceHost}) = _$_CommunityView;
-  _CommunityView._() : super._();
+  const _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
       _$_CommunityView.fromJson;

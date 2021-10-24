@@ -309,7 +309,7 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
 
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PictrsUpload extends _PictrsUpload {
-  _$_PictrsUpload(
+  const _$_PictrsUpload(
       {required this.msg, required this.files, required this.instanceHost})
       : super._();
 
@@ -355,11 +355,11 @@ class _$_PictrsUpload extends _PictrsUpload {
 }
 
 abstract class _PictrsUpload extends PictrsUpload {
-  factory _PictrsUpload(
+  const factory _PictrsUpload(
       {required String msg,
       required List<PictrsUploadFile> files,
       required String instanceHost}) = _$_PictrsUpload;
-  _PictrsUpload._() : super._();
+  const _PictrsUpload._() : super._();
 
   factory _PictrsUpload.fromJson(Map<String, dynamic> json) =
       _$_PictrsUpload.fromJson;

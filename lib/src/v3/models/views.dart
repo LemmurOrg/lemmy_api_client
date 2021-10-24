@@ -11,13 +11,13 @@ part 'views.g.dart';
 @freezed
 class PersonViewSafe with _$PersonViewSafe {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PersonViewSafe({
+  const factory PersonViewSafe({
     required PersonSafe person,
     required PersonAggregates counts,
     required String instanceHost,
   }) = _PersonViewSafe;
 
-  PersonViewSafe._();
+  const PersonViewSafe._();
   factory PersonViewSafe.fromJson(Map<String, dynamic> json) =>
       _$PersonViewSafeFromJson(json);
 }
@@ -25,7 +25,7 @@ class PersonViewSafe with _$PersonViewSafe {
 @freezed
 class PersonMentionView with _$PersonMentionView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PersonMentionView({
+  const factory PersonMentionView({
     required PersonMention personMention,
     required Comment comment,
     required PersonSafe creator,
@@ -41,7 +41,7 @@ class PersonMentionView with _$PersonMentionView {
     required String instanceHost,
   }) = _PersonMentionView;
 
-  PersonMentionView._();
+  const PersonMentionView._();
   factory PersonMentionView.fromJson(Map<String, dynamic> json) =>
       _$PersonMentionViewFromJson(json);
 }
@@ -49,14 +49,14 @@ class PersonMentionView with _$PersonMentionView {
 @freezed
 class LocalUserSettingsView with _$LocalUserSettingsView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory LocalUserSettingsView({
+  const factory LocalUserSettingsView({
     required LocalUserSettings localUser,
     required PersonSafe person,
     required PersonAggregates counts,
     required String instanceHost,
   }) = _LocalUserSettingsView;
 
-  LocalUserSettingsView._();
+  const LocalUserSettingsView._();
   factory LocalUserSettingsView.fromJson(Map<String, dynamic> json) =>
       _$LocalUserSettingsViewFromJson(json);
 }
@@ -64,14 +64,14 @@ class LocalUserSettingsView with _$LocalUserSettingsView {
 @freezed
 class SiteView with _$SiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory SiteView({
+  const factory SiteView({
     required Site site,
     required PersonSafe creator,
     required SiteAggregates counts,
     required String instanceHost,
   }) = _SiteView;
 
-  SiteView._();
+  const SiteView._();
   factory SiteView.fromJson(Map<String, dynamic> json) =>
       _$SiteViewFromJson(json);
 }
@@ -79,14 +79,14 @@ class SiteView with _$SiteView {
 @freezed
 class PrivateMessageView with _$PrivateMessageView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PrivateMessageView({
+  const factory PrivateMessageView({
     required PrivateMessage privateMessage,
     required PersonSafe creator,
     required PersonSafe recipient,
     required String instanceHost,
   }) = _PrivateMessageView;
 
-  PrivateMessageView._();
+  const PrivateMessageView._();
   factory PrivateMessageView.fromJson(Map<String, dynamic> json) =>
       _$PrivateMessageViewFromJson(json);
 }
@@ -94,7 +94,7 @@ class PrivateMessageView with _$PrivateMessageView {
 @freezed
 class PostView with _$PostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PostView({
+  const factory PostView({
     required Post post,
     required PersonSafe creator,
     required CommunitySafe community,
@@ -108,7 +108,7 @@ class PostView with _$PostView {
     required String instanceHost,
   }) = _PostView;
 
-  PostView._();
+  const PostView._();
   factory PostView.fromJson(Map<String, dynamic> json) =>
       _$PostViewFromJson(json);
 }
@@ -116,7 +116,7 @@ class PostView with _$PostView {
 @freezed
 class PostReportView with _$PostReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PostReportView({
+  const factory PostReportView({
     required PostReport postReport,
     required Post post,
     required CommunitySafe community,
@@ -129,7 +129,7 @@ class PostReportView with _$PostReportView {
     required String instanceHost,
   }) = _PostReportView;
 
-  PostReportView._();
+  const PostReportView._();
   factory PostReportView.fromJson(Map<String, dynamic> json) =>
       _$PostReportViewFromJson(json);
 }
@@ -137,7 +137,7 @@ class PostReportView with _$PostReportView {
 @freezed
 class CommentView with _$CommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommentView({
+  const factory CommentView({
     required Comment comment,
     required PersonSafe creator,
     PersonSafe? recipient,
@@ -152,7 +152,7 @@ class CommentView with _$CommentView {
     required String instanceHost,
   }) = _CommentView;
 
-  CommentView._();
+  const CommentView._();
   factory CommentView.fromJson(Map<String, dynamic> json) =>
       _$CommentViewFromJson(json);
 }
@@ -160,7 +160,7 @@ class CommentView with _$CommentView {
 @freezed
 class CommentReportView with _$CommentReportView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommentReportView({
+  const factory CommentReportView({
     required CommentReport commentReport,
     required Comment comment,
     required Post post,
@@ -174,7 +174,7 @@ class CommentReportView with _$CommentReportView {
     required String instanceHost,
   }) = _CommentReportView;
 
-  CommentReportView._();
+  const CommentReportView._();
   factory CommentReportView.fromJson(Map<String, dynamic> json) =>
       _$CommentReportViewFromJson(json);
 }
@@ -182,7 +182,7 @@ class CommentReportView with _$CommentReportView {
 @freezed
 class ModAddCommunityView with _$ModAddCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModAddCommunityView({
+  const factory ModAddCommunityView({
     required ModAddCommunity modAddCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
@@ -190,7 +190,7 @@ class ModAddCommunityView with _$ModAddCommunityView {
     required String instanceHost,
   }) = _ModAddCommunityView;
 
-  ModAddCommunityView._();
+  const ModAddCommunityView._();
   factory ModAddCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModAddCommunityViewFromJson(json);
 }
@@ -198,7 +198,7 @@ class ModAddCommunityView with _$ModAddCommunityView {
 @freezed
 class ModTransferCommunityView with _$ModTransferCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModTransferCommunityView({
+  const factory ModTransferCommunityView({
     required ModTransferCommunity modTransferCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
@@ -206,7 +206,7 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
     required String instanceHost,
   }) = _ModTransferCommunityView;
 
-  ModTransferCommunityView._();
+  const ModTransferCommunityView._();
   factory ModTransferCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModTransferCommunityViewFromJson(json);
 }
@@ -214,14 +214,14 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
 @freezed
 class ModAddView with _$ModAddView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModAddView({
+  const factory ModAddView({
     required ModAdd modAdd,
     required PersonSafe moderator,
     required PersonSafe moddedPerson,
     required String instanceHost,
   }) = _ModAddView;
 
-  ModAddView._();
+  const ModAddView._();
   factory ModAddView.fromJson(Map<String, dynamic> json) =>
       _$ModAddViewFromJson(json);
 }
@@ -229,7 +229,7 @@ class ModAddView with _$ModAddView {
 @freezed
 class ModBanFromCommunityView with _$ModBanFromCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModBanFromCommunityView({
+  const factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
@@ -237,7 +237,7 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
     required String instanceHost,
   }) = _ModBanFromCommunityView;
 
-  ModBanFromCommunityView._();
+  const ModBanFromCommunityView._();
   factory ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModBanFromCommunityViewFromJson(json);
 }
@@ -245,14 +245,14 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
 @freezed
 class ModBanView with _$ModBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModBanView({
+  const factory ModBanView({
     required ModBan modBan,
     required PersonSafe moderator,
     required PersonSafe bannedPerson,
     required String instanceHost,
   }) = _ModBanView;
 
-  ModBanView._();
+  const ModBanView._();
   factory ModBanView.fromJson(Map<String, dynamic> json) =>
       _$ModBanViewFromJson(json);
 }
@@ -260,7 +260,7 @@ class ModBanView with _$ModBanView {
 @freezed
 class ModLockPostView with _$ModLockPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModLockPostView({
+  const factory ModLockPostView({
     required ModLockPost modLockPost,
     required PersonSafe moderator,
     required Post post,
@@ -268,7 +268,7 @@ class ModLockPostView with _$ModLockPostView {
     required String instanceHost,
   }) = _ModLockPostView;
 
-  ModLockPostView._();
+  const ModLockPostView._();
   factory ModLockPostView.fromJson(Map<String, dynamic> json) =>
       _$ModLockPostViewFromJson(json);
 }
@@ -276,7 +276,7 @@ class ModLockPostView with _$ModLockPostView {
 @freezed
 class ModRemoveCommentView with _$ModRemoveCommentView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModRemoveCommentView({
+  const factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
     required PersonSafe moderator,
     required Comment comment,
@@ -286,7 +286,7 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
     required String instanceHost,
   }) = _ModRemoveCommentView;
 
-  ModRemoveCommentView._();
+  const ModRemoveCommentView._();
   factory ModRemoveCommentView.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommentViewFromJson(json);
 }
@@ -294,14 +294,14 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
 @freezed
 class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModRemoveCommunityView({
+  const factory ModRemoveCommunityView({
     required ModRemoveCommunity modRemoveCommunity,
     required PersonSafe moderator,
     required CommunitySafe community,
     required String instanceHost,
   }) = _ModRemoveCommunityView;
 
-  ModRemoveCommunityView._();
+  const ModRemoveCommunityView._();
   factory ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =>
       _$ModRemoveCommunityViewFromJson(json);
 }
@@ -309,7 +309,7 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
 @freezed
 class ModRemovePostView with _$ModRemovePostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModRemovePostView({
+  const factory ModRemovePostView({
     required ModRemovePost modRemovePost,
     required PersonSafe moderator,
     required Post post,
@@ -317,7 +317,7 @@ class ModRemovePostView with _$ModRemovePostView {
     required String instanceHost,
   }) = _ModRemovePostView;
 
-  ModRemovePostView._();
+  const ModRemovePostView._();
   factory ModRemovePostView.fromJson(Map<String, dynamic> json) =>
       _$ModRemovePostViewFromJson(json);
 }
@@ -325,7 +325,7 @@ class ModRemovePostView with _$ModRemovePostView {
 @freezed
 class ModStickyPostView with _$ModStickyPostView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory ModStickyPostView({
+  const factory ModStickyPostView({
     required ModStickyPost modStickyPost,
     required PersonSafe moderator,
     required Post post,
@@ -333,7 +333,7 @@ class ModStickyPostView with _$ModStickyPostView {
     required String instanceHost,
   }) = _ModStickyPostView;
 
-  ModStickyPostView._();
+  const ModStickyPostView._();
   factory ModStickyPostView.fromJson(Map<String, dynamic> json) =>
       _$ModStickyPostViewFromJson(json);
 }
@@ -341,13 +341,13 @@ class ModStickyPostView with _$ModStickyPostView {
 @freezed
 class CommunityFollowerView with _$CommunityFollowerView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunityFollowerView({
+  const factory CommunityFollowerView({
     required CommunitySafe community,
     required PersonSafe follower,
     required String instanceHost,
   }) = _CommunityFollowerView;
 
-  CommunityFollowerView._();
+  const CommunityFollowerView._();
   factory CommunityFollowerView.fromJson(Map<String, dynamic> json) =>
       _$CommunityFollowerViewFromJson(json);
 }
@@ -355,13 +355,13 @@ class CommunityFollowerView with _$CommunityFollowerView {
 @freezed
 class CommunityModeratorView with _$CommunityModeratorView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunityModeratorView({
+  const factory CommunityModeratorView({
     required CommunitySafe community,
     required PersonSafe moderator,
     required String instanceHost,
   }) = _CommunityModeratorView;
 
-  CommunityModeratorView._();
+  const CommunityModeratorView._();
   factory CommunityModeratorView.fromJson(Map<String, dynamic> json) =>
       _$CommunityModeratorViewFromJson(json);
 }
@@ -369,13 +369,13 @@ class CommunityModeratorView with _$CommunityModeratorView {
 @freezed
 class PersonBlockView with _$PersonBlockView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory PersonBlockView({
+  const factory PersonBlockView({
     required PersonSafe person,
     required PersonSafe target,
     required String instanceHost,
   }) = _PersonBlockView;
 
-  PersonBlockView._();
+  const PersonBlockView._();
   factory PersonBlockView.fromJson(Map<String, dynamic> json) =>
       _$PersonBlockViewFromJson(json);
 }
@@ -383,13 +383,13 @@ class PersonBlockView with _$PersonBlockView {
 @freezed
 class CommunityBlockView with _$CommunityBlockView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunityBlockView({
+  const factory CommunityBlockView({
     required PersonSafe person,
     required CommunitySafe community,
     required String instanceHost,
   }) = _CommunityBlockView;
 
-  CommunityBlockView._();
+  const CommunityBlockView._();
   factory CommunityBlockView.fromJson(Map<String, dynamic> json) =>
       _$CommunityBlockViewFromJson(json);
 }
@@ -397,13 +397,13 @@ class CommunityBlockView with _$CommunityBlockView {
 @freezed
 class CommunityPersonBanView with _$CommunityPersonBanView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunityPersonBanView({
+  const factory CommunityPersonBanView({
     required CommunitySafe community,
     required PersonSafe person,
     required String instanceHost,
   }) = _CommunityPersonBanView;
 
-  CommunityPersonBanView._();
+  const CommunityPersonBanView._();
   factory CommunityPersonBanView.fromJson(Map<String, dynamic> json) =>
       _$CommunityPersonBanViewFromJson(json);
 }
@@ -411,7 +411,7 @@ class CommunityPersonBanView with _$CommunityPersonBanView {
 @freezed
 class CommunityView with _$CommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  factory CommunityView({
+  const factory CommunityView({
     required CommunitySafe community,
     required bool subscribed,
     required bool blocked,
@@ -419,7 +419,7 @@ class CommunityView with _$CommunityView {
     required String instanceHost,
   }) = _CommunityView;
 
-  CommunityView._();
+  const CommunityView._();
   factory CommunityView.fromJson(Map<String, dynamic> json) =>
       _$CommunityViewFromJson(json);
 }

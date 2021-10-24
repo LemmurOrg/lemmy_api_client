@@ -370,7 +370,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonSafe extends _PersonSafe {
-  _$_PersonSafe(
+  const _$_PersonSafe(
       {required this.id,
       required this.name,
       this.displayName,
@@ -502,7 +502,7 @@ class _$_PersonSafe extends _PersonSafe {
 }
 
 abstract class _PersonSafe extends PersonSafe {
-  factory _PersonSafe(
+  const factory _PersonSafe(
       {required int id,
       required String name,
       String? displayName,
@@ -521,7 +521,7 @@ abstract class _PersonSafe extends PersonSafe {
       required bool admin,
       required bool botAccount,
       required String instanceHost}) = _$_PersonSafe;
-  _PersonSafe._() : super._();
+  const _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
       _$_PersonSafe.fromJson;
@@ -891,7 +891,7 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_LocalUserSettings extends _LocalUserSettings {
-  _$_LocalUserSettings(
+  const _$_LocalUserSettings(
       {required this.id,
       required this.personId,
       this.email,
@@ -1017,7 +1017,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
 }
 
 abstract class _LocalUserSettings extends LocalUserSettings {
-  factory _LocalUserSettings(
+  const factory _LocalUserSettings(
       {required int id,
       required int personId,
       String? email,
@@ -1035,7 +1035,7 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       required bool showBotAccounts,
       required bool showNewPostNotifs,
       required String instanceHost}) = _$_LocalUserSettings;
-  _LocalUserSettings._() : super._();
+  const _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
       _$_LocalUserSettings.fromJson;
@@ -1371,7 +1371,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_Site extends _Site {
-  _$_Site(
+  const _$_Site(
       {required this.id,
       required this.name,
       this.sidebar,
@@ -1485,7 +1485,7 @@ class _$_Site extends _Site {
 }
 
 abstract class _Site extends Site {
-  factory _Site(
+  const factory _Site(
       {required int id,
       required String name,
       String? sidebar,
@@ -1500,7 +1500,7 @@ abstract class _Site extends Site {
       String? icon,
       String? banner,
       required String instanceHost}) = _$_Site;
-  _Site._() : super._();
+  const _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
 
@@ -1792,7 +1792,7 @@ class __$PrivateMessageCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PrivateMessage extends _PrivateMessage {
-  _$_PrivateMessage(
+  const _$_PrivateMessage(
       {required this.id,
       required this.creatorId,
       required this.recipientId,
@@ -1875,7 +1875,7 @@ class _$_PrivateMessage extends _PrivateMessage {
 }
 
 abstract class _PrivateMessage extends PrivateMessage {
-  factory _PrivateMessage(
+  const factory _PrivateMessage(
       {required int id,
       required int creatorId,
       required int recipientId,
@@ -1887,7 +1887,7 @@ abstract class _PrivateMessage extends PrivateMessage {
       required String apId,
       required bool local,
       required String instanceHost}) = _$_PrivateMessage;
-  _PrivateMessage._() : super._();
+  const _PrivateMessage._() : super._();
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessage.fromJson;
@@ -2187,7 +2187,7 @@ class __$PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PostReport extends _PostReport {
-  _$_PostReport(
+  const _$_PostReport(
       {required this.id,
       required this.creatorId,
       required this.postId,
@@ -2290,7 +2290,7 @@ class _$_PostReport extends _PostReport {
 }
 
 abstract class _PostReport extends PostReport {
-  factory _PostReport(
+  const factory _PostReport(
       {required int id,
       required int creatorId,
       required int postId,
@@ -2303,7 +2303,7 @@ abstract class _PostReport extends PostReport {
       required DateTime published,
       DateTime? updated,
       required String instanceHost}) = _$_PostReport;
-  _PostReport._() : super._();
+  const _PostReport._() : super._();
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
       _$_PostReport.fromJson;
@@ -2721,7 +2721,7 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_Post extends _Post {
-  _$_Post(
+  const _$_Post(
       {required this.id,
       required this.name,
       this.url,
@@ -2865,7 +2865,7 @@ class _$_Post extends _Post {
 }
 
 abstract class _Post extends Post {
-  factory _Post(
+  const factory _Post(
       {required int id,
       required String name,
       String? url,
@@ -2886,7 +2886,7 @@ abstract class _Post extends Post {
       required String apId,
       required bool local,
       required String instanceHost}) = _$_Post;
-  _Post._() : super._();
+  const _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
@@ -3100,7 +3100,7 @@ class __$PasswordResetRequestCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PasswordResetRequest extends _PasswordResetRequest {
-  _$_PasswordResetRequest(
+  const _$_PasswordResetRequest(
       {required this.id,
       required this.localUserId,
       required this.tokenEncrypted,
@@ -3160,13 +3160,13 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 }
 
 abstract class _PasswordResetRequest extends PasswordResetRequest {
-  factory _PasswordResetRequest(
+  const factory _PasswordResetRequest(
       {required int id,
       required int localUserId,
       required String tokenEncrypted,
       required DateTime published,
       required String instanceHost}) = _$_PasswordResetRequest;
-  _PasswordResetRequest._() : super._();
+  const _PasswordResetRequest._() : super._();
 
   factory _PasswordResetRequest.fromJson(Map<String, dynamic> json) =
       _$_PasswordResetRequest.fromJson;
@@ -3383,7 +3383,7 @@ class __$ModRemovePostCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemovePost extends _ModRemovePost {
-  _$_ModRemovePost(
+  const _$_ModRemovePost(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -3449,7 +3449,7 @@ class _$_ModRemovePost extends _ModRemovePost {
 }
 
 abstract class _ModRemovePost extends ModRemovePost {
-  factory _ModRemovePost(
+  const factory _ModRemovePost(
       {required int id,
       required int modPersonId,
       required int postId,
@@ -3457,7 +3457,7 @@ abstract class _ModRemovePost extends ModRemovePost {
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModRemovePost;
-  _ModRemovePost._() : super._();
+  const _ModRemovePost._() : super._();
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePost.fromJson;
@@ -3662,7 +3662,7 @@ class __$ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModLockPost extends _ModLockPost {
-  _$_ModLockPost(
+  const _$_ModLockPost(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -3724,14 +3724,14 @@ class _$_ModLockPost extends _ModLockPost {
 }
 
 abstract class _ModLockPost extends ModLockPost {
-  factory _ModLockPost(
+  const factory _ModLockPost(
       {required int id,
       required int modPersonId,
       required int postId,
       bool? locked,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModLockPost;
-  _ModLockPost._() : super._();
+  const _ModLockPost._() : super._();
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
       _$_ModLockPost.fromJson;
@@ -3936,7 +3936,7 @@ class __$ModStickyPostCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModStickyPost extends _ModStickyPost {
-  _$_ModStickyPost(
+  const _$_ModStickyPost(
       {required this.id,
       required this.modPersonId,
       required this.postId,
@@ -3999,14 +3999,14 @@ class _$_ModStickyPost extends _ModStickyPost {
 }
 
 abstract class _ModStickyPost extends ModStickyPost {
-  factory _ModStickyPost(
+  const factory _ModStickyPost(
       {required int id,
       required int modPersonId,
       required int postId,
       bool? stickied,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModStickyPost;
-  _ModStickyPost._() : super._();
+  const _ModStickyPost._() : super._();
 
   factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPost.fromJson;
@@ -4226,7 +4226,7 @@ class __$ModRemoveCommentCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemoveComment extends _ModRemoveComment {
-  _$_ModRemoveComment(
+  const _$_ModRemoveComment(
       {required this.id,
       required this.modPersonId,
       required this.commentId,
@@ -4293,7 +4293,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 }
 
 abstract class _ModRemoveComment extends ModRemoveComment {
-  factory _ModRemoveComment(
+  const factory _ModRemoveComment(
       {required int id,
       required int modPersonId,
       required int commentId,
@@ -4301,7 +4301,7 @@ abstract class _ModRemoveComment extends ModRemoveComment {
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModRemoveComment;
-  _ModRemoveComment._() : super._();
+  const _ModRemoveComment._() : super._();
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveComment.fromJson;
@@ -4538,7 +4538,7 @@ class __$ModRemoveCommunityCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModRemoveCommunity extends _ModRemoveCommunity {
-  _$_ModRemoveCommunity(
+  const _$_ModRemoveCommunity(
       {required this.id,
       required this.modPersonId,
       required this.communityId,
@@ -4609,7 +4609,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 }
 
 abstract class _ModRemoveCommunity extends ModRemoveCommunity {
-  factory _ModRemoveCommunity(
+  const factory _ModRemoveCommunity(
       {required int id,
       required int modPersonId,
       required int communityId,
@@ -4618,7 +4618,7 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModRemoveCommunity;
-  _ModRemoveCommunity._() : super._();
+  const _ModRemoveCommunity._() : super._();
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunity.fromJson;
@@ -4872,7 +4872,7 @@ class __$ModBanFromCommunityCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModBanFromCommunity extends _ModBanFromCommunity {
-  _$_ModBanFromCommunity(
+  const _$_ModBanFromCommunity(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -4949,7 +4949,7 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 }
 
 abstract class _ModBanFromCommunity extends ModBanFromCommunity {
-  factory _ModBanFromCommunity(
+  const factory _ModBanFromCommunity(
       {required int id,
       required int modPersonId,
       required int otherPersonId,
@@ -4959,7 +4959,7 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModBanFromCommunity;
-  _ModBanFromCommunity._() : super._();
+  const _ModBanFromCommunity._() : super._();
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunity.fromJson;
@@ -5193,7 +5193,7 @@ class __$ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModBan extends _ModBan {
-  _$_ModBan(
+  const _$_ModBan(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -5264,7 +5264,7 @@ class _$_ModBan extends _ModBan {
 }
 
 abstract class _ModBan extends ModBan {
-  factory _ModBan(
+  const factory _ModBan(
       {required int id,
       required int modPersonId,
       required int otherPersonId,
@@ -5273,7 +5273,7 @@ abstract class _ModBan extends ModBan {
       DateTime? expires,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModBan;
-  _ModBan._() : super._();
+  const _ModBan._() : super._();
 
   factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
 
@@ -5495,7 +5495,7 @@ class __$ModAddCommunityCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModAddCommunity extends _ModAddCommunity {
-  _$_ModAddCommunity(
+  const _$_ModAddCommunity(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -5563,7 +5563,7 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 }
 
 abstract class _ModAddCommunity extends ModAddCommunity {
-  factory _ModAddCommunity(
+  const factory _ModAddCommunity(
       {required int id,
       required int modPersonId,
       required int otherPersonId,
@@ -5571,7 +5571,7 @@ abstract class _ModAddCommunity extends ModAddCommunity {
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModAddCommunity;
-  _ModAddCommunity._() : super._();
+  const _ModAddCommunity._() : super._();
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunity.fromJson;
@@ -5793,7 +5793,7 @@ class __$ModTransferCommunityCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModTransferCommunity extends _ModTransferCommunity {
-  _$_ModTransferCommunity(
+  const _$_ModTransferCommunity(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -5862,7 +5862,7 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
 }
 
 abstract class _ModTransferCommunity extends ModTransferCommunity {
-  factory _ModTransferCommunity(
+  const factory _ModTransferCommunity(
       {required int id,
       required int modPersonId,
       required int otherPersonId,
@@ -5870,7 +5870,7 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModTransferCommunity;
-  _ModTransferCommunity._() : super._();
+  const _ModTransferCommunity._() : super._();
 
   factory _ModTransferCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModTransferCommunity.fromJson;
@@ -6070,7 +6070,7 @@ class __$ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ModAdd extends _ModAdd {
-  _$_ModAdd(
+  const _$_ModAdd(
       {required this.id,
       required this.modPersonId,
       required this.otherPersonId,
@@ -6133,14 +6133,14 @@ class _$_ModAdd extends _ModAdd {
 }
 
 abstract class _ModAdd extends ModAdd {
-  factory _ModAdd(
+  const factory _ModAdd(
       {required int id,
       required int modPersonId,
       required int otherPersonId,
       bool? removed,
       @JsonKey(name: 'when_') required DateTime when,
       required String instanceHost}) = _$_ModAdd;
-  _ModAdd._() : super._();
+  const _ModAdd._() : super._();
 
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
 
@@ -6462,7 +6462,7 @@ class __$CommunitySafeCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommunitySafe extends _CommunitySafe {
-  _$_CommunitySafe(
+  const _$_CommunitySafe(
       {required this.id,
       required this.name,
       required this.title,
@@ -6570,7 +6570,7 @@ class _$_CommunitySafe extends _CommunitySafe {
 }
 
 abstract class _CommunitySafe extends CommunitySafe {
-  factory _CommunitySafe(
+  const factory _CommunitySafe(
       {required int id,
       required String name,
       required String title,
@@ -6585,7 +6585,7 @@ abstract class _CommunitySafe extends CommunitySafe {
       String? icon,
       String? banner,
       required String instanceHost}) = _$_CommunitySafe;
-  _CommunitySafe._() : super._();
+  const _CommunitySafe._() : super._();
 
   factory _CommunitySafe.fromJson(Map<String, dynamic> json) =
       _$_CommunitySafe.fromJson;
@@ -6864,7 +6864,7 @@ class __$CommentReportCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_CommentReport extends _CommentReport {
-  _$_CommentReport(
+  const _$_CommentReport(
       {required this.id,
       required this.creatorId,
       required this.commentId,
@@ -6956,7 +6956,7 @@ class _$_CommentReport extends _CommentReport {
 }
 
 abstract class _CommentReport extends CommentReport {
-  factory _CommentReport(
+  const factory _CommentReport(
       {required int id,
       required int creatorId,
       required int commentId,
@@ -6967,7 +6967,7 @@ abstract class _CommentReport extends CommentReport {
       required DateTime published,
       DateTime? updated,
       required String instanceHost}) = _$_CommentReport;
-  _CommentReport._() : super._();
+  const _CommentReport._() : super._();
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
       _$_CommentReport.fromJson;
@@ -7276,7 +7276,7 @@ class __$CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_Comment extends _Comment {
-  _$_Comment(
+  const _$_Comment(
       {required this.id,
       required this.creatorId,
       required this.postId,
@@ -7380,7 +7380,7 @@ class _$_Comment extends _Comment {
 }
 
 abstract class _Comment extends Comment {
-  factory _Comment(
+  const factory _Comment(
       {required int id,
       required int creatorId,
       required int postId,
@@ -7394,7 +7394,7 @@ abstract class _Comment extends Comment {
       required String apId,
       required bool local,
       required String instanceHost}) = _$_Comment;
-  _Comment._() : super._();
+  const _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
 
@@ -7610,7 +7610,7 @@ class __$PersonMentionCopyWithImpl<$Res>
 @ForceUtcDateTimeNullable()
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PersonMention extends _PersonMention {
-  _$_PersonMention(
+  const _$_PersonMention(
       {required this.id,
       required this.recipientId,
       required this.commentId,
@@ -7673,14 +7673,14 @@ class _$_PersonMention extends _PersonMention {
 }
 
 abstract class _PersonMention extends PersonMention {
-  factory _PersonMention(
+  const factory _PersonMention(
       {required int id,
       required int recipientId,
       required int commentId,
       required bool read,
       required DateTime published,
       required String instanceHost}) = _$_PersonMention;
-  _PersonMention._() : super._();
+  const _PersonMention._() : super._();
 
   factory _PersonMention.fromJson(Map<String, dynamic> json) =
       _$_PersonMention.fromJson;
