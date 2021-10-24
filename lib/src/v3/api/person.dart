@@ -523,7 +523,7 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
 @freezed
 class GetUnreadCount
     with _$GetUnreadCount
-    implements LemmyApiQuery<GetUnreadCountResponse> {
+    implements LemmyApiQuery<UnreadCount> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetUnreadCount({
     required String auth,
@@ -539,14 +539,14 @@ class GetUnreadCount
   final httpMethod = HttpMethod.get;
 
   @override
-  GetUnreadCountResponse responseFactory(Map<String, dynamic> json) =>
-      GetUnreadCountResponse.fromJson(json);
+  UnreadCount responseFactory(Map<String, dynamic> json) =>
+      UnreadCount.fromJson(json);
 }
 
 @freezed
 class GetReportCount
     with _$GetReportCount
-    implements LemmyApiQuery<GetReportCountResponse> {
+    implements LemmyApiQuery<ReportCount> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReportCount({
     int? communityId,
@@ -562,6 +562,6 @@ class GetReportCount
   final httpMethod = HttpMethod.get;
 
   @override
-  GetReportCountResponse responseFactory(Map<String, dynamic> json) =>
-      GetReportCountResponse.fromJson(json);
+  ReportCount responseFactory(Map<String, dynamic> json) =>
+      ReportCount.fromJson(json);
 }
