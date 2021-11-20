@@ -4184,21 +4184,20 @@ abstract class _BlockedCommunity extends BlockedCommunity {
       throw _privateConstructorUsedError;
 }
 
-GetReportCountResponse _$GetReportCountResponseFromJson(
-    Map<String, dynamic> json) {
-  return _GetReportCountResponse.fromJson(json);
+ReportCount _$ReportCountFromJson(Map<String, dynamic> json) {
+  return _ReportCount.fromJson(json);
 }
 
 /// @nodoc
-class _$GetReportCountResponseTearOff {
-  const _$GetReportCountResponseTearOff();
+class _$ReportCountTearOff {
+  const _$ReportCountTearOff();
 
-  _GetReportCountResponse call(
+  _ReportCount call(
       {int? communityId,
       required int commentReports,
       required int postReports,
       required String instanceHost}) {
-    return _GetReportCountResponse(
+    return _ReportCount(
       communityId: communityId,
       commentReports: commentReports,
       postReports: postReports,
@@ -4206,16 +4205,16 @@ class _$GetReportCountResponseTearOff {
     );
   }
 
-  GetReportCountResponse fromJson(Map<String, Object?> json) {
-    return GetReportCountResponse.fromJson(json);
+  ReportCount fromJson(Map<String, Object?> json) {
+    return ReportCount.fromJson(json);
   }
 }
 
 /// @nodoc
-const $GetReportCountResponse = _$GetReportCountResponseTearOff();
+const $ReportCount = _$ReportCountTearOff();
 
 /// @nodoc
-mixin _$GetReportCountResponse {
+mixin _$ReportCount {
   int? get communityId => throw _privateConstructorUsedError;
   int get commentReports => throw _privateConstructorUsedError;
   int get postReports => throw _privateConstructorUsedError;
@@ -4223,15 +4222,15 @@ mixin _$GetReportCountResponse {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GetReportCountResponseCopyWith<GetReportCountResponse> get copyWith =>
+  $ReportCountCopyWith<ReportCount> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GetReportCountResponseCopyWith<$Res> {
-  factory $GetReportCountResponseCopyWith(GetReportCountResponse value,
-          $Res Function(GetReportCountResponse) then) =
-      _$GetReportCountResponseCopyWithImpl<$Res>;
+abstract class $ReportCountCopyWith<$Res> {
+  factory $ReportCountCopyWith(
+          ReportCount value, $Res Function(ReportCount) then) =
+      _$ReportCountCopyWithImpl<$Res>;
   $Res call(
       {int? communityId,
       int commentReports,
@@ -4240,13 +4239,12 @@ abstract class $GetReportCountResponseCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$GetReportCountResponseCopyWithImpl<$Res>
-    implements $GetReportCountResponseCopyWith<$Res> {
-  _$GetReportCountResponseCopyWithImpl(this._value, this._then);
+class _$ReportCountCopyWithImpl<$Res> implements $ReportCountCopyWith<$Res> {
+  _$ReportCountCopyWithImpl(this._value, this._then);
 
-  final GetReportCountResponse _value;
+  final ReportCount _value;
   // ignore: unused_field
-  final $Res Function(GetReportCountResponse) _then;
+  final $Res Function(ReportCount) _then;
 
   @override
   $Res call({
@@ -4277,11 +4275,11 @@ class _$GetReportCountResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetReportCountResponseCopyWith<$Res>
-    implements $GetReportCountResponseCopyWith<$Res> {
-  factory _$GetReportCountResponseCopyWith(_GetReportCountResponse value,
-          $Res Function(_GetReportCountResponse) then) =
-      __$GetReportCountResponseCopyWithImpl<$Res>;
+abstract class _$ReportCountCopyWith<$Res>
+    implements $ReportCountCopyWith<$Res> {
+  factory _$ReportCountCopyWith(
+          _ReportCount value, $Res Function(_ReportCount) then) =
+      __$ReportCountCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? communityId,
@@ -4291,15 +4289,14 @@ abstract class _$GetReportCountResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GetReportCountResponseCopyWithImpl<$Res>
-    extends _$GetReportCountResponseCopyWithImpl<$Res>
-    implements _$GetReportCountResponseCopyWith<$Res> {
-  __$GetReportCountResponseCopyWithImpl(_GetReportCountResponse _value,
-      $Res Function(_GetReportCountResponse) _then)
-      : super(_value, (v) => _then(v as _GetReportCountResponse));
+class __$ReportCountCopyWithImpl<$Res> extends _$ReportCountCopyWithImpl<$Res>
+    implements _$ReportCountCopyWith<$Res> {
+  __$ReportCountCopyWithImpl(
+      _ReportCount _value, $Res Function(_ReportCount) _then)
+      : super(_value, (v) => _then(v as _ReportCount));
 
   @override
-  _GetReportCountResponse get _value => super._value as _GetReportCountResponse;
+  _ReportCount get _value => super._value as _ReportCount;
 
   @override
   $Res call({
@@ -4308,7 +4305,7 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
     Object? postReports = freezed,
     Object? instanceHost = freezed,
   }) {
-    return _then(_GetReportCountResponse(
+    return _then(_ReportCount(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -4332,16 +4329,16 @@ class __$GetReportCountResponseCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake)
-class _$_GetReportCountResponse extends _GetReportCountResponse {
-  const _$_GetReportCountResponse(
+class _$_ReportCount extends _ReportCount {
+  const _$_ReportCount(
       {this.communityId,
       required this.commentReports,
       required this.postReports,
       required this.instanceHost})
       : super._();
 
-  factory _$_GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GetReportCountResponseFromJson(json);
+  factory _$_ReportCount.fromJson(Map<String, dynamic> json) =>
+      _$$_ReportCountFromJson(json);
 
   @override
   final int? communityId;
@@ -4354,14 +4351,14 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
 
   @override
   String toString() {
-    return 'GetReportCountResponse(communityId: $communityId, commentReports: $commentReports, postReports: $postReports, instanceHost: $instanceHost)';
+    return 'ReportCount(communityId: $communityId, commentReports: $commentReports, postReports: $postReports, instanceHost: $instanceHost)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetReportCountResponse &&
+            other is _ReportCount &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
             (identical(other.commentReports, commentReports) ||
@@ -4378,26 +4375,25 @@ class _$_GetReportCountResponse extends _GetReportCountResponse {
 
   @JsonKey(ignore: true)
   @override
-  _$GetReportCountResponseCopyWith<_GetReportCountResponse> get copyWith =>
-      __$GetReportCountResponseCopyWithImpl<_GetReportCountResponse>(
-          this, _$identity);
+  _$ReportCountCopyWith<_ReportCount> get copyWith =>
+      __$ReportCountCopyWithImpl<_ReportCount>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetReportCountResponseToJson(this);
+    return _$$_ReportCountToJson(this);
   }
 }
 
-abstract class _GetReportCountResponse extends GetReportCountResponse {
-  const factory _GetReportCountResponse(
+abstract class _ReportCount extends ReportCount {
+  const factory _ReportCount(
       {int? communityId,
       required int commentReports,
       required int postReports,
-      required String instanceHost}) = _$_GetReportCountResponse;
-  const _GetReportCountResponse._() : super._();
+      required String instanceHost}) = _$_ReportCount;
+  const _ReportCount._() : super._();
 
-  factory _GetReportCountResponse.fromJson(Map<String, dynamic> json) =
-      _$_GetReportCountResponse.fromJson;
+  factory _ReportCount.fromJson(Map<String, dynamic> json) =
+      _$_ReportCount.fromJson;
 
   @override
   int? get communityId;
@@ -4409,6 +4405,201 @@ abstract class _GetReportCountResponse extends GetReportCountResponse {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$GetReportCountResponseCopyWith<_GetReportCountResponse> get copyWith =>
+  _$ReportCountCopyWith<_ReportCount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+UnreadCount _$UnreadCountFromJson(Map<String, dynamic> json) {
+  return _UnreadCount.fromJson(json);
+}
+
+/// @nodoc
+class _$UnreadCountTearOff {
+  const _$UnreadCountTearOff();
+
+  _UnreadCount call(
+      {required int replies,
+      required int mentions,
+      required int privateMessages}) {
+    return _UnreadCount(
+      replies: replies,
+      mentions: mentions,
+      privateMessages: privateMessages,
+    );
+  }
+
+  UnreadCount fromJson(Map<String, Object?> json) {
+    return UnreadCount.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $UnreadCount = _$UnreadCountTearOff();
+
+/// @nodoc
+mixin _$UnreadCount {
+  int get replies => throw _privateConstructorUsedError;
+  int get mentions => throw _privateConstructorUsedError;
+  int get privateMessages => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UnreadCountCopyWith<UnreadCount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UnreadCountCopyWith<$Res> {
+  factory $UnreadCountCopyWith(
+          UnreadCount value, $Res Function(UnreadCount) then) =
+      _$UnreadCountCopyWithImpl<$Res>;
+  $Res call({int replies, int mentions, int privateMessages});
+}
+
+/// @nodoc
+class _$UnreadCountCopyWithImpl<$Res> implements $UnreadCountCopyWith<$Res> {
+  _$UnreadCountCopyWithImpl(this._value, this._then);
+
+  final UnreadCount _value;
+  // ignore: unused_field
+  final $Res Function(UnreadCount) _then;
+
+  @override
+  $Res call({
+    Object? replies = freezed,
+    Object? mentions = freezed,
+    Object? privateMessages = freezed,
+  }) {
+    return _then(_value.copyWith(
+      replies: replies == freezed
+          ? _value.replies
+          : replies // ignore: cast_nullable_to_non_nullable
+              as int,
+      mentions: mentions == freezed
+          ? _value.mentions
+          : mentions // ignore: cast_nullable_to_non_nullable
+              as int,
+      privateMessages: privateMessages == freezed
+          ? _value.privateMessages
+          : privateMessages // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$UnreadCountCopyWith<$Res>
+    implements $UnreadCountCopyWith<$Res> {
+  factory _$UnreadCountCopyWith(
+          _UnreadCount value, $Res Function(_UnreadCount) then) =
+      __$UnreadCountCopyWithImpl<$Res>;
+  @override
+  $Res call({int replies, int mentions, int privateMessages});
+}
+
+/// @nodoc
+class __$UnreadCountCopyWithImpl<$Res> extends _$UnreadCountCopyWithImpl<$Res>
+    implements _$UnreadCountCopyWith<$Res> {
+  __$UnreadCountCopyWithImpl(
+      _UnreadCount _value, $Res Function(_UnreadCount) _then)
+      : super(_value, (v) => _then(v as _UnreadCount));
+
+  @override
+  _UnreadCount get _value => super._value as _UnreadCount;
+
+  @override
+  $Res call({
+    Object? replies = freezed,
+    Object? mentions = freezed,
+    Object? privateMessages = freezed,
+  }) {
+    return _then(_UnreadCount(
+      replies: replies == freezed
+          ? _value.replies
+          : replies // ignore: cast_nullable_to_non_nullable
+              as int,
+      mentions: mentions == freezed
+          ? _value.mentions
+          : mentions // ignore: cast_nullable_to_non_nullable
+              as int,
+      privateMessages: privateMessages == freezed
+          ? _value.privateMessages
+          : privateMessages // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class _$_UnreadCount extends _UnreadCount {
+  const _$_UnreadCount(
+      {required this.replies,
+      required this.mentions,
+      required this.privateMessages})
+      : super._();
+
+  factory _$_UnreadCount.fromJson(Map<String, dynamic> json) =>
+      _$$_UnreadCountFromJson(json);
+
+  @override
+  final int replies;
+  @override
+  final int mentions;
+  @override
+  final int privateMessages;
+
+  @override
+  String toString() {
+    return 'UnreadCount(replies: $replies, mentions: $mentions, privateMessages: $privateMessages)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _UnreadCount &&
+            (identical(other.replies, replies) || other.replies == replies) &&
+            (identical(other.mentions, mentions) ||
+                other.mentions == mentions) &&
+            (identical(other.privateMessages, privateMessages) ||
+                other.privateMessages == privateMessages));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, replies, mentions, privateMessages);
+
+  @JsonKey(ignore: true)
+  @override
+  _$UnreadCountCopyWith<_UnreadCount> get copyWith =>
+      __$UnreadCountCopyWithImpl<_UnreadCount>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_UnreadCountToJson(this);
+  }
+}
+
+abstract class _UnreadCount extends UnreadCount {
+  const factory _UnreadCount(
+      {required int replies,
+      required int mentions,
+      required int privateMessages}) = _$_UnreadCount;
+  const _UnreadCount._() : super._();
+
+  factory _UnreadCount.fromJson(Map<String, dynamic> json) =
+      _$_UnreadCount.fromJson;
+
+  @override
+  int get replies;
+  @override
+  int get mentions;
+  @override
+  int get privateMessages;
+  @override
+  @JsonKey(ignore: true)
+  _$UnreadCountCopyWith<_UnreadCount> get copyWith =>
       throw _privateConstructorUsedError;
 }

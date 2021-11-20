@@ -391,20 +391,32 @@ Map<String, dynamic> _$$_BlockedCommunityToJson(_$_BlockedCommunity instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_GetReportCountResponse _$$_GetReportCountResponseFromJson(
-        Map<String, dynamic> json) =>
-    _$_GetReportCountResponse(
+_$_ReportCount _$$_ReportCountFromJson(Map<String, dynamic> json) =>
+    _$_ReportCount(
       communityId: json['community_id'] as int?,
       commentReports: json['comment_reports'] as int,
       postReports: json['post_reports'] as int,
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_GetReportCountResponseToJson(
-        _$_GetReportCountResponse instance) =>
+Map<String, dynamic> _$$_ReportCountToJson(_$_ReportCount instance) =>
     <String, dynamic>{
       'community_id': instance.communityId,
       'comment_reports': instance.commentReports,
       'post_reports': instance.postReports,
       'instance_host': instance.instanceHost,
+    };
+
+_$_UnreadCount _$$_UnreadCountFromJson(Map<String, dynamic> json) =>
+    _$_UnreadCount(
+      replies: json['replies'] as int,
+      mentions: json['mentions'] as int,
+      privateMessages: json['private_messages'] as int,
+    );
+
+Map<String, dynamic> _$$_UnreadCountToJson(_$_UnreadCount instance) =>
+    <String, dynamic>{
+      'replies': instance.replies,
+      'mentions': instance.mentions,
+      'private_messages': instance.privateMessages,
     };

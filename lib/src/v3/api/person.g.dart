@@ -24,6 +24,7 @@ _$_Register _$$_RegisterFromJson(Map<String, dynamic> json) => _$_Register(
       showNsfw: json['show_nsfw'] as bool,
       captchaUuid: json['captcha_uuid'] as String?,
       captchaAnswer: json['captcha_answer'] as String?,
+      honeypot: json['honeypot'] as String?,
     );
 
 Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
@@ -43,6 +44,7 @@ Map<String, dynamic> _$$_RegisterToJson(_$_Register instance) {
   val['show_nsfw'] = instance.showNsfw;
   writeNotNull('captcha_uuid', instance.captchaUuid);
   writeNotNull('captcha_answer', instance.captchaAnswer);
+  writeNotNull('honeypot', instance.honeypot);
   return val;
 }
 
@@ -420,6 +422,16 @@ Map<String, dynamic> _$$_BlockPersonToJson(_$_BlockPerson instance) =>
     <String, dynamic>{
       'person_id': instance.personId,
       'block': instance.block,
+      'auth': instance.auth,
+    };
+
+_$_GetUnreadCount _$$_GetUnreadCountFromJson(Map<String, dynamic> json) =>
+    _$_GetUnreadCount(
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_GetUnreadCountToJson(_$_GetUnreadCount instance) =>
+    <String, dynamic>{
       'auth': instance.auth,
     };
 

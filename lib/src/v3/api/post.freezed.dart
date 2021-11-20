@@ -186,7 +186,8 @@ class _$CreatePostTearOff {
       String? body,
       bool? nsfw,
       required int communityId,
-      required String auth}) {
+      required String auth,
+      String? honeypot}) {
     return _CreatePost(
       name: name,
       url: url,
@@ -194,6 +195,7 @@ class _$CreatePostTearOff {
       nsfw: nsfw,
       communityId: communityId,
       auth: auth,
+      honeypot: honeypot,
     );
   }
 
@@ -213,6 +215,7 @@ mixin _$CreatePost {
   bool? get nsfw => throw _privateConstructorUsedError;
   int get communityId => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
+  String? get honeypot => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -231,7 +234,8 @@ abstract class $CreatePostCopyWith<$Res> {
       String? body,
       bool? nsfw,
       int communityId,
-      String auth});
+      String auth,
+      String? honeypot});
 }
 
 /// @nodoc
@@ -250,6 +254,7 @@ class _$CreatePostCopyWithImpl<$Res> implements $CreatePostCopyWith<$Res> {
     Object? nsfw = freezed,
     Object? communityId = freezed,
     Object? auth = freezed,
+    Object? honeypot = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -276,6 +281,10 @@ class _$CreatePostCopyWithImpl<$Res> implements $CreatePostCopyWith<$Res> {
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
+      honeypot: honeypot == freezed
+          ? _value.honeypot
+          : honeypot // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -292,7 +301,8 @@ abstract class _$CreatePostCopyWith<$Res> implements $CreatePostCopyWith<$Res> {
       String? body,
       bool? nsfw,
       int communityId,
-      String auth});
+      String auth,
+      String? honeypot});
 }
 
 /// @nodoc
@@ -313,6 +323,7 @@ class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? communityId = freezed,
     Object? auth = freezed,
+    Object? honeypot = freezed,
   }) {
     return _then(_CreatePost(
       name: name == freezed
@@ -339,6 +350,10 @@ class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
+      honeypot: honeypot == freezed
+          ? _value.honeypot
+          : honeypot // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -353,7 +368,8 @@ class _$_CreatePost extends _CreatePost {
       this.body,
       this.nsfw,
       required this.communityId,
-      required this.auth})
+      required this.auth,
+      this.honeypot})
       : super._();
 
   factory _$_CreatePost.fromJson(Map<String, dynamic> json) =>
@@ -371,10 +387,12 @@ class _$_CreatePost extends _CreatePost {
   final int communityId;
   @override
   final String auth;
+  @override
+  final String? honeypot;
 
   @override
   String toString() {
-    return 'CreatePost(name: $name, url: $url, body: $body, nsfw: $nsfw, communityId: $communityId, auth: $auth)';
+    return 'CreatePost(name: $name, url: $url, body: $body, nsfw: $nsfw, communityId: $communityId, auth: $auth, honeypot: $honeypot)';
   }
 
   @override
@@ -388,12 +406,14 @@ class _$_CreatePost extends _CreatePost {
             (identical(other.nsfw, nsfw) || other.nsfw == nsfw) &&
             (identical(other.communityId, communityId) ||
                 other.communityId == communityId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            (identical(other.auth, auth) || other.auth == auth) &&
+            (identical(other.honeypot, honeypot) ||
+                other.honeypot == honeypot));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, url, body, nsfw, communityId, auth);
+  int get hashCode => Object.hash(
+      runtimeType, name, url, body, nsfw, communityId, auth, honeypot);
 
   @JsonKey(ignore: true)
   @override
@@ -413,7 +433,8 @@ abstract class _CreatePost extends CreatePost {
       String? body,
       bool? nsfw,
       required int communityId,
-      required String auth}) = _$_CreatePost;
+      required String auth,
+      String? honeypot}) = _$_CreatePost;
   const _CreatePost._() : super._();
 
   factory _CreatePost.fromJson(Map<String, dynamic> json) =
@@ -431,6 +452,8 @@ abstract class _CreatePost extends CreatePost {
   int get communityId;
   @override
   String get auth;
+  @override
+  String? get honeypot;
   @override
   @JsonKey(ignore: true)
   _$CreatePostCopyWith<_CreatePost> get copyWith =>

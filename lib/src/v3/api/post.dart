@@ -39,6 +39,7 @@ class CreatePost with _$CreatePost implements LemmyApiQuery<PostView> {
     bool? nsfw,
     required int communityId,
     required String auth,
+    String? honeypot,
   }) = _CreatePost;
 
   const CreatePost._();

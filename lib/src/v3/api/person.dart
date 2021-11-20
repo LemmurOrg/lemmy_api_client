@@ -40,6 +40,7 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
     required bool showNsfw,
     String? captchaUuid,
     String? captchaAnswer,
+    String? honeypot,
   }) = _Register;
 
   const Register._();
@@ -520,9 +521,32 @@ class BlockPerson with _$BlockPerson implements LemmyApiQuery<BlockedPerson> {
 }
 
 @freezed
+class GetUnreadCount
+    with _$GetUnreadCount
+    implements LemmyApiQuery<UnreadCount> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetUnreadCount({
+    required String auth,
+  }) = _GetUnreadCount;
+
+  const GetUnreadCount._();
+
+  factory GetUnreadCount.fromJson(Map<String, dynamic> json) =>
+      _$GetUnreadCountFromJson(json);
+
+  final path = '/user/unread_count';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  UnreadCount responseFactory(Map<String, dynamic> json) =>
+      UnreadCount.fromJson(json);
+}
+
+@freezed
 class GetReportCount
     with _$GetReportCount
-    implements LemmyApiQuery<GetReportCountResponse> {
+    implements LemmyApiQuery<ReportCount> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetReportCount({
     int? communityId,
@@ -538,6 +562,6 @@ class GetReportCount
   final httpMethod = HttpMethod.get;
 
   @override
-  GetReportCountResponse responseFactory(Map<String, dynamic> json) =>
-      GetReportCountResponse.fromJson(json);
+  ReportCount responseFactory(Map<String, dynamic> json) =>
+      ReportCount.fromJson(json);
 }

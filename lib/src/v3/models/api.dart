@@ -272,16 +272,30 @@ class BlockedCommunity with _$BlockedCommunity {
 }
 
 @freezed
-class GetReportCountResponse with _$GetReportCountResponse {
+class ReportCount with _$ReportCount {
   @JsonSerializable(fieldRename: FieldRename.snake)
-  const factory GetReportCountResponse({
+  const factory ReportCount({
     int? communityId,
     required int commentReports,
     required int postReports,
     required String instanceHost,
-  }) = _GetReportCountResponse;
+  }) = _ReportCount;
 
-  const GetReportCountResponse._();
-  factory GetReportCountResponse.fromJson(Map<String, dynamic> json) =>
-      _$GetReportCountResponseFromJson(json);
+  const ReportCount._();
+  factory ReportCount.fromJson(Map<String, dynamic> json) =>
+      _$ReportCountFromJson(json);
+}
+
+@freezed
+class UnreadCount with _$UnreadCount {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory UnreadCount({
+    required int replies,
+    required int mentions,
+    required int privateMessages,
+  }) = _UnreadCount;
+
+  const UnreadCount._();
+  factory UnreadCount.fromJson(Map<String, dynamic> json) =>
+      _$UnreadCountFromJson(json);
 }
