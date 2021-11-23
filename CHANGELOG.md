@@ -1,10 +1,15 @@
+## Unreleased
+
+### Added
+
+- Add `GetUnreadCount` endpoint
+- Add `honeypot` fields
+
 ## v0.17.0 - 2021-10-24
 
 ### Added
 
 - Add reporting API
-- Add `GetUnreadCount` endpoint
-- Add `honeypot` fields
 
 ### Changed
 
