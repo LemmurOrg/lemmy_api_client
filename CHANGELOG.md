@@ -1,5 +1,9 @@
 ## Unreleased
 
+### Changed
+
+- Bump `freezed` dependency to `1.0.0`
+
 ### Added
 
 - Add `GetUnreadCount` endpoint
