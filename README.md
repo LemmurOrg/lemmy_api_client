@@ -2,10 +2,10 @@
 
 <div align="center">
 
- <img width=200px height=200px src="https://raw.githubusercontent.com/krawieck/lemmy_api_client/master/logo.svg"/>
+ <img width=200px height=200px src="https://raw.githubusercontent.com/LemmurOrg/lemmy_api_client/master/logo.svg"/>
 
 [![](https://img.shields.io/pub/v/lemmy_api_client.svg?logo=dart)](https://pub.dev/packages/lemmy_api_client)
-[![](https://github.com/krawieck/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/krawieck/lemmy_api_client/actions)
+[![](https://github.com/LemmurOrg/lemmy_api_client/workflows/ci/badge.svg)](https://github.com/LemmurOrg/lemmy_api_client/actions)
 
 A Dart client for the [Lemmy API](https://join-lemmy.org/api/)
 
@@ -39,7 +39,7 @@ Future<void> main() async {
 }
 ```
 
-_check out [Lemmur](https://github.com/krawieck/lemmur), a mobile Lemmy client in Flutter_
+_check out [Lemmur](https://github.com/LemmurOrg/lemmur), a mobile Lemmy client in Flutter_
 
 ---
 
