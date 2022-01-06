@@ -119,7 +119,6 @@ linter:
 analyzer:
   exclude:
     - "**/*.g.dart"
-    - "**/*.freezed.dart"
   strong-mode:
     implicit-dynamic: false
   errors:

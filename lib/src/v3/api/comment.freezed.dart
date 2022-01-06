@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'comment.dart';
@@ -200,17 +201,21 @@ class _$_CreateComment extends _CreateComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CreateComment &&
-            (identical(other.content, content) || other.content == content) &&
-            (identical(other.parentId, parentId) ||
-                other.parentId == parentId) &&
-            (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.formId, formId) || other.formId == formId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.content, content) &&
+            const DeepCollectionEquality().equals(other.parentId, parentId) &&
+            const DeepCollectionEquality().equals(other.postId, postId) &&
+            const DeepCollectionEquality().equals(other.formId, formId) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, content, parentId, postId, formId, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(content),
+      const DeepCollectionEquality().hash(parentId),
+      const DeepCollectionEquality().hash(postId),
+      const DeepCollectionEquality().hash(formId),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -418,16 +423,19 @@ class _$_EditComment extends _EditComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _EditComment &&
-            (identical(other.content, content) || other.content == content) &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.formId, formId) || other.formId == formId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.content, content) &&
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.formId, formId) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, content, commentId, formId, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(content),
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(formId),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -614,14 +622,17 @@ class _$_DeleteComment extends _DeleteComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeleteComment &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.deleted, deleted) || other.deleted == deleted) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.deleted, deleted) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentId, deleted, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(deleted),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -825,16 +836,19 @@ class _$_RemoveComment extends _RemoveComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _RemoveComment &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.removed, removed) || other.removed == removed) &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.removed, removed) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, commentId, removed, reason, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(removed),
+      const DeepCollectionEquality().hash(reason),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1021,14 +1035,17 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MarkCommentAsRead &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.read, read) || other.read == read) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.read, read) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentId, read, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(read),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1210,14 +1227,17 @@ class _$_SaveComment extends _SaveComment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SaveComment &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.save, save) || other.save == save) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.save, save) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentId, save, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(save),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1401,14 +1421,17 @@ class _$_CreateCommentLike extends _CreateCommentLike {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CreateCommentLike &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.score, score) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentId, score, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(score),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1692,22 +1715,29 @@ class _$_GetComments extends _GetComments {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetComments &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.communityName, communityName) ||
-                other.communityName == communityName) &&
-            (identical(other.savedOnly, savedOnly) ||
-                other.savedOnly == savedOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.sort, sort) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality()
+                .equals(other.communityName, communityName) &&
+            const DeepCollectionEquality().equals(other.savedOnly, savedOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, type, sort, page, limit,
-      communityId, communityName, savedOnly, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(sort),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(communityName),
+      const DeepCollectionEquality().hash(savedOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1907,14 +1937,17 @@ class _$_CreateCommentReport extends _CreateCommentReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CreateCommentReport &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentId, reason, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(reason),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2099,15 +2132,17 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ResolveCommentReport &&
-            (identical(other.reportId, reportId) ||
-                other.reportId == reportId) &&
-            (identical(other.resolved, resolved) ||
-                other.resolved == resolved) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.reportId, reportId) &&
+            const DeepCollectionEquality().equals(other.resolved, resolved) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, reportId, resolved, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(reportId),
+      const DeepCollectionEquality().hash(resolved),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2338,18 +2373,23 @@ class _$_ListCommentReports extends _ListCommentReports {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ListCommentReports &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.unresolvedOnly, unresolvedOnly) ||
-                other.unresolvedOnly == unresolvedOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality()
+                .equals(other.unresolvedOnly, unresolvedOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, page, limit, communityId, unresolvedOnly, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(unresolvedOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override

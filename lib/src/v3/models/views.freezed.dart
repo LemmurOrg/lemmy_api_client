@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'views.dart';
@@ -186,14 +187,18 @@ class _$_PersonViewSafe extends _PersonViewSafe {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PersonViewSafe &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, person, counts, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -639,46 +644,42 @@ class _$_PersonMentionView extends _PersonMentionView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PersonMentionView &&
-            (identical(other.personMention, personMention) ||
-                other.personMention == personMention) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.recipient, recipient) ||
-                other.recipient == recipient) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
-            (identical(other.saved, saved) || other.saved == saved) &&
-            (identical(other.creatorBlocked, creatorBlocked) ||
-                other.creatorBlocked == creatorBlocked) &&
-            (identical(other.myVote, myVote) || other.myVote == myVote) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.personMention, personMention) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality().equals(
+                other.creatorBannedFromCommunity, creatorBannedFromCommunity) &&
+            const DeepCollectionEquality()
+                .equals(other.subscribed, subscribed) &&
+            const DeepCollectionEquality().equals(other.saved, saved) &&
+            const DeepCollectionEquality()
+                .equals(other.creatorBlocked, creatorBlocked) &&
+            const DeepCollectionEquality().equals(other.myVote, myVote) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      personMention,
-      comment,
-      creator,
-      post,
-      community,
-      recipient,
-      counts,
-      creatorBannedFromCommunity,
-      subscribed,
-      saved,
-      creatorBlocked,
-      myVote,
-      instanceHost);
+      const DeepCollectionEquality().hash(personMention),
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(recipient),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(creatorBannedFromCommunity),
+      const DeepCollectionEquality().hash(subscribed),
+      const DeepCollectionEquality().hash(saved),
+      const DeepCollectionEquality().hash(creatorBlocked),
+      const DeepCollectionEquality().hash(myVote),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -953,17 +954,20 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _LocalUserSettingsView &&
-            (identical(other.localUser, localUser) ||
-                other.localUser == localUser) &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.localUser, localUser) &&
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, localUser, person, counts, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(localUser),
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -1205,16 +1209,20 @@ class _$_SiteView extends _SiteView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SiteView &&
-            (identical(other.site, site) || other.site == site) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.site, site) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, site, creator, counts, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(site),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -1460,18 +1468,21 @@ class _$_PrivateMessageView extends _PrivateMessageView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PrivateMessageView &&
-            (identical(other.privateMessage, privateMessage) ||
-                other.privateMessage == privateMessage) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.recipient, recipient) ||
-                other.recipient == recipient) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.privateMessage, privateMessage) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, privateMessage, creator, recipient, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(privateMessage),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(recipient),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -1848,40 +1859,37 @@ class _$_PostView extends _PostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PostView &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
-            (identical(other.saved, saved) || other.saved == saved) &&
-            (identical(other.read, read) || other.read == read) &&
-            (identical(other.creatorBlocked, creatorBlocked) ||
-                other.creatorBlocked == creatorBlocked) &&
-            (identical(other.myVote, myVote) || other.myVote == myVote) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(
+                other.creatorBannedFromCommunity, creatorBannedFromCommunity) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality()
+                .equals(other.subscribed, subscribed) &&
+            const DeepCollectionEquality().equals(other.saved, saved) &&
+            const DeepCollectionEquality().equals(other.read, read) &&
+            const DeepCollectionEquality()
+                .equals(other.creatorBlocked, creatorBlocked) &&
+            const DeepCollectionEquality().equals(other.myVote, myVote) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      post,
-      creator,
-      community,
-      creatorBannedFromCommunity,
-      counts,
-      subscribed,
-      saved,
-      read,
-      creatorBlocked,
-      myVote,
-      instanceHost);
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(creatorBannedFromCommunity),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(subscribed),
+      const DeepCollectionEquality().hash(saved),
+      const DeepCollectionEquality().hash(read),
+      const DeepCollectionEquality().hash(creatorBlocked),
+      const DeepCollectionEquality().hash(myVote),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -2300,39 +2308,35 @@ class _$_PostReportView extends _PostReportView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PostReportView &&
-            (identical(other.postReport, postReport) ||
-                other.postReport == postReport) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.postCreator, postCreator) ||
-                other.postCreator == postCreator) &&
-            (identical(other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.myVote, myVote) || other.myVote == myVote) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.resolver, resolver) ||
-                other.resolver == resolver) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.postReport, postReport) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality()
+                .equals(other.postCreator, postCreator) &&
+            const DeepCollectionEquality().equals(
+                other.creatorBannedFromCommunity, creatorBannedFromCommunity) &&
+            const DeepCollectionEquality().equals(other.myVote, myVote) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality().equals(other.resolver, resolver) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      postReport,
-      post,
-      community,
-      creator,
-      postCreator,
-      creatorBannedFromCommunity,
-      myVote,
-      counts,
-      resolver,
-      instanceHost);
+      const DeepCollectionEquality().hash(postReport),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(postCreator),
+      const DeepCollectionEquality().hash(creatorBannedFromCommunity),
+      const DeepCollectionEquality().hash(myVote),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(resolver),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -2773,43 +2777,39 @@ class _$_CommentView extends _CommentView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommentView &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.recipient, recipient) ||
-                other.recipient == recipient) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
-            (identical(other.saved, saved) || other.saved == saved) &&
-            (identical(other.creatorBlocked, creatorBlocked) ||
-                other.creatorBlocked == creatorBlocked) &&
-            (identical(other.myVote, myVote) || other.myVote == myVote) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality().equals(
+                other.creatorBannedFromCommunity, creatorBannedFromCommunity) &&
+            const DeepCollectionEquality()
+                .equals(other.subscribed, subscribed) &&
+            const DeepCollectionEquality().equals(other.saved, saved) &&
+            const DeepCollectionEquality()
+                .equals(other.creatorBlocked, creatorBlocked) &&
+            const DeepCollectionEquality().equals(other.myVote, myVote) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      comment,
-      creator,
-      recipient,
-      post,
-      community,
-      counts,
-      creatorBannedFromCommunity,
-      subscribed,
-      saved,
-      creatorBlocked,
-      myVote,
-      instanceHost);
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(recipient),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(creatorBannedFromCommunity),
+      const DeepCollectionEquality().hash(subscribed),
+      const DeepCollectionEquality().hash(saved),
+      const DeepCollectionEquality().hash(creatorBlocked),
+      const DeepCollectionEquality().hash(myVote),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3260,41 +3260,37 @@ class _$_CommentReportView extends _CommentReportView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommentReportView &&
-            (identical(other.commentReport, commentReport) ||
-                other.commentReport == commentReport) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.creator, creator) || other.creator == creator) &&
-            (identical(other.commentCreator, commentCreator) ||
-                other.commentCreator == commentCreator) &&
-            (identical(other.creatorBannedFromCommunity,
-                    creatorBannedFromCommunity) ||
-                other.creatorBannedFromCommunity ==
-                    creatorBannedFromCommunity) &&
-            (identical(other.myVote, myVote) || other.myVote == myVote) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.resolver, resolver) ||
-                other.resolver == resolver) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.commentReport, commentReport) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality()
+                .equals(other.commentCreator, commentCreator) &&
+            const DeepCollectionEquality().equals(
+                other.creatorBannedFromCommunity, creatorBannedFromCommunity) &&
+            const DeepCollectionEquality().equals(other.myVote, myVote) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality().equals(other.resolver, resolver) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      commentReport,
-      comment,
-      post,
-      community,
-      creator,
-      commentCreator,
-      creatorBannedFromCommunity,
-      myVote,
-      counts,
-      resolver,
-      instanceHost);
+      const DeepCollectionEquality().hash(commentReport),
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(commentCreator),
+      const DeepCollectionEquality().hash(creatorBannedFromCommunity),
+      const DeepCollectionEquality().hash(myVote),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(resolver),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3590,21 +3586,24 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModAddCommunityView &&
-            (identical(other.modAddCommunity, modAddCommunity) ||
-                other.modAddCommunity == modAddCommunity) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.moddedPerson, moddedPerson) ||
-                other.moddedPerson == moddedPerson) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modAddCommunity, modAddCommunity) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.moddedPerson, moddedPerson) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, modAddCommunity, moderator,
-      community, moddedPerson, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modAddCommunity),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(moddedPerson),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3887,21 +3886,24 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModTransferCommunityView &&
-            (identical(other.modTransferCommunity, modTransferCommunity) ||
-                other.modTransferCommunity == modTransferCommunity) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.moddedPerson, moddedPerson) ||
-                other.moddedPerson == moddedPerson) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modTransferCommunity, modTransferCommunity) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.moddedPerson, moddedPerson) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, modTransferCommunity, moderator,
-      community, moddedPerson, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modTransferCommunity),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(moddedPerson),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4149,18 +4151,21 @@ class _$_ModAddView extends _ModAddView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModAddView &&
-            (identical(other.modAdd, modAdd) || other.modAdd == modAdd) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.moddedPerson, moddedPerson) ||
-                other.moddedPerson == moddedPerson) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.modAdd, modAdd) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality()
+                .equals(other.moddedPerson, moddedPerson) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, modAdd, moderator, moddedPerson, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modAdd),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(moddedPerson),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4439,21 +4444,24 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModBanFromCommunityView &&
-            (identical(other.modBanFromCommunity, modBanFromCommunity) ||
-                other.modBanFromCommunity == modBanFromCommunity) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.bannedPerson, bannedPerson) ||
-                other.bannedPerson == bannedPerson) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modBanFromCommunity, modBanFromCommunity) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.bannedPerson, bannedPerson) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, modBanFromCommunity, moderator,
-      community, bannedPerson, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modBanFromCommunity),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(bannedPerson),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4701,18 +4709,21 @@ class _$_ModBanView extends _ModBanView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModBanView &&
-            (identical(other.modBan, modBan) || other.modBan == modBan) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.bannedPerson, bannedPerson) ||
-                other.bannedPerson == bannedPerson) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.modBan, modBan) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality()
+                .equals(other.bannedPerson, bannedPerson) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, modBan, moderator, bannedPerson, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modBan),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(bannedPerson),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4987,20 +4998,23 @@ class _$_ModLockPostView extends _ModLockPostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModLockPostView &&
-            (identical(other.modLockPost, modLockPost) ||
-                other.modLockPost == modLockPost) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modLockPost, modLockPost) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, modLockPost, moderator, post, community, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(modLockPost),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -5334,23 +5348,27 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModRemoveCommentView &&
-            (identical(other.modRemoveComment, modRemoveComment) ||
-                other.modRemoveComment == modRemoveComment) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.commenter, commenter) ||
-                other.commenter == commenter) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modRemoveComment, modRemoveComment) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality().equals(other.commenter, commenter) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, modRemoveComment, moderator,
-      comment, commenter, post, community, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modRemoveComment),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(commenter),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -5610,19 +5628,21 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModRemoveCommunityView &&
-            (identical(other.modRemoveCommunity, modRemoveCommunity) ||
-                other.modRemoveCommunity == modRemoveCommunity) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modRemoveCommunity, modRemoveCommunity) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, modRemoveCommunity, moderator, community, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(modRemoveCommunity),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -5898,20 +5918,23 @@ class _$_ModRemovePostView extends _ModRemovePostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModRemovePostView &&
-            (identical(other.modRemovePost, modRemovePost) ||
-                other.modRemovePost == modRemovePost) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modRemovePost, modRemovePost) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, modRemovePost, moderator, post, community, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(modRemovePost),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -6189,20 +6212,23 @@ class _$_ModStickyPostView extends _ModStickyPostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ModStickyPostView &&
-            (identical(other.modStickyPost, modStickyPost) ||
-                other.modStickyPost == modStickyPost) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.modStickyPost, modStickyPost) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, modStickyPost, moderator, post, community, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(modStickyPost),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -6421,17 +6447,18 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommunityFollowerView &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.follower, follower) ||
-                other.follower == follower) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.follower, follower) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, community, follower, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(follower),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -6645,17 +6672,18 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommunityModeratorView &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.moderator, moderator) ||
-                other.moderator == moderator) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.moderator, moderator) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, community, moderator, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(moderator),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -6864,14 +6892,18 @@ class _$_PersonBlockView extends _PersonBlockView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PersonBlockView &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.target, target) || other.target == target) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality().equals(other.target, target) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, person, target, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(target),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -7081,15 +7113,18 @@ class _$_CommunityBlockView extends _CommunityBlockView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommunityBlockView &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, person, community, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -7300,15 +7335,18 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommunityPersonBanView &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, community, person, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -7561,19 +7599,23 @@ class _$_CommunityView extends _CommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommunityView &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.subscribed, subscribed) ||
-                other.subscribed == subscribed) &&
-            (identical(other.blocked, blocked) || other.blocked == blocked) &&
-            (identical(other.counts, counts) || other.counts == counts) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality()
+                .equals(other.subscribed, subscribed) &&
+            const DeepCollectionEquality().equals(other.blocked, blocked) &&
+            const DeepCollectionEquality().equals(other.counts, counts) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, community, subscribed, blocked, counts, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(subscribed),
+      const DeepCollectionEquality().hash(blocked),
+      const DeepCollectionEquality().hash(counts),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override

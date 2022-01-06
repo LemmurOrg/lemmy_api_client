@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_lambdas
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';

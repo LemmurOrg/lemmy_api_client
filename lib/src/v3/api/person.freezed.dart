@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'person.dart';
@@ -139,14 +140,16 @@ class _$_Login extends _Login {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Login &&
-            (identical(other.usernameOrEmail, usernameOrEmail) ||
-                other.usernameOrEmail == usernameOrEmail) &&
-            (identical(other.password, password) ||
-                other.password == password));
+            const DeepCollectionEquality()
+                .equals(other.usernameOrEmail, usernameOrEmail) &&
+            const DeepCollectionEquality().equals(other.password, password));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, usernameOrEmail, password);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(usernameOrEmail),
+      const DeepCollectionEquality().hash(password));
 
   @JsonKey(ignore: true)
   @override
@@ -418,26 +421,30 @@ class _$_Register extends _Register {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Register &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.passwordVerify, passwordVerify) ||
-                other.passwordVerify == passwordVerify) &&
-            (identical(other.showNsfw, showNsfw) ||
-                other.showNsfw == showNsfw) &&
-            (identical(other.captchaUuid, captchaUuid) ||
-                other.captchaUuid == captchaUuid) &&
-            (identical(other.captchaAnswer, captchaAnswer) ||
-                other.captchaAnswer == captchaAnswer) &&
-            (identical(other.honeypot, honeypot) ||
-                other.honeypot == honeypot));
+            const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.password, password) &&
+            const DeepCollectionEquality()
+                .equals(other.passwordVerify, passwordVerify) &&
+            const DeepCollectionEquality().equals(other.showNsfw, showNsfw) &&
+            const DeepCollectionEquality()
+                .equals(other.captchaUuid, captchaUuid) &&
+            const DeepCollectionEquality()
+                .equals(other.captchaAnswer, captchaAnswer) &&
+            const DeepCollectionEquality().equals(other.honeypot, honeypot));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, username, email, password,
-      passwordVerify, showNsfw, captchaUuid, captchaAnswer, honeypot);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(username),
+      const DeepCollectionEquality().hash(email),
+      const DeepCollectionEquality().hash(password),
+      const DeepCollectionEquality().hash(passwordVerify),
+      const DeepCollectionEquality().hash(showNsfw),
+      const DeepCollectionEquality().hash(captchaUuid),
+      const DeepCollectionEquality().hash(captchaAnswer),
+      const DeepCollectionEquality().hash(honeypot));
 
   @JsonKey(ignore: true)
   @override
@@ -1041,62 +1048,60 @@ class _$_SaveUserSettings extends _SaveUserSettings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SaveUserSettings &&
-            (identical(other.showNsfw, showNsfw) ||
-                other.showNsfw == showNsfw) &&
-            (identical(other.theme, theme) || other.theme == theme) &&
-            (identical(other.defaultSortType, defaultSortType) ||
-                other.defaultSortType == defaultSortType) &&
-            (identical(other.defaultListingType, defaultListingType) ||
-                other.defaultListingType == defaultListingType) &&
-            (identical(other.lang, lang) || other.lang == lang) &&
-            (identical(other.avatar, avatar) || other.avatar == avatar) &&
-            (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.bio, bio) || other.bio == bio) &&
-            (identical(other.matrixUserId, matrixUserId) ||
-                other.matrixUserId == matrixUserId) &&
-            (identical(other.showAvatars, showAvatars) ||
-                other.showAvatars == showAvatars) &&
-            (identical(other.showScores, showScores) ||
-                other.showScores == showScores) &&
-            (identical(
-                    other.sendNotificationsToEmail, sendNotificationsToEmail) ||
-                other.sendNotificationsToEmail == sendNotificationsToEmail) &&
-            (identical(other.showReadPosts, showReadPosts) ||
-                other.showReadPosts == showReadPosts) &&
-            (identical(other.botAccount, botAccount) ||
-                other.botAccount == botAccount) &&
-            (identical(other.showBotAccounts, showBotAccounts) ||
-                other.showBotAccounts == showBotAccounts) &&
-            (identical(other.showNewPostNotifs, showNewPostNotifs) ||
-                other.showNewPostNotifs == showNewPostNotifs) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.showNsfw, showNsfw) &&
+            const DeepCollectionEquality().equals(other.theme, theme) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultSortType, defaultSortType) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultListingType, defaultListingType) &&
+            const DeepCollectionEquality().equals(other.lang, lang) &&
+            const DeepCollectionEquality().equals(other.avatar, avatar) &&
+            const DeepCollectionEquality().equals(other.banner, banner) &&
+            const DeepCollectionEquality()
+                .equals(other.displayName, displayName) &&
+            const DeepCollectionEquality().equals(other.email, email) &&
+            const DeepCollectionEquality().equals(other.bio, bio) &&
+            const DeepCollectionEquality()
+                .equals(other.matrixUserId, matrixUserId) &&
+            const DeepCollectionEquality()
+                .equals(other.showAvatars, showAvatars) &&
+            const DeepCollectionEquality()
+                .equals(other.showScores, showScores) &&
+            const DeepCollectionEquality().equals(
+                other.sendNotificationsToEmail, sendNotificationsToEmail) &&
+            const DeepCollectionEquality()
+                .equals(other.showReadPosts, showReadPosts) &&
+            const DeepCollectionEquality()
+                .equals(other.botAccount, botAccount) &&
+            const DeepCollectionEquality()
+                .equals(other.showBotAccounts, showBotAccounts) &&
+            const DeepCollectionEquality()
+                .equals(other.showNewPostNotifs, showNewPostNotifs) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        showNsfw,
-        theme,
-        defaultSortType,
-        defaultListingType,
-        lang,
-        avatar,
-        banner,
-        displayName,
-        email,
-        bio,
-        matrixUserId,
-        showAvatars,
-        showScores,
-        sendNotificationsToEmail,
-        showReadPosts,
-        botAccount,
-        showBotAccounts,
-        showNewPostNotifs,
-        auth
+        const DeepCollectionEquality().hash(showNsfw),
+        const DeepCollectionEquality().hash(theme),
+        const DeepCollectionEquality().hash(defaultSortType),
+        const DeepCollectionEquality().hash(defaultListingType),
+        const DeepCollectionEquality().hash(lang),
+        const DeepCollectionEquality().hash(avatar),
+        const DeepCollectionEquality().hash(banner),
+        const DeepCollectionEquality().hash(displayName),
+        const DeepCollectionEquality().hash(email),
+        const DeepCollectionEquality().hash(bio),
+        const DeepCollectionEquality().hash(matrixUserId),
+        const DeepCollectionEquality().hash(showAvatars),
+        const DeepCollectionEquality().hash(showScores),
+        const DeepCollectionEquality().hash(sendNotificationsToEmail),
+        const DeepCollectionEquality().hash(showReadPosts),
+        const DeepCollectionEquality().hash(botAccount),
+        const DeepCollectionEquality().hash(showBotAccounts),
+        const DeepCollectionEquality().hash(showNewPostNotifs),
+        const DeepCollectionEquality().hash(auth)
       ]);
 
   @JsonKey(ignore: true)
@@ -1361,18 +1366,22 @@ class _$_ChangePassword extends _ChangePassword {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ChangePassword &&
-            (identical(other.newPassword, newPassword) ||
-                other.newPassword == newPassword) &&
-            (identical(other.newPasswordVerify, newPasswordVerify) ||
-                other.newPasswordVerify == newPasswordVerify) &&
-            (identical(other.oldPassword, oldPassword) ||
-                other.oldPassword == oldPassword) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.newPassword, newPassword) &&
+            const DeepCollectionEquality()
+                .equals(other.newPasswordVerify, newPasswordVerify) &&
+            const DeepCollectionEquality()
+                .equals(other.oldPassword, oldPassword) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, newPassword, newPasswordVerify, oldPassword, auth);
+      runtimeType,
+      const DeepCollectionEquality().hash(newPassword),
+      const DeepCollectionEquality().hash(newPasswordVerify),
+      const DeepCollectionEquality().hash(oldPassword),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1659,23 +1668,28 @@ class _$_GetPersonDetails extends _GetPersonDetails {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetPersonDetails &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.savedOnly, savedOnly) ||
-                other.savedOnly == savedOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.personId, personId) &&
+            const DeepCollectionEquality().equals(other.username, username) &&
+            const DeepCollectionEquality().equals(other.sort, sort) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality().equals(other.savedOnly, savedOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, personId, username, sort, page,
-      limit, communityId, savedOnly, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personId),
+      const DeepCollectionEquality().hash(username),
+      const DeepCollectionEquality().hash(sort),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(savedOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1843,11 +1857,12 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MarkAllAsRead &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2018,14 +2033,17 @@ class _$_AddAdmin extends _AddAdmin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _AddAdmin &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.added, added) || other.added == added) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.personId, personId) &&
+            const DeepCollectionEquality().equals(other.added, added) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, personId, added, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personId),
+      const DeepCollectionEquality().hash(added),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2267,19 +2285,24 @@ class _$_BanPerson extends _BanPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BanPerson &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.ban, ban) || other.ban == ban) &&
-            (identical(other.removeData, removeData) ||
-                other.removeData == removeData) &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.expires, expires) || other.expires == expires) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.personId, personId) &&
+            const DeepCollectionEquality().equals(other.ban, ban) &&
+            const DeepCollectionEquality()
+                .equals(other.removeData, removeData) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality().equals(other.expires, expires) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, personId, ban, removeData, reason, expires, auth);
+      runtimeType,
+      const DeepCollectionEquality().hash(personId),
+      const DeepCollectionEquality().hash(ban),
+      const DeepCollectionEquality().hash(removeData),
+      const DeepCollectionEquality().hash(reason),
+      const DeepCollectionEquality().hash(expires),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2503,17 +2526,22 @@ class _$_GetReplies extends _GetReplies {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetReplies &&
-            (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.unreadOnly, unreadOnly) ||
-                other.unreadOnly == unreadOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.sort, sort) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality()
+                .equals(other.unreadOnly, unreadOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, sort, page, limit, unreadOnly, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sort),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(unreadOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2737,17 +2765,22 @@ class _$_GetPersonMentions extends _GetPersonMentions {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetPersonMentions &&
-            (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.unreadOnly, unreadOnly) ||
-                other.unreadOnly == unreadOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.sort, sort) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality()
+                .equals(other.unreadOnly, unreadOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, sort, page, limit, unreadOnly, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(sort),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(unreadOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2941,14 +2974,18 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MarkPersonMentionAsRead &&
-            (identical(other.personMentionId, personMentionId) ||
-                other.personMentionId == personMentionId) &&
-            (identical(other.read, read) || other.read == read) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.personMentionId, personMentionId) &&
+            const DeepCollectionEquality().equals(other.read, read) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, personMentionId, read, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personMentionId),
+      const DeepCollectionEquality().hash(read),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -3117,13 +3154,15 @@ class _$_DeleteAccount extends _DeleteAccount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeleteAccount &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.password, password) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, password, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(password),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -3272,11 +3311,12 @@ class _$_PasswordReset extends _PasswordReset {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PasswordReset &&
-            (identical(other.email, email) || other.email == email));
+            const DeepCollectionEquality().equals(other.email, email));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, email);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(email));
 
   @JsonKey(ignore: true)
   @override
@@ -3457,15 +3497,18 @@ class _$_PasswordChange extends _PasswordChange {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PasswordChange &&
-            (identical(other.token, token) || other.token == token) &&
-            (identical(other.password, password) ||
-                other.password == password) &&
-            (identical(other.passwordVerify, passwordVerify) ||
-                other.passwordVerify == passwordVerify));
+            const DeepCollectionEquality().equals(other.token, token) &&
+            const DeepCollectionEquality().equals(other.password, password) &&
+            const DeepCollectionEquality()
+                .equals(other.passwordVerify, passwordVerify));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, token, password, passwordVerify);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(token),
+      const DeepCollectionEquality().hash(password),
+      const DeepCollectionEquality().hash(passwordVerify));
 
   @JsonKey(ignore: true)
   @override
@@ -3651,14 +3694,18 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CreatePrivateMessage &&
-            (identical(other.content, content) || other.content == content) &&
-            (identical(other.recipientId, recipientId) ||
-                other.recipientId == recipientId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.content, content) &&
+            const DeepCollectionEquality()
+                .equals(other.recipientId, recipientId) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, content, recipientId, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(content),
+      const DeepCollectionEquality().hash(recipientId),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -3847,14 +3894,18 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _EditPrivateMessage &&
-            (identical(other.privateMessageId, privateMessageId) ||
-                other.privateMessageId == privateMessageId) &&
-            (identical(other.content, content) || other.content == content) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.privateMessageId, privateMessageId) &&
+            const DeepCollectionEquality().equals(other.content, content) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, privateMessageId, content, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(privateMessageId),
+      const DeepCollectionEquality().hash(content),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -4042,14 +4093,18 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeletePrivateMessage &&
-            (identical(other.privateMessageId, privateMessageId) ||
-                other.privateMessageId == privateMessageId) &&
-            (identical(other.deleted, deleted) || other.deleted == deleted) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.privateMessageId, privateMessageId) &&
+            const DeepCollectionEquality().equals(other.deleted, deleted) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, privateMessageId, deleted, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(privateMessageId),
+      const DeepCollectionEquality().hash(deleted),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -4238,14 +4293,18 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MarkPrivateMessageAsRead &&
-            (identical(other.privateMessageId, privateMessageId) ||
-                other.privateMessageId == privateMessageId) &&
-            (identical(other.read, read) || other.read == read) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.privateMessageId, privateMessageId) &&
+            const DeepCollectionEquality().equals(other.read, read) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, privateMessageId, read, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(privateMessageId),
+      const DeepCollectionEquality().hash(read),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -4444,15 +4503,20 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetPrivateMessages &&
-            (identical(other.unreadOnly, unreadOnly) ||
-                other.unreadOnly == unreadOnly) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.unreadOnly, unreadOnly) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, unreadOnly, page, limit, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(unreadOnly),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -4637,14 +4701,17 @@ class _$_BlockPerson extends _BlockPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BlockPerson &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.block, block) || other.block == block) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.personId, personId) &&
+            const DeepCollectionEquality().equals(other.block, block) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, personId, block, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personId),
+      const DeepCollectionEquality().hash(block),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -4797,11 +4864,12 @@ class _$_GetUnreadCount extends _GetUnreadCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetUnreadCount &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -4961,13 +5029,16 @@ class _$_GetReportCount extends _GetReportCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetReportCount &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, communityId, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override

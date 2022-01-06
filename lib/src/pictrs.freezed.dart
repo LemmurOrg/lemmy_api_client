@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'pictrs.dart';
@@ -146,13 +147,16 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PictrsUploadFile &&
-            (identical(other.deleteToken, deleteToken) ||
-                other.deleteToken == deleteToken) &&
-            (identical(other.file, file) || other.file == file));
+            const DeepCollectionEquality()
+                .equals(other.deleteToken, deleteToken) &&
+            const DeepCollectionEquality().equals(other.file, file));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, deleteToken, file);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(deleteToken),
+      const DeepCollectionEquality().hash(file));
 
   @JsonKey(ignore: true)
   @override
@@ -333,15 +337,18 @@ class _$_PictrsUpload extends _PictrsUpload {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PictrsUpload &&
-            (identical(other.msg, msg) || other.msg == msg) &&
+            const DeepCollectionEquality().equals(other.msg, msg) &&
             const DeepCollectionEquality().equals(other.files, files) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, msg,
-      const DeepCollectionEquality().hash(files), instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(msg),
+      const DeepCollectionEquality().hash(files),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
