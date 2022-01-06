@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'api.dart';
@@ -203,18 +204,22 @@ class _$_FullCommunityView extends _FullCommunityView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FullCommunityView &&
-            (identical(other.communityView, communityView) ||
-                other.communityView == communityView) &&
+            const DeepCollectionEquality()
+                .equals(other.communityView, communityView) &&
             const DeepCollectionEquality()
                 .equals(other.moderators, moderators) &&
-            (identical(other.online, online) || other.online == online) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.online, online) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, communityView,
-      const DeepCollectionEquality().hash(moderators), online, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(communityView),
+      const DeepCollectionEquality().hash(moderators),
+      const DeepCollectionEquality().hash(online),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -486,27 +491,26 @@ class _$_FullPostView extends _FullPostView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FullPostView &&
-            (identical(other.postView, postView) ||
-                other.postView == postView) &&
-            (identical(other.communityView, communityView) ||
-                other.communityView == communityView) &&
+            const DeepCollectionEquality().equals(other.postView, postView) &&
+            const DeepCollectionEquality()
+                .equals(other.communityView, communityView) &&
             const DeepCollectionEquality().equals(other.comments, comments) &&
             const DeepCollectionEquality()
                 .equals(other.moderators, moderators) &&
-            (identical(other.online, online) || other.online == online) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.online, online) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      postView,
-      communityView,
+      const DeepCollectionEquality().hash(postView),
+      const DeepCollectionEquality().hash(communityView),
       const DeepCollectionEquality().hash(comments),
       const DeepCollectionEquality().hash(moderators),
-      online,
-      instanceHost);
+      const DeepCollectionEquality().hash(online),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -765,25 +769,25 @@ class _$_SearchResults extends _SearchResults {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SearchResults &&
-            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.comments, comments) &&
             const DeepCollectionEquality().equals(other.posts, posts) &&
             const DeepCollectionEquality()
                 .equals(other.communities, communities) &&
             const DeepCollectionEquality().equals(other.users, users) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      type,
+      const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(comments),
       const DeepCollectionEquality().hash(posts),
       const DeepCollectionEquality().hash(communities),
       const DeepCollectionEquality().hash(users),
-      instanceHost);
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -1149,8 +1153,8 @@ class _$_Modlog extends _Modlog {
             const DeepCollectionEquality()
                 .equals(other.transferredToCommunity, transferredToCommunity) &&
             const DeepCollectionEquality().equals(other.added, added) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
@@ -1166,7 +1170,7 @@ class _$_Modlog extends _Modlog {
       const DeepCollectionEquality().hash(addedToCommunity),
       const DeepCollectionEquality().hash(transferredToCommunity),
       const DeepCollectionEquality().hash(added),
-      instanceHost);
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -1412,18 +1416,22 @@ class _$_FullCommentView extends _FullCommentView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FullCommentView &&
-            (identical(other.commentView, commentView) ||
-                other.commentView == commentView) &&
+            const DeepCollectionEquality()
+                .equals(other.commentView, commentView) &&
             const DeepCollectionEquality()
                 .equals(other.recipientIds, recipientIds) &&
-            (identical(other.formId, formId) || other.formId == formId) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.formId, formId) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, commentView,
-      const DeepCollectionEquality().hash(recipientIds), formId, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(commentView),
+      const DeepCollectionEquality().hash(recipientIds),
+      const DeepCollectionEquality().hash(formId),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -1754,30 +1762,29 @@ class _$_FullSiteView extends _FullSiteView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FullSiteView &&
-            (identical(other.siteView, siteView) ||
-                other.siteView == siteView) &&
+            const DeepCollectionEquality().equals(other.siteView, siteView) &&
             const DeepCollectionEquality().equals(other.admins, admins) &&
             const DeepCollectionEquality().equals(other.banned, banned) &&
-            (identical(other.online, online) || other.online == online) &&
-            (identical(other.version, version) || other.version == version) &&
-            (identical(other.myUser, myUser) || other.myUser == myUser) &&
-            (identical(other.federatedInstances, federatedInstances) ||
-                other.federatedInstances == federatedInstances) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.online, online) &&
+            const DeepCollectionEquality().equals(other.version, version) &&
+            const DeepCollectionEquality().equals(other.myUser, myUser) &&
+            const DeepCollectionEquality()
+                .equals(other.federatedInstances, federatedInstances) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      siteView,
+      const DeepCollectionEquality().hash(siteView),
       const DeepCollectionEquality().hash(admins),
       const DeepCollectionEquality().hash(banned),
-      online,
-      version,
-      myUser,
-      federatedInstances,
-      instanceHost);
+      const DeepCollectionEquality().hash(online),
+      const DeepCollectionEquality().hash(version),
+      const DeepCollectionEquality().hash(myUser),
+      const DeepCollectionEquality().hash(federatedInstances),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -2051,27 +2058,27 @@ class _$_MyUserInfo extends _MyUserInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _MyUserInfo &&
-            (identical(other.localUserView, localUserView) ||
-                other.localUserView == localUserView) &&
+            const DeepCollectionEquality()
+                .equals(other.localUserView, localUserView) &&
             const DeepCollectionEquality().equals(other.follows, follows) &&
             const DeepCollectionEquality().equals(other.moderates, moderates) &&
             const DeepCollectionEquality()
                 .equals(other.communityBlocks, communityBlocks) &&
             const DeepCollectionEquality()
                 .equals(other.personBlocks, personBlocks) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      localUserView,
+      const DeepCollectionEquality().hash(localUserView),
       const DeepCollectionEquality().hash(follows),
       const DeepCollectionEquality().hash(moderates),
       const DeepCollectionEquality().hash(communityBlocks),
       const DeepCollectionEquality().hash(personBlocks),
-      instanceHost);
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -2295,8 +2302,8 @@ class _$_FederatedInstances extends _FederatedInstances {
             const DeepCollectionEquality().equals(other.linked, linked) &&
             const DeepCollectionEquality().equals(other.allowed, allowed) &&
             const DeepCollectionEquality().equals(other.blocked, blocked) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
@@ -2305,7 +2312,7 @@ class _$_FederatedInstances extends _FederatedInstances {
       const DeepCollectionEquality().hash(linked),
       const DeepCollectionEquality().hash(allowed),
       const DeepCollectionEquality().hash(blocked),
-      instanceHost);
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -2490,13 +2497,17 @@ class _$_Captcha extends _Captcha {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Captcha &&
-            (identical(other.png, png) || other.png == png) &&
-            (identical(other.wav, wav) || other.wav == wav) &&
-            (identical(other.uuid, uuid) || other.uuid == uuid));
+            const DeepCollectionEquality().equals(other.png, png) &&
+            const DeepCollectionEquality().equals(other.wav, wav) &&
+            const DeepCollectionEquality().equals(other.uuid, uuid));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, png, wav, uuid);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(png),
+      const DeepCollectionEquality().hash(wav),
+      const DeepCollectionEquality().hash(uuid));
 
   @JsonKey(ignore: true)
   @override
@@ -2740,23 +2751,23 @@ class _$_FullPersonView extends _FullPersonView {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FullPersonView &&
-            (identical(other.personView, personView) ||
-                other.personView == personView) &&
+            const DeepCollectionEquality()
+                .equals(other.personView, personView) &&
             const DeepCollectionEquality().equals(other.moderates, moderates) &&
             const DeepCollectionEquality().equals(other.comments, comments) &&
             const DeepCollectionEquality().equals(other.posts, posts) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      personView,
+      const DeepCollectionEquality().hash(personView),
       const DeepCollectionEquality().hash(moderates),
       const DeepCollectionEquality().hash(comments),
       const DeepCollectionEquality().hash(posts),
-      instanceHost);
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -2962,16 +2973,19 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BannedCommunityUser &&
-            (identical(other.personView, personView) ||
-                other.personView == personView) &&
-            (identical(other.banned, banned) || other.banned == banned) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.personView, personView) &&
+            const DeepCollectionEquality().equals(other.banned, banned) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, personView, banned, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personView),
+      const DeepCollectionEquality().hash(banned),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3170,16 +3184,19 @@ class _$_BannedPerson extends _BannedPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BannedPerson &&
-            (identical(other.personView, personView) ||
-                other.personView == personView) &&
-            (identical(other.banned, banned) || other.banned == banned) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.personView, personView) &&
+            const DeepCollectionEquality().equals(other.banned, banned) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, personView, banned, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personView),
+      const DeepCollectionEquality().hash(banned),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3468,18 +3485,22 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ResolveObjectResponse &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.post, post) || other.post == post) &&
-            (identical(other.community, community) ||
-                other.community == community) &&
-            (identical(other.person, person) || other.person == person) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality().equals(other.post, post) &&
+            const DeepCollectionEquality().equals(other.community, community) &&
+            const DeepCollectionEquality().equals(other.person, person) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, comment, post, community, person, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(post),
+      const DeepCollectionEquality().hash(community),
+      const DeepCollectionEquality().hash(person),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3714,18 +3735,23 @@ class _$_SiteMetadata extends _SiteMetadata {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SiteMetadata &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.image, image) || other.image == image) &&
-            (identical(other.html, html) || other.html == html) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
+            const DeepCollectionEquality().equals(other.html, html) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, title, description, image, html, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(image),
+      const DeepCollectionEquality().hash(html),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -3931,16 +3957,19 @@ class _$_BlockedPerson extends _BlockedPerson {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BlockedPerson &&
-            (identical(other.personView, personView) ||
-                other.personView == personView) &&
-            (identical(other.blocked, blocked) || other.blocked == blocked) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.personView, personView) &&
+            const DeepCollectionEquality().equals(other.blocked, blocked) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, personView, blocked, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personView),
+      const DeepCollectionEquality().hash(blocked),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4140,16 +4169,19 @@ class _$_BlockedCommunity extends _BlockedCommunity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BlockedCommunity &&
-            (identical(other.communityView, communityView) ||
-                other.communityView == communityView) &&
-            (identical(other.blocked, blocked) || other.blocked == blocked) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.communityView, communityView) &&
+            const DeepCollectionEquality().equals(other.blocked, blocked) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, communityView, blocked, instanceHost);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(communityView),
+      const DeepCollectionEquality().hash(blocked),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4359,19 +4391,23 @@ class _$_ReportCount extends _ReportCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ReportCount &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.commentReports, commentReports) ||
-                other.commentReports == commentReports) &&
-            (identical(other.postReports, postReports) ||
-                other.postReports == postReports) &&
-            (identical(other.instanceHost, instanceHost) ||
-                other.instanceHost == instanceHost));
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality()
+                .equals(other.commentReports, commentReports) &&
+            const DeepCollectionEquality()
+                .equals(other.postReports, postReports) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, communityId, commentReports, postReports, instanceHost);
+      runtimeType,
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(commentReports),
+      const DeepCollectionEquality().hash(postReports),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4560,16 +4596,18 @@ class _$_UnreadCount extends _UnreadCount {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _UnreadCount &&
-            (identical(other.replies, replies) || other.replies == replies) &&
-            (identical(other.mentions, mentions) ||
-                other.mentions == mentions) &&
-            (identical(other.privateMessages, privateMessages) ||
-                other.privateMessages == privateMessages));
+            const DeepCollectionEquality().equals(other.replies, replies) &&
+            const DeepCollectionEquality().equals(other.mentions, mentions) &&
+            const DeepCollectionEquality()
+                .equals(other.privateMessages, privateMessages));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, replies, mentions, privateMessages);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(replies),
+      const DeepCollectionEquality().hash(mentions),
+      const DeepCollectionEquality().hash(privateMessages));
 
   @JsonKey(ignore: true)
   @override

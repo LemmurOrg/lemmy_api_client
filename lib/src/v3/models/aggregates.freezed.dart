@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'aggregates.dart';
@@ -226,22 +227,25 @@ class _$_PersonAggregates extends _PersonAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PersonAggregates &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.postCount, postCount) ||
-                other.postCount == postCount) &&
-            (identical(other.postScore, postScore) ||
-                other.postScore == postScore) &&
-            (identical(other.commentCount, commentCount) ||
-                other.commentCount == commentCount) &&
-            (identical(other.commentScore, commentScore) ||
-                other.commentScore == commentScore));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.personId, personId) &&
+            const DeepCollectionEquality().equals(other.postCount, postCount) &&
+            const DeepCollectionEquality().equals(other.postScore, postScore) &&
+            const DeepCollectionEquality()
+                .equals(other.commentCount, commentCount) &&
+            const DeepCollectionEquality()
+                .equals(other.commentScore, commentScore));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, personId, postCount,
-      postScore, commentCount, commentScore);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(personId),
+      const DeepCollectionEquality().hash(postCount),
+      const DeepCollectionEquality().hash(postScore),
+      const DeepCollectionEquality().hash(commentCount),
+      const DeepCollectionEquality().hash(commentScore));
 
   @JsonKey(ignore: true)
   @override
@@ -570,37 +574,36 @@ class _$_SiteAggregates extends _SiteAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SiteAggregates &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.siteId, siteId) || other.siteId == siteId) &&
-            (identical(other.users, users) || other.users == users) &&
-            (identical(other.posts, posts) || other.posts == posts) &&
-            (identical(other.comments, comments) ||
-                other.comments == comments) &&
-            (identical(other.communities, communities) ||
-                other.communities == communities) &&
-            (identical(other.usersActiveDay, usersActiveDay) ||
-                other.usersActiveDay == usersActiveDay) &&
-            (identical(other.usersActiveWeek, usersActiveWeek) ||
-                other.usersActiveWeek == usersActiveWeek) &&
-            (identical(other.usersActiveMonth, usersActiveMonth) ||
-                other.usersActiveMonth == usersActiveMonth) &&
-            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
-                other.usersActiveHalfYear == usersActiveHalfYear));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.siteId, siteId) &&
+            const DeepCollectionEquality().equals(other.users, users) &&
+            const DeepCollectionEquality().equals(other.posts, posts) &&
+            const DeepCollectionEquality().equals(other.comments, comments) &&
+            const DeepCollectionEquality()
+                .equals(other.communities, communities) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveDay, usersActiveDay) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveWeek, usersActiveWeek) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveMonth, usersActiveMonth) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveHalfYear, usersActiveHalfYear));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
-      siteId,
-      users,
-      posts,
-      comments,
-      communities,
-      usersActiveDay,
-      usersActiveWeek,
-      usersActiveMonth,
-      usersActiveHalfYear);
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(siteId),
+      const DeepCollectionEquality().hash(users),
+      const DeepCollectionEquality().hash(posts),
+      const DeepCollectionEquality().hash(comments),
+      const DeepCollectionEquality().hash(communities),
+      const DeepCollectionEquality().hash(usersActiveDay),
+      const DeepCollectionEquality().hash(usersActiveWeek),
+      const DeepCollectionEquality().hash(usersActiveMonth),
+      const DeepCollectionEquality().hash(usersActiveHalfYear));
 
   @JsonKey(ignore: true)
   @override
@@ -907,23 +910,29 @@ class _$_PostAggregates extends _PostAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _PostAggregates &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.comments, comments) ||
-                other.comments == comments) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
-            (identical(other.downvotes, downvotes) ||
-                other.downvotes == downvotes) &&
-            (identical(other.newestCommentTime, newestCommentTime) ||
-                other.newestCommentTime == newestCommentTime) &&
-            (identical(other.newestCommentTimeNecro, newestCommentTimeNecro) ||
-                other.newestCommentTimeNecro == newestCommentTimeNecro));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.postId, postId) &&
+            const DeepCollectionEquality().equals(other.comments, comments) &&
+            const DeepCollectionEquality().equals(other.score, score) &&
+            const DeepCollectionEquality().equals(other.upvotes, upvotes) &&
+            const DeepCollectionEquality().equals(other.downvotes, downvotes) &&
+            const DeepCollectionEquality()
+                .equals(other.newestCommentTime, newestCommentTime) &&
+            const DeepCollectionEquality()
+                .equals(other.newestCommentTimeNecro, newestCommentTimeNecro));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, postId, comments, score,
-      upvotes, downvotes, newestCommentTime, newestCommentTimeNecro);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(postId),
+      const DeepCollectionEquality().hash(comments),
+      const DeepCollectionEquality().hash(score),
+      const DeepCollectionEquality().hash(upvotes),
+      const DeepCollectionEquality().hash(downvotes),
+      const DeepCollectionEquality().hash(newestCommentTime),
+      const DeepCollectionEquality().hash(newestCommentTimeNecro));
 
   @JsonKey(ignore: true)
   @override
@@ -1240,36 +1249,35 @@ class _$_CommunityAggregates extends _CommunityAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommunityAggregates &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.subscribers, subscribers) ||
-                other.subscribers == subscribers) &&
-            (identical(other.posts, posts) || other.posts == posts) &&
-            (identical(other.comments, comments) ||
-                other.comments == comments) &&
-            (identical(other.usersActiveDay, usersActiveDay) ||
-                other.usersActiveDay == usersActiveDay) &&
-            (identical(other.usersActiveWeek, usersActiveWeek) ||
-                other.usersActiveWeek == usersActiveWeek) &&
-            (identical(other.usersActiveMonth, usersActiveMonth) ||
-                other.usersActiveMonth == usersActiveMonth) &&
-            (identical(other.usersActiveHalfYear, usersActiveHalfYear) ||
-                other.usersActiveHalfYear == usersActiveHalfYear));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality()
+                .equals(other.subscribers, subscribers) &&
+            const DeepCollectionEquality().equals(other.posts, posts) &&
+            const DeepCollectionEquality().equals(other.comments, comments) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveDay, usersActiveDay) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveWeek, usersActiveWeek) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveMonth, usersActiveMonth) &&
+            const DeepCollectionEquality()
+                .equals(other.usersActiveHalfYear, usersActiveHalfYear));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
-      communityId,
-      subscribers,
-      posts,
-      comments,
-      usersActiveDay,
-      usersActiveWeek,
-      usersActiveMonth,
-      usersActiveHalfYear);
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(subscribers),
+      const DeepCollectionEquality().hash(posts),
+      const DeepCollectionEquality().hash(comments),
+      const DeepCollectionEquality().hash(usersActiveDay),
+      const DeepCollectionEquality().hash(usersActiveWeek),
+      const DeepCollectionEquality().hash(usersActiveMonth),
+      const DeepCollectionEquality().hash(usersActiveHalfYear));
 
   @JsonKey(ignore: true)
   @override
@@ -1508,18 +1516,21 @@ class _$_CommentAggregates extends _CommentAggregates {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CommentAggregates &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.commentId, commentId) ||
-                other.commentId == commentId) &&
-            (identical(other.score, score) || other.score == score) &&
-            (identical(other.upvotes, upvotes) || other.upvotes == upvotes) &&
-            (identical(other.downvotes, downvotes) ||
-                other.downvotes == downvotes));
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.commentId, commentId) &&
+            const DeepCollectionEquality().equals(other.score, score) &&
+            const DeepCollectionEquality().equals(other.upvotes, upvotes) &&
+            const DeepCollectionEquality().equals(other.downvotes, downvotes));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, commentId, score, upvotes, downvotes);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(commentId),
+      const DeepCollectionEquality().hash(score),
+      const DeepCollectionEquality().hash(upvotes),
+      const DeepCollectionEquality().hash(downvotes));
 
   @JsonKey(ignore: true)
   @override

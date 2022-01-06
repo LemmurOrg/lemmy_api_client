@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'jwt.freezed.dart';
 part 'jwt.g.dart';

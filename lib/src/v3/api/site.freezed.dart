@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'site.dart';
@@ -293,25 +294,34 @@ class _$_Search extends _Search {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Search &&
-            (identical(other.q, q) || other.q == q) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.listingType, listingType) ||
-                other.listingType == listingType) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.communityName, communityName) ||
-                other.communityName == communityName) &&
-            (identical(other.sort, sort) || other.sort == sort) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit) &&
-            (identical(other.creatorId, creatorId) ||
-                other.creatorId == creatorId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.q, q) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.listingType, listingType) &&
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality()
+                .equals(other.communityName, communityName) &&
+            const DeepCollectionEquality().equals(other.sort, sort) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, q, type, listingType,
-      communityId, communityName, sort, page, limit, creatorId, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(q),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(listingType),
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(communityName),
+      const DeepCollectionEquality().hash(sort),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(creatorId),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -523,17 +533,21 @@ class _$_GetModlog extends _GetModlog {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetModlog &&
-            (identical(other.modPersonId, modPersonId) ||
-                other.modPersonId == modPersonId) &&
-            (identical(other.communityId, communityId) ||
-                other.communityId == communityId) &&
-            (identical(other.page, page) || other.page == page) &&
-            (identical(other.limit, limit) || other.limit == limit));
+            const DeepCollectionEquality()
+                .equals(other.modPersonId, modPersonId) &&
+            const DeepCollectionEquality()
+                .equals(other.communityId, communityId) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, modPersonId, communityId, page, limit);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(modPersonId),
+      const DeepCollectionEquality().hash(communityId),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit));
 
   @JsonKey(ignore: true)
   @override
@@ -853,38 +867,36 @@ class _$_CreateSite extends _CreateSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _CreateSite &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.icon, icon) || other.icon == icon) &&
-            (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(other.enableDownvotes, enableDownvotes) ||
-                other.enableDownvotes == enableDownvotes) &&
-            (identical(other.openRegistration, openRegistration) ||
-                other.openRegistration == openRegistration) &&
-            (identical(other.enableNsfw, enableNsfw) ||
-                other.enableNsfw == enableNsfw) &&
-            (identical(other.communityCreationAdminOnly,
-                    communityCreationAdminOnly) ||
-                other.communityCreationAdminOnly ==
-                    communityCreationAdminOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality().equals(other.banner, banner) &&
+            const DeepCollectionEquality()
+                .equals(other.enableDownvotes, enableDownvotes) &&
+            const DeepCollectionEquality()
+                .equals(other.openRegistration, openRegistration) &&
+            const DeepCollectionEquality()
+                .equals(other.enableNsfw, enableNsfw) &&
+            const DeepCollectionEquality().equals(
+                other.communityCreationAdminOnly, communityCreationAdminOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      name,
-      sidebar,
-      description,
-      icon,
-      banner,
-      enableDownvotes,
-      openRegistration,
-      enableNsfw,
-      communityCreationAdminOnly,
-      auth);
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(sidebar),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(banner),
+      const DeepCollectionEquality().hash(enableDownvotes),
+      const DeepCollectionEquality().hash(openRegistration),
+      const DeepCollectionEquality().hash(enableNsfw),
+      const DeepCollectionEquality().hash(communityCreationAdminOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1219,38 +1231,36 @@ class _$_EditSite extends _EditSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _EditSite &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.sidebar, sidebar) || other.sidebar == sidebar) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.icon, icon) || other.icon == icon) &&
-            (identical(other.banner, banner) || other.banner == banner) &&
-            (identical(other.enableDownvotes, enableDownvotes) ||
-                other.enableDownvotes == enableDownvotes) &&
-            (identical(other.openRegistration, openRegistration) ||
-                other.openRegistration == openRegistration) &&
-            (identical(other.enableNsfw, enableNsfw) ||
-                other.enableNsfw == enableNsfw) &&
-            (identical(other.communityCreationAdminOnly,
-                    communityCreationAdminOnly) ||
-                other.communityCreationAdminOnly ==
-                    communityCreationAdminOnly) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.icon, icon) &&
+            const DeepCollectionEquality().equals(other.banner, banner) &&
+            const DeepCollectionEquality()
+                .equals(other.enableDownvotes, enableDownvotes) &&
+            const DeepCollectionEquality()
+                .equals(other.openRegistration, openRegistration) &&
+            const DeepCollectionEquality()
+                .equals(other.enableNsfw, enableNsfw) &&
+            const DeepCollectionEquality().equals(
+                other.communityCreationAdminOnly, communityCreationAdminOnly) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      name,
-      sidebar,
-      description,
-      icon,
-      banner,
-      enableDownvotes,
-      openRegistration,
-      enableNsfw,
-      communityCreationAdminOnly,
-      auth);
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(sidebar),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(banner),
+      const DeepCollectionEquality().hash(enableDownvotes),
+      const DeepCollectionEquality().hash(openRegistration),
+      const DeepCollectionEquality().hash(enableNsfw),
+      const DeepCollectionEquality().hash(communityCreationAdminOnly),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1416,11 +1426,12 @@ class _$_GetSite extends _GetSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetSite &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1578,13 +1589,15 @@ class _$_TransferSite extends _TransferSite {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _TransferSite &&
-            (identical(other.personId, personId) ||
-                other.personId == personId) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.personId, personId) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, personId, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(personId),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1733,11 +1746,12 @@ class _$_GetSiteConfig extends _GetSiteConfig {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _GetSiteConfig &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, auth);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -1898,13 +1912,16 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SaveSiteConfig &&
-            (identical(other.configHjson, configHjson) ||
-                other.configHjson == configHjson) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality()
+                .equals(other.configHjson, configHjson) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, configHjson, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(configHjson),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -2067,12 +2084,15 @@ class _$_ResolveObject extends _ResolveObject {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ResolveObject &&
-            (identical(other.q, q) || other.q == q) &&
-            (identical(other.auth, auth) || other.auth == auth));
+            const DeepCollectionEquality().equals(other.q, q) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, q, auth);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(q),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override

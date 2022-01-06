@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'jwt.dart';
@@ -157,13 +158,17 @@ class _$_JwtPayload extends _JwtPayload {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _JwtPayload &&
-            (identical(other.iat, iat) || other.iat == iat) &&
-            (identical(other.iss, iss) || other.iss == iss) &&
-            (identical(other.sub, sub) || other.sub == sub));
+            const DeepCollectionEquality().equals(other.iat, iat) &&
+            const DeepCollectionEquality().equals(other.iss, iss) &&
+            const DeepCollectionEquality().equals(other.sub, sub));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, iat, iss, sub);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(iat),
+      const DeepCollectionEquality().hash(iss),
+      const DeepCollectionEquality().hash(sub));
 
   @JsonKey(ignore: true)
   @override
