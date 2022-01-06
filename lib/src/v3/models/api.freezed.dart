@@ -1480,7 +1480,6 @@ class _$FullSiteViewTearOff {
   _FullSiteView call(
       {SiteView? siteView,
       required List<PersonViewSafe> admins,
-      required List<PersonViewSafe> banned,
       required int online,
       required String version,
       MyUserInfo? myUser,
@@ -1489,7 +1488,6 @@ class _$FullSiteViewTearOff {
     return _FullSiteView(
       siteView: siteView,
       admins: admins,
-      banned: banned,
       online: online,
       version: version,
       myUser: myUser,
@@ -1510,7 +1508,6 @@ const $FullSiteView = _$FullSiteViewTearOff();
 mixin _$FullSiteView {
   SiteView? get siteView => throw _privateConstructorUsedError;
   List<PersonViewSafe> get admins => throw _privateConstructorUsedError;
-  List<PersonViewSafe> get banned => throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
   MyUserInfo? get myUser => throw _privateConstructorUsedError;
@@ -1532,7 +1529,6 @@ abstract class $FullSiteViewCopyWith<$Res> {
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
-      List<PersonViewSafe> banned,
       int online,
       String version,
       MyUserInfo? myUser,
@@ -1556,7 +1552,6 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
   $Res call({
     Object? siteView = freezed,
     Object? admins = freezed,
-    Object? banned = freezed,
     Object? online = freezed,
     Object? version = freezed,
     Object? myUser = freezed,
@@ -1571,10 +1566,6 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       admins: admins == freezed
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
-              as List<PersonViewSafe>,
-      banned: banned == freezed
-          ? _value.banned
-          : banned // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
       online: online == freezed
           ? _value.online
@@ -1644,7 +1635,6 @@ abstract class _$FullSiteViewCopyWith<$Res>
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
-      List<PersonViewSafe> banned,
       int online,
       String version,
       MyUserInfo? myUser,
@@ -1673,7 +1663,6 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
   $Res call({
     Object? siteView = freezed,
     Object? admins = freezed,
-    Object? banned = freezed,
     Object? online = freezed,
     Object? version = freezed,
     Object? myUser = freezed,
@@ -1688,10 +1677,6 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
       admins: admins == freezed
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
-              as List<PersonViewSafe>,
-      banned: banned == freezed
-          ? _value.banned
-          : banned // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
       online: online == freezed
           ? _value.online
@@ -1724,7 +1709,6 @@ class _$_FullSiteView extends _FullSiteView {
   const _$_FullSiteView(
       {this.siteView,
       required this.admins,
-      required this.banned,
       required this.online,
       required this.version,
       this.myUser,
@@ -1740,8 +1724,6 @@ class _$_FullSiteView extends _FullSiteView {
   @override
   final List<PersonViewSafe> admins;
   @override
-  final List<PersonViewSafe> banned;
-  @override
   final int online;
   @override
   final String version;
@@ -1754,7 +1736,7 @@ class _$_FullSiteView extends _FullSiteView {
 
   @override
   String toString() {
-    return 'FullSiteView(siteView: $siteView, admins: $admins, banned: $banned, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
+    return 'FullSiteView(siteView: $siteView, admins: $admins, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1764,7 +1746,6 @@ class _$_FullSiteView extends _FullSiteView {
             other is _FullSiteView &&
             const DeepCollectionEquality().equals(other.siteView, siteView) &&
             const DeepCollectionEquality().equals(other.admins, admins) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
             const DeepCollectionEquality().equals(other.online, online) &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality().equals(other.myUser, myUser) &&
@@ -1779,7 +1760,6 @@ class _$_FullSiteView extends _FullSiteView {
       runtimeType,
       const DeepCollectionEquality().hash(siteView),
       const DeepCollectionEquality().hash(admins),
-      const DeepCollectionEquality().hash(banned),
       const DeepCollectionEquality().hash(online),
       const DeepCollectionEquality().hash(version),
       const DeepCollectionEquality().hash(myUser),
@@ -1801,7 +1781,6 @@ abstract class _FullSiteView extends FullSiteView {
   const factory _FullSiteView(
       {SiteView? siteView,
       required List<PersonViewSafe> admins,
-      required List<PersonViewSafe> banned,
       required int online,
       required String version,
       MyUserInfo? myUser,
@@ -1816,8 +1795,6 @@ abstract class _FullSiteView extends FullSiteView {
   SiteView? get siteView;
   @override
   List<PersonViewSafe> get admins;
-  @override
-  List<PersonViewSafe> get banned;
   @override
   int get online;
   @override

@@ -5068,3 +5068,154 @@ abstract class _GetReportCount extends GetReportCount {
   _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+GetBannedPersons _$GetBannedPersonsFromJson(Map<String, dynamic> json) {
+  return _GetBannedPersons.fromJson(json);
+}
+
+/// @nodoc
+class _$GetBannedPersonsTearOff {
+  const _$GetBannedPersonsTearOff();
+
+  _GetBannedPersons call({required String auth}) {
+    return _GetBannedPersons(
+      auth: auth,
+    );
+  }
+
+  GetBannedPersons fromJson(Map<String, Object?> json) {
+    return GetBannedPersons.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $GetBannedPersons = _$GetBannedPersonsTearOff();
+
+/// @nodoc
+mixin _$GetBannedPersons {
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetBannedPersonsCopyWith<GetBannedPersons> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetBannedPersonsCopyWith<$Res> {
+  factory $GetBannedPersonsCopyWith(
+          GetBannedPersons value, $Res Function(GetBannedPersons) then) =
+      _$GetBannedPersonsCopyWithImpl<$Res>;
+  $Res call({String auth});
+}
+
+/// @nodoc
+class _$GetBannedPersonsCopyWithImpl<$Res>
+    implements $GetBannedPersonsCopyWith<$Res> {
+  _$GetBannedPersonsCopyWithImpl(this._value, this._then);
+
+  final GetBannedPersons _value;
+  // ignore: unused_field
+  final $Res Function(GetBannedPersons) _then;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetBannedPersonsCopyWith<$Res>
+    implements $GetBannedPersonsCopyWith<$Res> {
+  factory _$GetBannedPersonsCopyWith(
+          _GetBannedPersons value, $Res Function(_GetBannedPersons) then) =
+      __$GetBannedPersonsCopyWithImpl<$Res>;
+  @override
+  $Res call({String auth});
+}
+
+/// @nodoc
+class __$GetBannedPersonsCopyWithImpl<$Res>
+    extends _$GetBannedPersonsCopyWithImpl<$Res>
+    implements _$GetBannedPersonsCopyWith<$Res> {
+  __$GetBannedPersonsCopyWithImpl(
+      _GetBannedPersons _value, $Res Function(_GetBannedPersons) _then)
+      : super(_value, (v) => _then(v as _GetBannedPersons));
+
+  @override
+  _GetBannedPersons get _value => super._value as _GetBannedPersons;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_GetBannedPersons(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_GetBannedPersons extends _GetBannedPersons {
+  const _$_GetBannedPersons({required this.auth}) : super._();
+
+  factory _$_GetBannedPersons.fromJson(Map<String, dynamic> json) =>
+      _$$_GetBannedPersonsFromJson(json);
+
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'GetBannedPersons(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _GetBannedPersons &&
+            const DeepCollectionEquality().equals(other.auth, auth));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
+      __$GetBannedPersonsCopyWithImpl<_GetBannedPersons>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetBannedPersonsToJson(this);
+  }
+}
+
+abstract class _GetBannedPersons extends GetBannedPersons {
+  const factory _GetBannedPersons({required String auth}) = _$_GetBannedPersons;
+  const _GetBannedPersons._() : super._();
+
+  factory _GetBannedPersons.fromJson(Map<String, dynamic> json) =
+      _$_GetBannedPersons.fromJson;
+
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
+      throw _privateConstructorUsedError;
+}

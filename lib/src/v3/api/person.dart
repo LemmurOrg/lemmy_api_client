@@ -567,3 +567,27 @@ class GetReportCount
   ReportCount responseFactory(Map<String, dynamic> json) =>
       ReportCount.fromJson(json);
 }
+
+@freezed
+class GetBannedPersons
+    with _$GetBannedPersons
+    implements LemmyApiQuery<List<PersonViewSafe>> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetBannedPersons({
+    required String auth,
+  }) = _GetBannedPersons;
+
+  const GetBannedPersons._();
+  factory GetBannedPersons.fromJson(Map<String, dynamic> json) =>
+      _$GetBannedPersonsFromJson(json);
+
+  final path = '/user/banned';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) =>
+      (json['banned'] as List)
+          .map((dynamic e) => PersonViewSafe.fromJson(e))
+          .toList();
+}

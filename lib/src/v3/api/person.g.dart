@@ -454,3 +454,13 @@ Map<String, dynamic> _$$_GetReportCountToJson(_$_GetReportCount instance) {
   val['auth'] = instance.auth;
   return val;
 }
+
+_$_GetBannedPersons _$$_GetBannedPersonsFromJson(Map<String, dynamic> json) =>
+    _$_GetBannedPersons(
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_GetBannedPersonsToJson(_$_GetBannedPersons instance) =>
+    <String, dynamic>{
+      'auth': instance.auth,
+    };

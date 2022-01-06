@@ -289,6 +289,21 @@ void main() {
         //   )),
         // );
       });
+
+      group('GetBannedPersons', () {
+        test(
+          'correctly fetches',
+          () => run(
+            GetBannedPersons(auth: goodAuth),
+          ),
+        );
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const GetBannedPersons(auth: badAuth),
+          ),
+        );
+      });
     });
   });
 }

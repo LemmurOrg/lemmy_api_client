@@ -165,9 +165,6 @@ _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
       admins: (json['admins'] as List<dynamic>)
           .map((e) => PersonViewSafe.fromJson(e as Map<String, dynamic>))
           .toList(),
-      banned: (json['banned'] as List<dynamic>)
-          .map((e) => PersonViewSafe.fromJson(e as Map<String, dynamic>))
-          .toList(),
       online: json['online'] as int,
       version: json['version'] as String,
       myUser: json['my_user'] == null
@@ -184,7 +181,6 @@ Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
       'site_view': instance.siteView?.toJson(),
       'admins': instance.admins.map((e) => e.toJson()).toList(),
-      'banned': instance.banned.map((e) => e.toJson()).toList(),
       'online': instance.online,
       'version': instance.version,
       'my_user': instance.myUser?.toJson(),

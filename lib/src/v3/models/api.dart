@@ -100,7 +100,6 @@ class FullSiteView with _$FullSiteView {
   const factory FullSiteView({
     SiteView? siteView,
     required List<PersonViewSafe> admins,
-    required List<PersonViewSafe> banned,
     required int online,
     required String version,
     MyUserInfo? myUser,
