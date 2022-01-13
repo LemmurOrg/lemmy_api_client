@@ -134,6 +134,41 @@ void main() {
       group('GetSiteConfig', () {});
 
       group('SaveSiteConfig', () {});
+
+      group('GetUnreadRegistrationApplicationCount', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const GetUnreadRegistrationApplicationCount(
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
+
+      group('ListRegistrationApplications', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const ListRegistrationApplications(
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
+
+      group('ApproveRegistrationApplication', () {
+        test(
+          'bad auth',
+          () => lemmyThrows(
+            const ApproveRegistrationApplication(
+              approve: true,
+              id: 1,
+              auth: badAuth,
+            ),
+          ),
+        );
+      });
     });
   });
 }

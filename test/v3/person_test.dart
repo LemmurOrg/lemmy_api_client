@@ -298,6 +298,15 @@ void main() {
           ),
         );
       });
+
+      group('VerifyEmail', () {
+        test(
+          'bad token',
+          () => lemmyThrows(
+            const VerifyEmail(token: ''),
+          ),
+        );
+      });
     });
   });
 }
