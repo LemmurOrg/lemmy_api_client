@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_lambdas
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
@@ -45,6 +47,7 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
     int? communityId,
     int? page,
     int? limit,
+    String? auth,
   }) = _GetModlog;
 
   const GetModlog._();
@@ -73,6 +76,10 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
     bool? openRegistration,
     bool? enableNsfw,
     bool? communityCreationAdminOnly,
+    bool? requireEmailVerification,
+    bool? requireApplication,
+    String? applicationQuestion,
+    bool? privateInstance,
     required String auth,
   }) = _CreateSite;
 
@@ -103,6 +110,10 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
     bool? openRegistration,
     bool? enableNsfw,
     bool? communityCreationAdminOnly,
+    bool? requireEmailVerification,
+    bool? requireApplication,
+    String? applicationQuestion,
+    bool? privateInstance,
     required String auth,
   }) = _EditSite;
 
@@ -228,4 +239,91 @@ class ResolveObject
   @override
   ResolveObjectResponse responseFactory(Map<String, dynamic> json) =>
       ResolveObjectResponse.fromJson(json);
+}
+
+@freezed
+class GetUnreadRegistrationApplicationCount
+    with _$GetUnreadRegistrationApplicationCount
+    implements LemmyApiQuery<int> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetUnreadRegistrationApplicationCount({
+    required String auth,
+  }) = _GetUnreadRegistrationApplicationCount;
+
+  const GetUnreadRegistrationApplicationCount._();
+
+  factory GetUnreadRegistrationApplicationCount.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$GetUnreadRegistrationApplicationCountFromJson(json);
+
+  final path = '/admin/registration_application/count';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  int responseFactory(Map<String, dynamic> json) =>
+      json['registration_applications'] as int;
+}
+
+@freezed
+class ListRegistrationApplications
+    with _$ListRegistrationApplications
+    implements LemmyApiQuery<List<RegistrationApplicationView>> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory ListRegistrationApplications({
+    bool? unreadOnly,
+    int? page,
+    int? limit,
+    required String auth,
+  }) = _ListRegistrationApplications;
+
+  const ListRegistrationApplications._();
+
+  factory ListRegistrationApplications.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$ListRegistrationApplicationsFromJson(json);
+
+  final path = '/admin/registration_application/list';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  List<RegistrationApplicationView> responseFactory(
+    Map<String, dynamic> json,
+  ) =>
+      (json['registration_applications'] as List)
+          .map((dynamic e) => RegistrationApplicationView.fromJson(e))
+          .toList();
+}
+
+@freezed
+class ApproveRegistrationApplication
+    with _$ApproveRegistrationApplication
+    implements LemmyApiQuery<RegistrationApplicationView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory ApproveRegistrationApplication({
+    required int id,
+    required bool approve,
+    String? denyReason,
+    required String auth,
+  }) = _ApproveRegistrationApplication;
+
+  const ApproveRegistrationApplication._();
+
+  factory ApproveRegistrationApplication.fromJson(
+    Map<String, dynamic> json,
+  ) =>
+      _$ApproveRegistrationApplicationFromJson(json);
+
+  final path = '/admin/registration_application/approve';
+
+  final httpMethod = HttpMethod.put;
+
+  @override
+  RegistrationApplicationView responseFactory(
+    Map<String, dynamic> json,
+  ) =>
+      RegistrationApplicationView.fromJson(json['registration_application']);
 }

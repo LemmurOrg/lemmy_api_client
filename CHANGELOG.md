@@ -1,3 +1,9 @@
+## Unreleased
+
+### Added/Changed
+
+- Endpoints related to lemmy `v0.15.0`
+
 ## v0.18.0 - 2021-11-26
 
 ### Changed

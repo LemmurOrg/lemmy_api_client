@@ -422,3 +422,19 @@ class CommunityView with _$CommunityView {
   factory CommunityView.fromJson(Map<String, dynamic> json) =>
       _$CommunityViewFromJson(json);
 }
+
+@freezed
+class RegistrationApplicationView with _$RegistrationApplicationView {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory RegistrationApplicationView({
+    required RegistrationApplication registrationApplication,
+    required LocalUserSettings creatorLocalUser,
+    required PersonSafe creator,
+    PersonSafe? admin,
+    required String instanceHost,
+  }) = _RegistrationApplicationView;
+
+  const RegistrationApplicationView._();
+  factory RegistrationApplicationView.fromJson(Map<String, dynamic> json) =>
+      _$RegistrationApplicationViewFromJson(json);
+}

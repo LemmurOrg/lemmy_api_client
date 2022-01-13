@@ -7655,3 +7655,311 @@ abstract class _CommunityView extends CommunityView {
   _$CommunityViewCopyWith<_CommunityView> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+RegistrationApplicationView _$RegistrationApplicationViewFromJson(
+    Map<String, dynamic> json) {
+  return _RegistrationApplicationView.fromJson(json);
+}
+
+/// @nodoc
+class _$RegistrationApplicationViewTearOff {
+  const _$RegistrationApplicationViewTearOff();
+
+  _RegistrationApplicationView call(
+      {required RegistrationApplication registrationApplication,
+      required LocalUserSettings creatorLocalUser,
+      required PersonSafe creator,
+      PersonSafe? admin,
+      required String instanceHost}) {
+    return _RegistrationApplicationView(
+      registrationApplication: registrationApplication,
+      creatorLocalUser: creatorLocalUser,
+      creator: creator,
+      admin: admin,
+      instanceHost: instanceHost,
+    );
+  }
+
+  RegistrationApplicationView fromJson(Map<String, Object?> json) {
+    return RegistrationApplicationView.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $RegistrationApplicationView = _$RegistrationApplicationViewTearOff();
+
+/// @nodoc
+mixin _$RegistrationApplicationView {
+  RegistrationApplication get registrationApplication =>
+      throw _privateConstructorUsedError;
+  LocalUserSettings get creatorLocalUser => throw _privateConstructorUsedError;
+  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe? get admin => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RegistrationApplicationViewCopyWith<RegistrationApplicationView>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RegistrationApplicationViewCopyWith<$Res> {
+  factory $RegistrationApplicationViewCopyWith(
+          RegistrationApplicationView value,
+          $Res Function(RegistrationApplicationView) then) =
+      _$RegistrationApplicationViewCopyWithImpl<$Res>;
+  $Res call(
+      {RegistrationApplication registrationApplication,
+      LocalUserSettings creatorLocalUser,
+      PersonSafe creator,
+      PersonSafe? admin,
+      String instanceHost});
+
+  $RegistrationApplicationCopyWith<$Res> get registrationApplication;
+  $LocalUserSettingsCopyWith<$Res> get creatorLocalUser;
+  $PersonSafeCopyWith<$Res> get creator;
+  $PersonSafeCopyWith<$Res>? get admin;
+}
+
+/// @nodoc
+class _$RegistrationApplicationViewCopyWithImpl<$Res>
+    implements $RegistrationApplicationViewCopyWith<$Res> {
+  _$RegistrationApplicationViewCopyWithImpl(this._value, this._then);
+
+  final RegistrationApplicationView _value;
+  // ignore: unused_field
+  final $Res Function(RegistrationApplicationView) _then;
+
+  @override
+  $Res call({
+    Object? registrationApplication = freezed,
+    Object? creatorLocalUser = freezed,
+    Object? creator = freezed,
+    Object? admin = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      registrationApplication: registrationApplication == freezed
+          ? _value.registrationApplication
+          : registrationApplication // ignore: cast_nullable_to_non_nullable
+              as RegistrationApplication,
+      creatorLocalUser: creatorLocalUser == freezed
+          ? _value.creatorLocalUser
+          : creatorLocalUser // ignore: cast_nullable_to_non_nullable
+              as LocalUserSettings,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as PersonSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+
+  @override
+  $RegistrationApplicationCopyWith<$Res> get registrationApplication {
+    return $RegistrationApplicationCopyWith<$Res>(
+        _value.registrationApplication, (value) {
+      return _then(_value.copyWith(registrationApplication: value));
+    });
+  }
+
+  @override
+  $LocalUserSettingsCopyWith<$Res> get creatorLocalUser {
+    return $LocalUserSettingsCopyWith<$Res>(_value.creatorLocalUser, (value) {
+      return _then(_value.copyWith(creatorLocalUser: value));
+    });
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res> get creator {
+    return $PersonSafeCopyWith<$Res>(_value.creator, (value) {
+      return _then(_value.copyWith(creator: value));
+    });
+  }
+
+  @override
+  $PersonSafeCopyWith<$Res>? get admin {
+    if (_value.admin == null) {
+      return null;
+    }
+
+    return $PersonSafeCopyWith<$Res>(_value.admin!, (value) {
+      return _then(_value.copyWith(admin: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$RegistrationApplicationViewCopyWith<$Res>
+    implements $RegistrationApplicationViewCopyWith<$Res> {
+  factory _$RegistrationApplicationViewCopyWith(
+          _RegistrationApplicationView value,
+          $Res Function(_RegistrationApplicationView) then) =
+      __$RegistrationApplicationViewCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {RegistrationApplication registrationApplication,
+      LocalUserSettings creatorLocalUser,
+      PersonSafe creator,
+      PersonSafe? admin,
+      String instanceHost});
+
+  @override
+  $RegistrationApplicationCopyWith<$Res> get registrationApplication;
+  @override
+  $LocalUserSettingsCopyWith<$Res> get creatorLocalUser;
+  @override
+  $PersonSafeCopyWith<$Res> get creator;
+  @override
+  $PersonSafeCopyWith<$Res>? get admin;
+}
+
+/// @nodoc
+class __$RegistrationApplicationViewCopyWithImpl<$Res>
+    extends _$RegistrationApplicationViewCopyWithImpl<$Res>
+    implements _$RegistrationApplicationViewCopyWith<$Res> {
+  __$RegistrationApplicationViewCopyWithImpl(
+      _RegistrationApplicationView _value,
+      $Res Function(_RegistrationApplicationView) _then)
+      : super(_value, (v) => _then(v as _RegistrationApplicationView));
+
+  @override
+  _RegistrationApplicationView get _value =>
+      super._value as _RegistrationApplicationView;
+
+  @override
+  $Res call({
+    Object? registrationApplication = freezed,
+    Object? creatorLocalUser = freezed,
+    Object? creator = freezed,
+    Object? admin = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_RegistrationApplicationView(
+      registrationApplication: registrationApplication == freezed
+          ? _value.registrationApplication
+          : registrationApplication // ignore: cast_nullable_to_non_nullable
+              as RegistrationApplication,
+      creatorLocalUser: creatorLocalUser == freezed
+          ? _value.creatorLocalUser
+          : creatorLocalUser // ignore: cast_nullable_to_non_nullable
+              as LocalUserSettings,
+      creator: creator == freezed
+          ? _value.creator
+          : creator // ignore: cast_nullable_to_non_nullable
+              as PersonSafe,
+      admin: admin == freezed
+          ? _value.admin
+          : admin // ignore: cast_nullable_to_non_nullable
+              as PersonSafe?,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class _$_RegistrationApplicationView extends _RegistrationApplicationView {
+  const _$_RegistrationApplicationView(
+      {required this.registrationApplication,
+      required this.creatorLocalUser,
+      required this.creator,
+      this.admin,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_RegistrationApplicationView.fromJson(Map<String, dynamic> json) =>
+      _$$_RegistrationApplicationViewFromJson(json);
+
+  @override
+  final RegistrationApplication registrationApplication;
+  @override
+  final LocalUserSettings creatorLocalUser;
+  @override
+  final PersonSafe creator;
+  @override
+  final PersonSafe? admin;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'RegistrationApplicationView(registrationApplication: $registrationApplication, creatorLocalUser: $creatorLocalUser, creator: $creator, admin: $admin, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RegistrationApplicationView &&
+            const DeepCollectionEquality().equals(
+                other.registrationApplication, registrationApplication) &&
+            const DeepCollectionEquality()
+                .equals(other.creatorLocalUser, creatorLocalUser) &&
+            const DeepCollectionEquality().equals(other.creator, creator) &&
+            const DeepCollectionEquality().equals(other.admin, admin) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(registrationApplication),
+      const DeepCollectionEquality().hash(creatorLocalUser),
+      const DeepCollectionEquality().hash(creator),
+      const DeepCollectionEquality().hash(admin),
+      const DeepCollectionEquality().hash(instanceHost));
+
+  @JsonKey(ignore: true)
+  @override
+  _$RegistrationApplicationViewCopyWith<_RegistrationApplicationView>
+      get copyWith => __$RegistrationApplicationViewCopyWithImpl<
+          _RegistrationApplicationView>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_RegistrationApplicationViewToJson(this);
+  }
+}
+
+abstract class _RegistrationApplicationView
+    extends RegistrationApplicationView {
+  const factory _RegistrationApplicationView(
+      {required RegistrationApplication registrationApplication,
+      required LocalUserSettings creatorLocalUser,
+      required PersonSafe creator,
+      PersonSafe? admin,
+      required String instanceHost}) = _$_RegistrationApplicationView;
+  const _RegistrationApplicationView._() : super._();
+
+  factory _RegistrationApplicationView.fromJson(Map<String, dynamic> json) =
+      _$_RegistrationApplicationView.fromJson;
+
+  @override
+  RegistrationApplication get registrationApplication;
+  @override
+  LocalUserSettings get creatorLocalUser;
+  @override
+  PersonSafe get creator;
+  @override
+  PersonSafe? get admin;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$RegistrationApplicationViewCopyWith<_RegistrationApplicationView>
+      get copyWith => throw _privateConstructorUsedError;
+}

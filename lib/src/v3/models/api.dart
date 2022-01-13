@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../enums.dart';
-import 'views.dart';
+import '../../../v3.dart';
 
 part 'api.freezed.dart';
 part 'api.g.dart';
@@ -291,9 +290,25 @@ class UnreadCount with _$UnreadCount {
     required int replies,
     required int mentions,
     required int privateMessages,
+    required String instanceHost,
   }) = _UnreadCount;
 
   const UnreadCount._();
   factory UnreadCount.fromJson(Map<String, dynamic> json) =>
       _$UnreadCountFromJson(json);
+}
+
+@freezed
+class LoginResponse with _$LoginResponse {
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory LoginResponse({
+    Jwt? jwt,
+    required bool verifyEmailSent,
+    required bool registrationCreated,
+    required String instanceHost,
+  }) = _LoginResponse;
+
+  const LoginResponse._();
+  factory LoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$LoginResponseFromJson(json);
 }
