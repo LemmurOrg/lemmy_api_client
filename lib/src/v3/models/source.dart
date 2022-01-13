@@ -31,6 +31,7 @@ class PersonSafe with _$PersonSafe {
     required bool admin,
     required bool botAccount,
     required String instanceHost,
+    DateTime? banExpires,
   }) = _PersonSafe;
 
   const PersonSafe._();

@@ -40,7 +40,8 @@ class _$PersonSafeTearOff {
       String? matrixUserId,
       required bool admin,
       required bool botAccount,
-      required String instanceHost}) {
+      required String instanceHost,
+      DateTime? banExpires}) {
     return _PersonSafe(
       id: id,
       name: name,
@@ -60,6 +61,7 @@ class _$PersonSafeTearOff {
       admin: admin,
       botAccount: botAccount,
       instanceHost: instanceHost,
+      banExpires: banExpires,
     );
   }
 
@@ -91,6 +93,7 @@ mixin _$PersonSafe {
   bool get admin => throw _privateConstructorUsedError;
   bool get botAccount => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
+  DateTime? get banExpires => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -121,7 +124,8 @@ abstract class $PersonSafeCopyWith<$Res> {
       String? matrixUserId,
       bool admin,
       bool botAccount,
-      String instanceHost});
+      String instanceHost,
+      DateTime? banExpires});
 }
 
 /// @nodoc
@@ -152,6 +156,7 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
     Object? admin = freezed,
     Object? botAccount = freezed,
     Object? instanceHost = freezed,
+    Object? banExpires = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -226,6 +231,10 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
+      banExpires: banExpires == freezed
+          ? _value.banExpires
+          : banExpires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -254,7 +263,8 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
       String? matrixUserId,
       bool admin,
       bool botAccount,
-      String instanceHost});
+      String instanceHost,
+      DateTime? banExpires});
 }
 
 /// @nodoc
@@ -287,6 +297,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
     Object? admin = freezed,
     Object? botAccount = freezed,
     Object? instanceHost = freezed,
+    Object? banExpires = freezed,
   }) {
     return _then(_PersonSafe(
       id: id == freezed
@@ -361,6 +372,10 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
+      banExpires: banExpires == freezed
+          ? _value.banExpires
+          : banExpires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -389,7 +404,8 @@ class _$_PersonSafe extends _PersonSafe {
       this.matrixUserId,
       required this.admin,
       required this.botAccount,
-      required this.instanceHost})
+      required this.instanceHost,
+      this.banExpires})
       : super._();
 
   factory _$_PersonSafe.fromJson(Map<String, dynamic> json) =>
@@ -431,10 +447,12 @@ class _$_PersonSafe extends _PersonSafe {
   final bool botAccount;
   @override
   final String instanceHost;
+  @override
+  final DateTime? banExpires;
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, instanceHost: $instanceHost)';
+    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, instanceHost: $instanceHost, banExpires: $banExpires)';
   }
 
   @override
@@ -464,30 +482,34 @@ class _$_PersonSafe extends _PersonSafe {
             const DeepCollectionEquality()
                 .equals(other.botAccount, botAccount) &&
             const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+                .equals(other.instanceHost, instanceHost) &&
+            const DeepCollectionEquality()
+                .equals(other.banExpires, banExpires));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(displayName),
-      const DeepCollectionEquality().hash(avatar),
-      const DeepCollectionEquality().hash(banned),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(actorId),
-      const DeepCollectionEquality().hash(bio),
-      const DeepCollectionEquality().hash(local),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(inboxUrl),
-      const DeepCollectionEquality().hash(sharedInboxUrl),
-      const DeepCollectionEquality().hash(matrixUserId),
-      const DeepCollectionEquality().hash(admin),
-      const DeepCollectionEquality().hash(botAccount),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(displayName),
+        const DeepCollectionEquality().hash(avatar),
+        const DeepCollectionEquality().hash(banned),
+        const DeepCollectionEquality().hash(published),
+        const DeepCollectionEquality().hash(updated),
+        const DeepCollectionEquality().hash(actorId),
+        const DeepCollectionEquality().hash(bio),
+        const DeepCollectionEquality().hash(local),
+        const DeepCollectionEquality().hash(banner),
+        const DeepCollectionEquality().hash(deleted),
+        const DeepCollectionEquality().hash(inboxUrl),
+        const DeepCollectionEquality().hash(sharedInboxUrl),
+        const DeepCollectionEquality().hash(matrixUserId),
+        const DeepCollectionEquality().hash(admin),
+        const DeepCollectionEquality().hash(botAccount),
+        const DeepCollectionEquality().hash(instanceHost),
+        const DeepCollectionEquality().hash(banExpires)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -519,7 +541,8 @@ abstract class _PersonSafe extends PersonSafe {
       String? matrixUserId,
       required bool admin,
       required bool botAccount,
-      required String instanceHost}) = _$_PersonSafe;
+      required String instanceHost,
+      DateTime? banExpires}) = _$_PersonSafe;
   const _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
@@ -561,6 +584,8 @@ abstract class _PersonSafe extends PersonSafe {
   bool get botAccount;
   @override
   String get instanceHost;
+  @override
+  DateTime? get banExpires;
   @override
   @JsonKey(ignore: true)
   _$PersonSafeCopyWith<_PersonSafe> get copyWith =>

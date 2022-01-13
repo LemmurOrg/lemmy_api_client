@@ -27,6 +27,8 @@ _$_PersonSafe _$$_PersonSafeFromJson(Map<String, dynamic> json) =>
       admin: json['admin'] as bool,
       botAccount: json['bot_account'] as bool,
       instanceHost: json['instance_host'] as String,
+      banExpires: const ForceUtcDateTimeNullable()
+          .fromJson(json['ban_expires'] as String?),
     );
 
 Map<String, dynamic> _$$_PersonSafeToJson(_$_PersonSafe instance) =>
@@ -49,6 +51,8 @@ Map<String, dynamic> _$$_PersonSafeToJson(_$_PersonSafe instance) =>
       'admin': instance.admin,
       'bot_account': instance.botAccount,
       'instance_host': instance.instanceHost,
+      'ban_expires':
+          const ForceUtcDateTimeNullable().toJson(instance.banExpires),
     };
 
 _$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
