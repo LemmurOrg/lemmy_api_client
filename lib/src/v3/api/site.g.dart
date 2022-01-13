@@ -53,6 +53,7 @@ _$_GetModlog _$$_GetModlogFromJson(Map<String, dynamic> json) => _$_GetModlog(
       communityId: json['community_id'] as int?,
       page: json['page'] as int?,
       limit: json['limit'] as int?,
+      auth: json['auth'] as String?,
     );
 
 Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
@@ -68,6 +69,7 @@ Map<String, dynamic> _$$_GetModlogToJson(_$_GetModlog instance) {
   writeNotNull('community_id', instance.communityId);
   writeNotNull('page', instance.page);
   writeNotNull('limit', instance.limit);
+  writeNotNull('auth', instance.auth);
   return val;
 }
 
@@ -83,6 +85,10 @@ _$_CreateSite _$$_CreateSiteFromJson(Map<String, dynamic> json) =>
       enableNsfw: json['enable_nsfw'] as bool?,
       communityCreationAdminOnly:
           json['community_creation_admin_only'] as bool?,
+      requireEmailVerification: json['require_email_verification'] as bool?,
+      requireApplication: json['require_application'] as bool?,
+      applicationQuestion: json['application_question'] as String?,
+      privateInstance: json['private_instance'] as bool?,
       auth: json['auth'] as String,
     );
 
@@ -106,6 +112,10 @@ Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
   writeNotNull('enable_nsfw', instance.enableNsfw);
   writeNotNull(
       'community_creation_admin_only', instance.communityCreationAdminOnly);
+  writeNotNull('require_email_verification', instance.requireEmailVerification);
+  writeNotNull('require_application', instance.requireApplication);
+  writeNotNull('application_question', instance.applicationQuestion);
+  writeNotNull('private_instance', instance.privateInstance);
   val['auth'] = instance.auth;
   return val;
 }
@@ -121,6 +131,10 @@ _$_EditSite _$$_EditSiteFromJson(Map<String, dynamic> json) => _$_EditSite(
       enableNsfw: json['enable_nsfw'] as bool?,
       communityCreationAdminOnly:
           json['community_creation_admin_only'] as bool?,
+      requireEmailVerification: json['require_email_verification'] as bool?,
+      requireApplication: json['require_application'] as bool?,
+      applicationQuestion: json['application_question'] as String?,
+      privateInstance: json['private_instance'] as bool?,
       auth: json['auth'] as String,
     );
 
@@ -143,6 +157,10 @@ Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
   writeNotNull('enable_nsfw', instance.enableNsfw);
   writeNotNull(
       'community_creation_admin_only', instance.communityCreationAdminOnly);
+  writeNotNull('require_email_verification', instance.requireEmailVerification);
+  writeNotNull('require_application', instance.requireApplication);
+  writeNotNull('application_question', instance.applicationQuestion);
+  writeNotNull('private_instance', instance.privateInstance);
   val['auth'] = instance.auth;
   return val;
 }
@@ -216,5 +234,71 @@ Map<String, dynamic> _$$_ResolveObjectToJson(_$_ResolveObject instance) {
   }
 
   writeNotNull('auth', instance.auth);
+  return val;
+}
+
+_$_GetUnreadRegistrationApplicationCount
+    _$$_GetUnreadRegistrationApplicationCountFromJson(
+            Map<String, dynamic> json) =>
+        _$_GetUnreadRegistrationApplicationCount(
+          auth: json['auth'] as String,
+        );
+
+Map<String, dynamic> _$$_GetUnreadRegistrationApplicationCountToJson(
+        _$_GetUnreadRegistrationApplicationCount instance) =>
+    <String, dynamic>{
+      'auth': instance.auth,
+    };
+
+_$_ListRegistrationApplications _$$_ListRegistrationApplicationsFromJson(
+        Map<String, dynamic> json) =>
+    _$_ListRegistrationApplications(
+      unreadOnly: json['unread_only'] as bool?,
+      page: json['page'] as int?,
+      limit: json['limit'] as int?,
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_ListRegistrationApplicationsToJson(
+    _$_ListRegistrationApplications instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('unread_only', instance.unreadOnly);
+  writeNotNull('page', instance.page);
+  writeNotNull('limit', instance.limit);
+  val['auth'] = instance.auth;
+  return val;
+}
+
+_$_ApproveRegistrationApplication _$$_ApproveRegistrationApplicationFromJson(
+        Map<String, dynamic> json) =>
+    _$_ApproveRegistrationApplication(
+      id: json['id'] as int,
+      approve: json['approve'] as bool,
+      denyReason: json['deny_reason'] as String?,
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_ApproveRegistrationApplicationToJson(
+    _$_ApproveRegistrationApplication instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'approve': instance.approve,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('deny_reason', instance.denyReason);
+  val['auth'] = instance.auth;
   return val;
 }

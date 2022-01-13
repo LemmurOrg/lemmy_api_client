@@ -165,9 +165,6 @@ _$_FullSiteView _$$_FullSiteViewFromJson(Map<String, dynamic> json) =>
       admins: (json['admins'] as List<dynamic>)
           .map((e) => PersonViewSafe.fromJson(e as Map<String, dynamic>))
           .toList(),
-      banned: (json['banned'] as List<dynamic>)
-          .map((e) => PersonViewSafe.fromJson(e as Map<String, dynamic>))
-          .toList(),
       online: json['online'] as int,
       version: json['version'] as String,
       myUser: json['my_user'] == null
@@ -184,7 +181,6 @@ Map<String, dynamic> _$$_FullSiteViewToJson(_$_FullSiteView instance) =>
     <String, dynamic>{
       'site_view': instance.siteView?.toJson(),
       'admins': instance.admins.map((e) => e.toJson()).toList(),
-      'banned': instance.banned.map((e) => e.toJson()).toList(),
       'online': instance.online,
       'version': instance.version,
       'my_user': instance.myUser?.toJson(),
@@ -412,6 +408,7 @@ _$_UnreadCount _$$_UnreadCountFromJson(Map<String, dynamic> json) =>
       replies: json['replies'] as int,
       mentions: json['mentions'] as int,
       privateMessages: json['private_messages'] as int,
+      instanceHost: json['instance_host'] as String,
     );
 
 Map<String, dynamic> _$$_UnreadCountToJson(_$_UnreadCount instance) =>
@@ -419,4 +416,21 @@ Map<String, dynamic> _$$_UnreadCountToJson(_$_UnreadCount instance) =>
       'replies': instance.replies,
       'mentions': instance.mentions,
       'private_messages': instance.privateMessages,
+      'instance_host': instance.instanceHost,
+    };
+
+_$_LoginResponse _$$_LoginResponseFromJson(Map<String, dynamic> json) =>
+    _$_LoginResponse(
+      jwt: json['jwt'] == null ? null : Jwt.fromJson(json['jwt'] as String),
+      verifyEmailSent: json['verify_email_sent'] as bool,
+      registrationCreated: json['registration_created'] as bool,
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_LoginResponseToJson(_$_LoginResponse instance) =>
+    <String, dynamic>{
+      'jwt': instance.jwt?.toJson(),
+      'verify_email_sent': instance.verifyEmailSent,
+      'registration_created': instance.registrationCreated,
+      'instance_host': instance.instanceHost,
     };

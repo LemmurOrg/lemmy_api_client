@@ -569,3 +569,27 @@ Map<String, dynamic> _$$_CommunityViewToJson(_$_CommunityView instance) =>
       'counts': instance.counts.toJson(),
       'instance_host': instance.instanceHost,
     };
+
+_$_RegistrationApplicationView _$$_RegistrationApplicationViewFromJson(
+        Map<String, dynamic> json) =>
+    _$_RegistrationApplicationView(
+      registrationApplication: RegistrationApplication.fromJson(
+          json['registration_application'] as Map<String, dynamic>),
+      creatorLocalUser: LocalUserSettings.fromJson(
+          json['creator_local_user'] as Map<String, dynamic>),
+      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
+      admin: json['admin'] == null
+          ? null
+          : PersonSafe.fromJson(json['admin'] as Map<String, dynamic>),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_RegistrationApplicationViewToJson(
+        _$_RegistrationApplicationView instance) =>
+    <String, dynamic>{
+      'registration_application': instance.registrationApplication.toJson(),
+      'creator_local_user': instance.creatorLocalUser.toJson(),
+      'creator': instance.creator.toJson(),
+      'admin': instance.admin?.toJson(),
+      'instance_host': instance.instanceHost,
+    };

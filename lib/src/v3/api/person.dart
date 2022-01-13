@@ -13,7 +13,7 @@ part 'person.freezed.dart';
 part 'person.g.dart';
 
 @freezed
-class Login with _$Login implements LemmyApiQuery<Jwt> {
+class Login with _$Login implements LemmyApiQuery<LoginResponse> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory Login({
     required String usernameOrEmail,
@@ -28,7 +28,8 @@ class Login with _$Login implements LemmyApiQuery<Jwt> {
   final httpMethod = HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
+  LoginResponse responseFactory(Map<String, dynamic> json) =>
+      LoginResponse.fromJson(json);
 }
 
 @freezed
@@ -43,6 +44,7 @@ class Register with _$Register implements LemmyApiQuery<Jwt> {
     String? captchaUuid,
     String? captchaAnswer,
     String? honeypot,
+    String? answer,
   }) = _Register;
 
   const Register._();
@@ -317,7 +319,7 @@ class MarkPersonMentionAsRead
 }
 
 @freezed
-class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<Jwt> {
+class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<void> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory DeleteAccount({
     required String password,
@@ -333,7 +335,7 @@ class DeleteAccount with _$DeleteAccount implements LemmyApiQuery<Jwt> {
   final httpMethod = HttpMethod.post;
 
   @override
-  Jwt responseFactory(Map<String, dynamic> json) => Jwt.fromJson(json['jwt']);
+  void responseFactory(Map<String, dynamic> json) {}
 }
 
 @freezed
@@ -566,4 +568,47 @@ class GetReportCount
   @override
   ReportCount responseFactory(Map<String, dynamic> json) =>
       ReportCount.fromJson(json);
+}
+
+@freezed
+class GetBannedPersons
+    with _$GetBannedPersons
+    implements LemmyApiQuery<List<PersonViewSafe>> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory GetBannedPersons({
+    required String auth,
+  }) = _GetBannedPersons;
+
+  const GetBannedPersons._();
+  factory GetBannedPersons.fromJson(Map<String, dynamic> json) =>
+      _$GetBannedPersonsFromJson(json);
+
+  final path = '/user/banned';
+
+  final httpMethod = HttpMethod.get;
+
+  @override
+  List<PersonViewSafe> responseFactory(Map<String, dynamic> json) =>
+      (json['banned'] as List)
+          .map((dynamic e) => PersonViewSafe.fromJson(e))
+          .toList();
+}
+
+@freezed
+class VerifyEmail with _$VerifyEmail implements LemmyApiQuery<void> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory VerifyEmail({
+    required String token,
+  }) = _VerifyEmail;
+
+  const VerifyEmail._();
+  factory VerifyEmail.fromJson(Map<String, dynamic> json) =>
+      _$VerifyEmailFromJson(json);
+
+  final path = '/user/verify_email';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  void responseFactory(Map<String, dynamic> json) {}
 }

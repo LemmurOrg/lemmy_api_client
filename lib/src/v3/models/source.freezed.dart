@@ -40,6 +40,7 @@ class _$PersonSafeTearOff {
       String? matrixUserId,
       required bool admin,
       required bool botAccount,
+      DateTime? banExpires,
       required String instanceHost}) {
     return _PersonSafe(
       id: id,
@@ -59,6 +60,7 @@ class _$PersonSafeTearOff {
       matrixUserId: matrixUserId,
       admin: admin,
       botAccount: botAccount,
+      banExpires: banExpires,
       instanceHost: instanceHost,
     );
   }
@@ -90,6 +92,7 @@ mixin _$PersonSafe {
   String? get matrixUserId => throw _privateConstructorUsedError;
   bool get admin => throw _privateConstructorUsedError;
   bool get botAccount => throw _privateConstructorUsedError;
+  DateTime? get banExpires => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -121,6 +124,7 @@ abstract class $PersonSafeCopyWith<$Res> {
       String? matrixUserId,
       bool admin,
       bool botAccount,
+      DateTime? banExpires,
       String instanceHost});
 }
 
@@ -151,6 +155,7 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
     Object? matrixUserId = freezed,
     Object? admin = freezed,
     Object? botAccount = freezed,
+    Object? banExpires = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
@@ -222,6 +227,10 @@ class _$PersonSafeCopyWithImpl<$Res> implements $PersonSafeCopyWith<$Res> {
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool,
+      banExpires: banExpires == freezed
+          ? _value.banExpires
+          : banExpires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -254,6 +263,7 @@ abstract class _$PersonSafeCopyWith<$Res> implements $PersonSafeCopyWith<$Res> {
       String? matrixUserId,
       bool admin,
       bool botAccount,
+      DateTime? banExpires,
       String instanceHost});
 }
 
@@ -286,6 +296,7 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
     Object? matrixUserId = freezed,
     Object? admin = freezed,
     Object? botAccount = freezed,
+    Object? banExpires = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_PersonSafe(
@@ -357,6 +368,10 @@ class __$PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
           ? _value.botAccount
           : botAccount // ignore: cast_nullable_to_non_nullable
               as bool,
+      banExpires: banExpires == freezed
+          ? _value.banExpires
+          : banExpires // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -389,6 +404,7 @@ class _$_PersonSafe extends _PersonSafe {
       this.matrixUserId,
       required this.admin,
       required this.botAccount,
+      this.banExpires,
       required this.instanceHost})
       : super._();
 
@@ -430,11 +446,13 @@ class _$_PersonSafe extends _PersonSafe {
   @override
   final bool botAccount;
   @override
+  final DateTime? banExpires;
+  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, instanceHost: $instanceHost)';
+    return 'PersonSafe(id: $id, name: $name, displayName: $displayName, avatar: $avatar, banned: $banned, published: $published, updated: $updated, actorId: $actorId, bio: $bio, local: $local, banner: $banner, deleted: $deleted, inboxUrl: $inboxUrl, sharedInboxUrl: $sharedInboxUrl, matrixUserId: $matrixUserId, admin: $admin, botAccount: $botAccount, banExpires: $banExpires, instanceHost: $instanceHost)';
   }
 
   @override
@@ -464,30 +482,34 @@ class _$_PersonSafe extends _PersonSafe {
             const DeepCollectionEquality()
                 .equals(other.botAccount, botAccount) &&
             const DeepCollectionEquality()
+                .equals(other.banExpires, banExpires) &&
+            const DeepCollectionEquality()
                 .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(displayName),
-      const DeepCollectionEquality().hash(avatar),
-      const DeepCollectionEquality().hash(banned),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(actorId),
-      const DeepCollectionEquality().hash(bio),
-      const DeepCollectionEquality().hash(local),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(deleted),
-      const DeepCollectionEquality().hash(inboxUrl),
-      const DeepCollectionEquality().hash(sharedInboxUrl),
-      const DeepCollectionEquality().hash(matrixUserId),
-      const DeepCollectionEquality().hash(admin),
-      const DeepCollectionEquality().hash(botAccount),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(displayName),
+        const DeepCollectionEquality().hash(avatar),
+        const DeepCollectionEquality().hash(banned),
+        const DeepCollectionEquality().hash(published),
+        const DeepCollectionEquality().hash(updated),
+        const DeepCollectionEquality().hash(actorId),
+        const DeepCollectionEquality().hash(bio),
+        const DeepCollectionEquality().hash(local),
+        const DeepCollectionEquality().hash(banner),
+        const DeepCollectionEquality().hash(deleted),
+        const DeepCollectionEquality().hash(inboxUrl),
+        const DeepCollectionEquality().hash(sharedInboxUrl),
+        const DeepCollectionEquality().hash(matrixUserId),
+        const DeepCollectionEquality().hash(admin),
+        const DeepCollectionEquality().hash(botAccount),
+        const DeepCollectionEquality().hash(banExpires),
+        const DeepCollectionEquality().hash(instanceHost)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -519,6 +541,7 @@ abstract class _PersonSafe extends PersonSafe {
       String? matrixUserId,
       required bool admin,
       required bool botAccount,
+      DateTime? banExpires,
       required String instanceHost}) = _$_PersonSafe;
   const _PersonSafe._() : super._();
 
@@ -560,6 +583,8 @@ abstract class _PersonSafe extends PersonSafe {
   @override
   bool get botAccount;
   @override
+  DateTime? get banExpires;
+  @override
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
@@ -592,6 +617,8 @@ class _$LocalUserSettingsTearOff {
       required bool showReadPosts,
       required bool showBotAccounts,
       required bool showNewPostNotifs,
+      required bool emailVerified,
+      required bool acceptedApplication,
       required String instanceHost}) {
     return _LocalUserSettings(
       id: id,
@@ -608,6 +635,8 @@ class _$LocalUserSettingsTearOff {
       showReadPosts: showReadPosts,
       showBotAccounts: showBotAccounts,
       showNewPostNotifs: showNewPostNotifs,
+      emailVerified: emailVerified,
+      acceptedApplication: acceptedApplication,
       instanceHost: instanceHost,
     );
   }
@@ -638,6 +667,8 @@ mixin _$LocalUserSettings {
   bool get showReadPosts => throw _privateConstructorUsedError;
   bool get showBotAccounts => throw _privateConstructorUsedError;
   bool get showNewPostNotifs => throw _privateConstructorUsedError;
+  bool get emailVerified => throw _privateConstructorUsedError;
+  bool get acceptedApplication => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -668,6 +699,8 @@ abstract class $LocalUserSettingsCopyWith<$Res> {
       bool showReadPosts,
       bool showBotAccounts,
       bool showNewPostNotifs,
+      bool emailVerified,
+      bool acceptedApplication,
       String instanceHost});
 }
 
@@ -696,6 +729,8 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
     Object? showReadPosts = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? emailVerified = freezed,
+    Object? acceptedApplication = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
@@ -755,6 +790,14 @@ class _$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool,
+      emailVerified: emailVerified == freezed
+          ? _value.emailVerified
+          : emailVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
+      acceptedApplication: acceptedApplication == freezed
+          ? _value.acceptedApplication
+          : acceptedApplication // ignore: cast_nullable_to_non_nullable
+              as bool,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -787,6 +830,8 @@ abstract class _$LocalUserSettingsCopyWith<$Res>
       bool showReadPosts,
       bool showBotAccounts,
       bool showNewPostNotifs,
+      bool emailVerified,
+      bool acceptedApplication,
       String instanceHost});
 }
 
@@ -817,6 +862,8 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
     Object? showReadPosts = freezed,
     Object? showBotAccounts = freezed,
     Object? showNewPostNotifs = freezed,
+    Object? emailVerified = freezed,
+    Object? acceptedApplication = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_LocalUserSettings(
@@ -876,6 +923,14 @@ class __$LocalUserSettingsCopyWithImpl<$Res>
           ? _value.showNewPostNotifs
           : showNewPostNotifs // ignore: cast_nullable_to_non_nullable
               as bool,
+      emailVerified: emailVerified == freezed
+          ? _value.emailVerified
+          : emailVerified // ignore: cast_nullable_to_non_nullable
+              as bool,
+      acceptedApplication: acceptedApplication == freezed
+          ? _value.acceptedApplication
+          : acceptedApplication // ignore: cast_nullable_to_non_nullable
+              as bool,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -907,6 +962,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       required this.showReadPosts,
       required this.showBotAccounts,
       required this.showNewPostNotifs,
+      required this.emailVerified,
+      required this.acceptedApplication,
       required this.instanceHost})
       : super._();
 
@@ -944,11 +1001,15 @@ class _$_LocalUserSettings extends _LocalUserSettings {
   @override
   final bool showNewPostNotifs;
   @override
+  final bool emailVerified;
+  @override
+  final bool acceptedApplication;
+  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, instanceHost: $instanceHost)';
+    return 'LocalUserSettings(id: $id, personId: $personId, email: $email, showNsfw: $showNsfw, theme: $theme, defaultSortType: $defaultSortType, defaultListingType: $defaultListingType, lang: $lang, showAvatars: $showAvatars, showScores: $showScores, sendNotificationsToEmail: $sendNotificationsToEmail, showReadPosts: $showReadPosts, showBotAccounts: $showBotAccounts, showNewPostNotifs: $showNewPostNotifs, emailVerified: $emailVerified, acceptedApplication: $acceptedApplication, instanceHost: $instanceHost)';
   }
 
   @override
@@ -979,6 +1040,10 @@ class _$_LocalUserSettings extends _LocalUserSettings {
             const DeepCollectionEquality()
                 .equals(other.showNewPostNotifs, showNewPostNotifs) &&
             const DeepCollectionEquality()
+                .equals(other.emailVerified, emailVerified) &&
+            const DeepCollectionEquality()
+                .equals(other.acceptedApplication, acceptedApplication) &&
+            const DeepCollectionEquality()
                 .equals(other.instanceHost, instanceHost));
   }
 
@@ -999,6 +1064,8 @@ class _$_LocalUserSettings extends _LocalUserSettings {
       const DeepCollectionEquality().hash(showReadPosts),
       const DeepCollectionEquality().hash(showBotAccounts),
       const DeepCollectionEquality().hash(showNewPostNotifs),
+      const DeepCollectionEquality().hash(emailVerified),
+      const DeepCollectionEquality().hash(acceptedApplication),
       const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
@@ -1030,6 +1097,8 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       required bool showReadPosts,
       required bool showBotAccounts,
       required bool showNewPostNotifs,
+      required bool emailVerified,
+      required bool acceptedApplication,
       required String instanceHost}) = _$_LocalUserSettings;
   const _LocalUserSettings._() : super._();
 
@@ -1067,6 +1136,10 @@ abstract class _LocalUserSettings extends LocalUserSettings {
   @override
   bool get showNewPostNotifs;
   @override
+  bool get emailVerified;
+  @override
+  bool get acceptedApplication;
+  @override
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
@@ -1096,6 +1169,10 @@ class _$SiteTearOff {
       required bool communityCreationAdminOnly,
       String? icon,
       String? banner,
+      required bool requireEmailVerification,
+      required bool requireApplication,
+      String? applicationQuestion,
+      required bool privateInstance,
       required String instanceHost}) {
     return _Site(
       id: id,
@@ -1111,6 +1188,10 @@ class _$SiteTearOff {
       communityCreationAdminOnly: communityCreationAdminOnly,
       icon: icon,
       banner: banner,
+      requireEmailVerification: requireEmailVerification,
+      requireApplication: requireApplication,
+      applicationQuestion: applicationQuestion,
+      privateInstance: privateInstance,
       instanceHost: instanceHost,
     );
   }
@@ -1138,6 +1219,10 @@ mixin _$Site {
   bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
+  bool get requireEmailVerification => throw _privateConstructorUsedError;
+  bool get requireApplication => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
+  bool get privateInstance => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1163,6 +1248,10 @@ abstract class $SiteCopyWith<$Res> {
       bool communityCreationAdminOnly,
       String? icon,
       String? banner,
+      bool requireEmailVerification,
+      bool requireApplication,
+      String? applicationQuestion,
+      bool privateInstance,
       String instanceHost});
 }
 
@@ -1189,6 +1278,10 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1244,6 +1337,22 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      requireEmailVerification: requireEmailVerification == freezed
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool,
+      requireApplication: requireApplication == freezed
+          ? _value.requireApplication
+          : requireApplication // ignore: cast_nullable_to_non_nullable
+              as bool,
+      applicationQuestion: applicationQuestion == freezed
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      privateInstance: privateInstance == freezed
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -1271,6 +1380,10 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       bool communityCreationAdminOnly,
       String? icon,
       String? banner,
+      bool requireEmailVerification,
+      bool requireApplication,
+      String? applicationQuestion,
+      bool privateInstance,
       String instanceHost});
 }
 
@@ -1298,6 +1411,10 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? communityCreationAdminOnly = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_Site(
@@ -1353,6 +1470,22 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      requireEmailVerification: requireEmailVerification == freezed
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool,
+      requireApplication: requireApplication == freezed
+          ? _value.requireApplication
+          : requireApplication // ignore: cast_nullable_to_non_nullable
+              as bool,
+      applicationQuestion: applicationQuestion == freezed
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      privateInstance: privateInstance == freezed
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -1381,6 +1514,10 @@ class _$_Site extends _Site {
       required this.communityCreationAdminOnly,
       this.icon,
       this.banner,
+      required this.requireEmailVerification,
+      required this.requireApplication,
+      this.applicationQuestion,
+      required this.privateInstance,
       required this.instanceHost})
       : super._();
 
@@ -1413,11 +1550,19 @@ class _$_Site extends _Site {
   @override
   final String? banner;
   @override
+  final bool requireEmailVerification;
+  @override
+  final bool requireApplication;
+  @override
+  final String? applicationQuestion;
+  @override
+  final bool privateInstance;
+  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, instanceHost: $instanceHost)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1443,6 +1588,14 @@ class _$_Site extends _Site {
                 other.communityCreationAdminOnly, communityCreationAdminOnly) &&
             const DeepCollectionEquality().equals(other.icon, icon) &&
             const DeepCollectionEquality().equals(other.banner, banner) &&
+            const DeepCollectionEquality().equals(
+                other.requireEmailVerification, requireEmailVerification) &&
+            const DeepCollectionEquality()
+                .equals(other.requireApplication, requireApplication) &&
+            const DeepCollectionEquality()
+                .equals(other.applicationQuestion, applicationQuestion) &&
+            const DeepCollectionEquality()
+                .equals(other.privateInstance, privateInstance) &&
             const DeepCollectionEquality()
                 .equals(other.instanceHost, instanceHost));
   }
@@ -1463,6 +1616,10 @@ class _$_Site extends _Site {
       const DeepCollectionEquality().hash(communityCreationAdminOnly),
       const DeepCollectionEquality().hash(icon),
       const DeepCollectionEquality().hash(banner),
+      const DeepCollectionEquality().hash(requireEmailVerification),
+      const DeepCollectionEquality().hash(requireApplication),
+      const DeepCollectionEquality().hash(applicationQuestion),
+      const DeepCollectionEquality().hash(privateInstance),
       const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
@@ -1491,6 +1648,10 @@ abstract class _Site extends Site {
       required bool communityCreationAdminOnly,
       String? icon,
       String? banner,
+      required bool requireEmailVerification,
+      required bool requireApplication,
+      String? applicationQuestion,
+      required bool privateInstance,
       required String instanceHost}) = _$_Site;
   const _Site._() : super._();
 
@@ -1522,6 +1683,14 @@ abstract class _Site extends Site {
   String? get icon;
   @override
   String? get banner;
+  @override
+  bool get requireEmailVerification;
+  @override
+  bool get requireApplication;
+  @override
+  String? get applicationQuestion;
+  @override
+  bool get privateInstance;
   @override
   String get instanceHost;
   @override
@@ -7763,5 +7932,309 @@ abstract class _PersonMention extends PersonMention {
   @override
   @JsonKey(ignore: true)
   _$PersonMentionCopyWith<_PersonMention> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+RegistrationApplication _$RegistrationApplicationFromJson(
+    Map<String, dynamic> json) {
+  return _RegistrationApplication.fromJson(json);
+}
+
+/// @nodoc
+class _$RegistrationApplicationTearOff {
+  const _$RegistrationApplicationTearOff();
+
+  _RegistrationApplication call(
+      {required int id,
+      required int localUserId,
+      required String answer,
+      int? adminId,
+      String? denyReason,
+      required DateTime published,
+      required String instanceHost}) {
+    return _RegistrationApplication(
+      id: id,
+      localUserId: localUserId,
+      answer: answer,
+      adminId: adminId,
+      denyReason: denyReason,
+      published: published,
+      instanceHost: instanceHost,
+    );
+  }
+
+  RegistrationApplication fromJson(Map<String, Object?> json) {
+    return RegistrationApplication.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $RegistrationApplication = _$RegistrationApplicationTearOff();
+
+/// @nodoc
+mixin _$RegistrationApplication {
+  int get id => throw _privateConstructorUsedError;
+  int get localUserId => throw _privateConstructorUsedError;
+  String get answer => throw _privateConstructorUsedError;
+  int? get adminId => throw _privateConstructorUsedError;
+  String? get denyReason => throw _privateConstructorUsedError;
+  DateTime get published => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RegistrationApplicationCopyWith<RegistrationApplication> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RegistrationApplicationCopyWith<$Res> {
+  factory $RegistrationApplicationCopyWith(RegistrationApplication value,
+          $Res Function(RegistrationApplication) then) =
+      _$RegistrationApplicationCopyWithImpl<$Res>;
+  $Res call(
+      {int id,
+      int localUserId,
+      String answer,
+      int? adminId,
+      String? denyReason,
+      DateTime published,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$RegistrationApplicationCopyWithImpl<$Res>
+    implements $RegistrationApplicationCopyWith<$Res> {
+  _$RegistrationApplicationCopyWithImpl(this._value, this._then);
+
+  final RegistrationApplication _value;
+  // ignore: unused_field
+  final $Res Function(RegistrationApplication) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? localUserId = freezed,
+    Object? answer = freezed,
+    Object? adminId = freezed,
+    Object? denyReason = freezed,
+    Object? published = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      localUserId: localUserId == freezed
+          ? _value.localUserId
+          : localUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      answer: answer == freezed
+          ? _value.answer
+          : answer // ignore: cast_nullable_to_non_nullable
+              as String,
+      adminId: adminId == freezed
+          ? _value.adminId
+          : adminId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      denyReason: denyReason == freezed
+          ? _value.denyReason
+          : denyReason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$RegistrationApplicationCopyWith<$Res>
+    implements $RegistrationApplicationCopyWith<$Res> {
+  factory _$RegistrationApplicationCopyWith(_RegistrationApplication value,
+          $Res Function(_RegistrationApplication) then) =
+      __$RegistrationApplicationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {int id,
+      int localUserId,
+      String answer,
+      int? adminId,
+      String? denyReason,
+      DateTime published,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$RegistrationApplicationCopyWithImpl<$Res>
+    extends _$RegistrationApplicationCopyWithImpl<$Res>
+    implements _$RegistrationApplicationCopyWith<$Res> {
+  __$RegistrationApplicationCopyWithImpl(_RegistrationApplication _value,
+      $Res Function(_RegistrationApplication) _then)
+      : super(_value, (v) => _then(v as _RegistrationApplication));
+
+  @override
+  _RegistrationApplication get _value =>
+      super._value as _RegistrationApplication;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? localUserId = freezed,
+    Object? answer = freezed,
+    Object? adminId = freezed,
+    Object? denyReason = freezed,
+    Object? published = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_RegistrationApplication(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      localUserId: localUserId == freezed
+          ? _value.localUserId
+          : localUserId // ignore: cast_nullable_to_non_nullable
+              as int,
+      answer: answer == freezed
+          ? _value.answer
+          : answer // ignore: cast_nullable_to_non_nullable
+              as String,
+      adminId: adminId == freezed
+          ? _value.adminId
+          : adminId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      denyReason: denyReason == freezed
+          ? _value.denyReason
+          : denyReason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      published: published == freezed
+          ? _value.published
+          : published // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@ForceUtcDateTime()
+@ForceUtcDateTimeNullable()
+@JsonSerializable(fieldRename: FieldRename.snake)
+class _$_RegistrationApplication extends _RegistrationApplication {
+  const _$_RegistrationApplication(
+      {required this.id,
+      required this.localUserId,
+      required this.answer,
+      this.adminId,
+      this.denyReason,
+      required this.published,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_RegistrationApplication.fromJson(Map<String, dynamic> json) =>
+      _$$_RegistrationApplicationFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final int localUserId;
+  @override
+  final String answer;
+  @override
+  final int? adminId;
+  @override
+  final String? denyReason;
+  @override
+  final DateTime published;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'RegistrationApplication(id: $id, localUserId: $localUserId, answer: $answer, adminId: $adminId, denyReason: $denyReason, published: $published, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RegistrationApplication &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.localUserId, localUserId) &&
+            const DeepCollectionEquality().equals(other.answer, answer) &&
+            const DeepCollectionEquality().equals(other.adminId, adminId) &&
+            const DeepCollectionEquality()
+                .equals(other.denyReason, denyReason) &&
+            const DeepCollectionEquality().equals(other.published, published) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(localUserId),
+      const DeepCollectionEquality().hash(answer),
+      const DeepCollectionEquality().hash(adminId),
+      const DeepCollectionEquality().hash(denyReason),
+      const DeepCollectionEquality().hash(published),
+      const DeepCollectionEquality().hash(instanceHost));
+
+  @JsonKey(ignore: true)
+  @override
+  _$RegistrationApplicationCopyWith<_RegistrationApplication> get copyWith =>
+      __$RegistrationApplicationCopyWithImpl<_RegistrationApplication>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_RegistrationApplicationToJson(this);
+  }
+}
+
+abstract class _RegistrationApplication extends RegistrationApplication {
+  const factory _RegistrationApplication(
+      {required int id,
+      required int localUserId,
+      required String answer,
+      int? adminId,
+      String? denyReason,
+      required DateTime published,
+      required String instanceHost}) = _$_RegistrationApplication;
+  const _RegistrationApplication._() : super._();
+
+  factory _RegistrationApplication.fromJson(Map<String, dynamic> json) =
+      _$_RegistrationApplication.fromJson;
+
+  @override
+  int get id;
+  @override
+  int get localUserId;
+  @override
+  String get answer;
+  @override
+  int? get adminId;
+  @override
+  String? get denyReason;
+  @override
+  DateTime get published;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$RegistrationApplicationCopyWith<_RegistrationApplication> get copyWith =>
       throw _privateConstructorUsedError;
 }

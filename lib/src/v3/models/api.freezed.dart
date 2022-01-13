@@ -1480,7 +1480,6 @@ class _$FullSiteViewTearOff {
   _FullSiteView call(
       {SiteView? siteView,
       required List<PersonViewSafe> admins,
-      required List<PersonViewSafe> banned,
       required int online,
       required String version,
       MyUserInfo? myUser,
@@ -1489,7 +1488,6 @@ class _$FullSiteViewTearOff {
     return _FullSiteView(
       siteView: siteView,
       admins: admins,
-      banned: banned,
       online: online,
       version: version,
       myUser: myUser,
@@ -1510,7 +1508,6 @@ const $FullSiteView = _$FullSiteViewTearOff();
 mixin _$FullSiteView {
   SiteView? get siteView => throw _privateConstructorUsedError;
   List<PersonViewSafe> get admins => throw _privateConstructorUsedError;
-  List<PersonViewSafe> get banned => throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
   String get version => throw _privateConstructorUsedError;
   MyUserInfo? get myUser => throw _privateConstructorUsedError;
@@ -1532,7 +1529,6 @@ abstract class $FullSiteViewCopyWith<$Res> {
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
-      List<PersonViewSafe> banned,
       int online,
       String version,
       MyUserInfo? myUser,
@@ -1556,7 +1552,6 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
   $Res call({
     Object? siteView = freezed,
     Object? admins = freezed,
-    Object? banned = freezed,
     Object? online = freezed,
     Object? version = freezed,
     Object? myUser = freezed,
@@ -1571,10 +1566,6 @@ class _$FullSiteViewCopyWithImpl<$Res> implements $FullSiteViewCopyWith<$Res> {
       admins: admins == freezed
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
-              as List<PersonViewSafe>,
-      banned: banned == freezed
-          ? _value.banned
-          : banned // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
       online: online == freezed
           ? _value.online
@@ -1644,7 +1635,6 @@ abstract class _$FullSiteViewCopyWith<$Res>
   $Res call(
       {SiteView? siteView,
       List<PersonViewSafe> admins,
-      List<PersonViewSafe> banned,
       int online,
       String version,
       MyUserInfo? myUser,
@@ -1673,7 +1663,6 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
   $Res call({
     Object? siteView = freezed,
     Object? admins = freezed,
-    Object? banned = freezed,
     Object? online = freezed,
     Object? version = freezed,
     Object? myUser = freezed,
@@ -1688,10 +1677,6 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
       admins: admins == freezed
           ? _value.admins
           : admins // ignore: cast_nullable_to_non_nullable
-              as List<PersonViewSafe>,
-      banned: banned == freezed
-          ? _value.banned
-          : banned // ignore: cast_nullable_to_non_nullable
               as List<PersonViewSafe>,
       online: online == freezed
           ? _value.online
@@ -1724,7 +1709,6 @@ class _$_FullSiteView extends _FullSiteView {
   const _$_FullSiteView(
       {this.siteView,
       required this.admins,
-      required this.banned,
       required this.online,
       required this.version,
       this.myUser,
@@ -1740,8 +1724,6 @@ class _$_FullSiteView extends _FullSiteView {
   @override
   final List<PersonViewSafe> admins;
   @override
-  final List<PersonViewSafe> banned;
-  @override
   final int online;
   @override
   final String version;
@@ -1754,7 +1736,7 @@ class _$_FullSiteView extends _FullSiteView {
 
   @override
   String toString() {
-    return 'FullSiteView(siteView: $siteView, admins: $admins, banned: $banned, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
+    return 'FullSiteView(siteView: $siteView, admins: $admins, online: $online, version: $version, myUser: $myUser, federatedInstances: $federatedInstances, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1764,7 +1746,6 @@ class _$_FullSiteView extends _FullSiteView {
             other is _FullSiteView &&
             const DeepCollectionEquality().equals(other.siteView, siteView) &&
             const DeepCollectionEquality().equals(other.admins, admins) &&
-            const DeepCollectionEquality().equals(other.banned, banned) &&
             const DeepCollectionEquality().equals(other.online, online) &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality().equals(other.myUser, myUser) &&
@@ -1779,7 +1760,6 @@ class _$_FullSiteView extends _FullSiteView {
       runtimeType,
       const DeepCollectionEquality().hash(siteView),
       const DeepCollectionEquality().hash(admins),
-      const DeepCollectionEquality().hash(banned),
       const DeepCollectionEquality().hash(online),
       const DeepCollectionEquality().hash(version),
       const DeepCollectionEquality().hash(myUser),
@@ -1801,7 +1781,6 @@ abstract class _FullSiteView extends FullSiteView {
   const factory _FullSiteView(
       {SiteView? siteView,
       required List<PersonViewSafe> admins,
-      required List<PersonViewSafe> banned,
       required int online,
       required String version,
       MyUserInfo? myUser,
@@ -1816,8 +1795,6 @@ abstract class _FullSiteView extends FullSiteView {
   SiteView? get siteView;
   @override
   List<PersonViewSafe> get admins;
-  @override
-  List<PersonViewSafe> get banned;
   @override
   int get online;
   @override
@@ -4456,11 +4433,13 @@ class _$UnreadCountTearOff {
   _UnreadCount call(
       {required int replies,
       required int mentions,
-      required int privateMessages}) {
+      required int privateMessages,
+      required String instanceHost}) {
     return _UnreadCount(
       replies: replies,
       mentions: mentions,
       privateMessages: privateMessages,
+      instanceHost: instanceHost,
     );
   }
 
@@ -4477,6 +4456,7 @@ mixin _$UnreadCount {
   int get replies => throw _privateConstructorUsedError;
   int get mentions => throw _privateConstructorUsedError;
   int get privateMessages => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4489,7 +4469,8 @@ abstract class $UnreadCountCopyWith<$Res> {
   factory $UnreadCountCopyWith(
           UnreadCount value, $Res Function(UnreadCount) then) =
       _$UnreadCountCopyWithImpl<$Res>;
-  $Res call({int replies, int mentions, int privateMessages});
+  $Res call(
+      {int replies, int mentions, int privateMessages, String instanceHost});
 }
 
 /// @nodoc
@@ -4505,6 +4486,7 @@ class _$UnreadCountCopyWithImpl<$Res> implements $UnreadCountCopyWith<$Res> {
     Object? replies = freezed,
     Object? mentions = freezed,
     Object? privateMessages = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       replies: replies == freezed
@@ -4519,6 +4501,10 @@ class _$UnreadCountCopyWithImpl<$Res> implements $UnreadCountCopyWith<$Res> {
           ? _value.privateMessages
           : privateMessages // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4530,7 +4516,8 @@ abstract class _$UnreadCountCopyWith<$Res>
           _UnreadCount value, $Res Function(_UnreadCount) then) =
       __$UnreadCountCopyWithImpl<$Res>;
   @override
-  $Res call({int replies, int mentions, int privateMessages});
+  $Res call(
+      {int replies, int mentions, int privateMessages, String instanceHost});
 }
 
 /// @nodoc
@@ -4548,6 +4535,7 @@ class __$UnreadCountCopyWithImpl<$Res> extends _$UnreadCountCopyWithImpl<$Res>
     Object? replies = freezed,
     Object? mentions = freezed,
     Object? privateMessages = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_UnreadCount(
       replies: replies == freezed
@@ -4562,6 +4550,10 @@ class __$UnreadCountCopyWithImpl<$Res> extends _$UnreadCountCopyWithImpl<$Res>
           ? _value.privateMessages
           : privateMessages // ignore: cast_nullable_to_non_nullable
               as int,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -4573,7 +4565,8 @@ class _$_UnreadCount extends _UnreadCount {
   const _$_UnreadCount(
       {required this.replies,
       required this.mentions,
-      required this.privateMessages})
+      required this.privateMessages,
+      required this.instanceHost})
       : super._();
 
   factory _$_UnreadCount.fromJson(Map<String, dynamic> json) =>
@@ -4585,10 +4578,12 @@ class _$_UnreadCount extends _UnreadCount {
   final int mentions;
   @override
   final int privateMessages;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'UnreadCount(replies: $replies, mentions: $mentions, privateMessages: $privateMessages)';
+    return 'UnreadCount(replies: $replies, mentions: $mentions, privateMessages: $privateMessages, instanceHost: $instanceHost)';
   }
 
   @override
@@ -4599,7 +4594,9 @@ class _$_UnreadCount extends _UnreadCount {
             const DeepCollectionEquality().equals(other.replies, replies) &&
             const DeepCollectionEquality().equals(other.mentions, mentions) &&
             const DeepCollectionEquality()
-                .equals(other.privateMessages, privateMessages));
+                .equals(other.privateMessages, privateMessages) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
@@ -4607,7 +4604,8 @@ class _$_UnreadCount extends _UnreadCount {
       runtimeType,
       const DeepCollectionEquality().hash(replies),
       const DeepCollectionEquality().hash(mentions),
-      const DeepCollectionEquality().hash(privateMessages));
+      const DeepCollectionEquality().hash(privateMessages),
+      const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
@@ -4624,7 +4622,8 @@ abstract class _UnreadCount extends UnreadCount {
   const factory _UnreadCount(
       {required int replies,
       required int mentions,
-      required int privateMessages}) = _$_UnreadCount;
+      required int privateMessages,
+      required String instanceHost}) = _$_UnreadCount;
   const _UnreadCount._() : super._();
 
   factory _UnreadCount.fromJson(Map<String, dynamic> json) =
@@ -4637,7 +4636,239 @@ abstract class _UnreadCount extends UnreadCount {
   @override
   int get privateMessages;
   @override
+  String get instanceHost;
+  @override
   @JsonKey(ignore: true)
   _$UnreadCountCopyWith<_UnreadCount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
+  return _LoginResponse.fromJson(json);
+}
+
+/// @nodoc
+class _$LoginResponseTearOff {
+  const _$LoginResponseTearOff();
+
+  _LoginResponse call(
+      {Jwt? jwt,
+      required bool verifyEmailSent,
+      required bool registrationCreated,
+      required String instanceHost}) {
+    return _LoginResponse(
+      jwt: jwt,
+      verifyEmailSent: verifyEmailSent,
+      registrationCreated: registrationCreated,
+      instanceHost: instanceHost,
+    );
+  }
+
+  LoginResponse fromJson(Map<String, Object?> json) {
+    return LoginResponse.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LoginResponse = _$LoginResponseTearOff();
+
+/// @nodoc
+mixin _$LoginResponse {
+  Jwt? get jwt => throw _privateConstructorUsedError;
+  bool get verifyEmailSent => throw _privateConstructorUsedError;
+  bool get registrationCreated => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LoginResponseCopyWith<LoginResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LoginResponseCopyWith<$Res> {
+  factory $LoginResponseCopyWith(
+          LoginResponse value, $Res Function(LoginResponse) then) =
+      _$LoginResponseCopyWithImpl<$Res>;
+  $Res call(
+      {Jwt? jwt,
+      bool verifyEmailSent,
+      bool registrationCreated,
+      String instanceHost});
+}
+
+/// @nodoc
+class _$LoginResponseCopyWithImpl<$Res>
+    implements $LoginResponseCopyWith<$Res> {
+  _$LoginResponseCopyWithImpl(this._value, this._then);
+
+  final LoginResponse _value;
+  // ignore: unused_field
+  final $Res Function(LoginResponse) _then;
+
+  @override
+  $Res call({
+    Object? jwt = freezed,
+    Object? verifyEmailSent = freezed,
+    Object? registrationCreated = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_value.copyWith(
+      jwt: jwt == freezed
+          ? _value.jwt
+          : jwt // ignore: cast_nullable_to_non_nullable
+              as Jwt?,
+      verifyEmailSent: verifyEmailSent == freezed
+          ? _value.verifyEmailSent
+          : verifyEmailSent // ignore: cast_nullable_to_non_nullable
+              as bool,
+      registrationCreated: registrationCreated == freezed
+          ? _value.registrationCreated
+          : registrationCreated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$LoginResponseCopyWith<$Res>
+    implements $LoginResponseCopyWith<$Res> {
+  factory _$LoginResponseCopyWith(
+          _LoginResponse value, $Res Function(_LoginResponse) then) =
+      __$LoginResponseCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Jwt? jwt,
+      bool verifyEmailSent,
+      bool registrationCreated,
+      String instanceHost});
+}
+
+/// @nodoc
+class __$LoginResponseCopyWithImpl<$Res>
+    extends _$LoginResponseCopyWithImpl<$Res>
+    implements _$LoginResponseCopyWith<$Res> {
+  __$LoginResponseCopyWithImpl(
+      _LoginResponse _value, $Res Function(_LoginResponse) _then)
+      : super(_value, (v) => _then(v as _LoginResponse));
+
+  @override
+  _LoginResponse get _value => super._value as _LoginResponse;
+
+  @override
+  $Res call({
+    Object? jwt = freezed,
+    Object? verifyEmailSent = freezed,
+    Object? registrationCreated = freezed,
+    Object? instanceHost = freezed,
+  }) {
+    return _then(_LoginResponse(
+      jwt: jwt == freezed
+          ? _value.jwt
+          : jwt // ignore: cast_nullable_to_non_nullable
+              as Jwt?,
+      verifyEmailSent: verifyEmailSent == freezed
+          ? _value.verifyEmailSent
+          : verifyEmailSent // ignore: cast_nullable_to_non_nullable
+              as bool,
+      registrationCreated: registrationCreated == freezed
+          ? _value.registrationCreated
+          : registrationCreated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake)
+class _$_LoginResponse extends _LoginResponse {
+  const _$_LoginResponse(
+      {this.jwt,
+      required this.verifyEmailSent,
+      required this.registrationCreated,
+      required this.instanceHost})
+      : super._();
+
+  factory _$_LoginResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_LoginResponseFromJson(json);
+
+  @override
+  final Jwt? jwt;
+  @override
+  final bool verifyEmailSent;
+  @override
+  final bool registrationCreated;
+  @override
+  final String instanceHost;
+
+  @override
+  String toString() {
+    return 'LoginResponse(jwt: $jwt, verifyEmailSent: $verifyEmailSent, registrationCreated: $registrationCreated, instanceHost: $instanceHost)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LoginResponse &&
+            const DeepCollectionEquality().equals(other.jwt, jwt) &&
+            const DeepCollectionEquality()
+                .equals(other.verifyEmailSent, verifyEmailSent) &&
+            const DeepCollectionEquality()
+                .equals(other.registrationCreated, registrationCreated) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(jwt),
+      const DeepCollectionEquality().hash(verifyEmailSent),
+      const DeepCollectionEquality().hash(registrationCreated),
+      const DeepCollectionEquality().hash(instanceHost));
+
+  @JsonKey(ignore: true)
+  @override
+  _$LoginResponseCopyWith<_LoginResponse> get copyWith =>
+      __$LoginResponseCopyWithImpl<_LoginResponse>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LoginResponseToJson(this);
+  }
+}
+
+abstract class _LoginResponse extends LoginResponse {
+  const factory _LoginResponse(
+      {Jwt? jwt,
+      required bool verifyEmailSent,
+      required bool registrationCreated,
+      required String instanceHost}) = _$_LoginResponse;
+  const _LoginResponse._() : super._();
+
+  factory _LoginResponse.fromJson(Map<String, dynamic> json) =
+      _$_LoginResponse.fromJson;
+
+  @override
+  Jwt? get jwt;
+  @override
+  bool get verifyEmailSent;
+  @override
+  bool get registrationCreated;
+  @override
+  String get instanceHost;
+  @override
+  @JsonKey(ignore: true)
+  _$LoginResponseCopyWith<_LoginResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }

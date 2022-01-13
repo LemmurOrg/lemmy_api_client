@@ -26,6 +26,8 @@ _$_PersonSafe _$$_PersonSafeFromJson(Map<String, dynamic> json) =>
       matrixUserId: json['matrix_user_id'] as String?,
       admin: json['admin'] as bool,
       botAccount: json['bot_account'] as bool,
+      banExpires: const ForceUtcDateTimeNullable()
+          .fromJson(json['ban_expires'] as String?),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -48,6 +50,8 @@ Map<String, dynamic> _$$_PersonSafeToJson(_$_PersonSafe instance) =>
       'matrix_user_id': instance.matrixUserId,
       'admin': instance.admin,
       'bot_account': instance.botAccount,
+      'ban_expires':
+          const ForceUtcDateTimeNullable().toJson(instance.banExpires),
       'instance_host': instance.instanceHost,
     };
 
@@ -68,6 +72,8 @@ _$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
       showReadPosts: json['show_read_posts'] as bool,
       showBotAccounts: json['show_bot_accounts'] as bool,
       showNewPostNotifs: json['show_new_post_notifs'] as bool,
+      emailVerified: json['email_verified'] as bool,
+      acceptedApplication: json['accepted_application'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
@@ -89,6 +95,8 @@ Map<String, dynamic> _$$_LocalUserSettingsToJson(
       'show_read_posts': instance.showReadPosts,
       'show_bot_accounts': instance.showBotAccounts,
       'show_new_post_notifs': instance.showNewPostNotifs,
+      'email_verified': instance.emailVerified,
+      'accepted_application': instance.acceptedApplication,
       'instance_host': instance.instanceHost,
     };
 
@@ -107,6 +115,10 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       communityCreationAdminOnly: json['community_creation_admin_only'] as bool,
       icon: json['icon'] as String?,
       banner: json['banner'] as String?,
+      requireEmailVerification: json['require_email_verification'] as bool,
+      requireApplication: json['require_application'] as bool,
+      applicationQuestion: json['application_question'] as String?,
+      privateInstance: json['private_instance'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
@@ -124,6 +136,10 @@ Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'community_creation_admin_only': instance.communityCreationAdminOnly,
       'icon': instance.icon,
       'banner': instance.banner,
+      'require_email_verification': instance.requireEmailVerification,
+      'require_application': instance.requireApplication,
+      'application_question': instance.applicationQuestion,
+      'private_instance': instance.privateInstance,
       'instance_host': instance.instanceHost,
     };
 
@@ -601,6 +617,30 @@ Map<String, dynamic> _$$_PersonMentionToJson(_$_PersonMention instance) =>
       'recipient_id': instance.recipientId,
       'comment_id': instance.commentId,
       'read': instance.read,
+      'published': const ForceUtcDateTime().toJson(instance.published),
+      'instance_host': instance.instanceHost,
+    };
+
+_$_RegistrationApplication _$$_RegistrationApplicationFromJson(
+        Map<String, dynamic> json) =>
+    _$_RegistrationApplication(
+      id: json['id'] as int,
+      localUserId: json['local_user_id'] as int,
+      answer: json['answer'] as String,
+      adminId: json['admin_id'] as int?,
+      denyReason: json['deny_reason'] as String?,
+      published: const ForceUtcDateTime().fromJson(json['published'] as String),
+      instanceHost: json['instance_host'] as String,
+    );
+
+Map<String, dynamic> _$$_RegistrationApplicationToJson(
+        _$_RegistrationApplication instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'local_user_id': instance.localUserId,
+      'answer': instance.answer,
+      'admin_id': instance.adminId,
+      'deny_reason': instance.denyReason,
       'published': const ForceUtcDateTime().toJson(instance.published),
       'instance_host': instance.instanceHost,
     };

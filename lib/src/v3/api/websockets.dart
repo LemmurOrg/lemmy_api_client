@@ -312,6 +312,25 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'GetUnreadCount': (json) => WsEventGetUnreadCount(
         const GetUnreadCount(auth: '').responseFactory(json),
       ),
+  'GetBannedPersons': (json) => WsEventGetBannedPersons(
+        const GetBannedPersons(auth: '').responseFactory(json),
+      ),
+  'VerifyEmail': (json) => WsEventVerifyEmail(
+        const VerifyEmail(token: '').responseFactory(json),
+      ),
+  'GetUnreadRegistrationApplicationCount': (json) =>
+      WsEventGetUnreadRegistrationApplicationCount(
+        const GetUnreadRegistrationApplicationCount(auth: '')
+            .responseFactory(json),
+      ),
+  'ListRegistrationApplications': (json) => WsEventListRegistrationApplications(
+        const ListRegistrationApplications(auth: '').responseFactory(json),
+      ),
+  'ApproveRegistrationApplication': (json) =>
+      WsEventApproveRegistrationApplication(
+        const ApproveRegistrationApplication(approve: true, id: 0, auth: '')
+            .responseFactory(json),
+      ),
 };
 
 class WsEvent<T> {
@@ -489,8 +508,8 @@ class WsEventSaveSiteConfig extends WsEvent<String> {
   const WsEventSaveSiteConfig(String data) : super(data);
 }
 
-class WsEventLogin extends WsEvent<Jwt> {
-  const WsEventLogin(Jwt data) : super(data);
+class WsEventLogin extends WsEvent<LoginResponse> {
+  const WsEventLogin(LoginResponse data) : super(data);
 }
 
 class WsEventRegister extends WsEvent<Jwt> {
@@ -537,8 +556,8 @@ class WsEventMarkPersonMentionAsRead extends WsEvent<PersonMentionView> {
   const WsEventMarkPersonMentionAsRead(PersonMentionView data) : super(data);
 }
 
-class WsEventDeleteAccount extends WsEvent<Jwt> {
-  const WsEventDeleteAccount(Jwt data) : super(data);
+class WsEventDeleteAccount extends WsEvent<void> {
+  const WsEventDeleteAccount(void data) : super(data);
 }
 
 class WsEventPasswordReset extends WsEvent<Null> {
@@ -591,4 +610,29 @@ class WsEventBlockCommunity extends WsEvent<BlockedCommunity> {
 
 class WsEventGetUnreadCount extends WsEvent<UnreadCount> {
   const WsEventGetUnreadCount(UnreadCount data) : super(data);
+}
+
+class WsEventGetBannedPersons extends WsEvent<List<PersonViewSafe>> {
+  const WsEventGetBannedPersons(List<PersonViewSafe> data) : super(data);
+}
+
+class WsEventVerifyEmail extends WsEvent<void> {
+  const WsEventVerifyEmail(void data) : super(data);
+}
+
+class WsEventGetUnreadRegistrationApplicationCount extends WsEvent<int> {
+  const WsEventGetUnreadRegistrationApplicationCount(int data) : super(data);
+}
+
+class WsEventListRegistrationApplications
+    extends WsEvent<List<RegistrationApplicationView>> {
+  const WsEventListRegistrationApplications(
+    List<RegistrationApplicationView> data,
+  ) : super(data);
+}
+
+class WsEventApproveRegistrationApplication
+    extends WsEvent<RegistrationApplicationView> {
+  const WsEventApproveRegistrationApplication(RegistrationApplicationView data)
+      : super(data);
 }

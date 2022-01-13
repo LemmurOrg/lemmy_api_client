@@ -194,7 +194,8 @@ class _$RegisterTearOff {
       required bool showNsfw,
       String? captchaUuid,
       String? captchaAnswer,
-      String? honeypot}) {
+      String? honeypot,
+      String? answer}) {
     return _Register(
       username: username,
       email: email,
@@ -204,6 +205,7 @@ class _$RegisterTearOff {
       captchaUuid: captchaUuid,
       captchaAnswer: captchaAnswer,
       honeypot: honeypot,
+      answer: answer,
     );
   }
 
@@ -225,6 +227,7 @@ mixin _$Register {
   String? get captchaUuid => throw _privateConstructorUsedError;
   String? get captchaAnswer => throw _privateConstructorUsedError;
   String? get honeypot => throw _privateConstructorUsedError;
+  String? get answer => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -244,7 +247,8 @@ abstract class $RegisterCopyWith<$Res> {
       bool showNsfw,
       String? captchaUuid,
       String? captchaAnswer,
-      String? honeypot});
+      String? honeypot,
+      String? answer});
 }
 
 /// @nodoc
@@ -265,6 +269,7 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
     Object? honeypot = freezed,
+    Object? answer = freezed,
   }) {
     return _then(_value.copyWith(
       username: username == freezed
@@ -299,6 +304,10 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
               as String?,
+      answer: answer == freezed
+          ? _value.answer
+          : answer // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -316,7 +325,8 @@ abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
       bool showNsfw,
       String? captchaUuid,
       String? captchaAnswer,
-      String? honeypot});
+      String? honeypot,
+      String? answer});
 }
 
 /// @nodoc
@@ -338,6 +348,7 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
     Object? captchaUuid = freezed,
     Object? captchaAnswer = freezed,
     Object? honeypot = freezed,
+    Object? answer = freezed,
   }) {
     return _then(_Register(
       username: username == freezed
@@ -372,6 +383,10 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
           ? _value.honeypot
           : honeypot // ignore: cast_nullable_to_non_nullable
               as String?,
+      answer: answer == freezed
+          ? _value.answer
+          : answer // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -388,7 +403,8 @@ class _$_Register extends _Register {
       required this.showNsfw,
       this.captchaUuid,
       this.captchaAnswer,
-      this.honeypot})
+      this.honeypot,
+      this.answer})
       : super._();
 
   factory _$_Register.fromJson(Map<String, dynamic> json) =>
@@ -410,10 +426,12 @@ class _$_Register extends _Register {
   final String? captchaAnswer;
   @override
   final String? honeypot;
+  @override
+  final String? answer;
 
   @override
   String toString() {
-    return 'Register(username: $username, email: $email, password: $password, passwordVerify: $passwordVerify, showNsfw: $showNsfw, captchaUuid: $captchaUuid, captchaAnswer: $captchaAnswer, honeypot: $honeypot)';
+    return 'Register(username: $username, email: $email, password: $password, passwordVerify: $passwordVerify, showNsfw: $showNsfw, captchaUuid: $captchaUuid, captchaAnswer: $captchaAnswer, honeypot: $honeypot, answer: $answer)';
   }
 
   @override
@@ -431,7 +449,8 @@ class _$_Register extends _Register {
                 .equals(other.captchaUuid, captchaUuid) &&
             const DeepCollectionEquality()
                 .equals(other.captchaAnswer, captchaAnswer) &&
-            const DeepCollectionEquality().equals(other.honeypot, honeypot));
+            const DeepCollectionEquality().equals(other.honeypot, honeypot) &&
+            const DeepCollectionEquality().equals(other.answer, answer));
   }
 
   @override
@@ -444,7 +463,8 @@ class _$_Register extends _Register {
       const DeepCollectionEquality().hash(showNsfw),
       const DeepCollectionEquality().hash(captchaUuid),
       const DeepCollectionEquality().hash(captchaAnswer),
-      const DeepCollectionEquality().hash(honeypot));
+      const DeepCollectionEquality().hash(honeypot),
+      const DeepCollectionEquality().hash(answer));
 
   @JsonKey(ignore: true)
   @override
@@ -466,7 +486,8 @@ abstract class _Register extends Register {
       required bool showNsfw,
       String? captchaUuid,
       String? captchaAnswer,
-      String? honeypot}) = _$_Register;
+      String? honeypot,
+      String? answer}) = _$_Register;
   const _Register._() : super._();
 
   factory _Register.fromJson(Map<String, dynamic> json) = _$_Register.fromJson;
@@ -487,6 +508,8 @@ abstract class _Register extends Register {
   String? get captchaAnswer;
   @override
   String? get honeypot;
+  @override
+  String? get answer;
   @override
   @JsonKey(ignore: true)
   _$RegisterCopyWith<_Register> get copyWith =>
@@ -5066,5 +5089,305 @@ abstract class _GetReportCount extends GetReportCount {
   @override
   @JsonKey(ignore: true)
   _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+GetBannedPersons _$GetBannedPersonsFromJson(Map<String, dynamic> json) {
+  return _GetBannedPersons.fromJson(json);
+}
+
+/// @nodoc
+class _$GetBannedPersonsTearOff {
+  const _$GetBannedPersonsTearOff();
+
+  _GetBannedPersons call({required String auth}) {
+    return _GetBannedPersons(
+      auth: auth,
+    );
+  }
+
+  GetBannedPersons fromJson(Map<String, Object?> json) {
+    return GetBannedPersons.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $GetBannedPersons = _$GetBannedPersonsTearOff();
+
+/// @nodoc
+mixin _$GetBannedPersons {
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetBannedPersonsCopyWith<GetBannedPersons> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetBannedPersonsCopyWith<$Res> {
+  factory $GetBannedPersonsCopyWith(
+          GetBannedPersons value, $Res Function(GetBannedPersons) then) =
+      _$GetBannedPersonsCopyWithImpl<$Res>;
+  $Res call({String auth});
+}
+
+/// @nodoc
+class _$GetBannedPersonsCopyWithImpl<$Res>
+    implements $GetBannedPersonsCopyWith<$Res> {
+  _$GetBannedPersonsCopyWithImpl(this._value, this._then);
+
+  final GetBannedPersons _value;
+  // ignore: unused_field
+  final $Res Function(GetBannedPersons) _then;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetBannedPersonsCopyWith<$Res>
+    implements $GetBannedPersonsCopyWith<$Res> {
+  factory _$GetBannedPersonsCopyWith(
+          _GetBannedPersons value, $Res Function(_GetBannedPersons) then) =
+      __$GetBannedPersonsCopyWithImpl<$Res>;
+  @override
+  $Res call({String auth});
+}
+
+/// @nodoc
+class __$GetBannedPersonsCopyWithImpl<$Res>
+    extends _$GetBannedPersonsCopyWithImpl<$Res>
+    implements _$GetBannedPersonsCopyWith<$Res> {
+  __$GetBannedPersonsCopyWithImpl(
+      _GetBannedPersons _value, $Res Function(_GetBannedPersons) _then)
+      : super(_value, (v) => _then(v as _GetBannedPersons));
+
+  @override
+  _GetBannedPersons get _value => super._value as _GetBannedPersons;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_GetBannedPersons(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_GetBannedPersons extends _GetBannedPersons {
+  const _$_GetBannedPersons({required this.auth}) : super._();
+
+  factory _$_GetBannedPersons.fromJson(Map<String, dynamic> json) =>
+      _$$_GetBannedPersonsFromJson(json);
+
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'GetBannedPersons(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _GetBannedPersons &&
+            const DeepCollectionEquality().equals(other.auth, auth));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
+      __$GetBannedPersonsCopyWithImpl<_GetBannedPersons>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetBannedPersonsToJson(this);
+  }
+}
+
+abstract class _GetBannedPersons extends GetBannedPersons {
+  const factory _GetBannedPersons({required String auth}) = _$_GetBannedPersons;
+  const _GetBannedPersons._() : super._();
+
+  factory _GetBannedPersons.fromJson(Map<String, dynamic> json) =
+      _$_GetBannedPersons.fromJson;
+
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+VerifyEmail _$VerifyEmailFromJson(Map<String, dynamic> json) {
+  return _VerifyEmail.fromJson(json);
+}
+
+/// @nodoc
+class _$VerifyEmailTearOff {
+  const _$VerifyEmailTearOff();
+
+  _VerifyEmail call({required String token}) {
+    return _VerifyEmail(
+      token: token,
+    );
+  }
+
+  VerifyEmail fromJson(Map<String, Object?> json) {
+    return VerifyEmail.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $VerifyEmail = _$VerifyEmailTearOff();
+
+/// @nodoc
+mixin _$VerifyEmail {
+  String get token => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $VerifyEmailCopyWith<VerifyEmail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $VerifyEmailCopyWith<$Res> {
+  factory $VerifyEmailCopyWith(
+          VerifyEmail value, $Res Function(VerifyEmail) then) =
+      _$VerifyEmailCopyWithImpl<$Res>;
+  $Res call({String token});
+}
+
+/// @nodoc
+class _$VerifyEmailCopyWithImpl<$Res> implements $VerifyEmailCopyWith<$Res> {
+  _$VerifyEmailCopyWithImpl(this._value, this._then);
+
+  final VerifyEmail _value;
+  // ignore: unused_field
+  final $Res Function(VerifyEmail) _then;
+
+  @override
+  $Res call({
+    Object? token = freezed,
+  }) {
+    return _then(_value.copyWith(
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$VerifyEmailCopyWith<$Res>
+    implements $VerifyEmailCopyWith<$Res> {
+  factory _$VerifyEmailCopyWith(
+          _VerifyEmail value, $Res Function(_VerifyEmail) then) =
+      __$VerifyEmailCopyWithImpl<$Res>;
+  @override
+  $Res call({String token});
+}
+
+/// @nodoc
+class __$VerifyEmailCopyWithImpl<$Res> extends _$VerifyEmailCopyWithImpl<$Res>
+    implements _$VerifyEmailCopyWith<$Res> {
+  __$VerifyEmailCopyWithImpl(
+      _VerifyEmail _value, $Res Function(_VerifyEmail) _then)
+      : super(_value, (v) => _then(v as _VerifyEmail));
+
+  @override
+  _VerifyEmail get _value => super._value as _VerifyEmail;
+
+  @override
+  $Res call({
+    Object? token = freezed,
+  }) {
+    return _then(_VerifyEmail(
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_VerifyEmail extends _VerifyEmail {
+  const _$_VerifyEmail({required this.token}) : super._();
+
+  factory _$_VerifyEmail.fromJson(Map<String, dynamic> json) =>
+      _$$_VerifyEmailFromJson(json);
+
+  @override
+  final String token;
+
+  @override
+  String toString() {
+    return 'VerifyEmail(token: $token)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _VerifyEmail &&
+            const DeepCollectionEquality().equals(other.token, token));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(token));
+
+  @JsonKey(ignore: true)
+  @override
+  _$VerifyEmailCopyWith<_VerifyEmail> get copyWith =>
+      __$VerifyEmailCopyWithImpl<_VerifyEmail>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_VerifyEmailToJson(this);
+  }
+}
+
+abstract class _VerifyEmail extends VerifyEmail {
+  const factory _VerifyEmail({required String token}) = _$_VerifyEmail;
+  const _VerifyEmail._() : super._();
+
+  factory _VerifyEmail.fromJson(Map<String, dynamic> json) =
+      _$_VerifyEmail.fromJson;
+
+  @override
+  String get token;
+  @override
+  @JsonKey(ignore: true)
+  _$VerifyEmailCopyWith<_VerifyEmail> get copyWith =>
       throw _privateConstructorUsedError;
 }

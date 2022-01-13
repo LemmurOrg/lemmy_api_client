@@ -384,12 +384,18 @@ GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
 class _$GetModlogTearOff {
   const _$GetModlogTearOff();
 
-  _GetModlog call({int? modPersonId, int? communityId, int? page, int? limit}) {
+  _GetModlog call(
+      {int? modPersonId,
+      int? communityId,
+      int? page,
+      int? limit,
+      String? auth}) {
     return _GetModlog(
       modPersonId: modPersonId,
       communityId: communityId,
       page: page,
       limit: limit,
+      auth: auth,
     );
   }
 
@@ -407,6 +413,7 @@ mixin _$GetModlog {
   int? get communityId => throw _privateConstructorUsedError;
   int? get page => throw _privateConstructorUsedError;
   int? get limit => throw _privateConstructorUsedError;
+  String? get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -418,7 +425,12 @@ mixin _$GetModlog {
 abstract class $GetModlogCopyWith<$Res> {
   factory $GetModlogCopyWith(GetModlog value, $Res Function(GetModlog) then) =
       _$GetModlogCopyWithImpl<$Res>;
-  $Res call({int? modPersonId, int? communityId, int? page, int? limit});
+  $Res call(
+      {int? modPersonId,
+      int? communityId,
+      int? page,
+      int? limit,
+      String? auth});
 }
 
 /// @nodoc
@@ -435,6 +447,7 @@ class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
     Object? communityId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
       modPersonId: modPersonId == freezed
@@ -453,6 +466,10 @@ class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -463,7 +480,12 @@ abstract class _$GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
           _GetModlog value, $Res Function(_GetModlog) then) =
       __$GetModlogCopyWithImpl<$Res>;
   @override
-  $Res call({int? modPersonId, int? communityId, int? page, int? limit});
+  $Res call(
+      {int? modPersonId,
+      int? communityId,
+      int? page,
+      int? limit,
+      String? auth});
 }
 
 /// @nodoc
@@ -481,6 +503,7 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
     Object? communityId = freezed,
     Object? page = freezed,
     Object? limit = freezed,
+    Object? auth = freezed,
   }) {
     return _then(_GetModlog(
       modPersonId: modPersonId == freezed
@@ -499,6 +522,10 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
           ? _value.limit
           : limit // ignore: cast_nullable_to_non_nullable
               as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -508,7 +535,7 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
 class _$_GetModlog extends _GetModlog {
   const _$_GetModlog(
-      {this.modPersonId, this.communityId, this.page, this.limit})
+      {this.modPersonId, this.communityId, this.page, this.limit, this.auth})
       : super._();
 
   factory _$_GetModlog.fromJson(Map<String, dynamic> json) =>
@@ -522,10 +549,12 @@ class _$_GetModlog extends _GetModlog {
   final int? page;
   @override
   final int? limit;
+  @override
+  final String? auth;
 
   @override
   String toString() {
-    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, page: $page, limit: $limit)';
+    return 'GetModlog(modPersonId: $modPersonId, communityId: $communityId, page: $page, limit: $limit, auth: $auth)';
   }
 
   @override
@@ -538,7 +567,8 @@ class _$_GetModlog extends _GetModlog {
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.page, page) &&
-            const DeepCollectionEquality().equals(other.limit, limit));
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
@@ -547,7 +577,8 @@ class _$_GetModlog extends _GetModlog {
       const DeepCollectionEquality().hash(modPersonId),
       const DeepCollectionEquality().hash(communityId),
       const DeepCollectionEquality().hash(page),
-      const DeepCollectionEquality().hash(limit));
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
@@ -565,7 +596,8 @@ abstract class _GetModlog extends GetModlog {
       {int? modPersonId,
       int? communityId,
       int? page,
-      int? limit}) = _$_GetModlog;
+      int? limit,
+      String? auth}) = _$_GetModlog;
   const _GetModlog._() : super._();
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
@@ -579,6 +611,8 @@ abstract class _GetModlog extends GetModlog {
   int? get page;
   @override
   int? get limit;
+  @override
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$GetModlogCopyWith<_GetModlog> get copyWith =>
@@ -603,6 +637,10 @@ class _$CreateSiteTearOff {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       required String auth}) {
     return _CreateSite(
       name: name,
@@ -614,6 +652,10 @@ class _$CreateSiteTearOff {
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
       communityCreationAdminOnly: communityCreationAdminOnly,
+      requireEmailVerification: requireEmailVerification,
+      requireApplication: requireApplication,
+      applicationQuestion: applicationQuestion,
+      privateInstance: privateInstance,
       auth: auth,
     );
   }
@@ -637,6 +679,10 @@ mixin _$CreateSite {
   bool? get openRegistration => throw _privateConstructorUsedError;
   bool? get enableNsfw => throw _privateConstructorUsedError;
   bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool? get requireEmailVerification => throw _privateConstructorUsedError;
+  bool? get requireApplication => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
+  bool? get privateInstance => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -660,6 +706,10 @@ abstract class $CreateSiteCopyWith<$Res> {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       String auth});
 }
 
@@ -682,6 +732,10 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -721,6 +775,22 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      requireEmailVerification: requireEmailVerification == freezed
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      requireApplication: requireApplication == freezed
+          ? _value.requireApplication
+          : requireApplication // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      applicationQuestion: applicationQuestion == freezed
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      privateInstance: privateInstance == freezed
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -745,6 +815,10 @@ abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       String auth});
 }
 
@@ -769,6 +843,10 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
     Object? auth = freezed,
   }) {
     return _then(_CreateSite(
@@ -808,6 +886,22 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      requireEmailVerification: requireEmailVerification == freezed
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      requireApplication: requireApplication == freezed
+          ? _value.requireApplication
+          : requireApplication // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      applicationQuestion: applicationQuestion == freezed
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      privateInstance: privateInstance == freezed
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -830,6 +924,10 @@ class _$_CreateSite extends _CreateSite {
       this.openRegistration,
       this.enableNsfw,
       this.communityCreationAdminOnly,
+      this.requireEmailVerification,
+      this.requireApplication,
+      this.applicationQuestion,
+      this.privateInstance,
       required this.auth})
       : super._();
 
@@ -855,11 +953,19 @@ class _$_CreateSite extends _CreateSite {
   @override
   final bool? communityCreationAdminOnly;
   @override
+  final bool? requireEmailVerification;
+  @override
+  final bool? requireApplication;
+  @override
+  final String? applicationQuestion;
+  @override
+  final bool? privateInstance;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
+    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth)';
   }
 
   @override
@@ -881,6 +987,14 @@ class _$_CreateSite extends _CreateSite {
                 .equals(other.enableNsfw, enableNsfw) &&
             const DeepCollectionEquality().equals(
                 other.communityCreationAdminOnly, communityCreationAdminOnly) &&
+            const DeepCollectionEquality().equals(
+                other.requireEmailVerification, requireEmailVerification) &&
+            const DeepCollectionEquality()
+                .equals(other.requireApplication, requireApplication) &&
+            const DeepCollectionEquality()
+                .equals(other.applicationQuestion, applicationQuestion) &&
+            const DeepCollectionEquality()
+                .equals(other.privateInstance, privateInstance) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -896,6 +1010,10 @@ class _$_CreateSite extends _CreateSite {
       const DeepCollectionEquality().hash(openRegistration),
       const DeepCollectionEquality().hash(enableNsfw),
       const DeepCollectionEquality().hash(communityCreationAdminOnly),
+      const DeepCollectionEquality().hash(requireEmailVerification),
+      const DeepCollectionEquality().hash(requireApplication),
+      const DeepCollectionEquality().hash(applicationQuestion),
+      const DeepCollectionEquality().hash(privateInstance),
       const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
@@ -920,6 +1038,10 @@ abstract class _CreateSite extends CreateSite {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       required String auth}) = _$_CreateSite;
   const _CreateSite._() : super._();
 
@@ -944,6 +1066,14 @@ abstract class _CreateSite extends CreateSite {
   bool? get enableNsfw;
   @override
   bool? get communityCreationAdminOnly;
+  @override
+  bool? get requireEmailVerification;
+  @override
+  bool? get requireApplication;
+  @override
+  String? get applicationQuestion;
+  @override
+  bool? get privateInstance;
   @override
   String get auth;
   @override
@@ -970,6 +1100,10 @@ class _$EditSiteTearOff {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       required String auth}) {
     return _EditSite(
       name: name,
@@ -981,6 +1115,10 @@ class _$EditSiteTearOff {
       openRegistration: openRegistration,
       enableNsfw: enableNsfw,
       communityCreationAdminOnly: communityCreationAdminOnly,
+      requireEmailVerification: requireEmailVerification,
+      requireApplication: requireApplication,
+      applicationQuestion: applicationQuestion,
+      privateInstance: privateInstance,
       auth: auth,
     );
   }
@@ -1004,6 +1142,10 @@ mixin _$EditSite {
   bool? get openRegistration => throw _privateConstructorUsedError;
   bool? get enableNsfw => throw _privateConstructorUsedError;
   bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool? get requireEmailVerification => throw _privateConstructorUsedError;
+  bool? get requireApplication => throw _privateConstructorUsedError;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
+  bool? get privateInstance => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1026,6 +1168,10 @@ abstract class $EditSiteCopyWith<$Res> {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       String auth});
 }
 
@@ -1048,6 +1194,10 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1087,6 +1237,22 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      requireEmailVerification: requireEmailVerification == freezed
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      requireApplication: requireApplication == freezed
+          ? _value.requireApplication
+          : requireApplication // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      applicationQuestion: applicationQuestion == freezed
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      privateInstance: privateInstance == freezed
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1110,6 +1276,10 @@ abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       String auth});
 }
 
@@ -1133,6 +1303,10 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
     Object? openRegistration = freezed,
     Object? enableNsfw = freezed,
     Object? communityCreationAdminOnly = freezed,
+    Object? requireEmailVerification = freezed,
+    Object? requireApplication = freezed,
+    Object? applicationQuestion = freezed,
+    Object? privateInstance = freezed,
     Object? auth = freezed,
   }) {
     return _then(_EditSite(
@@ -1172,6 +1346,22 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
           ? _value.communityCreationAdminOnly
           : communityCreationAdminOnly // ignore: cast_nullable_to_non_nullable
               as bool?,
+      requireEmailVerification: requireEmailVerification == freezed
+          ? _value.requireEmailVerification
+          : requireEmailVerification // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      requireApplication: requireApplication == freezed
+          ? _value.requireApplication
+          : requireApplication // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      applicationQuestion: applicationQuestion == freezed
+          ? _value.applicationQuestion
+          : applicationQuestion // ignore: cast_nullable_to_non_nullable
+              as String?,
+      privateInstance: privateInstance == freezed
+          ? _value.privateInstance
+          : privateInstance // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1194,6 +1384,10 @@ class _$_EditSite extends _EditSite {
       this.openRegistration,
       this.enableNsfw,
       this.communityCreationAdminOnly,
+      this.requireEmailVerification,
+      this.requireApplication,
+      this.applicationQuestion,
+      this.privateInstance,
       required this.auth})
       : super._();
 
@@ -1219,11 +1413,19 @@ class _$_EditSite extends _EditSite {
   @override
   final bool? communityCreationAdminOnly;
   @override
+  final bool? requireEmailVerification;
+  @override
+  final bool? requireApplication;
+  @override
+  final String? applicationQuestion;
+  @override
+  final bool? privateInstance;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, auth: $auth)';
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth)';
   }
 
   @override
@@ -1245,6 +1447,14 @@ class _$_EditSite extends _EditSite {
                 .equals(other.enableNsfw, enableNsfw) &&
             const DeepCollectionEquality().equals(
                 other.communityCreationAdminOnly, communityCreationAdminOnly) &&
+            const DeepCollectionEquality().equals(
+                other.requireEmailVerification, requireEmailVerification) &&
+            const DeepCollectionEquality()
+                .equals(other.requireApplication, requireApplication) &&
+            const DeepCollectionEquality()
+                .equals(other.applicationQuestion, applicationQuestion) &&
+            const DeepCollectionEquality()
+                .equals(other.privateInstance, privateInstance) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -1260,6 +1470,10 @@ class _$_EditSite extends _EditSite {
       const DeepCollectionEquality().hash(openRegistration),
       const DeepCollectionEquality().hash(enableNsfw),
       const DeepCollectionEquality().hash(communityCreationAdminOnly),
+      const DeepCollectionEquality().hash(requireEmailVerification),
+      const DeepCollectionEquality().hash(requireApplication),
+      const DeepCollectionEquality().hash(applicationQuestion),
+      const DeepCollectionEquality().hash(privateInstance),
       const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
@@ -1284,6 +1498,10 @@ abstract class _EditSite extends EditSite {
       bool? openRegistration,
       bool? enableNsfw,
       bool? communityCreationAdminOnly,
+      bool? requireEmailVerification,
+      bool? requireApplication,
+      String? applicationQuestion,
+      bool? privateInstance,
       required String auth}) = _$_EditSite;
   const _EditSite._() : super._();
 
@@ -1307,6 +1525,14 @@ abstract class _EditSite extends EditSite {
   bool? get enableNsfw;
   @override
   bool? get communityCreationAdminOnly;
+  @override
+  bool? get requireEmailVerification;
+  @override
+  bool? get requireApplication;
+  @override
+  String? get applicationQuestion;
+  @override
+  bool? get privateInstance;
   @override
   String get auth;
   @override
@@ -2121,4 +2347,623 @@ abstract class _ResolveObject extends ResolveObject {
   @JsonKey(ignore: true)
   _$ResolveObjectCopyWith<_ResolveObject> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+GetUnreadRegistrationApplicationCount
+    _$GetUnreadRegistrationApplicationCountFromJson(Map<String, dynamic> json) {
+  return _GetUnreadRegistrationApplicationCount.fromJson(json);
+}
+
+/// @nodoc
+class _$GetUnreadRegistrationApplicationCountTearOff {
+  const _$GetUnreadRegistrationApplicationCountTearOff();
+
+  _GetUnreadRegistrationApplicationCount call({required String auth}) {
+    return _GetUnreadRegistrationApplicationCount(
+      auth: auth,
+    );
+  }
+
+  GetUnreadRegistrationApplicationCount fromJson(Map<String, Object?> json) {
+    return GetUnreadRegistrationApplicationCount.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $GetUnreadRegistrationApplicationCount =
+    _$GetUnreadRegistrationApplicationCountTearOff();
+
+/// @nodoc
+mixin _$GetUnreadRegistrationApplicationCount {
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GetUnreadRegistrationApplicationCountCopyWith<
+          GetUnreadRegistrationApplicationCount>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  factory $GetUnreadRegistrationApplicationCountCopyWith(
+          GetUnreadRegistrationApplicationCount value,
+          $Res Function(GetUnreadRegistrationApplicationCount) then) =
+      _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
+  $Res call({String auth});
+}
+
+/// @nodoc
+class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+    implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  _$GetUnreadRegistrationApplicationCountCopyWithImpl(this._value, this._then);
+
+  final GetUnreadRegistrationApplicationCount _value;
+  // ignore: unused_field
+  final $Res Function(GetUnreadRegistrationApplicationCount) _then;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$GetUnreadRegistrationApplicationCountCopyWith<$Res>
+    implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  factory _$GetUnreadRegistrationApplicationCountCopyWith(
+          _GetUnreadRegistrationApplicationCount value,
+          $Res Function(_GetUnreadRegistrationApplicationCount) then) =
+      __$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
+  @override
+  $Res call({String auth});
+}
+
+/// @nodoc
+class __$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+    extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+    implements _$GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  __$GetUnreadRegistrationApplicationCountCopyWithImpl(
+      _GetUnreadRegistrationApplicationCount _value,
+      $Res Function(_GetUnreadRegistrationApplicationCount) _then)
+      : super(
+            _value, (v) => _then(v as _GetUnreadRegistrationApplicationCount));
+
+  @override
+  _GetUnreadRegistrationApplicationCount get _value =>
+      super._value as _GetUnreadRegistrationApplicationCount;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_GetUnreadRegistrationApplicationCount(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_GetUnreadRegistrationApplicationCount
+    extends _GetUnreadRegistrationApplicationCount {
+  const _$_GetUnreadRegistrationApplicationCount({required this.auth})
+      : super._();
+
+  factory _$_GetUnreadRegistrationApplicationCount.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_GetUnreadRegistrationApplicationCountFromJson(json);
+
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'GetUnreadRegistrationApplicationCount(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _GetUnreadRegistrationApplicationCount &&
+            const DeepCollectionEquality().equals(other.auth, auth));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+
+  @JsonKey(ignore: true)
+  @override
+  _$GetUnreadRegistrationApplicationCountCopyWith<
+          _GetUnreadRegistrationApplicationCount>
+      get copyWith => __$GetUnreadRegistrationApplicationCountCopyWithImpl<
+          _GetUnreadRegistrationApplicationCount>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GetUnreadRegistrationApplicationCountToJson(this);
+  }
+}
+
+abstract class _GetUnreadRegistrationApplicationCount
+    extends GetUnreadRegistrationApplicationCount {
+  const factory _GetUnreadRegistrationApplicationCount({required String auth}) =
+      _$_GetUnreadRegistrationApplicationCount;
+  const _GetUnreadRegistrationApplicationCount._() : super._();
+
+  factory _GetUnreadRegistrationApplicationCount.fromJson(
+          Map<String, dynamic> json) =
+      _$_GetUnreadRegistrationApplicationCount.fromJson;
+
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$GetUnreadRegistrationApplicationCountCopyWith<
+          _GetUnreadRegistrationApplicationCount>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ListRegistrationApplications _$ListRegistrationApplicationsFromJson(
+    Map<String, dynamic> json) {
+  return _ListRegistrationApplications.fromJson(json);
+}
+
+/// @nodoc
+class _$ListRegistrationApplicationsTearOff {
+  const _$ListRegistrationApplicationsTearOff();
+
+  _ListRegistrationApplications call(
+      {bool? unreadOnly, int? page, int? limit, required String auth}) {
+    return _ListRegistrationApplications(
+      unreadOnly: unreadOnly,
+      page: page,
+      limit: limit,
+      auth: auth,
+    );
+  }
+
+  ListRegistrationApplications fromJson(Map<String, Object?> json) {
+    return ListRegistrationApplications.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ListRegistrationApplications = _$ListRegistrationApplicationsTearOff();
+
+/// @nodoc
+mixin _$ListRegistrationApplications {
+  bool? get unreadOnly => throw _privateConstructorUsedError;
+  int? get page => throw _privateConstructorUsedError;
+  int? get limit => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ListRegistrationApplicationsCopyWith<ListRegistrationApplications>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ListRegistrationApplicationsCopyWith<$Res> {
+  factory $ListRegistrationApplicationsCopyWith(
+          ListRegistrationApplications value,
+          $Res Function(ListRegistrationApplications) then) =
+      _$ListRegistrationApplicationsCopyWithImpl<$Res>;
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
+}
+
+/// @nodoc
+class _$ListRegistrationApplicationsCopyWithImpl<$Res>
+    implements $ListRegistrationApplicationsCopyWith<$Res> {
+  _$ListRegistrationApplicationsCopyWithImpl(this._value, this._then);
+
+  final ListRegistrationApplications _value;
+  // ignore: unused_field
+  final $Res Function(ListRegistrationApplications) _then;
+
+  @override
+  $Res call({
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ListRegistrationApplicationsCopyWith<$Res>
+    implements $ListRegistrationApplicationsCopyWith<$Res> {
+  factory _$ListRegistrationApplicationsCopyWith(
+          _ListRegistrationApplications value,
+          $Res Function(_ListRegistrationApplications) then) =
+      __$ListRegistrationApplicationsCopyWithImpl<$Res>;
+  @override
+  $Res call({bool? unreadOnly, int? page, int? limit, String auth});
+}
+
+/// @nodoc
+class __$ListRegistrationApplicationsCopyWithImpl<$Res>
+    extends _$ListRegistrationApplicationsCopyWithImpl<$Res>
+    implements _$ListRegistrationApplicationsCopyWith<$Res> {
+  __$ListRegistrationApplicationsCopyWithImpl(
+      _ListRegistrationApplications _value,
+      $Res Function(_ListRegistrationApplications) _then)
+      : super(_value, (v) => _then(v as _ListRegistrationApplications));
+
+  @override
+  _ListRegistrationApplications get _value =>
+      super._value as _ListRegistrationApplications;
+
+  @override
+  $Res call({
+    Object? unreadOnly = freezed,
+    Object? page = freezed,
+    Object? limit = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_ListRegistrationApplications(
+      unreadOnly: unreadOnly == freezed
+          ? _value.unreadOnly
+          : unreadOnly // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int?,
+      limit: limit == freezed
+          ? _value.limit
+          : limit // ignore: cast_nullable_to_non_nullable
+              as int?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_ListRegistrationApplications extends _ListRegistrationApplications {
+  const _$_ListRegistrationApplications(
+      {this.unreadOnly, this.page, this.limit, required this.auth})
+      : super._();
+
+  factory _$_ListRegistrationApplications.fromJson(Map<String, dynamic> json) =>
+      _$$_ListRegistrationApplicationsFromJson(json);
+
+  @override
+  final bool? unreadOnly;
+  @override
+  final int? page;
+  @override
+  final int? limit;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'ListRegistrationApplications(unreadOnly: $unreadOnly, page: $page, limit: $limit, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ListRegistrationApplications &&
+            const DeepCollectionEquality()
+                .equals(other.unreadOnly, unreadOnly) &&
+            const DeepCollectionEquality().equals(other.page, page) &&
+            const DeepCollectionEquality().equals(other.limit, limit) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(unreadOnly),
+      const DeepCollectionEquality().hash(page),
+      const DeepCollectionEquality().hash(limit),
+      const DeepCollectionEquality().hash(auth));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ListRegistrationApplicationsCopyWith<_ListRegistrationApplications>
+      get copyWith => __$ListRegistrationApplicationsCopyWithImpl<
+          _ListRegistrationApplications>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ListRegistrationApplicationsToJson(this);
+  }
+}
+
+abstract class _ListRegistrationApplications
+    extends ListRegistrationApplications {
+  const factory _ListRegistrationApplications(
+      {bool? unreadOnly,
+      int? page,
+      int? limit,
+      required String auth}) = _$_ListRegistrationApplications;
+  const _ListRegistrationApplications._() : super._();
+
+  factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) =
+      _$_ListRegistrationApplications.fromJson;
+
+  @override
+  bool? get unreadOnly;
+  @override
+  int? get page;
+  @override
+  int? get limit;
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$ListRegistrationApplicationsCopyWith<_ListRegistrationApplications>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(
+    Map<String, dynamic> json) {
+  return _ApproveRegistrationApplication.fromJson(json);
+}
+
+/// @nodoc
+class _$ApproveRegistrationApplicationTearOff {
+  const _$ApproveRegistrationApplicationTearOff();
+
+  _ApproveRegistrationApplication call(
+      {required int id,
+      required bool approve,
+      String? denyReason,
+      required String auth}) {
+    return _ApproveRegistrationApplication(
+      id: id,
+      approve: approve,
+      denyReason: denyReason,
+      auth: auth,
+    );
+  }
+
+  ApproveRegistrationApplication fromJson(Map<String, Object?> json) {
+    return ApproveRegistrationApplication.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ApproveRegistrationApplication =
+    _$ApproveRegistrationApplicationTearOff();
+
+/// @nodoc
+mixin _$ApproveRegistrationApplication {
+  int get id => throw _privateConstructorUsedError;
+  bool get approve => throw _privateConstructorUsedError;
+  String? get denyReason => throw _privateConstructorUsedError;
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ApproveRegistrationApplicationCopyWith<ApproveRegistrationApplication>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ApproveRegistrationApplicationCopyWith<$Res> {
+  factory $ApproveRegistrationApplicationCopyWith(
+          ApproveRegistrationApplication value,
+          $Res Function(ApproveRegistrationApplication) then) =
+      _$ApproveRegistrationApplicationCopyWithImpl<$Res>;
+  $Res call({int id, bool approve, String? denyReason, String auth});
+}
+
+/// @nodoc
+class _$ApproveRegistrationApplicationCopyWithImpl<$Res>
+    implements $ApproveRegistrationApplicationCopyWith<$Res> {
+  _$ApproveRegistrationApplicationCopyWithImpl(this._value, this._then);
+
+  final ApproveRegistrationApplication _value;
+  // ignore: unused_field
+  final $Res Function(ApproveRegistrationApplication) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? approve = freezed,
+    Object? denyReason = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      approve: approve == freezed
+          ? _value.approve
+          : approve // ignore: cast_nullable_to_non_nullable
+              as bool,
+      denyReason: denyReason == freezed
+          ? _value.denyReason
+          : denyReason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ApproveRegistrationApplicationCopyWith<$Res>
+    implements $ApproveRegistrationApplicationCopyWith<$Res> {
+  factory _$ApproveRegistrationApplicationCopyWith(
+          _ApproveRegistrationApplication value,
+          $Res Function(_ApproveRegistrationApplication) then) =
+      __$ApproveRegistrationApplicationCopyWithImpl<$Res>;
+  @override
+  $Res call({int id, bool approve, String? denyReason, String auth});
+}
+
+/// @nodoc
+class __$ApproveRegistrationApplicationCopyWithImpl<$Res>
+    extends _$ApproveRegistrationApplicationCopyWithImpl<$Res>
+    implements _$ApproveRegistrationApplicationCopyWith<$Res> {
+  __$ApproveRegistrationApplicationCopyWithImpl(
+      _ApproveRegistrationApplication _value,
+      $Res Function(_ApproveRegistrationApplication) _then)
+      : super(_value, (v) => _then(v as _ApproveRegistrationApplication));
+
+  @override
+  _ApproveRegistrationApplication get _value =>
+      super._value as _ApproveRegistrationApplication;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? approve = freezed,
+    Object? denyReason = freezed,
+    Object? auth = freezed,
+  }) {
+    return _then(_ApproveRegistrationApplication(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      approve: approve == freezed
+          ? _value.approve
+          : approve // ignore: cast_nullable_to_non_nullable
+              as bool,
+      denyReason: denyReason == freezed
+          ? _value.denyReason
+          : denyReason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_ApproveRegistrationApplication
+    extends _ApproveRegistrationApplication {
+  const _$_ApproveRegistrationApplication(
+      {required this.id,
+      required this.approve,
+      this.denyReason,
+      required this.auth})
+      : super._();
+
+  factory _$_ApproveRegistrationApplication.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_ApproveRegistrationApplicationFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final bool approve;
+  @override
+  final String? denyReason;
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'ApproveRegistrationApplication(id: $id, approve: $approve, denyReason: $denyReason, auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ApproveRegistrationApplication &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.approve, approve) &&
+            const DeepCollectionEquality()
+                .equals(other.denyReason, denyReason) &&
+            const DeepCollectionEquality().equals(other.auth, auth));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(approve),
+      const DeepCollectionEquality().hash(denyReason),
+      const DeepCollectionEquality().hash(auth));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ApproveRegistrationApplicationCopyWith<_ApproveRegistrationApplication>
+      get copyWith => __$ApproveRegistrationApplicationCopyWithImpl<
+          _ApproveRegistrationApplication>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ApproveRegistrationApplicationToJson(this);
+  }
+}
+
+abstract class _ApproveRegistrationApplication
+    extends ApproveRegistrationApplication {
+  const factory _ApproveRegistrationApplication(
+      {required int id,
+      required bool approve,
+      String? denyReason,
+      required String auth}) = _$_ApproveRegistrationApplication;
+  const _ApproveRegistrationApplication._() : super._();
+
+  factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) =
+      _$_ApproveRegistrationApplication.fromJson;
+
+  @override
+  int get id;
+  @override
+  bool get approve;
+  @override
+  String? get denyReason;
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$ApproveRegistrationApplicationCopyWith<_ApproveRegistrationApplication>
+      get copyWith => throw _privateConstructorUsedError;
 }

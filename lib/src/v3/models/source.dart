@@ -30,6 +30,7 @@ class PersonSafe with _$PersonSafe {
     String? matrixUserId,
     required bool admin,
     required bool botAccount,
+    DateTime? banExpires,
     required String instanceHost,
   }) = _PersonSafe;
 
@@ -60,6 +61,8 @@ class LocalUserSettings with _$LocalUserSettings {
     required bool showReadPosts,
     required bool showBotAccounts,
     required bool showNewPostNotifs,
+    required bool emailVerified,
+    required bool acceptedApplication,
     required String instanceHost,
   }) = _LocalUserSettings;
 
@@ -87,6 +90,10 @@ class Site with _$Site {
     required bool communityCreationAdminOnly,
     String? icon,
     String? banner,
+    required bool requireEmailVerification,
+    required bool requireApplication,
+    String? applicationQuestion,
+    required bool privateInstance,
     required String instanceHost,
   }) = _Site;
 
@@ -485,4 +492,24 @@ class PersonMention with _$PersonMention {
   const PersonMention._();
   factory PersonMention.fromJson(Map<String, dynamic> json) =>
       _$PersonMentionFromJson(json);
+}
+
+@freezed
+class RegistrationApplication with _$RegistrationApplication {
+  @ForceUtcDateTime()
+  @ForceUtcDateTimeNullable()
+  @JsonSerializable(fieldRename: FieldRename.snake)
+  const factory RegistrationApplication({
+    required int id,
+    required int localUserId,
+    required String answer,
+    int? adminId,
+    String? denyReason,
+    required DateTime published,
+    required String instanceHost,
+  }) = _RegistrationApplication;
+
+  const RegistrationApplication._();
+  factory RegistrationApplication.fromJson(Map<String, dynamic> json) =>
+      _$RegistrationApplicationFromJson(json);
 }
