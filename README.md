@@ -30,10 +30,11 @@ Future<void> main() async {
   const lemmy = LemmyApiV3('lemmy.ml');
 
   // call methods that are named after op codes from the lemmy docs
-  final token =
+  final response =
       await lemmy.run(const Login(usernameOrEmail: 'asd', password: 'ads'));
-  final messages =
-      await lemmy.run(GetPrivateMessages(unreadOnly: true, auth: token.raw));
+
+  final messages = await lemmy
+      .run(GetPrivateMessages(unreadOnly: true, auth: response.jwt!.raw));
 
   print(messages);
 }
