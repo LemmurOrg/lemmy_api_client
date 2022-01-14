@@ -1,4 +1,4 @@
-## Unreleased
+## v0.19.0 - 2022-01-14
 
 ### Added/Changed
 
