@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: dart-lang/setup-dart@v1
         with:
-          sdk: stable
+          sdk: 2.16.0
 
       - uses: actions/checkout@v2
 
