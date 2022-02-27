@@ -1,3 +1,9 @@
+## Unreleased
+
+### Added
+
+- Default theme fields
+
 ## v0.19.0 - 2022-01-14
 
 ### Added/Changed

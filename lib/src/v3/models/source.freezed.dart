@@ -1173,7 +1173,8 @@ class _$SiteTearOff {
       required bool requireApplication,
       String? applicationQuestion,
       required bool privateInstance,
-      required String instanceHost}) {
+      required String instanceHost,
+      required String defaultTheme}) {
     return _Site(
       id: id,
       name: name,
@@ -1193,6 +1194,7 @@ class _$SiteTearOff {
       applicationQuestion: applicationQuestion,
       privateInstance: privateInstance,
       instanceHost: instanceHost,
+      defaultTheme: defaultTheme,
     );
   }
 
@@ -1224,6 +1226,7 @@ mixin _$Site {
   String? get applicationQuestion => throw _privateConstructorUsedError;
   bool get privateInstance => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
+  String get defaultTheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1252,7 +1255,8 @@ abstract class $SiteCopyWith<$Res> {
       bool requireApplication,
       String? applicationQuestion,
       bool privateInstance,
-      String instanceHost});
+      String instanceHost,
+      String defaultTheme});
 }
 
 /// @nodoc
@@ -1283,6 +1287,7 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
     Object? instanceHost = freezed,
+    Object? defaultTheme = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -1357,6 +1362,10 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
+      defaultTheme: defaultTheme == freezed
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1384,7 +1393,8 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       bool requireApplication,
       String? applicationQuestion,
       bool privateInstance,
-      String instanceHost});
+      String instanceHost,
+      String defaultTheme});
 }
 
 /// @nodoc
@@ -1416,6 +1426,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
     Object? instanceHost = freezed,
+    Object? defaultTheme = freezed,
   }) {
     return _then(_Site(
       id: id == freezed
@@ -1490,6 +1501,10 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
+      defaultTheme: defaultTheme == freezed
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -1518,7 +1533,8 @@ class _$_Site extends _Site {
       required this.requireApplication,
       this.applicationQuestion,
       required this.privateInstance,
-      required this.instanceHost})
+      required this.instanceHost,
+      required this.defaultTheme})
       : super._();
 
   factory _$_Site.fromJson(Map<String, dynamic> json) => _$$_SiteFromJson(json);
@@ -1559,10 +1575,12 @@ class _$_Site extends _Site {
   final bool privateInstance;
   @override
   final String instanceHost;
+  @override
+  final String defaultTheme;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, instanceHost: $instanceHost)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, instanceHost: $instanceHost, defaultTheme: $defaultTheme)';
   }
 
   @override
@@ -1597,30 +1615,34 @@ class _$_Site extends _Site {
             const DeepCollectionEquality()
                 .equals(other.privateInstance, privateInstance) &&
             const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost));
+                .equals(other.instanceHost, instanceHost) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultTheme, defaultTheme));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sidebar),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(creatorId),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(enableDownvotes),
-      const DeepCollectionEquality().hash(openRegistration),
-      const DeepCollectionEquality().hash(enableNsfw),
-      const DeepCollectionEquality().hash(communityCreationAdminOnly),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(requireEmailVerification),
-      const DeepCollectionEquality().hash(requireApplication),
-      const DeepCollectionEquality().hash(applicationQuestion),
-      const DeepCollectionEquality().hash(privateInstance),
-      const DeepCollectionEquality().hash(instanceHost));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(sidebar),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(creatorId),
+        const DeepCollectionEquality().hash(published),
+        const DeepCollectionEquality().hash(updated),
+        const DeepCollectionEquality().hash(enableDownvotes),
+        const DeepCollectionEquality().hash(openRegistration),
+        const DeepCollectionEquality().hash(enableNsfw),
+        const DeepCollectionEquality().hash(communityCreationAdminOnly),
+        const DeepCollectionEquality().hash(icon),
+        const DeepCollectionEquality().hash(banner),
+        const DeepCollectionEquality().hash(requireEmailVerification),
+        const DeepCollectionEquality().hash(requireApplication),
+        const DeepCollectionEquality().hash(applicationQuestion),
+        const DeepCollectionEquality().hash(privateInstance),
+        const DeepCollectionEquality().hash(instanceHost),
+        const DeepCollectionEquality().hash(defaultTheme)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -1652,7 +1674,8 @@ abstract class _Site extends Site {
       required bool requireApplication,
       String? applicationQuestion,
       required bool privateInstance,
-      required String instanceHost}) = _$_Site;
+      required String instanceHost,
+      required String defaultTheme}) = _$_Site;
   const _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
@@ -1693,6 +1716,8 @@ abstract class _Site extends Site {
   bool get privateInstance;
   @override
   String get instanceHost;
+  @override
+  String get defaultTheme;
   @override
   @JsonKey(ignore: true)
   _$SiteCopyWith<_Site> get copyWith => throw _privateConstructorUsedError;

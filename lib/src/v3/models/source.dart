@@ -95,6 +95,7 @@ class Site with _$Site {
     String? applicationQuestion,
     required bool privateInstance,
     required String instanceHost,
+    required String defaultTheme,
   }) = _Site;
 
   const Site._();

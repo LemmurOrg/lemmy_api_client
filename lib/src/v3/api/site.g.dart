@@ -90,6 +90,7 @@ _$_CreateSite _$$_CreateSiteFromJson(Map<String, dynamic> json) =>
       applicationQuestion: json['application_question'] as String?,
       privateInstance: json['private_instance'] as bool?,
       auth: json['auth'] as String,
+      defaultTheme: json['default_theme'] as String?,
     );
 
 Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
@@ -117,6 +118,7 @@ Map<String, dynamic> _$$_CreateSiteToJson(_$_CreateSite instance) {
   writeNotNull('application_question', instance.applicationQuestion);
   writeNotNull('private_instance', instance.privateInstance);
   val['auth'] = instance.auth;
+  writeNotNull('default_theme', instance.defaultTheme);
   return val;
 }
 
@@ -136,6 +138,7 @@ _$_EditSite _$$_EditSiteFromJson(Map<String, dynamic> json) => _$_EditSite(
       applicationQuestion: json['application_question'] as String?,
       privateInstance: json['private_instance'] as bool?,
       auth: json['auth'] as String,
+      defaultTheme: json['default_theme'] as String?,
     );
 
 Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
@@ -162,6 +165,7 @@ Map<String, dynamic> _$$_EditSiteToJson(_$_EditSite instance) {
   writeNotNull('application_question', instance.applicationQuestion);
   writeNotNull('private_instance', instance.privateInstance);
   val['auth'] = instance.auth;
+  writeNotNull('default_theme', instance.defaultTheme);
   return val;
 }
 
