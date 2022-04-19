@@ -1016,12 +1016,10 @@ class _$SiteViewTearOff {
 
   _SiteView call(
       {required Site site,
-      PersonSafe? creator,
       required SiteAggregates counts,
       required String instanceHost}) {
     return _SiteView(
       site: site,
-      creator: creator,
       counts: counts,
       instanceHost: instanceHost,
     );
@@ -1038,7 +1036,6 @@ const $SiteView = _$SiteViewTearOff();
 /// @nodoc
 mixin _$SiteView {
   Site get site => throw _privateConstructorUsedError;
-  PersonSafe? get creator => throw _privateConstructorUsedError;
   SiteAggregates get counts => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
@@ -1052,14 +1049,9 @@ mixin _$SiteView {
 abstract class $SiteViewCopyWith<$Res> {
   factory $SiteViewCopyWith(SiteView value, $Res Function(SiteView) then) =
       _$SiteViewCopyWithImpl<$Res>;
-  $Res call(
-      {Site site,
-      PersonSafe? creator,
-      SiteAggregates counts,
-      String instanceHost});
+  $Res call({Site site, SiteAggregates counts, String instanceHost});
 
   $SiteCopyWith<$Res> get site;
-  $PersonSafeCopyWith<$Res>? get creator;
   $SiteAggregatesCopyWith<$Res> get counts;
 }
 
@@ -1074,7 +1066,6 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
   @override
   $Res call({
     Object? site = freezed,
-    Object? creator = freezed,
     Object? counts = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -1083,10 +1074,6 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as Site,
-      creator: creator == freezed
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
       counts: counts == freezed
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -1106,17 +1093,6 @@ class _$SiteViewCopyWithImpl<$Res> implements $SiteViewCopyWith<$Res> {
   }
 
   @override
-  $PersonSafeCopyWith<$Res>? get creator {
-    if (_value.creator == null) {
-      return null;
-    }
-
-    return $PersonSafeCopyWith<$Res>(_value.creator!, (value) {
-      return _then(_value.copyWith(creator: value));
-    });
-  }
-
-  @override
   $SiteAggregatesCopyWith<$Res> get counts {
     return $SiteAggregatesCopyWith<$Res>(_value.counts, (value) {
       return _then(_value.copyWith(counts: value));
@@ -1129,16 +1105,10 @@ abstract class _$SiteViewCopyWith<$Res> implements $SiteViewCopyWith<$Res> {
   factory _$SiteViewCopyWith(_SiteView value, $Res Function(_SiteView) then) =
       __$SiteViewCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {Site site,
-      PersonSafe? creator,
-      SiteAggregates counts,
-      String instanceHost});
+  $Res call({Site site, SiteAggregates counts, String instanceHost});
 
   @override
   $SiteCopyWith<$Res> get site;
-  @override
-  $PersonSafeCopyWith<$Res>? get creator;
   @override
   $SiteAggregatesCopyWith<$Res> get counts;
 }
@@ -1155,7 +1125,6 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? site = freezed,
-    Object? creator = freezed,
     Object? counts = freezed,
     Object? instanceHost = freezed,
   }) {
@@ -1164,10 +1133,6 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as Site,
-      creator: creator == freezed
-          ? _value.creator
-          : creator // ignore: cast_nullable_to_non_nullable
-              as PersonSafe?,
       counts: counts == freezed
           ? _value.counts
           : counts // ignore: cast_nullable_to_non_nullable
@@ -1185,10 +1150,7 @@ class __$SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_SiteView extends _SiteView {
   const _$_SiteView(
-      {required this.site,
-      this.creator,
-      required this.counts,
-      required this.instanceHost})
+      {required this.site, required this.counts, required this.instanceHost})
       : super._();
 
   factory _$_SiteView.fromJson(Map<String, dynamic> json) =>
@@ -1197,15 +1159,13 @@ class _$_SiteView extends _SiteView {
   @override
   final Site site;
   @override
-  final PersonSafe? creator;
-  @override
   final SiteAggregates counts;
   @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'SiteView(site: $site, creator: $creator, counts: $counts, instanceHost: $instanceHost)';
+    return 'SiteView(site: $site, counts: $counts, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1214,7 +1174,6 @@ class _$_SiteView extends _SiteView {
         (other.runtimeType == runtimeType &&
             other is _SiteView &&
             const DeepCollectionEquality().equals(other.site, site) &&
-            const DeepCollectionEquality().equals(other.creator, creator) &&
             const DeepCollectionEquality().equals(other.counts, counts) &&
             const DeepCollectionEquality()
                 .equals(other.instanceHost, instanceHost));
@@ -1224,7 +1183,6 @@ class _$_SiteView extends _SiteView {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(site),
-      const DeepCollectionEquality().hash(creator),
       const DeepCollectionEquality().hash(counts),
       const DeepCollectionEquality().hash(instanceHost));
 
@@ -1242,7 +1200,6 @@ class _$_SiteView extends _SiteView {
 abstract class _SiteView extends SiteView {
   const factory _SiteView(
       {required Site site,
-      PersonSafe? creator,
       required SiteAggregates counts,
       required String instanceHost}) = _$_SiteView;
   const _SiteView._() : super._();
@@ -1251,8 +1208,6 @@ abstract class _SiteView extends SiteView {
 
   @override
   Site get site;
-  @override
-  PersonSafe? get creator;
   @override
   SiteAggregates get counts;
   @override

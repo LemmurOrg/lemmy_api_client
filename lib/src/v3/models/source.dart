@@ -81,7 +81,6 @@ class Site with _$Site {
     required String name,
     String? sidebar,
     String? description,
-    int? creatorId, //Creator ID has been removed from the Site parameters
     required DateTime published,
     DateTime? updated,
     required bool enableDownvotes,
