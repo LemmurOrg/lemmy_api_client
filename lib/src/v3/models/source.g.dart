@@ -105,7 +105,7 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
-      creatorId: json['creator_id'] as int,
+      creatorId: json['creator_id'] as int?,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated:
           const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),

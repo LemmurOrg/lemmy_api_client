@@ -1160,7 +1160,7 @@ class _$SiteTearOff {
       required String name,
       String? sidebar,
       String? description,
-      required int creatorId,
+      int? creatorId,
       required DateTime published,
       DateTime? updated,
       required bool enableDownvotes,
@@ -1212,7 +1212,8 @@ mixin _$Site {
   String get name => throw _privateConstructorUsedError;
   String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
+  int? get creatorId =>
+      throw _privateConstructorUsedError; //Creator ID has been removed from the Site parameters
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
   bool get enableDownvotes => throw _privateConstructorUsedError;
@@ -1242,7 +1243,7 @@ abstract class $SiteCopyWith<$Res> {
       String name,
       String? sidebar,
       String? description,
-      int creatorId,
+      int? creatorId,
       DateTime published,
       DateTime? updated,
       bool enableDownvotes,
@@ -1309,7 +1310,7 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
       creatorId: creatorId == freezed
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       published: published == freezed
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
@@ -1380,7 +1381,7 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       String name,
       String? sidebar,
       String? description,
-      int creatorId,
+      int? creatorId,
       DateTime published,
       DateTime? updated,
       bool enableDownvotes,
@@ -1448,7 +1449,7 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
       creatorId: creatorId == freezed
           ? _value.creatorId
           : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       published: published == freezed
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
@@ -1520,7 +1521,7 @@ class _$_Site extends _Site {
       required this.name,
       this.sidebar,
       this.description,
-      required this.creatorId,
+      this.creatorId,
       required this.published,
       this.updated,
       required this.enableDownvotes,
@@ -1548,8 +1549,8 @@ class _$_Site extends _Site {
   @override
   final String? description;
   @override
-  final int creatorId;
-  @override
+  final int? creatorId;
+  @override //Creator ID has been removed from the Site parameters
   final DateTime published;
   @override
   final DateTime? updated;
@@ -1661,7 +1662,7 @@ abstract class _Site extends Site {
       required String name,
       String? sidebar,
       String? description,
-      required int creatorId,
+      int? creatorId,
       required DateTime published,
       DateTime? updated,
       required bool enableDownvotes,
@@ -1689,8 +1690,8 @@ abstract class _Site extends Site {
   @override
   String? get description;
   @override
-  int get creatorId;
-  @override
+  int? get creatorId;
+  @override //Creator ID has been removed from the Site parameters
   DateTime get published;
   @override
   DateTime? get updated;
