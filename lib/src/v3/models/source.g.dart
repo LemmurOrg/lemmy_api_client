@@ -105,7 +105,6 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       name: json['name'] as String,
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
-      creatorId: json['creator_id'] as int,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
       updated:
           const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
@@ -127,7 +126,6 @@ Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'name': instance.name,
       'sidebar': instance.sidebar,
       'description': instance.description,
-      'creator_id': instance.creatorId,
       'published': const ForceUtcDateTime().toJson(instance.published),
       'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
       'enable_downvotes': instance.enableDownvotes,
