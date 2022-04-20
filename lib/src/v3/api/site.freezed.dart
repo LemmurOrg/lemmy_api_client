@@ -1684,6 +1684,154 @@ abstract class _GetSite extends GetSite {
       throw _privateConstructorUsedError;
 }
 
+LeaveAdmin _$LeaveAdminFromJson(Map<String, dynamic> json) {
+  return _LeaveAdmin.fromJson(json);
+}
+
+/// @nodoc
+class _$LeaveAdminTearOff {
+  const _$LeaveAdminTearOff();
+
+  _LeaveAdmin call({required String auth}) {
+    return _LeaveAdmin(
+      auth: auth,
+    );
+  }
+
+  LeaveAdmin fromJson(Map<String, Object?> json) {
+    return LeaveAdmin.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $LeaveAdmin = _$LeaveAdminTearOff();
+
+/// @nodoc
+mixin _$LeaveAdmin {
+  String get auth => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $LeaveAdminCopyWith<LeaveAdmin> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LeaveAdminCopyWith<$Res> {
+  factory $LeaveAdminCopyWith(
+          LeaveAdmin value, $Res Function(LeaveAdmin) then) =
+      _$LeaveAdminCopyWithImpl<$Res>;
+  $Res call({String auth});
+}
+
+/// @nodoc
+class _$LeaveAdminCopyWithImpl<$Res> implements $LeaveAdminCopyWith<$Res> {
+  _$LeaveAdminCopyWithImpl(this._value, this._then);
+
+  final LeaveAdmin _value;
+  // ignore: unused_field
+  final $Res Function(LeaveAdmin) _then;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_value.copyWith(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$LeaveAdminCopyWith<$Res> implements $LeaveAdminCopyWith<$Res> {
+  factory _$LeaveAdminCopyWith(
+          _LeaveAdmin value, $Res Function(_LeaveAdmin) then) =
+      __$LeaveAdminCopyWithImpl<$Res>;
+  @override
+  $Res call({String auth});
+}
+
+/// @nodoc
+class __$LeaveAdminCopyWithImpl<$Res> extends _$LeaveAdminCopyWithImpl<$Res>
+    implements _$LeaveAdminCopyWith<$Res> {
+  __$LeaveAdminCopyWithImpl(
+      _LeaveAdmin _value, $Res Function(_LeaveAdmin) _then)
+      : super(_value, (v) => _then(v as _LeaveAdmin));
+
+  @override
+  _LeaveAdmin get _value => super._value as _LeaveAdmin;
+
+  @override
+  $Res call({
+    Object? auth = freezed,
+  }) {
+    return _then(_LeaveAdmin(
+      auth: auth == freezed
+          ? _value.auth
+          : auth // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+class _$_LeaveAdmin extends _LeaveAdmin {
+  const _$_LeaveAdmin({required this.auth}) : super._();
+
+  factory _$_LeaveAdmin.fromJson(Map<String, dynamic> json) =>
+      _$$_LeaveAdminFromJson(json);
+
+  @override
+  final String auth;
+
+  @override
+  String toString() {
+    return 'LeaveAdmin(auth: $auth)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _LeaveAdmin &&
+            const DeepCollectionEquality().equals(other.auth, auth));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
+
+  @JsonKey(ignore: true)
+  @override
+  _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
+      __$LeaveAdminCopyWithImpl<_LeaveAdmin>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LeaveAdminToJson(this);
+  }
+}
+
+abstract class _LeaveAdmin extends LeaveAdmin {
+  const factory _LeaveAdmin({required String auth}) = _$_LeaveAdmin;
+  const _LeaveAdmin._() : super._();
+
+  factory _LeaveAdmin.fromJson(Map<String, dynamic> json) =
+      _$_LeaveAdmin.fromJson;
+
+  @override
+  String get auth;
+  @override
+  @JsonKey(ignore: true)
+  _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 GetSiteConfig _$GetSiteConfigFromJson(Map<String, dynamic> json) {
   return _GetSiteConfig.fromJson(json);
 }

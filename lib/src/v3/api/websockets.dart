@@ -106,6 +106,9 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
         const TransferCommunity(communityId: 0, personId: 0, auth: '')
             .responseFactory(json),
       ),
+  'LeaveAdmin': (json) => WsEventLeaveAdmin(
+        const LeaveAdmin(auth: '').responseFactory(json),
+      ),
   'GetPost': (json) => WsEventGetPost(
         const GetPost(id: 0).responseFactory(json),
       ),
@@ -419,6 +422,10 @@ class WsEventFollowCommunity extends WsEvent<CommunityView> {
 
 class WsEventTransferCommunity extends WsEvent<FullCommunityView> {
   const WsEventTransferCommunity(FullCommunityView data) : super(data);
+}
+
+class WsEventLeaveAdmin extends WsEvent<FullSiteView> {
+  const WsEventLeaveAdmin(FullSiteView data) : super(data);
 }
 
 class WsEventGetPost extends WsEvent<FullPostView> {

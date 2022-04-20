@@ -182,6 +182,16 @@ Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
   return val;
 }
 
+_$_LeaveAdmin _$$_LeaveAdminFromJson(Map<String, dynamic> json) =>
+    _$_LeaveAdmin(
+      auth: json['auth'] as String,
+    );
+
+Map<String, dynamic> _$$_LeaveAdminToJson(_$_LeaveAdmin instance) =>
+    <String, dynamic>{
+      'auth': instance.auth,
+    };
+
 _$_GetSiteConfig _$$_GetSiteConfigFromJson(Map<String, dynamic> json) =>
     _$_GetSiteConfig(
       auth: json['auth'] as String,

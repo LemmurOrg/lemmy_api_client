@@ -153,6 +153,27 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
 }
 
 @freezed
+class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<FullSiteView> {
+  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  const factory LeaveAdmin({
+    required String auth,
+  }) = _LeaveAdmin;
+
+  const LeaveAdmin._();
+
+  factory LeaveAdmin.fromJson(Map<String, dynamic> json) =>
+      _$LeaveAdminFromJson(json);
+
+  final path = '/user/leave_admin';
+
+  final httpMethod = HttpMethod.post;
+
+  @override
+  FullSiteView responseFactory(Map<String, dynamic> json) =>
+      FullSiteView.fromJson(json);
+}
+
+@freezed
 class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSiteConfig({
