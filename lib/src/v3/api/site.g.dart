@@ -182,18 +182,6 @@ Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
   return val;
 }
 
-_$_TransferSite _$$_TransferSiteFromJson(Map<String, dynamic> json) =>
-    _$_TransferSite(
-      personId: json['person_id'] as int,
-      auth: json['auth'] as String,
-    );
-
-Map<String, dynamic> _$$_TransferSiteToJson(_$_TransferSite instance) =>
-    <String, dynamic>{
-      'person_id': instance.personId,
-      'auth': instance.auth,
-    };
-
 _$_GetSiteConfig _$$_GetSiteConfigFromJson(Map<String, dynamic> json) =>
     _$_GetSiteConfig(
       auth: json['auth'] as String,

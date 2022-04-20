@@ -189,9 +189,6 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
   'GetSite': (json) => WsEventGetSite(
         const GetSite().responseFactory(json),
       ),
-  'TransferSite': (json) => WsEventTransferSite(
-        const TransferSite(personId: 0, auth: '').responseFactory(json),
-      ),
   'GetSiteConfig': (json) => WsEventGetSiteConfig(
         const GetSiteConfig(auth: '').responseFactory(json),
       ),
@@ -494,10 +491,6 @@ class WsEventEditSite extends WsEvent<SiteView> {
 
 class WsEventGetSite extends WsEvent<FullSiteView> {
   const WsEventGetSite(FullSiteView data) : super(data);
-}
-
-class WsEventTransferSite extends WsEvent<FullSiteView> {
-  const WsEventTransferSite(FullSiteView data) : super(data);
 }
 
 class WsEventGetSiteConfig extends WsEvent<String> {

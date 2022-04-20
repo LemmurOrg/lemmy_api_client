@@ -153,28 +153,6 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
 }
 
 @freezed
-class TransferSite with _$TransferSite implements LemmyApiQuery<FullSiteView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-  const factory TransferSite({
-    required int personId,
-    required String auth,
-  }) = _TransferSite;
-
-  const TransferSite._();
-
-  factory TransferSite.fromJson(Map<String, dynamic> json) =>
-      _$TransferSiteFromJson(json);
-
-  final path = '/site/transfer';
-
-  final httpMethod = HttpMethod.post;
-
-  @override
-  FullSiteView responseFactory(Map<String, dynamic> json) =>
-      FullSiteView.fromJson(json);
-}
-
-@freezed
 class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
   @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
   const factory GetSiteConfig({
