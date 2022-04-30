@@ -24,11 +24,13 @@ class _$FullCommunityViewTearOff {
 
   _FullCommunityView call(
       {required CommunityView communityView,
+      required Site? site,
       required List<CommunityModeratorView> moderators,
       required int online,
       required String instanceHost}) {
     return _FullCommunityView(
       communityView: communityView,
+      site: site,
       moderators: moderators,
       online: online,
       instanceHost: instanceHost,
@@ -46,6 +48,7 @@ const $FullCommunityView = _$FullCommunityViewTearOff();
 /// @nodoc
 mixin _$FullCommunityView {
   CommunityView get communityView => throw _privateConstructorUsedError;
+  Site? get site => throw _privateConstructorUsedError;
   List<CommunityModeratorView> get moderators =>
       throw _privateConstructorUsedError;
   int get online => throw _privateConstructorUsedError;
@@ -64,11 +67,13 @@ abstract class $FullCommunityViewCopyWith<$Res> {
       _$FullCommunityViewCopyWithImpl<$Res>;
   $Res call(
       {CommunityView communityView,
+      Site? site,
       List<CommunityModeratorView> moderators,
       int online,
       String instanceHost});
 
   $CommunityViewCopyWith<$Res> get communityView;
+  $SiteCopyWith<$Res>? get site;
 }
 
 /// @nodoc
@@ -83,6 +88,7 @@ class _$FullCommunityViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityView = freezed,
+    Object? site = freezed,
     Object? moderators = freezed,
     Object? online = freezed,
     Object? instanceHost = freezed,
@@ -92,6 +98,10 @@ class _$FullCommunityViewCopyWithImpl<$Res>
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
+      site: site == freezed
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site?,
       moderators: moderators == freezed
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
@@ -113,6 +123,17 @@ class _$FullCommunityViewCopyWithImpl<$Res>
       return _then(_value.copyWith(communityView: value));
     });
   }
+
+  @override
+  $SiteCopyWith<$Res>? get site {
+    if (_value.site == null) {
+      return null;
+    }
+
+    return $SiteCopyWith<$Res>(_value.site!, (value) {
+      return _then(_value.copyWith(site: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -124,12 +145,15 @@ abstract class _$FullCommunityViewCopyWith<$Res>
   @override
   $Res call(
       {CommunityView communityView,
+      Site? site,
       List<CommunityModeratorView> moderators,
       int online,
       String instanceHost});
 
   @override
   $CommunityViewCopyWith<$Res> get communityView;
+  @override
+  $SiteCopyWith<$Res>? get site;
 }
 
 /// @nodoc
@@ -146,6 +170,7 @@ class __$FullCommunityViewCopyWithImpl<$Res>
   @override
   $Res call({
     Object? communityView = freezed,
+    Object? site = freezed,
     Object? moderators = freezed,
     Object? online = freezed,
     Object? instanceHost = freezed,
@@ -155,6 +180,10 @@ class __$FullCommunityViewCopyWithImpl<$Res>
           ? _value.communityView
           : communityView // ignore: cast_nullable_to_non_nullable
               as CommunityView,
+      site: site == freezed
+          ? _value.site
+          : site // ignore: cast_nullable_to_non_nullable
+              as Site?,
       moderators: moderators == freezed
           ? _value.moderators
           : moderators // ignore: cast_nullable_to_non_nullable
@@ -177,6 +206,7 @@ class __$FullCommunityViewCopyWithImpl<$Res>
 class _$_FullCommunityView extends _FullCommunityView {
   const _$_FullCommunityView(
       {required this.communityView,
+      required this.site,
       required this.moderators,
       required this.online,
       required this.instanceHost})
@@ -188,6 +218,8 @@ class _$_FullCommunityView extends _FullCommunityView {
   @override
   final CommunityView communityView;
   @override
+  final Site? site;
+  @override
   final List<CommunityModeratorView> moderators;
   @override
   final int online;
@@ -196,7 +228,7 @@ class _$_FullCommunityView extends _FullCommunityView {
 
   @override
   String toString() {
-    return 'FullCommunityView(communityView: $communityView, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
+    return 'FullCommunityView(communityView: $communityView, site: $site, moderators: $moderators, online: $online, instanceHost: $instanceHost)';
   }
 
   @override
@@ -206,6 +238,7 @@ class _$_FullCommunityView extends _FullCommunityView {
             other is _FullCommunityView &&
             const DeepCollectionEquality()
                 .equals(other.communityView, communityView) &&
+            const DeepCollectionEquality().equals(other.site, site) &&
             const DeepCollectionEquality()
                 .equals(other.moderators, moderators) &&
             const DeepCollectionEquality().equals(other.online, online) &&
@@ -217,6 +250,7 @@ class _$_FullCommunityView extends _FullCommunityView {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(communityView),
+      const DeepCollectionEquality().hash(site),
       const DeepCollectionEquality().hash(moderators),
       const DeepCollectionEquality().hash(online),
       const DeepCollectionEquality().hash(instanceHost));
@@ -235,6 +269,7 @@ class _$_FullCommunityView extends _FullCommunityView {
 abstract class _FullCommunityView extends FullCommunityView {
   const factory _FullCommunityView(
       {required CommunityView communityView,
+      required Site? site,
       required List<CommunityModeratorView> moderators,
       required int online,
       required String instanceHost}) = _$_FullCommunityView;
@@ -245,6 +280,8 @@ abstract class _FullCommunityView extends FullCommunityView {
 
   @override
   CommunityView get communityView;
+  @override
+  Site? get site;
   @override
   List<CommunityModeratorView> get moderators;
   @override

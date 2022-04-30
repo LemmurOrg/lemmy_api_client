@@ -118,8 +118,12 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       requireApplication: json['require_application'] as bool,
       applicationQuestion: json['application_question'] as String?,
       privateInstance: json['private_instance'] as bool,
-      instanceHost: json['instance_host'] as String,
       defaultTheme: json['default_theme'] as String,
+      actorId: json['actor_id'] as String,
+      lastRefreshedAt: json['last_refreshed_at'] as String,
+      inboxUrl: json['inbox_url'] as String,
+      publicKey: json['public_key'] as String,
+      instanceHost: json['instance_host'] as String,
     );
 
 Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
@@ -139,8 +143,12 @@ Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'require_application': instance.requireApplication,
       'application_question': instance.applicationQuestion,
       'private_instance': instance.privateInstance,
-      'instance_host': instance.instanceHost,
       'default_theme': instance.defaultTheme,
+      'actor_id': instance.actorId,
+      'last_refreshed_at': instance.lastRefreshedAt,
+      'inbox_url': instance.inboxUrl,
+      'public_key': instance.publicKey,
+      'instance_host': instance.instanceHost,
     };
 
 _$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>
