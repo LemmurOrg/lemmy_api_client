@@ -106,6 +106,9 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
         const TransferCommunity(communityId: 0, personId: 0, auth: '')
             .responseFactory(json),
       ),
+  'LeaveAdmin': (json) => WsEventLeaveAdmin(
+        const LeaveAdmin(auth: '').responseFactory(json),
+      ),
   'GetPost': (json) => WsEventGetPost(
         const GetPost(id: 0).responseFactory(json),
       ),
@@ -188,9 +191,6 @@ final Map<String, WsEvent Function(Map<String, dynamic>)> wsDeserializer = {
       ),
   'GetSite': (json) => WsEventGetSite(
         const GetSite().responseFactory(json),
-      ),
-  'TransferSite': (json) => WsEventTransferSite(
-        const TransferSite(personId: 0, auth: '').responseFactory(json),
       ),
   'GetSiteConfig': (json) => WsEventGetSiteConfig(
         const GetSiteConfig(auth: '').responseFactory(json),
@@ -424,6 +424,10 @@ class WsEventTransferCommunity extends WsEvent<FullCommunityView> {
   const WsEventTransferCommunity(FullCommunityView data) : super(data);
 }
 
+class WsEventLeaveAdmin extends WsEvent<FullSiteView> {
+  const WsEventLeaveAdmin(FullSiteView data) : super(data);
+}
+
 class WsEventGetPost extends WsEvent<FullPostView> {
   const WsEventGetPost(FullPostView data) : super(data);
 }
@@ -494,10 +498,6 @@ class WsEventEditSite extends WsEvent<SiteView> {
 
 class WsEventGetSite extends WsEvent<FullSiteView> {
   const WsEventGetSite(FullSiteView data) : super(data);
-}
-
-class WsEventTransferSite extends WsEvent<FullSiteView> {
-  const WsEventTransferSite(FullSiteView data) : super(data);
 }
 
 class WsEventGetSiteConfig extends WsEvent<String> {

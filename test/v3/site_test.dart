@@ -129,8 +129,6 @@ void main() {
         );
       });
 
-      group('TransferSite', () {});
-
       group('GetSiteConfig', () {});
 
       group('SaveSiteConfig', () {});

@@ -1732,66 +1732,59 @@ abstract class _GetSite extends GetSite {
       throw _privateConstructorUsedError;
 }
 
-TransferSite _$TransferSiteFromJson(Map<String, dynamic> json) {
-  return _TransferSite.fromJson(json);
+LeaveAdmin _$LeaveAdminFromJson(Map<String, dynamic> json) {
+  return _LeaveAdmin.fromJson(json);
 }
 
 /// @nodoc
-class _$TransferSiteTearOff {
-  const _$TransferSiteTearOff();
+class _$LeaveAdminTearOff {
+  const _$LeaveAdminTearOff();
 
-  _TransferSite call({required int personId, required String auth}) {
-    return _TransferSite(
-      personId: personId,
+  _LeaveAdmin call({required String auth}) {
+    return _LeaveAdmin(
       auth: auth,
     );
   }
 
-  TransferSite fromJson(Map<String, Object?> json) {
-    return TransferSite.fromJson(json);
+  LeaveAdmin fromJson(Map<String, Object?> json) {
+    return LeaveAdmin.fromJson(json);
   }
 }
 
 /// @nodoc
-const $TransferSite = _$TransferSiteTearOff();
+const $LeaveAdmin = _$LeaveAdminTearOff();
 
 /// @nodoc
-mixin _$TransferSite {
-  int get personId => throw _privateConstructorUsedError;
+mixin _$LeaveAdmin {
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $TransferSiteCopyWith<TransferSite> get copyWith =>
+  $LeaveAdminCopyWith<LeaveAdmin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $TransferSiteCopyWith<$Res> {
-  factory $TransferSiteCopyWith(
-          TransferSite value, $Res Function(TransferSite) then) =
-      _$TransferSiteCopyWithImpl<$Res>;
-  $Res call({int personId, String auth});
+abstract class $LeaveAdminCopyWith<$Res> {
+  factory $LeaveAdminCopyWith(
+          LeaveAdmin value, $Res Function(LeaveAdmin) then) =
+      _$LeaveAdminCopyWithImpl<$Res>;
+  $Res call({String auth});
 }
 
 /// @nodoc
-class _$TransferSiteCopyWithImpl<$Res> implements $TransferSiteCopyWith<$Res> {
-  _$TransferSiteCopyWithImpl(this._value, this._then);
+class _$LeaveAdminCopyWithImpl<$Res> implements $LeaveAdminCopyWith<$Res> {
+  _$LeaveAdminCopyWithImpl(this._value, this._then);
 
-  final TransferSite _value;
+  final LeaveAdmin _value;
   // ignore: unused_field
-  final $Res Function(TransferSite) _then;
+  final $Res Function(LeaveAdmin) _then;
 
   @override
   $Res call({
-    Object? personId = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
-      personId: personId == freezed
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1801,35 +1794,29 @@ class _$TransferSiteCopyWithImpl<$Res> implements $TransferSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$TransferSiteCopyWith<$Res>
-    implements $TransferSiteCopyWith<$Res> {
-  factory _$TransferSiteCopyWith(
-          _TransferSite value, $Res Function(_TransferSite) then) =
-      __$TransferSiteCopyWithImpl<$Res>;
+abstract class _$LeaveAdminCopyWith<$Res> implements $LeaveAdminCopyWith<$Res> {
+  factory _$LeaveAdminCopyWith(
+          _LeaveAdmin value, $Res Function(_LeaveAdmin) then) =
+      __$LeaveAdminCopyWithImpl<$Res>;
   @override
-  $Res call({int personId, String auth});
+  $Res call({String auth});
 }
 
 /// @nodoc
-class __$TransferSiteCopyWithImpl<$Res> extends _$TransferSiteCopyWithImpl<$Res>
-    implements _$TransferSiteCopyWith<$Res> {
-  __$TransferSiteCopyWithImpl(
-      _TransferSite _value, $Res Function(_TransferSite) _then)
-      : super(_value, (v) => _then(v as _TransferSite));
+class __$LeaveAdminCopyWithImpl<$Res> extends _$LeaveAdminCopyWithImpl<$Res>
+    implements _$LeaveAdminCopyWith<$Res> {
+  __$LeaveAdminCopyWithImpl(
+      _LeaveAdmin _value, $Res Function(_LeaveAdmin) _then)
+      : super(_value, (v) => _then(v as _LeaveAdmin));
 
   @override
-  _TransferSite get _value => super._value as _TransferSite;
+  _LeaveAdmin get _value => super._value as _LeaveAdmin;
 
   @override
   $Res call({
-    Object? personId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_TransferSite(
-      personId: personId == freezed
-          ? _value.personId
-          : personId // ignore: cast_nullable_to_non_nullable
-              as int,
+    return _then(_LeaveAdmin(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1841,64 +1828,55 @@ class __$TransferSiteCopyWithImpl<$Res> extends _$TransferSiteCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
-class _$_TransferSite extends _TransferSite {
-  const _$_TransferSite({required this.personId, required this.auth})
-      : super._();
+class _$_LeaveAdmin extends _LeaveAdmin {
+  const _$_LeaveAdmin({required this.auth}) : super._();
 
-  factory _$_TransferSite.fromJson(Map<String, dynamic> json) =>
-      _$$_TransferSiteFromJson(json);
+  factory _$_LeaveAdmin.fromJson(Map<String, dynamic> json) =>
+      _$$_LeaveAdminFromJson(json);
 
-  @override
-  final int personId;
   @override
   final String auth;
 
   @override
   String toString() {
-    return 'TransferSite(personId: $personId, auth: $auth)';
+    return 'LeaveAdmin(auth: $auth)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TransferSite &&
-            const DeepCollectionEquality().equals(other.personId, personId) &&
+            other is _LeaveAdmin &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(personId),
-      const DeepCollectionEquality().hash(auth));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
   @override
-  _$TransferSiteCopyWith<_TransferSite> get copyWith =>
-      __$TransferSiteCopyWithImpl<_TransferSite>(this, _$identity);
+  _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
+      __$LeaveAdminCopyWithImpl<_LeaveAdmin>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransferSiteToJson(this);
+    return _$$_LeaveAdminToJson(this);
   }
 }
 
-abstract class _TransferSite extends TransferSite {
-  const factory _TransferSite({required int personId, required String auth}) =
-      _$_TransferSite;
-  const _TransferSite._() : super._();
+abstract class _LeaveAdmin extends LeaveAdmin {
+  const factory _LeaveAdmin({required String auth}) = _$_LeaveAdmin;
+  const _LeaveAdmin._() : super._();
 
-  factory _TransferSite.fromJson(Map<String, dynamic> json) =
-      _$_TransferSite.fromJson;
+  factory _LeaveAdmin.fromJson(Map<String, dynamic> json) =
+      _$_LeaveAdmin.fromJson;
 
-  @override
-  int get personId;
   @override
   String get auth;
   @override
   @JsonKey(ignore: true)
-  _$TransferSiteCopyWith<_TransferSite> get copyWith =>
+  _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

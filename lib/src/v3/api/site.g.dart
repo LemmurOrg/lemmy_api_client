@@ -186,15 +186,13 @@ Map<String, dynamic> _$$_GetSiteToJson(_$_GetSite instance) {
   return val;
 }
 
-_$_TransferSite _$$_TransferSiteFromJson(Map<String, dynamic> json) =>
-    _$_TransferSite(
-      personId: json['person_id'] as int,
+_$_LeaveAdmin _$$_LeaveAdminFromJson(Map<String, dynamic> json) =>
+    _$_LeaveAdmin(
       auth: json['auth'] as String,
     );
 
-Map<String, dynamic> _$$_TransferSiteToJson(_$_TransferSite instance) =>
+Map<String, dynamic> _$$_LeaveAdminToJson(_$_LeaveAdmin instance) =>
     <String, dynamic>{
-      'person_id': instance.personId,
       'auth': instance.auth,
     };
 
