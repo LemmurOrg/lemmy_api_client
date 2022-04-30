@@ -12,38 +12,11 @@ part of 'api.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FullCommunityView _$FullCommunityViewFromJson(Map<String, dynamic> json) {
   return _FullCommunityView.fromJson(json);
 }
-
-/// @nodoc
-class _$FullCommunityViewTearOff {
-  const _$FullCommunityViewTearOff();
-
-  _FullCommunityView call(
-      {required CommunityView communityView,
-      required Site? site,
-      required List<CommunityModeratorView> moderators,
-      required int online,
-      required String instanceHost}) {
-    return _FullCommunityView(
-      communityView: communityView,
-      site: site,
-      moderators: moderators,
-      online: online,
-      instanceHost: instanceHost,
-    );
-  }
-
-  FullCommunityView fromJson(Map<String, Object?> json) {
-    return FullCommunityView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FullCommunityView = _$FullCommunityViewTearOff();
 
 /// @nodoc
 mixin _$FullCommunityView {
@@ -207,10 +180,11 @@ class _$_FullCommunityView extends _FullCommunityView {
   const _$_FullCommunityView(
       {required this.communityView,
       required this.site,
-      required this.moderators,
+      required final List<CommunityModeratorView> moderators,
       required this.online,
       required this.instanceHost})
-      : super._();
+      : _moderators = moderators,
+        super._();
 
   factory _$_FullCommunityView.fromJson(Map<String, dynamic> json) =>
       _$$_FullCommunityViewFromJson(json);
@@ -219,8 +193,13 @@ class _$_FullCommunityView extends _FullCommunityView {
   final CommunityView communityView;
   @override
   final Site? site;
+  final List<CommunityModeratorView> _moderators;
   @override
-  final List<CommunityModeratorView> moderators;
+  List<CommunityModeratorView> get moderators {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_moderators);
+  }
+
   @override
   final int online;
   @override
@@ -246,6 +225,7 @@ class _$_FullCommunityView extends _FullCommunityView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -268,26 +248,27 @@ class _$_FullCommunityView extends _FullCommunityView {
 
 abstract class _FullCommunityView extends FullCommunityView {
   const factory _FullCommunityView(
-      {required CommunityView communityView,
-      required Site? site,
-      required List<CommunityModeratorView> moderators,
-      required int online,
-      required String instanceHost}) = _$_FullCommunityView;
+      {required final CommunityView communityView,
+      required final Site? site,
+      required final List<CommunityModeratorView> moderators,
+      required final int online,
+      required final String instanceHost}) = _$_FullCommunityView;
   const _FullCommunityView._() : super._();
 
   factory _FullCommunityView.fromJson(Map<String, dynamic> json) =
       _$_FullCommunityView.fromJson;
 
   @override
-  CommunityView get communityView;
+  CommunityView get communityView => throw _privateConstructorUsedError;
   @override
-  Site? get site;
+  Site? get site => throw _privateConstructorUsedError;
   @override
-  List<CommunityModeratorView> get moderators;
+  List<CommunityModeratorView> get moderators =>
+      throw _privateConstructorUsedError;
   @override
-  int get online;
+  int get online => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullCommunityViewCopyWith<_FullCommunityView> get copyWith =>
@@ -297,35 +278,6 @@ abstract class _FullCommunityView extends FullCommunityView {
 FullPostView _$FullPostViewFromJson(Map<String, dynamic> json) {
   return _FullPostView.fromJson(json);
 }
-
-/// @nodoc
-class _$FullPostViewTearOff {
-  const _$FullPostViewTearOff();
-
-  _FullPostView call(
-      {required PostView postView,
-      required CommunityView communityView,
-      required List<CommentView> comments,
-      required List<CommunityModeratorView> moderators,
-      required int online,
-      required String instanceHost}) {
-    return _FullPostView(
-      postView: postView,
-      communityView: communityView,
-      comments: comments,
-      moderators: moderators,
-      online: online,
-      instanceHost: instanceHost,
-    );
-  }
-
-  FullPostView fromJson(Map<String, Object?> json) {
-    return FullPostView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FullPostView = _$FullPostViewTearOff();
 
 /// @nodoc
 mixin _$FullPostView {
@@ -496,11 +448,13 @@ class _$_FullPostView extends _FullPostView {
   const _$_FullPostView(
       {required this.postView,
       required this.communityView,
-      required this.comments,
-      required this.moderators,
+      required final List<CommentView> comments,
+      required final List<CommunityModeratorView> moderators,
       required this.online,
       required this.instanceHost})
-      : super._();
+      : _comments = comments,
+        _moderators = moderators,
+        super._();
 
   factory _$_FullPostView.fromJson(Map<String, dynamic> json) =>
       _$$_FullPostViewFromJson(json);
@@ -509,10 +463,20 @@ class _$_FullPostView extends _FullPostView {
   final PostView postView;
   @override
   final CommunityView communityView;
+  final List<CommentView> _comments;
   @override
-  final List<CommentView> comments;
+  List<CommentView> get comments {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_comments);
+  }
+
+  final List<CommunityModeratorView> _moderators;
   @override
-  final List<CommunityModeratorView> moderators;
+  List<CommunityModeratorView> get moderators {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_moderators);
+  }
+
   @override
   final int online;
   @override
@@ -539,6 +503,7 @@ class _$_FullPostView extends _FullPostView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -562,29 +527,30 @@ class _$_FullPostView extends _FullPostView {
 
 abstract class _FullPostView extends FullPostView {
   const factory _FullPostView(
-      {required PostView postView,
-      required CommunityView communityView,
-      required List<CommentView> comments,
-      required List<CommunityModeratorView> moderators,
-      required int online,
-      required String instanceHost}) = _$_FullPostView;
+      {required final PostView postView,
+      required final CommunityView communityView,
+      required final List<CommentView> comments,
+      required final List<CommunityModeratorView> moderators,
+      required final int online,
+      required final String instanceHost}) = _$_FullPostView;
   const _FullPostView._() : super._();
 
   factory _FullPostView.fromJson(Map<String, dynamic> json) =
       _$_FullPostView.fromJson;
 
   @override
-  PostView get postView;
+  PostView get postView => throw _privateConstructorUsedError;
   @override
-  CommunityView get communityView;
+  CommunityView get communityView => throw _privateConstructorUsedError;
   @override
-  List<CommentView> get comments;
+  List<CommentView> get comments => throw _privateConstructorUsedError;
   @override
-  List<CommunityModeratorView> get moderators;
+  List<CommunityModeratorView> get moderators =>
+      throw _privateConstructorUsedError;
   @override
-  int get online;
+  int get online => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullPostViewCopyWith<_FullPostView> get copyWith =>
@@ -594,35 +560,6 @@ abstract class _FullPostView extends FullPostView {
 SearchResults _$SearchResultsFromJson(Map<String, dynamic> json) {
   return _SearchResults.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchResultsTearOff {
-  const _$SearchResultsTearOff();
-
-  _SearchResults call(
-      {@JsonKey(name: 'type_') required SearchType type,
-      required List<CommentView> comments,
-      required List<PostView> posts,
-      required List<CommunityView> communities,
-      required List<PersonViewSafe> users,
-      required String instanceHost}) {
-    return _SearchResults(
-      type: type,
-      comments: comments,
-      posts: posts,
-      communities: communities,
-      users: users,
-      instanceHost: instanceHost,
-    );
-  }
-
-  SearchResults fromJson(Map<String, Object?> json) {
-    return SearchResults.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchResults = _$SearchResultsTearOff();
 
 /// @nodoc
 mixin _$SearchResults {
@@ -772,12 +709,16 @@ class __$SearchResultsCopyWithImpl<$Res>
 class _$_SearchResults extends _SearchResults {
   const _$_SearchResults(
       {@JsonKey(name: 'type_') required this.type,
-      required this.comments,
-      required this.posts,
-      required this.communities,
-      required this.users,
+      required final List<CommentView> comments,
+      required final List<PostView> posts,
+      required final List<CommunityView> communities,
+      required final List<PersonViewSafe> users,
       required this.instanceHost})
-      : super._();
+      : _comments = comments,
+        _posts = posts,
+        _communities = communities,
+        _users = users,
+        super._();
 
   factory _$_SearchResults.fromJson(Map<String, dynamic> json) =>
       _$$_SearchResultsFromJson(json);
@@ -785,14 +726,34 @@ class _$_SearchResults extends _SearchResults {
   @override
   @JsonKey(name: 'type_')
   final SearchType type;
+  final List<CommentView> _comments;
   @override
-  final List<CommentView> comments;
+  List<CommentView> get comments {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_comments);
+  }
+
+  final List<PostView> _posts;
   @override
-  final List<PostView> posts;
+  List<PostView> get posts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_posts);
+  }
+
+  final List<CommunityView> _communities;
   @override
-  final List<CommunityView> communities;
+  List<CommunityView> get communities {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_communities);
+  }
+
+  final List<PersonViewSafe> _users;
   @override
-  final List<PersonViewSafe> users;
+  List<PersonViewSafe> get users {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_users);
+  }
+
   @override
   final String instanceHost;
 
@@ -816,6 +777,7 @@ class _$_SearchResults extends _SearchResults {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -839,12 +801,12 @@ class _$_SearchResults extends _SearchResults {
 
 abstract class _SearchResults extends SearchResults {
   const factory _SearchResults(
-      {@JsonKey(name: 'type_') required SearchType type,
-      required List<CommentView> comments,
-      required List<PostView> posts,
-      required List<CommunityView> communities,
-      required List<PersonViewSafe> users,
-      required String instanceHost}) = _$_SearchResults;
+      {@JsonKey(name: 'type_') required final SearchType type,
+      required final List<CommentView> comments,
+      required final List<PostView> posts,
+      required final List<CommunityView> communities,
+      required final List<PersonViewSafe> users,
+      required final String instanceHost}) = _$_SearchResults;
   const _SearchResults._() : super._();
 
   factory _SearchResults.fromJson(Map<String, dynamic> json) =
@@ -852,17 +814,17 @@ abstract class _SearchResults extends SearchResults {
 
   @override
   @JsonKey(name: 'type_')
-  SearchType get type;
+  SearchType get type => throw _privateConstructorUsedError;
   @override
-  List<CommentView> get comments;
+  List<CommentView> get comments => throw _privateConstructorUsedError;
   @override
-  List<PostView> get posts;
+  List<PostView> get posts => throw _privateConstructorUsedError;
   @override
-  List<CommunityView> get communities;
+  List<CommunityView> get communities => throw _privateConstructorUsedError;
   @override
-  List<PersonViewSafe> get users;
+  List<PersonViewSafe> get users => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SearchResultsCopyWith<_SearchResults> get copyWith =>
@@ -872,45 +834,6 @@ abstract class _SearchResults extends SearchResults {
 Modlog _$ModlogFromJson(Map<String, dynamic> json) {
   return _Modlog.fromJson(json);
 }
-
-/// @nodoc
-class _$ModlogTearOff {
-  const _$ModlogTearOff();
-
-  _Modlog call(
-      {required List<ModRemovePostView> removedPosts,
-      required List<ModLockPostView> lockedPosts,
-      required List<ModStickyPostView> stickiedPosts,
-      required List<ModRemoveCommentView> removedComments,
-      required List<ModRemoveCommunityView> removedCommunities,
-      required List<ModBanFromCommunityView> bannedFromCommunity,
-      required List<ModBanView> banned,
-      required List<ModAddCommunityView> addedToCommunity,
-      required List<ModTransferCommunityView> transferredToCommunity,
-      required List<ModAddView> added,
-      required String instanceHost}) {
-    return _Modlog(
-      removedPosts: removedPosts,
-      lockedPosts: lockedPosts,
-      stickiedPosts: stickiedPosts,
-      removedComments: removedComments,
-      removedCommunities: removedCommunities,
-      bannedFromCommunity: bannedFromCommunity,
-      banned: banned,
-      addedToCommunity: addedToCommunity,
-      transferredToCommunity: transferredToCommunity,
-      added: added,
-      instanceHost: instanceHost,
-    );
-  }
-
-  Modlog fromJson(Map<String, Object?> json) {
-    return Modlog.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Modlog = _$ModlogTearOff();
 
 /// @nodoc
 mixin _$Modlog {
@@ -1123,42 +1046,102 @@ class __$ModlogCopyWithImpl<$Res> extends _$ModlogCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_Modlog extends _Modlog {
   const _$_Modlog(
-      {required this.removedPosts,
-      required this.lockedPosts,
-      required this.stickiedPosts,
-      required this.removedComments,
-      required this.removedCommunities,
-      required this.bannedFromCommunity,
-      required this.banned,
-      required this.addedToCommunity,
-      required this.transferredToCommunity,
-      required this.added,
+      {required final List<ModRemovePostView> removedPosts,
+      required final List<ModLockPostView> lockedPosts,
+      required final List<ModStickyPostView> stickiedPosts,
+      required final List<ModRemoveCommentView> removedComments,
+      required final List<ModRemoveCommunityView> removedCommunities,
+      required final List<ModBanFromCommunityView> bannedFromCommunity,
+      required final List<ModBanView> banned,
+      required final List<ModAddCommunityView> addedToCommunity,
+      required final List<ModTransferCommunityView> transferredToCommunity,
+      required final List<ModAddView> added,
       required this.instanceHost})
-      : super._();
+      : _removedPosts = removedPosts,
+        _lockedPosts = lockedPosts,
+        _stickiedPosts = stickiedPosts,
+        _removedComments = removedComments,
+        _removedCommunities = removedCommunities,
+        _bannedFromCommunity = bannedFromCommunity,
+        _banned = banned,
+        _addedToCommunity = addedToCommunity,
+        _transferredToCommunity = transferredToCommunity,
+        _added = added,
+        super._();
 
   factory _$_Modlog.fromJson(Map<String, dynamic> json) =>
       _$$_ModlogFromJson(json);
 
+  final List<ModRemovePostView> _removedPosts;
   @override
-  final List<ModRemovePostView> removedPosts;
+  List<ModRemovePostView> get removedPosts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_removedPosts);
+  }
+
+  final List<ModLockPostView> _lockedPosts;
   @override
-  final List<ModLockPostView> lockedPosts;
+  List<ModLockPostView> get lockedPosts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_lockedPosts);
+  }
+
+  final List<ModStickyPostView> _stickiedPosts;
   @override
-  final List<ModStickyPostView> stickiedPosts;
+  List<ModStickyPostView> get stickiedPosts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_stickiedPosts);
+  }
+
+  final List<ModRemoveCommentView> _removedComments;
   @override
-  final List<ModRemoveCommentView> removedComments;
+  List<ModRemoveCommentView> get removedComments {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_removedComments);
+  }
+
+  final List<ModRemoveCommunityView> _removedCommunities;
   @override
-  final List<ModRemoveCommunityView> removedCommunities;
+  List<ModRemoveCommunityView> get removedCommunities {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_removedCommunities);
+  }
+
+  final List<ModBanFromCommunityView> _bannedFromCommunity;
   @override
-  final List<ModBanFromCommunityView> bannedFromCommunity;
+  List<ModBanFromCommunityView> get bannedFromCommunity {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_bannedFromCommunity);
+  }
+
+  final List<ModBanView> _banned;
   @override
-  final List<ModBanView> banned;
+  List<ModBanView> get banned {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_banned);
+  }
+
+  final List<ModAddCommunityView> _addedToCommunity;
   @override
-  final List<ModAddCommunityView> addedToCommunity;
+  List<ModAddCommunityView> get addedToCommunity {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_addedToCommunity);
+  }
+
+  final List<ModTransferCommunityView> _transferredToCommunity;
   @override
-  final List<ModTransferCommunityView> transferredToCommunity;
+  List<ModTransferCommunityView> get transferredToCommunity {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_transferredToCommunity);
+  }
+
+  final List<ModAddView> _added;
   @override
-  final List<ModAddView> added;
+  List<ModAddView> get added {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_added);
+  }
+
   @override
   final String instanceHost;
 
@@ -1194,6 +1177,7 @@ class _$_Modlog extends _Modlog {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1222,43 +1206,50 @@ class _$_Modlog extends _Modlog {
 
 abstract class _Modlog extends Modlog {
   const factory _Modlog(
-      {required List<ModRemovePostView> removedPosts,
-      required List<ModLockPostView> lockedPosts,
-      required List<ModStickyPostView> stickiedPosts,
-      required List<ModRemoveCommentView> removedComments,
-      required List<ModRemoveCommunityView> removedCommunities,
-      required List<ModBanFromCommunityView> bannedFromCommunity,
-      required List<ModBanView> banned,
-      required List<ModAddCommunityView> addedToCommunity,
-      required List<ModTransferCommunityView> transferredToCommunity,
-      required List<ModAddView> added,
-      required String instanceHost}) = _$_Modlog;
+      {required final List<ModRemovePostView> removedPosts,
+      required final List<ModLockPostView> lockedPosts,
+      required final List<ModStickyPostView> stickiedPosts,
+      required final List<ModRemoveCommentView> removedComments,
+      required final List<ModRemoveCommunityView> removedCommunities,
+      required final List<ModBanFromCommunityView> bannedFromCommunity,
+      required final List<ModBanView> banned,
+      required final List<ModAddCommunityView> addedToCommunity,
+      required final List<ModTransferCommunityView> transferredToCommunity,
+      required final List<ModAddView> added,
+      required final String instanceHost}) = _$_Modlog;
   const _Modlog._() : super._();
 
   factory _Modlog.fromJson(Map<String, dynamic> json) = _$_Modlog.fromJson;
 
   @override
-  List<ModRemovePostView> get removedPosts;
+  List<ModRemovePostView> get removedPosts =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModLockPostView> get lockedPosts;
+  List<ModLockPostView> get lockedPosts => throw _privateConstructorUsedError;
   @override
-  List<ModStickyPostView> get stickiedPosts;
+  List<ModStickyPostView> get stickiedPosts =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModRemoveCommentView> get removedComments;
+  List<ModRemoveCommentView> get removedComments =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModRemoveCommunityView> get removedCommunities;
+  List<ModRemoveCommunityView> get removedCommunities =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModBanFromCommunityView> get bannedFromCommunity;
+  List<ModBanFromCommunityView> get bannedFromCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModBanView> get banned;
+  List<ModBanView> get banned => throw _privateConstructorUsedError;
   @override
-  List<ModAddCommunityView> get addedToCommunity;
+  List<ModAddCommunityView> get addedToCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModTransferCommunityView> get transferredToCommunity;
+  List<ModTransferCommunityView> get transferredToCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  List<ModAddView> get added;
+  List<ModAddView> get added => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModlogCopyWith<_Modlog> get copyWith => throw _privateConstructorUsedError;
@@ -1267,31 +1258,6 @@ abstract class _Modlog extends Modlog {
 FullCommentView _$FullCommentViewFromJson(Map<String, dynamic> json) {
   return _FullCommentView.fromJson(json);
 }
-
-/// @nodoc
-class _$FullCommentViewTearOff {
-  const _$FullCommentViewTearOff();
-
-  _FullCommentView call(
-      {required CommentView commentView,
-      required List<int> recipientIds,
-      String? formId,
-      required String instanceHost}) {
-    return _FullCommentView(
-      commentView: commentView,
-      recipientIds: recipientIds,
-      formId: formId,
-      instanceHost: instanceHost,
-    );
-  }
-
-  FullCommentView fromJson(Map<String, Object?> json) {
-    return FullCommentView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FullCommentView = _$FullCommentViewTearOff();
 
 /// @nodoc
 mixin _$FullCommentView {
@@ -1426,18 +1392,24 @@ class __$FullCommentViewCopyWithImpl<$Res>
 class _$_FullCommentView extends _FullCommentView {
   const _$_FullCommentView(
       {required this.commentView,
-      required this.recipientIds,
+      required final List<int> recipientIds,
       this.formId,
       required this.instanceHost})
-      : super._();
+      : _recipientIds = recipientIds,
+        super._();
 
   factory _$_FullCommentView.fromJson(Map<String, dynamic> json) =>
       _$$_FullCommentViewFromJson(json);
 
   @override
   final CommentView commentView;
+  final List<int> _recipientIds;
   @override
-  final List<int> recipientIds;
+  List<int> get recipientIds {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_recipientIds);
+  }
+
   @override
   final String? formId;
   @override
@@ -1462,6 +1434,7 @@ class _$_FullCommentView extends _FullCommentView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1483,23 +1456,23 @@ class _$_FullCommentView extends _FullCommentView {
 
 abstract class _FullCommentView extends FullCommentView {
   const factory _FullCommentView(
-      {required CommentView commentView,
-      required List<int> recipientIds,
-      String? formId,
-      required String instanceHost}) = _$_FullCommentView;
+      {required final CommentView commentView,
+      required final List<int> recipientIds,
+      final String? formId,
+      required final String instanceHost}) = _$_FullCommentView;
   const _FullCommentView._() : super._();
 
   factory _FullCommentView.fromJson(Map<String, dynamic> json) =
       _$_FullCommentView.fromJson;
 
   @override
-  CommentView get commentView;
+  CommentView get commentView => throw _privateConstructorUsedError;
   @override
-  List<int> get recipientIds;
+  List<int> get recipientIds => throw _privateConstructorUsedError;
   @override
-  String? get formId;
+  String? get formId => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullCommentViewCopyWith<_FullCommentView> get copyWith =>
@@ -1509,37 +1482,6 @@ abstract class _FullCommentView extends FullCommentView {
 FullSiteView _$FullSiteViewFromJson(Map<String, dynamic> json) {
   return _FullSiteView.fromJson(json);
 }
-
-/// @nodoc
-class _$FullSiteViewTearOff {
-  const _$FullSiteViewTearOff();
-
-  _FullSiteView call(
-      {SiteView? siteView,
-      required List<PersonViewSafe> admins,
-      required int online,
-      required String version,
-      MyUserInfo? myUser,
-      FederatedInstances? federatedInstances,
-      required String instanceHost}) {
-    return _FullSiteView(
-      siteView: siteView,
-      admins: admins,
-      online: online,
-      version: version,
-      myUser: myUser,
-      federatedInstances: federatedInstances,
-      instanceHost: instanceHost,
-    );
-  }
-
-  FullSiteView fromJson(Map<String, Object?> json) {
-    return FullSiteView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FullSiteView = _$FullSiteViewTearOff();
 
 /// @nodoc
 mixin _$FullSiteView {
@@ -1745,21 +1687,27 @@ class __$FullSiteViewCopyWithImpl<$Res> extends _$FullSiteViewCopyWithImpl<$Res>
 class _$_FullSiteView extends _FullSiteView {
   const _$_FullSiteView(
       {this.siteView,
-      required this.admins,
+      required final List<PersonViewSafe> admins,
       required this.online,
       required this.version,
       this.myUser,
       this.federatedInstances,
       required this.instanceHost})
-      : super._();
+      : _admins = admins,
+        super._();
 
   factory _$_FullSiteView.fromJson(Map<String, dynamic> json) =>
       _$$_FullSiteViewFromJson(json);
 
   @override
   final SiteView? siteView;
+  final List<PersonViewSafe> _admins;
   @override
-  final List<PersonViewSafe> admins;
+  List<PersonViewSafe> get admins {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_admins);
+  }
+
   @override
   final int online;
   @override
@@ -1792,6 +1740,7 @@ class _$_FullSiteView extends _FullSiteView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1816,32 +1765,33 @@ class _$_FullSiteView extends _FullSiteView {
 
 abstract class _FullSiteView extends FullSiteView {
   const factory _FullSiteView(
-      {SiteView? siteView,
-      required List<PersonViewSafe> admins,
-      required int online,
-      required String version,
-      MyUserInfo? myUser,
-      FederatedInstances? federatedInstances,
-      required String instanceHost}) = _$_FullSiteView;
+      {final SiteView? siteView,
+      required final List<PersonViewSafe> admins,
+      required final int online,
+      required final String version,
+      final MyUserInfo? myUser,
+      final FederatedInstances? federatedInstances,
+      required final String instanceHost}) = _$_FullSiteView;
   const _FullSiteView._() : super._();
 
   factory _FullSiteView.fromJson(Map<String, dynamic> json) =
       _$_FullSiteView.fromJson;
 
   @override
-  SiteView? get siteView;
+  SiteView? get siteView => throw _privateConstructorUsedError;
   @override
-  List<PersonViewSafe> get admins;
+  List<PersonViewSafe> get admins => throw _privateConstructorUsedError;
   @override
-  int get online;
+  int get online => throw _privateConstructorUsedError;
   @override
-  String get version;
+  String get version => throw _privateConstructorUsedError;
   @override
-  MyUserInfo? get myUser;
+  MyUserInfo? get myUser => throw _privateConstructorUsedError;
   @override
-  FederatedInstances? get federatedInstances;
+  FederatedInstances? get federatedInstances =>
+      throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullSiteViewCopyWith<_FullSiteView> get copyWith =>
@@ -1851,35 +1801,6 @@ abstract class _FullSiteView extends FullSiteView {
 MyUserInfo _$MyUserInfoFromJson(Map<String, dynamic> json) {
   return _MyUserInfo.fromJson(json);
 }
-
-/// @nodoc
-class _$MyUserInfoTearOff {
-  const _$MyUserInfoTearOff();
-
-  _MyUserInfo call(
-      {required LocalUserSettingsView localUserView,
-      required List<CommunityFollowerView> follows,
-      required List<CommunityModeratorView> moderates,
-      required List<CommunityBlockView> communityBlocks,
-      required List<PersonBlockView> personBlocks,
-      required String instanceHost}) {
-    return _MyUserInfo(
-      localUserView: localUserView,
-      follows: follows,
-      moderates: moderates,
-      communityBlocks: communityBlocks,
-      personBlocks: personBlocks,
-      instanceHost: instanceHost,
-    );
-  }
-
-  MyUserInfo fromJson(Map<String, Object?> json) {
-    return MyUserInfo.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MyUserInfo = _$MyUserInfoTearOff();
 
 /// @nodoc
 mixin _$MyUserInfo {
@@ -2039,26 +1960,50 @@ class __$MyUserInfoCopyWithImpl<$Res> extends _$MyUserInfoCopyWithImpl<$Res>
 class _$_MyUserInfo extends _MyUserInfo {
   const _$_MyUserInfo(
       {required this.localUserView,
-      required this.follows,
-      required this.moderates,
-      required this.communityBlocks,
-      required this.personBlocks,
+      required final List<CommunityFollowerView> follows,
+      required final List<CommunityModeratorView> moderates,
+      required final List<CommunityBlockView> communityBlocks,
+      required final List<PersonBlockView> personBlocks,
       required this.instanceHost})
-      : super._();
+      : _follows = follows,
+        _moderates = moderates,
+        _communityBlocks = communityBlocks,
+        _personBlocks = personBlocks,
+        super._();
 
   factory _$_MyUserInfo.fromJson(Map<String, dynamic> json) =>
       _$$_MyUserInfoFromJson(json);
 
   @override
   final LocalUserSettingsView localUserView;
+  final List<CommunityFollowerView> _follows;
   @override
-  final List<CommunityFollowerView> follows;
+  List<CommunityFollowerView> get follows {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_follows);
+  }
+
+  final List<CommunityModeratorView> _moderates;
   @override
-  final List<CommunityModeratorView> moderates;
+  List<CommunityModeratorView> get moderates {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_moderates);
+  }
+
+  final List<CommunityBlockView> _communityBlocks;
   @override
-  final List<CommunityBlockView> communityBlocks;
+  List<CommunityBlockView> get communityBlocks {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_communityBlocks);
+  }
+
+  final List<PersonBlockView> _personBlocks;
   @override
-  final List<PersonBlockView> personBlocks;
+  List<PersonBlockView> get personBlocks {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_personBlocks);
+  }
+
   @override
   final String instanceHost;
 
@@ -2084,6 +2029,7 @@ class _$_MyUserInfo extends _MyUserInfo {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2107,29 +2053,31 @@ class _$_MyUserInfo extends _MyUserInfo {
 
 abstract class _MyUserInfo extends MyUserInfo {
   const factory _MyUserInfo(
-      {required LocalUserSettingsView localUserView,
-      required List<CommunityFollowerView> follows,
-      required List<CommunityModeratorView> moderates,
-      required List<CommunityBlockView> communityBlocks,
-      required List<PersonBlockView> personBlocks,
-      required String instanceHost}) = _$_MyUserInfo;
+      {required final LocalUserSettingsView localUserView,
+      required final List<CommunityFollowerView> follows,
+      required final List<CommunityModeratorView> moderates,
+      required final List<CommunityBlockView> communityBlocks,
+      required final List<PersonBlockView> personBlocks,
+      required final String instanceHost}) = _$_MyUserInfo;
   const _MyUserInfo._() : super._();
 
   factory _MyUserInfo.fromJson(Map<String, dynamic> json) =
       _$_MyUserInfo.fromJson;
 
   @override
-  LocalUserSettingsView get localUserView;
+  LocalUserSettingsView get localUserView => throw _privateConstructorUsedError;
   @override
-  List<CommunityFollowerView> get follows;
+  List<CommunityFollowerView> get follows => throw _privateConstructorUsedError;
   @override
-  List<CommunityModeratorView> get moderates;
+  List<CommunityModeratorView> get moderates =>
+      throw _privateConstructorUsedError;
   @override
-  List<CommunityBlockView> get communityBlocks;
+  List<CommunityBlockView> get communityBlocks =>
+      throw _privateConstructorUsedError;
   @override
-  List<PersonBlockView> get personBlocks;
+  List<PersonBlockView> get personBlocks => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MyUserInfoCopyWith<_MyUserInfo> get copyWith =>
@@ -2139,31 +2087,6 @@ abstract class _MyUserInfo extends MyUserInfo {
 FederatedInstances _$FederatedInstancesFromJson(Map<String, dynamic> json) {
   return _FederatedInstances.fromJson(json);
 }
-
-/// @nodoc
-class _$FederatedInstancesTearOff {
-  const _$FederatedInstancesTearOff();
-
-  _FederatedInstances call(
-      {required List<String> linked,
-      List<String>? allowed,
-      List<String>? blocked,
-      required String instanceHost}) {
-    return _FederatedInstances(
-      linked: linked,
-      allowed: allowed,
-      blocked: blocked,
-      instanceHost: instanceHost,
-    );
-  }
-
-  FederatedInstances fromJson(Map<String, Object?> json) {
-    return FederatedInstances.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FederatedInstances = _$FederatedInstancesTearOff();
 
 /// @nodoc
 mixin _$FederatedInstances {
@@ -2285,21 +2208,43 @@ class __$FederatedInstancesCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_FederatedInstances extends _FederatedInstances {
   const _$_FederatedInstances(
-      {required this.linked,
-      this.allowed,
-      this.blocked,
+      {required final List<String> linked,
+      final List<String>? allowed,
+      final List<String>? blocked,
       required this.instanceHost})
-      : super._();
+      : _linked = linked,
+        _allowed = allowed,
+        _blocked = blocked,
+        super._();
 
   factory _$_FederatedInstances.fromJson(Map<String, dynamic> json) =>
       _$$_FederatedInstancesFromJson(json);
 
+  final List<String> _linked;
   @override
-  final List<String> linked;
+  List<String> get linked {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_linked);
+  }
+
+  final List<String>? _allowed;
   @override
-  final List<String>? allowed;
+  List<String>? get allowed {
+    final value = _allowed;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _blocked;
   @override
-  final List<String>? blocked;
+  List<String>? get blocked {
+    final value = _blocked;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String instanceHost;
 
@@ -2320,6 +2265,7 @@ class _$_FederatedInstances extends _FederatedInstances {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2341,23 +2287,23 @@ class _$_FederatedInstances extends _FederatedInstances {
 
 abstract class _FederatedInstances extends FederatedInstances {
   const factory _FederatedInstances(
-      {required List<String> linked,
-      List<String>? allowed,
-      List<String>? blocked,
-      required String instanceHost}) = _$_FederatedInstances;
+      {required final List<String> linked,
+      final List<String>? allowed,
+      final List<String>? blocked,
+      required final String instanceHost}) = _$_FederatedInstances;
   const _FederatedInstances._() : super._();
 
   factory _FederatedInstances.fromJson(Map<String, dynamic> json) =
       _$_FederatedInstances.fromJson;
 
   @override
-  List<String> get linked;
+  List<String> get linked => throw _privateConstructorUsedError;
   @override
-  List<String>? get allowed;
+  List<String>? get allowed => throw _privateConstructorUsedError;
   @override
-  List<String>? get blocked;
+  List<String>? get blocked => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FederatedInstancesCopyWith<_FederatedInstances> get copyWith =>
@@ -2367,26 +2313,6 @@ abstract class _FederatedInstances extends FederatedInstances {
 Captcha _$CaptchaFromJson(Map<String, dynamic> json) {
   return _Captcha.fromJson(json);
 }
-
-/// @nodoc
-class _$CaptchaTearOff {
-  const _$CaptchaTearOff();
-
-  _Captcha call({required String png, String? wav, required String uuid}) {
-    return _Captcha(
-      png: png,
-      wav: wav,
-      uuid: uuid,
-    );
-  }
-
-  Captcha fromJson(Map<String, Object?> json) {
-    return Captcha.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Captcha = _$CaptchaTearOff();
 
 /// @nodoc
 mixin _$Captcha {
@@ -2490,13 +2416,12 @@ class _$_Captcha extends _Captcha {
   factory _$_Captcha.fromJson(Map<String, dynamic> json) =>
       _$$_CaptchaFromJson(json);
 
-  @override
-
   /// A Base64 encoded png
-  final String png;
   @override
+  final String png;
 
   /// A Base64 encoded wav audio file
+  @override
   final String? wav;
   @override
   final String uuid;
@@ -2516,6 +2441,7 @@ class _$_Captcha extends _Captcha {
             const DeepCollectionEquality().equals(other.uuid, uuid));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2536,7 +2462,9 @@ class _$_Captcha extends _Captcha {
 
 abstract class _Captcha extends Captcha {
   const factory _Captcha(
-      {required String png, String? wav, required String uuid}) = _$_Captcha;
+      {required final String png,
+      final String? wav,
+      required final String uuid}) = _$_Captcha;
   const _Captcha._() : super._();
 
   factory _Captcha.fromJson(Map<String, dynamic> json) = _$_Captcha.fromJson;
@@ -2544,13 +2472,13 @@ abstract class _Captcha extends Captcha {
   @override
 
   /// A Base64 encoded png
-  String get png;
+  String get png => throw _privateConstructorUsedError;
   @override
 
   /// A Base64 encoded wav audio file
-  String? get wav;
+  String? get wav => throw _privateConstructorUsedError;
   @override
-  String get uuid;
+  String get uuid => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CaptchaCopyWith<_Captcha> get copyWith =>
@@ -2560,33 +2488,6 @@ abstract class _Captcha extends Captcha {
 FullPersonView _$FullPersonViewFromJson(Map<String, dynamic> json) {
   return _FullPersonView.fromJson(json);
 }
-
-/// @nodoc
-class _$FullPersonViewTearOff {
-  const _$FullPersonViewTearOff();
-
-  _FullPersonView call(
-      {required PersonViewSafe personView,
-      required List<CommunityModeratorView> moderates,
-      required List<CommentView> comments,
-      required List<PostView> posts,
-      required String instanceHost}) {
-    return _FullPersonView(
-      personView: personView,
-      moderates: moderates,
-      comments: comments,
-      posts: posts,
-      instanceHost: instanceHost,
-    );
-  }
-
-  FullPersonView fromJson(Map<String, Object?> json) {
-    return FullPersonView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FullPersonView = _$FullPersonViewTearOff();
 
 /// @nodoc
 mixin _$FullPersonView {
@@ -2735,23 +2636,41 @@ class __$FullPersonViewCopyWithImpl<$Res>
 class _$_FullPersonView extends _FullPersonView {
   const _$_FullPersonView(
       {required this.personView,
-      required this.moderates,
-      required this.comments,
-      required this.posts,
+      required final List<CommunityModeratorView> moderates,
+      required final List<CommentView> comments,
+      required final List<PostView> posts,
       required this.instanceHost})
-      : super._();
+      : _moderates = moderates,
+        _comments = comments,
+        _posts = posts,
+        super._();
 
   factory _$_FullPersonView.fromJson(Map<String, dynamic> json) =>
       _$$_FullPersonViewFromJson(json);
 
   @override
   final PersonViewSafe personView;
+  final List<CommunityModeratorView> _moderates;
   @override
-  final List<CommunityModeratorView> moderates;
+  List<CommunityModeratorView> get moderates {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_moderates);
+  }
+
+  final List<CommentView> _comments;
   @override
-  final List<CommentView> comments;
+  List<CommentView> get comments {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_comments);
+  }
+
+  final List<PostView> _posts;
   @override
-  final List<PostView> posts;
+  List<PostView> get posts {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_posts);
+  }
+
   @override
   final String instanceHost;
 
@@ -2774,6 +2693,7 @@ class _$_FullPersonView extends _FullPersonView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2796,26 +2716,27 @@ class _$_FullPersonView extends _FullPersonView {
 
 abstract class _FullPersonView extends FullPersonView {
   const factory _FullPersonView(
-      {required PersonViewSafe personView,
-      required List<CommunityModeratorView> moderates,
-      required List<CommentView> comments,
-      required List<PostView> posts,
-      required String instanceHost}) = _$_FullPersonView;
+      {required final PersonViewSafe personView,
+      required final List<CommunityModeratorView> moderates,
+      required final List<CommentView> comments,
+      required final List<PostView> posts,
+      required final String instanceHost}) = _$_FullPersonView;
   const _FullPersonView._() : super._();
 
   factory _FullPersonView.fromJson(Map<String, dynamic> json) =
       _$_FullPersonView.fromJson;
 
   @override
-  PersonViewSafe get personView;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
-  List<CommunityModeratorView> get moderates;
+  List<CommunityModeratorView> get moderates =>
+      throw _privateConstructorUsedError;
   @override
-  List<CommentView> get comments;
+  List<CommentView> get comments => throw _privateConstructorUsedError;
   @override
-  List<PostView> get posts;
+  List<PostView> get posts => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FullPersonViewCopyWith<_FullPersonView> get copyWith =>
@@ -2825,29 +2746,6 @@ abstract class _FullPersonView extends FullPersonView {
 BannedCommunityUser _$BannedCommunityUserFromJson(Map<String, dynamic> json) {
   return _BannedCommunityUser.fromJson(json);
 }
-
-/// @nodoc
-class _$BannedCommunityUserTearOff {
-  const _$BannedCommunityUserTearOff();
-
-  _BannedCommunityUser call(
-      {required PersonViewSafe personView,
-      required bool banned,
-      required String instanceHost}) {
-    return _BannedCommunityUser(
-      personView: personView,
-      banned: banned,
-      instanceHost: instanceHost,
-    );
-  }
-
-  BannedCommunityUser fromJson(Map<String, Object?> json) {
-    return BannedCommunityUser.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BannedCommunityUser = _$BannedCommunityUserTearOff();
 
 /// @nodoc
 mixin _$BannedCommunityUser {
@@ -2994,6 +2892,7 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3015,20 +2914,20 @@ class _$_BannedCommunityUser extends _BannedCommunityUser {
 
 abstract class _BannedCommunityUser extends BannedCommunityUser {
   const factory _BannedCommunityUser(
-      {required PersonViewSafe personView,
-      required bool banned,
-      required String instanceHost}) = _$_BannedCommunityUser;
+      {required final PersonViewSafe personView,
+      required final bool banned,
+      required final String instanceHost}) = _$_BannedCommunityUser;
   const _BannedCommunityUser._() : super._();
 
   factory _BannedCommunityUser.fromJson(Map<String, dynamic> json) =
       _$_BannedCommunityUser.fromJson;
 
   @override
-  PersonViewSafe get personView;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool get banned => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BannedCommunityUserCopyWith<_BannedCommunityUser> get copyWith =>
@@ -3038,29 +2937,6 @@ abstract class _BannedCommunityUser extends BannedCommunityUser {
 BannedPerson _$BannedPersonFromJson(Map<String, dynamic> json) {
   return _BannedPerson.fromJson(json);
 }
-
-/// @nodoc
-class _$BannedPersonTearOff {
-  const _$BannedPersonTearOff();
-
-  _BannedPerson call(
-      {required PersonViewSafe personView,
-      required bool banned,
-      required String instanceHost}) {
-    return _BannedPerson(
-      personView: personView,
-      banned: banned,
-      instanceHost: instanceHost,
-    );
-  }
-
-  BannedPerson fromJson(Map<String, Object?> json) {
-    return BannedPerson.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BannedPerson = _$BannedPersonTearOff();
 
 /// @nodoc
 mixin _$BannedPerson {
@@ -3205,6 +3081,7 @@ class _$_BannedPerson extends _BannedPerson {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3225,20 +3102,20 @@ class _$_BannedPerson extends _BannedPerson {
 
 abstract class _BannedPerson extends BannedPerson {
   const factory _BannedPerson(
-      {required PersonViewSafe personView,
-      required bool banned,
-      required String instanceHost}) = _$_BannedPerson;
+      {required final PersonViewSafe personView,
+      required final bool banned,
+      required final String instanceHost}) = _$_BannedPerson;
   const _BannedPerson._() : super._();
 
   factory _BannedPerson.fromJson(Map<String, dynamic> json) =
       _$_BannedPerson.fromJson;
 
   @override
-  PersonViewSafe get personView;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool get banned => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BannedPersonCopyWith<_BannedPerson> get copyWith =>
@@ -3249,33 +3126,6 @@ ResolveObjectResponse _$ResolveObjectResponseFromJson(
     Map<String, dynamic> json) {
   return _ResolveObjectResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$ResolveObjectResponseTearOff {
-  const _$ResolveObjectResponseTearOff();
-
-  _ResolveObjectResponse call(
-      {CommentView? comment,
-      PostView? post,
-      CommunityView? community,
-      PersonViewSafe? person,
-      required String instanceHost}) {
-    return _ResolveObjectResponse(
-      comment: comment,
-      post: post,
-      community: community,
-      person: person,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ResolveObjectResponse fromJson(Map<String, Object?> json) {
-    return ResolveObjectResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResolveObjectResponse = _$ResolveObjectResponseTearOff();
 
 /// @nodoc
 mixin _$ResolveObjectResponse {
@@ -3507,6 +3357,7 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3530,26 +3381,26 @@ class _$_ResolveObjectResponse extends _ResolveObjectResponse {
 
 abstract class _ResolveObjectResponse extends ResolveObjectResponse {
   const factory _ResolveObjectResponse(
-      {CommentView? comment,
-      PostView? post,
-      CommunityView? community,
-      PersonViewSafe? person,
-      required String instanceHost}) = _$_ResolveObjectResponse;
+      {final CommentView? comment,
+      final PostView? post,
+      final CommunityView? community,
+      final PersonViewSafe? person,
+      required final String instanceHost}) = _$_ResolveObjectResponse;
   const _ResolveObjectResponse._() : super._();
 
   factory _ResolveObjectResponse.fromJson(Map<String, dynamic> json) =
       _$_ResolveObjectResponse.fromJson;
 
   @override
-  CommentView? get comment;
+  CommentView? get comment => throw _privateConstructorUsedError;
   @override
-  PostView? get post;
+  PostView? get post => throw _privateConstructorUsedError;
   @override
-  CommunityView? get community;
+  CommunityView? get community => throw _privateConstructorUsedError;
   @override
-  PersonViewSafe? get person;
+  PersonViewSafe? get person => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ResolveObjectResponseCopyWith<_ResolveObjectResponse> get copyWith =>
@@ -3559,33 +3410,6 @@ abstract class _ResolveObjectResponse extends ResolveObjectResponse {
 SiteMetadata _$SiteMetadataFromJson(Map<String, dynamic> json) {
   return _SiteMetadata.fromJson(json);
 }
-
-/// @nodoc
-class _$SiteMetadataTearOff {
-  const _$SiteMetadataTearOff();
-
-  _SiteMetadata call(
-      {String? title,
-      String? description,
-      String? image,
-      String? html,
-      required String instanceHost}) {
-    return _SiteMetadata(
-      title: title,
-      description: description,
-      image: image,
-      html: html,
-      instanceHost: instanceHost,
-    );
-  }
-
-  SiteMetadata fromJson(Map<String, Object?> json) {
-    return SiteMetadata.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SiteMetadata = _$SiteMetadataTearOff();
 
 /// @nodoc
 mixin _$SiteMetadata {
@@ -3758,6 +3582,7 @@ class _$_SiteMetadata extends _SiteMetadata {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3780,26 +3605,26 @@ class _$_SiteMetadata extends _SiteMetadata {
 
 abstract class _SiteMetadata extends SiteMetadata {
   const factory _SiteMetadata(
-      {String? title,
-      String? description,
-      String? image,
-      String? html,
-      required String instanceHost}) = _$_SiteMetadata;
+      {final String? title,
+      final String? description,
+      final String? image,
+      final String? html,
+      required final String instanceHost}) = _$_SiteMetadata;
   const _SiteMetadata._() : super._();
 
   factory _SiteMetadata.fromJson(Map<String, dynamic> json) =
       _$_SiteMetadata.fromJson;
 
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get image;
+  String? get image => throw _privateConstructorUsedError;
   @override
-  String? get html;
+  String? get html => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SiteMetadataCopyWith<_SiteMetadata> get copyWith =>
@@ -3809,29 +3634,6 @@ abstract class _SiteMetadata extends SiteMetadata {
 BlockedPerson _$BlockedPersonFromJson(Map<String, dynamic> json) {
   return _BlockedPerson.fromJson(json);
 }
-
-/// @nodoc
-class _$BlockedPersonTearOff {
-  const _$BlockedPersonTearOff();
-
-  _BlockedPerson call(
-      {required PersonViewSafe personView,
-      required bool blocked,
-      required String instanceHost}) {
-    return _BlockedPerson(
-      personView: personView,
-      blocked: blocked,
-      instanceHost: instanceHost,
-    );
-  }
-
-  BlockedPerson fromJson(Map<String, Object?> json) {
-    return BlockedPerson.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BlockedPerson = _$BlockedPersonTearOff();
 
 /// @nodoc
 mixin _$BlockedPerson {
@@ -3978,6 +3780,7 @@ class _$_BlockedPerson extends _BlockedPerson {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3998,20 +3801,20 @@ class _$_BlockedPerson extends _BlockedPerson {
 
 abstract class _BlockedPerson extends BlockedPerson {
   const factory _BlockedPerson(
-      {required PersonViewSafe personView,
-      required bool blocked,
-      required String instanceHost}) = _$_BlockedPerson;
+      {required final PersonViewSafe personView,
+      required final bool blocked,
+      required final String instanceHost}) = _$_BlockedPerson;
   const _BlockedPerson._() : super._();
 
   factory _BlockedPerson.fromJson(Map<String, dynamic> json) =
       _$_BlockedPerson.fromJson;
 
   @override
-  PersonViewSafe get personView;
+  PersonViewSafe get personView => throw _privateConstructorUsedError;
   @override
-  bool get blocked;
+  bool get blocked => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BlockedPersonCopyWith<_BlockedPerson> get copyWith =>
@@ -4021,29 +3824,6 @@ abstract class _BlockedPerson extends BlockedPerson {
 BlockedCommunity _$BlockedCommunityFromJson(Map<String, dynamic> json) {
   return _BlockedCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$BlockedCommunityTearOff {
-  const _$BlockedCommunityTearOff();
-
-  _BlockedCommunity call(
-      {required CommunityView communityView,
-      required bool blocked,
-      required String instanceHost}) {
-    return _BlockedCommunity(
-      communityView: communityView,
-      blocked: blocked,
-      instanceHost: instanceHost,
-    );
-  }
-
-  BlockedCommunity fromJson(Map<String, Object?> json) {
-    return BlockedCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BlockedCommunity = _$BlockedCommunityTearOff();
 
 /// @nodoc
 mixin _$BlockedCommunity {
@@ -4190,6 +3970,7 @@ class _$_BlockedCommunity extends _BlockedCommunity {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4210,20 +3991,20 @@ class _$_BlockedCommunity extends _BlockedCommunity {
 
 abstract class _BlockedCommunity extends BlockedCommunity {
   const factory _BlockedCommunity(
-      {required CommunityView communityView,
-      required bool blocked,
-      required String instanceHost}) = _$_BlockedCommunity;
+      {required final CommunityView communityView,
+      required final bool blocked,
+      required final String instanceHost}) = _$_BlockedCommunity;
   const _BlockedCommunity._() : super._();
 
   factory _BlockedCommunity.fromJson(Map<String, dynamic> json) =
       _$_BlockedCommunity.fromJson;
 
   @override
-  CommunityView get communityView;
+  CommunityView get communityView => throw _privateConstructorUsedError;
   @override
-  bool get blocked;
+  bool get blocked => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BlockedCommunityCopyWith<_BlockedCommunity> get copyWith =>
@@ -4233,31 +4014,6 @@ abstract class _BlockedCommunity extends BlockedCommunity {
 ReportCount _$ReportCountFromJson(Map<String, dynamic> json) {
   return _ReportCount.fromJson(json);
 }
-
-/// @nodoc
-class _$ReportCountTearOff {
-  const _$ReportCountTearOff();
-
-  _ReportCount call(
-      {int? communityId,
-      required int commentReports,
-      required int postReports,
-      required String instanceHost}) {
-    return _ReportCount(
-      communityId: communityId,
-      commentReports: commentReports,
-      postReports: postReports,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ReportCount fromJson(Map<String, Object?> json) {
-    return ReportCount.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ReportCount = _$ReportCountTearOff();
 
 /// @nodoc
 mixin _$ReportCount {
@@ -4415,6 +4171,7 @@ class _$_ReportCount extends _ReportCount {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4436,23 +4193,23 @@ class _$_ReportCount extends _ReportCount {
 
 abstract class _ReportCount extends ReportCount {
   const factory _ReportCount(
-      {int? communityId,
-      required int commentReports,
-      required int postReports,
-      required String instanceHost}) = _$_ReportCount;
+      {final int? communityId,
+      required final int commentReports,
+      required final int postReports,
+      required final String instanceHost}) = _$_ReportCount;
   const _ReportCount._() : super._();
 
   factory _ReportCount.fromJson(Map<String, dynamic> json) =
       _$_ReportCount.fromJson;
 
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  int get commentReports;
+  int get commentReports => throw _privateConstructorUsedError;
   @override
-  int get postReports;
+  int get postReports => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ReportCountCopyWith<_ReportCount> get copyWith =>
@@ -4462,31 +4219,6 @@ abstract class _ReportCount extends ReportCount {
 UnreadCount _$UnreadCountFromJson(Map<String, dynamic> json) {
   return _UnreadCount.fromJson(json);
 }
-
-/// @nodoc
-class _$UnreadCountTearOff {
-  const _$UnreadCountTearOff();
-
-  _UnreadCount call(
-      {required int replies,
-      required int mentions,
-      required int privateMessages,
-      required String instanceHost}) {
-    return _UnreadCount(
-      replies: replies,
-      mentions: mentions,
-      privateMessages: privateMessages,
-      instanceHost: instanceHost,
-    );
-  }
-
-  UnreadCount fromJson(Map<String, Object?> json) {
-    return UnreadCount.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UnreadCount = _$UnreadCountTearOff();
 
 /// @nodoc
 mixin _$UnreadCount {
@@ -4636,6 +4368,7 @@ class _$_UnreadCount extends _UnreadCount {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4657,23 +4390,23 @@ class _$_UnreadCount extends _UnreadCount {
 
 abstract class _UnreadCount extends UnreadCount {
   const factory _UnreadCount(
-      {required int replies,
-      required int mentions,
-      required int privateMessages,
-      required String instanceHost}) = _$_UnreadCount;
+      {required final int replies,
+      required final int mentions,
+      required final int privateMessages,
+      required final String instanceHost}) = _$_UnreadCount;
   const _UnreadCount._() : super._();
 
   factory _UnreadCount.fromJson(Map<String, dynamic> json) =
       _$_UnreadCount.fromJson;
 
   @override
-  int get replies;
+  int get replies => throw _privateConstructorUsedError;
   @override
-  int get mentions;
+  int get mentions => throw _privateConstructorUsedError;
   @override
-  int get privateMessages;
+  int get privateMessages => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UnreadCountCopyWith<_UnreadCount> get copyWith =>
@@ -4683,31 +4416,6 @@ abstract class _UnreadCount extends UnreadCount {
 LoginResponse _$LoginResponseFromJson(Map<String, dynamic> json) {
   return _LoginResponse.fromJson(json);
 }
-
-/// @nodoc
-class _$LoginResponseTearOff {
-  const _$LoginResponseTearOff();
-
-  _LoginResponse call(
-      {Jwt? jwt,
-      required bool verifyEmailSent,
-      required bool registrationCreated,
-      required String instanceHost}) {
-    return _LoginResponse(
-      jwt: jwt,
-      verifyEmailSent: verifyEmailSent,
-      registrationCreated: registrationCreated,
-      instanceHost: instanceHost,
-    );
-  }
-
-  LoginResponse fromJson(Map<String, Object?> json) {
-    return LoginResponse.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LoginResponse = _$LoginResponseTearOff();
 
 /// @nodoc
 mixin _$LoginResponse {
@@ -4866,6 +4574,7 @@ class _$_LoginResponse extends _LoginResponse {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4887,23 +4596,23 @@ class _$_LoginResponse extends _LoginResponse {
 
 abstract class _LoginResponse extends LoginResponse {
   const factory _LoginResponse(
-      {Jwt? jwt,
-      required bool verifyEmailSent,
-      required bool registrationCreated,
-      required String instanceHost}) = _$_LoginResponse;
+      {final Jwt? jwt,
+      required final bool verifyEmailSent,
+      required final bool registrationCreated,
+      required final String instanceHost}) = _$_LoginResponse;
   const _LoginResponse._() : super._();
 
   factory _LoginResponse.fromJson(Map<String, dynamic> json) =
       _$_LoginResponse.fromJson;
 
   @override
-  Jwt? get jwt;
+  Jwt? get jwt => throw _privateConstructorUsedError;
   @override
-  bool get verifyEmailSent;
+  bool get verifyEmailSent => throw _privateConstructorUsedError;
   @override
-  bool get registrationCreated;
+  bool get registrationCreated => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LoginResponseCopyWith<_LoginResponse> get copyWith =>

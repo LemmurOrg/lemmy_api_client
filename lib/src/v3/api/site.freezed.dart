@@ -12,48 +12,11 @@ part of 'site.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Search _$SearchFromJson(Map<String, dynamic> json) {
   return _Search.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchTearOff {
-  const _$SearchTearOff();
-
-  _Search call(
-      {required String q,
-      @JsonKey(name: 'type_') SearchType? type,
-      PostListingType? listingType,
-      int? communityId,
-      String? communityName,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? creatorId,
-      String? auth}) {
-    return _Search(
-      q: q,
-      type: type,
-      listingType: listingType,
-      communityId: communityId,
-      communityName: communityName,
-      sort: sort,
-      page: page,
-      limit: limit,
-      creatorId: creatorId,
-      auth: auth,
-    );
-  }
-
-  Search fromJson(Map<String, Object?> json) {
-    return Search.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Search = _$SearchTearOff();
 
 /// @nodoc
 mixin _$Search {
@@ -309,6 +272,7 @@ class _$_Search extends _Search {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -336,41 +300,41 @@ class _$_Search extends _Search {
 
 abstract class _Search extends Search {
   const factory _Search(
-      {required String q,
-      @JsonKey(name: 'type_') SearchType? type,
-      PostListingType? listingType,
-      int? communityId,
-      String? communityName,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? creatorId,
-      String? auth}) = _$_Search;
+      {required final String q,
+      @JsonKey(name: 'type_') final SearchType? type,
+      final PostListingType? listingType,
+      final int? communityId,
+      final String? communityName,
+      final SortType? sort,
+      final int? page,
+      final int? limit,
+      final int? creatorId,
+      final String? auth}) = _$_Search;
   const _Search._() : super._();
 
   factory _Search.fromJson(Map<String, dynamic> json) = _$_Search.fromJson;
 
   @override
-  String get q;
+  String get q => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'type_')
-  SearchType? get type;
+  SearchType? get type => throw _privateConstructorUsedError;
   @override
-  PostListingType? get listingType;
+  PostListingType? get listingType => throw _privateConstructorUsedError;
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  String? get communityName;
+  String? get communityName => throw _privateConstructorUsedError;
   @override
-  SortType? get sort;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int? get creatorId;
+  int? get creatorId => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SearchCopyWith<_Search> get copyWith => throw _privateConstructorUsedError;
@@ -379,33 +343,6 @@ abstract class _Search extends Search {
 GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
   return _GetModlog.fromJson(json);
 }
-
-/// @nodoc
-class _$GetModlogTearOff {
-  const _$GetModlogTearOff();
-
-  _GetModlog call(
-      {int? modPersonId,
-      int? communityId,
-      int? page,
-      int? limit,
-      String? auth}) {
-    return _GetModlog(
-      modPersonId: modPersonId,
-      communityId: communityId,
-      page: page,
-      limit: limit,
-      auth: auth,
-    );
-  }
-
-  GetModlog fromJson(Map<String, Object?> json) {
-    return GetModlog.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetModlog = _$GetModlogTearOff();
 
 /// @nodoc
 mixin _$GetModlog {
@@ -571,6 +508,7 @@ class _$_GetModlog extends _GetModlog {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -593,26 +531,26 @@ class _$_GetModlog extends _GetModlog {
 
 abstract class _GetModlog extends GetModlog {
   const factory _GetModlog(
-      {int? modPersonId,
-      int? communityId,
-      int? page,
-      int? limit,
-      String? auth}) = _$_GetModlog;
+      {final int? modPersonId,
+      final int? communityId,
+      final int? page,
+      final int? limit,
+      final String? auth}) = _$_GetModlog;
   const _GetModlog._() : super._();
 
   factory _GetModlog.fromJson(Map<String, dynamic> json) =
       _$_GetModlog.fromJson;
 
   @override
-  int? get modPersonId;
+  int? get modPersonId => throw _privateConstructorUsedError;
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetModlogCopyWith<_GetModlog> get copyWith =>
@@ -622,53 +560,6 @@ abstract class _GetModlog extends GetModlog {
 CreateSite _$CreateSiteFromJson(Map<String, dynamic> json) {
   return _CreateSite.fromJson(json);
 }
-
-/// @nodoc
-class _$CreateSiteTearOff {
-  const _$CreateSiteTearOff();
-
-  _CreateSite call(
-      {required String name,
-      String? sidebar,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? enableDownvotes,
-      bool? openRegistration,
-      bool? enableNsfw,
-      bool? communityCreationAdminOnly,
-      bool? requireEmailVerification,
-      bool? requireApplication,
-      String? applicationQuestion,
-      bool? privateInstance,
-      required String auth,
-      String? defaultTheme}) {
-    return _CreateSite(
-      name: name,
-      sidebar: sidebar,
-      description: description,
-      icon: icon,
-      banner: banner,
-      enableDownvotes: enableDownvotes,
-      openRegistration: openRegistration,
-      enableNsfw: enableNsfw,
-      communityCreationAdminOnly: communityCreationAdminOnly,
-      requireEmailVerification: requireEmailVerification,
-      requireApplication: requireApplication,
-      applicationQuestion: applicationQuestion,
-      privateInstance: privateInstance,
-      auth: auth,
-      defaultTheme: defaultTheme,
-    );
-  }
-
-  CreateSite fromJson(Map<String, Object?> json) {
-    return CreateSite.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreateSite = _$CreateSiteTearOff();
 
 /// @nodoc
 mixin _$CreateSite {
@@ -1018,6 +909,7 @@ class _$_CreateSite extends _CreateSite {
                 .equals(other.defaultTheme, defaultTheme));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1050,56 +942,56 @@ class _$_CreateSite extends _CreateSite {
 
 abstract class _CreateSite extends CreateSite {
   const factory _CreateSite(
-      {required String name,
-      String? sidebar,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? enableDownvotes,
-      bool? openRegistration,
-      bool? enableNsfw,
-      bool? communityCreationAdminOnly,
-      bool? requireEmailVerification,
-      bool? requireApplication,
-      String? applicationQuestion,
-      bool? privateInstance,
-      required String auth,
-      String? defaultTheme}) = _$_CreateSite;
+      {required final String name,
+      final String? sidebar,
+      final String? description,
+      final String? icon,
+      final String? banner,
+      final bool? enableDownvotes,
+      final bool? openRegistration,
+      final bool? enableNsfw,
+      final bool? communityCreationAdminOnly,
+      final bool? requireEmailVerification,
+      final bool? requireApplication,
+      final String? applicationQuestion,
+      final bool? privateInstance,
+      required final String auth,
+      final String? defaultTheme}) = _$_CreateSite;
   const _CreateSite._() : super._();
 
   factory _CreateSite.fromJson(Map<String, dynamic> json) =
       _$_CreateSite.fromJson;
 
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get sidebar;
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool? get enableDownvotes;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
   @override
-  bool? get openRegistration;
+  bool? get openRegistration => throw _privateConstructorUsedError;
   @override
-  bool? get enableNsfw;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
   @override
-  bool? get communityCreationAdminOnly;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
-  bool? get requireEmailVerification;
+  bool? get requireEmailVerification => throw _privateConstructorUsedError;
   @override
-  bool? get requireApplication;
+  bool? get requireApplication => throw _privateConstructorUsedError;
   @override
-  String? get applicationQuestion;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
   @override
-  bool? get privateInstance;
+  bool? get privateInstance => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  String? get defaultTheme;
+  String? get defaultTheme => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreateSiteCopyWith<_CreateSite> get copyWith =>
@@ -1109,53 +1001,6 @@ abstract class _CreateSite extends CreateSite {
 EditSite _$EditSiteFromJson(Map<String, dynamic> json) {
   return _EditSite.fromJson(json);
 }
-
-/// @nodoc
-class _$EditSiteTearOff {
-  const _$EditSiteTearOff();
-
-  _EditSite call(
-      {String? name,
-      String? sidebar,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? enableDownvotes,
-      bool? openRegistration,
-      bool? enableNsfw,
-      bool? communityCreationAdminOnly,
-      bool? requireEmailVerification,
-      bool? requireApplication,
-      String? applicationQuestion,
-      bool? privateInstance,
-      required String auth,
-      String? defaultTheme}) {
-    return _EditSite(
-      name: name,
-      sidebar: sidebar,
-      description: description,
-      icon: icon,
-      banner: banner,
-      enableDownvotes: enableDownvotes,
-      openRegistration: openRegistration,
-      enableNsfw: enableNsfw,
-      communityCreationAdminOnly: communityCreationAdminOnly,
-      requireEmailVerification: requireEmailVerification,
-      requireApplication: requireApplication,
-      applicationQuestion: applicationQuestion,
-      privateInstance: privateInstance,
-      auth: auth,
-      defaultTheme: defaultTheme,
-    );
-  }
-
-  EditSite fromJson(Map<String, Object?> json) {
-    return EditSite.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $EditSite = _$EditSiteTearOff();
 
 /// @nodoc
 mixin _$EditSite {
@@ -1502,6 +1347,7 @@ class _$_EditSite extends _EditSite {
                 .equals(other.defaultTheme, defaultTheme));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1534,55 +1380,55 @@ class _$_EditSite extends _EditSite {
 
 abstract class _EditSite extends EditSite {
   const factory _EditSite(
-      {String? name,
-      String? sidebar,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? enableDownvotes,
-      bool? openRegistration,
-      bool? enableNsfw,
-      bool? communityCreationAdminOnly,
-      bool? requireEmailVerification,
-      bool? requireApplication,
-      String? applicationQuestion,
-      bool? privateInstance,
-      required String auth,
-      String? defaultTheme}) = _$_EditSite;
+      {final String? name,
+      final String? sidebar,
+      final String? description,
+      final String? icon,
+      final String? banner,
+      final bool? enableDownvotes,
+      final bool? openRegistration,
+      final bool? enableNsfw,
+      final bool? communityCreationAdminOnly,
+      final bool? requireEmailVerification,
+      final bool? requireApplication,
+      final String? applicationQuestion,
+      final bool? privateInstance,
+      required final String auth,
+      final String? defaultTheme}) = _$_EditSite;
   const _EditSite._() : super._();
 
   factory _EditSite.fromJson(Map<String, dynamic> json) = _$_EditSite.fromJson;
 
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get sidebar;
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool? get enableDownvotes;
+  bool? get enableDownvotes => throw _privateConstructorUsedError;
   @override
-  bool? get openRegistration;
+  bool? get openRegistration => throw _privateConstructorUsedError;
   @override
-  bool? get enableNsfw;
+  bool? get enableNsfw => throw _privateConstructorUsedError;
   @override
-  bool? get communityCreationAdminOnly;
+  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
-  bool? get requireEmailVerification;
+  bool? get requireEmailVerification => throw _privateConstructorUsedError;
   @override
-  bool? get requireApplication;
+  bool? get requireApplication => throw _privateConstructorUsedError;
   @override
-  String? get applicationQuestion;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
   @override
-  bool? get privateInstance;
+  bool? get privateInstance => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  String? get defaultTheme;
+  String? get defaultTheme => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EditSiteCopyWith<_EditSite> get copyWith =>
@@ -1592,24 +1438,6 @@ abstract class _EditSite extends EditSite {
 GetSite _$GetSiteFromJson(Map<String, dynamic> json) {
   return _GetSite.fromJson(json);
 }
-
-/// @nodoc
-class _$GetSiteTearOff {
-  const _$GetSiteTearOff();
-
-  _GetSite call({String? auth}) {
-    return _GetSite(
-      auth: auth,
-    );
-  }
-
-  GetSite fromJson(Map<String, Object?> json) {
-    return GetSite.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetSite = _$GetSiteTearOff();
 
 /// @nodoc
 mixin _$GetSite {
@@ -1703,6 +1531,7 @@ class _$_GetSite extends _GetSite {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -1719,13 +1548,13 @@ class _$_GetSite extends _GetSite {
 }
 
 abstract class _GetSite extends GetSite {
-  const factory _GetSite({String? auth}) = _$_GetSite;
+  const factory _GetSite({final String? auth}) = _$_GetSite;
   const _GetSite._() : super._();
 
   factory _GetSite.fromJson(Map<String, dynamic> json) = _$_GetSite.fromJson;
 
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetSiteCopyWith<_GetSite> get copyWith =>
@@ -1735,24 +1564,6 @@ abstract class _GetSite extends GetSite {
 LeaveAdmin _$LeaveAdminFromJson(Map<String, dynamic> json) {
   return _LeaveAdmin.fromJson(json);
 }
-
-/// @nodoc
-class _$LeaveAdminTearOff {
-  const _$LeaveAdminTearOff();
-
-  _LeaveAdmin call({required String auth}) {
-    return _LeaveAdmin(
-      auth: auth,
-    );
-  }
-
-  LeaveAdmin fromJson(Map<String, Object?> json) {
-    return LeaveAdmin.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LeaveAdmin = _$LeaveAdminTearOff();
 
 /// @nodoc
 mixin _$LeaveAdmin {
@@ -1850,6 +1661,7 @@ class _$_LeaveAdmin extends _LeaveAdmin {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -1866,14 +1678,14 @@ class _$_LeaveAdmin extends _LeaveAdmin {
 }
 
 abstract class _LeaveAdmin extends LeaveAdmin {
-  const factory _LeaveAdmin({required String auth}) = _$_LeaveAdmin;
+  const factory _LeaveAdmin({required final String auth}) = _$_LeaveAdmin;
   const _LeaveAdmin._() : super._();
 
   factory _LeaveAdmin.fromJson(Map<String, dynamic> json) =
       _$_LeaveAdmin.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
@@ -1883,24 +1695,6 @@ abstract class _LeaveAdmin extends LeaveAdmin {
 GetSiteConfig _$GetSiteConfigFromJson(Map<String, dynamic> json) {
   return _GetSiteConfig.fromJson(json);
 }
-
-/// @nodoc
-class _$GetSiteConfigTearOff {
-  const _$GetSiteConfigTearOff();
-
-  _GetSiteConfig call({required String auth}) {
-    return _GetSiteConfig(
-      auth: auth,
-    );
-  }
-
-  GetSiteConfig fromJson(Map<String, Object?> json) {
-    return GetSiteConfig.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetSiteConfig = _$GetSiteConfigTearOff();
 
 /// @nodoc
 mixin _$GetSiteConfig {
@@ -2001,6 +1795,7 @@ class _$_GetSiteConfig extends _GetSiteConfig {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -2017,14 +1812,14 @@ class _$_GetSiteConfig extends _GetSiteConfig {
 }
 
 abstract class _GetSiteConfig extends GetSiteConfig {
-  const factory _GetSiteConfig({required String auth}) = _$_GetSiteConfig;
+  const factory _GetSiteConfig({required final String auth}) = _$_GetSiteConfig;
   const _GetSiteConfig._() : super._();
 
   factory _GetSiteConfig.fromJson(Map<String, dynamic> json) =
       _$_GetSiteConfig.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetSiteConfigCopyWith<_GetSiteConfig> get copyWith =>
@@ -2034,25 +1829,6 @@ abstract class _GetSiteConfig extends GetSiteConfig {
 SaveSiteConfig _$SaveSiteConfigFromJson(Map<String, dynamic> json) {
   return _SaveSiteConfig.fromJson(json);
 }
-
-/// @nodoc
-class _$SaveSiteConfigTearOff {
-  const _$SaveSiteConfigTearOff();
-
-  _SaveSiteConfig call({required String configHjson, required String auth}) {
-    return _SaveSiteConfig(
-      configHjson: configHjson,
-      auth: auth,
-    );
-  }
-
-  SaveSiteConfig fromJson(Map<String, Object?> json) {
-    return SaveSiteConfig.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SaveSiteConfig = _$SaveSiteConfigTearOff();
 
 /// @nodoc
 mixin _$SaveSiteConfig {
@@ -2169,6 +1945,7 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2188,16 +1965,17 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
 
 abstract class _SaveSiteConfig extends SaveSiteConfig {
   const factory _SaveSiteConfig(
-      {required String configHjson, required String auth}) = _$_SaveSiteConfig;
+      {required final String configHjson,
+      required final String auth}) = _$_SaveSiteConfig;
   const _SaveSiteConfig._() : super._();
 
   factory _SaveSiteConfig.fromJson(Map<String, dynamic> json) =
       _$_SaveSiteConfig.fromJson;
 
   @override
-  String get configHjson;
+  String get configHjson => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SaveSiteConfigCopyWith<_SaveSiteConfig> get copyWith =>
@@ -2207,25 +1985,6 @@ abstract class _SaveSiteConfig extends SaveSiteConfig {
 ResolveObject _$ResolveObjectFromJson(Map<String, dynamic> json) {
   return _ResolveObject.fromJson(json);
 }
-
-/// @nodoc
-class _$ResolveObjectTearOff {
-  const _$ResolveObjectTearOff();
-
-  _ResolveObject call({required String q, String? auth}) {
-    return _ResolveObject(
-      q: q,
-      auth: auth,
-    );
-  }
-
-  ResolveObject fromJson(Map<String, Object?> json) {
-    return ResolveObject.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResolveObject = _$ResolveObjectTearOff();
 
 /// @nodoc
 mixin _$ResolveObject {
@@ -2340,6 +2099,7 @@ class _$_ResolveObject extends _ResolveObject {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2358,7 +2118,7 @@ class _$_ResolveObject extends _ResolveObject {
 }
 
 abstract class _ResolveObject extends ResolveObject {
-  const factory _ResolveObject({required String q, String? auth}) =
+  const factory _ResolveObject({required final String q, final String? auth}) =
       _$_ResolveObject;
   const _ResolveObject._() : super._();
 
@@ -2366,9 +2126,9 @@ abstract class _ResolveObject extends ResolveObject {
       _$_ResolveObject.fromJson;
 
   @override
-  String get q;
+  String get q => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ResolveObjectCopyWith<_ResolveObject> get copyWith =>
@@ -2379,25 +2139,6 @@ GetUnreadRegistrationApplicationCount
     _$GetUnreadRegistrationApplicationCountFromJson(Map<String, dynamic> json) {
   return _GetUnreadRegistrationApplicationCount.fromJson(json);
 }
-
-/// @nodoc
-class _$GetUnreadRegistrationApplicationCountTearOff {
-  const _$GetUnreadRegistrationApplicationCountTearOff();
-
-  _GetUnreadRegistrationApplicationCount call({required String auth}) {
-    return _GetUnreadRegistrationApplicationCount(
-      auth: auth,
-    );
-  }
-
-  GetUnreadRegistrationApplicationCount fromJson(Map<String, Object?> json) {
-    return GetUnreadRegistrationApplicationCount.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetUnreadRegistrationApplicationCount =
-    _$GetUnreadRegistrationApplicationCountTearOff();
 
 /// @nodoc
 mixin _$GetUnreadRegistrationApplicationCount {
@@ -2507,6 +2248,7 @@ class _$_GetUnreadRegistrationApplicationCount
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -2526,8 +2268,8 @@ class _$_GetUnreadRegistrationApplicationCount
 
 abstract class _GetUnreadRegistrationApplicationCount
     extends GetUnreadRegistrationApplicationCount {
-  const factory _GetUnreadRegistrationApplicationCount({required String auth}) =
-      _$_GetUnreadRegistrationApplicationCount;
+  const factory _GetUnreadRegistrationApplicationCount(
+      {required final String auth}) = _$_GetUnreadRegistrationApplicationCount;
   const _GetUnreadRegistrationApplicationCount._() : super._();
 
   factory _GetUnreadRegistrationApplicationCount.fromJson(
@@ -2535,7 +2277,7 @@ abstract class _GetUnreadRegistrationApplicationCount
       _$_GetUnreadRegistrationApplicationCount.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetUnreadRegistrationApplicationCountCopyWith<
@@ -2547,28 +2289,6 @@ ListRegistrationApplications _$ListRegistrationApplicationsFromJson(
     Map<String, dynamic> json) {
   return _ListRegistrationApplications.fromJson(json);
 }
-
-/// @nodoc
-class _$ListRegistrationApplicationsTearOff {
-  const _$ListRegistrationApplicationsTearOff();
-
-  _ListRegistrationApplications call(
-      {bool? unreadOnly, int? page, int? limit, required String auth}) {
-    return _ListRegistrationApplications(
-      unreadOnly: unreadOnly,
-      page: page,
-      limit: limit,
-      auth: auth,
-    );
-  }
-
-  ListRegistrationApplications fromJson(Map<String, Object?> json) {
-    return ListRegistrationApplications.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ListRegistrationApplications = _$ListRegistrationApplicationsTearOff();
 
 /// @nodoc
 mixin _$ListRegistrationApplications {
@@ -2718,6 +2438,7 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2741,23 +2462,23 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
 abstract class _ListRegistrationApplications
     extends ListRegistrationApplications {
   const factory _ListRegistrationApplications(
-      {bool? unreadOnly,
-      int? page,
-      int? limit,
-      required String auth}) = _$_ListRegistrationApplications;
+      {final bool? unreadOnly,
+      final int? page,
+      final int? limit,
+      required final String auth}) = _$_ListRegistrationApplications;
   const _ListRegistrationApplications._() : super._();
 
   factory _ListRegistrationApplications.fromJson(Map<String, dynamic> json) =
       _$_ListRegistrationApplications.fromJson;
 
   @override
-  bool? get unreadOnly;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ListRegistrationApplicationsCopyWith<_ListRegistrationApplications>
@@ -2768,32 +2489,6 @@ ApproveRegistrationApplication _$ApproveRegistrationApplicationFromJson(
     Map<String, dynamic> json) {
   return _ApproveRegistrationApplication.fromJson(json);
 }
-
-/// @nodoc
-class _$ApproveRegistrationApplicationTearOff {
-  const _$ApproveRegistrationApplicationTearOff();
-
-  _ApproveRegistrationApplication call(
-      {required int id,
-      required bool approve,
-      String? denyReason,
-      required String auth}) {
-    return _ApproveRegistrationApplication(
-      id: id,
-      approve: approve,
-      denyReason: denyReason,
-      auth: auth,
-    );
-  }
-
-  ApproveRegistrationApplication fromJson(Map<String, Object?> json) {
-    return ApproveRegistrationApplication.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ApproveRegistrationApplication =
-    _$ApproveRegistrationApplicationTearOff();
 
 /// @nodoc
 mixin _$ApproveRegistrationApplication {
@@ -2948,6 +2643,7 @@ class _$_ApproveRegistrationApplication
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2971,23 +2667,23 @@ class _$_ApproveRegistrationApplication
 abstract class _ApproveRegistrationApplication
     extends ApproveRegistrationApplication {
   const factory _ApproveRegistrationApplication(
-      {required int id,
-      required bool approve,
-      String? denyReason,
-      required String auth}) = _$_ApproveRegistrationApplication;
+      {required final int id,
+      required final bool approve,
+      final String? denyReason,
+      required final String auth}) = _$_ApproveRegistrationApplication;
   const _ApproveRegistrationApplication._() : super._();
 
   factory _ApproveRegistrationApplication.fromJson(Map<String, dynamic> json) =
       _$_ApproveRegistrationApplication.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  bool get approve;
+  bool get approve => throw _privateConstructorUsedError;
   @override
-  String? get denyReason;
+  String? get denyReason => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ApproveRegistrationApplicationCopyWith<_ApproveRegistrationApplication>

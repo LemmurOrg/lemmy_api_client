@@ -12,31 +12,11 @@ part of 'jwt.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 JwtPayload _$JwtPayloadFromJson(Map<String, dynamic> json) {
   return _JwtPayload.fromJson(json);
 }
-
-/// @nodoc
-class _$JwtPayloadTearOff {
-  const _$JwtPayloadTearOff();
-
-  _JwtPayload call({required int iat, required String iss, required int sub}) {
-    return _JwtPayload(
-      iat: iat,
-      iss: iss,
-      sub: sub,
-    );
-  }
-
-  JwtPayload fromJson(Map<String, Object?> json) {
-    return JwtPayload.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $JwtPayload = _$JwtPayloadTearOff();
 
 /// @nodoc
 mixin _$JwtPayload {
@@ -163,6 +143,7 @@ class _$_JwtPayload extends _JwtPayload {
             const DeepCollectionEquality().equals(other.sub, sub));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -183,20 +164,20 @@ class _$_JwtPayload extends _JwtPayload {
 
 abstract class _JwtPayload extends JwtPayload {
   const factory _JwtPayload(
-      {required int iat,
-      required String iss,
-      required int sub}) = _$_JwtPayload;
+      {required final int iat,
+      required final String iss,
+      required final int sub}) = _$_JwtPayload;
   const _JwtPayload._() : super._();
 
   factory _JwtPayload.fromJson(Map<String, dynamic> json) =
       _$_JwtPayload.fromJson;
 
   @override
-  int get iat;
+  int get iat => throw _privateConstructorUsedError;
   @override
-  String get iss;
+  String get iss => throw _privateConstructorUsedError;
   @override
-  int get sub;
+  int get sub => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>

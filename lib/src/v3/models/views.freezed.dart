@@ -12,34 +12,11 @@ part of 'views.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PersonViewSafe _$PersonViewSafeFromJson(Map<String, dynamic> json) {
   return _PersonViewSafe.fromJson(json);
 }
-
-/// @nodoc
-class _$PersonViewSafeTearOff {
-  const _$PersonViewSafeTearOff();
-
-  _PersonViewSafe call(
-      {required PersonSafe person,
-      required PersonAggregates counts,
-      required String instanceHost}) {
-    return _PersonViewSafe(
-      person: person,
-      counts: counts,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PersonViewSafe fromJson(Map<String, Object?> json) {
-    return PersonViewSafe.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PersonViewSafe = _$PersonViewSafeTearOff();
 
 /// @nodoc
 mixin _$PersonViewSafe {
@@ -193,6 +170,7 @@ class _$_PersonViewSafe extends _PersonViewSafe {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -213,20 +191,20 @@ class _$_PersonViewSafe extends _PersonViewSafe {
 
 abstract class _PersonViewSafe extends PersonViewSafe {
   const factory _PersonViewSafe(
-      {required PersonSafe person,
-      required PersonAggregates counts,
-      required String instanceHost}) = _$_PersonViewSafe;
+      {required final PersonSafe person,
+      required final PersonAggregates counts,
+      required final String instanceHost}) = _$_PersonViewSafe;
   const _PersonViewSafe._() : super._();
 
   factory _PersonViewSafe.fromJson(Map<String, dynamic> json) =
       _$_PersonViewSafe.fromJson;
 
   @override
-  PersonSafe get person;
+  PersonSafe get person => throw _privateConstructorUsedError;
   @override
-  PersonAggregates get counts;
+  PersonAggregates get counts => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonViewSafeCopyWith<_PersonViewSafe> get copyWith =>
@@ -236,49 +214,6 @@ abstract class _PersonViewSafe extends PersonViewSafe {
 PersonMentionView _$PersonMentionViewFromJson(Map<String, dynamic> json) {
   return _PersonMentionView.fromJson(json);
 }
-
-/// @nodoc
-class _$PersonMentionViewTearOff {
-  const _$PersonMentionViewTearOff();
-
-  _PersonMentionView call(
-      {required PersonMention personMention,
-      required Comment comment,
-      required PersonSafe creator,
-      required Post post,
-      required CommunitySafe community,
-      required PersonSafe recipient,
-      required CommentAggregates counts,
-      required bool creatorBannedFromCommunity,
-      required bool subscribed,
-      required bool saved,
-      required bool creatorBlocked,
-      VoteType? myVote,
-      required String instanceHost}) {
-    return _PersonMentionView(
-      personMention: personMention,
-      comment: comment,
-      creator: creator,
-      post: post,
-      community: community,
-      recipient: recipient,
-      counts: counts,
-      creatorBannedFromCommunity: creatorBannedFromCommunity,
-      subscribed: subscribed,
-      saved: saved,
-      creatorBlocked: creatorBlocked,
-      myVote: myVote,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PersonMentionView fromJson(Map<String, Object?> json) {
-    return PersonMentionView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PersonMentionView = _$PersonMentionViewTearOff();
 
 /// @nodoc
 mixin _$PersonMentionView {
@@ -664,6 +599,7 @@ class _$_PersonMentionView extends _PersonMentionView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -694,50 +630,50 @@ class _$_PersonMentionView extends _PersonMentionView {
 
 abstract class _PersonMentionView extends PersonMentionView {
   const factory _PersonMentionView(
-      {required PersonMention personMention,
-      required Comment comment,
-      required PersonSafe creator,
-      required Post post,
-      required CommunitySafe community,
-      required PersonSafe recipient,
-      required CommentAggregates counts,
-      required bool creatorBannedFromCommunity,
-      required bool subscribed,
-      required bool saved,
-      required bool creatorBlocked,
-      VoteType? myVote,
-      required String instanceHost}) = _$_PersonMentionView;
+      {required final PersonMention personMention,
+      required final Comment comment,
+      required final PersonSafe creator,
+      required final Post post,
+      required final CommunitySafe community,
+      required final PersonSafe recipient,
+      required final CommentAggregates counts,
+      required final bool creatorBannedFromCommunity,
+      required final bool subscribed,
+      required final bool saved,
+      required final bool creatorBlocked,
+      final VoteType? myVote,
+      required final String instanceHost}) = _$_PersonMentionView;
   const _PersonMentionView._() : super._();
 
   factory _PersonMentionView.fromJson(Map<String, dynamic> json) =
       _$_PersonMentionView.fromJson;
 
   @override
-  PersonMention get personMention;
+  PersonMention get personMention => throw _privateConstructorUsedError;
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get recipient;
+  PersonSafe get recipient => throw _privateConstructorUsedError;
   @override
-  CommentAggregates get counts;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get saved;
+  bool get saved => throw _privateConstructorUsedError;
   @override
-  bool get creatorBlocked;
+  bool get creatorBlocked => throw _privateConstructorUsedError;
   @override
-  VoteType? get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonMentionViewCopyWith<_PersonMentionView> get copyWith =>
@@ -748,31 +684,6 @@ LocalUserSettingsView _$LocalUserSettingsViewFromJson(
     Map<String, dynamic> json) {
   return _LocalUserSettingsView.fromJson(json);
 }
-
-/// @nodoc
-class _$LocalUserSettingsViewTearOff {
-  const _$LocalUserSettingsViewTearOff();
-
-  _LocalUserSettingsView call(
-      {required LocalUserSettings localUser,
-      required PersonSafe person,
-      required PersonAggregates counts,
-      required String instanceHost}) {
-    return _LocalUserSettingsView(
-      localUser: localUser,
-      person: person,
-      counts: counts,
-      instanceHost: instanceHost,
-    );
-  }
-
-  LocalUserSettingsView fromJson(Map<String, Object?> json) {
-    return LocalUserSettingsView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LocalUserSettingsView = _$LocalUserSettingsViewTearOff();
 
 /// @nodoc
 mixin _$LocalUserSettingsView {
@@ -961,6 +872,7 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -983,23 +895,23 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
 
 abstract class _LocalUserSettingsView extends LocalUserSettingsView {
   const factory _LocalUserSettingsView(
-      {required LocalUserSettings localUser,
-      required PersonSafe person,
-      required PersonAggregates counts,
-      required String instanceHost}) = _$_LocalUserSettingsView;
+      {required final LocalUserSettings localUser,
+      required final PersonSafe person,
+      required final PersonAggregates counts,
+      required final String instanceHost}) = _$_LocalUserSettingsView;
   const _LocalUserSettingsView._() : super._();
 
   factory _LocalUserSettingsView.fromJson(Map<String, dynamic> json) =
       _$_LocalUserSettingsView.fromJson;
 
   @override
-  LocalUserSettings get localUser;
+  LocalUserSettings get localUser => throw _privateConstructorUsedError;
   @override
-  PersonSafe get person;
+  PersonSafe get person => throw _privateConstructorUsedError;
   @override
-  PersonAggregates get counts;
+  PersonAggregates get counts => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsViewCopyWith<_LocalUserSettingsView> get copyWith =>
@@ -1009,29 +921,6 @@ abstract class _LocalUserSettingsView extends LocalUserSettingsView {
 SiteView _$SiteViewFromJson(Map<String, dynamic> json) {
   return _SiteView.fromJson(json);
 }
-
-/// @nodoc
-class _$SiteViewTearOff {
-  const _$SiteViewTearOff();
-
-  _SiteView call(
-      {required Site site,
-      required SiteAggregates counts,
-      required String instanceHost}) {
-    return _SiteView(
-      site: site,
-      counts: counts,
-      instanceHost: instanceHost,
-    );
-  }
-
-  SiteView fromJson(Map<String, Object?> json) {
-    return SiteView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SiteView = _$SiteViewTearOff();
 
 /// @nodoc
 mixin _$SiteView {
@@ -1179,6 +1068,7 @@ class _$_SiteView extends _SiteView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1199,19 +1089,19 @@ class _$_SiteView extends _SiteView {
 
 abstract class _SiteView extends SiteView {
   const factory _SiteView(
-      {required Site site,
-      required SiteAggregates counts,
-      required String instanceHost}) = _$_SiteView;
+      {required final Site site,
+      required final SiteAggregates counts,
+      required final String instanceHost}) = _$_SiteView;
   const _SiteView._() : super._();
 
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
   @override
-  Site get site;
+  Site get site => throw _privateConstructorUsedError;
   @override
-  SiteAggregates get counts;
+  SiteAggregates get counts => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SiteViewCopyWith<_SiteView> get copyWith =>
@@ -1221,31 +1111,6 @@ abstract class _SiteView extends SiteView {
 PrivateMessageView _$PrivateMessageViewFromJson(Map<String, dynamic> json) {
   return _PrivateMessageView.fromJson(json);
 }
-
-/// @nodoc
-class _$PrivateMessageViewTearOff {
-  const _$PrivateMessageViewTearOff();
-
-  _PrivateMessageView call(
-      {required PrivateMessage privateMessage,
-      required PersonSafe creator,
-      required PersonSafe recipient,
-      required String instanceHost}) {
-    return _PrivateMessageView(
-      privateMessage: privateMessage,
-      creator: creator,
-      recipient: recipient,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PrivateMessageView fromJson(Map<String, Object?> json) {
-    return PrivateMessageView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PrivateMessageView = _$PrivateMessageViewTearOff();
 
 /// @nodoc
 mixin _$PrivateMessageView {
@@ -1435,6 +1300,7 @@ class _$_PrivateMessageView extends _PrivateMessageView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1456,23 +1322,23 @@ class _$_PrivateMessageView extends _PrivateMessageView {
 
 abstract class _PrivateMessageView extends PrivateMessageView {
   const factory _PrivateMessageView(
-      {required PrivateMessage privateMessage,
-      required PersonSafe creator,
-      required PersonSafe recipient,
-      required String instanceHost}) = _$_PrivateMessageView;
+      {required final PrivateMessage privateMessage,
+      required final PersonSafe creator,
+      required final PersonSafe recipient,
+      required final String instanceHost}) = _$_PrivateMessageView;
   const _PrivateMessageView._() : super._();
 
   factory _PrivateMessageView.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessageView.fromJson;
 
   @override
-  PrivateMessage get privateMessage;
+  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  PersonSafe get recipient;
+  PersonSafe get recipient => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PrivateMessageViewCopyWith<_PrivateMessageView> get copyWith =>
@@ -1482,45 +1348,6 @@ abstract class _PrivateMessageView extends PrivateMessageView {
 PostView _$PostViewFromJson(Map<String, dynamic> json) {
   return _PostView.fromJson(json);
 }
-
-/// @nodoc
-class _$PostViewTearOff {
-  const _$PostViewTearOff();
-
-  _PostView call(
-      {required Post post,
-      required PersonSafe creator,
-      required CommunitySafe community,
-      required bool creatorBannedFromCommunity,
-      required PostAggregates counts,
-      required bool subscribed,
-      required bool saved,
-      required bool read,
-      required bool creatorBlocked,
-      VoteType? myVote,
-      required String instanceHost}) {
-    return _PostView(
-      post: post,
-      creator: creator,
-      community: community,
-      creatorBannedFromCommunity: creatorBannedFromCommunity,
-      counts: counts,
-      subscribed: subscribed,
-      saved: saved,
-      read: read,
-      creatorBlocked: creatorBlocked,
-      myVote: myVote,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PostView fromJson(Map<String, Object?> json) {
-    return PostView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PostView = _$PostViewTearOff();
 
 /// @nodoc
 mixin _$PostView {
@@ -1835,6 +1662,7 @@ class _$_PostView extends _PostView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1863,43 +1691,43 @@ class _$_PostView extends _PostView {
 
 abstract class _PostView extends PostView {
   const factory _PostView(
-      {required Post post,
-      required PersonSafe creator,
-      required CommunitySafe community,
-      required bool creatorBannedFromCommunity,
-      required PostAggregates counts,
-      required bool subscribed,
-      required bool saved,
-      required bool read,
-      required bool creatorBlocked,
-      VoteType? myVote,
-      required String instanceHost}) = _$_PostView;
+      {required final Post post,
+      required final PersonSafe creator,
+      required final CommunitySafe community,
+      required final bool creatorBannedFromCommunity,
+      required final PostAggregates counts,
+      required final bool subscribed,
+      required final bool saved,
+      required final bool read,
+      required final bool creatorBlocked,
+      final VoteType? myVote,
+      required final String instanceHost}) = _$_PostView;
   const _PostView._() : super._();
 
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  PostAggregates get counts;
+  PostAggregates get counts => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get saved;
+  bool get saved => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  bool get creatorBlocked;
+  bool get creatorBlocked => throw _privateConstructorUsedError;
   @override
-  VoteType? get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostViewCopyWith<_PostView> get copyWith =>
@@ -1909,43 +1737,6 @@ abstract class _PostView extends PostView {
 PostReportView _$PostReportViewFromJson(Map<String, dynamic> json) {
   return _PostReportView.fromJson(json);
 }
-
-/// @nodoc
-class _$PostReportViewTearOff {
-  const _$PostReportViewTearOff();
-
-  _PostReportView call(
-      {required PostReport postReport,
-      required Post post,
-      required CommunitySafe community,
-      required PersonSafe creator,
-      required PersonSafe postCreator,
-      required bool creatorBannedFromCommunity,
-      VoteType? myVote,
-      required PostAggregates counts,
-      PersonSafe? resolver,
-      required String instanceHost}) {
-    return _PostReportView(
-      postReport: postReport,
-      post: post,
-      community: community,
-      creator: creator,
-      postCreator: postCreator,
-      creatorBannedFromCommunity: creatorBannedFromCommunity,
-      myVote: myVote,
-      counts: counts,
-      resolver: resolver,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PostReportView fromJson(Map<String, Object?> json) {
-    return PostReportView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PostReportView = _$PostReportViewTearOff();
 
 /// @nodoc
 mixin _$PostReportView {
@@ -2283,6 +2074,7 @@ class _$_PostReportView extends _PostReportView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2310,41 +2102,41 @@ class _$_PostReportView extends _PostReportView {
 
 abstract class _PostReportView extends PostReportView {
   const factory _PostReportView(
-      {required PostReport postReport,
-      required Post post,
-      required CommunitySafe community,
-      required PersonSafe creator,
-      required PersonSafe postCreator,
-      required bool creatorBannedFromCommunity,
-      VoteType? myVote,
-      required PostAggregates counts,
-      PersonSafe? resolver,
-      required String instanceHost}) = _$_PostReportView;
+      {required final PostReport postReport,
+      required final Post post,
+      required final CommunitySafe community,
+      required final PersonSafe creator,
+      required final PersonSafe postCreator,
+      required final bool creatorBannedFromCommunity,
+      final VoteType? myVote,
+      required final PostAggregates counts,
+      final PersonSafe? resolver,
+      required final String instanceHost}) = _$_PostReportView;
   const _PostReportView._() : super._();
 
   factory _PostReportView.fromJson(Map<String, dynamic> json) =
       _$_PostReportView.fromJson;
 
   @override
-  PostReport get postReport;
+  PostReport get postReport => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  PersonSafe get postCreator;
+  PersonSafe get postCreator => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  VoteType? get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  PostAggregates get counts;
+  PostAggregates get counts => throw _privateConstructorUsedError;
   @override
-  PersonSafe? get resolver;
+  PersonSafe? get resolver => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostReportViewCopyWith<_PostReportView> get copyWith =>
@@ -2354,47 +2146,6 @@ abstract class _PostReportView extends PostReportView {
 CommentView _$CommentViewFromJson(Map<String, dynamic> json) {
   return _CommentView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommentViewTearOff {
-  const _$CommentViewTearOff();
-
-  _CommentView call(
-      {required Comment comment,
-      required PersonSafe creator,
-      PersonSafe? recipient,
-      required Post post,
-      required CommunitySafe community,
-      required CommentAggregates counts,
-      required bool creatorBannedFromCommunity,
-      required bool subscribed,
-      required bool saved,
-      required bool creatorBlocked,
-      VoteType? myVote,
-      required String instanceHost}) {
-    return _CommentView(
-      comment: comment,
-      creator: creator,
-      recipient: recipient,
-      post: post,
-      community: community,
-      counts: counts,
-      creatorBannedFromCommunity: creatorBannedFromCommunity,
-      subscribed: subscribed,
-      saved: saved,
-      creatorBlocked: creatorBlocked,
-      myVote: myVote,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommentView fromJson(Map<String, Object?> json) {
-    return CommentView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommentView = _$CommentViewTearOff();
 
 /// @nodoc
 mixin _$CommentView {
@@ -2754,6 +2505,7 @@ class _$_CommentView extends _CommentView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2783,47 +2535,47 @@ class _$_CommentView extends _CommentView {
 
 abstract class _CommentView extends CommentView {
   const factory _CommentView(
-      {required Comment comment,
-      required PersonSafe creator,
-      PersonSafe? recipient,
-      required Post post,
-      required CommunitySafe community,
-      required CommentAggregates counts,
-      required bool creatorBannedFromCommunity,
-      required bool subscribed,
-      required bool saved,
-      required bool creatorBlocked,
-      VoteType? myVote,
-      required String instanceHost}) = _$_CommentView;
+      {required final Comment comment,
+      required final PersonSafe creator,
+      final PersonSafe? recipient,
+      required final Post post,
+      required final CommunitySafe community,
+      required final CommentAggregates counts,
+      required final bool creatorBannedFromCommunity,
+      required final bool subscribed,
+      required final bool saved,
+      required final bool creatorBlocked,
+      final VoteType? myVote,
+      required final String instanceHost}) = _$_CommentView;
   const _CommentView._() : super._();
 
   factory _CommentView.fromJson(Map<String, dynamic> json) =
       _$_CommentView.fromJson;
 
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  PersonSafe? get recipient;
+  PersonSafe? get recipient => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  CommentAggregates get counts;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get saved;
+  bool get saved => throw _privateConstructorUsedError;
   @override
-  bool get creatorBlocked;
+  bool get creatorBlocked => throw _privateConstructorUsedError;
   @override
-  VoteType? get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommentViewCopyWith<_CommentView> get copyWith =>
@@ -2833,45 +2585,6 @@ abstract class _CommentView extends CommentView {
 CommentReportView _$CommentReportViewFromJson(Map<String, dynamic> json) {
   return _CommentReportView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommentReportViewTearOff {
-  const _$CommentReportViewTearOff();
-
-  _CommentReportView call(
-      {required CommentReport commentReport,
-      required Comment comment,
-      required Post post,
-      required CommunitySafe community,
-      required PersonSafe creator,
-      required PersonSafe commentCreator,
-      required bool creatorBannedFromCommunity,
-      VoteType? myVote,
-      required CommentAggregates counts,
-      PersonSafe? resolver,
-      required String instanceHost}) {
-    return _CommentReportView(
-      commentReport: commentReport,
-      comment: comment,
-      post: post,
-      community: community,
-      creator: creator,
-      commentCreator: commentCreator,
-      creatorBannedFromCommunity: creatorBannedFromCommunity,
-      myVote: myVote,
-      counts: counts,
-      resolver: resolver,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommentReportView fromJson(Map<String, Object?> json) {
-    return CommentReportView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommentReportView = _$CommentReportViewTearOff();
 
 /// @nodoc
 mixin _$CommentReportView {
@@ -3236,6 +2949,7 @@ class _$_CommentReportView extends _CommentReportView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3264,44 +2978,44 @@ class _$_CommentReportView extends _CommentReportView {
 
 abstract class _CommentReportView extends CommentReportView {
   const factory _CommentReportView(
-      {required CommentReport commentReport,
-      required Comment comment,
-      required Post post,
-      required CommunitySafe community,
-      required PersonSafe creator,
-      required PersonSafe commentCreator,
-      required bool creatorBannedFromCommunity,
-      VoteType? myVote,
-      required CommentAggregates counts,
-      PersonSafe? resolver,
-      required String instanceHost}) = _$_CommentReportView;
+      {required final CommentReport commentReport,
+      required final Comment comment,
+      required final Post post,
+      required final CommunitySafe community,
+      required final PersonSafe creator,
+      required final PersonSafe commentCreator,
+      required final bool creatorBannedFromCommunity,
+      final VoteType? myVote,
+      required final CommentAggregates counts,
+      final PersonSafe? resolver,
+      required final String instanceHost}) = _$_CommentReportView;
   const _CommentReportView._() : super._();
 
   factory _CommentReportView.fromJson(Map<String, dynamic> json) =
       _$_CommentReportView.fromJson;
 
   @override
-  CommentReport get commentReport;
+  CommentReport get commentReport => throw _privateConstructorUsedError;
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  PersonSafe get commentCreator;
+  PersonSafe get commentCreator => throw _privateConstructorUsedError;
   @override
-  bool get creatorBannedFromCommunity;
+  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
   @override
-  VoteType? get myVote;
+  VoteType? get myVote => throw _privateConstructorUsedError;
   @override
-  CommentAggregates get counts;
+  CommentAggregates get counts => throw _privateConstructorUsedError;
   @override
-  PersonSafe? get resolver;
+  PersonSafe? get resolver => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommentReportViewCopyWith<_CommentReportView> get copyWith =>
@@ -3311,33 +3025,6 @@ abstract class _CommentReportView extends CommentReportView {
 ModAddCommunityView _$ModAddCommunityViewFromJson(Map<String, dynamic> json) {
   return _ModAddCommunityView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModAddCommunityViewTearOff {
-  const _$ModAddCommunityViewTearOff();
-
-  _ModAddCommunityView call(
-      {required ModAddCommunity modAddCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required PersonSafe moddedPerson,
-      required String instanceHost}) {
-    return _ModAddCommunityView(
-      modAddCommunity: modAddCommunity,
-      moderator: moderator,
-      community: community,
-      moddedPerson: moddedPerson,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModAddCommunityView fromJson(Map<String, Object?> json) {
-    return ModAddCommunityView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModAddCommunityView = _$ModAddCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModAddCommunityView {
@@ -3555,6 +3242,7 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3578,26 +3266,26 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
 
 abstract class _ModAddCommunityView extends ModAddCommunityView {
   const factory _ModAddCommunityView(
-      {required ModAddCommunity modAddCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required PersonSafe moddedPerson,
-      required String instanceHost}) = _$_ModAddCommunityView;
+      {required final ModAddCommunity modAddCommunity,
+      required final PersonSafe moderator,
+      required final CommunitySafe community,
+      required final PersonSafe moddedPerson,
+      required final String instanceHost}) = _$_ModAddCommunityView;
   const _ModAddCommunityView._() : super._();
 
   factory _ModAddCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunityView.fromJson;
 
   @override
-  ModAddCommunity get modAddCommunity;
+  ModAddCommunity get modAddCommunity => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moddedPerson;
+  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddCommunityViewCopyWith<_ModAddCommunityView> get copyWith =>
@@ -3608,33 +3296,6 @@ ModTransferCommunityView _$ModTransferCommunityViewFromJson(
     Map<String, dynamic> json) {
   return _ModTransferCommunityView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModTransferCommunityViewTearOff {
-  const _$ModTransferCommunityViewTearOff();
-
-  _ModTransferCommunityView call(
-      {required ModTransferCommunity modTransferCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required PersonSafe moddedPerson,
-      required String instanceHost}) {
-    return _ModTransferCommunityView(
-      modTransferCommunity: modTransferCommunity,
-      moderator: moderator,
-      community: community,
-      moddedPerson: moddedPerson,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModTransferCommunityView fromJson(Map<String, Object?> json) {
-    return ModTransferCommunityView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModTransferCommunityView = _$ModTransferCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModTransferCommunityView {
@@ -3855,6 +3516,7 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3878,26 +3540,27 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
 
 abstract class _ModTransferCommunityView extends ModTransferCommunityView {
   const factory _ModTransferCommunityView(
-      {required ModTransferCommunity modTransferCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required PersonSafe moddedPerson,
-      required String instanceHost}) = _$_ModTransferCommunityView;
+      {required final ModTransferCommunity modTransferCommunity,
+      required final PersonSafe moderator,
+      required final CommunitySafe community,
+      required final PersonSafe moddedPerson,
+      required final String instanceHost}) = _$_ModTransferCommunityView;
   const _ModTransferCommunityView._() : super._();
 
   factory _ModTransferCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModTransferCommunityView.fromJson;
 
   @override
-  ModTransferCommunity get modTransferCommunity;
+  ModTransferCommunity get modTransferCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moddedPerson;
+  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModTransferCommunityViewCopyWith<_ModTransferCommunityView> get copyWith =>
@@ -3907,31 +3570,6 @@ abstract class _ModTransferCommunityView extends ModTransferCommunityView {
 ModAddView _$ModAddViewFromJson(Map<String, dynamic> json) {
   return _ModAddView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModAddViewTearOff {
-  const _$ModAddViewTearOff();
-
-  _ModAddView call(
-      {required ModAdd modAdd,
-      required PersonSafe moderator,
-      required PersonSafe moddedPerson,
-      required String instanceHost}) {
-    return _ModAddView(
-      modAdd: modAdd,
-      moderator: moderator,
-      moddedPerson: moddedPerson,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModAddView fromJson(Map<String, Object?> json) {
-    return ModAddView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModAddView = _$ModAddViewTearOff();
 
 /// @nodoc
 mixin _$ModAddView {
@@ -4118,6 +3756,7 @@ class _$_ModAddView extends _ModAddView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4139,23 +3778,23 @@ class _$_ModAddView extends _ModAddView {
 
 abstract class _ModAddView extends ModAddView {
   const factory _ModAddView(
-      {required ModAdd modAdd,
-      required PersonSafe moderator,
-      required PersonSafe moddedPerson,
-      required String instanceHost}) = _$_ModAddView;
+      {required final ModAdd modAdd,
+      required final PersonSafe moderator,
+      required final PersonSafe moddedPerson,
+      required final String instanceHost}) = _$_ModAddView;
   const _ModAddView._() : super._();
 
   factory _ModAddView.fromJson(Map<String, dynamic> json) =
       _$_ModAddView.fromJson;
 
   @override
-  ModAdd get modAdd;
+  ModAdd get modAdd => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moddedPerson;
+  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddViewCopyWith<_ModAddView> get copyWith =>
@@ -4166,33 +3805,6 @@ ModBanFromCommunityView _$ModBanFromCommunityViewFromJson(
     Map<String, dynamic> json) {
   return _ModBanFromCommunityView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModBanFromCommunityViewTearOff {
-  const _$ModBanFromCommunityViewTearOff();
-
-  _ModBanFromCommunityView call(
-      {required ModBanFromCommunity modBanFromCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required PersonSafe bannedPerson,
-      required String instanceHost}) {
-    return _ModBanFromCommunityView(
-      modBanFromCommunity: modBanFromCommunity,
-      moderator: moderator,
-      community: community,
-      bannedPerson: bannedPerson,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModBanFromCommunityView fromJson(Map<String, Object?> json) {
-    return ModBanFromCommunityView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModBanFromCommunityView = _$ModBanFromCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModBanFromCommunityView {
@@ -4413,6 +4025,7 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4436,26 +4049,27 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
 
 abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
   const factory _ModBanFromCommunityView(
-      {required ModBanFromCommunity modBanFromCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required PersonSafe bannedPerson,
-      required String instanceHost}) = _$_ModBanFromCommunityView;
+      {required final ModBanFromCommunity modBanFromCommunity,
+      required final PersonSafe moderator,
+      required final CommunitySafe community,
+      required final PersonSafe bannedPerson,
+      required final String instanceHost}) = _$_ModBanFromCommunityView;
   const _ModBanFromCommunityView._() : super._();
 
   factory _ModBanFromCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunityView.fromJson;
 
   @override
-  ModBanFromCommunity get modBanFromCommunity;
+  ModBanFromCommunity get modBanFromCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get bannedPerson;
+  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModBanFromCommunityViewCopyWith<_ModBanFromCommunityView> get copyWith =>
@@ -4465,31 +4079,6 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
 ModBanView _$ModBanViewFromJson(Map<String, dynamic> json) {
   return _ModBanView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModBanViewTearOff {
-  const _$ModBanViewTearOff();
-
-  _ModBanView call(
-      {required ModBan modBan,
-      required PersonSafe moderator,
-      required PersonSafe bannedPerson,
-      required String instanceHost}) {
-    return _ModBanView(
-      modBan: modBan,
-      moderator: moderator,
-      bannedPerson: bannedPerson,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModBanView fromJson(Map<String, Object?> json) {
-    return ModBanView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModBanView = _$ModBanViewTearOff();
 
 /// @nodoc
 mixin _$ModBanView {
@@ -4676,6 +4265,7 @@ class _$_ModBanView extends _ModBanView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4697,23 +4287,23 @@ class _$_ModBanView extends _ModBanView {
 
 abstract class _ModBanView extends ModBanView {
   const factory _ModBanView(
-      {required ModBan modBan,
-      required PersonSafe moderator,
-      required PersonSafe bannedPerson,
-      required String instanceHost}) = _$_ModBanView;
+      {required final ModBan modBan,
+      required final PersonSafe moderator,
+      required final PersonSafe bannedPerson,
+      required final String instanceHost}) = _$_ModBanView;
   const _ModBanView._() : super._();
 
   factory _ModBanView.fromJson(Map<String, dynamic> json) =
       _$_ModBanView.fromJson;
 
   @override
-  ModBan get modBan;
+  ModBan get modBan => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  PersonSafe get bannedPerson;
+  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModBanViewCopyWith<_ModBanView> get copyWith =>
@@ -4723,33 +4313,6 @@ abstract class _ModBanView extends ModBanView {
 ModLockPostView _$ModLockPostViewFromJson(Map<String, dynamic> json) {
   return _ModLockPostView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModLockPostViewTearOff {
-  const _$ModLockPostViewTearOff();
-
-  _ModLockPostView call(
-      {required ModLockPost modLockPost,
-      required PersonSafe moderator,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) {
-    return _ModLockPostView(
-      modLockPost: modLockPost,
-      moderator: moderator,
-      post: post,
-      community: community,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModLockPostView fromJson(Map<String, Object?> json) {
-    return ModLockPostView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModLockPostView = _$ModLockPostViewTearOff();
 
 /// @nodoc
 mixin _$ModLockPostView {
@@ -4966,6 +4529,7 @@ class _$_ModLockPostView extends _ModLockPostView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4988,26 +4552,26 @@ class _$_ModLockPostView extends _ModLockPostView {
 
 abstract class _ModLockPostView extends ModLockPostView {
   const factory _ModLockPostView(
-      {required ModLockPost modLockPost,
-      required PersonSafe moderator,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) = _$_ModLockPostView;
+      {required final ModLockPost modLockPost,
+      required final PersonSafe moderator,
+      required final Post post,
+      required final CommunitySafe community,
+      required final String instanceHost}) = _$_ModLockPostView;
   const _ModLockPostView._() : super._();
 
   factory _ModLockPostView.fromJson(Map<String, dynamic> json) =
       _$_ModLockPostView.fromJson;
 
   @override
-  ModLockPost get modLockPost;
+  ModLockPost get modLockPost => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModLockPostViewCopyWith<_ModLockPostView> get copyWith =>
@@ -5017,37 +4581,6 @@ abstract class _ModLockPostView extends ModLockPostView {
 ModRemoveCommentView _$ModRemoveCommentViewFromJson(Map<String, dynamic> json) {
   return _ModRemoveCommentView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModRemoveCommentViewTearOff {
-  const _$ModRemoveCommentViewTearOff();
-
-  _ModRemoveCommentView call(
-      {required ModRemoveComment modRemoveComment,
-      required PersonSafe moderator,
-      required Comment comment,
-      required PersonSafe commenter,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) {
-    return _ModRemoveCommentView(
-      modRemoveComment: modRemoveComment,
-      moderator: moderator,
-      comment: comment,
-      commenter: commenter,
-      post: post,
-      community: community,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModRemoveCommentView fromJson(Map<String, Object?> json) {
-    return ModRemoveCommentView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModRemoveCommentView = _$ModRemoveCommentViewTearOff();
 
 /// @nodoc
 mixin _$ModRemoveCommentView {
@@ -5318,6 +4851,7 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5343,32 +4877,32 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
 
 abstract class _ModRemoveCommentView extends ModRemoveCommentView {
   const factory _ModRemoveCommentView(
-      {required ModRemoveComment modRemoveComment,
-      required PersonSafe moderator,
-      required Comment comment,
-      required PersonSafe commenter,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) = _$_ModRemoveCommentView;
+      {required final ModRemoveComment modRemoveComment,
+      required final PersonSafe moderator,
+      required final Comment comment,
+      required final PersonSafe commenter,
+      required final Post post,
+      required final CommunitySafe community,
+      required final String instanceHost}) = _$_ModRemoveCommentView;
   const _ModRemoveCommentView._() : super._();
 
   factory _ModRemoveCommentView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommentView.fromJson;
 
   @override
-  ModRemoveComment get modRemoveComment;
+  ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Comment get comment;
+  Comment get comment => throw _privateConstructorUsedError;
   @override
-  PersonSafe get commenter;
+  PersonSafe get commenter => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommentViewCopyWith<_ModRemoveCommentView> get copyWith =>
@@ -5379,31 +4913,6 @@ ModRemoveCommunityView _$ModRemoveCommunityViewFromJson(
     Map<String, dynamic> json) {
   return _ModRemoveCommunityView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModRemoveCommunityViewTearOff {
-  const _$ModRemoveCommunityViewTearOff();
-
-  _ModRemoveCommunityView call(
-      {required ModRemoveCommunity modRemoveCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required String instanceHost}) {
-    return _ModRemoveCommunityView(
-      modRemoveCommunity: modRemoveCommunity,
-      moderator: moderator,
-      community: community,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModRemoveCommunityView fromJson(Map<String, Object?> json) {
-    return ModRemoveCommunityView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModRemoveCommunityView = _$ModRemoveCommunityViewTearOff();
 
 /// @nodoc
 mixin _$ModRemoveCommunityView {
@@ -5595,6 +5104,7 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5617,23 +5127,24 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
 
 abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
   const factory _ModRemoveCommunityView(
-      {required ModRemoveCommunity modRemoveCommunity,
-      required PersonSafe moderator,
-      required CommunitySafe community,
-      required String instanceHost}) = _$_ModRemoveCommunityView;
+      {required final ModRemoveCommunity modRemoveCommunity,
+      required final PersonSafe moderator,
+      required final CommunitySafe community,
+      required final String instanceHost}) = _$_ModRemoveCommunityView;
   const _ModRemoveCommunityView._() : super._();
 
   factory _ModRemoveCommunityView.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunityView.fromJson;
 
   @override
-  ModRemoveCommunity get modRemoveCommunity;
+  ModRemoveCommunity get modRemoveCommunity =>
+      throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommunityViewCopyWith<_ModRemoveCommunityView> get copyWith =>
@@ -5643,33 +5154,6 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
 ModRemovePostView _$ModRemovePostViewFromJson(Map<String, dynamic> json) {
   return _ModRemovePostView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModRemovePostViewTearOff {
-  const _$ModRemovePostViewTearOff();
-
-  _ModRemovePostView call(
-      {required ModRemovePost modRemovePost,
-      required PersonSafe moderator,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) {
-    return _ModRemovePostView(
-      modRemovePost: modRemovePost,
-      moderator: moderator,
-      post: post,
-      community: community,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModRemovePostView fromJson(Map<String, Object?> json) {
-    return ModRemovePostView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModRemovePostView = _$ModRemovePostViewTearOff();
 
 /// @nodoc
 mixin _$ModRemovePostView {
@@ -5886,6 +5370,7 @@ class _$_ModRemovePostView extends _ModRemovePostView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5908,26 +5393,26 @@ class _$_ModRemovePostView extends _ModRemovePostView {
 
 abstract class _ModRemovePostView extends ModRemovePostView {
   const factory _ModRemovePostView(
-      {required ModRemovePost modRemovePost,
-      required PersonSafe moderator,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) = _$_ModRemovePostView;
+      {required final ModRemovePost modRemovePost,
+      required final PersonSafe moderator,
+      required final Post post,
+      required final CommunitySafe community,
+      required final String instanceHost}) = _$_ModRemovePostView;
   const _ModRemovePostView._() : super._();
 
   factory _ModRemovePostView.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePostView.fromJson;
 
   @override
-  ModRemovePost get modRemovePost;
+  ModRemovePost get modRemovePost => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemovePostViewCopyWith<_ModRemovePostView> get copyWith =>
@@ -5937,33 +5422,6 @@ abstract class _ModRemovePostView extends ModRemovePostView {
 ModStickyPostView _$ModStickyPostViewFromJson(Map<String, dynamic> json) {
   return _ModStickyPostView.fromJson(json);
 }
-
-/// @nodoc
-class _$ModStickyPostViewTearOff {
-  const _$ModStickyPostViewTearOff();
-
-  _ModStickyPostView call(
-      {required ModStickyPost modStickyPost,
-      required PersonSafe moderator,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) {
-    return _ModStickyPostView(
-      modStickyPost: modStickyPost,
-      moderator: moderator,
-      post: post,
-      community: community,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModStickyPostView fromJson(Map<String, Object?> json) {
-    return ModStickyPostView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModStickyPostView = _$ModStickyPostViewTearOff();
 
 /// @nodoc
 mixin _$ModStickyPostView {
@@ -6180,6 +5638,7 @@ class _$_ModStickyPostView extends _ModStickyPostView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6202,26 +5661,26 @@ class _$_ModStickyPostView extends _ModStickyPostView {
 
 abstract class _ModStickyPostView extends ModStickyPostView {
   const factory _ModStickyPostView(
-      {required ModStickyPost modStickyPost,
-      required PersonSafe moderator,
-      required Post post,
-      required CommunitySafe community,
-      required String instanceHost}) = _$_ModStickyPostView;
+      {required final ModStickyPost modStickyPost,
+      required final PersonSafe moderator,
+      required final Post post,
+      required final CommunitySafe community,
+      required final String instanceHost}) = _$_ModStickyPostView;
   const _ModStickyPostView._() : super._();
 
   factory _ModStickyPostView.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPostView.fromJson;
 
   @override
-  ModStickyPost get modStickyPost;
+  ModStickyPost get modStickyPost => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  Post get post;
+  Post get post => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModStickyPostViewCopyWith<_ModStickyPostView> get copyWith =>
@@ -6232,29 +5691,6 @@ CommunityFollowerView _$CommunityFollowerViewFromJson(
     Map<String, dynamic> json) {
   return _CommunityFollowerView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunityFollowerViewTearOff {
-  const _$CommunityFollowerViewTearOff();
-
-  _CommunityFollowerView call(
-      {required CommunitySafe community,
-      required PersonSafe follower,
-      required String instanceHost}) {
-    return _CommunityFollowerView(
-      community: community,
-      follower: follower,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommunityFollowerView fromJson(Map<String, Object?> json) {
-    return CommunityFollowerView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunityFollowerView = _$CommunityFollowerViewTearOff();
 
 /// @nodoc
 mixin _$CommunityFollowerView {
@@ -6412,6 +5848,7 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6433,20 +5870,20 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 
 abstract class _CommunityFollowerView extends CommunityFollowerView {
   const factory _CommunityFollowerView(
-      {required CommunitySafe community,
-      required PersonSafe follower,
-      required String instanceHost}) = _$_CommunityFollowerView;
+      {required final CommunitySafe community,
+      required final PersonSafe follower,
+      required final String instanceHost}) = _$_CommunityFollowerView;
   const _CommunityFollowerView._() : super._();
 
   factory _CommunityFollowerView.fromJson(Map<String, dynamic> json) =
       _$_CommunityFollowerView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get follower;
+  PersonSafe get follower => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityFollowerViewCopyWith<_CommunityFollowerView> get copyWith =>
@@ -6457,29 +5894,6 @@ CommunityModeratorView _$CommunityModeratorViewFromJson(
     Map<String, dynamic> json) {
   return _CommunityModeratorView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunityModeratorViewTearOff {
-  const _$CommunityModeratorViewTearOff();
-
-  _CommunityModeratorView call(
-      {required CommunitySafe community,
-      required PersonSafe moderator,
-      required String instanceHost}) {
-    return _CommunityModeratorView(
-      community: community,
-      moderator: moderator,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommunityModeratorView fromJson(Map<String, Object?> json) {
-    return CommunityModeratorView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunityModeratorView = _$CommunityModeratorViewTearOff();
 
 /// @nodoc
 mixin _$CommunityModeratorView {
@@ -6637,6 +6051,7 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6658,20 +6073,20 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 
 abstract class _CommunityModeratorView extends CommunityModeratorView {
   const factory _CommunityModeratorView(
-      {required CommunitySafe community,
-      required PersonSafe moderator,
-      required String instanceHost}) = _$_CommunityModeratorView;
+      {required final CommunitySafe community,
+      required final PersonSafe moderator,
+      required final String instanceHost}) = _$_CommunityModeratorView;
   const _CommunityModeratorView._() : super._();
 
   factory _CommunityModeratorView.fromJson(Map<String, dynamic> json) =
       _$_CommunityModeratorView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get moderator;
+  PersonSafe get moderator => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityModeratorViewCopyWith<_CommunityModeratorView> get copyWith =>
@@ -6681,29 +6096,6 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
 PersonBlockView _$PersonBlockViewFromJson(Map<String, dynamic> json) {
   return _PersonBlockView.fromJson(json);
 }
-
-/// @nodoc
-class _$PersonBlockViewTearOff {
-  const _$PersonBlockViewTearOff();
-
-  _PersonBlockView call(
-      {required PersonSafe person,
-      required PersonSafe target,
-      required String instanceHost}) {
-    return _PersonBlockView(
-      person: person,
-      target: target,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PersonBlockView fromJson(Map<String, Object?> json) {
-    return PersonBlockView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PersonBlockView = _$PersonBlockViewTearOff();
 
 /// @nodoc
 mixin _$PersonBlockView {
@@ -6857,6 +6249,7 @@ class _$_PersonBlockView extends _PersonBlockView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6877,20 +6270,20 @@ class _$_PersonBlockView extends _PersonBlockView {
 
 abstract class _PersonBlockView extends PersonBlockView {
   const factory _PersonBlockView(
-      {required PersonSafe person,
-      required PersonSafe target,
-      required String instanceHost}) = _$_PersonBlockView;
+      {required final PersonSafe person,
+      required final PersonSafe target,
+      required final String instanceHost}) = _$_PersonBlockView;
   const _PersonBlockView._() : super._();
 
   factory _PersonBlockView.fromJson(Map<String, dynamic> json) =
       _$_PersonBlockView.fromJson;
 
   @override
-  PersonSafe get person;
+  PersonSafe get person => throw _privateConstructorUsedError;
   @override
-  PersonSafe get target;
+  PersonSafe get target => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonBlockViewCopyWith<_PersonBlockView> get copyWith =>
@@ -6900,29 +6293,6 @@ abstract class _PersonBlockView extends PersonBlockView {
 CommunityBlockView _$CommunityBlockViewFromJson(Map<String, dynamic> json) {
   return _CommunityBlockView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunityBlockViewTearOff {
-  const _$CommunityBlockViewTearOff();
-
-  _CommunityBlockView call(
-      {required PersonSafe person,
-      required CommunitySafe community,
-      required String instanceHost}) {
-    return _CommunityBlockView(
-      person: person,
-      community: community,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommunityBlockView fromJson(Map<String, Object?> json) {
-    return CommunityBlockView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunityBlockView = _$CommunityBlockViewTearOff();
 
 /// @nodoc
 mixin _$CommunityBlockView {
@@ -7078,6 +6448,7 @@ class _$_CommunityBlockView extends _CommunityBlockView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7098,20 +6469,20 @@ class _$_CommunityBlockView extends _CommunityBlockView {
 
 abstract class _CommunityBlockView extends CommunityBlockView {
   const factory _CommunityBlockView(
-      {required PersonSafe person,
-      required CommunitySafe community,
-      required String instanceHost}) = _$_CommunityBlockView;
+      {required final PersonSafe person,
+      required final CommunitySafe community,
+      required final String instanceHost}) = _$_CommunityBlockView;
   const _CommunityBlockView._() : super._();
 
   factory _CommunityBlockView.fromJson(Map<String, dynamic> json) =
       _$_CommunityBlockView.fromJson;
 
   @override
-  PersonSafe get person;
+  PersonSafe get person => throw _privateConstructorUsedError;
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityBlockViewCopyWith<_CommunityBlockView> get copyWith =>
@@ -7122,29 +6493,6 @@ CommunityPersonBanView _$CommunityPersonBanViewFromJson(
     Map<String, dynamic> json) {
   return _CommunityPersonBanView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunityPersonBanViewTearOff {
-  const _$CommunityPersonBanViewTearOff();
-
-  _CommunityPersonBanView call(
-      {required CommunitySafe community,
-      required PersonSafe person,
-      required String instanceHost}) {
-    return _CommunityPersonBanView(
-      community: community,
-      person: person,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommunityPersonBanView fromJson(Map<String, Object?> json) {
-    return CommunityPersonBanView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunityPersonBanView = _$CommunityPersonBanViewTearOff();
 
 /// @nodoc
 mixin _$CommunityPersonBanView {
@@ -7300,6 +6648,7 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7321,20 +6670,20 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
 
 abstract class _CommunityPersonBanView extends CommunityPersonBanView {
   const factory _CommunityPersonBanView(
-      {required CommunitySafe community,
-      required PersonSafe person,
-      required String instanceHost}) = _$_CommunityPersonBanView;
+      {required final CommunitySafe community,
+      required final PersonSafe person,
+      required final String instanceHost}) = _$_CommunityPersonBanView;
   const _CommunityPersonBanView._() : super._();
 
   factory _CommunityPersonBanView.fromJson(Map<String, dynamic> json) =
       _$_CommunityPersonBanView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  PersonSafe get person;
+  PersonSafe get person => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityPersonBanViewCopyWith<_CommunityPersonBanView> get copyWith =>
@@ -7344,33 +6693,6 @@ abstract class _CommunityPersonBanView extends CommunityPersonBanView {
 CommunityView _$CommunityViewFromJson(Map<String, dynamic> json) {
   return _CommunityView.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunityViewTearOff {
-  const _$CommunityViewTearOff();
-
-  _CommunityView call(
-      {required CommunitySafe community,
-      required bool subscribed,
-      required bool blocked,
-      required CommunityAggregates counts,
-      required String instanceHost}) {
-    return _CommunityView(
-      community: community,
-      subscribed: subscribed,
-      blocked: blocked,
-      counts: counts,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommunityView fromJson(Map<String, Object?> json) {
-    return CommunityView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunityView = _$CommunityViewTearOff();
 
 /// @nodoc
 mixin _$CommunityView {
@@ -7567,6 +6889,7 @@ class _$_CommunityView extends _CommunityView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7589,26 +6912,26 @@ class _$_CommunityView extends _CommunityView {
 
 abstract class _CommunityView extends CommunityView {
   const factory _CommunityView(
-      {required CommunitySafe community,
-      required bool subscribed,
-      required bool blocked,
-      required CommunityAggregates counts,
-      required String instanceHost}) = _$_CommunityView;
+      {required final CommunitySafe community,
+      required final bool subscribed,
+      required final bool blocked,
+      required final CommunityAggregates counts,
+      required final String instanceHost}) = _$_CommunityView;
   const _CommunityView._() : super._();
 
   factory _CommunityView.fromJson(Map<String, dynamic> json) =
       _$_CommunityView.fromJson;
 
   @override
-  CommunitySafe get community;
+  CommunitySafe get community => throw _privateConstructorUsedError;
   @override
-  bool get subscribed;
+  bool get subscribed => throw _privateConstructorUsedError;
   @override
-  bool get blocked;
+  bool get blocked => throw _privateConstructorUsedError;
   @override
-  CommunityAggregates get counts;
+  CommunityAggregates get counts => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityViewCopyWith<_CommunityView> get copyWith =>
@@ -7619,33 +6942,6 @@ RegistrationApplicationView _$RegistrationApplicationViewFromJson(
     Map<String, dynamic> json) {
   return _RegistrationApplicationView.fromJson(json);
 }
-
-/// @nodoc
-class _$RegistrationApplicationViewTearOff {
-  const _$RegistrationApplicationViewTearOff();
-
-  _RegistrationApplicationView call(
-      {required RegistrationApplication registrationApplication,
-      required LocalUserSettings creatorLocalUser,
-      required PersonSafe creator,
-      PersonSafe? admin,
-      required String instanceHost}) {
-    return _RegistrationApplicationView(
-      registrationApplication: registrationApplication,
-      creatorLocalUser: creatorLocalUser,
-      creator: creator,
-      admin: admin,
-      instanceHost: instanceHost,
-    );
-  }
-
-  RegistrationApplicationView fromJson(Map<String, Object?> json) {
-    return RegistrationApplicationView.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RegistrationApplicationView = _$RegistrationApplicationViewTearOff();
 
 /// @nodoc
 mixin _$RegistrationApplicationView {
@@ -7873,6 +7169,7 @@ class _$_RegistrationApplicationView extends _RegistrationApplicationView {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7897,26 +7194,27 @@ class _$_RegistrationApplicationView extends _RegistrationApplicationView {
 abstract class _RegistrationApplicationView
     extends RegistrationApplicationView {
   const factory _RegistrationApplicationView(
-      {required RegistrationApplication registrationApplication,
-      required LocalUserSettings creatorLocalUser,
-      required PersonSafe creator,
-      PersonSafe? admin,
-      required String instanceHost}) = _$_RegistrationApplicationView;
+      {required final RegistrationApplication registrationApplication,
+      required final LocalUserSettings creatorLocalUser,
+      required final PersonSafe creator,
+      final PersonSafe? admin,
+      required final String instanceHost}) = _$_RegistrationApplicationView;
   const _RegistrationApplicationView._() : super._();
 
   factory _RegistrationApplicationView.fromJson(Map<String, dynamic> json) =
       _$_RegistrationApplicationView.fromJson;
 
   @override
-  RegistrationApplication get registrationApplication;
+  RegistrationApplication get registrationApplication =>
+      throw _privateConstructorUsedError;
   @override
-  LocalUserSettings get creatorLocalUser;
+  LocalUserSettings get creatorLocalUser => throw _privateConstructorUsedError;
   @override
-  PersonSafe get creator;
+  PersonSafe get creator => throw _privateConstructorUsedError;
   @override
-  PersonSafe? get admin;
+  PersonSafe? get admin => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RegistrationApplicationViewCopyWith<_RegistrationApplicationView>
