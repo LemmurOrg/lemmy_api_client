@@ -10,6 +10,9 @@ _$_FullCommunityView _$$_FullCommunityViewFromJson(Map<String, dynamic> json) =>
     _$_FullCommunityView(
       communityView: CommunityView.fromJson(
           json['community_view'] as Map<String, dynamic>),
+      site: json['site'] == null
+          ? null
+          : Site.fromJson(json['site'] as Map<String, dynamic>),
       moderators: (json['moderators'] as List<dynamic>)
           .map(
               (e) => CommunityModeratorView.fromJson(e as Map<String, dynamic>))
@@ -22,6 +25,7 @@ Map<String, dynamic> _$$_FullCommunityViewToJson(
         _$_FullCommunityView instance) =>
     <String, dynamic>{
       'community_view': instance.communityView.toJson(),
+      'site': instance.site?.toJson(),
       'moderators': instance.moderators.map((e) => e.toJson()).toList(),
       'online': instance.online,
       'instance_host': instance.instanceHost,

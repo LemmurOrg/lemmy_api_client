@@ -10,6 +10,7 @@ class FullCommunityView with _$FullCommunityView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory FullCommunityView({
     required CommunityView communityView,
+    required Site? site,
     required List<CommunityModeratorView> moderators,
     required int online,
     required String instanceHost,

@@ -3,6 +3,12 @@
 ### Added
 
 - Default theme fields
+- Add `LeaveAdmin` endpoint (thanks @ilpianista)
+
+### Removed
+
+- Remove `TransferSite` endpoint (thanks @ilpianista)
+- Remove site creator (thanks @LouisMarotta)
 
 ## v0.19.0 - 2022-01-14
 

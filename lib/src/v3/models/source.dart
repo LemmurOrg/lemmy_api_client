@@ -93,8 +93,12 @@ class Site with _$Site {
     required bool requireApplication,
     String? applicationQuestion,
     required bool privateInstance,
-    required String instanceHost,
     required String defaultTheme,
+    required String actorId,
+    required String lastRefreshedAt,
+    required String inboxUrl,
+    required String publicKey,
+    required String instanceHost,
   }) = _Site;
 
   const Site._();

@@ -1172,8 +1172,12 @@ class _$SiteTearOff {
       required bool requireApplication,
       String? applicationQuestion,
       required bool privateInstance,
-      required String instanceHost,
-      required String defaultTheme}) {
+      required String defaultTheme,
+      required String actorId,
+      required String lastRefreshedAt,
+      required String inboxUrl,
+      required String publicKey,
+      required String instanceHost}) {
     return _Site(
       id: id,
       name: name,
@@ -1191,8 +1195,12 @@ class _$SiteTearOff {
       requireApplication: requireApplication,
       applicationQuestion: applicationQuestion,
       privateInstance: privateInstance,
-      instanceHost: instanceHost,
       defaultTheme: defaultTheme,
+      actorId: actorId,
+      lastRefreshedAt: lastRefreshedAt,
+      inboxUrl: inboxUrl,
+      publicKey: publicKey,
+      instanceHost: instanceHost,
     );
   }
 
@@ -1222,8 +1230,12 @@ mixin _$Site {
   bool get requireApplication => throw _privateConstructorUsedError;
   String? get applicationQuestion => throw _privateConstructorUsedError;
   bool get privateInstance => throw _privateConstructorUsedError;
-  String get instanceHost => throw _privateConstructorUsedError;
   String get defaultTheme => throw _privateConstructorUsedError;
+  String get actorId => throw _privateConstructorUsedError;
+  String get lastRefreshedAt => throw _privateConstructorUsedError;
+  String get inboxUrl => throw _privateConstructorUsedError;
+  String get publicKey => throw _privateConstructorUsedError;
+  String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1251,8 +1263,12 @@ abstract class $SiteCopyWith<$Res> {
       bool requireApplication,
       String? applicationQuestion,
       bool privateInstance,
-      String instanceHost,
-      String defaultTheme});
+      String defaultTheme,
+      String actorId,
+      String lastRefreshedAt,
+      String inboxUrl,
+      String publicKey,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1281,8 +1297,12 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? requireApplication = freezed,
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
-    Object? instanceHost = freezed,
     Object? defaultTheme = freezed,
+    Object? actorId = freezed,
+    Object? lastRefreshedAt = freezed,
+    Object? inboxUrl = freezed,
+    Object? publicKey = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -1349,13 +1369,29 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
       defaultTheme: defaultTheme == freezed
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastRefreshedAt: lastRefreshedAt == freezed
+          ? _value.lastRefreshedAt
+          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      inboxUrl: inboxUrl == freezed
+          ? _value.inboxUrl
+          : inboxUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      publicKey: publicKey == freezed
+          ? _value.publicKey
+          : publicKey // ignore: cast_nullable_to_non_nullable
+              as String,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -1383,8 +1419,12 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       bool requireApplication,
       String? applicationQuestion,
       bool privateInstance,
-      String instanceHost,
-      String defaultTheme});
+      String defaultTheme,
+      String actorId,
+      String lastRefreshedAt,
+      String inboxUrl,
+      String publicKey,
+      String instanceHost});
 }
 
 /// @nodoc
@@ -1414,8 +1454,12 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? requireApplication = freezed,
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
-    Object? instanceHost = freezed,
     Object? defaultTheme = freezed,
+    Object? actorId = freezed,
+    Object? lastRefreshedAt = freezed,
+    Object? inboxUrl = freezed,
+    Object? publicKey = freezed,
+    Object? instanceHost = freezed,
   }) {
     return _then(_Site(
       id: id == freezed
@@ -1482,13 +1526,29 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.privateInstance
           : privateInstance // ignore: cast_nullable_to_non_nullable
               as bool,
-      instanceHost: instanceHost == freezed
-          ? _value.instanceHost
-          : instanceHost // ignore: cast_nullable_to_non_nullable
-              as String,
       defaultTheme: defaultTheme == freezed
           ? _value.defaultTheme
           : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String,
+      actorId: actorId == freezed
+          ? _value.actorId
+          : actorId // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastRefreshedAt: lastRefreshedAt == freezed
+          ? _value.lastRefreshedAt
+          : lastRefreshedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      inboxUrl: inboxUrl == freezed
+          ? _value.inboxUrl
+          : inboxUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      publicKey: publicKey == freezed
+          ? _value.publicKey
+          : publicKey // ignore: cast_nullable_to_non_nullable
+              as String,
+      instanceHost: instanceHost == freezed
+          ? _value.instanceHost
+          : instanceHost // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -1517,8 +1577,12 @@ class _$_Site extends _Site {
       required this.requireApplication,
       this.applicationQuestion,
       required this.privateInstance,
-      required this.instanceHost,
-      required this.defaultTheme})
+      required this.defaultTheme,
+      required this.actorId,
+      required this.lastRefreshedAt,
+      required this.inboxUrl,
+      required this.publicKey,
+      required this.instanceHost})
       : super._();
 
   factory _$_Site.fromJson(Map<String, dynamic> json) => _$$_SiteFromJson(json);
@@ -1556,13 +1620,21 @@ class _$_Site extends _Site {
   @override
   final bool privateInstance;
   @override
-  final String instanceHost;
-  @override
   final String defaultTheme;
+  @override
+  final String actorId;
+  @override
+  final String lastRefreshedAt;
+  @override
+  final String inboxUrl;
+  @override
+  final String publicKey;
+  @override
+  final String instanceHost;
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, instanceHost: $instanceHost, defaultTheme: $defaultTheme)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, defaultTheme: $defaultTheme, actorId: $actorId, lastRefreshedAt: $lastRefreshedAt, inboxUrl: $inboxUrl, publicKey: $publicKey, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1596,32 +1668,42 @@ class _$_Site extends _Site {
             const DeepCollectionEquality()
                 .equals(other.privateInstance, privateInstance) &&
             const DeepCollectionEquality()
-                .equals(other.instanceHost, instanceHost) &&
+                .equals(other.defaultTheme, defaultTheme) &&
+            const DeepCollectionEquality().equals(other.actorId, actorId) &&
             const DeepCollectionEquality()
-                .equals(other.defaultTheme, defaultTheme));
+                .equals(other.lastRefreshedAt, lastRefreshedAt) &&
+            const DeepCollectionEquality().equals(other.inboxUrl, inboxUrl) &&
+            const DeepCollectionEquality().equals(other.publicKey, publicKey) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceHost, instanceHost));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(sidebar),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(published),
-      const DeepCollectionEquality().hash(updated),
-      const DeepCollectionEquality().hash(enableDownvotes),
-      const DeepCollectionEquality().hash(openRegistration),
-      const DeepCollectionEquality().hash(enableNsfw),
-      const DeepCollectionEquality().hash(communityCreationAdminOnly),
-      const DeepCollectionEquality().hash(icon),
-      const DeepCollectionEquality().hash(banner),
-      const DeepCollectionEquality().hash(requireEmailVerification),
-      const DeepCollectionEquality().hash(requireApplication),
-      const DeepCollectionEquality().hash(applicationQuestion),
-      const DeepCollectionEquality().hash(privateInstance),
-      const DeepCollectionEquality().hash(instanceHost),
-      const DeepCollectionEquality().hash(defaultTheme));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(sidebar),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(published),
+        const DeepCollectionEquality().hash(updated),
+        const DeepCollectionEquality().hash(enableDownvotes),
+        const DeepCollectionEquality().hash(openRegistration),
+        const DeepCollectionEquality().hash(enableNsfw),
+        const DeepCollectionEquality().hash(communityCreationAdminOnly),
+        const DeepCollectionEquality().hash(icon),
+        const DeepCollectionEquality().hash(banner),
+        const DeepCollectionEquality().hash(requireEmailVerification),
+        const DeepCollectionEquality().hash(requireApplication),
+        const DeepCollectionEquality().hash(applicationQuestion),
+        const DeepCollectionEquality().hash(privateInstance),
+        const DeepCollectionEquality().hash(defaultTheme),
+        const DeepCollectionEquality().hash(actorId),
+        const DeepCollectionEquality().hash(lastRefreshedAt),
+        const DeepCollectionEquality().hash(inboxUrl),
+        const DeepCollectionEquality().hash(publicKey),
+        const DeepCollectionEquality().hash(instanceHost)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -1652,8 +1734,12 @@ abstract class _Site extends Site {
       required bool requireApplication,
       String? applicationQuestion,
       required bool privateInstance,
-      required String instanceHost,
-      required String defaultTheme}) = _$_Site;
+      required String defaultTheme,
+      required String actorId,
+      required String lastRefreshedAt,
+      required String inboxUrl,
+      required String publicKey,
+      required String instanceHost}) = _$_Site;
   const _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
@@ -1691,9 +1777,17 @@ abstract class _Site extends Site {
   @override
   bool get privateInstance;
   @override
-  String get instanceHost;
-  @override
   String get defaultTheme;
+  @override
+  String get actorId;
+  @override
+  String get lastRefreshedAt;
+  @override
+  String get inboxUrl;
+  @override
+  String get publicKey;
+  @override
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$SiteCopyWith<_Site> get copyWith => throw _privateConstructorUsedError;
