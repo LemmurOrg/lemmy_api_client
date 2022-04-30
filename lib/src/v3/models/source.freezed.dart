@@ -1160,7 +1160,6 @@ class _$SiteTearOff {
       required String name,
       String? sidebar,
       String? description,
-      required int creatorId,
       required DateTime published,
       DateTime? updated,
       required bool enableDownvotes,
@@ -1180,7 +1179,6 @@ class _$SiteTearOff {
       name: name,
       sidebar: sidebar,
       description: description,
-      creatorId: creatorId,
       published: published,
       updated: updated,
       enableDownvotes: enableDownvotes,
@@ -1212,7 +1210,6 @@ mixin _$Site {
   String get name => throw _privateConstructorUsedError;
   String? get sidebar => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
-  int get creatorId => throw _privateConstructorUsedError;
   DateTime get published => throw _privateConstructorUsedError;
   DateTime? get updated => throw _privateConstructorUsedError;
   bool get enableDownvotes => throw _privateConstructorUsedError;
@@ -1242,7 +1239,6 @@ abstract class $SiteCopyWith<$Res> {
       String name,
       String? sidebar,
       String? description,
-      int creatorId,
       DateTime published,
       DateTime? updated,
       bool enableDownvotes,
@@ -1273,7 +1269,6 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
     Object? name = freezed,
     Object? sidebar = freezed,
     Object? description = freezed,
-    Object? creatorId = freezed,
     Object? published = freezed,
     Object? updated = freezed,
     Object? enableDownvotes = freezed,
@@ -1306,10 +1301,6 @@ class _$SiteCopyWithImpl<$Res> implements $SiteCopyWith<$Res> {
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
       published: published == freezed
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
@@ -1380,7 +1371,6 @@ abstract class _$SiteCopyWith<$Res> implements $SiteCopyWith<$Res> {
       String name,
       String? sidebar,
       String? description,
-      int creatorId,
       DateTime published,
       DateTime? updated,
       bool enableDownvotes,
@@ -1412,7 +1402,6 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
     Object? name = freezed,
     Object? sidebar = freezed,
     Object? description = freezed,
-    Object? creatorId = freezed,
     Object? published = freezed,
     Object? updated = freezed,
     Object? enableDownvotes = freezed,
@@ -1445,10 +1434,6 @@ class __$SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      creatorId: creatorId == freezed
-          ? _value.creatorId
-          : creatorId // ignore: cast_nullable_to_non_nullable
-              as int,
       published: published == freezed
           ? _value.published
           : published // ignore: cast_nullable_to_non_nullable
@@ -1520,7 +1505,6 @@ class _$_Site extends _Site {
       required this.name,
       this.sidebar,
       this.description,
-      required this.creatorId,
       required this.published,
       this.updated,
       required this.enableDownvotes,
@@ -1547,8 +1531,6 @@ class _$_Site extends _Site {
   final String? sidebar;
   @override
   final String? description;
-  @override
-  final int creatorId;
   @override
   final DateTime published;
   @override
@@ -1580,7 +1562,7 @@ class _$_Site extends _Site {
 
   @override
   String toString() {
-    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, creatorId: $creatorId, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, instanceHost: $instanceHost, defaultTheme: $defaultTheme)';
+    return 'Site(id: $id, name: $name, sidebar: $sidebar, description: $description, published: $published, updated: $updated, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, icon: $icon, banner: $banner, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, instanceHost: $instanceHost, defaultTheme: $defaultTheme)';
   }
 
   @override
@@ -1593,7 +1575,6 @@ class _$_Site extends _Site {
             const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
             const DeepCollectionEquality()
                 .equals(other.description, description) &&
-            const DeepCollectionEquality().equals(other.creatorId, creatorId) &&
             const DeepCollectionEquality().equals(other.published, published) &&
             const DeepCollectionEquality().equals(other.updated, updated) &&
             const DeepCollectionEquality()
@@ -1621,28 +1602,26 @@ class _$_Site extends _Site {
   }
 
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        const DeepCollectionEquality().hash(id),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(sidebar),
-        const DeepCollectionEquality().hash(description),
-        const DeepCollectionEquality().hash(creatorId),
-        const DeepCollectionEquality().hash(published),
-        const DeepCollectionEquality().hash(updated),
-        const DeepCollectionEquality().hash(enableDownvotes),
-        const DeepCollectionEquality().hash(openRegistration),
-        const DeepCollectionEquality().hash(enableNsfw),
-        const DeepCollectionEquality().hash(communityCreationAdminOnly),
-        const DeepCollectionEquality().hash(icon),
-        const DeepCollectionEquality().hash(banner),
-        const DeepCollectionEquality().hash(requireEmailVerification),
-        const DeepCollectionEquality().hash(requireApplication),
-        const DeepCollectionEquality().hash(applicationQuestion),
-        const DeepCollectionEquality().hash(privateInstance),
-        const DeepCollectionEquality().hash(instanceHost),
-        const DeepCollectionEquality().hash(defaultTheme)
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(sidebar),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(published),
+      const DeepCollectionEquality().hash(updated),
+      const DeepCollectionEquality().hash(enableDownvotes),
+      const DeepCollectionEquality().hash(openRegistration),
+      const DeepCollectionEquality().hash(enableNsfw),
+      const DeepCollectionEquality().hash(communityCreationAdminOnly),
+      const DeepCollectionEquality().hash(icon),
+      const DeepCollectionEquality().hash(banner),
+      const DeepCollectionEquality().hash(requireEmailVerification),
+      const DeepCollectionEquality().hash(requireApplication),
+      const DeepCollectionEquality().hash(applicationQuestion),
+      const DeepCollectionEquality().hash(privateInstance),
+      const DeepCollectionEquality().hash(instanceHost),
+      const DeepCollectionEquality().hash(defaultTheme));
 
   @JsonKey(ignore: true)
   @override
@@ -1661,7 +1640,6 @@ abstract class _Site extends Site {
       required String name,
       String? sidebar,
       String? description,
-      required int creatorId,
       required DateTime published,
       DateTime? updated,
       required bool enableDownvotes,
@@ -1688,8 +1666,6 @@ abstract class _Site extends Site {
   String? get sidebar;
   @override
   String? get description;
-  @override
-  int get creatorId;
   @override
   DateTime get published;
   @override

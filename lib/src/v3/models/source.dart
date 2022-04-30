@@ -81,7 +81,6 @@ class Site with _$Site {
     required String name,
     String? sidebar,
     String? description,
-    required int creatorId,
     required DateTime published,
     DateTime? updated,
     required bool enableDownvotes,

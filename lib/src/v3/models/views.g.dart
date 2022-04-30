@@ -81,7 +81,6 @@ Map<String, dynamic> _$$_LocalUserSettingsViewToJson(
 
 _$_SiteView _$$_SiteViewFromJson(Map<String, dynamic> json) => _$_SiteView(
       site: Site.fromJson(json['site'] as Map<String, dynamic>),
-      creator: PersonSafe.fromJson(json['creator'] as Map<String, dynamic>),
       counts: SiteAggregates.fromJson(json['counts'] as Map<String, dynamic>),
       instanceHost: json['instance_host'] as String,
     );
@@ -89,7 +88,6 @@ _$_SiteView _$$_SiteViewFromJson(Map<String, dynamic> json) => _$_SiteView(
 Map<String, dynamic> _$$_SiteViewToJson(_$_SiteView instance) =>
     <String, dynamic>{
       'site': instance.site.toJson(),
-      'creator': instance.creator.toJson(),
       'counts': instance.counts.toJson(),
       'instance_host': instance.instanceHost,
     };

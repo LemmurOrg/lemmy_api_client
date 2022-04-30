@@ -65,7 +65,6 @@ class SiteView with _$SiteView {
   @JsonSerializable(fieldRename: FieldRename.snake)
   const factory SiteView({
     required Site site,
-    required PersonSafe creator,
     required SiteAggregates counts,
     required String instanceHost,
   }) = _SiteView;
