@@ -120,6 +120,7 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       applicationQuestion: json['application_question'] as String?,
       privateInstance: json['private_instance'] as bool,
       instanceHost: json['instance_host'] as String,
+      defaultTheme: json['default_theme'] as String,
     );
 
 Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
@@ -141,6 +142,7 @@ Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'application_question': instance.applicationQuestion,
       'private_instance': instance.privateInstance,
       'instance_host': instance.instanceHost,
+      'default_theme': instance.defaultTheme,
     };
 
 _$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>

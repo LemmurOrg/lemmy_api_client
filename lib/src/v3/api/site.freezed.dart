@@ -641,7 +641,8 @@ class _$CreateSiteTearOff {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      required String auth}) {
+      required String auth,
+      String? defaultTheme}) {
     return _CreateSite(
       name: name,
       sidebar: sidebar,
@@ -657,6 +658,7 @@ class _$CreateSiteTearOff {
       applicationQuestion: applicationQuestion,
       privateInstance: privateInstance,
       auth: auth,
+      defaultTheme: defaultTheme,
     );
   }
 
@@ -684,6 +686,7 @@ mixin _$CreateSite {
   String? get applicationQuestion => throw _privateConstructorUsedError;
   bool? get privateInstance => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
+  String? get defaultTheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -710,7 +713,8 @@ abstract class $CreateSiteCopyWith<$Res> {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      String auth});
+      String auth,
+      String? defaultTheme});
 }
 
 /// @nodoc
@@ -737,6 +741,7 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
     Object? auth = freezed,
+    Object? defaultTheme = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -795,6 +800,10 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
+      defaultTheme: defaultTheme == freezed
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -819,7 +828,8 @@ abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      String auth});
+      String auth,
+      String? defaultTheme});
 }
 
 /// @nodoc
@@ -848,6 +858,7 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
     Object? auth = freezed,
+    Object? defaultTheme = freezed,
   }) {
     return _then(_CreateSite(
       name: name == freezed
@@ -906,6 +917,10 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
+      defaultTheme: defaultTheme == freezed
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -928,7 +943,8 @@ class _$_CreateSite extends _CreateSite {
       this.requireApplication,
       this.applicationQuestion,
       this.privateInstance,
-      required this.auth})
+      required this.auth,
+      this.defaultTheme})
       : super._();
 
   factory _$_CreateSite.fromJson(Map<String, dynamic> json) =>
@@ -962,10 +978,12 @@ class _$_CreateSite extends _CreateSite {
   final bool? privateInstance;
   @override
   final String auth;
+  @override
+  final String? defaultTheme;
 
   @override
   String toString() {
-    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth)';
+    return 'CreateSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
   }
 
   @override
@@ -995,7 +1013,9 @@ class _$_CreateSite extends _CreateSite {
                 .equals(other.applicationQuestion, applicationQuestion) &&
             const DeepCollectionEquality()
                 .equals(other.privateInstance, privateInstance) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            const DeepCollectionEquality().equals(other.auth, auth) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultTheme, defaultTheme));
   }
 
   @override
@@ -1014,7 +1034,8 @@ class _$_CreateSite extends _CreateSite {
       const DeepCollectionEquality().hash(requireApplication),
       const DeepCollectionEquality().hash(applicationQuestion),
       const DeepCollectionEquality().hash(privateInstance),
-      const DeepCollectionEquality().hash(auth));
+      const DeepCollectionEquality().hash(auth),
+      const DeepCollectionEquality().hash(defaultTheme));
 
   @JsonKey(ignore: true)
   @override
@@ -1042,7 +1063,8 @@ abstract class _CreateSite extends CreateSite {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      required String auth}) = _$_CreateSite;
+      required String auth,
+      String? defaultTheme}) = _$_CreateSite;
   const _CreateSite._() : super._();
 
   factory _CreateSite.fromJson(Map<String, dynamic> json) =
@@ -1077,6 +1099,8 @@ abstract class _CreateSite extends CreateSite {
   @override
   String get auth;
   @override
+  String? get defaultTheme;
+  @override
   @JsonKey(ignore: true)
   _$CreateSiteCopyWith<_CreateSite> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1104,7 +1128,8 @@ class _$EditSiteTearOff {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      required String auth}) {
+      required String auth,
+      String? defaultTheme}) {
     return _EditSite(
       name: name,
       sidebar: sidebar,
@@ -1120,6 +1145,7 @@ class _$EditSiteTearOff {
       applicationQuestion: applicationQuestion,
       privateInstance: privateInstance,
       auth: auth,
+      defaultTheme: defaultTheme,
     );
   }
 
@@ -1147,6 +1173,7 @@ mixin _$EditSite {
   String? get applicationQuestion => throw _privateConstructorUsedError;
   bool? get privateInstance => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
+  String? get defaultTheme => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1172,7 +1199,8 @@ abstract class $EditSiteCopyWith<$Res> {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      String auth});
+      String auth,
+      String? defaultTheme});
 }
 
 /// @nodoc
@@ -1199,6 +1227,7 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
     Object? auth = freezed,
+    Object? defaultTheme = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -1257,6 +1286,10 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
+      defaultTheme: defaultTheme == freezed
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1280,7 +1313,8 @@ abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      String auth});
+      String auth,
+      String? defaultTheme});
 }
 
 /// @nodoc
@@ -1308,6 +1342,7 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
     Object? applicationQuestion = freezed,
     Object? privateInstance = freezed,
     Object? auth = freezed,
+    Object? defaultTheme = freezed,
   }) {
     return _then(_EditSite(
       name: name == freezed
@@ -1366,6 +1401,10 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
               as String,
+      defaultTheme: defaultTheme == freezed
+          ? _value.defaultTheme
+          : defaultTheme // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1388,7 +1427,8 @@ class _$_EditSite extends _EditSite {
       this.requireApplication,
       this.applicationQuestion,
       this.privateInstance,
-      required this.auth})
+      required this.auth,
+      this.defaultTheme})
       : super._();
 
   factory _$_EditSite.fromJson(Map<String, dynamic> json) =>
@@ -1422,10 +1462,12 @@ class _$_EditSite extends _EditSite {
   final bool? privateInstance;
   @override
   final String auth;
+  @override
+  final String? defaultTheme;
 
   @override
   String toString() {
-    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth)';
+    return 'EditSite(name: $name, sidebar: $sidebar, description: $description, icon: $icon, banner: $banner, enableDownvotes: $enableDownvotes, openRegistration: $openRegistration, enableNsfw: $enableNsfw, communityCreationAdminOnly: $communityCreationAdminOnly, requireEmailVerification: $requireEmailVerification, requireApplication: $requireApplication, applicationQuestion: $applicationQuestion, privateInstance: $privateInstance, auth: $auth, defaultTheme: $defaultTheme)';
   }
 
   @override
@@ -1455,7 +1497,9 @@ class _$_EditSite extends _EditSite {
                 .equals(other.applicationQuestion, applicationQuestion) &&
             const DeepCollectionEquality()
                 .equals(other.privateInstance, privateInstance) &&
-            const DeepCollectionEquality().equals(other.auth, auth));
+            const DeepCollectionEquality().equals(other.auth, auth) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultTheme, defaultTheme));
   }
 
   @override
@@ -1474,7 +1518,8 @@ class _$_EditSite extends _EditSite {
       const DeepCollectionEquality().hash(requireApplication),
       const DeepCollectionEquality().hash(applicationQuestion),
       const DeepCollectionEquality().hash(privateInstance),
-      const DeepCollectionEquality().hash(auth));
+      const DeepCollectionEquality().hash(auth),
+      const DeepCollectionEquality().hash(defaultTheme));
 
   @JsonKey(ignore: true)
   @override
@@ -1502,7 +1547,8 @@ abstract class _EditSite extends EditSite {
       bool? requireApplication,
       String? applicationQuestion,
       bool? privateInstance,
-      required String auth}) = _$_EditSite;
+      required String auth,
+      String? defaultTheme}) = _$_EditSite;
   const _EditSite._() : super._();
 
   factory _EditSite.fromJson(Map<String, dynamic> json) = _$_EditSite.fromJson;
@@ -1535,6 +1581,8 @@ abstract class _EditSite extends EditSite {
   bool? get privateInstance;
   @override
   String get auth;
+  @override
+  String? get defaultTheme;
   @override
   @JsonKey(ignore: true)
   _$EditSiteCopyWith<_EditSite> get copyWith =>

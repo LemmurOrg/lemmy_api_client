@@ -81,6 +81,7 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
     String? applicationQuestion,
     bool? privateInstance,
     required String auth,
+    String? defaultTheme,
   }) = _CreateSite;
 
   const CreateSite._();
@@ -115,6 +116,7 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
     String? applicationQuestion,
     bool? privateInstance,
     required String auth,
+    String? defaultTheme,
   }) = _EditSite;
 
   const EditSite._();
