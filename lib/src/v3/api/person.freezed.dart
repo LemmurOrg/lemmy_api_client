@@ -12,30 +12,11 @@ part of 'person.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Login _$LoginFromJson(Map<String, dynamic> json) {
   return _Login.fromJson(json);
 }
-
-/// @nodoc
-class _$LoginTearOff {
-  const _$LoginTearOff();
-
-  _Login call({required String usernameOrEmail, required String password}) {
-    return _Login(
-      usernameOrEmail: usernameOrEmail,
-      password: password,
-    );
-  }
-
-  Login fromJson(Map<String, Object?> json) {
-    return Login.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Login = _$LoginTearOff();
 
 /// @nodoc
 mixin _$Login {
@@ -145,6 +126,7 @@ class _$_Login extends _Login {
             const DeepCollectionEquality().equals(other.password, password));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -164,15 +146,16 @@ class _$_Login extends _Login {
 
 abstract class _Login extends Login {
   const factory _Login(
-      {required String usernameOrEmail, required String password}) = _$_Login;
+      {required final String usernameOrEmail,
+      required final String password}) = _$_Login;
   const _Login._() : super._();
 
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
 
   @override
-  String get usernameOrEmail;
+  String get usernameOrEmail => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LoginCopyWith<_Login> get copyWith => throw _privateConstructorUsedError;
@@ -181,41 +164,6 @@ abstract class _Login extends Login {
 Register _$RegisterFromJson(Map<String, dynamic> json) {
   return _Register.fromJson(json);
 }
-
-/// @nodoc
-class _$RegisterTearOff {
-  const _$RegisterTearOff();
-
-  _Register call(
-      {required String username,
-      String? email,
-      required String password,
-      required String passwordVerify,
-      required bool showNsfw,
-      String? captchaUuid,
-      String? captchaAnswer,
-      String? honeypot,
-      String? answer}) {
-    return _Register(
-      username: username,
-      email: email,
-      password: password,
-      passwordVerify: passwordVerify,
-      showNsfw: showNsfw,
-      captchaUuid: captchaUuid,
-      captchaAnswer: captchaAnswer,
-      honeypot: honeypot,
-      answer: answer,
-    );
-  }
-
-  Register fromJson(Map<String, Object?> json) {
-    return Register.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Register = _$RegisterTearOff();
 
 /// @nodoc
 mixin _$Register {
@@ -453,6 +401,7 @@ class _$_Register extends _Register {
             const DeepCollectionEquality().equals(other.answer, answer));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -479,37 +428,37 @@ class _$_Register extends _Register {
 
 abstract class _Register extends Register {
   const factory _Register(
-      {required String username,
-      String? email,
-      required String password,
-      required String passwordVerify,
-      required bool showNsfw,
-      String? captchaUuid,
-      String? captchaAnswer,
-      String? honeypot,
-      String? answer}) = _$_Register;
+      {required final String username,
+      final String? email,
+      required final String password,
+      required final String passwordVerify,
+      required final bool showNsfw,
+      final String? captchaUuid,
+      final String? captchaAnswer,
+      final String? honeypot,
+      final String? answer}) = _$_Register;
   const _Register._() : super._();
 
   factory _Register.fromJson(Map<String, dynamic> json) = _$_Register.fromJson;
 
   @override
-  String get username;
+  String get username => throw _privateConstructorUsedError;
   @override
-  String? get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  String get passwordVerify;
+  String get passwordVerify => throw _privateConstructorUsedError;
   @override
-  bool get showNsfw;
+  bool get showNsfw => throw _privateConstructorUsedError;
   @override
-  String? get captchaUuid;
+  String? get captchaUuid => throw _privateConstructorUsedError;
   @override
-  String? get captchaAnswer;
+  String? get captchaAnswer => throw _privateConstructorUsedError;
   @override
-  String? get honeypot;
+  String? get honeypot => throw _privateConstructorUsedError;
   @override
-  String? get answer;
+  String? get answer => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RegisterCopyWith<_Register> get copyWith =>
@@ -519,22 +468,6 @@ abstract class _Register extends Register {
 GetCaptcha _$GetCaptchaFromJson(Map<String, dynamic> json) {
   return _GetCaptcha.fromJson(json);
 }
-
-/// @nodoc
-class _$GetCaptchaTearOff {
-  const _$GetCaptchaTearOff();
-
-  _GetCaptcha call() {
-    return const _GetCaptcha();
-  }
-
-  GetCaptcha fromJson(Map<String, Object?> json) {
-    return GetCaptcha.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetCaptcha = _$GetCaptchaTearOff();
 
 /// @nodoc
 mixin _$GetCaptcha {
@@ -595,6 +528,7 @@ class _$_GetCaptcha extends _GetCaptcha {
         (other.runtimeType == runtimeType && other is _GetCaptcha);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
@@ -615,63 +549,6 @@ abstract class _GetCaptcha extends GetCaptcha {
 SaveUserSettings _$SaveUserSettingsFromJson(Map<String, dynamic> json) {
   return _SaveUserSettings.fromJson(json);
 }
-
-/// @nodoc
-class _$SaveUserSettingsTearOff {
-  const _$SaveUserSettingsTearOff();
-
-  _SaveUserSettings call(
-      {bool? showNsfw,
-      String? theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType? defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType? defaultListingType,
-      String? lang,
-      String? avatar,
-      String? banner,
-      String? displayName,
-      String? email,
-      String? bio,
-      String? matrixUserId,
-      bool? showAvatars,
-      bool? showScores,
-      bool? sendNotificationsToEmail,
-      bool? showReadPosts,
-      bool? botAccount,
-      bool? showBotAccounts,
-      bool? showNewPostNotifs,
-      required String auth}) {
-    return _SaveUserSettings(
-      showNsfw: showNsfw,
-      theme: theme,
-      defaultSortType: defaultSortType,
-      defaultListingType: defaultListingType,
-      lang: lang,
-      avatar: avatar,
-      banner: banner,
-      displayName: displayName,
-      email: email,
-      bio: bio,
-      matrixUserId: matrixUserId,
-      showAvatars: showAvatars,
-      showScores: showScores,
-      sendNotificationsToEmail: sendNotificationsToEmail,
-      showReadPosts: showReadPosts,
-      botAccount: botAccount,
-      showBotAccounts: showBotAccounts,
-      showNewPostNotifs: showNewPostNotifs,
-      auth: auth,
-    );
-  }
-
-  SaveUserSettings fromJson(Map<String, Object?> json) {
-    return SaveUserSettings.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SaveUserSettings = _$SaveUserSettingsTearOff();
 
 /// @nodoc
 mixin _$SaveUserSettings {
@@ -1103,6 +980,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1140,72 +1018,72 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 
 abstract class _SaveUserSettings extends SaveUserSettings {
   const factory _SaveUserSettings(
-      {bool? showNsfw,
-      String? theme,
+      {final bool? showNsfw,
+      final String? theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          SortType? defaultSortType,
+          final SortType? defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          PostListingType? defaultListingType,
-      String? lang,
-      String? avatar,
-      String? banner,
-      String? displayName,
-      String? email,
-      String? bio,
-      String? matrixUserId,
-      bool? showAvatars,
-      bool? showScores,
-      bool? sendNotificationsToEmail,
-      bool? showReadPosts,
-      bool? botAccount,
-      bool? showBotAccounts,
-      bool? showNewPostNotifs,
-      required String auth}) = _$_SaveUserSettings;
+          final PostListingType? defaultListingType,
+      final String? lang,
+      final String? avatar,
+      final String? banner,
+      final String? displayName,
+      final String? email,
+      final String? bio,
+      final String? matrixUserId,
+      final bool? showAvatars,
+      final bool? showScores,
+      final bool? sendNotificationsToEmail,
+      final bool? showReadPosts,
+      final bool? botAccount,
+      final bool? showBotAccounts,
+      final bool? showNewPostNotifs,
+      required final String auth}) = _$_SaveUserSettings;
   const _SaveUserSettings._() : super._();
 
   factory _SaveUserSettings.fromJson(Map<String, dynamic> json) =
       _$_SaveUserSettings.fromJson;
 
   @override
-  bool? get showNsfw;
+  bool? get showNsfw => throw _privateConstructorUsedError;
   @override
-  String? get theme;
+  String? get theme => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType? get defaultSortType;
+  SortType? get defaultSortType => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType? get defaultListingType;
+  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
   @override
-  String? get lang;
+  String? get lang => throw _privateConstructorUsedError;
   @override
-  String? get avatar;
+  String? get avatar => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  String? get displayName;
+  String? get displayName => throw _privateConstructorUsedError;
   @override
-  String? get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  String? get bio;
+  String? get bio => throw _privateConstructorUsedError;
   @override
-  String? get matrixUserId;
+  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  bool? get showAvatars;
+  bool? get showAvatars => throw _privateConstructorUsedError;
   @override
-  bool? get showScores;
+  bool? get showScores => throw _privateConstructorUsedError;
   @override
-  bool? get sendNotificationsToEmail;
+  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override
-  bool? get showReadPosts;
+  bool? get showReadPosts => throw _privateConstructorUsedError;
   @override
-  bool? get botAccount;
+  bool? get botAccount => throw _privateConstructorUsedError;
   @override
-  bool? get showBotAccounts;
+  bool? get showBotAccounts => throw _privateConstructorUsedError;
   @override
-  bool? get showNewPostNotifs;
+  bool? get showNewPostNotifs => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
@@ -1215,31 +1093,6 @@ abstract class _SaveUserSettings extends SaveUserSettings {
 ChangePassword _$ChangePasswordFromJson(Map<String, dynamic> json) {
   return _ChangePassword.fromJson(json);
 }
-
-/// @nodoc
-class _$ChangePasswordTearOff {
-  const _$ChangePasswordTearOff();
-
-  _ChangePassword call(
-      {required String newPassword,
-      required String newPasswordVerify,
-      required String oldPassword,
-      required String auth}) {
-    return _ChangePassword(
-      newPassword: newPassword,
-      newPasswordVerify: newPasswordVerify,
-      oldPassword: oldPassword,
-      auth: auth,
-    );
-  }
-
-  ChangePassword fromJson(Map<String, Object?> json) {
-    return ChangePassword.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ChangePassword = _$ChangePasswordTearOff();
 
 /// @nodoc
 mixin _$ChangePassword {
@@ -1398,6 +1251,7 @@ class _$_ChangePassword extends _ChangePassword {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1419,23 +1273,23 @@ class _$_ChangePassword extends _ChangePassword {
 
 abstract class _ChangePassword extends ChangePassword {
   const factory _ChangePassword(
-      {required String newPassword,
-      required String newPasswordVerify,
-      required String oldPassword,
-      required String auth}) = _$_ChangePassword;
+      {required final String newPassword,
+      required final String newPasswordVerify,
+      required final String oldPassword,
+      required final String auth}) = _$_ChangePassword;
   const _ChangePassword._() : super._();
 
   factory _ChangePassword.fromJson(Map<String, dynamic> json) =
       _$_ChangePassword.fromJson;
 
   @override
-  String get newPassword;
+  String get newPassword => throw _privateConstructorUsedError;
   @override
-  String get newPasswordVerify;
+  String get newPasswordVerify => throw _privateConstructorUsedError;
   @override
-  String get oldPassword;
+  String get oldPassword => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
@@ -1445,39 +1299,6 @@ abstract class _ChangePassword extends ChangePassword {
 GetPersonDetails _$GetPersonDetailsFromJson(Map<String, dynamic> json) {
   return _GetPersonDetails.fromJson(json);
 }
-
-/// @nodoc
-class _$GetPersonDetailsTearOff {
-  const _$GetPersonDetailsTearOff();
-
-  _GetPersonDetails call(
-      {int? personId,
-      String? username,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? communityId,
-      bool? savedOnly,
-      String? auth}) {
-    return _GetPersonDetails(
-      personId: personId,
-      username: username,
-      sort: sort,
-      page: page,
-      limit: limit,
-      communityId: communityId,
-      savedOnly: savedOnly,
-      auth: auth,
-    );
-  }
-
-  GetPersonDetails fromJson(Map<String, Object?> json) {
-    return GetPersonDetails.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetPersonDetails = _$GetPersonDetailsTearOff();
 
 /// @nodoc
 mixin _$GetPersonDetails {
@@ -1702,6 +1523,7 @@ class _$_GetPersonDetails extends _GetPersonDetails {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1727,35 +1549,35 @@ class _$_GetPersonDetails extends _GetPersonDetails {
 
 abstract class _GetPersonDetails extends GetPersonDetails {
   const factory _GetPersonDetails(
-      {int? personId,
-      String? username,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? communityId,
-      bool? savedOnly,
-      String? auth}) = _$_GetPersonDetails;
+      {final int? personId,
+      final String? username,
+      final SortType? sort,
+      final int? page,
+      final int? limit,
+      final int? communityId,
+      final bool? savedOnly,
+      final String? auth}) = _$_GetPersonDetails;
   const _GetPersonDetails._() : super._();
 
   factory _GetPersonDetails.fromJson(Map<String, dynamic> json) =
       _$_GetPersonDetails.fromJson;
 
   @override
-  int? get personId;
+  int? get personId => throw _privateConstructorUsedError;
   @override
-  String? get username;
+  String? get username => throw _privateConstructorUsedError;
   @override
-  SortType? get sort;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  bool? get savedOnly;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetPersonDetailsCopyWith<_GetPersonDetails> get copyWith =>
@@ -1765,24 +1587,6 @@ abstract class _GetPersonDetails extends GetPersonDetails {
 MarkAllAsRead _$MarkAllAsReadFromJson(Map<String, dynamic> json) {
   return _MarkAllAsRead.fromJson(json);
 }
-
-/// @nodoc
-class _$MarkAllAsReadTearOff {
-  const _$MarkAllAsReadTearOff();
-
-  _MarkAllAsRead call({required String auth}) {
-    return _MarkAllAsRead(
-      auth: auth,
-    );
-  }
-
-  MarkAllAsRead fromJson(Map<String, Object?> json) {
-    return MarkAllAsRead.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MarkAllAsRead = _$MarkAllAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkAllAsRead {
@@ -1883,6 +1687,7 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -1899,14 +1704,14 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
 }
 
 abstract class _MarkAllAsRead extends MarkAllAsRead {
-  const factory _MarkAllAsRead({required String auth}) = _$_MarkAllAsRead;
+  const factory _MarkAllAsRead({required final String auth}) = _$_MarkAllAsRead;
   const _MarkAllAsRead._() : super._();
 
   factory _MarkAllAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkAllAsRead.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MarkAllAsReadCopyWith<_MarkAllAsRead> get copyWith =>
@@ -1916,27 +1721,6 @@ abstract class _MarkAllAsRead extends MarkAllAsRead {
 AddAdmin _$AddAdminFromJson(Map<String, dynamic> json) {
   return _AddAdmin.fromJson(json);
 }
-
-/// @nodoc
-class _$AddAdminTearOff {
-  const _$AddAdminTearOff();
-
-  _AddAdmin call(
-      {required int personId, required bool added, required String auth}) {
-    return _AddAdmin(
-      personId: personId,
-      added: added,
-      auth: auth,
-    );
-  }
-
-  AddAdmin fromJson(Map<String, Object?> json) {
-    return AddAdmin.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AddAdmin = _$AddAdminTearOff();
 
 /// @nodoc
 mixin _$AddAdmin {
@@ -2061,6 +1845,7 @@ class _$_AddAdmin extends _AddAdmin {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2081,19 +1866,19 @@ class _$_AddAdmin extends _AddAdmin {
 
 abstract class _AddAdmin extends AddAdmin {
   const factory _AddAdmin(
-      {required int personId,
-      required bool added,
-      required String auth}) = _$_AddAdmin;
+      {required final int personId,
+      required final bool added,
+      required final String auth}) = _$_AddAdmin;
   const _AddAdmin._() : super._();
 
   factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$_AddAdmin.fromJson;
 
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  bool get added;
+  bool get added => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AddAdminCopyWith<_AddAdmin> get copyWith =>
@@ -2103,35 +1888,6 @@ abstract class _AddAdmin extends AddAdmin {
 BanPerson _$BanPersonFromJson(Map<String, dynamic> json) {
   return _BanPerson.fromJson(json);
 }
-
-/// @nodoc
-class _$BanPersonTearOff {
-  const _$BanPersonTearOff();
-
-  _BanPerson call(
-      {required int personId,
-      required bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      required String auth}) {
-    return _BanPerson(
-      personId: personId,
-      ban: ban,
-      removeData: removeData,
-      reason: reason,
-      expires: expires,
-      auth: auth,
-    );
-  }
-
-  BanPerson fromJson(Map<String, Object?> json) {
-    return BanPerson.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BanPerson = _$BanPersonTearOff();
 
 /// @nodoc
 mixin _$BanPerson {
@@ -2317,6 +2073,7 @@ class _$_BanPerson extends _BanPerson {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2340,29 +2097,29 @@ class _$_BanPerson extends _BanPerson {
 
 abstract class _BanPerson extends BanPerson {
   const factory _BanPerson(
-      {required int personId,
-      required bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      required String auth}) = _$_BanPerson;
+      {required final int personId,
+      required final bool ban,
+      final bool? removeData,
+      final String? reason,
+      final int? expires,
+      required final String auth}) = _$_BanPerson;
   const _BanPerson._() : super._();
 
   factory _BanPerson.fromJson(Map<String, dynamic> json) =
       _$_BanPerson.fromJson;
 
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  bool get ban;
+  bool get ban => throw _privateConstructorUsedError;
   @override
-  bool? get removeData;
+  bool? get removeData => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  int? get expires;
+  int? get expires => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BanPersonCopyWith<_BanPerson> get copyWith =>
@@ -2372,33 +2129,6 @@ abstract class _BanPerson extends BanPerson {
 GetReplies _$GetRepliesFromJson(Map<String, dynamic> json) {
   return _GetReplies.fromJson(json);
 }
-
-/// @nodoc
-class _$GetRepliesTearOff {
-  const _$GetRepliesTearOff();
-
-  _GetReplies call(
-      {SortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      required String auth}) {
-    return _GetReplies(
-      sort: sort,
-      page: page,
-      limit: limit,
-      unreadOnly: unreadOnly,
-      auth: auth,
-    );
-  }
-
-  GetReplies fromJson(Map<String, Object?> json) {
-    return GetReplies.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetReplies = _$GetRepliesTearOff();
 
 /// @nodoc
 mixin _$GetReplies {
@@ -2557,6 +2287,7 @@ class _$_GetReplies extends _GetReplies {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2579,26 +2310,26 @@ class _$_GetReplies extends _GetReplies {
 
 abstract class _GetReplies extends GetReplies {
   const factory _GetReplies(
-      {SortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      required String auth}) = _$_GetReplies;
+      {final SortType? sort,
+      final int? page,
+      final int? limit,
+      final bool? unreadOnly,
+      required final String auth}) = _$_GetReplies;
   const _GetReplies._() : super._();
 
   factory _GetReplies.fromJson(Map<String, dynamic> json) =
       _$_GetReplies.fromJson;
 
   @override
-  SortType? get sort;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  bool? get unreadOnly;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetRepliesCopyWith<_GetReplies> get copyWith =>
@@ -2608,33 +2339,6 @@ abstract class _GetReplies extends GetReplies {
 GetPersonMentions _$GetPersonMentionsFromJson(Map<String, dynamic> json) {
   return _GetPersonMentions.fromJson(json);
 }
-
-/// @nodoc
-class _$GetPersonMentionsTearOff {
-  const _$GetPersonMentionsTearOff();
-
-  _GetPersonMentions call(
-      {SortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      required String auth}) {
-    return _GetPersonMentions(
-      sort: sort,
-      page: page,
-      limit: limit,
-      unreadOnly: unreadOnly,
-      auth: auth,
-    );
-  }
-
-  GetPersonMentions fromJson(Map<String, Object?> json) {
-    return GetPersonMentions.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetPersonMentions = _$GetPersonMentionsTearOff();
 
 /// @nodoc
 mixin _$GetPersonMentions {
@@ -2796,6 +2500,7 @@ class _$_GetPersonMentions extends _GetPersonMentions {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2818,26 +2523,26 @@ class _$_GetPersonMentions extends _GetPersonMentions {
 
 abstract class _GetPersonMentions extends GetPersonMentions {
   const factory _GetPersonMentions(
-      {SortType? sort,
-      int? page,
-      int? limit,
-      bool? unreadOnly,
-      required String auth}) = _$_GetPersonMentions;
+      {final SortType? sort,
+      final int? page,
+      final int? limit,
+      final bool? unreadOnly,
+      required final String auth}) = _$_GetPersonMentions;
   const _GetPersonMentions._() : super._();
 
   factory _GetPersonMentions.fromJson(Map<String, dynamic> json) =
       _$_GetPersonMentions.fromJson;
 
   @override
-  SortType? get sort;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  bool? get unreadOnly;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetPersonMentionsCopyWith<_GetPersonMentions> get copyWith =>
@@ -2848,29 +2553,6 @@ MarkPersonMentionAsRead _$MarkPersonMentionAsReadFromJson(
     Map<String, dynamic> json) {
   return _MarkPersonMentionAsRead.fromJson(json);
 }
-
-/// @nodoc
-class _$MarkPersonMentionAsReadTearOff {
-  const _$MarkPersonMentionAsReadTearOff();
-
-  _MarkPersonMentionAsRead call(
-      {required int personMentionId,
-      required bool read,
-      required String auth}) {
-    return _MarkPersonMentionAsRead(
-      personMentionId: personMentionId,
-      read: read,
-      auth: auth,
-    );
-  }
-
-  MarkPersonMentionAsRead fromJson(Map<String, Object?> json) {
-    return MarkPersonMentionAsRead.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MarkPersonMentionAsRead = _$MarkPersonMentionAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkPersonMentionAsRead {
@@ -3003,6 +2685,7 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3024,20 +2707,20 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
 
 abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
   const factory _MarkPersonMentionAsRead(
-      {required int personMentionId,
-      required bool read,
-      required String auth}) = _$_MarkPersonMentionAsRead;
+      {required final int personMentionId,
+      required final bool read,
+      required final String auth}) = _$_MarkPersonMentionAsRead;
   const _MarkPersonMentionAsRead._() : super._();
 
   factory _MarkPersonMentionAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkPersonMentionAsRead.fromJson;
 
   @override
-  int get personMentionId;
+  int get personMentionId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MarkPersonMentionAsReadCopyWith<_MarkPersonMentionAsRead> get copyWith =>
@@ -3047,25 +2730,6 @@ abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
 DeleteAccount _$DeleteAccountFromJson(Map<String, dynamic> json) {
   return _DeleteAccount.fromJson(json);
 }
-
-/// @nodoc
-class _$DeleteAccountTearOff {
-  const _$DeleteAccountTearOff();
-
-  _DeleteAccount call({required String password, required String auth}) {
-    return _DeleteAccount(
-      password: password,
-      auth: auth,
-    );
-  }
-
-  DeleteAccount fromJson(Map<String, Object?> json) {
-    return DeleteAccount.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeleteAccount = _$DeleteAccountTearOff();
 
 /// @nodoc
 mixin _$DeleteAccount {
@@ -3181,6 +2845,7 @@ class _$_DeleteAccount extends _DeleteAccount {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3200,16 +2865,17 @@ class _$_DeleteAccount extends _DeleteAccount {
 
 abstract class _DeleteAccount extends DeleteAccount {
   const factory _DeleteAccount(
-      {required String password, required String auth}) = _$_DeleteAccount;
+      {required final String password,
+      required final String auth}) = _$_DeleteAccount;
   const _DeleteAccount._() : super._();
 
   factory _DeleteAccount.fromJson(Map<String, dynamic> json) =
       _$_DeleteAccount.fromJson;
 
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeleteAccountCopyWith<_DeleteAccount> get copyWith =>
@@ -3219,24 +2885,6 @@ abstract class _DeleteAccount extends DeleteAccount {
 PasswordReset _$PasswordResetFromJson(Map<String, dynamic> json) {
   return _PasswordReset.fromJson(json);
 }
-
-/// @nodoc
-class _$PasswordResetTearOff {
-  const _$PasswordResetTearOff();
-
-  _PasswordReset call({required String email}) {
-    return _PasswordReset(
-      email: email,
-    );
-  }
-
-  PasswordReset fromJson(Map<String, Object?> json) {
-    return PasswordReset.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PasswordReset = _$PasswordResetTearOff();
 
 /// @nodoc
 mixin _$PasswordReset {
@@ -3337,6 +2985,7 @@ class _$_PasswordReset extends _PasswordReset {
             const DeepCollectionEquality().equals(other.email, email));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(email));
@@ -3353,14 +3002,15 @@ class _$_PasswordReset extends _PasswordReset {
 }
 
 abstract class _PasswordReset extends PasswordReset {
-  const factory _PasswordReset({required String email}) = _$_PasswordReset;
+  const factory _PasswordReset({required final String email}) =
+      _$_PasswordReset;
   const _PasswordReset._() : super._();
 
   factory _PasswordReset.fromJson(Map<String, dynamic> json) =
       _$_PasswordReset.fromJson;
 
   @override
-  String get email;
+  String get email => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PasswordResetCopyWith<_PasswordReset> get copyWith =>
@@ -3370,29 +3020,6 @@ abstract class _PasswordReset extends PasswordReset {
 PasswordChange _$PasswordChangeFromJson(Map<String, dynamic> json) {
   return _PasswordChange.fromJson(json);
 }
-
-/// @nodoc
-class _$PasswordChangeTearOff {
-  const _$PasswordChangeTearOff();
-
-  _PasswordChange call(
-      {required String token,
-      required String password,
-      required String passwordVerify}) {
-    return _PasswordChange(
-      token: token,
-      password: password,
-      passwordVerify: passwordVerify,
-    );
-  }
-
-  PasswordChange fromJson(Map<String, Object?> json) {
-    return PasswordChange.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PasswordChange = _$PasswordChangeTearOff();
 
 /// @nodoc
 mixin _$PasswordChange {
@@ -3526,6 +3153,7 @@ class _$_PasswordChange extends _PasswordChange {
                 .equals(other.passwordVerify, passwordVerify));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3546,20 +3174,20 @@ class _$_PasswordChange extends _PasswordChange {
 
 abstract class _PasswordChange extends PasswordChange {
   const factory _PasswordChange(
-      {required String token,
-      required String password,
-      required String passwordVerify}) = _$_PasswordChange;
+      {required final String token,
+      required final String password,
+      required final String passwordVerify}) = _$_PasswordChange;
   const _PasswordChange._() : super._();
 
   factory _PasswordChange.fromJson(Map<String, dynamic> json) =
       _$_PasswordChange.fromJson;
 
   @override
-  String get token;
+  String get token => throw _privateConstructorUsedError;
   @override
-  String get password;
+  String get password => throw _privateConstructorUsedError;
   @override
-  String get passwordVerify;
+  String get passwordVerify => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PasswordChangeCopyWith<_PasswordChange> get copyWith =>
@@ -3569,29 +3197,6 @@ abstract class _PasswordChange extends PasswordChange {
 CreatePrivateMessage _$CreatePrivateMessageFromJson(Map<String, dynamic> json) {
   return _CreatePrivateMessage.fromJson(json);
 }
-
-/// @nodoc
-class _$CreatePrivateMessageTearOff {
-  const _$CreatePrivateMessageTearOff();
-
-  _CreatePrivateMessage call(
-      {required String content,
-      required int recipientId,
-      required String auth}) {
-    return _CreatePrivateMessage(
-      content: content,
-      recipientId: recipientId,
-      auth: auth,
-    );
-  }
-
-  CreatePrivateMessage fromJson(Map<String, Object?> json) {
-    return CreatePrivateMessage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreatePrivateMessage = _$CreatePrivateMessageTearOff();
 
 /// @nodoc
 mixin _$CreatePrivateMessage {
@@ -3723,6 +3328,7 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3744,20 +3350,20 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
 
 abstract class _CreatePrivateMessage extends CreatePrivateMessage {
   const factory _CreatePrivateMessage(
-      {required String content,
-      required int recipientId,
-      required String auth}) = _$_CreatePrivateMessage;
+      {required final String content,
+      required final int recipientId,
+      required final String auth}) = _$_CreatePrivateMessage;
   const _CreatePrivateMessage._() : super._();
 
   factory _CreatePrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_CreatePrivateMessage.fromJson;
 
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  int get recipientId;
+  int get recipientId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith =>
@@ -3767,29 +3373,6 @@ abstract class _CreatePrivateMessage extends CreatePrivateMessage {
 EditPrivateMessage _$EditPrivateMessageFromJson(Map<String, dynamic> json) {
   return _EditPrivateMessage.fromJson(json);
 }
-
-/// @nodoc
-class _$EditPrivateMessageTearOff {
-  const _$EditPrivateMessageTearOff();
-
-  _EditPrivateMessage call(
-      {required int privateMessageId,
-      required String content,
-      required String auth}) {
-    return _EditPrivateMessage(
-      privateMessageId: privateMessageId,
-      content: content,
-      auth: auth,
-    );
-  }
-
-  EditPrivateMessage fromJson(Map<String, Object?> json) {
-    return EditPrivateMessage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $EditPrivateMessage = _$EditPrivateMessageTearOff();
 
 /// @nodoc
 mixin _$EditPrivateMessage {
@@ -3923,6 +3506,7 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3943,20 +3527,20 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
 
 abstract class _EditPrivateMessage extends EditPrivateMessage {
   const factory _EditPrivateMessage(
-      {required int privateMessageId,
-      required String content,
-      required String auth}) = _$_EditPrivateMessage;
+      {required final int privateMessageId,
+      required final String content,
+      required final String auth}) = _$_EditPrivateMessage;
   const _EditPrivateMessage._() : super._();
 
   factory _EditPrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_EditPrivateMessage.fromJson;
 
   @override
-  int get privateMessageId;
+  int get privateMessageId => throw _privateConstructorUsedError;
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith =>
@@ -3966,29 +3550,6 @@ abstract class _EditPrivateMessage extends EditPrivateMessage {
 DeletePrivateMessage _$DeletePrivateMessageFromJson(Map<String, dynamic> json) {
   return _DeletePrivateMessage.fromJson(json);
 }
-
-/// @nodoc
-class _$DeletePrivateMessageTearOff {
-  const _$DeletePrivateMessageTearOff();
-
-  _DeletePrivateMessage call(
-      {required int privateMessageId,
-      required bool deleted,
-      required String auth}) {
-    return _DeletePrivateMessage(
-      privateMessageId: privateMessageId,
-      deleted: deleted,
-      auth: auth,
-    );
-  }
-
-  DeletePrivateMessage fromJson(Map<String, Object?> json) {
-    return DeletePrivateMessage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeletePrivateMessage = _$DeletePrivateMessageTearOff();
 
 /// @nodoc
 mixin _$DeletePrivateMessage {
@@ -4122,6 +3683,7 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4143,20 +3705,20 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
 
 abstract class _DeletePrivateMessage extends DeletePrivateMessage {
   const factory _DeletePrivateMessage(
-      {required int privateMessageId,
-      required bool deleted,
-      required String auth}) = _$_DeletePrivateMessage;
+      {required final int privateMessageId,
+      required final bool deleted,
+      required final String auth}) = _$_DeletePrivateMessage;
   const _DeletePrivateMessage._() : super._();
 
   factory _DeletePrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_DeletePrivateMessage.fromJson;
 
   @override
-  int get privateMessageId;
+  int get privateMessageId => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith =>
@@ -4167,29 +3729,6 @@ MarkPrivateMessageAsRead _$MarkPrivateMessageAsReadFromJson(
     Map<String, dynamic> json) {
   return _MarkPrivateMessageAsRead.fromJson(json);
 }
-
-/// @nodoc
-class _$MarkPrivateMessageAsReadTearOff {
-  const _$MarkPrivateMessageAsReadTearOff();
-
-  _MarkPrivateMessageAsRead call(
-      {required int privateMessageId,
-      required bool read,
-      required String auth}) {
-    return _MarkPrivateMessageAsRead(
-      privateMessageId: privateMessageId,
-      read: read,
-      auth: auth,
-    );
-  }
-
-  MarkPrivateMessageAsRead fromJson(Map<String, Object?> json) {
-    return MarkPrivateMessageAsRead.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $MarkPrivateMessageAsRead = _$MarkPrivateMessageAsReadTearOff();
 
 /// @nodoc
 mixin _$MarkPrivateMessageAsRead {
@@ -4322,6 +3861,7 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4343,20 +3883,20 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
 
 abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
   const factory _MarkPrivateMessageAsRead(
-      {required int privateMessageId,
-      required bool read,
-      required String auth}) = _$_MarkPrivateMessageAsRead;
+      {required final int privateMessageId,
+      required final bool read,
+      required final String auth}) = _$_MarkPrivateMessageAsRead;
   const _MarkPrivateMessageAsRead._() : super._();
 
   factory _MarkPrivateMessageAsRead.fromJson(Map<String, dynamic> json) =
       _$_MarkPrivateMessageAsRead.fromJson;
 
   @override
-  int get privateMessageId;
+  int get privateMessageId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith =>
@@ -4366,28 +3906,6 @@ abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
 GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
   return _GetPrivateMessages.fromJson(json);
 }
-
-/// @nodoc
-class _$GetPrivateMessagesTearOff {
-  const _$GetPrivateMessagesTearOff();
-
-  _GetPrivateMessages call(
-      {bool? unreadOnly, int? page, int? limit, required String auth}) {
-    return _GetPrivateMessages(
-      unreadOnly: unreadOnly,
-      page: page,
-      limit: limit,
-      auth: auth,
-    );
-  }
-
-  GetPrivateMessages fromJson(Map<String, Object?> json) {
-    return GetPrivateMessages.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetPrivateMessages = _$GetPrivateMessagesTearOff();
 
 /// @nodoc
 mixin _$GetPrivateMessages {
@@ -4533,6 +4051,7 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4554,23 +4073,23 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 
 abstract class _GetPrivateMessages extends GetPrivateMessages {
   const factory _GetPrivateMessages(
-      {bool? unreadOnly,
-      int? page,
-      int? limit,
-      required String auth}) = _$_GetPrivateMessages;
+      {final bool? unreadOnly,
+      final int? page,
+      final int? limit,
+      required final String auth}) = _$_GetPrivateMessages;
   const _GetPrivateMessages._() : super._();
 
   factory _GetPrivateMessages.fromJson(Map<String, dynamic> json) =
       _$_GetPrivateMessages.fromJson;
 
   @override
-  bool? get unreadOnly;
+  bool? get unreadOnly => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith =>
@@ -4580,27 +4099,6 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
 BlockPerson _$BlockPersonFromJson(Map<String, dynamic> json) {
   return _BlockPerson.fromJson(json);
 }
-
-/// @nodoc
-class _$BlockPersonTearOff {
-  const _$BlockPersonTearOff();
-
-  _BlockPerson call(
-      {required int personId, required bool block, required String auth}) {
-    return _BlockPerson(
-      personId: personId,
-      block: block,
-      auth: auth,
-    );
-  }
-
-  BlockPerson fromJson(Map<String, Object?> json) {
-    return BlockPerson.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BlockPerson = _$BlockPersonTearOff();
 
 /// @nodoc
 mixin _$BlockPerson {
@@ -4729,6 +4227,7 @@ class _$_BlockPerson extends _BlockPerson {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4749,20 +4248,20 @@ class _$_BlockPerson extends _BlockPerson {
 
 abstract class _BlockPerson extends BlockPerson {
   const factory _BlockPerson(
-      {required int personId,
-      required bool block,
-      required String auth}) = _$_BlockPerson;
+      {required final int personId,
+      required final bool block,
+      required final String auth}) = _$_BlockPerson;
   const _BlockPerson._() : super._();
 
   factory _BlockPerson.fromJson(Map<String, dynamic> json) =
       _$_BlockPerson.fromJson;
 
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  bool get block;
+  bool get block => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BlockPersonCopyWith<_BlockPerson> get copyWith =>
@@ -4772,24 +4271,6 @@ abstract class _BlockPerson extends BlockPerson {
 GetUnreadCount _$GetUnreadCountFromJson(Map<String, dynamic> json) {
   return _GetUnreadCount.fromJson(json);
 }
-
-/// @nodoc
-class _$GetUnreadCountTearOff {
-  const _$GetUnreadCountTearOff();
-
-  _GetUnreadCount call({required String auth}) {
-    return _GetUnreadCount(
-      auth: auth,
-    );
-  }
-
-  GetUnreadCount fromJson(Map<String, Object?> json) {
-    return GetUnreadCount.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetUnreadCount = _$GetUnreadCountTearOff();
 
 /// @nodoc
 mixin _$GetUnreadCount {
@@ -4890,6 +4371,7 @@ class _$_GetUnreadCount extends _GetUnreadCount {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -4906,14 +4388,15 @@ class _$_GetUnreadCount extends _GetUnreadCount {
 }
 
 abstract class _GetUnreadCount extends GetUnreadCount {
-  const factory _GetUnreadCount({required String auth}) = _$_GetUnreadCount;
+  const factory _GetUnreadCount({required final String auth}) =
+      _$_GetUnreadCount;
   const _GetUnreadCount._() : super._();
 
   factory _GetUnreadCount.fromJson(Map<String, dynamic> json) =
       _$_GetUnreadCount.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetUnreadCountCopyWith<_GetUnreadCount> get copyWith =>
@@ -4923,25 +4406,6 @@ abstract class _GetUnreadCount extends GetUnreadCount {
 GetReportCount _$GetReportCountFromJson(Map<String, dynamic> json) {
   return _GetReportCount.fromJson(json);
 }
-
-/// @nodoc
-class _$GetReportCountTearOff {
-  const _$GetReportCountTearOff();
-
-  _GetReportCount call({int? communityId, required String auth}) {
-    return _GetReportCount(
-      communityId: communityId,
-      auth: auth,
-    );
-  }
-
-  GetReportCount fromJson(Map<String, Object?> json) {
-    return GetReportCount.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetReportCount = _$GetReportCountTearOff();
 
 /// @nodoc
 mixin _$GetReportCount {
@@ -5057,6 +4521,7 @@ class _$_GetReportCount extends _GetReportCount {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5075,17 +4540,17 @@ class _$_GetReportCount extends _GetReportCount {
 }
 
 abstract class _GetReportCount extends GetReportCount {
-  const factory _GetReportCount({int? communityId, required String auth}) =
-      _$_GetReportCount;
+  const factory _GetReportCount(
+      {final int? communityId, required final String auth}) = _$_GetReportCount;
   const _GetReportCount._() : super._();
 
   factory _GetReportCount.fromJson(Map<String, dynamic> json) =
       _$_GetReportCount.fromJson;
 
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
@@ -5095,24 +4560,6 @@ abstract class _GetReportCount extends GetReportCount {
 GetBannedPersons _$GetBannedPersonsFromJson(Map<String, dynamic> json) {
   return _GetBannedPersons.fromJson(json);
 }
-
-/// @nodoc
-class _$GetBannedPersonsTearOff {
-  const _$GetBannedPersonsTearOff();
-
-  _GetBannedPersons call({required String auth}) {
-    return _GetBannedPersons(
-      auth: auth,
-    );
-  }
-
-  GetBannedPersons fromJson(Map<String, Object?> json) {
-    return GetBannedPersons.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetBannedPersons = _$GetBannedPersonsTearOff();
 
 /// @nodoc
 mixin _$GetBannedPersons {
@@ -5213,6 +4660,7 @@ class _$_GetBannedPersons extends _GetBannedPersons {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(auth));
@@ -5229,14 +4677,15 @@ class _$_GetBannedPersons extends _GetBannedPersons {
 }
 
 abstract class _GetBannedPersons extends GetBannedPersons {
-  const factory _GetBannedPersons({required String auth}) = _$_GetBannedPersons;
+  const factory _GetBannedPersons({required final String auth}) =
+      _$_GetBannedPersons;
   const _GetBannedPersons._() : super._();
 
   factory _GetBannedPersons.fromJson(Map<String, dynamic> json) =
       _$_GetBannedPersons.fromJson;
 
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
@@ -5246,24 +4695,6 @@ abstract class _GetBannedPersons extends GetBannedPersons {
 VerifyEmail _$VerifyEmailFromJson(Map<String, dynamic> json) {
   return _VerifyEmail.fromJson(json);
 }
-
-/// @nodoc
-class _$VerifyEmailTearOff {
-  const _$VerifyEmailTearOff();
-
-  _VerifyEmail call({required String token}) {
-    return _VerifyEmail(
-      token: token,
-    );
-  }
-
-  VerifyEmail fromJson(Map<String, Object?> json) {
-    return VerifyEmail.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $VerifyEmail = _$VerifyEmailTearOff();
 
 /// @nodoc
 mixin _$VerifyEmail {
@@ -5362,6 +4793,7 @@ class _$_VerifyEmail extends _VerifyEmail {
             const DeepCollectionEquality().equals(other.token, token));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(token));
@@ -5378,14 +4810,14 @@ class _$_VerifyEmail extends _VerifyEmail {
 }
 
 abstract class _VerifyEmail extends VerifyEmail {
-  const factory _VerifyEmail({required String token}) = _$_VerifyEmail;
+  const factory _VerifyEmail({required final String token}) = _$_VerifyEmail;
   const _VerifyEmail._() : super._();
 
   factory _VerifyEmail.fromJson(Map<String, dynamic> json) =
       _$_VerifyEmail.fromJson;
 
   @override
-  String get token;
+  String get token => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$VerifyEmailCopyWith<_VerifyEmail> get copyWith =>

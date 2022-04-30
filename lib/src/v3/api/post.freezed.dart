@@ -12,30 +12,11 @@ part of 'post.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 GetPost _$GetPostFromJson(Map<String, dynamic> json) {
   return _GetPost.fromJson(json);
 }
-
-/// @nodoc
-class _$GetPostTearOff {
-  const _$GetPostTearOff();
-
-  _GetPost call({required int id, String? auth}) {
-    return _GetPost(
-      id: id,
-      auth: auth,
-    );
-  }
-
-  GetPost fromJson(Map<String, Object?> json) {
-    return GetPost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetPost = _$GetPostTearOff();
 
 /// @nodoc
 mixin _$GetPost {
@@ -143,6 +124,7 @@ class _$_GetPost extends _GetPost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -161,15 +143,16 @@ class _$_GetPost extends _GetPost {
 }
 
 abstract class _GetPost extends GetPost {
-  const factory _GetPost({required int id, String? auth}) = _$_GetPost;
+  const factory _GetPost({required final int id, final String? auth}) =
+      _$_GetPost;
   const _GetPost._() : super._();
 
   factory _GetPost.fromJson(Map<String, dynamic> json) = _$_GetPost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetPostCopyWith<_GetPost> get copyWith =>
@@ -179,37 +162,6 @@ abstract class _GetPost extends GetPost {
 CreatePost _$CreatePostFromJson(Map<String, dynamic> json) {
   return _CreatePost.fromJson(json);
 }
-
-/// @nodoc
-class _$CreatePostTearOff {
-  const _$CreatePostTearOff();
-
-  _CreatePost call(
-      {required String name,
-      String? url,
-      String? body,
-      bool? nsfw,
-      required int communityId,
-      required String auth,
-      String? honeypot}) {
-    return _CreatePost(
-      name: name,
-      url: url,
-      body: body,
-      nsfw: nsfw,
-      communityId: communityId,
-      auth: auth,
-      honeypot: honeypot,
-    );
-  }
-
-  CreatePost fromJson(Map<String, Object?> json) {
-    return CreatePost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreatePost = _$CreatePostTearOff();
 
 /// @nodoc
 mixin _$CreatePost {
@@ -414,6 +366,7 @@ class _$_CreatePost extends _CreatePost {
             const DeepCollectionEquality().equals(other.honeypot, honeypot));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -438,32 +391,32 @@ class _$_CreatePost extends _CreatePost {
 
 abstract class _CreatePost extends CreatePost {
   const factory _CreatePost(
-      {required String name,
-      String? url,
-      String? body,
-      bool? nsfw,
-      required int communityId,
-      required String auth,
-      String? honeypot}) = _$_CreatePost;
+      {required final String name,
+      final String? url,
+      final String? body,
+      final bool? nsfw,
+      required final int communityId,
+      required final String auth,
+      final String? honeypot}) = _$_CreatePost;
   const _CreatePost._() : super._();
 
   factory _CreatePost.fromJson(Map<String, dynamic> json) =
       _$_CreatePost.fromJson;
 
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
-  String? get body;
+  String? get body => throw _privateConstructorUsedError;
   @override
-  bool? get nsfw;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
-  String? get honeypot;
+  String? get honeypot => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreatePostCopyWith<_CreatePost> get copyWith =>
@@ -473,39 +426,6 @@ abstract class _CreatePost extends CreatePost {
 GetPosts _$GetPostsFromJson(Map<String, dynamic> json) {
   return _GetPosts.fromJson(json);
 }
-
-/// @nodoc
-class _$GetPostsTearOff {
-  const _$GetPostsTearOff();
-
-  _GetPosts call(
-      {@JsonKey(name: 'type_') PostListingType? type,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? communityId,
-      String? communityName,
-      bool? savedOnly,
-      String? auth}) {
-    return _GetPosts(
-      type: type,
-      sort: sort,
-      page: page,
-      limit: limit,
-      communityId: communityId,
-      communityName: communityName,
-      savedOnly: savedOnly,
-      auth: auth,
-    );
-  }
-
-  GetPosts fromJson(Map<String, Object?> json) {
-    return GetPosts.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetPosts = _$GetPostsTearOff();
 
 /// @nodoc
 mixin _$GetPosts {
@@ -727,6 +647,7 @@ class _$_GetPosts extends _GetPosts {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -752,35 +673,35 @@ class _$_GetPosts extends _GetPosts {
 
 abstract class _GetPosts extends GetPosts {
   const factory _GetPosts(
-      {@JsonKey(name: 'type_') PostListingType? type,
-      SortType? sort,
-      int? page,
-      int? limit,
-      int? communityId,
-      String? communityName,
-      bool? savedOnly,
-      String? auth}) = _$_GetPosts;
+      {@JsonKey(name: 'type_') final PostListingType? type,
+      final SortType? sort,
+      final int? page,
+      final int? limit,
+      final int? communityId,
+      final String? communityName,
+      final bool? savedOnly,
+      final String? auth}) = _$_GetPosts;
   const _GetPosts._() : super._();
 
   factory _GetPosts.fromJson(Map<String, dynamic> json) = _$_GetPosts.fromJson;
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type;
+  PostListingType? get type => throw _privateConstructorUsedError;
   @override
-  SortType? get sort;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  String? get communityName;
+  String? get communityName => throw _privateConstructorUsedError;
   @override
-  bool? get savedOnly;
+  bool? get savedOnly => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetPostsCopyWith<_GetPosts> get copyWith =>
@@ -790,27 +711,6 @@ abstract class _GetPosts extends GetPosts {
 CreatePostLike _$CreatePostLikeFromJson(Map<String, dynamic> json) {
   return _CreatePostLike.fromJson(json);
 }
-
-/// @nodoc
-class _$CreatePostLikeTearOff {
-  const _$CreatePostLikeTearOff();
-
-  _CreatePostLike call(
-      {required int postId, required VoteType score, required String auth}) {
-    return _CreatePostLike(
-      postId: postId,
-      score: score,
-      auth: auth,
-    );
-  }
-
-  CreatePostLike fromJson(Map<String, Object?> json) {
-    return CreatePostLike.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreatePostLike = _$CreatePostLikeTearOff();
 
 /// @nodoc
 mixin _$CreatePostLike {
@@ -941,6 +841,7 @@ class _$_CreatePostLike extends _CreatePostLike {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -961,20 +862,20 @@ class _$_CreatePostLike extends _CreatePostLike {
 
 abstract class _CreatePostLike extends CreatePostLike {
   const factory _CreatePostLike(
-      {required int postId,
-      required VoteType score,
-      required String auth}) = _$_CreatePostLike;
+      {required final int postId,
+      required final VoteType score,
+      required final String auth}) = _$_CreatePostLike;
   const _CreatePostLike._() : super._();
 
   factory _CreatePostLike.fromJson(Map<String, dynamic> json) =
       _$_CreatePostLike.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  VoteType get score;
+  VoteType get score => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreatePostLikeCopyWith<_CreatePostLike> get copyWith =>
@@ -984,35 +885,6 @@ abstract class _CreatePostLike extends CreatePostLike {
 EditPost _$EditPostFromJson(Map<String, dynamic> json) {
   return _EditPost.fromJson(json);
 }
-
-/// @nodoc
-class _$EditPostTearOff {
-  const _$EditPostTearOff();
-
-  _EditPost call(
-      {required int postId,
-      String? name,
-      String? url,
-      String? body,
-      bool? nsfw,
-      required String auth}) {
-    return _EditPost(
-      postId: postId,
-      name: name,
-      url: url,
-      body: body,
-      nsfw: nsfw,
-      auth: auth,
-    );
-  }
-
-  EditPost fromJson(Map<String, Object?> json) {
-    return EditPost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $EditPost = _$EditPostTearOff();
 
 /// @nodoc
 mixin _$EditPost {
@@ -1196,6 +1068,7 @@ class _$_EditPost extends _EditPost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1219,28 +1092,28 @@ class _$_EditPost extends _EditPost {
 
 abstract class _EditPost extends EditPost {
   const factory _EditPost(
-      {required int postId,
-      String? name,
-      String? url,
-      String? body,
-      bool? nsfw,
-      required String auth}) = _$_EditPost;
+      {required final int postId,
+      final String? name,
+      final String? url,
+      final String? body,
+      final bool? nsfw,
+      required final String auth}) = _$_EditPost;
   const _EditPost._() : super._();
 
   factory _EditPost.fromJson(Map<String, dynamic> json) = _$_EditPost.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
-  String? get body;
+  String? get body => throw _privateConstructorUsedError;
   @override
-  bool? get nsfw;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EditPostCopyWith<_EditPost> get copyWith =>
@@ -1250,27 +1123,6 @@ abstract class _EditPost extends EditPost {
 DeletePost _$DeletePostFromJson(Map<String, dynamic> json) {
   return _DeletePost.fromJson(json);
 }
-
-/// @nodoc
-class _$DeletePostTearOff {
-  const _$DeletePostTearOff();
-
-  _DeletePost call(
-      {required int postId, required bool deleted, required String auth}) {
-    return _DeletePost(
-      postId: postId,
-      deleted: deleted,
-      auth: auth,
-    );
-  }
-
-  DeletePost fromJson(Map<String, Object?> json) {
-    return DeletePost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeletePost = _$DeletePostTearOff();
 
 /// @nodoc
 mixin _$DeletePost {
@@ -1398,6 +1250,7 @@ class _$_DeletePost extends _DeletePost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1418,20 +1271,20 @@ class _$_DeletePost extends _DeletePost {
 
 abstract class _DeletePost extends DeletePost {
   const factory _DeletePost(
-      {required int postId,
-      required bool deleted,
-      required String auth}) = _$_DeletePost;
+      {required final int postId,
+      required final bool deleted,
+      required final String auth}) = _$_DeletePost;
   const _DeletePost._() : super._();
 
   factory _DeletePost.fromJson(Map<String, dynamic> json) =
       _$_DeletePost.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeletePostCopyWith<_DeletePost> get copyWith =>
@@ -1441,31 +1294,6 @@ abstract class _DeletePost extends DeletePost {
 RemovePost _$RemovePostFromJson(Map<String, dynamic> json) {
   return _RemovePost.fromJson(json);
 }
-
-/// @nodoc
-class _$RemovePostTearOff {
-  const _$RemovePostTearOff();
-
-  _RemovePost call(
-      {required int postId,
-      required bool removed,
-      String? reason,
-      required String auth}) {
-    return _RemovePost(
-      postId: postId,
-      removed: removed,
-      reason: reason,
-      auth: auth,
-    );
-  }
-
-  RemovePost fromJson(Map<String, Object?> json) {
-    return RemovePost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RemovePost = _$RemovePostTearOff();
 
 /// @nodoc
 mixin _$RemovePost {
@@ -1610,6 +1438,7 @@ class _$_RemovePost extends _RemovePost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1631,23 +1460,23 @@ class _$_RemovePost extends _RemovePost {
 
 abstract class _RemovePost extends RemovePost {
   const factory _RemovePost(
-      {required int postId,
-      required bool removed,
-      String? reason,
-      required String auth}) = _$_RemovePost;
+      {required final int postId,
+      required final bool removed,
+      final String? reason,
+      required final String auth}) = _$_RemovePost;
   const _RemovePost._() : super._();
 
   factory _RemovePost.fromJson(Map<String, dynamic> json) =
       _$_RemovePost.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RemovePostCopyWith<_RemovePost> get copyWith =>
@@ -1657,27 +1486,6 @@ abstract class _RemovePost extends RemovePost {
 LockPost _$LockPostFromJson(Map<String, dynamic> json) {
   return _LockPost.fromJson(json);
 }
-
-/// @nodoc
-class _$LockPostTearOff {
-  const _$LockPostTearOff();
-
-  _LockPost call(
-      {required int postId, required bool locked, required String auth}) {
-    return _LockPost(
-      postId: postId,
-      locked: locked,
-      auth: auth,
-    );
-  }
-
-  LockPost fromJson(Map<String, Object?> json) {
-    return LockPost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LockPost = _$LockPostTearOff();
 
 /// @nodoc
 mixin _$LockPost {
@@ -1802,6 +1610,7 @@ class _$_LockPost extends _LockPost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1822,19 +1631,19 @@ class _$_LockPost extends _LockPost {
 
 abstract class _LockPost extends LockPost {
   const factory _LockPost(
-      {required int postId,
-      required bool locked,
-      required String auth}) = _$_LockPost;
+      {required final int postId,
+      required final bool locked,
+      required final String auth}) = _$_LockPost;
   const _LockPost._() : super._();
 
   factory _LockPost.fromJson(Map<String, dynamic> json) = _$_LockPost.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get locked;
+  bool get locked => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LockPostCopyWith<_LockPost> get copyWith =>
@@ -1844,27 +1653,6 @@ abstract class _LockPost extends LockPost {
 StickyPost _$StickyPostFromJson(Map<String, dynamic> json) {
   return _StickyPost.fromJson(json);
 }
-
-/// @nodoc
-class _$StickyPostTearOff {
-  const _$StickyPostTearOff();
-
-  _StickyPost call(
-      {required int postId, required bool stickied, required String auth}) {
-    return _StickyPost(
-      postId: postId,
-      stickied: stickied,
-      auth: auth,
-    );
-  }
-
-  StickyPost fromJson(Map<String, Object?> json) {
-    return StickyPost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $StickyPost = _$StickyPostTearOff();
 
 /// @nodoc
 mixin _$StickyPost {
@@ -1992,6 +1780,7 @@ class _$_StickyPost extends _StickyPost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2012,20 +1801,20 @@ class _$_StickyPost extends _StickyPost {
 
 abstract class _StickyPost extends StickyPost {
   const factory _StickyPost(
-      {required int postId,
-      required bool stickied,
-      required String auth}) = _$_StickyPost;
+      {required final int postId,
+      required final bool stickied,
+      required final String auth}) = _$_StickyPost;
   const _StickyPost._() : super._();
 
   factory _StickyPost.fromJson(Map<String, dynamic> json) =
       _$_StickyPost.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get stickied;
+  bool get stickied => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$StickyPostCopyWith<_StickyPost> get copyWith =>
@@ -2035,27 +1824,6 @@ abstract class _StickyPost extends StickyPost {
 SavePost _$SavePostFromJson(Map<String, dynamic> json) {
   return _SavePost.fromJson(json);
 }
-
-/// @nodoc
-class _$SavePostTearOff {
-  const _$SavePostTearOff();
-
-  _SavePost call(
-      {required int postId, required bool save, required String auth}) {
-    return _SavePost(
-      postId: postId,
-      save: save,
-      auth: auth,
-    );
-  }
-
-  SavePost fromJson(Map<String, Object?> json) {
-    return SavePost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SavePost = _$SavePostTearOff();
 
 /// @nodoc
 mixin _$SavePost {
@@ -2180,6 +1948,7 @@ class _$_SavePost extends _SavePost {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2200,19 +1969,19 @@ class _$_SavePost extends _SavePost {
 
 abstract class _SavePost extends SavePost {
   const factory _SavePost(
-      {required int postId,
-      required bool save,
-      required String auth}) = _$_SavePost;
+      {required final int postId,
+      required final bool save,
+      required final String auth}) = _$_SavePost;
   const _SavePost._() : super._();
 
   factory _SavePost.fromJson(Map<String, dynamic> json) = _$_SavePost.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool get save;
+  bool get save => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SavePostCopyWith<_SavePost> get copyWith =>
@@ -2222,24 +1991,6 @@ abstract class _SavePost extends SavePost {
 GetSiteMetadata _$GetSiteMetadataFromJson(Map<String, dynamic> json) {
   return _GetSiteMetadata.fromJson(json);
 }
-
-/// @nodoc
-class _$GetSiteMetadataTearOff {
-  const _$GetSiteMetadataTearOff();
-
-  _GetSiteMetadata call({required String url}) {
-    return _GetSiteMetadata(
-      url: url,
-    );
-  }
-
-  GetSiteMetadata fromJson(Map<String, Object?> json) {
-    return GetSiteMetadata.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetSiteMetadata = _$GetSiteMetadataTearOff();
 
 /// @nodoc
 mixin _$GetSiteMetadata {
@@ -2340,6 +2091,7 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
             const DeepCollectionEquality().equals(other.url, url));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(url));
@@ -2356,14 +2108,15 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
 }
 
 abstract class _GetSiteMetadata extends GetSiteMetadata {
-  const factory _GetSiteMetadata({required String url}) = _$_GetSiteMetadata;
+  const factory _GetSiteMetadata({required final String url}) =
+      _$_GetSiteMetadata;
   const _GetSiteMetadata._() : super._();
 
   factory _GetSiteMetadata.fromJson(Map<String, dynamic> json) =
       _$_GetSiteMetadata.fromJson;
 
   @override
-  String get url;
+  String get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetSiteMetadataCopyWith<_GetSiteMetadata> get copyWith =>
@@ -2373,27 +2126,6 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
 CreatePostReport _$CreatePostReportFromJson(Map<String, dynamic> json) {
   return _CreatePostReport.fromJson(json);
 }
-
-/// @nodoc
-class _$CreatePostReportTearOff {
-  const _$CreatePostReportTearOff();
-
-  _CreatePostReport call(
-      {required int postId, required String reason, required String auth}) {
-    return _CreatePostReport(
-      postId: postId,
-      reason: reason,
-      auth: auth,
-    );
-  }
-
-  CreatePostReport fromJson(Map<String, Object?> json) {
-    return CreatePostReport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreatePostReport = _$CreatePostReportTearOff();
 
 /// @nodoc
 mixin _$CreatePostReport {
@@ -2524,6 +2256,7 @@ class _$_CreatePostReport extends _CreatePostReport {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2544,20 +2277,20 @@ class _$_CreatePostReport extends _CreatePostReport {
 
 abstract class _CreatePostReport extends CreatePostReport {
   const factory _CreatePostReport(
-      {required int postId,
-      required String reason,
-      required String auth}) = _$_CreatePostReport;
+      {required final int postId,
+      required final String reason,
+      required final String auth}) = _$_CreatePostReport;
   const _CreatePostReport._() : super._();
 
   factory _CreatePostReport.fromJson(Map<String, dynamic> json) =
       _$_CreatePostReport.fromJson;
 
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreatePostReportCopyWith<_CreatePostReport> get copyWith =>
@@ -2567,27 +2300,6 @@ abstract class _CreatePostReport extends CreatePostReport {
 ResolvePostReport _$ResolvePostReportFromJson(Map<String, dynamic> json) {
   return _ResolvePostReport.fromJson(json);
 }
-
-/// @nodoc
-class _$ResolvePostReportTearOff {
-  const _$ResolvePostReportTearOff();
-
-  _ResolvePostReport call(
-      {required int reportId, required bool resolved, required String auth}) {
-    return _ResolvePostReport(
-      reportId: reportId,
-      resolved: resolved,
-      auth: auth,
-    );
-  }
-
-  ResolvePostReport fromJson(Map<String, Object?> json) {
-    return ResolvePostReport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResolvePostReport = _$ResolvePostReportTearOff();
 
 /// @nodoc
 mixin _$ResolvePostReport {
@@ -2718,6 +2430,7 @@ class _$_ResolvePostReport extends _ResolvePostReport {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2738,20 +2451,20 @@ class _$_ResolvePostReport extends _ResolvePostReport {
 
 abstract class _ResolvePostReport extends ResolvePostReport {
   const factory _ResolvePostReport(
-      {required int reportId,
-      required bool resolved,
-      required String auth}) = _$_ResolvePostReport;
+      {required final int reportId,
+      required final bool resolved,
+      required final String auth}) = _$_ResolvePostReport;
   const _ResolvePostReport._() : super._();
 
   factory _ResolvePostReport.fromJson(Map<String, dynamic> json) =
       _$_ResolvePostReport.fromJson;
 
   @override
-  int get reportId;
+  int get reportId => throw _privateConstructorUsedError;
   @override
-  bool get resolved;
+  bool get resolved => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ResolvePostReportCopyWith<_ResolvePostReport> get copyWith =>
@@ -2761,33 +2474,6 @@ abstract class _ResolvePostReport extends ResolvePostReport {
 ListPostReports _$ListPostReportsFromJson(Map<String, dynamic> json) {
   return _ListPostReports.fromJson(json);
 }
-
-/// @nodoc
-class _$ListPostReportsTearOff {
-  const _$ListPostReportsTearOff();
-
-  _ListPostReports call(
-      {int? page,
-      int? limit,
-      int? communityId,
-      bool? unresolvedOnly,
-      required String auth}) {
-    return _ListPostReports(
-      page: page,
-      limit: limit,
-      communityId: communityId,
-      unresolvedOnly: unresolvedOnly,
-      auth: auth,
-    );
-  }
-
-  ListPostReports fromJson(Map<String, Object?> json) {
-    return ListPostReports.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ListPostReports = _$ListPostReportsTearOff();
 
 /// @nodoc
 mixin _$ListPostReports {
@@ -2962,6 +2648,7 @@ class _$_ListPostReports extends _ListPostReports {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2984,26 +2671,26 @@ class _$_ListPostReports extends _ListPostReports {
 
 abstract class _ListPostReports extends ListPostReports {
   const factory _ListPostReports(
-      {int? page,
-      int? limit,
-      int? communityId,
-      bool? unresolvedOnly,
-      required String auth}) = _$_ListPostReports;
+      {final int? page,
+      final int? limit,
+      final int? communityId,
+      final bool? unresolvedOnly,
+      required final String auth}) = _$_ListPostReports;
   const _ListPostReports._() : super._();
 
   factory _ListPostReports.fromJson(Map<String, dynamic> json) =
       _$_ListPostReports.fromJson;
 
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  int? get communityId;
+  int? get communityId => throw _privateConstructorUsedError;
   @override
-  bool? get unresolvedOnly;
+  bool? get unresolvedOnly => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ListPostReportsCopyWith<_ListPostReports> get copyWith =>

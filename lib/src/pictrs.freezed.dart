@@ -12,30 +12,11 @@ part of 'pictrs.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PictrsUploadFile _$PictrsUploadFileFromJson(Map<String, dynamic> json) {
   return _PictrsUploadFile.fromJson(json);
 }
-
-/// @nodoc
-class _$PictrsUploadFileTearOff {
-  const _$PictrsUploadFileTearOff();
-
-  _PictrsUploadFile call({required String deleteToken, required String file}) {
-    return _PictrsUploadFile(
-      deleteToken: deleteToken,
-      file: file,
-    );
-  }
-
-  PictrsUploadFile fromJson(Map<String, Object?> json) {
-    return PictrsUploadFile.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PictrsUploadFile = _$PictrsUploadFileTearOff();
 
 /// @nodoc
 mixin _$PictrsUploadFile {
@@ -152,6 +133,7 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
             const DeepCollectionEquality().equals(other.file, file));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -171,17 +153,17 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
 
 abstract class _PictrsUploadFile extends PictrsUploadFile {
   const factory _PictrsUploadFile(
-      {required String deleteToken,
-      required String file}) = _$_PictrsUploadFile;
+      {required final String deleteToken,
+      required final String file}) = _$_PictrsUploadFile;
   const _PictrsUploadFile._() : super._();
 
   factory _PictrsUploadFile.fromJson(Map<String, dynamic> json) =
       _$_PictrsUploadFile.fromJson;
 
   @override
-  String get deleteToken;
+  String get deleteToken => throw _privateConstructorUsedError;
   @override
-  String get file;
+  String get file => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith =>
@@ -191,29 +173,6 @@ abstract class _PictrsUploadFile extends PictrsUploadFile {
 PictrsUpload _$PictrsUploadFromJson(Map<String, dynamic> json) {
   return _PictrsUpload.fromJson(json);
 }
-
-/// @nodoc
-class _$PictrsUploadTearOff {
-  const _$PictrsUploadTearOff();
-
-  _PictrsUpload call(
-      {required String msg,
-      required List<PictrsUploadFile> files,
-      required String instanceHost}) {
-    return _PictrsUpload(
-      msg: msg,
-      files: files,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PictrsUpload fromJson(Map<String, Object?> json) {
-    return PictrsUpload.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PictrsUpload = _$PictrsUploadTearOff();
 
 /// @nodoc
 mixin _$PictrsUpload {
@@ -314,16 +273,24 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
 @JsonSerializable(fieldRename: FieldRename.snake)
 class _$_PictrsUpload extends _PictrsUpload {
   const _$_PictrsUpload(
-      {required this.msg, required this.files, required this.instanceHost})
-      : super._();
+      {required this.msg,
+      required final List<PictrsUploadFile> files,
+      required this.instanceHost})
+      : _files = files,
+        super._();
 
   factory _$_PictrsUpload.fromJson(Map<String, dynamic> json) =>
       _$$_PictrsUploadFromJson(json);
 
   @override
   final String msg;
+  final List<PictrsUploadFile> _files;
   @override
-  final List<PictrsUploadFile> files;
+  List<PictrsUploadFile> get files {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_files);
+  }
+
   @override
   final String instanceHost;
 
@@ -343,6 +310,7 @@ class _$_PictrsUpload extends _PictrsUpload {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -363,20 +331,20 @@ class _$_PictrsUpload extends _PictrsUpload {
 
 abstract class _PictrsUpload extends PictrsUpload {
   const factory _PictrsUpload(
-      {required String msg,
-      required List<PictrsUploadFile> files,
-      required String instanceHost}) = _$_PictrsUpload;
+      {required final String msg,
+      required final List<PictrsUploadFile> files,
+      required final String instanceHost}) = _$_PictrsUpload;
   const _PictrsUpload._() : super._();
 
   factory _PictrsUpload.fromJson(Map<String, dynamic> json) =
       _$_PictrsUpload.fromJson;
 
   @override
-  String get msg;
+  String get msg => throw _privateConstructorUsedError;
   @override
-  List<PictrsUploadFile> get files;
+  List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>

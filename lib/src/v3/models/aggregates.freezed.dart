@@ -12,40 +12,11 @@ part of 'aggregates.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PersonAggregates _$PersonAggregatesFromJson(Map<String, dynamic> json) {
   return _PersonAggregates.fromJson(json);
 }
-
-/// @nodoc
-class _$PersonAggregatesTearOff {
-  const _$PersonAggregatesTearOff();
-
-  _PersonAggregates call(
-      {required int id,
-      required int personId,
-      required int postCount,
-      required int postScore,
-      required int commentCount,
-      required int commentScore}) {
-    return _PersonAggregates(
-      id: id,
-      personId: personId,
-      postCount: postCount,
-      postScore: postScore,
-      commentCount: commentCount,
-      commentScore: commentScore,
-    );
-  }
-
-  PersonAggregates fromJson(Map<String, Object?> json) {
-    return PersonAggregates.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PersonAggregates = _$PersonAggregatesTearOff();
 
 /// @nodoc
 mixin _$PersonAggregates {
@@ -237,6 +208,7 @@ class _$_PersonAggregates extends _PersonAggregates {
                 .equals(other.commentScore, commentScore));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -260,29 +232,29 @@ class _$_PersonAggregates extends _PersonAggregates {
 
 abstract class _PersonAggregates extends PersonAggregates {
   const factory _PersonAggregates(
-      {required int id,
-      required int personId,
-      required int postCount,
-      required int postScore,
-      required int commentCount,
-      required int commentScore}) = _$_PersonAggregates;
+      {required final int id,
+      required final int personId,
+      required final int postCount,
+      required final int postScore,
+      required final int commentCount,
+      required final int commentScore}) = _$_PersonAggregates;
   const _PersonAggregates._() : super._();
 
   factory _PersonAggregates.fromJson(Map<String, dynamic> json) =
       _$_PersonAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  int get postCount;
+  int get postCount => throw _privateConstructorUsedError;
   @override
-  int get postScore;
+  int get postScore => throw _privateConstructorUsedError;
   @override
-  int get commentCount;
+  int get commentCount => throw _privateConstructorUsedError;
   @override
-  int get commentScore;
+  int get commentScore => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonAggregatesCopyWith<_PersonAggregates> get copyWith =>
@@ -292,43 +264,6 @@ abstract class _PersonAggregates extends PersonAggregates {
 SiteAggregates _$SiteAggregatesFromJson(Map<String, dynamic> json) {
   return _SiteAggregates.fromJson(json);
 }
-
-/// @nodoc
-class _$SiteAggregatesTearOff {
-  const _$SiteAggregatesTearOff();
-
-  _SiteAggregates call(
-      {required int id,
-      required int siteId,
-      required int users,
-      required int posts,
-      required int comments,
-      required int communities,
-      required int usersActiveDay,
-      required int usersActiveWeek,
-      required int usersActiveMonth,
-      required int usersActiveHalfYear}) {
-    return _SiteAggregates(
-      id: id,
-      siteId: siteId,
-      users: users,
-      posts: posts,
-      comments: comments,
-      communities: communities,
-      usersActiveDay: usersActiveDay,
-      usersActiveWeek: usersActiveWeek,
-      usersActiveMonth: usersActiveMonth,
-      usersActiveHalfYear: usersActiveHalfYear,
-    );
-  }
-
-  SiteAggregates fromJson(Map<String, Object?> json) {
-    return SiteAggregates.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SiteAggregates = _$SiteAggregatesTearOff();
 
 /// @nodoc
 mixin _$SiteAggregates {
@@ -591,6 +526,7 @@ class _$_SiteAggregates extends _SiteAggregates {
                 .equals(other.usersActiveHalfYear, usersActiveHalfYear));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -618,41 +554,41 @@ class _$_SiteAggregates extends _SiteAggregates {
 
 abstract class _SiteAggregates extends SiteAggregates {
   const factory _SiteAggregates(
-      {required int id,
-      required int siteId,
-      required int users,
-      required int posts,
-      required int comments,
-      required int communities,
-      required int usersActiveDay,
-      required int usersActiveWeek,
-      required int usersActiveMonth,
-      required int usersActiveHalfYear}) = _$_SiteAggregates;
+      {required final int id,
+      required final int siteId,
+      required final int users,
+      required final int posts,
+      required final int comments,
+      required final int communities,
+      required final int usersActiveDay,
+      required final int usersActiveWeek,
+      required final int usersActiveMonth,
+      required final int usersActiveHalfYear}) = _$_SiteAggregates;
   const _SiteAggregates._() : super._();
 
   factory _SiteAggregates.fromJson(Map<String, dynamic> json) =
       _$_SiteAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get siteId;
+  int get siteId => throw _privateConstructorUsedError;
   @override
-  int get users;
+  int get users => throw _privateConstructorUsedError;
   @override
-  int get posts;
+  int get posts => throw _privateConstructorUsedError;
   @override
-  int get comments;
+  int get comments => throw _privateConstructorUsedError;
   @override
-  int get communities;
+  int get communities => throw _privateConstructorUsedError;
   @override
-  int get usersActiveDay;
+  int get usersActiveDay => throw _privateConstructorUsedError;
   @override
-  int get usersActiveWeek;
+  int get usersActiveWeek => throw _privateConstructorUsedError;
   @override
-  int get usersActiveMonth;
+  int get usersActiveMonth => throw _privateConstructorUsedError;
   @override
-  int get usersActiveHalfYear;
+  int get usersActiveHalfYear => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
@@ -662,39 +598,6 @@ abstract class _SiteAggregates extends SiteAggregates {
 PostAggregates _$PostAggregatesFromJson(Map<String, dynamic> json) {
   return _PostAggregates.fromJson(json);
 }
-
-/// @nodoc
-class _$PostAggregatesTearOff {
-  const _$PostAggregatesTearOff();
-
-  _PostAggregates call(
-      {required int id,
-      required int postId,
-      required int comments,
-      required int score,
-      required int upvotes,
-      required int downvotes,
-      required DateTime newestCommentTime,
-      required DateTime newestCommentTimeNecro}) {
-    return _PostAggregates(
-      id: id,
-      postId: postId,
-      comments: comments,
-      score: score,
-      upvotes: upvotes,
-      downvotes: downvotes,
-      newestCommentTime: newestCommentTime,
-      newestCommentTimeNecro: newestCommentTimeNecro,
-    );
-  }
-
-  PostAggregates fromJson(Map<String, Object?> json) {
-    return PostAggregates.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PostAggregates = _$PostAggregatesTearOff();
 
 /// @nodoc
 mixin _$PostAggregates {
@@ -922,6 +825,7 @@ class _$_PostAggregates extends _PostAggregates {
                 .equals(other.newestCommentTimeNecro, newestCommentTimeNecro));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -947,35 +851,35 @@ class _$_PostAggregates extends _PostAggregates {
 
 abstract class _PostAggregates extends PostAggregates {
   const factory _PostAggregates(
-      {required int id,
-      required int postId,
-      required int comments,
-      required int score,
-      required int upvotes,
-      required int downvotes,
-      required DateTime newestCommentTime,
-      required DateTime newestCommentTimeNecro}) = _$_PostAggregates;
+      {required final int id,
+      required final int postId,
+      required final int comments,
+      required final int score,
+      required final int upvotes,
+      required final int downvotes,
+      required final DateTime newestCommentTime,
+      required final DateTime newestCommentTimeNecro}) = _$_PostAggregates;
   const _PostAggregates._() : super._();
 
   factory _PostAggregates.fromJson(Map<String, dynamic> json) =
       _$_PostAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  int get comments;
+  int get comments => throw _privateConstructorUsedError;
   @override
-  int get score;
+  int get score => throw _privateConstructorUsedError;
   @override
-  int get upvotes;
+  int get upvotes => throw _privateConstructorUsedError;
   @override
-  int get downvotes;
+  int get downvotes => throw _privateConstructorUsedError;
   @override
-  DateTime get newestCommentTime;
+  DateTime get newestCommentTime => throw _privateConstructorUsedError;
   @override
-  DateTime get newestCommentTimeNecro;
+  DateTime get newestCommentTimeNecro => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
@@ -985,41 +889,6 @@ abstract class _PostAggregates extends PostAggregates {
 CommunityAggregates _$CommunityAggregatesFromJson(Map<String, dynamic> json) {
   return _CommunityAggregates.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunityAggregatesTearOff {
-  const _$CommunityAggregatesTearOff();
-
-  _CommunityAggregates call(
-      {required int id,
-      required int communityId,
-      required int subscribers,
-      required int posts,
-      required int comments,
-      required int usersActiveDay,
-      required int usersActiveWeek,
-      required int usersActiveMonth,
-      required int usersActiveHalfYear}) {
-    return _CommunityAggregates(
-      id: id,
-      communityId: communityId,
-      subscribers: subscribers,
-      posts: posts,
-      comments: comments,
-      usersActiveDay: usersActiveDay,
-      usersActiveWeek: usersActiveWeek,
-      usersActiveMonth: usersActiveMonth,
-      usersActiveHalfYear: usersActiveHalfYear,
-    );
-  }
-
-  CommunityAggregates fromJson(Map<String, Object?> json) {
-    return CommunityAggregates.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunityAggregates = _$CommunityAggregatesTearOff();
 
 /// @nodoc
 mixin _$CommunityAggregates {
@@ -1266,6 +1135,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
                 .equals(other.usersActiveHalfYear, usersActiveHalfYear));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1293,38 +1163,38 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 
 abstract class _CommunityAggregates extends CommunityAggregates {
   const factory _CommunityAggregates(
-      {required int id,
-      required int communityId,
-      required int subscribers,
-      required int posts,
-      required int comments,
-      required int usersActiveDay,
-      required int usersActiveWeek,
-      required int usersActiveMonth,
-      required int usersActiveHalfYear}) = _$_CommunityAggregates;
+      {required final int id,
+      required final int communityId,
+      required final int subscribers,
+      required final int posts,
+      required final int comments,
+      required final int usersActiveDay,
+      required final int usersActiveWeek,
+      required final int usersActiveMonth,
+      required final int usersActiveHalfYear}) = _$_CommunityAggregates;
   const _CommunityAggregates._() : super._();
 
   factory _CommunityAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommunityAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  int get subscribers;
+  int get subscribers => throw _privateConstructorUsedError;
   @override
-  int get posts;
+  int get posts => throw _privateConstructorUsedError;
   @override
-  int get comments;
+  int get comments => throw _privateConstructorUsedError;
   @override
-  int get usersActiveDay;
+  int get usersActiveDay => throw _privateConstructorUsedError;
   @override
-  int get usersActiveWeek;
+  int get usersActiveWeek => throw _privateConstructorUsedError;
   @override
-  int get usersActiveMonth;
+  int get usersActiveMonth => throw _privateConstructorUsedError;
   @override
-  int get usersActiveHalfYear;
+  int get usersActiveHalfYear => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
@@ -1334,33 +1204,6 @@ abstract class _CommunityAggregates extends CommunityAggregates {
 CommentAggregates _$CommentAggregatesFromJson(Map<String, dynamic> json) {
   return _CommentAggregates.fromJson(json);
 }
-
-/// @nodoc
-class _$CommentAggregatesTearOff {
-  const _$CommentAggregatesTearOff();
-
-  _CommentAggregates call(
-      {required int id,
-      required int commentId,
-      required int score,
-      required int upvotes,
-      required int downvotes}) {
-    return _CommentAggregates(
-      id: id,
-      commentId: commentId,
-      score: score,
-      upvotes: upvotes,
-      downvotes: downvotes,
-    );
-  }
-
-  CommentAggregates fromJson(Map<String, Object?> json) {
-    return CommentAggregates.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommentAggregates = _$CommentAggregatesTearOff();
 
 /// @nodoc
 mixin _$CommentAggregates {
@@ -1523,6 +1366,7 @@ class _$_CommentAggregates extends _CommentAggregates {
             const DeepCollectionEquality().equals(other.downvotes, downvotes));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1545,26 +1389,26 @@ class _$_CommentAggregates extends _CommentAggregates {
 
 abstract class _CommentAggregates extends CommentAggregates {
   const factory _CommentAggregates(
-      {required int id,
-      required int commentId,
-      required int score,
-      required int upvotes,
-      required int downvotes}) = _$_CommentAggregates;
+      {required final int id,
+      required final int commentId,
+      required final int score,
+      required final int upvotes,
+      required final int downvotes}) = _$_CommentAggregates;
   const _CommentAggregates._() : super._();
 
   factory _CommentAggregates.fromJson(Map<String, dynamic> json) =
       _$_CommentAggregates.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  int get score;
+  int get score => throw _privateConstructorUsedError;
   @override
-  int get upvotes;
+  int get upvotes => throw _privateConstructorUsedError;
   @override
-  int get downvotes;
+  int get downvotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith =>

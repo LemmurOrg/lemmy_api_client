@@ -12,31 +12,11 @@ part of 'community.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 GetCommunity _$GetCommunityFromJson(Map<String, dynamic> json) {
   return _GetCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$GetCommunityTearOff {
-  const _$GetCommunityTearOff();
-
-  _GetCommunity call({int? id, String? name, String? auth}) {
-    return _GetCommunity(
-      id: id,
-      name: name,
-      auth: auth,
-    );
-  }
-
-  GetCommunity fromJson(Map<String, Object?> json) {
-    return GetCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $GetCommunity = _$GetCommunityTearOff();
 
 /// @nodoc
 mixin _$GetCommunity {
@@ -163,6 +143,7 @@ class _$_GetCommunity extends _GetCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -182,19 +163,21 @@ class _$_GetCommunity extends _GetCommunity {
 }
 
 abstract class _GetCommunity extends GetCommunity {
-  const factory _GetCommunity({int? id, String? name, String? auth}) =
-      _$_GetCommunity;
+  const factory _GetCommunity(
+      {final int? id,
+      final String? name,
+      final String? auth}) = _$_GetCommunity;
   const _GetCommunity._() : super._();
 
   factory _GetCommunity.fromJson(Map<String, dynamic> json) =
       _$_GetCommunity.fromJson;
 
   @override
-  int? get id;
+  int? get id => throw _privateConstructorUsedError;
   @override
-  String? get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$GetCommunityCopyWith<_GetCommunity> get copyWith =>
@@ -204,37 +187,6 @@ abstract class _GetCommunity extends GetCommunity {
 CreateCommunity _$CreateCommunityFromJson(Map<String, dynamic> json) {
   return _CreateCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$CreateCommunityTearOff {
-  const _$CreateCommunityTearOff();
-
-  _CreateCommunity call(
-      {required String name,
-      required String title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      required String auth}) {
-    return _CreateCommunity(
-      name: name,
-      title: title,
-      description: description,
-      icon: icon,
-      banner: banner,
-      nsfw: nsfw,
-      auth: auth,
-    );
-  }
-
-  CreateCommunity fromJson(Map<String, Object?> json) {
-    return CreateCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CreateCommunity = _$CreateCommunityTearOff();
 
 /// @nodoc
 mixin _$CreateCommunity {
@@ -442,6 +394,7 @@ class _$_CreateCommunity extends _CreateCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -466,32 +419,32 @@ class _$_CreateCommunity extends _CreateCommunity {
 
 abstract class _CreateCommunity extends CreateCommunity {
   const factory _CreateCommunity(
-      {required String name,
-      required String title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      required String auth}) = _$_CreateCommunity;
+      {required final String name,
+      required final String title,
+      final String? description,
+      final String? icon,
+      final String? banner,
+      final bool? nsfw,
+      required final String auth}) = _$_CreateCommunity;
   const _CreateCommunity._() : super._();
 
   factory _CreateCommunity.fromJson(Map<String, dynamic> json) =
       _$_CreateCommunity.fromJson;
 
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool? get nsfw;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreateCommunityCopyWith<_CreateCommunity> get copyWith =>
@@ -501,33 +454,6 @@ abstract class _CreateCommunity extends CreateCommunity {
 ListCommunities _$ListCommunitiesFromJson(Map<String, dynamic> json) {
   return _ListCommunities.fromJson(json);
 }
-
-/// @nodoc
-class _$ListCommunitiesTearOff {
-  const _$ListCommunitiesTearOff();
-
-  _ListCommunities call(
-      {@JsonKey(name: 'type_') PostListingType? type,
-      SortType? sort,
-      int? page,
-      int? limit,
-      String? auth}) {
-    return _ListCommunities(
-      type: type,
-      sort: sort,
-      page: page,
-      limit: limit,
-      auth: auth,
-    );
-  }
-
-  ListCommunities fromJson(Map<String, Object?> json) {
-    return ListCommunities.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ListCommunities = _$ListCommunitiesTearOff();
 
 /// @nodoc
 mixin _$ListCommunities {
@@ -702,6 +628,7 @@ class _$_ListCommunities extends _ListCommunities {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -724,11 +651,11 @@ class _$_ListCommunities extends _ListCommunities {
 
 abstract class _ListCommunities extends ListCommunities {
   const factory _ListCommunities(
-      {@JsonKey(name: 'type_') PostListingType? type,
-      SortType? sort,
-      int? page,
-      int? limit,
-      String? auth}) = _$_ListCommunities;
+      {@JsonKey(name: 'type_') final PostListingType? type,
+      final SortType? sort,
+      final int? page,
+      final int? limit,
+      final String? auth}) = _$_ListCommunities;
   const _ListCommunities._() : super._();
 
   factory _ListCommunities.fromJson(Map<String, dynamic> json) =
@@ -736,15 +663,15 @@ abstract class _ListCommunities extends ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type;
+  PostListingType? get type => throw _privateConstructorUsedError;
   @override
-  SortType? get sort;
+  SortType? get sort => throw _privateConstructorUsedError;
   @override
-  int? get page;
+  int? get page => throw _privateConstructorUsedError;
   @override
-  int? get limit;
+  int? get limit => throw _privateConstructorUsedError;
   @override
-  String? get auth;
+  String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ListCommunitiesCopyWith<_ListCommunities> get copyWith =>
@@ -754,37 +681,6 @@ abstract class _ListCommunities extends ListCommunities {
 BanFromCommunity _$BanFromCommunityFromJson(Map<String, dynamic> json) {
   return _BanFromCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$BanFromCommunityTearOff {
-  const _$BanFromCommunityTearOff();
-
-  _BanFromCommunity call(
-      {required int communityId,
-      required int personId,
-      required bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      required String auth}) {
-    return _BanFromCommunity(
-      communityId: communityId,
-      personId: personId,
-      ban: ban,
-      removeData: removeData,
-      reason: reason,
-      expires: expires,
-      auth: auth,
-    );
-  }
-
-  BanFromCommunity fromJson(Map<String, Object?> json) {
-    return BanFromCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BanFromCommunity = _$BanFromCommunityTearOff();
 
 /// @nodoc
 mixin _$BanFromCommunity {
@@ -993,6 +889,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1017,32 +914,32 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 
 abstract class _BanFromCommunity extends BanFromCommunity {
   const factory _BanFromCommunity(
-      {required int communityId,
-      required int personId,
-      required bool ban,
-      bool? removeData,
-      String? reason,
-      int? expires,
-      required String auth}) = _$_BanFromCommunity;
+      {required final int communityId,
+      required final int personId,
+      required final bool ban,
+      final bool? removeData,
+      final String? reason,
+      final int? expires,
+      required final String auth}) = _$_BanFromCommunity;
   const _BanFromCommunity._() : super._();
 
   factory _BanFromCommunity.fromJson(Map<String, dynamic> json) =
       _$_BanFromCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  bool get ban;
+  bool get ban => throw _privateConstructorUsedError;
   @override
-  bool? get removeData;
+  bool? get removeData => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  int? get expires;
+  int? get expires => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BanFromCommunityCopyWith<_BanFromCommunity> get copyWith =>
@@ -1052,31 +949,6 @@ abstract class _BanFromCommunity extends BanFromCommunity {
 AddModToCommunity _$AddModToCommunityFromJson(Map<String, dynamic> json) {
   return _AddModToCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$AddModToCommunityTearOff {
-  const _$AddModToCommunityTearOff();
-
-  _AddModToCommunity call(
-      {required int communityId,
-      required int personId,
-      required bool added,
-      required String auth}) {
-    return _AddModToCommunity(
-      communityId: communityId,
-      personId: personId,
-      added: added,
-      auth: auth,
-    );
-  }
-
-  AddModToCommunity fromJson(Map<String, Object?> json) {
-    return AddModToCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $AddModToCommunity = _$AddModToCommunityTearOff();
 
 /// @nodoc
 mixin _$AddModToCommunity {
@@ -1225,6 +1097,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1246,23 +1119,23 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 
 abstract class _AddModToCommunity extends AddModToCommunity {
   const factory _AddModToCommunity(
-      {required int communityId,
-      required int personId,
-      required bool added,
-      required String auth}) = _$_AddModToCommunity;
+      {required final int communityId,
+      required final int personId,
+      required final bool added,
+      required final String auth}) = _$_AddModToCommunity;
   const _AddModToCommunity._() : super._();
 
   factory _AddModToCommunity.fromJson(Map<String, dynamic> json) =
       _$_AddModToCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  bool get added;
+  bool get added => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AddModToCommunityCopyWith<_AddModToCommunity> get copyWith =>
@@ -1272,37 +1145,6 @@ abstract class _AddModToCommunity extends AddModToCommunity {
 EditCommunity _$EditCommunityFromJson(Map<String, dynamic> json) {
   return _EditCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$EditCommunityTearOff {
-  const _$EditCommunityTearOff();
-
-  _EditCommunity call(
-      {required int communityId,
-      String? title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      required String auth}) {
-    return _EditCommunity(
-      communityId: communityId,
-      title: title,
-      description: description,
-      icon: icon,
-      banner: banner,
-      nsfw: nsfw,
-      auth: auth,
-    );
-  }
-
-  EditCommunity fromJson(Map<String, Object?> json) {
-    return EditCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $EditCommunity = _$EditCommunityTearOff();
 
 /// @nodoc
 mixin _$EditCommunity {
@@ -1511,6 +1353,7 @@ class _$_EditCommunity extends _EditCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1535,32 +1378,32 @@ class _$_EditCommunity extends _EditCommunity {
 
 abstract class _EditCommunity extends EditCommunity {
   const factory _EditCommunity(
-      {required int communityId,
-      String? title,
-      String? description,
-      String? icon,
-      String? banner,
-      bool? nsfw,
-      required String auth}) = _$_EditCommunity;
+      {required final int communityId,
+      final String? title,
+      final String? description,
+      final String? icon,
+      final String? banner,
+      final bool? nsfw,
+      required final String auth}) = _$_EditCommunity;
   const _EditCommunity._() : super._();
 
   factory _EditCommunity.fromJson(Map<String, dynamic> json) =
       _$_EditCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  String? get title;
+  String? get title => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  String? get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool? get nsfw;
+  bool? get nsfw => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EditCommunityCopyWith<_EditCommunity> get copyWith =>
@@ -1570,27 +1413,6 @@ abstract class _EditCommunity extends EditCommunity {
 DeleteCommunity _$DeleteCommunityFromJson(Map<String, dynamic> json) {
   return _DeleteCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$DeleteCommunityTearOff {
-  const _$DeleteCommunityTearOff();
-
-  _DeleteCommunity call(
-      {required int communityId, required bool deleted, required String auth}) {
-    return _DeleteCommunity(
-      communityId: communityId,
-      deleted: deleted,
-      auth: auth,
-    );
-  }
-
-  DeleteCommunity fromJson(Map<String, Object?> json) {
-    return DeleteCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeleteCommunity = _$DeleteCommunityTearOff();
 
 /// @nodoc
 mixin _$DeleteCommunity {
@@ -1722,6 +1544,7 @@ class _$_DeleteCommunity extends _DeleteCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1742,20 +1565,20 @@ class _$_DeleteCommunity extends _DeleteCommunity {
 
 abstract class _DeleteCommunity extends DeleteCommunity {
   const factory _DeleteCommunity(
-      {required int communityId,
-      required bool deleted,
-      required String auth}) = _$_DeleteCommunity;
+      {required final int communityId,
+      required final bool deleted,
+      required final String auth}) = _$_DeleteCommunity;
   const _DeleteCommunity._() : super._();
 
   factory _DeleteCommunity.fromJson(Map<String, dynamic> json) =
       _$_DeleteCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeleteCommunityCopyWith<_DeleteCommunity> get copyWith =>
@@ -1765,33 +1588,6 @@ abstract class _DeleteCommunity extends DeleteCommunity {
 RemoveCommunity _$RemoveCommunityFromJson(Map<String, dynamic> json) {
   return _RemoveCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$RemoveCommunityTearOff {
-  const _$RemoveCommunityTearOff();
-
-  _RemoveCommunity call(
-      {required int communityId,
-      required bool removed,
-      String? reason,
-      int? expires,
-      required String auth}) {
-    return _RemoveCommunity(
-      communityId: communityId,
-      removed: removed,
-      reason: reason,
-      expires: expires,
-      auth: auth,
-    );
-  }
-
-  RemoveCommunity fromJson(Map<String, Object?> json) {
-    return RemoveCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RemoveCommunity = _$RemoveCommunityTearOff();
 
 /// @nodoc
 mixin _$RemoveCommunity {
@@ -1965,6 +1761,7 @@ class _$_RemoveCommunity extends _RemoveCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1987,26 +1784,26 @@ class _$_RemoveCommunity extends _RemoveCommunity {
 
 abstract class _RemoveCommunity extends RemoveCommunity {
   const factory _RemoveCommunity(
-      {required int communityId,
-      required bool removed,
-      String? reason,
-      int? expires,
-      required String auth}) = _$_RemoveCommunity;
+      {required final int communityId,
+      required final bool removed,
+      final String? reason,
+      final int? expires,
+      required final String auth}) = _$_RemoveCommunity;
   const _RemoveCommunity._() : super._();
 
   factory _RemoveCommunity.fromJson(Map<String, dynamic> json) =
       _$_RemoveCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  int? get expires;
+  int? get expires => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RemoveCommunityCopyWith<_RemoveCommunity> get copyWith =>
@@ -2016,27 +1813,6 @@ abstract class _RemoveCommunity extends RemoveCommunity {
 FollowCommunity _$FollowCommunityFromJson(Map<String, dynamic> json) {
   return _FollowCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$FollowCommunityTearOff {
-  const _$FollowCommunityTearOff();
-
-  _FollowCommunity call(
-      {required int communityId, required bool follow, required String auth}) {
-    return _FollowCommunity(
-      communityId: communityId,
-      follow: follow,
-      auth: auth,
-    );
-  }
-
-  FollowCommunity fromJson(Map<String, Object?> json) {
-    return FollowCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $FollowCommunity = _$FollowCommunityTearOff();
 
 /// @nodoc
 mixin _$FollowCommunity {
@@ -2168,6 +1944,7 @@ class _$_FollowCommunity extends _FollowCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2188,20 +1965,20 @@ class _$_FollowCommunity extends _FollowCommunity {
 
 abstract class _FollowCommunity extends FollowCommunity {
   const factory _FollowCommunity(
-      {required int communityId,
-      required bool follow,
-      required String auth}) = _$_FollowCommunity;
+      {required final int communityId,
+      required final bool follow,
+      required final String auth}) = _$_FollowCommunity;
   const _FollowCommunity._() : super._();
 
   factory _FollowCommunity.fromJson(Map<String, dynamic> json) =
       _$_FollowCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get follow;
+  bool get follow => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$FollowCommunityCopyWith<_FollowCommunity> get copyWith =>
@@ -2211,27 +1988,6 @@ abstract class _FollowCommunity extends FollowCommunity {
 TransferCommunity _$TransferCommunityFromJson(Map<String, dynamic> json) {
   return _TransferCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$TransferCommunityTearOff {
-  const _$TransferCommunityTearOff();
-
-  _TransferCommunity call(
-      {required int communityId, required int personId, required String auth}) {
-    return _TransferCommunity(
-      communityId: communityId,
-      personId: personId,
-      auth: auth,
-    );
-  }
-
-  TransferCommunity fromJson(Map<String, Object?> json) {
-    return TransferCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TransferCommunity = _$TransferCommunityTearOff();
 
 /// @nodoc
 mixin _$TransferCommunity {
@@ -2363,6 +2119,7 @@ class _$_TransferCommunity extends _TransferCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2383,20 +2140,20 @@ class _$_TransferCommunity extends _TransferCommunity {
 
 abstract class _TransferCommunity extends TransferCommunity {
   const factory _TransferCommunity(
-      {required int communityId,
-      required int personId,
-      required String auth}) = _$_TransferCommunity;
+      {required final int communityId,
+      required final int personId,
+      required final String auth}) = _$_TransferCommunity;
   const _TransferCommunity._() : super._();
 
   factory _TransferCommunity.fromJson(Map<String, dynamic> json) =
       _$_TransferCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$TransferCommunityCopyWith<_TransferCommunity> get copyWith =>
@@ -2406,27 +2163,6 @@ abstract class _TransferCommunity extends TransferCommunity {
 BlockCommunity _$BlockCommunityFromJson(Map<String, dynamic> json) {
   return _BlockCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$BlockCommunityTearOff {
-  const _$BlockCommunityTearOff();
-
-  _BlockCommunity call(
-      {required int communityId, required bool block, required String auth}) {
-    return _BlockCommunity(
-      communityId: communityId,
-      block: block,
-      auth: auth,
-    );
-  }
-
-  BlockCommunity fromJson(Map<String, Object?> json) {
-    return BlockCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $BlockCommunity = _$BlockCommunityTearOff();
 
 /// @nodoc
 mixin _$BlockCommunity {
@@ -2558,6 +2294,7 @@ class _$_BlockCommunity extends _BlockCommunity {
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2578,20 +2315,20 @@ class _$_BlockCommunity extends _BlockCommunity {
 
 abstract class _BlockCommunity extends BlockCommunity {
   const factory _BlockCommunity(
-      {required int communityId,
-      required bool block,
-      required String auth}) = _$_BlockCommunity;
+      {required final int communityId,
+      required final bool block,
+      required final String auth}) = _$_BlockCommunity;
   const _BlockCommunity._() : super._();
 
   factory _BlockCommunity.fromJson(Map<String, dynamic> json) =
       _$_BlockCommunity.fromJson;
 
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get block;
+  bool get block => throw _privateConstructorUsedError;
   @override
-  String get auth;
+  String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$BlockCommunityCopyWith<_BlockCommunity> get copyWith =>

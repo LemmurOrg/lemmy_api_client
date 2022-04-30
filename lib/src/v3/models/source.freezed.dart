@@ -12,66 +12,11 @@ part of 'source.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 PersonSafe _$PersonSafeFromJson(Map<String, dynamic> json) {
   return _PersonSafe.fromJson(json);
 }
-
-/// @nodoc
-class _$PersonSafeTearOff {
-  const _$PersonSafeTearOff();
-
-  _PersonSafe call(
-      {required int id,
-      required String name,
-      String? displayName,
-      String? avatar,
-      required bool banned,
-      required DateTime published,
-      DateTime? updated,
-      required String actorId,
-      String? bio,
-      required bool local,
-      String? banner,
-      required bool deleted,
-      required String inboxUrl,
-      required String sharedInboxUrl,
-      String? matrixUserId,
-      required bool admin,
-      required bool botAccount,
-      DateTime? banExpires,
-      required String instanceHost}) {
-    return _PersonSafe(
-      id: id,
-      name: name,
-      displayName: displayName,
-      avatar: avatar,
-      banned: banned,
-      published: published,
-      updated: updated,
-      actorId: actorId,
-      bio: bio,
-      local: local,
-      banner: banner,
-      deleted: deleted,
-      inboxUrl: inboxUrl,
-      sharedInboxUrl: sharedInboxUrl,
-      matrixUserId: matrixUserId,
-      admin: admin,
-      botAccount: botAccount,
-      banExpires: banExpires,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PersonSafe fromJson(Map<String, Object?> json) {
-    return PersonSafe.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PersonSafe = _$PersonSafeTearOff();
 
 /// @nodoc
 mixin _$PersonSafe {
@@ -487,6 +432,7 @@ class _$_PersonSafe extends _PersonSafe {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -524,68 +470,68 @@ class _$_PersonSafe extends _PersonSafe {
 
 abstract class _PersonSafe extends PersonSafe {
   const factory _PersonSafe(
-      {required int id,
-      required String name,
-      String? displayName,
-      String? avatar,
-      required bool banned,
-      required DateTime published,
-      DateTime? updated,
-      required String actorId,
-      String? bio,
-      required bool local,
-      String? banner,
-      required bool deleted,
-      required String inboxUrl,
-      required String sharedInboxUrl,
-      String? matrixUserId,
-      required bool admin,
-      required bool botAccount,
-      DateTime? banExpires,
-      required String instanceHost}) = _$_PersonSafe;
+      {required final int id,
+      required final String name,
+      final String? displayName,
+      final String? avatar,
+      required final bool banned,
+      required final DateTime published,
+      final DateTime? updated,
+      required final String actorId,
+      final String? bio,
+      required final bool local,
+      final String? banner,
+      required final bool deleted,
+      required final String inboxUrl,
+      required final String sharedInboxUrl,
+      final String? matrixUserId,
+      required final bool admin,
+      required final bool botAccount,
+      final DateTime? banExpires,
+      required final String instanceHost}) = _$_PersonSafe;
   const _PersonSafe._() : super._();
 
   factory _PersonSafe.fromJson(Map<String, dynamic> json) =
       _$_PersonSafe.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get displayName;
+  String? get displayName => throw _privateConstructorUsedError;
   @override
-  String? get avatar;
+  String? get avatar => throw _privateConstructorUsedError;
   @override
-  bool get banned;
+  bool get banned => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  String get actorId;
+  String get actorId => throw _privateConstructorUsedError;
   @override
-  String? get bio;
+  String? get bio => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get inboxUrl;
+  String get inboxUrl => throw _privateConstructorUsedError;
   @override
-  String get sharedInboxUrl;
+  String get sharedInboxUrl => throw _privateConstructorUsedError;
   @override
-  String? get matrixUserId;
+  String? get matrixUserId => throw _privateConstructorUsedError;
   @override
-  bool get admin;
+  bool get admin => throw _privateConstructorUsedError;
   @override
-  bool get botAccount;
+  bool get botAccount => throw _privateConstructorUsedError;
   @override
-  DateTime? get banExpires;
+  DateTime? get banExpires => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonSafeCopyWith<_PersonSafe> get copyWith =>
@@ -595,59 +541,6 @@ abstract class _PersonSafe extends PersonSafe {
 LocalUserSettings _$LocalUserSettingsFromJson(Map<String, dynamic> json) {
   return _LocalUserSettings.fromJson(json);
 }
-
-/// @nodoc
-class _$LocalUserSettingsTearOff {
-  const _$LocalUserSettingsTearOff();
-
-  _LocalUserSettings call(
-      {required int id,
-      required int personId,
-      String? email,
-      required bool showNsfw,
-      required String theme,
-      @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required SortType defaultSortType,
-      @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required PostListingType defaultListingType,
-      required String lang,
-      required bool showAvatars,
-      required bool showScores,
-      required bool sendNotificationsToEmail,
-      required bool showReadPosts,
-      required bool showBotAccounts,
-      required bool showNewPostNotifs,
-      required bool emailVerified,
-      required bool acceptedApplication,
-      required String instanceHost}) {
-    return _LocalUserSettings(
-      id: id,
-      personId: personId,
-      email: email,
-      showNsfw: showNsfw,
-      theme: theme,
-      defaultSortType: defaultSortType,
-      defaultListingType: defaultListingType,
-      lang: lang,
-      showAvatars: showAvatars,
-      showScores: showScores,
-      sendNotificationsToEmail: sendNotificationsToEmail,
-      showReadPosts: showReadPosts,
-      showBotAccounts: showBotAccounts,
-      showNewPostNotifs: showNewPostNotifs,
-      emailVerified: emailVerified,
-      acceptedApplication: acceptedApplication,
-      instanceHost: instanceHost,
-    );
-  }
-
-  LocalUserSettings fromJson(Map<String, Object?> json) {
-    return LocalUserSettings.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $LocalUserSettings = _$LocalUserSettingsTearOff();
 
 /// @nodoc
 mixin _$LocalUserSettings {
@@ -1047,6 +940,7 @@ class _$_LocalUserSettings extends _LocalUserSettings {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1081,66 +975,66 @@ class _$_LocalUserSettings extends _LocalUserSettings {
 
 abstract class _LocalUserSettings extends LocalUserSettings {
   const factory _LocalUserSettings(
-      {required int id,
-      required int personId,
-      String? email,
-      required bool showNsfw,
-      required String theme,
+      {required final int id,
+      required final int personId,
+      final String? email,
+      required final bool showNsfw,
+      required final String theme,
       @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-          required SortType defaultSortType,
+          required final SortType defaultSortType,
       @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-          required PostListingType defaultListingType,
-      required String lang,
-      required bool showAvatars,
-      required bool showScores,
-      required bool sendNotificationsToEmail,
-      required bool showReadPosts,
-      required bool showBotAccounts,
-      required bool showNewPostNotifs,
-      required bool emailVerified,
-      required bool acceptedApplication,
-      required String instanceHost}) = _$_LocalUserSettings;
+          required final PostListingType defaultListingType,
+      required final String lang,
+      required final bool showAvatars,
+      required final bool showScores,
+      required final bool sendNotificationsToEmail,
+      required final bool showReadPosts,
+      required final bool showBotAccounts,
+      required final bool showNewPostNotifs,
+      required final bool emailVerified,
+      required final bool acceptedApplication,
+      required final String instanceHost}) = _$_LocalUserSettings;
   const _LocalUserSettings._() : super._();
 
   factory _LocalUserSettings.fromJson(Map<String, dynamic> json) =
       _$_LocalUserSettings.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get personId;
+  int get personId => throw _privateConstructorUsedError;
   @override
-  String? get email;
+  String? get email => throw _privateConstructorUsedError;
   @override
-  bool get showNsfw;
+  bool get showNsfw => throw _privateConstructorUsedError;
   @override
-  String get theme;
+  String get theme => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType;
+  SortType get defaultSortType => throw _privateConstructorUsedError;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType;
+  PostListingType get defaultListingType => throw _privateConstructorUsedError;
   @override
-  String get lang;
+  String get lang => throw _privateConstructorUsedError;
   @override
-  bool get showAvatars;
+  bool get showAvatars => throw _privateConstructorUsedError;
   @override
-  bool get showScores;
+  bool get showScores => throw _privateConstructorUsedError;
   @override
-  bool get sendNotificationsToEmail;
+  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
   @override
-  bool get showReadPosts;
+  bool get showReadPosts => throw _privateConstructorUsedError;
   @override
-  bool get showBotAccounts;
+  bool get showBotAccounts => throw _privateConstructorUsedError;
   @override
-  bool get showNewPostNotifs;
+  bool get showNewPostNotifs => throw _privateConstructorUsedError;
   @override
-  bool get emailVerified;
+  bool get emailVerified => throw _privateConstructorUsedError;
   @override
-  bool get acceptedApplication;
+  bool get acceptedApplication => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$LocalUserSettingsCopyWith<_LocalUserSettings> get copyWith =>
@@ -1150,67 +1044,6 @@ abstract class _LocalUserSettings extends LocalUserSettings {
 Site _$SiteFromJson(Map<String, dynamic> json) {
   return _Site.fromJson(json);
 }
-
-/// @nodoc
-class _$SiteTearOff {
-  const _$SiteTearOff();
-
-  _Site call(
-      {required int id,
-      required String name,
-      String? sidebar,
-      String? description,
-      required DateTime published,
-      DateTime? updated,
-      required bool enableDownvotes,
-      required bool openRegistration,
-      required bool enableNsfw,
-      required bool communityCreationAdminOnly,
-      String? icon,
-      String? banner,
-      required bool requireEmailVerification,
-      required bool requireApplication,
-      String? applicationQuestion,
-      required bool privateInstance,
-      required String defaultTheme,
-      required String actorId,
-      required String lastRefreshedAt,
-      required String inboxUrl,
-      required String publicKey,
-      required String instanceHost}) {
-    return _Site(
-      id: id,
-      name: name,
-      sidebar: sidebar,
-      description: description,
-      published: published,
-      updated: updated,
-      enableDownvotes: enableDownvotes,
-      openRegistration: openRegistration,
-      enableNsfw: enableNsfw,
-      communityCreationAdminOnly: communityCreationAdminOnly,
-      icon: icon,
-      banner: banner,
-      requireEmailVerification: requireEmailVerification,
-      requireApplication: requireApplication,
-      applicationQuestion: applicationQuestion,
-      privateInstance: privateInstance,
-      defaultTheme: defaultTheme,
-      actorId: actorId,
-      lastRefreshedAt: lastRefreshedAt,
-      inboxUrl: inboxUrl,
-      publicKey: publicKey,
-      instanceHost: instanceHost,
-    );
-  }
-
-  Site fromJson(Map<String, Object?> json) {
-    return Site.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Site = _$SiteTearOff();
 
 /// @nodoc
 mixin _$Site {
@@ -1678,6 +1511,7 @@ class _$_Site extends _Site {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1718,76 +1552,76 @@ class _$_Site extends _Site {
 
 abstract class _Site extends Site {
   const factory _Site(
-      {required int id,
-      required String name,
-      String? sidebar,
-      String? description,
-      required DateTime published,
-      DateTime? updated,
-      required bool enableDownvotes,
-      required bool openRegistration,
-      required bool enableNsfw,
-      required bool communityCreationAdminOnly,
-      String? icon,
-      String? banner,
-      required bool requireEmailVerification,
-      required bool requireApplication,
-      String? applicationQuestion,
-      required bool privateInstance,
-      required String defaultTheme,
-      required String actorId,
-      required String lastRefreshedAt,
-      required String inboxUrl,
-      required String publicKey,
-      required String instanceHost}) = _$_Site;
+      {required final int id,
+      required final String name,
+      final String? sidebar,
+      final String? description,
+      required final DateTime published,
+      final DateTime? updated,
+      required final bool enableDownvotes,
+      required final bool openRegistration,
+      required final bool enableNsfw,
+      required final bool communityCreationAdminOnly,
+      final String? icon,
+      final String? banner,
+      required final bool requireEmailVerification,
+      required final bool requireApplication,
+      final String? applicationQuestion,
+      required final bool privateInstance,
+      required final String defaultTheme,
+      required final String actorId,
+      required final String lastRefreshedAt,
+      required final String inboxUrl,
+      required final String publicKey,
+      required final String instanceHost}) = _$_Site;
   const _Site._() : super._();
 
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get sidebar;
+  String? get sidebar => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get enableDownvotes;
+  bool get enableDownvotes => throw _privateConstructorUsedError;
   @override
-  bool get openRegistration;
+  bool get openRegistration => throw _privateConstructorUsedError;
   @override
-  bool get enableNsfw;
+  bool get enableNsfw => throw _privateConstructorUsedError;
   @override
-  bool get communityCreationAdminOnly;
+  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
   @override
-  String? get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  bool get requireEmailVerification;
+  bool get requireEmailVerification => throw _privateConstructorUsedError;
   @override
-  bool get requireApplication;
+  bool get requireApplication => throw _privateConstructorUsedError;
   @override
-  String? get applicationQuestion;
+  String? get applicationQuestion => throw _privateConstructorUsedError;
   @override
-  bool get privateInstance;
+  bool get privateInstance => throw _privateConstructorUsedError;
   @override
-  String get defaultTheme;
+  String get defaultTheme => throw _privateConstructorUsedError;
   @override
-  String get actorId;
+  String get actorId => throw _privateConstructorUsedError;
   @override
-  String get lastRefreshedAt;
+  String get lastRefreshedAt => throw _privateConstructorUsedError;
   @override
-  String get inboxUrl;
+  String get inboxUrl => throw _privateConstructorUsedError;
   @override
-  String get publicKey;
+  String get publicKey => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SiteCopyWith<_Site> get copyWith => throw _privateConstructorUsedError;
@@ -1796,45 +1630,6 @@ abstract class _Site extends Site {
 PrivateMessage _$PrivateMessageFromJson(Map<String, dynamic> json) {
   return _PrivateMessage.fromJson(json);
 }
-
-/// @nodoc
-class _$PrivateMessageTearOff {
-  const _$PrivateMessageTearOff();
-
-  _PrivateMessage call(
-      {required int id,
-      required int creatorId,
-      required int recipientId,
-      required String content,
-      required bool deleted,
-      required bool read,
-      required DateTime published,
-      DateTime? updated,
-      required String apId,
-      required bool local,
-      required String instanceHost}) {
-    return _PrivateMessage(
-      id: id,
-      creatorId: creatorId,
-      recipientId: recipientId,
-      content: content,
-      deleted: deleted,
-      read: read,
-      published: published,
-      updated: updated,
-      apId: apId,
-      local: local,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PrivateMessage fromJson(Map<String, Object?> json) {
-    return PrivateMessage.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PrivateMessage = _$PrivateMessageTearOff();
 
 /// @nodoc
 mixin _$PrivateMessage {
@@ -2113,6 +1908,7 @@ class _$_PrivateMessage extends _PrivateMessage {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2141,44 +1937,44 @@ class _$_PrivateMessage extends _PrivateMessage {
 
 abstract class _PrivateMessage extends PrivateMessage {
   const factory _PrivateMessage(
-      {required int id,
-      required int creatorId,
-      required int recipientId,
-      required String content,
-      required bool deleted,
-      required bool read,
-      required DateTime published,
-      DateTime? updated,
-      required String apId,
-      required bool local,
-      required String instanceHost}) = _$_PrivateMessage;
+      {required final int id,
+      required final int creatorId,
+      required final int recipientId,
+      required final String content,
+      required final bool deleted,
+      required final bool read,
+      required final DateTime published,
+      final DateTime? updated,
+      required final String apId,
+      required final bool local,
+      required final String instanceHost}) = _$_PrivateMessage;
   const _PrivateMessage._() : super._();
 
   factory _PrivateMessage.fromJson(Map<String, dynamic> json) =
       _$_PrivateMessage.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get recipientId;
+  int get recipientId => throw _privateConstructorUsedError;
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  String get apId;
+  String get apId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PrivateMessageCopyWith<_PrivateMessage> get copyWith =>
@@ -2188,47 +1984,6 @@ abstract class _PrivateMessage extends PrivateMessage {
 PostReport _$PostReportFromJson(Map<String, dynamic> json) {
   return _PostReport.fromJson(json);
 }
-
-/// @nodoc
-class _$PostReportTearOff {
-  const _$PostReportTearOff();
-
-  _PostReport call(
-      {required int id,
-      required int creatorId,
-      required int postId,
-      required String originalPostName,
-      String? originalPostUrl,
-      String? originalPostBody,
-      required String reason,
-      required bool resolved,
-      int? resolverId,
-      required DateTime published,
-      DateTime? updated,
-      required String instanceHost}) {
-    return _PostReport(
-      id: id,
-      creatorId: creatorId,
-      postId: postId,
-      originalPostName: originalPostName,
-      originalPostUrl: originalPostUrl,
-      originalPostBody: originalPostBody,
-      reason: reason,
-      resolved: resolved,
-      resolverId: resolverId,
-      published: published,
-      updated: updated,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PostReport fromJson(Map<String, Object?> json) {
-    return PostReport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PostReport = _$PostReportTearOff();
 
 /// @nodoc
 mixin _$PostReport {
@@ -2524,6 +2279,7 @@ class _$_PostReport extends _PostReport {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2553,47 +2309,47 @@ class _$_PostReport extends _PostReport {
 
 abstract class _PostReport extends PostReport {
   const factory _PostReport(
-      {required int id,
-      required int creatorId,
-      required int postId,
-      required String originalPostName,
-      String? originalPostUrl,
-      String? originalPostBody,
-      required String reason,
-      required bool resolved,
-      int? resolverId,
-      required DateTime published,
-      DateTime? updated,
-      required String instanceHost}) = _$_PostReport;
+      {required final int id,
+      required final int creatorId,
+      required final int postId,
+      required final String originalPostName,
+      final String? originalPostUrl,
+      final String? originalPostBody,
+      required final String reason,
+      required final bool resolved,
+      final int? resolverId,
+      required final DateTime published,
+      final DateTime? updated,
+      required final String instanceHost}) = _$_PostReport;
   const _PostReport._() : super._();
 
   factory _PostReport.fromJson(Map<String, dynamic> json) =
       _$_PostReport.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String get originalPostName;
+  String get originalPostName => throw _privateConstructorUsedError;
   @override
-  String? get originalPostUrl;
+  String? get originalPostUrl => throw _privateConstructorUsedError;
   @override
-  String? get originalPostBody;
+  String? get originalPostBody => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
-  bool get resolved;
+  bool get resolved => throw _privateConstructorUsedError;
   @override
-  int? get resolverId;
+  int? get resolverId => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostReportCopyWith<_PostReport> get copyWith =>
@@ -2603,63 +2359,6 @@ abstract class _PostReport extends PostReport {
 Post _$PostFromJson(Map<String, dynamic> json) {
   return _Post.fromJson(json);
 }
-
-/// @nodoc
-class _$PostTearOff {
-  const _$PostTearOff();
-
-  _Post call(
-      {required int id,
-      required String name,
-      String? url,
-      String? body,
-      required int creatorId,
-      required int communityId,
-      required bool removed,
-      required bool locked,
-      required DateTime published,
-      DateTime? updated,
-      required bool deleted,
-      required bool nsfw,
-      required bool stickied,
-      String? embedTitle,
-      String? embedDescription,
-      String? embedHtml,
-      String? thumbnailUrl,
-      required String apId,
-      required bool local,
-      required String instanceHost}) {
-    return _Post(
-      id: id,
-      name: name,
-      url: url,
-      body: body,
-      creatorId: creatorId,
-      communityId: communityId,
-      removed: removed,
-      locked: locked,
-      published: published,
-      updated: updated,
-      deleted: deleted,
-      nsfw: nsfw,
-      stickied: stickied,
-      embedTitle: embedTitle,
-      embedDescription: embedDescription,
-      embedHtml: embedHtml,
-      thumbnailUrl: thumbnailUrl,
-      apId: apId,
-      local: local,
-      instanceHost: instanceHost,
-    );
-  }
-
-  Post fromJson(Map<String, Object?> json) {
-    return Post.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Post = _$PostTearOff();
 
 /// @nodoc
 mixin _$Post {
@@ -3086,6 +2785,7 @@ class _$_Post extends _Post {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3124,70 +2824,70 @@ class _$_Post extends _Post {
 
 abstract class _Post extends Post {
   const factory _Post(
-      {required int id,
-      required String name,
-      String? url,
-      String? body,
-      required int creatorId,
-      required int communityId,
-      required bool removed,
-      required bool locked,
-      required DateTime published,
-      DateTime? updated,
-      required bool deleted,
-      required bool nsfw,
-      required bool stickied,
-      String? embedTitle,
-      String? embedDescription,
-      String? embedHtml,
-      String? thumbnailUrl,
-      required String apId,
-      required bool local,
-      required String instanceHost}) = _$_Post;
+      {required final int id,
+      required final String name,
+      final String? url,
+      final String? body,
+      required final int creatorId,
+      required final int communityId,
+      required final bool removed,
+      required final bool locked,
+      required final DateTime published,
+      final DateTime? updated,
+      required final bool deleted,
+      required final bool nsfw,
+      required final bool stickied,
+      final String? embedTitle,
+      final String? embedDescription,
+      final String? embedHtml,
+      final String? thumbnailUrl,
+      required final String apId,
+      required final bool local,
+      required final String instanceHost}) = _$_Post;
   const _Post._() : super._();
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String? get url;
+  String? get url => throw _privateConstructorUsedError;
   @override
-  String? get body;
+  String? get body => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  bool get locked;
+  bool get locked => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  bool get nsfw;
+  bool get nsfw => throw _privateConstructorUsedError;
   @override
-  bool get stickied;
+  bool get stickied => throw _privateConstructorUsedError;
   @override
-  String? get embedTitle;
+  String? get embedTitle => throw _privateConstructorUsedError;
   @override
-  String? get embedDescription;
+  String? get embedDescription => throw _privateConstructorUsedError;
   @override
-  String? get embedHtml;
+  String? get embedHtml => throw _privateConstructorUsedError;
   @override
-  String? get thumbnailUrl;
+  String? get thumbnailUrl => throw _privateConstructorUsedError;
   @override
-  String get apId;
+  String get apId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PostCopyWith<_Post> get copyWith => throw _privateConstructorUsedError;
@@ -3196,33 +2896,6 @@ abstract class _Post extends Post {
 PasswordResetRequest _$PasswordResetRequestFromJson(Map<String, dynamic> json) {
   return _PasswordResetRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$PasswordResetRequestTearOff {
-  const _$PasswordResetRequestTearOff();
-
-  _PasswordResetRequest call(
-      {required int id,
-      required int localUserId,
-      required String tokenEncrypted,
-      required DateTime published,
-      required String instanceHost}) {
-    return _PasswordResetRequest(
-      id: id,
-      localUserId: localUserId,
-      tokenEncrypted: tokenEncrypted,
-      published: published,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PasswordResetRequest fromJson(Map<String, Object?> json) {
-    return PasswordResetRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PasswordResetRequest = _$PasswordResetRequestTearOff();
 
 /// @nodoc
 mixin _$PasswordResetRequest {
@@ -3400,6 +3073,7 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3423,26 +3097,26 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 
 abstract class _PasswordResetRequest extends PasswordResetRequest {
   const factory _PasswordResetRequest(
-      {required int id,
-      required int localUserId,
-      required String tokenEncrypted,
-      required DateTime published,
-      required String instanceHost}) = _$_PasswordResetRequest;
+      {required final int id,
+      required final int localUserId,
+      required final String tokenEncrypted,
+      required final DateTime published,
+      required final String instanceHost}) = _$_PasswordResetRequest;
   const _PasswordResetRequest._() : super._();
 
   factory _PasswordResetRequest.fromJson(Map<String, dynamic> json) =
       _$_PasswordResetRequest.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get localUserId;
+  int get localUserId => throw _privateConstructorUsedError;
   @override
-  String get tokenEncrypted;
+  String get tokenEncrypted => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PasswordResetRequestCopyWith<_PasswordResetRequest> get copyWith =>
@@ -3452,37 +3126,6 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
 ModRemovePost _$ModRemovePostFromJson(Map<String, dynamic> json) {
   return _ModRemovePost.fromJson(json);
 }
-
-/// @nodoc
-class _$ModRemovePostTearOff {
-  const _$ModRemovePostTearOff();
-
-  _ModRemovePost call(
-      {required int id,
-      required int modPersonId,
-      required int postId,
-      String? reason,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModRemovePost(
-      id: id,
-      modPersonId: modPersonId,
-      postId: postId,
-      reason: reason,
-      removed: removed,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModRemovePost fromJson(Map<String, Object?> json) {
-    return ModRemovePost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModRemovePost = _$ModRemovePostTearOff();
 
 /// @nodoc
 mixin _$ModRemovePost {
@@ -3695,6 +3338,7 @@ class _$_ModRemovePost extends _ModRemovePost {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3719,33 +3363,33 @@ class _$_ModRemovePost extends _ModRemovePost {
 
 abstract class _ModRemovePost extends ModRemovePost {
   const factory _ModRemovePost(
-      {required int id,
-      required int modPersonId,
-      required int postId,
-      String? reason,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModRemovePost;
+      {required final int id,
+      required final int modPersonId,
+      required final int postId,
+      final String? reason,
+      final bool? removed,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModRemovePost;
   const _ModRemovePost._() : super._();
 
   factory _ModRemovePost.fromJson(Map<String, dynamic> json) =
       _$_ModRemovePost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool? get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemovePostCopyWith<_ModRemovePost> get copyWith =>
@@ -3755,35 +3399,6 @@ abstract class _ModRemovePost extends ModRemovePost {
 ModLockPost _$ModLockPostFromJson(Map<String, dynamic> json) {
   return _ModLockPost.fromJson(json);
 }
-
-/// @nodoc
-class _$ModLockPostTearOff {
-  const _$ModLockPostTearOff();
-
-  _ModLockPost call(
-      {required int id,
-      required int modPersonId,
-      required int postId,
-      bool? locked,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModLockPost(
-      id: id,
-      modPersonId: modPersonId,
-      postId: postId,
-      locked: locked,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModLockPost fromJson(Map<String, Object?> json) {
-    return ModLockPost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModLockPost = _$ModLockPostTearOff();
 
 /// @nodoc
 mixin _$ModLockPost {
@@ -3977,6 +3592,7 @@ class _$_ModLockPost extends _ModLockPost {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4000,30 +3616,30 @@ class _$_ModLockPost extends _ModLockPost {
 
 abstract class _ModLockPost extends ModLockPost {
   const factory _ModLockPost(
-      {required int id,
-      required int modPersonId,
-      required int postId,
-      bool? locked,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModLockPost;
+      {required final int id,
+      required final int modPersonId,
+      required final int postId,
+      final bool? locked,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModLockPost;
   const _ModLockPost._() : super._();
 
   factory _ModLockPost.fromJson(Map<String, dynamic> json) =
       _$_ModLockPost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool? get locked;
+  bool? get locked => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModLockPostCopyWith<_ModLockPost> get copyWith =>
@@ -4033,35 +3649,6 @@ abstract class _ModLockPost extends ModLockPost {
 ModStickyPost _$ModStickyPostFromJson(Map<String, dynamic> json) {
   return _ModStickyPost.fromJson(json);
 }
-
-/// @nodoc
-class _$ModStickyPostTearOff {
-  const _$ModStickyPostTearOff();
-
-  _ModStickyPost call(
-      {required int id,
-      required int modPersonId,
-      required int postId,
-      bool? stickied,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModStickyPost(
-      id: id,
-      modPersonId: modPersonId,
-      postId: postId,
-      stickied: stickied,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModStickyPost fromJson(Map<String, Object?> json) {
-    return ModStickyPost.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModStickyPost = _$ModStickyPostTearOff();
 
 /// @nodoc
 mixin _$ModStickyPost {
@@ -4257,6 +3844,7 @@ class _$_ModStickyPost extends _ModStickyPost {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4280,30 +3868,30 @@ class _$_ModStickyPost extends _ModStickyPost {
 
 abstract class _ModStickyPost extends ModStickyPost {
   const factory _ModStickyPost(
-      {required int id,
-      required int modPersonId,
-      required int postId,
-      bool? stickied,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModStickyPost;
+      {required final int id,
+      required final int modPersonId,
+      required final int postId,
+      final bool? stickied,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModStickyPost;
   const _ModStickyPost._() : super._();
 
   factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
       _$_ModStickyPost.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  bool? get stickied;
+  bool? get stickied => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModStickyPostCopyWith<_ModStickyPost> get copyWith =>
@@ -4313,37 +3901,6 @@ abstract class _ModStickyPost extends ModStickyPost {
 ModRemoveComment _$ModRemoveCommentFromJson(Map<String, dynamic> json) {
   return _ModRemoveComment.fromJson(json);
 }
-
-/// @nodoc
-class _$ModRemoveCommentTearOff {
-  const _$ModRemoveCommentTearOff();
-
-  _ModRemoveComment call(
-      {required int id,
-      required int modPersonId,
-      required int commentId,
-      String? reason,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModRemoveComment(
-      id: id,
-      modPersonId: modPersonId,
-      commentId: commentId,
-      reason: reason,
-      removed: removed,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModRemoveComment fromJson(Map<String, Object?> json) {
-    return ModRemoveComment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModRemoveComment = _$ModRemoveCommentTearOff();
 
 /// @nodoc
 mixin _$ModRemoveComment {
@@ -4556,6 +4113,7 @@ class _$_ModRemoveComment extends _ModRemoveComment {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4580,33 +4138,33 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 
 abstract class _ModRemoveComment extends ModRemoveComment {
   const factory _ModRemoveComment(
-      {required int id,
-      required int modPersonId,
-      required int commentId,
-      String? reason,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModRemoveComment;
+      {required final int id,
+      required final int modPersonId,
+      required final int commentId,
+      final String? reason,
+      final bool? removed,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModRemoveComment;
   const _ModRemoveComment._() : super._();
 
   factory _ModRemoveComment.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveComment.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool? get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommentCopyWith<_ModRemoveComment> get copyWith =>
@@ -4616,39 +4174,6 @@ abstract class _ModRemoveComment extends ModRemoveComment {
 ModRemoveCommunity _$ModRemoveCommunityFromJson(Map<String, dynamic> json) {
   return _ModRemoveCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$ModRemoveCommunityTearOff {
-  const _$ModRemoveCommunityTearOff();
-
-  _ModRemoveCommunity call(
-      {required int id,
-      required int modPersonId,
-      required int communityId,
-      String? reason,
-      bool? removed,
-      DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModRemoveCommunity(
-      id: id,
-      modPersonId: modPersonId,
-      communityId: communityId,
-      reason: reason,
-      removed: removed,
-      expires: expires,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModRemoveCommunity fromJson(Map<String, Object?> json) {
-    return ModRemoveCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModRemoveCommunity = _$ModRemoveCommunityTearOff();
 
 /// @nodoc
 mixin _$ModRemoveCommunity {
@@ -4879,6 +4404,7 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4904,36 +4430,36 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 
 abstract class _ModRemoveCommunity extends ModRemoveCommunity {
   const factory _ModRemoveCommunity(
-      {required int id,
-      required int modPersonId,
-      required int communityId,
-      String? reason,
-      bool? removed,
-      DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModRemoveCommunity;
+      {required final int id,
+      required final int modPersonId,
+      required final int communityId,
+      final String? reason,
+      final bool? removed,
+      final DateTime? expires,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModRemoveCommunity;
   const _ModRemoveCommunity._() : super._();
 
   factory _ModRemoveCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModRemoveCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool? get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
-  DateTime? get expires;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModRemoveCommunityCopyWith<_ModRemoveCommunity> get copyWith =>
@@ -4943,41 +4469,6 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
 ModBanFromCommunity _$ModBanFromCommunityFromJson(Map<String, dynamic> json) {
   return _ModBanFromCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$ModBanFromCommunityTearOff {
-  const _$ModBanFromCommunityTearOff();
-
-  _ModBanFromCommunity call(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      required int communityId,
-      String? reason,
-      bool? banned,
-      DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModBanFromCommunity(
-      id: id,
-      modPersonId: modPersonId,
-      otherPersonId: otherPersonId,
-      communityId: communityId,
-      reason: reason,
-      banned: banned,
-      expires: expires,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModBanFromCommunity fromJson(Map<String, Object?> json) {
-    return ModBanFromCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModBanFromCommunity = _$ModBanFromCommunityTearOff();
 
 /// @nodoc
 mixin _$ModBanFromCommunity {
@@ -5226,6 +4717,7 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5253,39 +4745,39 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 
 abstract class _ModBanFromCommunity extends ModBanFromCommunity {
   const factory _ModBanFromCommunity(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      required int communityId,
-      String? reason,
-      bool? banned,
-      DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModBanFromCommunity;
+      {required final int id,
+      required final int modPersonId,
+      required final int otherPersonId,
+      required final int communityId,
+      final String? reason,
+      final bool? banned,
+      final DateTime? expires,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModBanFromCommunity;
   const _ModBanFromCommunity._() : super._();
 
   factory _ModBanFromCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModBanFromCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherPersonId;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool? get banned;
+  bool? get banned => throw _privateConstructorUsedError;
   @override
-  DateTime? get expires;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModBanFromCommunityCopyWith<_ModBanFromCommunity> get copyWith =>
@@ -5295,39 +4787,6 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
 ModBan _$ModBanFromJson(Map<String, dynamic> json) {
   return _ModBan.fromJson(json);
 }
-
-/// @nodoc
-class _$ModBanTearOff {
-  const _$ModBanTearOff();
-
-  _ModBan call(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      String? reason,
-      bool? banned,
-      DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModBan(
-      id: id,
-      modPersonId: modPersonId,
-      otherPersonId: otherPersonId,
-      reason: reason,
-      banned: banned,
-      expires: expires,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModBan fromJson(Map<String, Object?> json) {
-    return ModBan.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModBan = _$ModBanTearOff();
 
 /// @nodoc
 mixin _$ModBan {
@@ -5551,6 +5010,7 @@ class _$_ModBan extends _ModBan {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5576,35 +5036,35 @@ class _$_ModBan extends _ModBan {
 
 abstract class _ModBan extends ModBan {
   const factory _ModBan(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      String? reason,
-      bool? banned,
-      DateTime? expires,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModBan;
+      {required final int id,
+      required final int modPersonId,
+      required final int otherPersonId,
+      final String? reason,
+      final bool? banned,
+      final DateTime? expires,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModBan;
   const _ModBan._() : super._();
 
   factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherPersonId;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
-  String? get reason;
+  String? get reason => throw _privateConstructorUsedError;
   @override
-  bool? get banned;
+  bool? get banned => throw _privateConstructorUsedError;
   @override
-  DateTime? get expires;
+  DateTime? get expires => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModBanCopyWith<_ModBan> get copyWith => throw _privateConstructorUsedError;
@@ -5613,37 +5073,6 @@ abstract class _ModBan extends ModBan {
 ModAddCommunity _$ModAddCommunityFromJson(Map<String, dynamic> json) {
   return _ModAddCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$ModAddCommunityTearOff {
-  const _$ModAddCommunityTearOff();
-
-  _ModAddCommunity call(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      required int communityId,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModAddCommunity(
-      id: id,
-      modPersonId: modPersonId,
-      otherPersonId: otherPersonId,
-      communityId: communityId,
-      removed: removed,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModAddCommunity fromJson(Map<String, Object?> json) {
-    return ModAddCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModAddCommunity = _$ModAddCommunityTearOff();
 
 /// @nodoc
 mixin _$ModAddCommunity {
@@ -5858,6 +5287,7 @@ class _$_ModAddCommunity extends _ModAddCommunity {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5882,33 +5312,33 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 
 abstract class _ModAddCommunity extends ModAddCommunity {
   const factory _ModAddCommunity(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      required int communityId,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModAddCommunity;
+      {required final int id,
+      required final int modPersonId,
+      required final int otherPersonId,
+      required final int communityId,
+      final bool? removed,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModAddCommunity;
   const _ModAddCommunity._() : super._();
 
   factory _ModAddCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModAddCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherPersonId;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool? get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddCommunityCopyWith<_ModAddCommunity> get copyWith =>
@@ -5918,37 +5348,6 @@ abstract class _ModAddCommunity extends ModAddCommunity {
 ModTransferCommunity _$ModTransferCommunityFromJson(Map<String, dynamic> json) {
   return _ModTransferCommunity.fromJson(json);
 }
-
-/// @nodoc
-class _$ModTransferCommunityTearOff {
-  const _$ModTransferCommunityTearOff();
-
-  _ModTransferCommunity call(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      required int communityId,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModTransferCommunity(
-      id: id,
-      modPersonId: modPersonId,
-      otherPersonId: otherPersonId,
-      communityId: communityId,
-      removed: removed,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModTransferCommunity fromJson(Map<String, Object?> json) {
-    return ModTransferCommunity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModTransferCommunity = _$ModTransferCommunityTearOff();
 
 /// @nodoc
 mixin _$ModTransferCommunity {
@@ -6163,6 +5562,7 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6188,33 +5588,33 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
 
 abstract class _ModTransferCommunity extends ModTransferCommunity {
   const factory _ModTransferCommunity(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      required int communityId,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModTransferCommunity;
+      {required final int id,
+      required final int modPersonId,
+      required final int otherPersonId,
+      required final int communityId,
+      final bool? removed,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModTransferCommunity;
   const _ModTransferCommunity._() : super._();
 
   factory _ModTransferCommunity.fromJson(Map<String, dynamic> json) =
       _$_ModTransferCommunity.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherPersonId;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
-  int get communityId;
+  int get communityId => throw _privateConstructorUsedError;
   @override
-  bool? get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModTransferCommunityCopyWith<_ModTransferCommunity> get copyWith =>
@@ -6224,35 +5624,6 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
 ModAdd _$ModAddFromJson(Map<String, dynamic> json) {
   return _ModAdd.fromJson(json);
 }
-
-/// @nodoc
-class _$ModAddTearOff {
-  const _$ModAddTearOff();
-
-  _ModAdd call(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) {
-    return _ModAdd(
-      id: id,
-      modPersonId: modPersonId,
-      otherPersonId: otherPersonId,
-      removed: removed,
-      when: when,
-      instanceHost: instanceHost,
-    );
-  }
-
-  ModAdd fromJson(Map<String, Object?> json) {
-    return ModAdd.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ModAdd = _$ModAddTearOff();
 
 /// @nodoc
 mixin _$ModAdd {
@@ -6442,6 +5813,7 @@ class _$_ModAdd extends _ModAdd {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6465,29 +5837,29 @@ class _$_ModAdd extends _ModAdd {
 
 abstract class _ModAdd extends ModAdd {
   const factory _ModAdd(
-      {required int id,
-      required int modPersonId,
-      required int otherPersonId,
-      bool? removed,
-      @JsonKey(name: 'when_') required DateTime when,
-      required String instanceHost}) = _$_ModAdd;
+      {required final int id,
+      required final int modPersonId,
+      required final int otherPersonId,
+      final bool? removed,
+      @JsonKey(name: 'when_') required final DateTime when,
+      required final String instanceHost}) = _$_ModAdd;
   const _ModAdd._() : super._();
 
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get modPersonId;
+  int get modPersonId => throw _privateConstructorUsedError;
   @override
-  int get otherPersonId;
+  int get otherPersonId => throw _privateConstructorUsedError;
   @override
-  bool? get removed;
+  bool? get removed => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when;
+  DateTime get when => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ModAddCopyWith<_ModAdd> get copyWith => throw _privateConstructorUsedError;
@@ -6496,51 +5868,6 @@ abstract class _ModAdd extends ModAdd {
 CommunitySafe _$CommunitySafeFromJson(Map<String, dynamic> json) {
   return _CommunitySafe.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunitySafeTearOff {
-  const _$CommunitySafeTearOff();
-
-  _CommunitySafe call(
-      {required int id,
-      required String name,
-      required String title,
-      String? description,
-      required bool removed,
-      required DateTime published,
-      DateTime? updated,
-      required bool deleted,
-      required bool nsfw,
-      required String actorId,
-      required bool local,
-      String? icon,
-      String? banner,
-      required String instanceHost}) {
-    return _CommunitySafe(
-      id: id,
-      name: name,
-      title: title,
-      description: description,
-      removed: removed,
-      published: published,
-      updated: updated,
-      deleted: deleted,
-      nsfw: nsfw,
-      actorId: actorId,
-      local: local,
-      icon: icon,
-      banner: banner,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommunitySafe fromJson(Map<String, Object?> json) {
-    return CommunitySafe.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunitySafe = _$CommunitySafeTearOff();
 
 /// @nodoc
 mixin _$CommunitySafe {
@@ -6870,6 +6197,7 @@ class _$_CommunitySafe extends _CommunitySafe {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6901,53 +6229,53 @@ class _$_CommunitySafe extends _CommunitySafe {
 
 abstract class _CommunitySafe extends CommunitySafe {
   const factory _CommunitySafe(
-      {required int id,
-      required String name,
-      required String title,
-      String? description,
-      required bool removed,
-      required DateTime published,
-      DateTime? updated,
-      required bool deleted,
-      required bool nsfw,
-      required String actorId,
-      required bool local,
-      String? icon,
-      String? banner,
-      required String instanceHost}) = _$_CommunitySafe;
+      {required final int id,
+      required final String name,
+      required final String title,
+      final String? description,
+      required final bool removed,
+      required final DateTime published,
+      final DateTime? updated,
+      required final bool deleted,
+      required final bool nsfw,
+      required final String actorId,
+      required final bool local,
+      final String? icon,
+      final String? banner,
+      required final String instanceHost}) = _$_CommunitySafe;
   const _CommunitySafe._() : super._();
 
   factory _CommunitySafe.fromJson(Map<String, dynamic> json) =
       _$_CommunitySafe.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  String get title;
+  String get title => throw _privateConstructorUsedError;
   @override
-  String? get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  bool get nsfw;
+  bool get nsfw => throw _privateConstructorUsedError;
   @override
-  String get actorId;
+  String get actorId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String? get icon;
+  String? get icon => throw _privateConstructorUsedError;
   @override
-  String? get banner;
+  String? get banner => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommunitySafeCopyWith<_CommunitySafe> get copyWith =>
@@ -6957,43 +6285,6 @@ abstract class _CommunitySafe extends CommunitySafe {
 CommentReport _$CommentReportFromJson(Map<String, dynamic> json) {
   return _CommentReport.fromJson(json);
 }
-
-/// @nodoc
-class _$CommentReportTearOff {
-  const _$CommentReportTearOff();
-
-  _CommentReport call(
-      {required int id,
-      required int creatorId,
-      required int commentId,
-      required String originalCommentText,
-      required String reason,
-      required bool resolved,
-      int? resolverId,
-      required DateTime published,
-      DateTime? updated,
-      required String instanceHost}) {
-    return _CommentReport(
-      id: id,
-      creatorId: creatorId,
-      commentId: commentId,
-      originalCommentText: originalCommentText,
-      reason: reason,
-      resolved: resolved,
-      resolverId: resolverId,
-      published: published,
-      updated: updated,
-      instanceHost: instanceHost,
-    );
-  }
-
-  CommentReport fromJson(Map<String, Object?> json) {
-    return CommentReport.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommentReport = _$CommentReportTearOff();
 
 /// @nodoc
 mixin _$CommentReport {
@@ -7256,6 +6547,7 @@ class _$_CommentReport extends _CommentReport {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7283,41 +6575,41 @@ class _$_CommentReport extends _CommentReport {
 
 abstract class _CommentReport extends CommentReport {
   const factory _CommentReport(
-      {required int id,
-      required int creatorId,
-      required int commentId,
-      required String originalCommentText,
-      required String reason,
-      required bool resolved,
-      int? resolverId,
-      required DateTime published,
-      DateTime? updated,
-      required String instanceHost}) = _$_CommentReport;
+      {required final int id,
+      required final int creatorId,
+      required final int commentId,
+      required final String originalCommentText,
+      required final String reason,
+      required final bool resolved,
+      final int? resolverId,
+      required final DateTime published,
+      final DateTime? updated,
+      required final String instanceHost}) = _$_CommentReport;
   const _CommentReport._() : super._();
 
   factory _CommentReport.fromJson(Map<String, dynamic> json) =
       _$_CommentReport.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  String get originalCommentText;
+  String get originalCommentText => throw _privateConstructorUsedError;
   @override
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
-  bool get resolved;
+  bool get resolved => throw _privateConstructorUsedError;
   @override
-  int? get resolverId;
+  int? get resolverId => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommentReportCopyWith<_CommentReport> get copyWith =>
@@ -7327,49 +6619,6 @@ abstract class _CommentReport extends CommentReport {
 Comment _$CommentFromJson(Map<String, dynamic> json) {
   return _Comment.fromJson(json);
 }
-
-/// @nodoc
-class _$CommentTearOff {
-  const _$CommentTearOff();
-
-  _Comment call(
-      {required int id,
-      required int creatorId,
-      required int postId,
-      int? parentId,
-      required String content,
-      required bool removed,
-      required bool read,
-      required DateTime published,
-      DateTime? updated,
-      required bool deleted,
-      required String apId,
-      required bool local,
-      required String instanceHost}) {
-    return _Comment(
-      id: id,
-      creatorId: creatorId,
-      postId: postId,
-      parentId: parentId,
-      content: content,
-      removed: removed,
-      read: read,
-      published: published,
-      updated: updated,
-      deleted: deleted,
-      apId: apId,
-      local: local,
-      instanceHost: instanceHost,
-    );
-  }
-
-  Comment fromJson(Map<String, Object?> json) {
-    return Comment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Comment = _$CommentTearOff();
 
 /// @nodoc
 mixin _$Comment {
@@ -7674,6 +6923,7 @@ class _$_Comment extends _Comment {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7704,49 +6954,49 @@ class _$_Comment extends _Comment {
 
 abstract class _Comment extends Comment {
   const factory _Comment(
-      {required int id,
-      required int creatorId,
-      required int postId,
-      int? parentId,
-      required String content,
-      required bool removed,
-      required bool read,
-      required DateTime published,
-      DateTime? updated,
-      required bool deleted,
-      required String apId,
-      required bool local,
-      required String instanceHost}) = _$_Comment;
+      {required final int id,
+      required final int creatorId,
+      required final int postId,
+      final int? parentId,
+      required final String content,
+      required final bool removed,
+      required final bool read,
+      required final DateTime published,
+      final DateTime? updated,
+      required final bool deleted,
+      required final String apId,
+      required final bool local,
+      required final String instanceHost}) = _$_Comment;
   const _Comment._() : super._();
 
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get creatorId;
+  int get creatorId => throw _privateConstructorUsedError;
   @override
-  int get postId;
+  int get postId => throw _privateConstructorUsedError;
   @override
-  int? get parentId;
+  int? get parentId => throw _privateConstructorUsedError;
   @override
-  String get content;
+  String get content => throw _privateConstructorUsedError;
   @override
-  bool get removed;
+  bool get removed => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  DateTime? get updated;
+  DateTime? get updated => throw _privateConstructorUsedError;
   @override
-  bool get deleted;
+  bool get deleted => throw _privateConstructorUsedError;
   @override
-  String get apId;
+  String get apId => throw _privateConstructorUsedError;
   @override
-  bool get local;
+  bool get local => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CommentCopyWith<_Comment> get copyWith =>
@@ -7756,35 +7006,6 @@ abstract class _Comment extends Comment {
 PersonMention _$PersonMentionFromJson(Map<String, dynamic> json) {
   return _PersonMention.fromJson(json);
 }
-
-/// @nodoc
-class _$PersonMentionTearOff {
-  const _$PersonMentionTearOff();
-
-  _PersonMention call(
-      {required int id,
-      required int recipientId,
-      required int commentId,
-      required bool read,
-      required DateTime published,
-      required String instanceHost}) {
-    return _PersonMention(
-      id: id,
-      recipientId: recipientId,
-      commentId: commentId,
-      read: read,
-      published: published,
-      instanceHost: instanceHost,
-    );
-  }
-
-  PersonMention fromJson(Map<String, Object?> json) {
-    return PersonMention.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $PersonMention = _$PersonMentionTearOff();
 
 /// @nodoc
 mixin _$PersonMention {
@@ -7978,6 +7199,7 @@ class _$_PersonMention extends _PersonMention {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8001,29 +7223,29 @@ class _$_PersonMention extends _PersonMention {
 
 abstract class _PersonMention extends PersonMention {
   const factory _PersonMention(
-      {required int id,
-      required int recipientId,
-      required int commentId,
-      required bool read,
-      required DateTime published,
-      required String instanceHost}) = _$_PersonMention;
+      {required final int id,
+      required final int recipientId,
+      required final int commentId,
+      required final bool read,
+      required final DateTime published,
+      required final String instanceHost}) = _$_PersonMention;
   const _PersonMention._() : super._();
 
   factory _PersonMention.fromJson(Map<String, dynamic> json) =
       _$_PersonMention.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get recipientId;
+  int get recipientId => throw _privateConstructorUsedError;
   @override
-  int get commentId;
+  int get commentId => throw _privateConstructorUsedError;
   @override
-  bool get read;
+  bool get read => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PersonMentionCopyWith<_PersonMention> get copyWith =>
@@ -8034,37 +7256,6 @@ RegistrationApplication _$RegistrationApplicationFromJson(
     Map<String, dynamic> json) {
   return _RegistrationApplication.fromJson(json);
 }
-
-/// @nodoc
-class _$RegistrationApplicationTearOff {
-  const _$RegistrationApplicationTearOff();
-
-  _RegistrationApplication call(
-      {required int id,
-      required int localUserId,
-      required String answer,
-      int? adminId,
-      String? denyReason,
-      required DateTime published,
-      required String instanceHost}) {
-    return _RegistrationApplication(
-      id: id,
-      localUserId: localUserId,
-      answer: answer,
-      adminId: adminId,
-      denyReason: denyReason,
-      published: published,
-      instanceHost: instanceHost,
-    );
-  }
-
-  RegistrationApplication fromJson(Map<String, Object?> json) {
-    return RegistrationApplication.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RegistrationApplication = _$RegistrationApplicationTearOff();
 
 /// @nodoc
 mixin _$RegistrationApplication {
@@ -8277,6 +7468,7 @@ class _$_RegistrationApplication extends _RegistrationApplication {
                 .equals(other.instanceHost, instanceHost));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8302,32 +7494,32 @@ class _$_RegistrationApplication extends _RegistrationApplication {
 
 abstract class _RegistrationApplication extends RegistrationApplication {
   const factory _RegistrationApplication(
-      {required int id,
-      required int localUserId,
-      required String answer,
-      int? adminId,
-      String? denyReason,
-      required DateTime published,
-      required String instanceHost}) = _$_RegistrationApplication;
+      {required final int id,
+      required final int localUserId,
+      required final String answer,
+      final int? adminId,
+      final String? denyReason,
+      required final DateTime published,
+      required final String instanceHost}) = _$_RegistrationApplication;
   const _RegistrationApplication._() : super._();
 
   factory _RegistrationApplication.fromJson(Map<String, dynamic> json) =
       _$_RegistrationApplication.fromJson;
 
   @override
-  int get id;
+  int get id => throw _privateConstructorUsedError;
   @override
-  int get localUserId;
+  int get localUserId => throw _privateConstructorUsedError;
   @override
-  String get answer;
+  String get answer => throw _privateConstructorUsedError;
   @override
-  int? get adminId;
+  int? get adminId => throw _privateConstructorUsedError;
   @override
-  String? get denyReason;
+  String? get denyReason => throw _privateConstructorUsedError;
   @override
-  DateTime get published;
+  DateTime get published => throw _privateConstructorUsedError;
   @override
-  String get instanceHost;
+  String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RegistrationApplicationCopyWith<_RegistrationApplication> get copyWith =>
