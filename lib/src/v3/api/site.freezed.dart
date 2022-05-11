@@ -121,9 +121,9 @@ class _$SearchCopyWithImpl<$Res> implements $SearchCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
-  factory _$SearchCopyWith(_Search value, $Res Function(_Search) then) =
-      __$SearchCopyWithImpl<$Res>;
+abstract class _$$_SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
+  factory _$$_SearchCopyWith(_$_Search value, $Res Function(_$_Search) then) =
+      __$$_SearchCopyWithImpl<$Res>;
   @override
   $Res call(
       {String q,
@@ -139,13 +139,13 @@ abstract class _$SearchCopyWith<$Res> implements $SearchCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
-    implements _$SearchCopyWith<$Res> {
-  __$SearchCopyWithImpl(_Search _value, $Res Function(_Search) _then)
-      : super(_value, (v) => _then(v as _Search));
+class __$$_SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
+    implements _$$_SearchCopyWith<$Res> {
+  __$$_SearchCopyWithImpl(_$_Search _value, $Res Function(_$_Search) _then)
+      : super(_value, (v) => _then(v as _$_Search));
 
   @override
-  _Search get _value => super._value as _Search;
+  _$_Search get _value => super._value as _$_Search;
 
   @override
   $Res call({
@@ -160,7 +160,7 @@ class __$SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
     Object? creatorId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_Search(
+    return _then(_$_Search(
       q: q == freezed
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
@@ -256,7 +256,7 @@ class _$_Search extends _Search {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Search &&
+            other is _$_Search &&
             const DeepCollectionEquality().equals(other.q, q) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
@@ -289,8 +289,8 @@ class _$_Search extends _Search {
 
   @JsonKey(ignore: true)
   @override
-  _$SearchCopyWith<_Search> get copyWith =>
-      __$SearchCopyWithImpl<_Search>(this, _$identity);
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      __$$_SearchCopyWithImpl<_$_Search>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -337,7 +337,8 @@ abstract class _Search extends Search {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SearchCopyWith<_Search> get copyWith => throw _privateConstructorUsedError;
+  _$$_SearchCopyWith<_$_Search> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GetModlog _$GetModlogFromJson(Map<String, dynamic> json) {
@@ -412,10 +413,10 @@ class _$GetModlogCopyWithImpl<$Res> implements $GetModlogCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
-  factory _$GetModlogCopyWith(
-          _GetModlog value, $Res Function(_GetModlog) then) =
-      __$GetModlogCopyWithImpl<$Res>;
+abstract class _$$_GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
+  factory _$$_GetModlogCopyWith(
+          _$_GetModlog value, $Res Function(_$_GetModlog) then) =
+      __$$_GetModlogCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? modPersonId,
@@ -426,13 +427,14 @@ abstract class _$GetModlogCopyWith<$Res> implements $GetModlogCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
-    implements _$GetModlogCopyWith<$Res> {
-  __$GetModlogCopyWithImpl(_GetModlog _value, $Res Function(_GetModlog) _then)
-      : super(_value, (v) => _then(v as _GetModlog));
+class __$$_GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
+    implements _$$_GetModlogCopyWith<$Res> {
+  __$$_GetModlogCopyWithImpl(
+      _$_GetModlog _value, $Res Function(_$_GetModlog) _then)
+      : super(_value, (v) => _then(v as _$_GetModlog));
 
   @override
-  _GetModlog get _value => super._value as _GetModlog;
+  _$_GetModlog get _value => super._value as _$_GetModlog;
 
   @override
   $Res call({
@@ -442,7 +444,7 @@ class __$GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetModlog(
+    return _then(_$_GetModlog(
       modPersonId: modPersonId == freezed
           ? _value.modPersonId
           : modPersonId // ignore: cast_nullable_to_non_nullable
@@ -498,7 +500,7 @@ class _$_GetModlog extends _GetModlog {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetModlog &&
+            other is _$_GetModlog &&
             const DeepCollectionEquality()
                 .equals(other.modPersonId, modPersonId) &&
             const DeepCollectionEquality()
@@ -520,8 +522,8 @@ class _$_GetModlog extends _GetModlog {
 
   @JsonKey(ignore: true)
   @override
-  _$GetModlogCopyWith<_GetModlog> get copyWith =>
-      __$GetModlogCopyWithImpl<_GetModlog>(this, _$identity);
+  _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>
+      __$$_GetModlogCopyWithImpl<_$_GetModlog>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -553,7 +555,7 @@ abstract class _GetModlog extends GetModlog {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetModlogCopyWith<_GetModlog> get copyWith =>
+  _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -700,10 +702,11 @@ class _$CreateSiteCopyWithImpl<$Res> implements $CreateSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
-  factory _$CreateSiteCopyWith(
-          _CreateSite value, $Res Function(_CreateSite) then) =
-      __$CreateSiteCopyWithImpl<$Res>;
+abstract class _$$_CreateSiteCopyWith<$Res>
+    implements $CreateSiteCopyWith<$Res> {
+  factory _$$_CreateSiteCopyWith(
+          _$_CreateSite value, $Res Function(_$_CreateSite) then) =
+      __$$_CreateSiteCopyWithImpl<$Res>;
   @override
   $Res call(
       {String name,
@@ -724,14 +727,14 @@ abstract class _$CreateSiteCopyWith<$Res> implements $CreateSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
-    implements _$CreateSiteCopyWith<$Res> {
-  __$CreateSiteCopyWithImpl(
-      _CreateSite _value, $Res Function(_CreateSite) _then)
-      : super(_value, (v) => _then(v as _CreateSite));
+class __$$_CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
+    implements _$$_CreateSiteCopyWith<$Res> {
+  __$$_CreateSiteCopyWithImpl(
+      _$_CreateSite _value, $Res Function(_$_CreateSite) _then)
+      : super(_value, (v) => _then(v as _$_CreateSite));
 
   @override
-  _CreateSite get _value => super._value as _CreateSite;
+  _$_CreateSite get _value => super._value as _$_CreateSite;
 
   @override
   $Res call({
@@ -751,7 +754,7 @@ class __$CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
     Object? auth = freezed,
     Object? defaultTheme = freezed,
   }) {
-    return _then(_CreateSite(
+    return _then(_$_CreateSite(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -881,7 +884,7 @@ class _$_CreateSite extends _CreateSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateSite &&
+            other is _$_CreateSite &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
             const DeepCollectionEquality()
@@ -931,8 +934,8 @@ class _$_CreateSite extends _CreateSite {
 
   @JsonKey(ignore: true)
   @override
-  _$CreateSiteCopyWith<_CreateSite> get copyWith =>
-      __$CreateSiteCopyWithImpl<_CreateSite>(this, _$identity);
+  _$$_CreateSiteCopyWith<_$_CreateSite> get copyWith =>
+      __$$_CreateSiteCopyWithImpl<_$_CreateSite>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -994,7 +997,7 @@ abstract class _CreateSite extends CreateSite {
   String? get defaultTheme => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreateSiteCopyWith<_CreateSite> get copyWith =>
+  _$$_CreateSiteCopyWith<_$_CreateSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1140,9 +1143,10 @@ class _$EditSiteCopyWithImpl<$Res> implements $EditSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
-  factory _$EditSiteCopyWith(_EditSite value, $Res Function(_EditSite) then) =
-      __$EditSiteCopyWithImpl<$Res>;
+abstract class _$$_EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
+  factory _$$_EditSiteCopyWith(
+          _$_EditSite value, $Res Function(_$_EditSite) then) =
+      __$$_EditSiteCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? name,
@@ -1163,13 +1167,14 @@ abstract class _$EditSiteCopyWith<$Res> implements $EditSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
-    implements _$EditSiteCopyWith<$Res> {
-  __$EditSiteCopyWithImpl(_EditSite _value, $Res Function(_EditSite) _then)
-      : super(_value, (v) => _then(v as _EditSite));
+class __$$_EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
+    implements _$$_EditSiteCopyWith<$Res> {
+  __$$_EditSiteCopyWithImpl(
+      _$_EditSite _value, $Res Function(_$_EditSite) _then)
+      : super(_value, (v) => _then(v as _$_EditSite));
 
   @override
-  _EditSite get _value => super._value as _EditSite;
+  _$_EditSite get _value => super._value as _$_EditSite;
 
   @override
   $Res call({
@@ -1189,7 +1194,7 @@ class __$EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
     Object? auth = freezed,
     Object? defaultTheme = freezed,
   }) {
-    return _then(_EditSite(
+    return _then(_$_EditSite(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1319,7 +1324,7 @@ class _$_EditSite extends _EditSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EditSite &&
+            other is _$_EditSite &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.sidebar, sidebar) &&
             const DeepCollectionEquality()
@@ -1369,8 +1374,8 @@ class _$_EditSite extends _EditSite {
 
   @JsonKey(ignore: true)
   @override
-  _$EditSiteCopyWith<_EditSite> get copyWith =>
-      __$EditSiteCopyWithImpl<_EditSite>(this, _$identity);
+  _$$_EditSiteCopyWith<_$_EditSite> get copyWith =>
+      __$$_EditSiteCopyWithImpl<_$_EditSite>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1431,7 +1436,7 @@ abstract class _EditSite extends EditSite {
   String? get defaultTheme => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EditSiteCopyWith<_EditSite> get copyWith =>
+  _$$_EditSiteCopyWith<_$_EditSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1477,27 +1482,28 @@ class _$GetSiteCopyWithImpl<$Res> implements $GetSiteCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetSiteCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
-  factory _$GetSiteCopyWith(_GetSite value, $Res Function(_GetSite) then) =
-      __$GetSiteCopyWithImpl<$Res>;
+abstract class _$$_GetSiteCopyWith<$Res> implements $GetSiteCopyWith<$Res> {
+  factory _$$_GetSiteCopyWith(
+          _$_GetSite value, $Res Function(_$_GetSite) then) =
+      __$$_GetSiteCopyWithImpl<$Res>;
   @override
   $Res call({String? auth});
 }
 
 /// @nodoc
-class __$GetSiteCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res>
-    implements _$GetSiteCopyWith<$Res> {
-  __$GetSiteCopyWithImpl(_GetSite _value, $Res Function(_GetSite) _then)
-      : super(_value, (v) => _then(v as _GetSite));
+class __$$_GetSiteCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res>
+    implements _$$_GetSiteCopyWith<$Res> {
+  __$$_GetSiteCopyWithImpl(_$_GetSite _value, $Res Function(_$_GetSite) _then)
+      : super(_value, (v) => _then(v as _$_GetSite));
 
   @override
-  _GetSite get _value => super._value as _GetSite;
+  _$_GetSite get _value => super._value as _$_GetSite;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_GetSite(
+    return _then(_$_GetSite(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1527,7 +1533,7 @@ class _$_GetSite extends _GetSite {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetSite &&
+            other is _$_GetSite &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -1538,8 +1544,8 @@ class _$_GetSite extends _GetSite {
 
   @JsonKey(ignore: true)
   @override
-  _$GetSiteCopyWith<_GetSite> get copyWith =>
-      __$GetSiteCopyWithImpl<_GetSite>(this, _$identity);
+  _$$_GetSiteCopyWith<_$_GetSite> get copyWith =>
+      __$$_GetSiteCopyWithImpl<_$_GetSite>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1557,7 +1563,7 @@ abstract class _GetSite extends GetSite {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetSiteCopyWith<_GetSite> get copyWith =>
+  _$$_GetSiteCopyWith<_$_GetSite> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1605,29 +1611,30 @@ class _$LeaveAdminCopyWithImpl<$Res> implements $LeaveAdminCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LeaveAdminCopyWith<$Res> implements $LeaveAdminCopyWith<$Res> {
-  factory _$LeaveAdminCopyWith(
-          _LeaveAdmin value, $Res Function(_LeaveAdmin) then) =
-      __$LeaveAdminCopyWithImpl<$Res>;
+abstract class _$$_LeaveAdminCopyWith<$Res>
+    implements $LeaveAdminCopyWith<$Res> {
+  factory _$$_LeaveAdminCopyWith(
+          _$_LeaveAdmin value, $Res Function(_$_LeaveAdmin) then) =
+      __$$_LeaveAdminCopyWithImpl<$Res>;
   @override
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$LeaveAdminCopyWithImpl<$Res> extends _$LeaveAdminCopyWithImpl<$Res>
-    implements _$LeaveAdminCopyWith<$Res> {
-  __$LeaveAdminCopyWithImpl(
-      _LeaveAdmin _value, $Res Function(_LeaveAdmin) _then)
-      : super(_value, (v) => _then(v as _LeaveAdmin));
+class __$$_LeaveAdminCopyWithImpl<$Res> extends _$LeaveAdminCopyWithImpl<$Res>
+    implements _$$_LeaveAdminCopyWith<$Res> {
+  __$$_LeaveAdminCopyWithImpl(
+      _$_LeaveAdmin _value, $Res Function(_$_LeaveAdmin) _then)
+      : super(_value, (v) => _then(v as _$_LeaveAdmin));
 
   @override
-  _LeaveAdmin get _value => super._value as _LeaveAdmin;
+  _$_LeaveAdmin get _value => super._value as _$_LeaveAdmin;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_LeaveAdmin(
+    return _then(_$_LeaveAdmin(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1657,7 +1664,7 @@ class _$_LeaveAdmin extends _LeaveAdmin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LeaveAdmin &&
+            other is _$_LeaveAdmin &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -1668,8 +1675,8 @@ class _$_LeaveAdmin extends _LeaveAdmin {
 
   @JsonKey(ignore: true)
   @override
-  _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
-      __$LeaveAdminCopyWithImpl<_LeaveAdmin>(this, _$identity);
+  _$$_LeaveAdminCopyWith<_$_LeaveAdmin> get copyWith =>
+      __$$_LeaveAdminCopyWithImpl<_$_LeaveAdmin>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1688,7 +1695,7 @@ abstract class _LeaveAdmin extends LeaveAdmin {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LeaveAdminCopyWith<_LeaveAdmin> get copyWith =>
+  _$$_LeaveAdminCopyWith<_$_LeaveAdmin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1737,31 +1744,31 @@ class _$GetSiteConfigCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetSiteConfigCopyWith<$Res>
+abstract class _$$_GetSiteConfigCopyWith<$Res>
     implements $GetSiteConfigCopyWith<$Res> {
-  factory _$GetSiteConfigCopyWith(
-          _GetSiteConfig value, $Res Function(_GetSiteConfig) then) =
-      __$GetSiteConfigCopyWithImpl<$Res>;
+  factory _$$_GetSiteConfigCopyWith(
+          _$_GetSiteConfig value, $Res Function(_$_GetSiteConfig) then) =
+      __$$_GetSiteConfigCopyWithImpl<$Res>;
   @override
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$GetSiteConfigCopyWithImpl<$Res>
+class __$$_GetSiteConfigCopyWithImpl<$Res>
     extends _$GetSiteConfigCopyWithImpl<$Res>
-    implements _$GetSiteConfigCopyWith<$Res> {
-  __$GetSiteConfigCopyWithImpl(
-      _GetSiteConfig _value, $Res Function(_GetSiteConfig) _then)
-      : super(_value, (v) => _then(v as _GetSiteConfig));
+    implements _$$_GetSiteConfigCopyWith<$Res> {
+  __$$_GetSiteConfigCopyWithImpl(
+      _$_GetSiteConfig _value, $Res Function(_$_GetSiteConfig) _then)
+      : super(_value, (v) => _then(v as _$_GetSiteConfig));
 
   @override
-  _GetSiteConfig get _value => super._value as _GetSiteConfig;
+  _$_GetSiteConfig get _value => super._value as _$_GetSiteConfig;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_GetSiteConfig(
+    return _then(_$_GetSiteConfig(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1791,7 +1798,7 @@ class _$_GetSiteConfig extends _GetSiteConfig {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetSiteConfig &&
+            other is _$_GetSiteConfig &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -1802,8 +1809,8 @@ class _$_GetSiteConfig extends _GetSiteConfig {
 
   @JsonKey(ignore: true)
   @override
-  _$GetSiteConfigCopyWith<_GetSiteConfig> get copyWith =>
-      __$GetSiteConfigCopyWithImpl<_GetSiteConfig>(this, _$identity);
+  _$$_GetSiteConfigCopyWith<_$_GetSiteConfig> get copyWith =>
+      __$$_GetSiteConfigCopyWithImpl<_$_GetSiteConfig>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1822,7 +1829,7 @@ abstract class _GetSiteConfig extends GetSiteConfig {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetSiteConfigCopyWith<_GetSiteConfig> get copyWith =>
+  _$$_GetSiteConfigCopyWith<_$_GetSiteConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1877,32 +1884,32 @@ class _$SaveSiteConfigCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SaveSiteConfigCopyWith<$Res>
+abstract class _$$_SaveSiteConfigCopyWith<$Res>
     implements $SaveSiteConfigCopyWith<$Res> {
-  factory _$SaveSiteConfigCopyWith(
-          _SaveSiteConfig value, $Res Function(_SaveSiteConfig) then) =
-      __$SaveSiteConfigCopyWithImpl<$Res>;
+  factory _$$_SaveSiteConfigCopyWith(
+          _$_SaveSiteConfig value, $Res Function(_$_SaveSiteConfig) then) =
+      __$$_SaveSiteConfigCopyWithImpl<$Res>;
   @override
   $Res call({String configHjson, String auth});
 }
 
 /// @nodoc
-class __$SaveSiteConfigCopyWithImpl<$Res>
+class __$$_SaveSiteConfigCopyWithImpl<$Res>
     extends _$SaveSiteConfigCopyWithImpl<$Res>
-    implements _$SaveSiteConfigCopyWith<$Res> {
-  __$SaveSiteConfigCopyWithImpl(
-      _SaveSiteConfig _value, $Res Function(_SaveSiteConfig) _then)
-      : super(_value, (v) => _then(v as _SaveSiteConfig));
+    implements _$$_SaveSiteConfigCopyWith<$Res> {
+  __$$_SaveSiteConfigCopyWithImpl(
+      _$_SaveSiteConfig _value, $Res Function(_$_SaveSiteConfig) _then)
+      : super(_value, (v) => _then(v as _$_SaveSiteConfig));
 
   @override
-  _SaveSiteConfig get _value => super._value as _SaveSiteConfig;
+  _$_SaveSiteConfig get _value => super._value as _$_SaveSiteConfig;
 
   @override
   $Res call({
     Object? configHjson = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_SaveSiteConfig(
+    return _then(_$_SaveSiteConfig(
       configHjson: configHjson == freezed
           ? _value.configHjson
           : configHjson // ignore: cast_nullable_to_non_nullable
@@ -1939,7 +1946,7 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SaveSiteConfig &&
+            other is _$_SaveSiteConfig &&
             const DeepCollectionEquality()
                 .equals(other.configHjson, configHjson) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1954,8 +1961,8 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
 
   @JsonKey(ignore: true)
   @override
-  _$SaveSiteConfigCopyWith<_SaveSiteConfig> get copyWith =>
-      __$SaveSiteConfigCopyWithImpl<_SaveSiteConfig>(this, _$identity);
+  _$$_SaveSiteConfigCopyWith<_$_SaveSiteConfig> get copyWith =>
+      __$$_SaveSiteConfigCopyWithImpl<_$_SaveSiteConfig>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1978,7 +1985,7 @@ abstract class _SaveSiteConfig extends SaveSiteConfig {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SaveSiteConfigCopyWith<_SaveSiteConfig> get copyWith =>
+  _$$_SaveSiteConfigCopyWith<_$_SaveSiteConfig> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2033,32 +2040,32 @@ class _$ResolveObjectCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ResolveObjectCopyWith<$Res>
+abstract class _$$_ResolveObjectCopyWith<$Res>
     implements $ResolveObjectCopyWith<$Res> {
-  factory _$ResolveObjectCopyWith(
-          _ResolveObject value, $Res Function(_ResolveObject) then) =
-      __$ResolveObjectCopyWithImpl<$Res>;
+  factory _$$_ResolveObjectCopyWith(
+          _$_ResolveObject value, $Res Function(_$_ResolveObject) then) =
+      __$$_ResolveObjectCopyWithImpl<$Res>;
   @override
   $Res call({String q, String? auth});
 }
 
 /// @nodoc
-class __$ResolveObjectCopyWithImpl<$Res>
+class __$$_ResolveObjectCopyWithImpl<$Res>
     extends _$ResolveObjectCopyWithImpl<$Res>
-    implements _$ResolveObjectCopyWith<$Res> {
-  __$ResolveObjectCopyWithImpl(
-      _ResolveObject _value, $Res Function(_ResolveObject) _then)
-      : super(_value, (v) => _then(v as _ResolveObject));
+    implements _$$_ResolveObjectCopyWith<$Res> {
+  __$$_ResolveObjectCopyWithImpl(
+      _$_ResolveObject _value, $Res Function(_$_ResolveObject) _then)
+      : super(_value, (v) => _then(v as _$_ResolveObject));
 
   @override
-  _ResolveObject get _value => super._value as _ResolveObject;
+  _$_ResolveObject get _value => super._value as _$_ResolveObject;
 
   @override
   $Res call({
     Object? q = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ResolveObject(
+    return _then(_$_ResolveObject(
       q: q == freezed
           ? _value.q
           : q // ignore: cast_nullable_to_non_nullable
@@ -2094,7 +2101,7 @@ class _$_ResolveObject extends _ResolveObject {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResolveObject &&
+            other is _$_ResolveObject &&
             const DeepCollectionEquality().equals(other.q, q) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
@@ -2108,8 +2115,8 @@ class _$_ResolveObject extends _ResolveObject {
 
   @JsonKey(ignore: true)
   @override
-  _$ResolveObjectCopyWith<_ResolveObject> get copyWith =>
-      __$ResolveObjectCopyWithImpl<_ResolveObject>(this, _$identity);
+  _$$_ResolveObjectCopyWith<_$_ResolveObject> get copyWith =>
+      __$$_ResolveObjectCopyWithImpl<_$_ResolveObject>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2131,7 +2138,7 @@ abstract class _ResolveObject extends ResolveObject {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ResolveObjectCopyWith<_ResolveObject> get copyWith =>
+  _$$_ResolveObjectCopyWith<_$_ResolveObject> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2183,35 +2190,35 @@ class _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetUnreadRegistrationApplicationCountCopyWith<$Res>
+abstract class _$$_GetUnreadRegistrationApplicationCountCopyWith<$Res>
     implements $GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  factory _$GetUnreadRegistrationApplicationCountCopyWith(
-          _GetUnreadRegistrationApplicationCount value,
-          $Res Function(_GetUnreadRegistrationApplicationCount) then) =
-      __$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
+  factory _$$_GetUnreadRegistrationApplicationCountCopyWith(
+          _$_GetUnreadRegistrationApplicationCount value,
+          $Res Function(_$_GetUnreadRegistrationApplicationCount) then) =
+      __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>;
   @override
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
+class __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
     extends _$GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
-    implements _$GetUnreadRegistrationApplicationCountCopyWith<$Res> {
-  __$GetUnreadRegistrationApplicationCountCopyWithImpl(
-      _GetUnreadRegistrationApplicationCount _value,
-      $Res Function(_GetUnreadRegistrationApplicationCount) _then)
-      : super(
-            _value, (v) => _then(v as _GetUnreadRegistrationApplicationCount));
+    implements _$$_GetUnreadRegistrationApplicationCountCopyWith<$Res> {
+  __$$_GetUnreadRegistrationApplicationCountCopyWithImpl(
+      _$_GetUnreadRegistrationApplicationCount _value,
+      $Res Function(_$_GetUnreadRegistrationApplicationCount) _then)
+      : super(_value,
+            (v) => _then(v as _$_GetUnreadRegistrationApplicationCount));
 
   @override
-  _GetUnreadRegistrationApplicationCount get _value =>
-      super._value as _GetUnreadRegistrationApplicationCount;
+  _$_GetUnreadRegistrationApplicationCount get _value =>
+      super._value as _$_GetUnreadRegistrationApplicationCount;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_GetUnreadRegistrationApplicationCount(
+    return _then(_$_GetUnreadRegistrationApplicationCount(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -2244,7 +2251,7 @@ class _$_GetUnreadRegistrationApplicationCount
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetUnreadRegistrationApplicationCount &&
+            other is _$_GetUnreadRegistrationApplicationCount &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -2255,10 +2262,10 @@ class _$_GetUnreadRegistrationApplicationCount
 
   @JsonKey(ignore: true)
   @override
-  _$GetUnreadRegistrationApplicationCountCopyWith<
-          _GetUnreadRegistrationApplicationCount>
-      get copyWith => __$GetUnreadRegistrationApplicationCountCopyWithImpl<
-          _GetUnreadRegistrationApplicationCount>(this, _$identity);
+  _$$_GetUnreadRegistrationApplicationCountCopyWith<
+          _$_GetUnreadRegistrationApplicationCount>
+      get copyWith => __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<
+          _$_GetUnreadRegistrationApplicationCount>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2280,8 +2287,8 @@ abstract class _GetUnreadRegistrationApplicationCount
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetUnreadRegistrationApplicationCountCopyWith<
-          _GetUnreadRegistrationApplicationCount>
+  _$$_GetUnreadRegistrationApplicationCountCopyWith<
+          _$_GetUnreadRegistrationApplicationCount>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2350,28 +2357,28 @@ class _$ListRegistrationApplicationsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ListRegistrationApplicationsCopyWith<$Res>
+abstract class _$$_ListRegistrationApplicationsCopyWith<$Res>
     implements $ListRegistrationApplicationsCopyWith<$Res> {
-  factory _$ListRegistrationApplicationsCopyWith(
-          _ListRegistrationApplications value,
-          $Res Function(_ListRegistrationApplications) then) =
-      __$ListRegistrationApplicationsCopyWithImpl<$Res>;
+  factory _$$_ListRegistrationApplicationsCopyWith(
+          _$_ListRegistrationApplications value,
+          $Res Function(_$_ListRegistrationApplications) then) =
+      __$$_ListRegistrationApplicationsCopyWithImpl<$Res>;
   @override
   $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
-class __$ListRegistrationApplicationsCopyWithImpl<$Res>
+class __$$_ListRegistrationApplicationsCopyWithImpl<$Res>
     extends _$ListRegistrationApplicationsCopyWithImpl<$Res>
-    implements _$ListRegistrationApplicationsCopyWith<$Res> {
-  __$ListRegistrationApplicationsCopyWithImpl(
-      _ListRegistrationApplications _value,
-      $Res Function(_ListRegistrationApplications) _then)
-      : super(_value, (v) => _then(v as _ListRegistrationApplications));
+    implements _$$_ListRegistrationApplicationsCopyWith<$Res> {
+  __$$_ListRegistrationApplicationsCopyWithImpl(
+      _$_ListRegistrationApplications _value,
+      $Res Function(_$_ListRegistrationApplications) _then)
+      : super(_value, (v) => _then(v as _$_ListRegistrationApplications));
 
   @override
-  _ListRegistrationApplications get _value =>
-      super._value as _ListRegistrationApplications;
+  _$_ListRegistrationApplications get _value =>
+      super._value as _$_ListRegistrationApplications;
 
   @override
   $Res call({
@@ -2380,7 +2387,7 @@ class __$ListRegistrationApplicationsCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ListRegistrationApplications(
+    return _then(_$_ListRegistrationApplications(
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
@@ -2430,7 +2437,7 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ListRegistrationApplications &&
+            other is _$_ListRegistrationApplications &&
             const DeepCollectionEquality()
                 .equals(other.unreadOnly, unreadOnly) &&
             const DeepCollectionEquality().equals(other.page, page) &&
@@ -2449,9 +2456,9 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
 
   @JsonKey(ignore: true)
   @override
-  _$ListRegistrationApplicationsCopyWith<_ListRegistrationApplications>
-      get copyWith => __$ListRegistrationApplicationsCopyWithImpl<
-          _ListRegistrationApplications>(this, _$identity);
+  _$$_ListRegistrationApplicationsCopyWith<_$_ListRegistrationApplications>
+      get copyWith => __$$_ListRegistrationApplicationsCopyWithImpl<
+          _$_ListRegistrationApplications>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2481,7 +2488,7 @@ abstract class _ListRegistrationApplications
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ListRegistrationApplicationsCopyWith<_ListRegistrationApplications>
+  _$$_ListRegistrationApplicationsCopyWith<_$_ListRegistrationApplications>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2550,28 +2557,28 @@ class _$ApproveRegistrationApplicationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ApproveRegistrationApplicationCopyWith<$Res>
+abstract class _$$_ApproveRegistrationApplicationCopyWith<$Res>
     implements $ApproveRegistrationApplicationCopyWith<$Res> {
-  factory _$ApproveRegistrationApplicationCopyWith(
-          _ApproveRegistrationApplication value,
-          $Res Function(_ApproveRegistrationApplication) then) =
-      __$ApproveRegistrationApplicationCopyWithImpl<$Res>;
+  factory _$$_ApproveRegistrationApplicationCopyWith(
+          _$_ApproveRegistrationApplication value,
+          $Res Function(_$_ApproveRegistrationApplication) then) =
+      __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>;
   @override
   $Res call({int id, bool approve, String? denyReason, String auth});
 }
 
 /// @nodoc
-class __$ApproveRegistrationApplicationCopyWithImpl<$Res>
+class __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>
     extends _$ApproveRegistrationApplicationCopyWithImpl<$Res>
-    implements _$ApproveRegistrationApplicationCopyWith<$Res> {
-  __$ApproveRegistrationApplicationCopyWithImpl(
-      _ApproveRegistrationApplication _value,
-      $Res Function(_ApproveRegistrationApplication) _then)
-      : super(_value, (v) => _then(v as _ApproveRegistrationApplication));
+    implements _$$_ApproveRegistrationApplicationCopyWith<$Res> {
+  __$$_ApproveRegistrationApplicationCopyWithImpl(
+      _$_ApproveRegistrationApplication _value,
+      $Res Function(_$_ApproveRegistrationApplication) _then)
+      : super(_value, (v) => _then(v as _$_ApproveRegistrationApplication));
 
   @override
-  _ApproveRegistrationApplication get _value =>
-      super._value as _ApproveRegistrationApplication;
+  _$_ApproveRegistrationApplication get _value =>
+      super._value as _$_ApproveRegistrationApplication;
 
   @override
   $Res call({
@@ -2580,7 +2587,7 @@ class __$ApproveRegistrationApplicationCopyWithImpl<$Res>
     Object? denyReason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ApproveRegistrationApplication(
+    return _then(_$_ApproveRegistrationApplication(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2635,7 +2642,7 @@ class _$_ApproveRegistrationApplication
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ApproveRegistrationApplication &&
+            other is _$_ApproveRegistrationApplication &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.approve, approve) &&
             const DeepCollectionEquality()
@@ -2654,9 +2661,9 @@ class _$_ApproveRegistrationApplication
 
   @JsonKey(ignore: true)
   @override
-  _$ApproveRegistrationApplicationCopyWith<_ApproveRegistrationApplication>
-      get copyWith => __$ApproveRegistrationApplicationCopyWithImpl<
-          _ApproveRegistrationApplication>(this, _$identity);
+  _$$_ApproveRegistrationApplicationCopyWith<_$_ApproveRegistrationApplication>
+      get copyWith => __$$_ApproveRegistrationApplicationCopyWithImpl<
+          _$_ApproveRegistrationApplication>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2686,6 +2693,6 @@ abstract class _ApproveRegistrationApplication
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ApproveRegistrationApplicationCopyWith<_ApproveRegistrationApplication>
+  _$$_ApproveRegistrationApplicationCopyWith<_$_ApproveRegistrationApplication>
       get copyWith => throw _privateConstructorUsedError;
 }

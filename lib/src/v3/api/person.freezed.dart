@@ -62,28 +62,28 @@ class _$LoginCopyWithImpl<$Res> implements $LoginCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
-  factory _$LoginCopyWith(_Login value, $Res Function(_Login) then) =
-      __$LoginCopyWithImpl<$Res>;
+abstract class _$$_LoginCopyWith<$Res> implements $LoginCopyWith<$Res> {
+  factory _$$_LoginCopyWith(_$_Login value, $Res Function(_$_Login) then) =
+      __$$_LoginCopyWithImpl<$Res>;
   @override
   $Res call({String usernameOrEmail, String password});
 }
 
 /// @nodoc
-class __$LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
-    implements _$LoginCopyWith<$Res> {
-  __$LoginCopyWithImpl(_Login _value, $Res Function(_Login) _then)
-      : super(_value, (v) => _then(v as _Login));
+class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
+    implements _$$_LoginCopyWith<$Res> {
+  __$$_LoginCopyWithImpl(_$_Login _value, $Res Function(_$_Login) _then)
+      : super(_value, (v) => _then(v as _$_Login));
 
   @override
-  _Login get _value => super._value as _Login;
+  _$_Login get _value => super._value as _$_Login;
 
   @override
   $Res call({
     Object? usernameOrEmail = freezed,
     Object? password = freezed,
   }) {
-    return _then(_Login(
+    return _then(_$_Login(
       usernameOrEmail: usernameOrEmail == freezed
           ? _value.usernameOrEmail
           : usernameOrEmail // ignore: cast_nullable_to_non_nullable
@@ -120,7 +120,7 @@ class _$_Login extends _Login {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Login &&
+            other is _$_Login &&
             const DeepCollectionEquality()
                 .equals(other.usernameOrEmail, usernameOrEmail) &&
             const DeepCollectionEquality().equals(other.password, password));
@@ -135,8 +135,8 @@ class _$_Login extends _Login {
 
   @JsonKey(ignore: true)
   @override
-  _$LoginCopyWith<_Login> get copyWith =>
-      __$LoginCopyWithImpl<_Login>(this, _$identity);
+  _$$_LoginCopyWith<_$_Login> get copyWith =>
+      __$$_LoginCopyWithImpl<_$_Login>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -158,7 +158,8 @@ abstract class _Login extends Login {
   String get password => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LoginCopyWith<_Login> get copyWith => throw _privateConstructorUsedError;
+  _$$_LoginCopyWith<_$_Login> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Register _$RegisterFromJson(Map<String, dynamic> json) {
@@ -261,9 +262,10 @@ class _$RegisterCopyWithImpl<$Res> implements $RegisterCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
-  factory _$RegisterCopyWith(_Register value, $Res Function(_Register) then) =
-      __$RegisterCopyWithImpl<$Res>;
+abstract class _$$_RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
+  factory _$$_RegisterCopyWith(
+          _$_Register value, $Res Function(_$_Register) then) =
+      __$$_RegisterCopyWithImpl<$Res>;
   @override
   $Res call(
       {String username,
@@ -278,13 +280,14 @@ abstract class _$RegisterCopyWith<$Res> implements $RegisterCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
-    implements _$RegisterCopyWith<$Res> {
-  __$RegisterCopyWithImpl(_Register _value, $Res Function(_Register) _then)
-      : super(_value, (v) => _then(v as _Register));
+class __$$_RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
+    implements _$$_RegisterCopyWith<$Res> {
+  __$$_RegisterCopyWithImpl(
+      _$_Register _value, $Res Function(_$_Register) _then)
+      : super(_value, (v) => _then(v as _$_Register));
 
   @override
-  _Register get _value => super._value as _Register;
+  _$_Register get _value => super._value as _$_Register;
 
   @override
   $Res call({
@@ -298,7 +301,7 @@ class __$RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
     Object? honeypot = freezed,
     Object? answer = freezed,
   }) {
-    return _then(_Register(
+    return _then(_$_Register(
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -386,7 +389,7 @@ class _$_Register extends _Register {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Register &&
+            other is _$_Register &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality().equals(other.password, password) &&
@@ -417,8 +420,8 @@ class _$_Register extends _Register {
 
   @JsonKey(ignore: true)
   @override
-  _$RegisterCopyWith<_Register> get copyWith =>
-      __$RegisterCopyWithImpl<_Register>(this, _$identity);
+  _$$_RegisterCopyWith<_$_Register> get copyWith =>
+      __$$_RegisterCopyWithImpl<_$_Register>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -461,7 +464,7 @@ abstract class _Register extends Register {
   String? get answer => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RegisterCopyWith<_Register> get copyWith =>
+  _$$_RegisterCopyWith<_$_Register> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -491,21 +494,21 @@ class _$GetCaptchaCopyWithImpl<$Res> implements $GetCaptchaCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetCaptchaCopyWith<$Res> {
-  factory _$GetCaptchaCopyWith(
-          _GetCaptcha value, $Res Function(_GetCaptcha) then) =
-      __$GetCaptchaCopyWithImpl<$Res>;
+abstract class _$$_GetCaptchaCopyWith<$Res> {
+  factory _$$_GetCaptchaCopyWith(
+          _$_GetCaptcha value, $Res Function(_$_GetCaptcha) then) =
+      __$$_GetCaptchaCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$GetCaptchaCopyWithImpl<$Res> extends _$GetCaptchaCopyWithImpl<$Res>
-    implements _$GetCaptchaCopyWith<$Res> {
-  __$GetCaptchaCopyWithImpl(
-      _GetCaptcha _value, $Res Function(_GetCaptcha) _then)
-      : super(_value, (v) => _then(v as _GetCaptcha));
+class __$$_GetCaptchaCopyWithImpl<$Res> extends _$GetCaptchaCopyWithImpl<$Res>
+    implements _$$_GetCaptchaCopyWith<$Res> {
+  __$$_GetCaptchaCopyWithImpl(
+      _$_GetCaptcha _value, $Res Function(_$_GetCaptcha) _then)
+      : super(_value, (v) => _then(v as _$_GetCaptcha));
 
   @override
-  _GetCaptcha get _value => super._value as _GetCaptcha;
+  _$_GetCaptcha get _value => super._value as _$_GetCaptcha;
 }
 
 /// @nodoc
@@ -525,7 +528,7 @@ class _$_GetCaptcha extends _GetCaptcha {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _GetCaptcha);
+        (other.runtimeType == runtimeType && other is _$_GetCaptcha);
   }
 
   @JsonKey(ignore: true)
@@ -722,11 +725,11 @@ class _$SaveUserSettingsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SaveUserSettingsCopyWith<$Res>
+abstract class _$$_SaveUserSettingsCopyWith<$Res>
     implements $SaveUserSettingsCopyWith<$Res> {
-  factory _$SaveUserSettingsCopyWith(
-          _SaveUserSettings value, $Res Function(_SaveUserSettings) then) =
-      __$SaveUserSettingsCopyWithImpl<$Res>;
+  factory _$$_SaveUserSettingsCopyWith(
+          _$_SaveUserSettings value, $Res Function(_$_SaveUserSettings) then) =
+      __$$_SaveUserSettingsCopyWithImpl<$Res>;
   @override
   $Res call(
       {bool? showNsfw,
@@ -753,15 +756,15 @@ abstract class _$SaveUserSettingsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SaveUserSettingsCopyWithImpl<$Res>
+class __$$_SaveUserSettingsCopyWithImpl<$Res>
     extends _$SaveUserSettingsCopyWithImpl<$Res>
-    implements _$SaveUserSettingsCopyWith<$Res> {
-  __$SaveUserSettingsCopyWithImpl(
-      _SaveUserSettings _value, $Res Function(_SaveUserSettings) _then)
-      : super(_value, (v) => _then(v as _SaveUserSettings));
+    implements _$$_SaveUserSettingsCopyWith<$Res> {
+  __$$_SaveUserSettingsCopyWithImpl(
+      _$_SaveUserSettings _value, $Res Function(_$_SaveUserSettings) _then)
+      : super(_value, (v) => _then(v as _$_SaveUserSettings));
 
   @override
-  _SaveUserSettings get _value => super._value as _SaveUserSettings;
+  _$_SaveUserSettings get _value => super._value as _$_SaveUserSettings;
 
   @override
   $Res call({
@@ -785,7 +788,7 @@ class __$SaveUserSettingsCopyWithImpl<$Res>
     Object? showNewPostNotifs = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_SaveUserSettings(
+    return _then(_$_SaveUserSettings(
       showNsfw: showNsfw == freezed
           ? _value.showNsfw
           : showNsfw // ignore: cast_nullable_to_non_nullable
@@ -947,7 +950,7 @@ class _$_SaveUserSettings extends _SaveUserSettings {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SaveUserSettings &&
+            other is _$_SaveUserSettings &&
             const DeepCollectionEquality().equals(other.showNsfw, showNsfw) &&
             const DeepCollectionEquality().equals(other.theme, theme) &&
             const DeepCollectionEquality()
@@ -1007,8 +1010,8 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 
   @JsonKey(ignore: true)
   @override
-  _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
-      __$SaveUserSettingsCopyWithImpl<_SaveUserSettings>(this, _$identity);
+  _$$_SaveUserSettingsCopyWith<_$_SaveUserSettings> get copyWith =>
+      __$$_SaveUserSettingsCopyWithImpl<_$_SaveUserSettings>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1086,7 +1089,7 @@ abstract class _SaveUserSettings extends SaveUserSettings {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SaveUserSettingsCopyWith<_SaveUserSettings> get copyWith =>
+  _$$_SaveUserSettingsCopyWith<_$_SaveUserSettings> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1157,11 +1160,11 @@ class _$ChangePasswordCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ChangePasswordCopyWith<$Res>
+abstract class _$$_ChangePasswordCopyWith<$Res>
     implements $ChangePasswordCopyWith<$Res> {
-  factory _$ChangePasswordCopyWith(
-          _ChangePassword value, $Res Function(_ChangePassword) then) =
-      __$ChangePasswordCopyWithImpl<$Res>;
+  factory _$$_ChangePasswordCopyWith(
+          _$_ChangePassword value, $Res Function(_$_ChangePassword) then) =
+      __$$_ChangePasswordCopyWithImpl<$Res>;
   @override
   $Res call(
       {String newPassword,
@@ -1171,15 +1174,15 @@ abstract class _$ChangePasswordCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ChangePasswordCopyWithImpl<$Res>
+class __$$_ChangePasswordCopyWithImpl<$Res>
     extends _$ChangePasswordCopyWithImpl<$Res>
-    implements _$ChangePasswordCopyWith<$Res> {
-  __$ChangePasswordCopyWithImpl(
-      _ChangePassword _value, $Res Function(_ChangePassword) _then)
-      : super(_value, (v) => _then(v as _ChangePassword));
+    implements _$$_ChangePasswordCopyWith<$Res> {
+  __$$_ChangePasswordCopyWithImpl(
+      _$_ChangePassword _value, $Res Function(_$_ChangePassword) _then)
+      : super(_value, (v) => _then(v as _$_ChangePassword));
 
   @override
-  _ChangePassword get _value => super._value as _ChangePassword;
+  _$_ChangePassword get _value => super._value as _$_ChangePassword;
 
   @override
   $Res call({
@@ -1188,7 +1191,7 @@ class __$ChangePasswordCopyWithImpl<$Res>
     Object? oldPassword = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ChangePassword(
+    return _then(_$_ChangePassword(
       newPassword: newPassword == freezed
           ? _value.newPassword
           : newPassword // ignore: cast_nullable_to_non_nullable
@@ -1241,7 +1244,7 @@ class _$_ChangePassword extends _ChangePassword {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ChangePassword &&
+            other is _$_ChangePassword &&
             const DeepCollectionEquality()
                 .equals(other.newPassword, newPassword) &&
             const DeepCollectionEquality()
@@ -1262,8 +1265,8 @@ class _$_ChangePassword extends _ChangePassword {
 
   @JsonKey(ignore: true)
   @override
-  _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
-      __$ChangePasswordCopyWithImpl<_ChangePassword>(this, _$identity);
+  _$$_ChangePasswordCopyWith<_$_ChangePassword> get copyWith =>
+      __$$_ChangePasswordCopyWithImpl<_$_ChangePassword>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1292,7 +1295,7 @@ abstract class _ChangePassword extends ChangePassword {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ChangePasswordCopyWith<_ChangePassword> get copyWith =>
+  _$$_ChangePasswordCopyWith<_$_ChangePassword> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1391,11 +1394,11 @@ class _$GetPersonDetailsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetPersonDetailsCopyWith<$Res>
+abstract class _$$_GetPersonDetailsCopyWith<$Res>
     implements $GetPersonDetailsCopyWith<$Res> {
-  factory _$GetPersonDetailsCopyWith(
-          _GetPersonDetails value, $Res Function(_GetPersonDetails) then) =
-      __$GetPersonDetailsCopyWithImpl<$Res>;
+  factory _$$_GetPersonDetailsCopyWith(
+          _$_GetPersonDetails value, $Res Function(_$_GetPersonDetails) then) =
+      __$$_GetPersonDetailsCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? personId,
@@ -1409,15 +1412,15 @@ abstract class _$GetPersonDetailsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GetPersonDetailsCopyWithImpl<$Res>
+class __$$_GetPersonDetailsCopyWithImpl<$Res>
     extends _$GetPersonDetailsCopyWithImpl<$Res>
-    implements _$GetPersonDetailsCopyWith<$Res> {
-  __$GetPersonDetailsCopyWithImpl(
-      _GetPersonDetails _value, $Res Function(_GetPersonDetails) _then)
-      : super(_value, (v) => _then(v as _GetPersonDetails));
+    implements _$$_GetPersonDetailsCopyWith<$Res> {
+  __$$_GetPersonDetailsCopyWithImpl(
+      _$_GetPersonDetails _value, $Res Function(_$_GetPersonDetails) _then)
+      : super(_value, (v) => _then(v as _$_GetPersonDetails));
 
   @override
-  _GetPersonDetails get _value => super._value as _GetPersonDetails;
+  _$_GetPersonDetails get _value => super._value as _$_GetPersonDetails;
 
   @override
   $Res call({
@@ -1430,7 +1433,7 @@ class __$GetPersonDetailsCopyWithImpl<$Res>
     Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetPersonDetails(
+    return _then(_$_GetPersonDetails(
       personId: personId == freezed
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -1511,7 +1514,7 @@ class _$_GetPersonDetails extends _GetPersonDetails {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetPersonDetails &&
+            other is _$_GetPersonDetails &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
             const DeepCollectionEquality().equals(other.username, username) &&
             const DeepCollectionEquality().equals(other.sort, sort) &&
@@ -1538,8 +1541,8 @@ class _$_GetPersonDetails extends _GetPersonDetails {
 
   @JsonKey(ignore: true)
   @override
-  _$GetPersonDetailsCopyWith<_GetPersonDetails> get copyWith =>
-      __$GetPersonDetailsCopyWithImpl<_GetPersonDetails>(this, _$identity);
+  _$$_GetPersonDetailsCopyWith<_$_GetPersonDetails> get copyWith =>
+      __$$_GetPersonDetailsCopyWithImpl<_$_GetPersonDetails>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1580,7 +1583,7 @@ abstract class _GetPersonDetails extends GetPersonDetails {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetPersonDetailsCopyWith<_GetPersonDetails> get copyWith =>
+  _$$_GetPersonDetailsCopyWith<_$_GetPersonDetails> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1629,31 +1632,31 @@ class _$MarkAllAsReadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MarkAllAsReadCopyWith<$Res>
+abstract class _$$_MarkAllAsReadCopyWith<$Res>
     implements $MarkAllAsReadCopyWith<$Res> {
-  factory _$MarkAllAsReadCopyWith(
-          _MarkAllAsRead value, $Res Function(_MarkAllAsRead) then) =
-      __$MarkAllAsReadCopyWithImpl<$Res>;
+  factory _$$_MarkAllAsReadCopyWith(
+          _$_MarkAllAsRead value, $Res Function(_$_MarkAllAsRead) then) =
+      __$$_MarkAllAsReadCopyWithImpl<$Res>;
   @override
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$MarkAllAsReadCopyWithImpl<$Res>
+class __$$_MarkAllAsReadCopyWithImpl<$Res>
     extends _$MarkAllAsReadCopyWithImpl<$Res>
-    implements _$MarkAllAsReadCopyWith<$Res> {
-  __$MarkAllAsReadCopyWithImpl(
-      _MarkAllAsRead _value, $Res Function(_MarkAllAsRead) _then)
-      : super(_value, (v) => _then(v as _MarkAllAsRead));
+    implements _$$_MarkAllAsReadCopyWith<$Res> {
+  __$$_MarkAllAsReadCopyWithImpl(
+      _$_MarkAllAsRead _value, $Res Function(_$_MarkAllAsRead) _then)
+      : super(_value, (v) => _then(v as _$_MarkAllAsRead));
 
   @override
-  _MarkAllAsRead get _value => super._value as _MarkAllAsRead;
+  _$_MarkAllAsRead get _value => super._value as _$_MarkAllAsRead;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_MarkAllAsRead(
+    return _then(_$_MarkAllAsRead(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1683,7 +1686,7 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MarkAllAsRead &&
+            other is _$_MarkAllAsRead &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -1694,8 +1697,8 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
 
   @JsonKey(ignore: true)
   @override
-  _$MarkAllAsReadCopyWith<_MarkAllAsRead> get copyWith =>
-      __$MarkAllAsReadCopyWithImpl<_MarkAllAsRead>(this, _$identity);
+  _$$_MarkAllAsReadCopyWith<_$_MarkAllAsRead> get copyWith =>
+      __$$_MarkAllAsReadCopyWithImpl<_$_MarkAllAsRead>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1714,7 +1717,7 @@ abstract class _MarkAllAsRead extends MarkAllAsRead {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarkAllAsReadCopyWith<_MarkAllAsRead> get copyWith =>
+  _$$_MarkAllAsReadCopyWith<_$_MarkAllAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1773,21 +1776,23 @@ class _$AddAdminCopyWithImpl<$Res> implements $AddAdminCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$AddAdminCopyWith<$Res> implements $AddAdminCopyWith<$Res> {
-  factory _$AddAdminCopyWith(_AddAdmin value, $Res Function(_AddAdmin) then) =
-      __$AddAdminCopyWithImpl<$Res>;
+abstract class _$$_AddAdminCopyWith<$Res> implements $AddAdminCopyWith<$Res> {
+  factory _$$_AddAdminCopyWith(
+          _$_AddAdmin value, $Res Function(_$_AddAdmin) then) =
+      __$$_AddAdminCopyWithImpl<$Res>;
   @override
   $Res call({int personId, bool added, String auth});
 }
 
 /// @nodoc
-class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
-    implements _$AddAdminCopyWith<$Res> {
-  __$AddAdminCopyWithImpl(_AddAdmin _value, $Res Function(_AddAdmin) _then)
-      : super(_value, (v) => _then(v as _AddAdmin));
+class __$$_AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
+    implements _$$_AddAdminCopyWith<$Res> {
+  __$$_AddAdminCopyWithImpl(
+      _$_AddAdmin _value, $Res Function(_$_AddAdmin) _then)
+      : super(_value, (v) => _then(v as _$_AddAdmin));
 
   @override
-  _AddAdmin get _value => super._value as _AddAdmin;
+  _$_AddAdmin get _value => super._value as _$_AddAdmin;
 
   @override
   $Res call({
@@ -1795,7 +1800,7 @@ class __$AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
     Object? added = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_AddAdmin(
+    return _then(_$_AddAdmin(
       personId: personId == freezed
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -1839,7 +1844,7 @@ class _$_AddAdmin extends _AddAdmin {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AddAdmin &&
+            other is _$_AddAdmin &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
             const DeepCollectionEquality().equals(other.added, added) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1855,8 +1860,8 @@ class _$_AddAdmin extends _AddAdmin {
 
   @JsonKey(ignore: true)
   @override
-  _$AddAdminCopyWith<_AddAdmin> get copyWith =>
-      __$AddAdminCopyWithImpl<_AddAdmin>(this, _$identity);
+  _$$_AddAdminCopyWith<_$_AddAdmin> get copyWith =>
+      __$$_AddAdminCopyWithImpl<_$_AddAdmin>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1881,7 +1886,7 @@ abstract class _AddAdmin extends AddAdmin {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AddAdminCopyWith<_AddAdmin> get copyWith =>
+  _$$_AddAdminCopyWith<_$_AddAdmin> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1964,10 +1969,10 @@ class _$BanPersonCopyWithImpl<$Res> implements $BanPersonCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
-  factory _$BanPersonCopyWith(
-          _BanPerson value, $Res Function(_BanPerson) then) =
-      __$BanPersonCopyWithImpl<$Res>;
+abstract class _$$_BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
+  factory _$$_BanPersonCopyWith(
+          _$_BanPerson value, $Res Function(_$_BanPerson) then) =
+      __$$_BanPersonCopyWithImpl<$Res>;
   @override
   $Res call(
       {int personId,
@@ -1979,13 +1984,14 @@ abstract class _$BanPersonCopyWith<$Res> implements $BanPersonCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
-    implements _$BanPersonCopyWith<$Res> {
-  __$BanPersonCopyWithImpl(_BanPerson _value, $Res Function(_BanPerson) _then)
-      : super(_value, (v) => _then(v as _BanPerson));
+class __$$_BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
+    implements _$$_BanPersonCopyWith<$Res> {
+  __$$_BanPersonCopyWithImpl(
+      _$_BanPerson _value, $Res Function(_$_BanPerson) _then)
+      : super(_value, (v) => _then(v as _$_BanPerson));
 
   @override
-  _BanPerson get _value => super._value as _BanPerson;
+  _$_BanPerson get _value => super._value as _$_BanPerson;
 
   @override
   $Res call({
@@ -1996,7 +2002,7 @@ class __$BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_BanPerson(
+    return _then(_$_BanPerson(
       personId: personId == freezed
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -2063,7 +2069,7 @@ class _$_BanPerson extends _BanPerson {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BanPerson &&
+            other is _$_BanPerson &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
             const DeepCollectionEquality().equals(other.ban, ban) &&
             const DeepCollectionEquality()
@@ -2086,8 +2092,8 @@ class _$_BanPerson extends _BanPerson {
 
   @JsonKey(ignore: true)
   @override
-  _$BanPersonCopyWith<_BanPerson> get copyWith =>
-      __$BanPersonCopyWithImpl<_BanPerson>(this, _$identity);
+  _$$_BanPersonCopyWith<_$_BanPerson> get copyWith =>
+      __$$_BanPersonCopyWithImpl<_$_BanPerson>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2122,7 +2128,7 @@ abstract class _BanPerson extends BanPerson {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BanPersonCopyWith<_BanPerson> get copyWith =>
+  _$$_BanPersonCopyWith<_$_BanPerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2195,24 +2201,25 @@ class _$GetRepliesCopyWithImpl<$Res> implements $GetRepliesCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetRepliesCopyWith<$Res> implements $GetRepliesCopyWith<$Res> {
-  factory _$GetRepliesCopyWith(
-          _GetReplies value, $Res Function(_GetReplies) then) =
-      __$GetRepliesCopyWithImpl<$Res>;
+abstract class _$$_GetRepliesCopyWith<$Res>
+    implements $GetRepliesCopyWith<$Res> {
+  factory _$$_GetRepliesCopyWith(
+          _$_GetReplies value, $Res Function(_$_GetReplies) then) =
+      __$$_GetRepliesCopyWithImpl<$Res>;
   @override
   $Res call(
       {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
-class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
-    implements _$GetRepliesCopyWith<$Res> {
-  __$GetRepliesCopyWithImpl(
-      _GetReplies _value, $Res Function(_GetReplies) _then)
-      : super(_value, (v) => _then(v as _GetReplies));
+class __$$_GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
+    implements _$$_GetRepliesCopyWith<$Res> {
+  __$$_GetRepliesCopyWithImpl(
+      _$_GetReplies _value, $Res Function(_$_GetReplies) _then)
+      : super(_value, (v) => _then(v as _$_GetReplies));
 
   @override
-  _GetReplies get _value => super._value as _GetReplies;
+  _$_GetReplies get _value => super._value as _$_GetReplies;
 
   @override
   $Res call({
@@ -2222,7 +2229,7 @@ class __$GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
     Object? unreadOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetReplies(
+    return _then(_$_GetReplies(
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -2278,7 +2285,7 @@ class _$_GetReplies extends _GetReplies {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetReplies &&
+            other is _$_GetReplies &&
             const DeepCollectionEquality().equals(other.sort, sort) &&
             const DeepCollectionEquality().equals(other.page, page) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
@@ -2299,8 +2306,8 @@ class _$_GetReplies extends _GetReplies {
 
   @JsonKey(ignore: true)
   @override
-  _$GetRepliesCopyWith<_GetReplies> get copyWith =>
-      __$GetRepliesCopyWithImpl<_GetReplies>(this, _$identity);
+  _$$_GetRepliesCopyWith<_$_GetReplies> get copyWith =>
+      __$$_GetRepliesCopyWithImpl<_$_GetReplies>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2332,7 +2339,7 @@ abstract class _GetReplies extends GetReplies {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetRepliesCopyWith<_GetReplies> get copyWith =>
+  _$$_GetRepliesCopyWith<_$_GetReplies> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2406,26 +2413,26 @@ class _$GetPersonMentionsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetPersonMentionsCopyWith<$Res>
+abstract class _$$_GetPersonMentionsCopyWith<$Res>
     implements $GetPersonMentionsCopyWith<$Res> {
-  factory _$GetPersonMentionsCopyWith(
-          _GetPersonMentions value, $Res Function(_GetPersonMentions) then) =
-      __$GetPersonMentionsCopyWithImpl<$Res>;
+  factory _$$_GetPersonMentionsCopyWith(_$_GetPersonMentions value,
+          $Res Function(_$_GetPersonMentions) then) =
+      __$$_GetPersonMentionsCopyWithImpl<$Res>;
   @override
   $Res call(
       {SortType? sort, int? page, int? limit, bool? unreadOnly, String auth});
 }
 
 /// @nodoc
-class __$GetPersonMentionsCopyWithImpl<$Res>
+class __$$_GetPersonMentionsCopyWithImpl<$Res>
     extends _$GetPersonMentionsCopyWithImpl<$Res>
-    implements _$GetPersonMentionsCopyWith<$Res> {
-  __$GetPersonMentionsCopyWithImpl(
-      _GetPersonMentions _value, $Res Function(_GetPersonMentions) _then)
-      : super(_value, (v) => _then(v as _GetPersonMentions));
+    implements _$$_GetPersonMentionsCopyWith<$Res> {
+  __$$_GetPersonMentionsCopyWithImpl(
+      _$_GetPersonMentions _value, $Res Function(_$_GetPersonMentions) _then)
+      : super(_value, (v) => _then(v as _$_GetPersonMentions));
 
   @override
-  _GetPersonMentions get _value => super._value as _GetPersonMentions;
+  _$_GetPersonMentions get _value => super._value as _$_GetPersonMentions;
 
   @override
   $Res call({
@@ -2435,7 +2442,7 @@ class __$GetPersonMentionsCopyWithImpl<$Res>
     Object? unreadOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetPersonMentions(
+    return _then(_$_GetPersonMentions(
       sort: sort == freezed
           ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
@@ -2491,7 +2498,7 @@ class _$_GetPersonMentions extends _GetPersonMentions {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetPersonMentions &&
+            other is _$_GetPersonMentions &&
             const DeepCollectionEquality().equals(other.sort, sort) &&
             const DeepCollectionEquality().equals(other.page, page) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
@@ -2512,8 +2519,9 @@ class _$_GetPersonMentions extends _GetPersonMentions {
 
   @JsonKey(ignore: true)
   @override
-  _$GetPersonMentionsCopyWith<_GetPersonMentions> get copyWith =>
-      __$GetPersonMentionsCopyWithImpl<_GetPersonMentions>(this, _$identity);
+  _$$_GetPersonMentionsCopyWith<_$_GetPersonMentions> get copyWith =>
+      __$$_GetPersonMentionsCopyWithImpl<_$_GetPersonMentions>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2545,7 +2553,7 @@ abstract class _GetPersonMentions extends GetPersonMentions {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetPersonMentionsCopyWith<_GetPersonMentions> get copyWith =>
+  _$$_GetPersonMentionsCopyWith<_$_GetPersonMentions> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2607,26 +2615,26 @@ class _$MarkPersonMentionAsReadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MarkPersonMentionAsReadCopyWith<$Res>
+abstract class _$$_MarkPersonMentionAsReadCopyWith<$Res>
     implements $MarkPersonMentionAsReadCopyWith<$Res> {
-  factory _$MarkPersonMentionAsReadCopyWith(_MarkPersonMentionAsRead value,
-          $Res Function(_MarkPersonMentionAsRead) then) =
-      __$MarkPersonMentionAsReadCopyWithImpl<$Res>;
+  factory _$$_MarkPersonMentionAsReadCopyWith(_$_MarkPersonMentionAsRead value,
+          $Res Function(_$_MarkPersonMentionAsRead) then) =
+      __$$_MarkPersonMentionAsReadCopyWithImpl<$Res>;
   @override
   $Res call({int personMentionId, bool read, String auth});
 }
 
 /// @nodoc
-class __$MarkPersonMentionAsReadCopyWithImpl<$Res>
+class __$$_MarkPersonMentionAsReadCopyWithImpl<$Res>
     extends _$MarkPersonMentionAsReadCopyWithImpl<$Res>
-    implements _$MarkPersonMentionAsReadCopyWith<$Res> {
-  __$MarkPersonMentionAsReadCopyWithImpl(_MarkPersonMentionAsRead _value,
-      $Res Function(_MarkPersonMentionAsRead) _then)
-      : super(_value, (v) => _then(v as _MarkPersonMentionAsRead));
+    implements _$$_MarkPersonMentionAsReadCopyWith<$Res> {
+  __$$_MarkPersonMentionAsReadCopyWithImpl(_$_MarkPersonMentionAsRead _value,
+      $Res Function(_$_MarkPersonMentionAsRead) _then)
+      : super(_value, (v) => _then(v as _$_MarkPersonMentionAsRead));
 
   @override
-  _MarkPersonMentionAsRead get _value =>
-      super._value as _MarkPersonMentionAsRead;
+  _$_MarkPersonMentionAsRead get _value =>
+      super._value as _$_MarkPersonMentionAsRead;
 
   @override
   $Res call({
@@ -2634,7 +2642,7 @@ class __$MarkPersonMentionAsReadCopyWithImpl<$Res>
     Object? read = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_MarkPersonMentionAsRead(
+    return _then(_$_MarkPersonMentionAsRead(
       personMentionId: personMentionId == freezed
           ? _value.personMentionId
           : personMentionId // ignore: cast_nullable_to_non_nullable
@@ -2678,7 +2686,7 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MarkPersonMentionAsRead &&
+            other is _$_MarkPersonMentionAsRead &&
             const DeepCollectionEquality()
                 .equals(other.personMentionId, personMentionId) &&
             const DeepCollectionEquality().equals(other.read, read) &&
@@ -2695,9 +2703,10 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
 
   @JsonKey(ignore: true)
   @override
-  _$MarkPersonMentionAsReadCopyWith<_MarkPersonMentionAsRead> get copyWith =>
-      __$MarkPersonMentionAsReadCopyWithImpl<_MarkPersonMentionAsRead>(
-          this, _$identity);
+  _$$_MarkPersonMentionAsReadCopyWith<_$_MarkPersonMentionAsRead>
+      get copyWith =>
+          __$$_MarkPersonMentionAsReadCopyWithImpl<_$_MarkPersonMentionAsRead>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2723,8 +2732,8 @@ abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarkPersonMentionAsReadCopyWith<_MarkPersonMentionAsRead> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MarkPersonMentionAsReadCopyWith<_$_MarkPersonMentionAsRead>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 DeleteAccount _$DeleteAccountFromJson(Map<String, dynamic> json) {
@@ -2778,32 +2787,32 @@ class _$DeleteAccountCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DeleteAccountCopyWith<$Res>
+abstract class _$$_DeleteAccountCopyWith<$Res>
     implements $DeleteAccountCopyWith<$Res> {
-  factory _$DeleteAccountCopyWith(
-          _DeleteAccount value, $Res Function(_DeleteAccount) then) =
-      __$DeleteAccountCopyWithImpl<$Res>;
+  factory _$$_DeleteAccountCopyWith(
+          _$_DeleteAccount value, $Res Function(_$_DeleteAccount) then) =
+      __$$_DeleteAccountCopyWithImpl<$Res>;
   @override
   $Res call({String password, String auth});
 }
 
 /// @nodoc
-class __$DeleteAccountCopyWithImpl<$Res>
+class __$$_DeleteAccountCopyWithImpl<$Res>
     extends _$DeleteAccountCopyWithImpl<$Res>
-    implements _$DeleteAccountCopyWith<$Res> {
-  __$DeleteAccountCopyWithImpl(
-      _DeleteAccount _value, $Res Function(_DeleteAccount) _then)
-      : super(_value, (v) => _then(v as _DeleteAccount));
+    implements _$$_DeleteAccountCopyWith<$Res> {
+  __$$_DeleteAccountCopyWithImpl(
+      _$_DeleteAccount _value, $Res Function(_$_DeleteAccount) _then)
+      : super(_value, (v) => _then(v as _$_DeleteAccount));
 
   @override
-  _DeleteAccount get _value => super._value as _DeleteAccount;
+  _$_DeleteAccount get _value => super._value as _$_DeleteAccount;
 
   @override
   $Res call({
     Object? password = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_DeleteAccount(
+    return _then(_$_DeleteAccount(
       password: password == freezed
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
@@ -2840,7 +2849,7 @@ class _$_DeleteAccount extends _DeleteAccount {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeleteAccount &&
+            other is _$_DeleteAccount &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
@@ -2854,8 +2863,8 @@ class _$_DeleteAccount extends _DeleteAccount {
 
   @JsonKey(ignore: true)
   @override
-  _$DeleteAccountCopyWith<_DeleteAccount> get copyWith =>
-      __$DeleteAccountCopyWithImpl<_DeleteAccount>(this, _$identity);
+  _$$_DeleteAccountCopyWith<_$_DeleteAccount> get copyWith =>
+      __$$_DeleteAccountCopyWithImpl<_$_DeleteAccount>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2878,7 +2887,7 @@ abstract class _DeleteAccount extends DeleteAccount {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeleteAccountCopyWith<_DeleteAccount> get copyWith =>
+  _$$_DeleteAccountCopyWith<_$_DeleteAccount> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2927,31 +2936,31 @@ class _$PasswordResetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PasswordResetCopyWith<$Res>
+abstract class _$$_PasswordResetCopyWith<$Res>
     implements $PasswordResetCopyWith<$Res> {
-  factory _$PasswordResetCopyWith(
-          _PasswordReset value, $Res Function(_PasswordReset) then) =
-      __$PasswordResetCopyWithImpl<$Res>;
+  factory _$$_PasswordResetCopyWith(
+          _$_PasswordReset value, $Res Function(_$_PasswordReset) then) =
+      __$$_PasswordResetCopyWithImpl<$Res>;
   @override
   $Res call({String email});
 }
 
 /// @nodoc
-class __$PasswordResetCopyWithImpl<$Res>
+class __$$_PasswordResetCopyWithImpl<$Res>
     extends _$PasswordResetCopyWithImpl<$Res>
-    implements _$PasswordResetCopyWith<$Res> {
-  __$PasswordResetCopyWithImpl(
-      _PasswordReset _value, $Res Function(_PasswordReset) _then)
-      : super(_value, (v) => _then(v as _PasswordReset));
+    implements _$$_PasswordResetCopyWith<$Res> {
+  __$$_PasswordResetCopyWithImpl(
+      _$_PasswordReset _value, $Res Function(_$_PasswordReset) _then)
+      : super(_value, (v) => _then(v as _$_PasswordReset));
 
   @override
-  _PasswordReset get _value => super._value as _PasswordReset;
+  _$_PasswordReset get _value => super._value as _$_PasswordReset;
 
   @override
   $Res call({
     Object? email = freezed,
   }) {
-    return _then(_PasswordReset(
+    return _then(_$_PasswordReset(
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -2981,7 +2990,7 @@ class _$_PasswordReset extends _PasswordReset {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PasswordReset &&
+            other is _$_PasswordReset &&
             const DeepCollectionEquality().equals(other.email, email));
   }
 
@@ -2992,8 +3001,8 @@ class _$_PasswordReset extends _PasswordReset {
 
   @JsonKey(ignore: true)
   @override
-  _$PasswordResetCopyWith<_PasswordReset> get copyWith =>
-      __$PasswordResetCopyWithImpl<_PasswordReset>(this, _$identity);
+  _$$_PasswordResetCopyWith<_$_PasswordReset> get copyWith =>
+      __$$_PasswordResetCopyWithImpl<_$_PasswordReset>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3013,7 +3022,7 @@ abstract class _PasswordReset extends PasswordReset {
   String get email => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PasswordResetCopyWith<_PasswordReset> get copyWith =>
+  _$$_PasswordResetCopyWith<_$_PasswordReset> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3074,25 +3083,25 @@ class _$PasswordChangeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PasswordChangeCopyWith<$Res>
+abstract class _$$_PasswordChangeCopyWith<$Res>
     implements $PasswordChangeCopyWith<$Res> {
-  factory _$PasswordChangeCopyWith(
-          _PasswordChange value, $Res Function(_PasswordChange) then) =
-      __$PasswordChangeCopyWithImpl<$Res>;
+  factory _$$_PasswordChangeCopyWith(
+          _$_PasswordChange value, $Res Function(_$_PasswordChange) then) =
+      __$$_PasswordChangeCopyWithImpl<$Res>;
   @override
   $Res call({String token, String password, String passwordVerify});
 }
 
 /// @nodoc
-class __$PasswordChangeCopyWithImpl<$Res>
+class __$$_PasswordChangeCopyWithImpl<$Res>
     extends _$PasswordChangeCopyWithImpl<$Res>
-    implements _$PasswordChangeCopyWith<$Res> {
-  __$PasswordChangeCopyWithImpl(
-      _PasswordChange _value, $Res Function(_PasswordChange) _then)
-      : super(_value, (v) => _then(v as _PasswordChange));
+    implements _$$_PasswordChangeCopyWith<$Res> {
+  __$$_PasswordChangeCopyWithImpl(
+      _$_PasswordChange _value, $Res Function(_$_PasswordChange) _then)
+      : super(_value, (v) => _then(v as _$_PasswordChange));
 
   @override
-  _PasswordChange get _value => super._value as _PasswordChange;
+  _$_PasswordChange get _value => super._value as _$_PasswordChange;
 
   @override
   $Res call({
@@ -3100,7 +3109,7 @@ class __$PasswordChangeCopyWithImpl<$Res>
     Object? password = freezed,
     Object? passwordVerify = freezed,
   }) {
-    return _then(_PasswordChange(
+    return _then(_$_PasswordChange(
       token: token == freezed
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -3146,7 +3155,7 @@ class _$_PasswordChange extends _PasswordChange {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PasswordChange &&
+            other is _$_PasswordChange &&
             const DeepCollectionEquality().equals(other.token, token) &&
             const DeepCollectionEquality().equals(other.password, password) &&
             const DeepCollectionEquality()
@@ -3163,8 +3172,8 @@ class _$_PasswordChange extends _PasswordChange {
 
   @JsonKey(ignore: true)
   @override
-  _$PasswordChangeCopyWith<_PasswordChange> get copyWith =>
-      __$PasswordChangeCopyWithImpl<_PasswordChange>(this, _$identity);
+  _$$_PasswordChangeCopyWith<_$_PasswordChange> get copyWith =>
+      __$$_PasswordChangeCopyWithImpl<_$_PasswordChange>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3190,7 +3199,7 @@ abstract class _PasswordChange extends PasswordChange {
   String get passwordVerify => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PasswordChangeCopyWith<_PasswordChange> get copyWith =>
+  _$$_PasswordChangeCopyWith<_$_PasswordChange> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3251,25 +3260,25 @@ class _$CreatePrivateMessageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreatePrivateMessageCopyWith<$Res>
+abstract class _$$_CreatePrivateMessageCopyWith<$Res>
     implements $CreatePrivateMessageCopyWith<$Res> {
-  factory _$CreatePrivateMessageCopyWith(_CreatePrivateMessage value,
-          $Res Function(_CreatePrivateMessage) then) =
-      __$CreatePrivateMessageCopyWithImpl<$Res>;
+  factory _$$_CreatePrivateMessageCopyWith(_$_CreatePrivateMessage value,
+          $Res Function(_$_CreatePrivateMessage) then) =
+      __$$_CreatePrivateMessageCopyWithImpl<$Res>;
   @override
   $Res call({String content, int recipientId, String auth});
 }
 
 /// @nodoc
-class __$CreatePrivateMessageCopyWithImpl<$Res>
+class __$$_CreatePrivateMessageCopyWithImpl<$Res>
     extends _$CreatePrivateMessageCopyWithImpl<$Res>
-    implements _$CreatePrivateMessageCopyWith<$Res> {
-  __$CreatePrivateMessageCopyWithImpl(
-      _CreatePrivateMessage _value, $Res Function(_CreatePrivateMessage) _then)
-      : super(_value, (v) => _then(v as _CreatePrivateMessage));
+    implements _$$_CreatePrivateMessageCopyWith<$Res> {
+  __$$_CreatePrivateMessageCopyWithImpl(_$_CreatePrivateMessage _value,
+      $Res Function(_$_CreatePrivateMessage) _then)
+      : super(_value, (v) => _then(v as _$_CreatePrivateMessage));
 
   @override
-  _CreatePrivateMessage get _value => super._value as _CreatePrivateMessage;
+  _$_CreatePrivateMessage get _value => super._value as _$_CreatePrivateMessage;
 
   @override
   $Res call({
@@ -3277,7 +3286,7 @@ class __$CreatePrivateMessageCopyWithImpl<$Res>
     Object? recipientId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreatePrivateMessage(
+    return _then(_$_CreatePrivateMessage(
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -3321,7 +3330,7 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreatePrivateMessage &&
+            other is _$_CreatePrivateMessage &&
             const DeepCollectionEquality().equals(other.content, content) &&
             const DeepCollectionEquality()
                 .equals(other.recipientId, recipientId) &&
@@ -3338,8 +3347,8 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
 
   @JsonKey(ignore: true)
   @override
-  _$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith =>
-      __$CreatePrivateMessageCopyWithImpl<_CreatePrivateMessage>(
+  _$$_CreatePrivateMessageCopyWith<_$_CreatePrivateMessage> get copyWith =>
+      __$$_CreatePrivateMessageCopyWithImpl<_$_CreatePrivateMessage>(
           this, _$identity);
 
   @override
@@ -3366,7 +3375,7 @@ abstract class _CreatePrivateMessage extends CreatePrivateMessage {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreatePrivateMessageCopyWith<_CreatePrivateMessage> get copyWith =>
+  _$$_CreatePrivateMessageCopyWith<_$_CreatePrivateMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3427,25 +3436,25 @@ class _$EditPrivateMessageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$EditPrivateMessageCopyWith<$Res>
+abstract class _$$_EditPrivateMessageCopyWith<$Res>
     implements $EditPrivateMessageCopyWith<$Res> {
-  factory _$EditPrivateMessageCopyWith(
-          _EditPrivateMessage value, $Res Function(_EditPrivateMessage) then) =
-      __$EditPrivateMessageCopyWithImpl<$Res>;
+  factory _$$_EditPrivateMessageCopyWith(_$_EditPrivateMessage value,
+          $Res Function(_$_EditPrivateMessage) then) =
+      __$$_EditPrivateMessageCopyWithImpl<$Res>;
   @override
   $Res call({int privateMessageId, String content, String auth});
 }
 
 /// @nodoc
-class __$EditPrivateMessageCopyWithImpl<$Res>
+class __$$_EditPrivateMessageCopyWithImpl<$Res>
     extends _$EditPrivateMessageCopyWithImpl<$Res>
-    implements _$EditPrivateMessageCopyWith<$Res> {
-  __$EditPrivateMessageCopyWithImpl(
-      _EditPrivateMessage _value, $Res Function(_EditPrivateMessage) _then)
-      : super(_value, (v) => _then(v as _EditPrivateMessage));
+    implements _$$_EditPrivateMessageCopyWith<$Res> {
+  __$$_EditPrivateMessageCopyWithImpl(
+      _$_EditPrivateMessage _value, $Res Function(_$_EditPrivateMessage) _then)
+      : super(_value, (v) => _then(v as _$_EditPrivateMessage));
 
   @override
-  _EditPrivateMessage get _value => super._value as _EditPrivateMessage;
+  _$_EditPrivateMessage get _value => super._value as _$_EditPrivateMessage;
 
   @override
   $Res call({
@@ -3453,7 +3462,7 @@ class __$EditPrivateMessageCopyWithImpl<$Res>
     Object? content = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_EditPrivateMessage(
+    return _then(_$_EditPrivateMessage(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
@@ -3499,7 +3508,7 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EditPrivateMessage &&
+            other is _$_EditPrivateMessage &&
             const DeepCollectionEquality()
                 .equals(other.privateMessageId, privateMessageId) &&
             const DeepCollectionEquality().equals(other.content, content) &&
@@ -3516,8 +3525,9 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
 
   @JsonKey(ignore: true)
   @override
-  _$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith =>
-      __$EditPrivateMessageCopyWithImpl<_EditPrivateMessage>(this, _$identity);
+  _$$_EditPrivateMessageCopyWith<_$_EditPrivateMessage> get copyWith =>
+      __$$_EditPrivateMessageCopyWithImpl<_$_EditPrivateMessage>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3543,7 +3553,7 @@ abstract class _EditPrivateMessage extends EditPrivateMessage {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EditPrivateMessageCopyWith<_EditPrivateMessage> get copyWith =>
+  _$$_EditPrivateMessageCopyWith<_$_EditPrivateMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3604,25 +3614,25 @@ class _$DeletePrivateMessageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DeletePrivateMessageCopyWith<$Res>
+abstract class _$$_DeletePrivateMessageCopyWith<$Res>
     implements $DeletePrivateMessageCopyWith<$Res> {
-  factory _$DeletePrivateMessageCopyWith(_DeletePrivateMessage value,
-          $Res Function(_DeletePrivateMessage) then) =
-      __$DeletePrivateMessageCopyWithImpl<$Res>;
+  factory _$$_DeletePrivateMessageCopyWith(_$_DeletePrivateMessage value,
+          $Res Function(_$_DeletePrivateMessage) then) =
+      __$$_DeletePrivateMessageCopyWithImpl<$Res>;
   @override
   $Res call({int privateMessageId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$DeletePrivateMessageCopyWithImpl<$Res>
+class __$$_DeletePrivateMessageCopyWithImpl<$Res>
     extends _$DeletePrivateMessageCopyWithImpl<$Res>
-    implements _$DeletePrivateMessageCopyWith<$Res> {
-  __$DeletePrivateMessageCopyWithImpl(
-      _DeletePrivateMessage _value, $Res Function(_DeletePrivateMessage) _then)
-      : super(_value, (v) => _then(v as _DeletePrivateMessage));
+    implements _$$_DeletePrivateMessageCopyWith<$Res> {
+  __$$_DeletePrivateMessageCopyWithImpl(_$_DeletePrivateMessage _value,
+      $Res Function(_$_DeletePrivateMessage) _then)
+      : super(_value, (v) => _then(v as _$_DeletePrivateMessage));
 
   @override
-  _DeletePrivateMessage get _value => super._value as _DeletePrivateMessage;
+  _$_DeletePrivateMessage get _value => super._value as _$_DeletePrivateMessage;
 
   @override
   $Res call({
@@ -3630,7 +3640,7 @@ class __$DeletePrivateMessageCopyWithImpl<$Res>
     Object? deleted = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_DeletePrivateMessage(
+    return _then(_$_DeletePrivateMessage(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
@@ -3676,7 +3686,7 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeletePrivateMessage &&
+            other is _$_DeletePrivateMessage &&
             const DeepCollectionEquality()
                 .equals(other.privateMessageId, privateMessageId) &&
             const DeepCollectionEquality().equals(other.deleted, deleted) &&
@@ -3693,8 +3703,8 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
 
   @JsonKey(ignore: true)
   @override
-  _$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith =>
-      __$DeletePrivateMessageCopyWithImpl<_DeletePrivateMessage>(
+  _$$_DeletePrivateMessageCopyWith<_$_DeletePrivateMessage> get copyWith =>
+      __$$_DeletePrivateMessageCopyWithImpl<_$_DeletePrivateMessage>(
           this, _$identity);
 
   @override
@@ -3721,7 +3731,7 @@ abstract class _DeletePrivateMessage extends DeletePrivateMessage {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeletePrivateMessageCopyWith<_DeletePrivateMessage> get copyWith =>
+  _$$_DeletePrivateMessageCopyWith<_$_DeletePrivateMessage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3783,26 +3793,27 @@ class _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MarkPrivateMessageAsReadCopyWith<$Res>
+abstract class _$$_MarkPrivateMessageAsReadCopyWith<$Res>
     implements $MarkPrivateMessageAsReadCopyWith<$Res> {
-  factory _$MarkPrivateMessageAsReadCopyWith(_MarkPrivateMessageAsRead value,
-          $Res Function(_MarkPrivateMessageAsRead) then) =
-      __$MarkPrivateMessageAsReadCopyWithImpl<$Res>;
+  factory _$$_MarkPrivateMessageAsReadCopyWith(
+          _$_MarkPrivateMessageAsRead value,
+          $Res Function(_$_MarkPrivateMessageAsRead) then) =
+      __$$_MarkPrivateMessageAsReadCopyWithImpl<$Res>;
   @override
   $Res call({int privateMessageId, bool read, String auth});
 }
 
 /// @nodoc
-class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
+class __$$_MarkPrivateMessageAsReadCopyWithImpl<$Res>
     extends _$MarkPrivateMessageAsReadCopyWithImpl<$Res>
-    implements _$MarkPrivateMessageAsReadCopyWith<$Res> {
-  __$MarkPrivateMessageAsReadCopyWithImpl(_MarkPrivateMessageAsRead _value,
-      $Res Function(_MarkPrivateMessageAsRead) _then)
-      : super(_value, (v) => _then(v as _MarkPrivateMessageAsRead));
+    implements _$$_MarkPrivateMessageAsReadCopyWith<$Res> {
+  __$$_MarkPrivateMessageAsReadCopyWithImpl(_$_MarkPrivateMessageAsRead _value,
+      $Res Function(_$_MarkPrivateMessageAsRead) _then)
+      : super(_value, (v) => _then(v as _$_MarkPrivateMessageAsRead));
 
   @override
-  _MarkPrivateMessageAsRead get _value =>
-      super._value as _MarkPrivateMessageAsRead;
+  _$_MarkPrivateMessageAsRead get _value =>
+      super._value as _$_MarkPrivateMessageAsRead;
 
   @override
   $Res call({
@@ -3810,7 +3821,7 @@ class __$MarkPrivateMessageAsReadCopyWithImpl<$Res>
     Object? read = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_MarkPrivateMessageAsRead(
+    return _then(_$_MarkPrivateMessageAsRead(
       privateMessageId: privateMessageId == freezed
           ? _value.privateMessageId
           : privateMessageId // ignore: cast_nullable_to_non_nullable
@@ -3854,7 +3865,7 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MarkPrivateMessageAsRead &&
+            other is _$_MarkPrivateMessageAsRead &&
             const DeepCollectionEquality()
                 .equals(other.privateMessageId, privateMessageId) &&
             const DeepCollectionEquality().equals(other.read, read) &&
@@ -3871,9 +3882,9 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
 
   @JsonKey(ignore: true)
   @override
-  _$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith =>
-      __$MarkPrivateMessageAsReadCopyWithImpl<_MarkPrivateMessageAsRead>(
-          this, _$identity);
+  _$$_MarkPrivateMessageAsReadCopyWith<_$_MarkPrivateMessageAsRead>
+      get copyWith => __$$_MarkPrivateMessageAsReadCopyWithImpl<
+          _$_MarkPrivateMessageAsRead>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -3899,8 +3910,8 @@ abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarkPrivateMessageAsReadCopyWith<_MarkPrivateMessageAsRead> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_MarkPrivateMessageAsReadCopyWith<_$_MarkPrivateMessageAsRead>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 GetPrivateMessages _$GetPrivateMessagesFromJson(Map<String, dynamic> json) {
@@ -3966,25 +3977,25 @@ class _$GetPrivateMessagesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetPrivateMessagesCopyWith<$Res>
+abstract class _$$_GetPrivateMessagesCopyWith<$Res>
     implements $GetPrivateMessagesCopyWith<$Res> {
-  factory _$GetPrivateMessagesCopyWith(
-          _GetPrivateMessages value, $Res Function(_GetPrivateMessages) then) =
-      __$GetPrivateMessagesCopyWithImpl<$Res>;
+  factory _$$_GetPrivateMessagesCopyWith(_$_GetPrivateMessages value,
+          $Res Function(_$_GetPrivateMessages) then) =
+      __$$_GetPrivateMessagesCopyWithImpl<$Res>;
   @override
   $Res call({bool? unreadOnly, int? page, int? limit, String auth});
 }
 
 /// @nodoc
-class __$GetPrivateMessagesCopyWithImpl<$Res>
+class __$$_GetPrivateMessagesCopyWithImpl<$Res>
     extends _$GetPrivateMessagesCopyWithImpl<$Res>
-    implements _$GetPrivateMessagesCopyWith<$Res> {
-  __$GetPrivateMessagesCopyWithImpl(
-      _GetPrivateMessages _value, $Res Function(_GetPrivateMessages) _then)
-      : super(_value, (v) => _then(v as _GetPrivateMessages));
+    implements _$$_GetPrivateMessagesCopyWith<$Res> {
+  __$$_GetPrivateMessagesCopyWithImpl(
+      _$_GetPrivateMessages _value, $Res Function(_$_GetPrivateMessages) _then)
+      : super(_value, (v) => _then(v as _$_GetPrivateMessages));
 
   @override
-  _GetPrivateMessages get _value => super._value as _GetPrivateMessages;
+  _$_GetPrivateMessages get _value => super._value as _$_GetPrivateMessages;
 
   @override
   $Res call({
@@ -3993,7 +4004,7 @@ class __$GetPrivateMessagesCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetPrivateMessages(
+    return _then(_$_GetPrivateMessages(
       unreadOnly: unreadOnly == freezed
           ? _value.unreadOnly
           : unreadOnly // ignore: cast_nullable_to_non_nullable
@@ -4043,7 +4054,7 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetPrivateMessages &&
+            other is _$_GetPrivateMessages &&
             const DeepCollectionEquality()
                 .equals(other.unreadOnly, unreadOnly) &&
             const DeepCollectionEquality().equals(other.page, page) &&
@@ -4062,8 +4073,9 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 
   @JsonKey(ignore: true)
   @override
-  _$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith =>
-      __$GetPrivateMessagesCopyWithImpl<_GetPrivateMessages>(this, _$identity);
+  _$$_GetPrivateMessagesCopyWith<_$_GetPrivateMessages> get copyWith =>
+      __$$_GetPrivateMessagesCopyWithImpl<_$_GetPrivateMessages>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4092,7 +4104,7 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetPrivateMessagesCopyWith<_GetPrivateMessages> get copyWith =>
+  _$$_GetPrivateMessagesCopyWith<_$_GetPrivateMessages> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4152,24 +4164,24 @@ class _$BlockPersonCopyWithImpl<$Res> implements $BlockPersonCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$BlockPersonCopyWith<$Res>
+abstract class _$$_BlockPersonCopyWith<$Res>
     implements $BlockPersonCopyWith<$Res> {
-  factory _$BlockPersonCopyWith(
-          _BlockPerson value, $Res Function(_BlockPerson) then) =
-      __$BlockPersonCopyWithImpl<$Res>;
+  factory _$$_BlockPersonCopyWith(
+          _$_BlockPerson value, $Res Function(_$_BlockPerson) then) =
+      __$$_BlockPersonCopyWithImpl<$Res>;
   @override
   $Res call({int personId, bool block, String auth});
 }
 
 /// @nodoc
-class __$BlockPersonCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res>
-    implements _$BlockPersonCopyWith<$Res> {
-  __$BlockPersonCopyWithImpl(
-      _BlockPerson _value, $Res Function(_BlockPerson) _then)
-      : super(_value, (v) => _then(v as _BlockPerson));
+class __$$_BlockPersonCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res>
+    implements _$$_BlockPersonCopyWith<$Res> {
+  __$$_BlockPersonCopyWithImpl(
+      _$_BlockPerson _value, $Res Function(_$_BlockPerson) _then)
+      : super(_value, (v) => _then(v as _$_BlockPerson));
 
   @override
-  _BlockPerson get _value => super._value as _BlockPerson;
+  _$_BlockPerson get _value => super._value as _$_BlockPerson;
 
   @override
   $Res call({
@@ -4177,7 +4189,7 @@ class __$BlockPersonCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res>
     Object? block = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_BlockPerson(
+    return _then(_$_BlockPerson(
       personId: personId == freezed
           ? _value.personId
           : personId // ignore: cast_nullable_to_non_nullable
@@ -4221,7 +4233,7 @@ class _$_BlockPerson extends _BlockPerson {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BlockPerson &&
+            other is _$_BlockPerson &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
             const DeepCollectionEquality().equals(other.block, block) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -4237,8 +4249,8 @@ class _$_BlockPerson extends _BlockPerson {
 
   @JsonKey(ignore: true)
   @override
-  _$BlockPersonCopyWith<_BlockPerson> get copyWith =>
-      __$BlockPersonCopyWithImpl<_BlockPerson>(this, _$identity);
+  _$$_BlockPersonCopyWith<_$_BlockPerson> get copyWith =>
+      __$$_BlockPersonCopyWithImpl<_$_BlockPerson>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4264,7 +4276,7 @@ abstract class _BlockPerson extends BlockPerson {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BlockPersonCopyWith<_BlockPerson> get copyWith =>
+  _$$_BlockPersonCopyWith<_$_BlockPerson> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4313,31 +4325,31 @@ class _$GetUnreadCountCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetUnreadCountCopyWith<$Res>
+abstract class _$$_GetUnreadCountCopyWith<$Res>
     implements $GetUnreadCountCopyWith<$Res> {
-  factory _$GetUnreadCountCopyWith(
-          _GetUnreadCount value, $Res Function(_GetUnreadCount) then) =
-      __$GetUnreadCountCopyWithImpl<$Res>;
+  factory _$$_GetUnreadCountCopyWith(
+          _$_GetUnreadCount value, $Res Function(_$_GetUnreadCount) then) =
+      __$$_GetUnreadCountCopyWithImpl<$Res>;
   @override
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$GetUnreadCountCopyWithImpl<$Res>
+class __$$_GetUnreadCountCopyWithImpl<$Res>
     extends _$GetUnreadCountCopyWithImpl<$Res>
-    implements _$GetUnreadCountCopyWith<$Res> {
-  __$GetUnreadCountCopyWithImpl(
-      _GetUnreadCount _value, $Res Function(_GetUnreadCount) _then)
-      : super(_value, (v) => _then(v as _GetUnreadCount));
+    implements _$$_GetUnreadCountCopyWith<$Res> {
+  __$$_GetUnreadCountCopyWithImpl(
+      _$_GetUnreadCount _value, $Res Function(_$_GetUnreadCount) _then)
+      : super(_value, (v) => _then(v as _$_GetUnreadCount));
 
   @override
-  _GetUnreadCount get _value => super._value as _GetUnreadCount;
+  _$_GetUnreadCount get _value => super._value as _$_GetUnreadCount;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_GetUnreadCount(
+    return _then(_$_GetUnreadCount(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -4367,7 +4379,7 @@ class _$_GetUnreadCount extends _GetUnreadCount {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetUnreadCount &&
+            other is _$_GetUnreadCount &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -4378,8 +4390,8 @@ class _$_GetUnreadCount extends _GetUnreadCount {
 
   @JsonKey(ignore: true)
   @override
-  _$GetUnreadCountCopyWith<_GetUnreadCount> get copyWith =>
-      __$GetUnreadCountCopyWithImpl<_GetUnreadCount>(this, _$identity);
+  _$$_GetUnreadCountCopyWith<_$_GetUnreadCount> get copyWith =>
+      __$$_GetUnreadCountCopyWithImpl<_$_GetUnreadCount>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4399,7 +4411,7 @@ abstract class _GetUnreadCount extends GetUnreadCount {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetUnreadCountCopyWith<_GetUnreadCount> get copyWith =>
+  _$$_GetUnreadCountCopyWith<_$_GetUnreadCount> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4454,32 +4466,32 @@ class _$GetReportCountCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetReportCountCopyWith<$Res>
+abstract class _$$_GetReportCountCopyWith<$Res>
     implements $GetReportCountCopyWith<$Res> {
-  factory _$GetReportCountCopyWith(
-          _GetReportCount value, $Res Function(_GetReportCount) then) =
-      __$GetReportCountCopyWithImpl<$Res>;
+  factory _$$_GetReportCountCopyWith(
+          _$_GetReportCount value, $Res Function(_$_GetReportCount) then) =
+      __$$_GetReportCountCopyWithImpl<$Res>;
   @override
   $Res call({int? communityId, String auth});
 }
 
 /// @nodoc
-class __$GetReportCountCopyWithImpl<$Res>
+class __$$_GetReportCountCopyWithImpl<$Res>
     extends _$GetReportCountCopyWithImpl<$Res>
-    implements _$GetReportCountCopyWith<$Res> {
-  __$GetReportCountCopyWithImpl(
-      _GetReportCount _value, $Res Function(_GetReportCount) _then)
-      : super(_value, (v) => _then(v as _GetReportCount));
+    implements _$$_GetReportCountCopyWith<$Res> {
+  __$$_GetReportCountCopyWithImpl(
+      _$_GetReportCount _value, $Res Function(_$_GetReportCount) _then)
+      : super(_value, (v) => _then(v as _$_GetReportCount));
 
   @override
-  _GetReportCount get _value => super._value as _GetReportCount;
+  _$_GetReportCount get _value => super._value as _$_GetReportCount;
 
   @override
   $Res call({
     Object? communityId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetReportCount(
+    return _then(_$_GetReportCount(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -4515,7 +4527,7 @@ class _$_GetReportCount extends _GetReportCount {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetReportCount &&
+            other is _$_GetReportCount &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -4530,8 +4542,8 @@ class _$_GetReportCount extends _GetReportCount {
 
   @JsonKey(ignore: true)
   @override
-  _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
-      __$GetReportCountCopyWithImpl<_GetReportCount>(this, _$identity);
+  _$$_GetReportCountCopyWith<_$_GetReportCount> get copyWith =>
+      __$$_GetReportCountCopyWithImpl<_$_GetReportCount>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4553,7 +4565,7 @@ abstract class _GetReportCount extends GetReportCount {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetReportCountCopyWith<_GetReportCount> get copyWith =>
+  _$$_GetReportCountCopyWith<_$_GetReportCount> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4602,31 +4614,31 @@ class _$GetBannedPersonsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetBannedPersonsCopyWith<$Res>
+abstract class _$$_GetBannedPersonsCopyWith<$Res>
     implements $GetBannedPersonsCopyWith<$Res> {
-  factory _$GetBannedPersonsCopyWith(
-          _GetBannedPersons value, $Res Function(_GetBannedPersons) then) =
-      __$GetBannedPersonsCopyWithImpl<$Res>;
+  factory _$$_GetBannedPersonsCopyWith(
+          _$_GetBannedPersons value, $Res Function(_$_GetBannedPersons) then) =
+      __$$_GetBannedPersonsCopyWithImpl<$Res>;
   @override
   $Res call({String auth});
 }
 
 /// @nodoc
-class __$GetBannedPersonsCopyWithImpl<$Res>
+class __$$_GetBannedPersonsCopyWithImpl<$Res>
     extends _$GetBannedPersonsCopyWithImpl<$Res>
-    implements _$GetBannedPersonsCopyWith<$Res> {
-  __$GetBannedPersonsCopyWithImpl(
-      _GetBannedPersons _value, $Res Function(_GetBannedPersons) _then)
-      : super(_value, (v) => _then(v as _GetBannedPersons));
+    implements _$$_GetBannedPersonsCopyWith<$Res> {
+  __$$_GetBannedPersonsCopyWithImpl(
+      _$_GetBannedPersons _value, $Res Function(_$_GetBannedPersons) _then)
+      : super(_value, (v) => _then(v as _$_GetBannedPersons));
 
   @override
-  _GetBannedPersons get _value => super._value as _GetBannedPersons;
+  _$_GetBannedPersons get _value => super._value as _$_GetBannedPersons;
 
   @override
   $Res call({
     Object? auth = freezed,
   }) {
-    return _then(_GetBannedPersons(
+    return _then(_$_GetBannedPersons(
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -4656,7 +4668,7 @@ class _$_GetBannedPersons extends _GetBannedPersons {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetBannedPersons &&
+            other is _$_GetBannedPersons &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -4667,8 +4679,8 @@ class _$_GetBannedPersons extends _GetBannedPersons {
 
   @JsonKey(ignore: true)
   @override
-  _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
-      __$GetBannedPersonsCopyWithImpl<_GetBannedPersons>(this, _$identity);
+  _$$_GetBannedPersonsCopyWith<_$_GetBannedPersons> get copyWith =>
+      __$$_GetBannedPersonsCopyWithImpl<_$_GetBannedPersons>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4688,7 +4700,7 @@ abstract class _GetBannedPersons extends GetBannedPersons {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetBannedPersonsCopyWith<_GetBannedPersons> get copyWith =>
+  _$$_GetBannedPersonsCopyWith<_$_GetBannedPersons> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4736,30 +4748,30 @@ class _$VerifyEmailCopyWithImpl<$Res> implements $VerifyEmailCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$VerifyEmailCopyWith<$Res>
+abstract class _$$_VerifyEmailCopyWith<$Res>
     implements $VerifyEmailCopyWith<$Res> {
-  factory _$VerifyEmailCopyWith(
-          _VerifyEmail value, $Res Function(_VerifyEmail) then) =
-      __$VerifyEmailCopyWithImpl<$Res>;
+  factory _$$_VerifyEmailCopyWith(
+          _$_VerifyEmail value, $Res Function(_$_VerifyEmail) then) =
+      __$$_VerifyEmailCopyWithImpl<$Res>;
   @override
   $Res call({String token});
 }
 
 /// @nodoc
-class __$VerifyEmailCopyWithImpl<$Res> extends _$VerifyEmailCopyWithImpl<$Res>
-    implements _$VerifyEmailCopyWith<$Res> {
-  __$VerifyEmailCopyWithImpl(
-      _VerifyEmail _value, $Res Function(_VerifyEmail) _then)
-      : super(_value, (v) => _then(v as _VerifyEmail));
+class __$$_VerifyEmailCopyWithImpl<$Res> extends _$VerifyEmailCopyWithImpl<$Res>
+    implements _$$_VerifyEmailCopyWith<$Res> {
+  __$$_VerifyEmailCopyWithImpl(
+      _$_VerifyEmail _value, $Res Function(_$_VerifyEmail) _then)
+      : super(_value, (v) => _then(v as _$_VerifyEmail));
 
   @override
-  _VerifyEmail get _value => super._value as _VerifyEmail;
+  _$_VerifyEmail get _value => super._value as _$_VerifyEmail;
 
   @override
   $Res call({
     Object? token = freezed,
   }) {
-    return _then(_VerifyEmail(
+    return _then(_$_VerifyEmail(
       token: token == freezed
           ? _value.token
           : token // ignore: cast_nullable_to_non_nullable
@@ -4789,7 +4801,7 @@ class _$_VerifyEmail extends _VerifyEmail {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _VerifyEmail &&
+            other is _$_VerifyEmail &&
             const DeepCollectionEquality().equals(other.token, token));
   }
 
@@ -4800,8 +4812,8 @@ class _$_VerifyEmail extends _VerifyEmail {
 
   @JsonKey(ignore: true)
   @override
-  _$VerifyEmailCopyWith<_VerifyEmail> get copyWith =>
-      __$VerifyEmailCopyWithImpl<_VerifyEmail>(this, _$identity);
+  _$$_VerifyEmailCopyWith<_$_VerifyEmail> get copyWith =>
+      __$$_VerifyEmailCopyWithImpl<_$_VerifyEmail>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -4820,6 +4832,6 @@ abstract class _VerifyEmail extends VerifyEmail {
   String get token => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$VerifyEmailCopyWith<_VerifyEmail> get copyWith =>
+  _$$_VerifyEmailCopyWith<_$_VerifyEmail> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -84,26 +84,26 @@ class _$CreateCommentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreateCommentCopyWith<$Res>
+abstract class _$$_CreateCommentCopyWith<$Res>
     implements $CreateCommentCopyWith<$Res> {
-  factory _$CreateCommentCopyWith(
-          _CreateComment value, $Res Function(_CreateComment) then) =
-      __$CreateCommentCopyWithImpl<$Res>;
+  factory _$$_CreateCommentCopyWith(
+          _$_CreateComment value, $Res Function(_$_CreateComment) then) =
+      __$$_CreateCommentCopyWithImpl<$Res>;
   @override
   $Res call(
       {String content, int? parentId, int postId, String? formId, String auth});
 }
 
 /// @nodoc
-class __$CreateCommentCopyWithImpl<$Res>
+class __$$_CreateCommentCopyWithImpl<$Res>
     extends _$CreateCommentCopyWithImpl<$Res>
-    implements _$CreateCommentCopyWith<$Res> {
-  __$CreateCommentCopyWithImpl(
-      _CreateComment _value, $Res Function(_CreateComment) _then)
-      : super(_value, (v) => _then(v as _CreateComment));
+    implements _$$_CreateCommentCopyWith<$Res> {
+  __$$_CreateCommentCopyWithImpl(
+      _$_CreateComment _value, $Res Function(_$_CreateComment) _then)
+      : super(_value, (v) => _then(v as _$_CreateComment));
 
   @override
-  _CreateComment get _value => super._value as _CreateComment;
+  _$_CreateComment get _value => super._value as _$_CreateComment;
 
   @override
   $Res call({
@@ -113,7 +113,7 @@ class __$CreateCommentCopyWithImpl<$Res>
     Object? formId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreateComment(
+    return _then(_$_CreateComment(
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -173,7 +173,7 @@ class _$_CreateComment extends _CreateComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateComment &&
+            other is _$_CreateComment &&
             const DeepCollectionEquality().equals(other.content, content) &&
             const DeepCollectionEquality().equals(other.parentId, parentId) &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
@@ -193,8 +193,8 @@ class _$_CreateComment extends _CreateComment {
 
   @JsonKey(ignore: true)
   @override
-  _$CreateCommentCopyWith<_CreateComment> get copyWith =>
-      __$CreateCommentCopyWithImpl<_CreateComment>(this, _$identity);
+  _$$_CreateCommentCopyWith<_$_CreateComment> get copyWith =>
+      __$$_CreateCommentCopyWithImpl<_$_CreateComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -226,7 +226,7 @@ abstract class _CreateComment extends CreateComment {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreateCommentCopyWith<_CreateComment> get copyWith =>
+  _$$_CreateCommentCopyWith<_$_CreateComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -292,24 +292,24 @@ class _$EditCommentCopyWithImpl<$Res> implements $EditCommentCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$EditCommentCopyWith<$Res>
+abstract class _$$_EditCommentCopyWith<$Res>
     implements $EditCommentCopyWith<$Res> {
-  factory _$EditCommentCopyWith(
-          _EditComment value, $Res Function(_EditComment) then) =
-      __$EditCommentCopyWithImpl<$Res>;
+  factory _$$_EditCommentCopyWith(
+          _$_EditComment value, $Res Function(_$_EditComment) then) =
+      __$$_EditCommentCopyWithImpl<$Res>;
   @override
   $Res call({String content, int commentId, String? formId, String auth});
 }
 
 /// @nodoc
-class __$EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
-    implements _$EditCommentCopyWith<$Res> {
-  __$EditCommentCopyWithImpl(
-      _EditComment _value, $Res Function(_EditComment) _then)
-      : super(_value, (v) => _then(v as _EditComment));
+class __$$_EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
+    implements _$$_EditCommentCopyWith<$Res> {
+  __$$_EditCommentCopyWithImpl(
+      _$_EditComment _value, $Res Function(_$_EditComment) _then)
+      : super(_value, (v) => _then(v as _$_EditComment));
 
   @override
-  _EditComment get _value => super._value as _EditComment;
+  _$_EditComment get _value => super._value as _$_EditComment;
 
   @override
   $Res call({
@@ -318,7 +318,7 @@ class __$EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
     Object? formId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_EditComment(
+    return _then(_$_EditComment(
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
@@ -371,7 +371,7 @@ class _$_EditComment extends _EditComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EditComment &&
+            other is _$_EditComment &&
             const DeepCollectionEquality().equals(other.content, content) &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.formId, formId) &&
@@ -389,8 +389,8 @@ class _$_EditComment extends _EditComment {
 
   @JsonKey(ignore: true)
   @override
-  _$EditCommentCopyWith<_EditComment> get copyWith =>
-      __$EditCommentCopyWithImpl<_EditComment>(this, _$identity);
+  _$$_EditCommentCopyWith<_$_EditComment> get copyWith =>
+      __$$_EditCommentCopyWithImpl<_$_EditComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -419,7 +419,7 @@ abstract class _EditComment extends EditComment {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EditCommentCopyWith<_EditComment> get copyWith =>
+  _$$_EditCommentCopyWith<_$_EditComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -480,25 +480,25 @@ class _$DeleteCommentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DeleteCommentCopyWith<$Res>
+abstract class _$$_DeleteCommentCopyWith<$Res>
     implements $DeleteCommentCopyWith<$Res> {
-  factory _$DeleteCommentCopyWith(
-          _DeleteComment value, $Res Function(_DeleteComment) then) =
-      __$DeleteCommentCopyWithImpl<$Res>;
+  factory _$$_DeleteCommentCopyWith(
+          _$_DeleteComment value, $Res Function(_$_DeleteComment) then) =
+      __$$_DeleteCommentCopyWithImpl<$Res>;
   @override
   $Res call({int commentId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$DeleteCommentCopyWithImpl<$Res>
+class __$$_DeleteCommentCopyWithImpl<$Res>
     extends _$DeleteCommentCopyWithImpl<$Res>
-    implements _$DeleteCommentCopyWith<$Res> {
-  __$DeleteCommentCopyWithImpl(
-      _DeleteComment _value, $Res Function(_DeleteComment) _then)
-      : super(_value, (v) => _then(v as _DeleteComment));
+    implements _$$_DeleteCommentCopyWith<$Res> {
+  __$$_DeleteCommentCopyWithImpl(
+      _$_DeleteComment _value, $Res Function(_$_DeleteComment) _then)
+      : super(_value, (v) => _then(v as _$_DeleteComment));
 
   @override
-  _DeleteComment get _value => super._value as _DeleteComment;
+  _$_DeleteComment get _value => super._value as _$_DeleteComment;
 
   @override
   $Res call({
@@ -506,7 +506,7 @@ class __$DeleteCommentCopyWithImpl<$Res>
     Object? deleted = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_DeleteComment(
+    return _then(_$_DeleteComment(
       commentId: commentId == freezed
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -550,7 +550,7 @@ class _$_DeleteComment extends _DeleteComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeleteComment &&
+            other is _$_DeleteComment &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.deleted, deleted) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -566,8 +566,8 @@ class _$_DeleteComment extends _DeleteComment {
 
   @JsonKey(ignore: true)
   @override
-  _$DeleteCommentCopyWith<_DeleteComment> get copyWith =>
-      __$DeleteCommentCopyWithImpl<_DeleteComment>(this, _$identity);
+  _$$_DeleteCommentCopyWith<_$_DeleteComment> get copyWith =>
+      __$$_DeleteCommentCopyWithImpl<_$_DeleteComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -593,7 +593,7 @@ abstract class _DeleteComment extends DeleteComment {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeleteCommentCopyWith<_DeleteComment> get copyWith =>
+  _$$_DeleteCommentCopyWith<_$_DeleteComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -660,25 +660,25 @@ class _$RemoveCommentCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$RemoveCommentCopyWith<$Res>
+abstract class _$$_RemoveCommentCopyWith<$Res>
     implements $RemoveCommentCopyWith<$Res> {
-  factory _$RemoveCommentCopyWith(
-          _RemoveComment value, $Res Function(_RemoveComment) then) =
-      __$RemoveCommentCopyWithImpl<$Res>;
+  factory _$$_RemoveCommentCopyWith(
+          _$_RemoveComment value, $Res Function(_$_RemoveComment) then) =
+      __$$_RemoveCommentCopyWithImpl<$Res>;
   @override
   $Res call({int commentId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class __$RemoveCommentCopyWithImpl<$Res>
+class __$$_RemoveCommentCopyWithImpl<$Res>
     extends _$RemoveCommentCopyWithImpl<$Res>
-    implements _$RemoveCommentCopyWith<$Res> {
-  __$RemoveCommentCopyWithImpl(
-      _RemoveComment _value, $Res Function(_RemoveComment) _then)
-      : super(_value, (v) => _then(v as _RemoveComment));
+    implements _$$_RemoveCommentCopyWith<$Res> {
+  __$$_RemoveCommentCopyWithImpl(
+      _$_RemoveComment _value, $Res Function(_$_RemoveComment) _then)
+      : super(_value, (v) => _then(v as _$_RemoveComment));
 
   @override
-  _RemoveComment get _value => super._value as _RemoveComment;
+  _$_RemoveComment get _value => super._value as _$_RemoveComment;
 
   @override
   $Res call({
@@ -687,7 +687,7 @@ class __$RemoveCommentCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_RemoveComment(
+    return _then(_$_RemoveComment(
       commentId: commentId == freezed
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -740,7 +740,7 @@ class _$_RemoveComment extends _RemoveComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RemoveComment &&
+            other is _$_RemoveComment &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.removed, removed) &&
             const DeepCollectionEquality().equals(other.reason, reason) &&
@@ -758,8 +758,8 @@ class _$_RemoveComment extends _RemoveComment {
 
   @JsonKey(ignore: true)
   @override
-  _$RemoveCommentCopyWith<_RemoveComment> get copyWith =>
-      __$RemoveCommentCopyWithImpl<_RemoveComment>(this, _$identity);
+  _$$_RemoveCommentCopyWith<_$_RemoveComment> get copyWith =>
+      __$$_RemoveCommentCopyWithImpl<_$_RemoveComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -788,7 +788,7 @@ abstract class _RemoveComment extends RemoveComment {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RemoveCommentCopyWith<_RemoveComment> get copyWith =>
+  _$$_RemoveCommentCopyWith<_$_RemoveComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -849,25 +849,25 @@ class _$MarkCommentAsReadCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$MarkCommentAsReadCopyWith<$Res>
+abstract class _$$_MarkCommentAsReadCopyWith<$Res>
     implements $MarkCommentAsReadCopyWith<$Res> {
-  factory _$MarkCommentAsReadCopyWith(
-          _MarkCommentAsRead value, $Res Function(_MarkCommentAsRead) then) =
-      __$MarkCommentAsReadCopyWithImpl<$Res>;
+  factory _$$_MarkCommentAsReadCopyWith(_$_MarkCommentAsRead value,
+          $Res Function(_$_MarkCommentAsRead) then) =
+      __$$_MarkCommentAsReadCopyWithImpl<$Res>;
   @override
   $Res call({int commentId, bool read, String auth});
 }
 
 /// @nodoc
-class __$MarkCommentAsReadCopyWithImpl<$Res>
+class __$$_MarkCommentAsReadCopyWithImpl<$Res>
     extends _$MarkCommentAsReadCopyWithImpl<$Res>
-    implements _$MarkCommentAsReadCopyWith<$Res> {
-  __$MarkCommentAsReadCopyWithImpl(
-      _MarkCommentAsRead _value, $Res Function(_MarkCommentAsRead) _then)
-      : super(_value, (v) => _then(v as _MarkCommentAsRead));
+    implements _$$_MarkCommentAsReadCopyWith<$Res> {
+  __$$_MarkCommentAsReadCopyWithImpl(
+      _$_MarkCommentAsRead _value, $Res Function(_$_MarkCommentAsRead) _then)
+      : super(_value, (v) => _then(v as _$_MarkCommentAsRead));
 
   @override
-  _MarkCommentAsRead get _value => super._value as _MarkCommentAsRead;
+  _$_MarkCommentAsRead get _value => super._value as _$_MarkCommentAsRead;
 
   @override
   $Res call({
@@ -875,7 +875,7 @@ class __$MarkCommentAsReadCopyWithImpl<$Res>
     Object? read = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_MarkCommentAsRead(
+    return _then(_$_MarkCommentAsRead(
       commentId: commentId == freezed
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -919,7 +919,7 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _MarkCommentAsRead &&
+            other is _$_MarkCommentAsRead &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.read, read) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -935,8 +935,9 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
 
   @JsonKey(ignore: true)
   @override
-  _$MarkCommentAsReadCopyWith<_MarkCommentAsRead> get copyWith =>
-      __$MarkCommentAsReadCopyWithImpl<_MarkCommentAsRead>(this, _$identity);
+  _$$_MarkCommentAsReadCopyWith<_$_MarkCommentAsRead> get copyWith =>
+      __$$_MarkCommentAsReadCopyWithImpl<_$_MarkCommentAsRead>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -962,7 +963,7 @@ abstract class _MarkCommentAsRead extends MarkCommentAsRead {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarkCommentAsReadCopyWith<_MarkCommentAsRead> get copyWith =>
+  _$$_MarkCommentAsReadCopyWith<_$_MarkCommentAsRead> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1022,24 +1023,24 @@ class _$SaveCommentCopyWithImpl<$Res> implements $SaveCommentCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SaveCommentCopyWith<$Res>
+abstract class _$$_SaveCommentCopyWith<$Res>
     implements $SaveCommentCopyWith<$Res> {
-  factory _$SaveCommentCopyWith(
-          _SaveComment value, $Res Function(_SaveComment) then) =
-      __$SaveCommentCopyWithImpl<$Res>;
+  factory _$$_SaveCommentCopyWith(
+          _$_SaveComment value, $Res Function(_$_SaveComment) then) =
+      __$$_SaveCommentCopyWithImpl<$Res>;
   @override
   $Res call({int commentId, bool save, String auth});
 }
 
 /// @nodoc
-class __$SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
-    implements _$SaveCommentCopyWith<$Res> {
-  __$SaveCommentCopyWithImpl(
-      _SaveComment _value, $Res Function(_SaveComment) _then)
-      : super(_value, (v) => _then(v as _SaveComment));
+class __$$_SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
+    implements _$$_SaveCommentCopyWith<$Res> {
+  __$$_SaveCommentCopyWithImpl(
+      _$_SaveComment _value, $Res Function(_$_SaveComment) _then)
+      : super(_value, (v) => _then(v as _$_SaveComment));
 
   @override
-  _SaveComment get _value => super._value as _SaveComment;
+  _$_SaveComment get _value => super._value as _$_SaveComment;
 
   @override
   $Res call({
@@ -1047,7 +1048,7 @@ class __$SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
     Object? save = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_SaveComment(
+    return _then(_$_SaveComment(
       commentId: commentId == freezed
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1091,7 +1092,7 @@ class _$_SaveComment extends _SaveComment {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SaveComment &&
+            other is _$_SaveComment &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.save, save) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1107,8 +1108,8 @@ class _$_SaveComment extends _SaveComment {
 
   @JsonKey(ignore: true)
   @override
-  _$SaveCommentCopyWith<_SaveComment> get copyWith =>
-      __$SaveCommentCopyWithImpl<_SaveComment>(this, _$identity);
+  _$$_SaveCommentCopyWith<_$_SaveComment> get copyWith =>
+      __$$_SaveCommentCopyWithImpl<_$_SaveComment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1134,7 +1135,7 @@ abstract class _SaveComment extends SaveComment {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SaveCommentCopyWith<_SaveComment> get copyWith =>
+  _$$_SaveCommentCopyWith<_$_SaveComment> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1195,25 +1196,25 @@ class _$CreateCommentLikeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreateCommentLikeCopyWith<$Res>
+abstract class _$$_CreateCommentLikeCopyWith<$Res>
     implements $CreateCommentLikeCopyWith<$Res> {
-  factory _$CreateCommentLikeCopyWith(
-          _CreateCommentLike value, $Res Function(_CreateCommentLike) then) =
-      __$CreateCommentLikeCopyWithImpl<$Res>;
+  factory _$$_CreateCommentLikeCopyWith(_$_CreateCommentLike value,
+          $Res Function(_$_CreateCommentLike) then) =
+      __$$_CreateCommentLikeCopyWithImpl<$Res>;
   @override
   $Res call({int commentId, VoteType score, String auth});
 }
 
 /// @nodoc
-class __$CreateCommentLikeCopyWithImpl<$Res>
+class __$$_CreateCommentLikeCopyWithImpl<$Res>
     extends _$CreateCommentLikeCopyWithImpl<$Res>
-    implements _$CreateCommentLikeCopyWith<$Res> {
-  __$CreateCommentLikeCopyWithImpl(
-      _CreateCommentLike _value, $Res Function(_CreateCommentLike) _then)
-      : super(_value, (v) => _then(v as _CreateCommentLike));
+    implements _$$_CreateCommentLikeCopyWith<$Res> {
+  __$$_CreateCommentLikeCopyWithImpl(
+      _$_CreateCommentLike _value, $Res Function(_$_CreateCommentLike) _then)
+      : super(_value, (v) => _then(v as _$_CreateCommentLike));
 
   @override
-  _CreateCommentLike get _value => super._value as _CreateCommentLike;
+  _$_CreateCommentLike get _value => super._value as _$_CreateCommentLike;
 
   @override
   $Res call({
@@ -1221,7 +1222,7 @@ class __$CreateCommentLikeCopyWithImpl<$Res>
     Object? score = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreateCommentLike(
+    return _then(_$_CreateCommentLike(
       commentId: commentId == freezed
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1265,7 +1266,7 @@ class _$_CreateCommentLike extends _CreateCommentLike {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateCommentLike &&
+            other is _$_CreateCommentLike &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.score, score) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1281,8 +1282,9 @@ class _$_CreateCommentLike extends _CreateCommentLike {
 
   @JsonKey(ignore: true)
   @override
-  _$CreateCommentLikeCopyWith<_CreateCommentLike> get copyWith =>
-      __$CreateCommentLikeCopyWithImpl<_CreateCommentLike>(this, _$identity);
+  _$$_CreateCommentLikeCopyWith<_$_CreateCommentLike> get copyWith =>
+      __$$_CreateCommentLikeCopyWithImpl<_$_CreateCommentLike>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1308,7 +1310,7 @@ abstract class _CreateCommentLike extends CreateCommentLike {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreateCommentLikeCopyWith<_CreateCommentLike> get copyWith =>
+  _$$_CreateCommentLikeCopyWith<_$_CreateCommentLike> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1407,11 +1409,11 @@ class _$GetCommentsCopyWithImpl<$Res> implements $GetCommentsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetCommentsCopyWith<$Res>
+abstract class _$$_GetCommentsCopyWith<$Res>
     implements $GetCommentsCopyWith<$Res> {
-  factory _$GetCommentsCopyWith(
-          _GetComments value, $Res Function(_GetComments) then) =
-      __$GetCommentsCopyWithImpl<$Res>;
+  factory _$$_GetCommentsCopyWith(
+          _$_GetComments value, $Res Function(_$_GetComments) then) =
+      __$$_GetCommentsCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'type_') CommentListingType? type,
@@ -1425,14 +1427,14 @@ abstract class _$GetCommentsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
-    implements _$GetCommentsCopyWith<$Res> {
-  __$GetCommentsCopyWithImpl(
-      _GetComments _value, $Res Function(_GetComments) _then)
-      : super(_value, (v) => _then(v as _GetComments));
+class __$$_GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
+    implements _$$_GetCommentsCopyWith<$Res> {
+  __$$_GetCommentsCopyWithImpl(
+      _$_GetComments _value, $Res Function(_$_GetComments) _then)
+      : super(_value, (v) => _then(v as _$_GetComments));
 
   @override
-  _GetComments get _value => super._value as _GetComments;
+  _$_GetComments get _value => super._value as _$_GetComments;
 
   @override
   $Res call({
@@ -1445,7 +1447,7 @@ class __$GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
     Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetComments(
+    return _then(_$_GetComments(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -1527,7 +1529,7 @@ class _$_GetComments extends _GetComments {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetComments &&
+            other is _$_GetComments &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.sort, sort) &&
             const DeepCollectionEquality().equals(other.page, page) &&
@@ -1555,8 +1557,8 @@ class _$_GetComments extends _GetComments {
 
   @JsonKey(ignore: true)
   @override
-  _$GetCommentsCopyWith<_GetComments> get copyWith =>
-      __$GetCommentsCopyWithImpl<_GetComments>(this, _$identity);
+  _$$_GetCommentsCopyWith<_$_GetComments> get copyWith =>
+      __$$_GetCommentsCopyWithImpl<_$_GetComments>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1598,7 +1600,7 @@ abstract class _GetComments extends GetComments {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetCommentsCopyWith<_GetComments> get copyWith =>
+  _$$_GetCommentsCopyWith<_$_GetComments> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1659,25 +1661,25 @@ class _$CreateCommentReportCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreateCommentReportCopyWith<$Res>
+abstract class _$$_CreateCommentReportCopyWith<$Res>
     implements $CreateCommentReportCopyWith<$Res> {
-  factory _$CreateCommentReportCopyWith(_CreateCommentReport value,
-          $Res Function(_CreateCommentReport) then) =
-      __$CreateCommentReportCopyWithImpl<$Res>;
+  factory _$$_CreateCommentReportCopyWith(_$_CreateCommentReport value,
+          $Res Function(_$_CreateCommentReport) then) =
+      __$$_CreateCommentReportCopyWithImpl<$Res>;
   @override
   $Res call({int commentId, String reason, String auth});
 }
 
 /// @nodoc
-class __$CreateCommentReportCopyWithImpl<$Res>
+class __$$_CreateCommentReportCopyWithImpl<$Res>
     extends _$CreateCommentReportCopyWithImpl<$Res>
-    implements _$CreateCommentReportCopyWith<$Res> {
-  __$CreateCommentReportCopyWithImpl(
-      _CreateCommentReport _value, $Res Function(_CreateCommentReport) _then)
-      : super(_value, (v) => _then(v as _CreateCommentReport));
+    implements _$$_CreateCommentReportCopyWith<$Res> {
+  __$$_CreateCommentReportCopyWithImpl(_$_CreateCommentReport _value,
+      $Res Function(_$_CreateCommentReport) _then)
+      : super(_value, (v) => _then(v as _$_CreateCommentReport));
 
   @override
-  _CreateCommentReport get _value => super._value as _CreateCommentReport;
+  _$_CreateCommentReport get _value => super._value as _$_CreateCommentReport;
 
   @override
   $Res call({
@@ -1685,7 +1687,7 @@ class __$CreateCommentReportCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreateCommentReport(
+    return _then(_$_CreateCommentReport(
       commentId: commentId == freezed
           ? _value.commentId
           : commentId // ignore: cast_nullable_to_non_nullable
@@ -1729,7 +1731,7 @@ class _$_CreateCommentReport extends _CreateCommentReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateCommentReport &&
+            other is _$_CreateCommentReport &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.reason, reason) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1745,8 +1747,8 @@ class _$_CreateCommentReport extends _CreateCommentReport {
 
   @JsonKey(ignore: true)
   @override
-  _$CreateCommentReportCopyWith<_CreateCommentReport> get copyWith =>
-      __$CreateCommentReportCopyWithImpl<_CreateCommentReport>(
+  _$$_CreateCommentReportCopyWith<_$_CreateCommentReport> get copyWith =>
+      __$$_CreateCommentReportCopyWithImpl<_$_CreateCommentReport>(
           this, _$identity);
 
   @override
@@ -1773,7 +1775,7 @@ abstract class _CreateCommentReport extends CreateCommentReport {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreateCommentReportCopyWith<_CreateCommentReport> get copyWith =>
+  _$$_CreateCommentReportCopyWith<_$_CreateCommentReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1834,25 +1836,25 @@ class _$ResolveCommentReportCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ResolveCommentReportCopyWith<$Res>
+abstract class _$$_ResolveCommentReportCopyWith<$Res>
     implements $ResolveCommentReportCopyWith<$Res> {
-  factory _$ResolveCommentReportCopyWith(_ResolveCommentReport value,
-          $Res Function(_ResolveCommentReport) then) =
-      __$ResolveCommentReportCopyWithImpl<$Res>;
+  factory _$$_ResolveCommentReportCopyWith(_$_ResolveCommentReport value,
+          $Res Function(_$_ResolveCommentReport) then) =
+      __$$_ResolveCommentReportCopyWithImpl<$Res>;
   @override
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
-class __$ResolveCommentReportCopyWithImpl<$Res>
+class __$$_ResolveCommentReportCopyWithImpl<$Res>
     extends _$ResolveCommentReportCopyWithImpl<$Res>
-    implements _$ResolveCommentReportCopyWith<$Res> {
-  __$ResolveCommentReportCopyWithImpl(
-      _ResolveCommentReport _value, $Res Function(_ResolveCommentReport) _then)
-      : super(_value, (v) => _then(v as _ResolveCommentReport));
+    implements _$$_ResolveCommentReportCopyWith<$Res> {
+  __$$_ResolveCommentReportCopyWithImpl(_$_ResolveCommentReport _value,
+      $Res Function(_$_ResolveCommentReport) _then)
+      : super(_value, (v) => _then(v as _$_ResolveCommentReport));
 
   @override
-  _ResolveCommentReport get _value => super._value as _ResolveCommentReport;
+  _$_ResolveCommentReport get _value => super._value as _$_ResolveCommentReport;
 
   @override
   $Res call({
@@ -1860,7 +1862,7 @@ class __$ResolveCommentReportCopyWithImpl<$Res>
     Object? resolved = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ResolveCommentReport(
+    return _then(_$_ResolveCommentReport(
       reportId: reportId == freezed
           ? _value.reportId
           : reportId // ignore: cast_nullable_to_non_nullable
@@ -1904,7 +1906,7 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResolveCommentReport &&
+            other is _$_ResolveCommentReport &&
             const DeepCollectionEquality().equals(other.reportId, reportId) &&
             const DeepCollectionEquality().equals(other.resolved, resolved) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1920,8 +1922,8 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
 
   @JsonKey(ignore: true)
   @override
-  _$ResolveCommentReportCopyWith<_ResolveCommentReport> get copyWith =>
-      __$ResolveCommentReportCopyWithImpl<_ResolveCommentReport>(
+  _$$_ResolveCommentReportCopyWith<_$_ResolveCommentReport> get copyWith =>
+      __$$_ResolveCommentReportCopyWithImpl<_$_ResolveCommentReport>(
           this, _$identity);
 
   @override
@@ -1948,7 +1950,7 @@ abstract class _ResolveCommentReport extends ResolveCommentReport {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ResolveCommentReportCopyWith<_ResolveCommentReport> get copyWith =>
+  _$$_ResolveCommentReportCopyWith<_$_ResolveCommentReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2026,11 +2028,11 @@ class _$ListCommentReportsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ListCommentReportsCopyWith<$Res>
+abstract class _$$_ListCommentReportsCopyWith<$Res>
     implements $ListCommentReportsCopyWith<$Res> {
-  factory _$ListCommentReportsCopyWith(
-          _ListCommentReports value, $Res Function(_ListCommentReports) then) =
-      __$ListCommentReportsCopyWithImpl<$Res>;
+  factory _$$_ListCommentReportsCopyWith(_$_ListCommentReports value,
+          $Res Function(_$_ListCommentReports) then) =
+      __$$_ListCommentReportsCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? page,
@@ -2041,15 +2043,15 @@ abstract class _$ListCommentReportsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ListCommentReportsCopyWithImpl<$Res>
+class __$$_ListCommentReportsCopyWithImpl<$Res>
     extends _$ListCommentReportsCopyWithImpl<$Res>
-    implements _$ListCommentReportsCopyWith<$Res> {
-  __$ListCommentReportsCopyWithImpl(
-      _ListCommentReports _value, $Res Function(_ListCommentReports) _then)
-      : super(_value, (v) => _then(v as _ListCommentReports));
+    implements _$$_ListCommentReportsCopyWith<$Res> {
+  __$$_ListCommentReportsCopyWithImpl(
+      _$_ListCommentReports _value, $Res Function(_$_ListCommentReports) _then)
+      : super(_value, (v) => _then(v as _$_ListCommentReports));
 
   @override
-  _ListCommentReports get _value => super._value as _ListCommentReports;
+  _$_ListCommentReports get _value => super._value as _$_ListCommentReports;
 
   @override
   $Res call({
@@ -2059,7 +2061,7 @@ class __$ListCommentReportsCopyWithImpl<$Res>
     Object? unresolvedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ListCommentReports(
+    return _then(_$_ListCommentReports(
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2119,7 +2121,7 @@ class _$_ListCommentReports extends _ListCommentReports {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ListCommentReports &&
+            other is _$_ListCommentReports &&
             const DeepCollectionEquality().equals(other.page, page) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
             const DeepCollectionEquality()
@@ -2141,8 +2143,9 @@ class _$_ListCommentReports extends _ListCommentReports {
 
   @JsonKey(ignore: true)
   @override
-  _$ListCommentReportsCopyWith<_ListCommentReports> get copyWith =>
-      __$ListCommentReportsCopyWithImpl<_ListCommentReports>(this, _$identity);
+  _$$_ListCommentReportsCopyWith<_$_ListCommentReports> get copyWith =>
+      __$$_ListCommentReportsCopyWithImpl<_$_ListCommentReports>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2174,6 +2177,6 @@ abstract class _ListCommentReports extends ListCommentReports {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ListCommentReportsCopyWith<_ListCommentReports> get copyWith =>
+  _$$_ListCommentReportsCopyWith<_$_ListCommentReports> get copyWith =>
       throw _privateConstructorUsedError;
 }

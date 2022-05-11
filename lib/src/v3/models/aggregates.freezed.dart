@@ -95,11 +95,11 @@ class _$PersonAggregatesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PersonAggregatesCopyWith<$Res>
+abstract class _$$_PersonAggregatesCopyWith<$Res>
     implements $PersonAggregatesCopyWith<$Res> {
-  factory _$PersonAggregatesCopyWith(
-          _PersonAggregates value, $Res Function(_PersonAggregates) then) =
-      __$PersonAggregatesCopyWithImpl<$Res>;
+  factory _$$_PersonAggregatesCopyWith(
+          _$_PersonAggregates value, $Res Function(_$_PersonAggregates) then) =
+      __$$_PersonAggregatesCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -111,15 +111,15 @@ abstract class _$PersonAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PersonAggregatesCopyWithImpl<$Res>
+class __$$_PersonAggregatesCopyWithImpl<$Res>
     extends _$PersonAggregatesCopyWithImpl<$Res>
-    implements _$PersonAggregatesCopyWith<$Res> {
-  __$PersonAggregatesCopyWithImpl(
-      _PersonAggregates _value, $Res Function(_PersonAggregates) _then)
-      : super(_value, (v) => _then(v as _PersonAggregates));
+    implements _$$_PersonAggregatesCopyWith<$Res> {
+  __$$_PersonAggregatesCopyWithImpl(
+      _$_PersonAggregates _value, $Res Function(_$_PersonAggregates) _then)
+      : super(_value, (v) => _then(v as _$_PersonAggregates));
 
   @override
-  _PersonAggregates get _value => super._value as _PersonAggregates;
+  _$_PersonAggregates get _value => super._value as _$_PersonAggregates;
 
   @override
   $Res call({
@@ -130,7 +130,7 @@ class __$PersonAggregatesCopyWithImpl<$Res>
     Object? commentCount = freezed,
     Object? commentScore = freezed,
   }) {
-    return _then(_PersonAggregates(
+    return _then(_$_PersonAggregates(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -197,7 +197,7 @@ class _$_PersonAggregates extends _PersonAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PersonAggregates &&
+            other is _$_PersonAggregates &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
             const DeepCollectionEquality().equals(other.postCount, postCount) &&
@@ -221,8 +221,8 @@ class _$_PersonAggregates extends _PersonAggregates {
 
   @JsonKey(ignore: true)
   @override
-  _$PersonAggregatesCopyWith<_PersonAggregates> get copyWith =>
-      __$PersonAggregatesCopyWithImpl<_PersonAggregates>(this, _$identity);
+  _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
+      __$$_PersonAggregatesCopyWithImpl<_$_PersonAggregates>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -257,7 +257,7 @@ abstract class _PersonAggregates extends PersonAggregates {
   int get commentScore => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PersonAggregatesCopyWith<_PersonAggregates> get copyWith =>
+  _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -370,11 +370,11 @@ class _$SiteAggregatesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$SiteAggregatesCopyWith<$Res>
+abstract class _$$_SiteAggregatesCopyWith<$Res>
     implements $SiteAggregatesCopyWith<$Res> {
-  factory _$SiteAggregatesCopyWith(
-          _SiteAggregates value, $Res Function(_SiteAggregates) then) =
-      __$SiteAggregatesCopyWithImpl<$Res>;
+  factory _$$_SiteAggregatesCopyWith(
+          _$_SiteAggregates value, $Res Function(_$_SiteAggregates) then) =
+      __$$_SiteAggregatesCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -390,15 +390,15 @@ abstract class _$SiteAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SiteAggregatesCopyWithImpl<$Res>
+class __$$_SiteAggregatesCopyWithImpl<$Res>
     extends _$SiteAggregatesCopyWithImpl<$Res>
-    implements _$SiteAggregatesCopyWith<$Res> {
-  __$SiteAggregatesCopyWithImpl(
-      _SiteAggregates _value, $Res Function(_SiteAggregates) _then)
-      : super(_value, (v) => _then(v as _SiteAggregates));
+    implements _$$_SiteAggregatesCopyWith<$Res> {
+  __$$_SiteAggregatesCopyWithImpl(
+      _$_SiteAggregates _value, $Res Function(_$_SiteAggregates) _then)
+      : super(_value, (v) => _then(v as _$_SiteAggregates));
 
   @override
-  _SiteAggregates get _value => super._value as _SiteAggregates;
+  _$_SiteAggregates get _value => super._value as _$_SiteAggregates;
 
   @override
   $Res call({
@@ -413,7 +413,7 @@ class __$SiteAggregatesCopyWithImpl<$Res>
     Object? usersActiveMonth = freezed,
     Object? usersActiveHalfYear = freezed,
   }) {
-    return _then(_SiteAggregates(
+    return _then(_$_SiteAggregates(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -508,7 +508,7 @@ class _$_SiteAggregates extends _SiteAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SiteAggregates &&
+            other is _$_SiteAggregates &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.siteId, siteId) &&
             const DeepCollectionEquality().equals(other.users, users) &&
@@ -543,8 +543,8 @@ class _$_SiteAggregates extends _SiteAggregates {
 
   @JsonKey(ignore: true)
   @override
-  _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
-      __$SiteAggregatesCopyWithImpl<_SiteAggregates>(this, _$identity);
+  _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
+      __$$_SiteAggregatesCopyWithImpl<_$_SiteAggregates>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -591,7 +591,7 @@ abstract class _SiteAggregates extends SiteAggregates {
   int get usersActiveHalfYear => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SiteAggregatesCopyWith<_SiteAggregates> get copyWith =>
+  _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -690,11 +690,11 @@ class _$PostAggregatesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PostAggregatesCopyWith<$Res>
+abstract class _$$_PostAggregatesCopyWith<$Res>
     implements $PostAggregatesCopyWith<$Res> {
-  factory _$PostAggregatesCopyWith(
-          _PostAggregates value, $Res Function(_PostAggregates) then) =
-      __$PostAggregatesCopyWithImpl<$Res>;
+  factory _$$_PostAggregatesCopyWith(
+          _$_PostAggregates value, $Res Function(_$_PostAggregates) then) =
+      __$$_PostAggregatesCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -708,15 +708,15 @@ abstract class _$PostAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PostAggregatesCopyWithImpl<$Res>
+class __$$_PostAggregatesCopyWithImpl<$Res>
     extends _$PostAggregatesCopyWithImpl<$Res>
-    implements _$PostAggregatesCopyWith<$Res> {
-  __$PostAggregatesCopyWithImpl(
-      _PostAggregates _value, $Res Function(_PostAggregates) _then)
-      : super(_value, (v) => _then(v as _PostAggregates));
+    implements _$$_PostAggregatesCopyWith<$Res> {
+  __$$_PostAggregatesCopyWithImpl(
+      _$_PostAggregates _value, $Res Function(_$_PostAggregates) _then)
+      : super(_value, (v) => _then(v as _$_PostAggregates));
 
   @override
-  _PostAggregates get _value => super._value as _PostAggregates;
+  _$_PostAggregates get _value => super._value as _$_PostAggregates;
 
   @override
   $Res call({
@@ -729,7 +729,7 @@ class __$PostAggregatesCopyWithImpl<$Res>
     Object? newestCommentTime = freezed,
     Object? newestCommentTimeNecro = freezed,
   }) {
-    return _then(_PostAggregates(
+    return _then(_$_PostAggregates(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -812,7 +812,7 @@ class _$_PostAggregates extends _PostAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PostAggregates &&
+            other is _$_PostAggregates &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.comments, comments) &&
@@ -840,8 +840,8 @@ class _$_PostAggregates extends _PostAggregates {
 
   @JsonKey(ignore: true)
   @override
-  _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
-      __$PostAggregatesCopyWithImpl<_PostAggregates>(this, _$identity);
+  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
+      __$$_PostAggregatesCopyWithImpl<_$_PostAggregates>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -882,7 +882,7 @@ abstract class _PostAggregates extends PostAggregates {
   DateTime get newestCommentTimeNecro => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PostAggregatesCopyWith<_PostAggregates> get copyWith =>
+  _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -988,11 +988,11 @@ class _$CommunityAggregatesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CommunityAggregatesCopyWith<$Res>
+abstract class _$$_CommunityAggregatesCopyWith<$Res>
     implements $CommunityAggregatesCopyWith<$Res> {
-  factory _$CommunityAggregatesCopyWith(_CommunityAggregates value,
-          $Res Function(_CommunityAggregates) then) =
-      __$CommunityAggregatesCopyWithImpl<$Res>;
+  factory _$$_CommunityAggregatesCopyWith(_$_CommunityAggregates value,
+          $Res Function(_$_CommunityAggregates) then) =
+      __$$_CommunityAggregatesCopyWithImpl<$Res>;
   @override
   $Res call(
       {int id,
@@ -1007,15 +1007,15 @@ abstract class _$CommunityAggregatesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunityAggregatesCopyWithImpl<$Res>
+class __$$_CommunityAggregatesCopyWithImpl<$Res>
     extends _$CommunityAggregatesCopyWithImpl<$Res>
-    implements _$CommunityAggregatesCopyWith<$Res> {
-  __$CommunityAggregatesCopyWithImpl(
-      _CommunityAggregates _value, $Res Function(_CommunityAggregates) _then)
-      : super(_value, (v) => _then(v as _CommunityAggregates));
+    implements _$$_CommunityAggregatesCopyWith<$Res> {
+  __$$_CommunityAggregatesCopyWithImpl(_$_CommunityAggregates _value,
+      $Res Function(_$_CommunityAggregates) _then)
+      : super(_value, (v) => _then(v as _$_CommunityAggregates));
 
   @override
-  _CommunityAggregates get _value => super._value as _CommunityAggregates;
+  _$_CommunityAggregates get _value => super._value as _$_CommunityAggregates;
 
   @override
   $Res call({
@@ -1029,7 +1029,7 @@ class __$CommunityAggregatesCopyWithImpl<$Res>
     Object? usersActiveMonth = freezed,
     Object? usersActiveHalfYear = freezed,
   }) {
-    return _then(_CommunityAggregates(
+    return _then(_$_CommunityAggregates(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1117,7 +1117,7 @@ class _$_CommunityAggregates extends _CommunityAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CommunityAggregates &&
+            other is _$_CommunityAggregates &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
@@ -1151,8 +1151,8 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 
   @JsonKey(ignore: true)
   @override
-  _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
-      __$CommunityAggregatesCopyWithImpl<_CommunityAggregates>(
+  _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
+      __$$_CommunityAggregatesCopyWithImpl<_$_CommunityAggregates>(
           this, _$identity);
 
   @override
@@ -1197,7 +1197,7 @@ abstract class _CommunityAggregates extends CommunityAggregates {
   int get usersActiveHalfYear => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CommunityAggregatesCopyWith<_CommunityAggregates> get copyWith =>
+  _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1270,25 +1270,25 @@ class _$CommentAggregatesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CommentAggregatesCopyWith<$Res>
+abstract class _$$_CommentAggregatesCopyWith<$Res>
     implements $CommentAggregatesCopyWith<$Res> {
-  factory _$CommentAggregatesCopyWith(
-          _CommentAggregates value, $Res Function(_CommentAggregates) then) =
-      __$CommentAggregatesCopyWithImpl<$Res>;
+  factory _$$_CommentAggregatesCopyWith(_$_CommentAggregates value,
+          $Res Function(_$_CommentAggregates) then) =
+      __$$_CommentAggregatesCopyWithImpl<$Res>;
   @override
   $Res call({int id, int commentId, int score, int upvotes, int downvotes});
 }
 
 /// @nodoc
-class __$CommentAggregatesCopyWithImpl<$Res>
+class __$$_CommentAggregatesCopyWithImpl<$Res>
     extends _$CommentAggregatesCopyWithImpl<$Res>
-    implements _$CommentAggregatesCopyWith<$Res> {
-  __$CommentAggregatesCopyWithImpl(
-      _CommentAggregates _value, $Res Function(_CommentAggregates) _then)
-      : super(_value, (v) => _then(v as _CommentAggregates));
+    implements _$$_CommentAggregatesCopyWith<$Res> {
+  __$$_CommentAggregatesCopyWithImpl(
+      _$_CommentAggregates _value, $Res Function(_$_CommentAggregates) _then)
+      : super(_value, (v) => _then(v as _$_CommentAggregates));
 
   @override
-  _CommentAggregates get _value => super._value as _CommentAggregates;
+  _$_CommentAggregates get _value => super._value as _$_CommentAggregates;
 
   @override
   $Res call({
@@ -1298,7 +1298,7 @@ class __$CommentAggregatesCopyWithImpl<$Res>
     Object? upvotes = freezed,
     Object? downvotes = freezed,
   }) {
-    return _then(_CommentAggregates(
+    return _then(_$_CommentAggregates(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1358,7 +1358,7 @@ class _$_CommentAggregates extends _CommentAggregates {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CommentAggregates &&
+            other is _$_CommentAggregates &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.commentId, commentId) &&
             const DeepCollectionEquality().equals(other.score, score) &&
@@ -1378,8 +1378,9 @@ class _$_CommentAggregates extends _CommentAggregates {
 
   @JsonKey(ignore: true)
   @override
-  _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith =>
-      __$CommentAggregatesCopyWithImpl<_CommentAggregates>(this, _$identity);
+  _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
+      __$$_CommentAggregatesCopyWithImpl<_$_CommentAggregates>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1411,6 +1412,6 @@ abstract class _CommentAggregates extends CommentAggregates {
   int get downvotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CommentAggregatesCopyWith<_CommentAggregates> get copyWith =>
+  _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>
       throw _privateConstructorUsedError;
 }

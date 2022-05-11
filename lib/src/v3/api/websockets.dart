@@ -340,299 +340,297 @@ class WsEvent<T> {
 }
 
 class WsEventCreateComment extends WsEvent<FullCommentView> {
-  const WsEventCreateComment(FullCommentView data) : super(data);
+  const WsEventCreateComment(super.data);
 }
 
 class WsEventEditComment extends WsEvent<FullCommentView> {
-  const WsEventEditComment(FullCommentView data) : super(data);
+  const WsEventEditComment(super.data);
 }
 
 class WsEventDeleteComment extends WsEvent<FullCommentView> {
-  const WsEventDeleteComment(FullCommentView data) : super(data);
+  const WsEventDeleteComment(super.data);
 }
 
 class WsEventRemoveComment extends WsEvent<FullCommentView> {
-  const WsEventRemoveComment(FullCommentView data) : super(data);
+  const WsEventRemoveComment(super.data);
 }
 
 class WsEventMarkCommentAsRead extends WsEvent<FullCommentView> {
-  const WsEventMarkCommentAsRead(FullCommentView data) : super(data);
+  const WsEventMarkCommentAsRead(super.data);
 }
 
 class WsEventSaveComment extends WsEvent<FullCommentView> {
-  const WsEventSaveComment(FullCommentView data) : super(data);
+  const WsEventSaveComment(super.data);
 }
 
 class WsEventCreateCommentLike extends WsEvent<FullCommentView> {
-  const WsEventCreateCommentLike(FullCommentView data) : super(data);
+  const WsEventCreateCommentLike(super.data);
 }
 
 class WsEventGetComments extends WsEvent<List<CommentView>> {
-  const WsEventGetComments(List<CommentView> data) : super(data);
+  const WsEventGetComments(super.data);
 }
 
 class WsEventCreateCommentReport extends WsEvent<CommentReportView> {
-  const WsEventCreateCommentReport(CommentReportView data) : super(data);
+  const WsEventCreateCommentReport(super.data);
 }
 
 class WsEventResolveCommentReport extends WsEvent<CommentReportView> {
-  const WsEventResolveCommentReport(CommentReportView data) : super(data);
+  const WsEventResolveCommentReport(super.data);
 }
 
 class WsEventListCommentReports extends WsEvent<List<CommentReportView>> {
-  const WsEventListCommentReports(List<CommentReportView> data) : super(data);
+  const WsEventListCommentReports(super.data);
 }
 
 class WsEventGetCommunity extends WsEvent<FullCommunityView> {
-  const WsEventGetCommunity(FullCommunityView data) : super(data);
+  const WsEventGetCommunity(super.data);
 }
 
 class WsEventCreateCommunity extends WsEvent<CommunityView> {
-  const WsEventCreateCommunity(CommunityView data) : super(data);
+  const WsEventCreateCommunity(super.data);
 }
 
 class WsEventListCommunities extends WsEvent<List<CommunityView>> {
-  const WsEventListCommunities(List<CommunityView> data) : super(data);
+  const WsEventListCommunities(super.data);
 }
 
 class WsEventBanFromCommunity extends WsEvent<BannedCommunityUser> {
-  const WsEventBanFromCommunity(BannedCommunityUser data) : super(data);
+  const WsEventBanFromCommunity(super.data);
 }
 
 class WsEventAddModToCommunity extends WsEvent<List<CommunityModeratorView>> {
-  const WsEventAddModToCommunity(List<CommunityModeratorView> data)
-      : super(data);
+  const WsEventAddModToCommunity(super.data);
 }
 
 class WsEventEditCommunity extends WsEvent<CommunityView> {
-  const WsEventEditCommunity(CommunityView data) : super(data);
+  const WsEventEditCommunity(super.data);
 }
 
 class WsEventDeleteCommunity extends WsEvent<CommunityView> {
-  const WsEventDeleteCommunity(CommunityView data) : super(data);
+  const WsEventDeleteCommunity(super.data);
 }
 
 class WsEventRemoveCommunity extends WsEvent<CommunityView> {
-  const WsEventRemoveCommunity(CommunityView data) : super(data);
+  const WsEventRemoveCommunity(super.data);
 }
 
 class WsEventFollowCommunity extends WsEvent<CommunityView> {
-  const WsEventFollowCommunity(CommunityView data) : super(data);
+  const WsEventFollowCommunity(super.data);
 }
 
 class WsEventTransferCommunity extends WsEvent<FullCommunityView> {
-  const WsEventTransferCommunity(FullCommunityView data) : super(data);
+  const WsEventTransferCommunity(super.data);
 }
 
 class WsEventLeaveAdmin extends WsEvent<FullSiteView> {
-  const WsEventLeaveAdmin(FullSiteView data) : super(data);
+  const WsEventLeaveAdmin(super.data);
 }
 
 class WsEventGetPost extends WsEvent<FullPostView> {
-  const WsEventGetPost(FullPostView data) : super(data);
+  const WsEventGetPost(super.data);
 }
 
 class WsEventCreatePost extends WsEvent<PostView> {
-  const WsEventCreatePost(PostView data) : super(data);
+  const WsEventCreatePost(super.data);
 }
 
 class WsEventGetPosts extends WsEvent<List<PostView>> {
-  const WsEventGetPosts(List<PostView> data) : super(data);
+  const WsEventGetPosts(super.data);
 }
 
 class WsEventCreatePostLike extends WsEvent<PostView> {
-  const WsEventCreatePostLike(PostView data) : super(data);
+  const WsEventCreatePostLike(super.data);
 }
 
 class WsEventEditPost extends WsEvent<PostView> {
-  const WsEventEditPost(PostView data) : super(data);
+  const WsEventEditPost(super.data);
 }
 
 class WsEventDeletePost extends WsEvent<PostView> {
-  const WsEventDeletePost(PostView data) : super(data);
+  const WsEventDeletePost(super.data);
 }
 
 class WsEventRemovePost extends WsEvent<PostView> {
-  const WsEventRemovePost(PostView data) : super(data);
+  const WsEventRemovePost(super.data);
 }
 
 class WsEventLockPost extends WsEvent<PostView> {
-  const WsEventLockPost(PostView data) : super(data);
+  const WsEventLockPost(super.data);
 }
 
 class WsEventStickyPost extends WsEvent<PostView> {
-  const WsEventStickyPost(PostView data) : super(data);
+  const WsEventStickyPost(super.data);
 }
 
 class WsEventSavePost extends WsEvent<PostView> {
-  const WsEventSavePost(PostView data) : super(data);
+  const WsEventSavePost(super.data);
 }
 
 class WsEventCreatePostReport extends WsEvent<PostReportView> {
-  const WsEventCreatePostReport(PostReportView data) : super(data);
+  const WsEventCreatePostReport(super.data);
 }
 
 class WsEventResolvePostReport extends WsEvent<PostReportView> {
-  const WsEventResolvePostReport(PostReportView data) : super(data);
+  const WsEventResolvePostReport(super.data);
 }
 
 class WsEventListPostReports extends WsEvent<List<PostReportView>> {
-  const WsEventListPostReports(List<PostReportView> data) : super(data);
+  const WsEventListPostReports(super.data);
 }
 
 class WsEventSearch extends WsEvent<SearchResults> {
-  const WsEventSearch(SearchResults data) : super(data);
+  const WsEventSearch(super.data);
 }
 
 class WsEventGetModlog extends WsEvent<Modlog> {
-  const WsEventGetModlog(Modlog data) : super(data);
+  const WsEventGetModlog(super.data);
 }
 
 class WsEventCreateSite extends WsEvent<SiteView> {
-  const WsEventCreateSite(SiteView data) : super(data);
+  const WsEventCreateSite(super.data);
 }
 
 class WsEventEditSite extends WsEvent<SiteView> {
-  const WsEventEditSite(SiteView data) : super(data);
+  const WsEventEditSite(super.data);
 }
 
 class WsEventGetSite extends WsEvent<FullSiteView> {
-  const WsEventGetSite(FullSiteView data) : super(data);
+  const WsEventGetSite(super.data);
 }
 
 class WsEventGetSiteConfig extends WsEvent<String> {
-  const WsEventGetSiteConfig(String data) : super(data);
+  const WsEventGetSiteConfig(super.data);
 }
 
 class WsEventSaveSiteConfig extends WsEvent<String> {
-  const WsEventSaveSiteConfig(String data) : super(data);
+  const WsEventSaveSiteConfig(super.data);
 }
 
 class WsEventLogin extends WsEvent<LoginResponse> {
-  const WsEventLogin(LoginResponse data) : super(data);
+  const WsEventLogin(super.data);
 }
 
 class WsEventRegister extends WsEvent<Jwt> {
-  const WsEventRegister(Jwt data) : super(data);
+  const WsEventRegister(super.data);
 }
 
 class WsEventGetCaptcha extends WsEvent<Captcha> {
-  const WsEventGetCaptcha(Captcha data) : super(data);
+  const WsEventGetCaptcha(super.data);
 }
 
 class WsEventSaveUserSettings extends WsEvent<Jwt> {
-  const WsEventSaveUserSettings(Jwt data) : super(data);
+  const WsEventSaveUserSettings(super.data);
 }
 
 class WsEventChangePassword extends WsEvent<Jwt> {
-  const WsEventChangePassword(Jwt data) : super(data);
+  const WsEventChangePassword(super.data);
 }
 
 class WsEventGetPersonDetails extends WsEvent<FullPersonView> {
-  const WsEventGetPersonDetails(FullPersonView data) : super(data);
+  const WsEventGetPersonDetails(super.data);
 }
 
 class WsEventMarkAllAsRead extends WsEvent<List<CommentView>> {
-  const WsEventMarkAllAsRead(List<CommentView> data) : super(data);
+  const WsEventMarkAllAsRead(super.data);
 }
 
 class WsEventAddAdmin extends WsEvent<List<PersonViewSafe>> {
-  const WsEventAddAdmin(List<PersonViewSafe> data) : super(data);
+  const WsEventAddAdmin(super.data);
 }
 
 class WsEventBanPerson extends WsEvent<BannedPerson> {
-  const WsEventBanPerson(BannedPerson data) : super(data);
+  const WsEventBanPerson(super.data);
 }
 
 class WsEventGetReplies extends WsEvent<List<CommentView>> {
-  const WsEventGetReplies(List<CommentView> data) : super(data);
+  const WsEventGetReplies(super.data);
 }
 
 class WsEventGetPersonMentions extends WsEvent<List<PersonMentionView>> {
-  const WsEventGetPersonMentions(List<PersonMentionView> data) : super(data);
+  const WsEventGetPersonMentions(super.data);
 }
 
 class WsEventMarkPersonMentionAsRead extends WsEvent<PersonMentionView> {
-  const WsEventMarkPersonMentionAsRead(PersonMentionView data) : super(data);
+  const WsEventMarkPersonMentionAsRead(super.data);
 }
 
 class WsEventDeleteAccount extends WsEvent<void> {
-  const WsEventDeleteAccount(void data) : super(data);
+  const WsEventDeleteAccount(super.data);
 }
 
 class WsEventPasswordReset extends WsEvent<Null> {
-  const WsEventPasswordReset(Null data) : super(data);
+  const WsEventPasswordReset(super.data);
 }
 
 class WsEventPasswordChange extends WsEvent<Jwt> {
-  const WsEventPasswordChange(Jwt data) : super(data);
+  const WsEventPasswordChange(super.data);
 }
 
 class WsEventCreatePrivateMessage extends WsEvent<PrivateMessageView> {
-  const WsEventCreatePrivateMessage(PrivateMessageView data) : super(data);
+  const WsEventCreatePrivateMessage(super.data);
 }
 
 class WsEventEditPrivateMessage extends WsEvent<PrivateMessageView> {
-  const WsEventEditPrivateMessage(PrivateMessageView data) : super(data);
+  const WsEventEditPrivateMessage(super.data);
 }
 
 class WsEventDeletePrivateMessage extends WsEvent<PrivateMessageView> {
-  const WsEventDeletePrivateMessage(PrivateMessageView data) : super(data);
+  const WsEventDeletePrivateMessage(super.data);
 }
 
 class WsEventMarkPrivateMessageAsRead extends WsEvent<PrivateMessageView> {
-  const WsEventMarkPrivateMessageAsRead(PrivateMessageView data) : super(data);
+  const WsEventMarkPrivateMessageAsRead(super.data);
 }
 
 class WsEventGetPrivateMessages extends WsEvent<List<PrivateMessageView>> {
-  const WsEventGetPrivateMessages(List<PrivateMessageView> data) : super(data);
+  const WsEventGetPrivateMessages(super.data);
 }
 
 class WsEventGetReportCount extends WsEvent<ReportCount> {
-  const WsEventGetReportCount(ReportCount data) : super(data);
+  const WsEventGetReportCount(super.data);
 }
 
 class WsEventResolveObject extends WsEvent<ResolveObjectResponse> {
-  const WsEventResolveObject(ResolveObjectResponse data) : super(data);
+  const WsEventResolveObject(super.data);
 }
 
 class WsEventGetSiteMetadata extends WsEvent<SiteMetadata> {
-  const WsEventGetSiteMetadata(SiteMetadata data) : super(data);
+  const WsEventGetSiteMetadata(super.data);
 }
 
 class WsEventBlockPerson extends WsEvent<BlockedPerson> {
-  const WsEventBlockPerson(BlockedPerson data) : super(data);
+  const WsEventBlockPerson(super.data);
 }
 
 class WsEventBlockCommunity extends WsEvent<BlockedCommunity> {
-  const WsEventBlockCommunity(BlockedCommunity data) : super(data);
+  const WsEventBlockCommunity(super.data);
 }
 
 class WsEventGetUnreadCount extends WsEvent<UnreadCount> {
-  const WsEventGetUnreadCount(UnreadCount data) : super(data);
+  const WsEventGetUnreadCount(super.data);
 }
 
 class WsEventGetBannedPersons extends WsEvent<List<PersonViewSafe>> {
-  const WsEventGetBannedPersons(List<PersonViewSafe> data) : super(data);
+  const WsEventGetBannedPersons(super.data);
 }
 
 class WsEventVerifyEmail extends WsEvent<void> {
-  const WsEventVerifyEmail(void data) : super(data);
+  const WsEventVerifyEmail(super.data);
 }
 
 class WsEventGetUnreadRegistrationApplicationCount extends WsEvent<int> {
-  const WsEventGetUnreadRegistrationApplicationCount(int data) : super(data);
+  const WsEventGetUnreadRegistrationApplicationCount(super.data);
 }
 
 class WsEventListRegistrationApplications
     extends WsEvent<List<RegistrationApplicationView>> {
   const WsEventListRegistrationApplications(
-    List<RegistrationApplicationView> data,
-  ) : super(data);
+    super.data,
+  );
 }
 
 class WsEventApproveRegistrationApplication
     extends WsEvent<RegistrationApplicationView> {
-  const WsEventApproveRegistrationApplication(RegistrationApplicationView data)
-      : super(data);
+  const WsEventApproveRegistrationApplication(super.data);
 }

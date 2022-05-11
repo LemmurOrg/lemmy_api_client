@@ -70,23 +70,24 @@ class _$JwtPayloadCopyWithImpl<$Res> implements $JwtPayloadCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$JwtPayloadCopyWith<$Res> implements $JwtPayloadCopyWith<$Res> {
-  factory _$JwtPayloadCopyWith(
-          _JwtPayload value, $Res Function(_JwtPayload) then) =
-      __$JwtPayloadCopyWithImpl<$Res>;
+abstract class _$$_JwtPayloadCopyWith<$Res>
+    implements $JwtPayloadCopyWith<$Res> {
+  factory _$$_JwtPayloadCopyWith(
+          _$_JwtPayload value, $Res Function(_$_JwtPayload) then) =
+      __$$_JwtPayloadCopyWithImpl<$Res>;
   @override
   $Res call({int iat, String iss, int sub});
 }
 
 /// @nodoc
-class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
-    implements _$JwtPayloadCopyWith<$Res> {
-  __$JwtPayloadCopyWithImpl(
-      _JwtPayload _value, $Res Function(_JwtPayload) _then)
-      : super(_value, (v) => _then(v as _JwtPayload));
+class __$$_JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
+    implements _$$_JwtPayloadCopyWith<$Res> {
+  __$$_JwtPayloadCopyWithImpl(
+      _$_JwtPayload _value, $Res Function(_$_JwtPayload) _then)
+      : super(_value, (v) => _then(v as _$_JwtPayload));
 
   @override
-  _JwtPayload get _value => super._value as _JwtPayload;
+  _$_JwtPayload get _value => super._value as _$_JwtPayload;
 
   @override
   $Res call({
@@ -94,7 +95,7 @@ class __$JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
     Object? iss = freezed,
     Object? sub = freezed,
   }) {
-    return _then(_JwtPayload(
+    return _then(_$_JwtPayload(
       iat: iat == freezed
           ? _value.iat
           : iat // ignore: cast_nullable_to_non_nullable
@@ -137,7 +138,7 @@ class _$_JwtPayload extends _JwtPayload {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _JwtPayload &&
+            other is _$_JwtPayload &&
             const DeepCollectionEquality().equals(other.iat, iat) &&
             const DeepCollectionEquality().equals(other.iss, iss) &&
             const DeepCollectionEquality().equals(other.sub, sub));
@@ -153,8 +154,8 @@ class _$_JwtPayload extends _JwtPayload {
 
   @JsonKey(ignore: true)
   @override
-  _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>
-      __$JwtPayloadCopyWithImpl<_JwtPayload>(this, _$identity);
+  _$$_JwtPayloadCopyWith<_$_JwtPayload> get copyWith =>
+      __$$_JwtPayloadCopyWithImpl<_$_JwtPayload>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -180,6 +181,6 @@ abstract class _JwtPayload extends JwtPayload {
   int get sub => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$JwtPayloadCopyWith<_JwtPayload> get copyWith =>
+  _$$_JwtPayloadCopyWith<_$_JwtPayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
