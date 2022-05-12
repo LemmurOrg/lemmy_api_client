@@ -62,28 +62,29 @@ class _$GetPostCopyWithImpl<$Res> implements $GetPostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetPostCopyWith<$Res> implements $GetPostCopyWith<$Res> {
-  factory _$GetPostCopyWith(_GetPost value, $Res Function(_GetPost) then) =
-      __$GetPostCopyWithImpl<$Res>;
+abstract class _$$_GetPostCopyWith<$Res> implements $GetPostCopyWith<$Res> {
+  factory _$$_GetPostCopyWith(
+          _$_GetPost value, $Res Function(_$_GetPost) then) =
+      __$$_GetPostCopyWithImpl<$Res>;
   @override
   $Res call({int id, String? auth});
 }
 
 /// @nodoc
-class __$GetPostCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res>
-    implements _$GetPostCopyWith<$Res> {
-  __$GetPostCopyWithImpl(_GetPost _value, $Res Function(_GetPost) _then)
-      : super(_value, (v) => _then(v as _GetPost));
+class __$$_GetPostCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res>
+    implements _$$_GetPostCopyWith<$Res> {
+  __$$_GetPostCopyWithImpl(_$_GetPost _value, $Res Function(_$_GetPost) _then)
+      : super(_value, (v) => _then(v as _$_GetPost));
 
   @override
-  _GetPost get _value => super._value as _GetPost;
+  _$_GetPost get _value => super._value as _$_GetPost;
 
   @override
   $Res call({
     Object? id = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetPost(
+    return _then(_$_GetPost(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -119,7 +120,7 @@ class _$_GetPost extends _GetPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetPost &&
+            other is _$_GetPost &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
@@ -133,8 +134,8 @@ class _$_GetPost extends _GetPost {
 
   @JsonKey(ignore: true)
   @override
-  _$GetPostCopyWith<_GetPost> get copyWith =>
-      __$GetPostCopyWithImpl<_GetPost>(this, _$identity);
+  _$$_GetPostCopyWith<_$_GetPost> get copyWith =>
+      __$$_GetPostCopyWithImpl<_$_GetPost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -155,7 +156,7 @@ abstract class _GetPost extends GetPost {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetPostCopyWith<_GetPost> get copyWith =>
+  _$$_GetPostCopyWith<_$_GetPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -246,10 +247,11 @@ class _$CreatePostCopyWithImpl<$Res> implements $CreatePostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$CreatePostCopyWith<$Res> implements $CreatePostCopyWith<$Res> {
-  factory _$CreatePostCopyWith(
-          _CreatePost value, $Res Function(_CreatePost) then) =
-      __$CreatePostCopyWithImpl<$Res>;
+abstract class _$$_CreatePostCopyWith<$Res>
+    implements $CreatePostCopyWith<$Res> {
+  factory _$$_CreatePostCopyWith(
+          _$_CreatePost value, $Res Function(_$_CreatePost) then) =
+      __$$_CreatePostCopyWithImpl<$Res>;
   @override
   $Res call(
       {String name,
@@ -262,14 +264,14 @@ abstract class _$CreatePostCopyWith<$Res> implements $CreatePostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
-    implements _$CreatePostCopyWith<$Res> {
-  __$CreatePostCopyWithImpl(
-      _CreatePost _value, $Res Function(_CreatePost) _then)
-      : super(_value, (v) => _then(v as _CreatePost));
+class __$$_CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
+    implements _$$_CreatePostCopyWith<$Res> {
+  __$$_CreatePostCopyWithImpl(
+      _$_CreatePost _value, $Res Function(_$_CreatePost) _then)
+      : super(_value, (v) => _then(v as _$_CreatePost));
 
   @override
-  _CreatePost get _value => super._value as _CreatePost;
+  _$_CreatePost get _value => super._value as _$_CreatePost;
 
   @override
   $Res call({
@@ -281,7 +283,7 @@ class __$CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
     Object? auth = freezed,
     Object? honeypot = freezed,
   }) {
-    return _then(_CreatePost(
+    return _then(_$_CreatePost(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -355,7 +357,7 @@ class _$_CreatePost extends _CreatePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreatePost &&
+            other is _$_CreatePost &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality().equals(other.body, body) &&
@@ -380,8 +382,8 @@ class _$_CreatePost extends _CreatePost {
 
   @JsonKey(ignore: true)
   @override
-  _$CreatePostCopyWith<_CreatePost> get copyWith =>
-      __$CreatePostCopyWithImpl<_CreatePost>(this, _$identity);
+  _$$_CreatePostCopyWith<_$_CreatePost> get copyWith =>
+      __$$_CreatePostCopyWithImpl<_$_CreatePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -419,7 +421,7 @@ abstract class _CreatePost extends CreatePost {
   String? get honeypot => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreatePostCopyWith<_CreatePost> get copyWith =>
+  _$$_CreatePostCopyWith<_$_CreatePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -517,9 +519,10 @@ class _$GetPostsCopyWithImpl<$Res> implements $GetPostsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
-  factory _$GetPostsCopyWith(_GetPosts value, $Res Function(_GetPosts) then) =
-      __$GetPostsCopyWithImpl<$Res>;
+abstract class _$$_GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
+  factory _$$_GetPostsCopyWith(
+          _$_GetPosts value, $Res Function(_$_GetPosts) then) =
+      __$$_GetPostsCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'type_') PostListingType? type,
@@ -533,13 +536,14 @@ abstract class _$GetPostsCopyWith<$Res> implements $GetPostsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
-    implements _$GetPostsCopyWith<$Res> {
-  __$GetPostsCopyWithImpl(_GetPosts _value, $Res Function(_GetPosts) _then)
-      : super(_value, (v) => _then(v as _GetPosts));
+class __$$_GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
+    implements _$$_GetPostsCopyWith<$Res> {
+  __$$_GetPostsCopyWithImpl(
+      _$_GetPosts _value, $Res Function(_$_GetPosts) _then)
+      : super(_value, (v) => _then(v as _$_GetPosts));
 
   @override
-  _GetPosts get _value => super._value as _GetPosts;
+  _$_GetPosts get _value => super._value as _$_GetPosts;
 
   @override
   $Res call({
@@ -552,7 +556,7 @@ class __$GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
     Object? savedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetPosts(
+    return _then(_$_GetPosts(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -634,7 +638,7 @@ class _$_GetPosts extends _GetPosts {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetPosts &&
+            other is _$_GetPosts &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.sort, sort) &&
             const DeepCollectionEquality().equals(other.page, page) &&
@@ -662,8 +666,8 @@ class _$_GetPosts extends _GetPosts {
 
   @JsonKey(ignore: true)
   @override
-  _$GetPostsCopyWith<_GetPosts> get copyWith =>
-      __$GetPostsCopyWithImpl<_GetPosts>(this, _$identity);
+  _$$_GetPostsCopyWith<_$_GetPosts> get copyWith =>
+      __$$_GetPostsCopyWithImpl<_$_GetPosts>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -704,7 +708,7 @@ abstract class _GetPosts extends GetPosts {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetPostsCopyWith<_GetPosts> get copyWith =>
+  _$$_GetPostsCopyWith<_$_GetPosts> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -765,25 +769,25 @@ class _$CreatePostLikeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreatePostLikeCopyWith<$Res>
+abstract class _$$_CreatePostLikeCopyWith<$Res>
     implements $CreatePostLikeCopyWith<$Res> {
-  factory _$CreatePostLikeCopyWith(
-          _CreatePostLike value, $Res Function(_CreatePostLike) then) =
-      __$CreatePostLikeCopyWithImpl<$Res>;
+  factory _$$_CreatePostLikeCopyWith(
+          _$_CreatePostLike value, $Res Function(_$_CreatePostLike) then) =
+      __$$_CreatePostLikeCopyWithImpl<$Res>;
   @override
   $Res call({int postId, VoteType score, String auth});
 }
 
 /// @nodoc
-class __$CreatePostLikeCopyWithImpl<$Res>
+class __$$_CreatePostLikeCopyWithImpl<$Res>
     extends _$CreatePostLikeCopyWithImpl<$Res>
-    implements _$CreatePostLikeCopyWith<$Res> {
-  __$CreatePostLikeCopyWithImpl(
-      _CreatePostLike _value, $Res Function(_CreatePostLike) _then)
-      : super(_value, (v) => _then(v as _CreatePostLike));
+    implements _$$_CreatePostLikeCopyWith<$Res> {
+  __$$_CreatePostLikeCopyWithImpl(
+      _$_CreatePostLike _value, $Res Function(_$_CreatePostLike) _then)
+      : super(_value, (v) => _then(v as _$_CreatePostLike));
 
   @override
-  _CreatePostLike get _value => super._value as _CreatePostLike;
+  _$_CreatePostLike get _value => super._value as _$_CreatePostLike;
 
   @override
   $Res call({
@@ -791,7 +795,7 @@ class __$CreatePostLikeCopyWithImpl<$Res>
     Object? score = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreatePostLike(
+    return _then(_$_CreatePostLike(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -835,7 +839,7 @@ class _$_CreatePostLike extends _CreatePostLike {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreatePostLike &&
+            other is _$_CreatePostLike &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.score, score) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -851,8 +855,8 @@ class _$_CreatePostLike extends _CreatePostLike {
 
   @JsonKey(ignore: true)
   @override
-  _$CreatePostLikeCopyWith<_CreatePostLike> get copyWith =>
-      __$CreatePostLikeCopyWithImpl<_CreatePostLike>(this, _$identity);
+  _$$_CreatePostLikeCopyWith<_$_CreatePostLike> get copyWith =>
+      __$$_CreatePostLikeCopyWithImpl<_$_CreatePostLike>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -878,7 +882,7 @@ abstract class _CreatePostLike extends CreatePostLike {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreatePostLikeCopyWith<_CreatePostLike> get copyWith =>
+  _$$_CreatePostLikeCopyWith<_$_CreatePostLike> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -961,9 +965,10 @@ class _$EditPostCopyWithImpl<$Res> implements $EditPostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$EditPostCopyWith<$Res> implements $EditPostCopyWith<$Res> {
-  factory _$EditPostCopyWith(_EditPost value, $Res Function(_EditPost) then) =
-      __$EditPostCopyWithImpl<$Res>;
+abstract class _$$_EditPostCopyWith<$Res> implements $EditPostCopyWith<$Res> {
+  factory _$$_EditPostCopyWith(
+          _$_EditPost value, $Res Function(_$_EditPost) then) =
+      __$$_EditPostCopyWithImpl<$Res>;
   @override
   $Res call(
       {int postId,
@@ -975,13 +980,14 @@ abstract class _$EditPostCopyWith<$Res> implements $EditPostCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
-    implements _$EditPostCopyWith<$Res> {
-  __$EditPostCopyWithImpl(_EditPost _value, $Res Function(_EditPost) _then)
-      : super(_value, (v) => _then(v as _EditPost));
+class __$$_EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
+    implements _$$_EditPostCopyWith<$Res> {
+  __$$_EditPostCopyWithImpl(
+      _$_EditPost _value, $Res Function(_$_EditPost) _then)
+      : super(_value, (v) => _then(v as _$_EditPost));
 
   @override
-  _EditPost get _value => super._value as _EditPost;
+  _$_EditPost get _value => super._value as _$_EditPost;
 
   @override
   $Res call({
@@ -992,7 +998,7 @@ class __$EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_EditPost(
+    return _then(_$_EditPost(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1059,7 +1065,7 @@ class _$_EditPost extends _EditPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EditPost &&
+            other is _$_EditPost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.url, url) &&
@@ -1081,8 +1087,8 @@ class _$_EditPost extends _EditPost {
 
   @JsonKey(ignore: true)
   @override
-  _$EditPostCopyWith<_EditPost> get copyWith =>
-      __$EditPostCopyWithImpl<_EditPost>(this, _$identity);
+  _$$_EditPostCopyWith<_$_EditPost> get copyWith =>
+      __$$_EditPostCopyWithImpl<_$_EditPost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1116,7 +1122,7 @@ abstract class _EditPost extends EditPost {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EditPostCopyWith<_EditPost> get copyWith =>
+  _$$_EditPostCopyWith<_$_EditPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1176,23 +1182,24 @@ class _$DeletePostCopyWithImpl<$Res> implements $DeletePostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$DeletePostCopyWith<$Res> implements $DeletePostCopyWith<$Res> {
-  factory _$DeletePostCopyWith(
-          _DeletePost value, $Res Function(_DeletePost) then) =
-      __$DeletePostCopyWithImpl<$Res>;
+abstract class _$$_DeletePostCopyWith<$Res>
+    implements $DeletePostCopyWith<$Res> {
+  factory _$$_DeletePostCopyWith(
+          _$_DeletePost value, $Res Function(_$_DeletePost) then) =
+      __$$_DeletePostCopyWithImpl<$Res>;
   @override
   $Res call({int postId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
-    implements _$DeletePostCopyWith<$Res> {
-  __$DeletePostCopyWithImpl(
-      _DeletePost _value, $Res Function(_DeletePost) _then)
-      : super(_value, (v) => _then(v as _DeletePost));
+class __$$_DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
+    implements _$$_DeletePostCopyWith<$Res> {
+  __$$_DeletePostCopyWithImpl(
+      _$_DeletePost _value, $Res Function(_$_DeletePost) _then)
+      : super(_value, (v) => _then(v as _$_DeletePost));
 
   @override
-  _DeletePost get _value => super._value as _DeletePost;
+  _$_DeletePost get _value => super._value as _$_DeletePost;
 
   @override
   $Res call({
@@ -1200,7 +1207,7 @@ class __$DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
     Object? deleted = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_DeletePost(
+    return _then(_$_DeletePost(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1244,7 +1251,7 @@ class _$_DeletePost extends _DeletePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeletePost &&
+            other is _$_DeletePost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.deleted, deleted) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1260,8 +1267,8 @@ class _$_DeletePost extends _DeletePost {
 
   @JsonKey(ignore: true)
   @override
-  _$DeletePostCopyWith<_DeletePost> get copyWith =>
-      __$DeletePostCopyWithImpl<_DeletePost>(this, _$identity);
+  _$$_DeletePostCopyWith<_$_DeletePost> get copyWith =>
+      __$$_DeletePostCopyWithImpl<_$_DeletePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1287,7 +1294,7 @@ abstract class _DeletePost extends DeletePost {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeletePostCopyWith<_DeletePost> get copyWith =>
+  _$$_DeletePostCopyWith<_$_DeletePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1353,23 +1360,24 @@ class _$RemovePostCopyWithImpl<$Res> implements $RemovePostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$RemovePostCopyWith<$Res> implements $RemovePostCopyWith<$Res> {
-  factory _$RemovePostCopyWith(
-          _RemovePost value, $Res Function(_RemovePost) then) =
-      __$RemovePostCopyWithImpl<$Res>;
+abstract class _$$_RemovePostCopyWith<$Res>
+    implements $RemovePostCopyWith<$Res> {
+  factory _$$_RemovePostCopyWith(
+          _$_RemovePost value, $Res Function(_$_RemovePost) then) =
+      __$$_RemovePostCopyWithImpl<$Res>;
   @override
   $Res call({int postId, bool removed, String? reason, String auth});
 }
 
 /// @nodoc
-class __$RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
-    implements _$RemovePostCopyWith<$Res> {
-  __$RemovePostCopyWithImpl(
-      _RemovePost _value, $Res Function(_RemovePost) _then)
-      : super(_value, (v) => _then(v as _RemovePost));
+class __$$_RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
+    implements _$$_RemovePostCopyWith<$Res> {
+  __$$_RemovePostCopyWithImpl(
+      _$_RemovePost _value, $Res Function(_$_RemovePost) _then)
+      : super(_value, (v) => _then(v as _$_RemovePost));
 
   @override
-  _RemovePost get _value => super._value as _RemovePost;
+  _$_RemovePost get _value => super._value as _$_RemovePost;
 
   @override
   $Res call({
@@ -1378,7 +1386,7 @@ class __$RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_RemovePost(
+    return _then(_$_RemovePost(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1431,7 +1439,7 @@ class _$_RemovePost extends _RemovePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RemovePost &&
+            other is _$_RemovePost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.removed, removed) &&
             const DeepCollectionEquality().equals(other.reason, reason) &&
@@ -1449,8 +1457,8 @@ class _$_RemovePost extends _RemovePost {
 
   @JsonKey(ignore: true)
   @override
-  _$RemovePostCopyWith<_RemovePost> get copyWith =>
-      __$RemovePostCopyWithImpl<_RemovePost>(this, _$identity);
+  _$$_RemovePostCopyWith<_$_RemovePost> get copyWith =>
+      __$$_RemovePostCopyWithImpl<_$_RemovePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1479,7 +1487,7 @@ abstract class _RemovePost extends RemovePost {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RemovePostCopyWith<_RemovePost> get copyWith =>
+  _$$_RemovePostCopyWith<_$_RemovePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1538,21 +1546,23 @@ class _$LockPostCopyWithImpl<$Res> implements $LockPostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LockPostCopyWith<$Res> implements $LockPostCopyWith<$Res> {
-  factory _$LockPostCopyWith(_LockPost value, $Res Function(_LockPost) then) =
-      __$LockPostCopyWithImpl<$Res>;
+abstract class _$$_LockPostCopyWith<$Res> implements $LockPostCopyWith<$Res> {
+  factory _$$_LockPostCopyWith(
+          _$_LockPost value, $Res Function(_$_LockPost) then) =
+      __$$_LockPostCopyWithImpl<$Res>;
   @override
   $Res call({int postId, bool locked, String auth});
 }
 
 /// @nodoc
-class __$LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
-    implements _$LockPostCopyWith<$Res> {
-  __$LockPostCopyWithImpl(_LockPost _value, $Res Function(_LockPost) _then)
-      : super(_value, (v) => _then(v as _LockPost));
+class __$$_LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
+    implements _$$_LockPostCopyWith<$Res> {
+  __$$_LockPostCopyWithImpl(
+      _$_LockPost _value, $Res Function(_$_LockPost) _then)
+      : super(_value, (v) => _then(v as _$_LockPost));
 
   @override
-  _LockPost get _value => super._value as _LockPost;
+  _$_LockPost get _value => super._value as _$_LockPost;
 
   @override
   $Res call({
@@ -1560,7 +1570,7 @@ class __$LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
     Object? locked = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_LockPost(
+    return _then(_$_LockPost(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1604,7 +1614,7 @@ class _$_LockPost extends _LockPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _LockPost &&
+            other is _$_LockPost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.locked, locked) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1620,8 +1630,8 @@ class _$_LockPost extends _LockPost {
 
   @JsonKey(ignore: true)
   @override
-  _$LockPostCopyWith<_LockPost> get copyWith =>
-      __$LockPostCopyWithImpl<_LockPost>(this, _$identity);
+  _$$_LockPostCopyWith<_$_LockPost> get copyWith =>
+      __$$_LockPostCopyWithImpl<_$_LockPost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1646,7 +1656,7 @@ abstract class _LockPost extends LockPost {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$LockPostCopyWith<_LockPost> get copyWith =>
+  _$$_LockPostCopyWith<_$_LockPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1706,23 +1716,24 @@ class _$StickyPostCopyWithImpl<$Res> implements $StickyPostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$StickyPostCopyWith<$Res> implements $StickyPostCopyWith<$Res> {
-  factory _$StickyPostCopyWith(
-          _StickyPost value, $Res Function(_StickyPost) then) =
-      __$StickyPostCopyWithImpl<$Res>;
+abstract class _$$_StickyPostCopyWith<$Res>
+    implements $StickyPostCopyWith<$Res> {
+  factory _$$_StickyPostCopyWith(
+          _$_StickyPost value, $Res Function(_$_StickyPost) then) =
+      __$$_StickyPostCopyWithImpl<$Res>;
   @override
   $Res call({int postId, bool stickied, String auth});
 }
 
 /// @nodoc
-class __$StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
-    implements _$StickyPostCopyWith<$Res> {
-  __$StickyPostCopyWithImpl(
-      _StickyPost _value, $Res Function(_StickyPost) _then)
-      : super(_value, (v) => _then(v as _StickyPost));
+class __$$_StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
+    implements _$$_StickyPostCopyWith<$Res> {
+  __$$_StickyPostCopyWithImpl(
+      _$_StickyPost _value, $Res Function(_$_StickyPost) _then)
+      : super(_value, (v) => _then(v as _$_StickyPost));
 
   @override
-  _StickyPost get _value => super._value as _StickyPost;
+  _$_StickyPost get _value => super._value as _$_StickyPost;
 
   @override
   $Res call({
@@ -1730,7 +1741,7 @@ class __$StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
     Object? stickied = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_StickyPost(
+    return _then(_$_StickyPost(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1774,7 +1785,7 @@ class _$_StickyPost extends _StickyPost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _StickyPost &&
+            other is _$_StickyPost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.stickied, stickied) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1790,8 +1801,8 @@ class _$_StickyPost extends _StickyPost {
 
   @JsonKey(ignore: true)
   @override
-  _$StickyPostCopyWith<_StickyPost> get copyWith =>
-      __$StickyPostCopyWithImpl<_StickyPost>(this, _$identity);
+  _$$_StickyPostCopyWith<_$_StickyPost> get copyWith =>
+      __$$_StickyPostCopyWithImpl<_$_StickyPost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1817,7 +1828,7 @@ abstract class _StickyPost extends StickyPost {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$StickyPostCopyWith<_StickyPost> get copyWith =>
+  _$$_StickyPostCopyWith<_$_StickyPost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1876,21 +1887,23 @@ class _$SavePostCopyWithImpl<$Res> implements $SavePostCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$SavePostCopyWith<$Res> implements $SavePostCopyWith<$Res> {
-  factory _$SavePostCopyWith(_SavePost value, $Res Function(_SavePost) then) =
-      __$SavePostCopyWithImpl<$Res>;
+abstract class _$$_SavePostCopyWith<$Res> implements $SavePostCopyWith<$Res> {
+  factory _$$_SavePostCopyWith(
+          _$_SavePost value, $Res Function(_$_SavePost) then) =
+      __$$_SavePostCopyWithImpl<$Res>;
   @override
   $Res call({int postId, bool save, String auth});
 }
 
 /// @nodoc
-class __$SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
-    implements _$SavePostCopyWith<$Res> {
-  __$SavePostCopyWithImpl(_SavePost _value, $Res Function(_SavePost) _then)
-      : super(_value, (v) => _then(v as _SavePost));
+class __$$_SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
+    implements _$$_SavePostCopyWith<$Res> {
+  __$$_SavePostCopyWithImpl(
+      _$_SavePost _value, $Res Function(_$_SavePost) _then)
+      : super(_value, (v) => _then(v as _$_SavePost));
 
   @override
-  _SavePost get _value => super._value as _SavePost;
+  _$_SavePost get _value => super._value as _$_SavePost;
 
   @override
   $Res call({
@@ -1898,7 +1911,7 @@ class __$SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
     Object? save = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_SavePost(
+    return _then(_$_SavePost(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -1942,7 +1955,7 @@ class _$_SavePost extends _SavePost {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _SavePost &&
+            other is _$_SavePost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.save, save) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -1958,8 +1971,8 @@ class _$_SavePost extends _SavePost {
 
   @JsonKey(ignore: true)
   @override
-  _$SavePostCopyWith<_SavePost> get copyWith =>
-      __$SavePostCopyWithImpl<_SavePost>(this, _$identity);
+  _$$_SavePostCopyWith<_$_SavePost> get copyWith =>
+      __$$_SavePostCopyWithImpl<_$_SavePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1984,7 +1997,7 @@ abstract class _SavePost extends SavePost {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SavePostCopyWith<_SavePost> get copyWith =>
+  _$$_SavePostCopyWith<_$_SavePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2033,31 +2046,31 @@ class _$GetSiteMetadataCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$GetSiteMetadataCopyWith<$Res>
+abstract class _$$_GetSiteMetadataCopyWith<$Res>
     implements $GetSiteMetadataCopyWith<$Res> {
-  factory _$GetSiteMetadataCopyWith(
-          _GetSiteMetadata value, $Res Function(_GetSiteMetadata) then) =
-      __$GetSiteMetadataCopyWithImpl<$Res>;
+  factory _$$_GetSiteMetadataCopyWith(
+          _$_GetSiteMetadata value, $Res Function(_$_GetSiteMetadata) then) =
+      __$$_GetSiteMetadataCopyWithImpl<$Res>;
   @override
   $Res call({String url});
 }
 
 /// @nodoc
-class __$GetSiteMetadataCopyWithImpl<$Res>
+class __$$_GetSiteMetadataCopyWithImpl<$Res>
     extends _$GetSiteMetadataCopyWithImpl<$Res>
-    implements _$GetSiteMetadataCopyWith<$Res> {
-  __$GetSiteMetadataCopyWithImpl(
-      _GetSiteMetadata _value, $Res Function(_GetSiteMetadata) _then)
-      : super(_value, (v) => _then(v as _GetSiteMetadata));
+    implements _$$_GetSiteMetadataCopyWith<$Res> {
+  __$$_GetSiteMetadataCopyWithImpl(
+      _$_GetSiteMetadata _value, $Res Function(_$_GetSiteMetadata) _then)
+      : super(_value, (v) => _then(v as _$_GetSiteMetadata));
 
   @override
-  _GetSiteMetadata get _value => super._value as _GetSiteMetadata;
+  _$_GetSiteMetadata get _value => super._value as _$_GetSiteMetadata;
 
   @override
   $Res call({
     Object? url = freezed,
   }) {
-    return _then(_GetSiteMetadata(
+    return _then(_$_GetSiteMetadata(
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -2087,7 +2100,7 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetSiteMetadata &&
+            other is _$_GetSiteMetadata &&
             const DeepCollectionEquality().equals(other.url, url));
   }
 
@@ -2098,8 +2111,8 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
 
   @JsonKey(ignore: true)
   @override
-  _$GetSiteMetadataCopyWith<_GetSiteMetadata> get copyWith =>
-      __$GetSiteMetadataCopyWithImpl<_GetSiteMetadata>(this, _$identity);
+  _$$_GetSiteMetadataCopyWith<_$_GetSiteMetadata> get copyWith =>
+      __$$_GetSiteMetadataCopyWithImpl<_$_GetSiteMetadata>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2119,7 +2132,7 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
   String get url => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetSiteMetadataCopyWith<_GetSiteMetadata> get copyWith =>
+  _$$_GetSiteMetadataCopyWith<_$_GetSiteMetadata> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2180,25 +2193,25 @@ class _$CreatePostReportCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreatePostReportCopyWith<$Res>
+abstract class _$$_CreatePostReportCopyWith<$Res>
     implements $CreatePostReportCopyWith<$Res> {
-  factory _$CreatePostReportCopyWith(
-          _CreatePostReport value, $Res Function(_CreatePostReport) then) =
-      __$CreatePostReportCopyWithImpl<$Res>;
+  factory _$$_CreatePostReportCopyWith(
+          _$_CreatePostReport value, $Res Function(_$_CreatePostReport) then) =
+      __$$_CreatePostReportCopyWithImpl<$Res>;
   @override
   $Res call({int postId, String reason, String auth});
 }
 
 /// @nodoc
-class __$CreatePostReportCopyWithImpl<$Res>
+class __$$_CreatePostReportCopyWithImpl<$Res>
     extends _$CreatePostReportCopyWithImpl<$Res>
-    implements _$CreatePostReportCopyWith<$Res> {
-  __$CreatePostReportCopyWithImpl(
-      _CreatePostReport _value, $Res Function(_CreatePostReport) _then)
-      : super(_value, (v) => _then(v as _CreatePostReport));
+    implements _$$_CreatePostReportCopyWith<$Res> {
+  __$$_CreatePostReportCopyWithImpl(
+      _$_CreatePostReport _value, $Res Function(_$_CreatePostReport) _then)
+      : super(_value, (v) => _then(v as _$_CreatePostReport));
 
   @override
-  _CreatePostReport get _value => super._value as _CreatePostReport;
+  _$_CreatePostReport get _value => super._value as _$_CreatePostReport;
 
   @override
   $Res call({
@@ -2206,7 +2219,7 @@ class __$CreatePostReportCopyWithImpl<$Res>
     Object? reason = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreatePostReport(
+    return _then(_$_CreatePostReport(
       postId: postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -2250,7 +2263,7 @@ class _$_CreatePostReport extends _CreatePostReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreatePostReport &&
+            other is _$_CreatePostReport &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.reason, reason) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -2266,8 +2279,8 @@ class _$_CreatePostReport extends _CreatePostReport {
 
   @JsonKey(ignore: true)
   @override
-  _$CreatePostReportCopyWith<_CreatePostReport> get copyWith =>
-      __$CreatePostReportCopyWithImpl<_CreatePostReport>(this, _$identity);
+  _$$_CreatePostReportCopyWith<_$_CreatePostReport> get copyWith =>
+      __$$_CreatePostReportCopyWithImpl<_$_CreatePostReport>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2293,7 +2306,7 @@ abstract class _CreatePostReport extends CreatePostReport {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreatePostReportCopyWith<_CreatePostReport> get copyWith =>
+  _$$_CreatePostReportCopyWith<_$_CreatePostReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2354,25 +2367,25 @@ class _$ResolvePostReportCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ResolvePostReportCopyWith<$Res>
+abstract class _$$_ResolvePostReportCopyWith<$Res>
     implements $ResolvePostReportCopyWith<$Res> {
-  factory _$ResolvePostReportCopyWith(
-          _ResolvePostReport value, $Res Function(_ResolvePostReport) then) =
-      __$ResolvePostReportCopyWithImpl<$Res>;
+  factory _$$_ResolvePostReportCopyWith(_$_ResolvePostReport value,
+          $Res Function(_$_ResolvePostReport) then) =
+      __$$_ResolvePostReportCopyWithImpl<$Res>;
   @override
   $Res call({int reportId, bool resolved, String auth});
 }
 
 /// @nodoc
-class __$ResolvePostReportCopyWithImpl<$Res>
+class __$$_ResolvePostReportCopyWithImpl<$Res>
     extends _$ResolvePostReportCopyWithImpl<$Res>
-    implements _$ResolvePostReportCopyWith<$Res> {
-  __$ResolvePostReportCopyWithImpl(
-      _ResolvePostReport _value, $Res Function(_ResolvePostReport) _then)
-      : super(_value, (v) => _then(v as _ResolvePostReport));
+    implements _$$_ResolvePostReportCopyWith<$Res> {
+  __$$_ResolvePostReportCopyWithImpl(
+      _$_ResolvePostReport _value, $Res Function(_$_ResolvePostReport) _then)
+      : super(_value, (v) => _then(v as _$_ResolvePostReport));
 
   @override
-  _ResolvePostReport get _value => super._value as _ResolvePostReport;
+  _$_ResolvePostReport get _value => super._value as _$_ResolvePostReport;
 
   @override
   $Res call({
@@ -2380,7 +2393,7 @@ class __$ResolvePostReportCopyWithImpl<$Res>
     Object? resolved = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ResolvePostReport(
+    return _then(_$_ResolvePostReport(
       reportId: reportId == freezed
           ? _value.reportId
           : reportId // ignore: cast_nullable_to_non_nullable
@@ -2424,7 +2437,7 @@ class _$_ResolvePostReport extends _ResolvePostReport {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ResolvePostReport &&
+            other is _$_ResolvePostReport &&
             const DeepCollectionEquality().equals(other.reportId, reportId) &&
             const DeepCollectionEquality().equals(other.resolved, resolved) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -2440,8 +2453,9 @@ class _$_ResolvePostReport extends _ResolvePostReport {
 
   @JsonKey(ignore: true)
   @override
-  _$ResolvePostReportCopyWith<_ResolvePostReport> get copyWith =>
-      __$ResolvePostReportCopyWithImpl<_ResolvePostReport>(this, _$identity);
+  _$$_ResolvePostReportCopyWith<_$_ResolvePostReport> get copyWith =>
+      __$$_ResolvePostReportCopyWithImpl<_$_ResolvePostReport>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2467,7 +2481,7 @@ abstract class _ResolvePostReport extends ResolvePostReport {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ResolvePostReportCopyWith<_ResolvePostReport> get copyWith =>
+  _$$_ResolvePostReportCopyWith<_$_ResolvePostReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2545,11 +2559,11 @@ class _$ListPostReportsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ListPostReportsCopyWith<$Res>
+abstract class _$$_ListPostReportsCopyWith<$Res>
     implements $ListPostReportsCopyWith<$Res> {
-  factory _$ListPostReportsCopyWith(
-          _ListPostReports value, $Res Function(_ListPostReports) then) =
-      __$ListPostReportsCopyWithImpl<$Res>;
+  factory _$$_ListPostReportsCopyWith(
+          _$_ListPostReports value, $Res Function(_$_ListPostReports) then) =
+      __$$_ListPostReportsCopyWithImpl<$Res>;
   @override
   $Res call(
       {int? page,
@@ -2560,15 +2574,15 @@ abstract class _$ListPostReportsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ListPostReportsCopyWithImpl<$Res>
+class __$$_ListPostReportsCopyWithImpl<$Res>
     extends _$ListPostReportsCopyWithImpl<$Res>
-    implements _$ListPostReportsCopyWith<$Res> {
-  __$ListPostReportsCopyWithImpl(
-      _ListPostReports _value, $Res Function(_ListPostReports) _then)
-      : super(_value, (v) => _then(v as _ListPostReports));
+    implements _$$_ListPostReportsCopyWith<$Res> {
+  __$$_ListPostReportsCopyWithImpl(
+      _$_ListPostReports _value, $Res Function(_$_ListPostReports) _then)
+      : super(_value, (v) => _then(v as _$_ListPostReports));
 
   @override
-  _ListPostReports get _value => super._value as _ListPostReports;
+  _$_ListPostReports get _value => super._value as _$_ListPostReports;
 
   @override
   $Res call({
@@ -2578,7 +2592,7 @@ class __$ListPostReportsCopyWithImpl<$Res>
     Object? unresolvedOnly = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ListPostReports(
+    return _then(_$_ListPostReports(
       page: page == freezed
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -2638,7 +2652,7 @@ class _$_ListPostReports extends _ListPostReports {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ListPostReports &&
+            other is _$_ListPostReports &&
             const DeepCollectionEquality().equals(other.page, page) &&
             const DeepCollectionEquality().equals(other.limit, limit) &&
             const DeepCollectionEquality()
@@ -2660,8 +2674,8 @@ class _$_ListPostReports extends _ListPostReports {
 
   @JsonKey(ignore: true)
   @override
-  _$ListPostReportsCopyWith<_ListPostReports> get copyWith =>
-      __$ListPostReportsCopyWithImpl<_ListPostReports>(this, _$identity);
+  _$$_ListPostReportsCopyWith<_$_ListPostReports> get copyWith =>
+      __$$_ListPostReportsCopyWithImpl<_$_ListPostReports>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2693,6 +2707,6 @@ abstract class _ListPostReports extends ListPostReports {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ListPostReportsCopyWith<_ListPostReports> get copyWith =>
+  _$$_ListPostReportsCopyWith<_$_ListPostReports> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -65,32 +65,32 @@ class _$PictrsUploadFileCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$PictrsUploadFileCopyWith<$Res>
+abstract class _$$_PictrsUploadFileCopyWith<$Res>
     implements $PictrsUploadFileCopyWith<$Res> {
-  factory _$PictrsUploadFileCopyWith(
-          _PictrsUploadFile value, $Res Function(_PictrsUploadFile) then) =
-      __$PictrsUploadFileCopyWithImpl<$Res>;
+  factory _$$_PictrsUploadFileCopyWith(
+          _$_PictrsUploadFile value, $Res Function(_$_PictrsUploadFile) then) =
+      __$$_PictrsUploadFileCopyWithImpl<$Res>;
   @override
   $Res call({String deleteToken, String file});
 }
 
 /// @nodoc
-class __$PictrsUploadFileCopyWithImpl<$Res>
+class __$$_PictrsUploadFileCopyWithImpl<$Res>
     extends _$PictrsUploadFileCopyWithImpl<$Res>
-    implements _$PictrsUploadFileCopyWith<$Res> {
-  __$PictrsUploadFileCopyWithImpl(
-      _PictrsUploadFile _value, $Res Function(_PictrsUploadFile) _then)
-      : super(_value, (v) => _then(v as _PictrsUploadFile));
+    implements _$$_PictrsUploadFileCopyWith<$Res> {
+  __$$_PictrsUploadFileCopyWithImpl(
+      _$_PictrsUploadFile _value, $Res Function(_$_PictrsUploadFile) _then)
+      : super(_value, (v) => _then(v as _$_PictrsUploadFile));
 
   @override
-  _PictrsUploadFile get _value => super._value as _PictrsUploadFile;
+  _$_PictrsUploadFile get _value => super._value as _$_PictrsUploadFile;
 
   @override
   $Res call({
     Object? deleteToken = freezed,
     Object? file = freezed,
   }) {
-    return _then(_PictrsUploadFile(
+    return _then(_$_PictrsUploadFile(
       deleteToken: deleteToken == freezed
           ? _value.deleteToken
           : deleteToken // ignore: cast_nullable_to_non_nullable
@@ -127,7 +127,7 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PictrsUploadFile &&
+            other is _$_PictrsUploadFile &&
             const DeepCollectionEquality()
                 .equals(other.deleteToken, deleteToken) &&
             const DeepCollectionEquality().equals(other.file, file));
@@ -142,8 +142,8 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
 
   @JsonKey(ignore: true)
   @override
-  _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith =>
-      __$PictrsUploadFileCopyWithImpl<_PictrsUploadFile>(this, _$identity);
+  _$$_PictrsUploadFileCopyWith<_$_PictrsUploadFile> get copyWith =>
+      __$$_PictrsUploadFileCopyWithImpl<_$_PictrsUploadFile>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -166,7 +166,7 @@ abstract class _PictrsUploadFile extends PictrsUploadFile {
   String get file => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PictrsUploadFileCopyWith<_PictrsUploadFile> get copyWith =>
+  _$$_PictrsUploadFileCopyWith<_$_PictrsUploadFile> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -226,24 +226,25 @@ class _$PictrsUploadCopyWithImpl<$Res> implements $PictrsUploadCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PictrsUploadCopyWith<$Res>
+abstract class _$$_PictrsUploadCopyWith<$Res>
     implements $PictrsUploadCopyWith<$Res> {
-  factory _$PictrsUploadCopyWith(
-          _PictrsUpload value, $Res Function(_PictrsUpload) then) =
-      __$PictrsUploadCopyWithImpl<$Res>;
+  factory _$$_PictrsUploadCopyWith(
+          _$_PictrsUpload value, $Res Function(_$_PictrsUpload) then) =
+      __$$_PictrsUploadCopyWithImpl<$Res>;
   @override
   $Res call({String msg, List<PictrsUploadFile> files, String instanceHost});
 }
 
 /// @nodoc
-class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
-    implements _$PictrsUploadCopyWith<$Res> {
-  __$PictrsUploadCopyWithImpl(
-      _PictrsUpload _value, $Res Function(_PictrsUpload) _then)
-      : super(_value, (v) => _then(v as _PictrsUpload));
+class __$$_PictrsUploadCopyWithImpl<$Res>
+    extends _$PictrsUploadCopyWithImpl<$Res>
+    implements _$$_PictrsUploadCopyWith<$Res> {
+  __$$_PictrsUploadCopyWithImpl(
+      _$_PictrsUpload _value, $Res Function(_$_PictrsUpload) _then)
+      : super(_value, (v) => _then(v as _$_PictrsUpload));
 
   @override
-  _PictrsUpload get _value => super._value as _PictrsUpload;
+  _$_PictrsUpload get _value => super._value as _$_PictrsUpload;
 
   @override
   $Res call({
@@ -251,13 +252,13 @@ class __$PictrsUploadCopyWithImpl<$Res> extends _$PictrsUploadCopyWithImpl<$Res>
     Object? files = freezed,
     Object? instanceHost = freezed,
   }) {
-    return _then(_PictrsUpload(
+    return _then(_$_PictrsUpload(
       msg: msg == freezed
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as String,
       files: files == freezed
-          ? _value.files
+          ? _value._files
           : files // ignore: cast_nullable_to_non_nullable
               as List<PictrsUploadFile>,
       instanceHost: instanceHost == freezed
@@ -303,9 +304,9 @@ class _$_PictrsUpload extends _PictrsUpload {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _PictrsUpload &&
+            other is _$_PictrsUpload &&
             const DeepCollectionEquality().equals(other.msg, msg) &&
-            const DeepCollectionEquality().equals(other.files, files) &&
+            const DeepCollectionEquality().equals(other._files, _files) &&
             const DeepCollectionEquality()
                 .equals(other.instanceHost, instanceHost));
   }
@@ -315,13 +316,13 @@ class _$_PictrsUpload extends _PictrsUpload {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(msg),
-      const DeepCollectionEquality().hash(files),
+      const DeepCollectionEquality().hash(_files),
       const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
   @override
-  _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>
-      __$PictrsUploadCopyWithImpl<_PictrsUpload>(this, _$identity);
+  _$$_PictrsUploadCopyWith<_$_PictrsUpload> get copyWith =>
+      __$$_PictrsUploadCopyWithImpl<_$_PictrsUpload>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -347,6 +348,6 @@ abstract class _PictrsUpload extends PictrsUpload {
   String get instanceHost => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PictrsUploadCopyWith<_PictrsUpload> get copyWith =>
+  _$$_PictrsUploadCopyWith<_$_PictrsUpload> get copyWith =>
       throw _privateConstructorUsedError;
 }

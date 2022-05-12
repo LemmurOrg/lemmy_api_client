@@ -70,24 +70,25 @@ class _$GetCommunityCopyWithImpl<$Res> implements $GetCommunityCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$GetCommunityCopyWith<$Res>
+abstract class _$$_GetCommunityCopyWith<$Res>
     implements $GetCommunityCopyWith<$Res> {
-  factory _$GetCommunityCopyWith(
-          _GetCommunity value, $Res Function(_GetCommunity) then) =
-      __$GetCommunityCopyWithImpl<$Res>;
+  factory _$$_GetCommunityCopyWith(
+          _$_GetCommunity value, $Res Function(_$_GetCommunity) then) =
+      __$$_GetCommunityCopyWithImpl<$Res>;
   @override
   $Res call({int? id, String? name, String? auth});
 }
 
 /// @nodoc
-class __$GetCommunityCopyWithImpl<$Res> extends _$GetCommunityCopyWithImpl<$Res>
-    implements _$GetCommunityCopyWith<$Res> {
-  __$GetCommunityCopyWithImpl(
-      _GetCommunity _value, $Res Function(_GetCommunity) _then)
-      : super(_value, (v) => _then(v as _GetCommunity));
+class __$$_GetCommunityCopyWithImpl<$Res>
+    extends _$GetCommunityCopyWithImpl<$Res>
+    implements _$$_GetCommunityCopyWith<$Res> {
+  __$$_GetCommunityCopyWithImpl(
+      _$_GetCommunity _value, $Res Function(_$_GetCommunity) _then)
+      : super(_value, (v) => _then(v as _$_GetCommunity));
 
   @override
-  _GetCommunity get _value => super._value as _GetCommunity;
+  _$_GetCommunity get _value => super._value as _$_GetCommunity;
 
   @override
   $Res call({
@@ -95,7 +96,7 @@ class __$GetCommunityCopyWithImpl<$Res> extends _$GetCommunityCopyWithImpl<$Res>
     Object? name = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_GetCommunity(
+    return _then(_$_GetCommunity(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -137,7 +138,7 @@ class _$_GetCommunity extends _GetCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _GetCommunity &&
+            other is _$_GetCommunity &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.auth, auth));
@@ -153,8 +154,8 @@ class _$_GetCommunity extends _GetCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$GetCommunityCopyWith<_GetCommunity> get copyWith =>
-      __$GetCommunityCopyWithImpl<_GetCommunity>(this, _$identity);
+  _$$_GetCommunityCopyWith<_$_GetCommunity> get copyWith =>
+      __$$_GetCommunityCopyWithImpl<_$_GetCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -180,7 +181,7 @@ abstract class _GetCommunity extends GetCommunity {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$GetCommunityCopyWith<_GetCommunity> get copyWith =>
+  _$$_GetCommunityCopyWith<_$_GetCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -272,11 +273,11 @@ class _$CreateCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$CreateCommunityCopyWith<$Res>
+abstract class _$$_CreateCommunityCopyWith<$Res>
     implements $CreateCommunityCopyWith<$Res> {
-  factory _$CreateCommunityCopyWith(
-          _CreateCommunity value, $Res Function(_CreateCommunity) then) =
-      __$CreateCommunityCopyWithImpl<$Res>;
+  factory _$$_CreateCommunityCopyWith(
+          _$_CreateCommunity value, $Res Function(_$_CreateCommunity) then) =
+      __$$_CreateCommunityCopyWithImpl<$Res>;
   @override
   $Res call(
       {String name,
@@ -289,15 +290,15 @@ abstract class _$CreateCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CreateCommunityCopyWithImpl<$Res>
+class __$$_CreateCommunityCopyWithImpl<$Res>
     extends _$CreateCommunityCopyWithImpl<$Res>
-    implements _$CreateCommunityCopyWith<$Res> {
-  __$CreateCommunityCopyWithImpl(
-      _CreateCommunity _value, $Res Function(_CreateCommunity) _then)
-      : super(_value, (v) => _then(v as _CreateCommunity));
+    implements _$$_CreateCommunityCopyWith<$Res> {
+  __$$_CreateCommunityCopyWithImpl(
+      _$_CreateCommunity _value, $Res Function(_$_CreateCommunity) _then)
+      : super(_value, (v) => _then(v as _$_CreateCommunity));
 
   @override
-  _CreateCommunity get _value => super._value as _CreateCommunity;
+  _$_CreateCommunity get _value => super._value as _$_CreateCommunity;
 
   @override
   $Res call({
@@ -309,7 +310,7 @@ class __$CreateCommunityCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_CreateCommunity(
+    return _then(_$_CreateCommunity(
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -383,7 +384,7 @@ class _$_CreateCommunity extends _CreateCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _CreateCommunity &&
+            other is _$_CreateCommunity &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
@@ -408,8 +409,8 @@ class _$_CreateCommunity extends _CreateCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$CreateCommunityCopyWith<_CreateCommunity> get copyWith =>
-      __$CreateCommunityCopyWithImpl<_CreateCommunity>(this, _$identity);
+  _$$_CreateCommunityCopyWith<_$_CreateCommunity> get copyWith =>
+      __$$_CreateCommunityCopyWithImpl<_$_CreateCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -447,7 +448,7 @@ abstract class _CreateCommunity extends CreateCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CreateCommunityCopyWith<_CreateCommunity> get copyWith =>
+  _$$_CreateCommunityCopyWith<_$_CreateCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -526,11 +527,11 @@ class _$ListCommunitiesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ListCommunitiesCopyWith<$Res>
+abstract class _$$_ListCommunitiesCopyWith<$Res>
     implements $ListCommunitiesCopyWith<$Res> {
-  factory _$ListCommunitiesCopyWith(
-          _ListCommunities value, $Res Function(_ListCommunities) then) =
-      __$ListCommunitiesCopyWithImpl<$Res>;
+  factory _$$_ListCommunitiesCopyWith(
+          _$_ListCommunities value, $Res Function(_$_ListCommunities) then) =
+      __$$_ListCommunitiesCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(name: 'type_') PostListingType? type,
@@ -541,15 +542,15 @@ abstract class _$ListCommunitiesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ListCommunitiesCopyWithImpl<$Res>
+class __$$_ListCommunitiesCopyWithImpl<$Res>
     extends _$ListCommunitiesCopyWithImpl<$Res>
-    implements _$ListCommunitiesCopyWith<$Res> {
-  __$ListCommunitiesCopyWithImpl(
-      _ListCommunities _value, $Res Function(_ListCommunities) _then)
-      : super(_value, (v) => _then(v as _ListCommunities));
+    implements _$$_ListCommunitiesCopyWith<$Res> {
+  __$$_ListCommunitiesCopyWithImpl(
+      _$_ListCommunities _value, $Res Function(_$_ListCommunities) _then)
+      : super(_value, (v) => _then(v as _$_ListCommunities));
 
   @override
-  _ListCommunities get _value => super._value as _ListCommunities;
+  _$_ListCommunities get _value => super._value as _$_ListCommunities;
 
   @override
   $Res call({
@@ -559,7 +560,7 @@ class __$ListCommunitiesCopyWithImpl<$Res>
     Object? limit = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_ListCommunities(
+    return _then(_$_ListCommunities(
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -620,7 +621,7 @@ class _$_ListCommunities extends _ListCommunities {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ListCommunities &&
+            other is _$_ListCommunities &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality().equals(other.sort, sort) &&
             const DeepCollectionEquality().equals(other.page, page) &&
@@ -640,8 +641,8 @@ class _$_ListCommunities extends _ListCommunities {
 
   @JsonKey(ignore: true)
   @override
-  _$ListCommunitiesCopyWith<_ListCommunities> get copyWith =>
-      __$ListCommunitiesCopyWithImpl<_ListCommunities>(this, _$identity);
+  _$$_ListCommunitiesCopyWith<_$_ListCommunities> get copyWith =>
+      __$$_ListCommunitiesCopyWithImpl<_$_ListCommunities>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -674,7 +675,7 @@ abstract class _ListCommunities extends ListCommunities {
   String? get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ListCommunitiesCopyWith<_ListCommunities> get copyWith =>
+  _$$_ListCommunitiesCopyWith<_$_ListCommunities> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -766,11 +767,11 @@ class _$BanFromCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$BanFromCommunityCopyWith<$Res>
+abstract class _$$_BanFromCommunityCopyWith<$Res>
     implements $BanFromCommunityCopyWith<$Res> {
-  factory _$BanFromCommunityCopyWith(
-          _BanFromCommunity value, $Res Function(_BanFromCommunity) then) =
-      __$BanFromCommunityCopyWithImpl<$Res>;
+  factory _$$_BanFromCommunityCopyWith(
+          _$_BanFromCommunity value, $Res Function(_$_BanFromCommunity) then) =
+      __$$_BanFromCommunityCopyWithImpl<$Res>;
   @override
   $Res call(
       {int communityId,
@@ -783,15 +784,15 @@ abstract class _$BanFromCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BanFromCommunityCopyWithImpl<$Res>
+class __$$_BanFromCommunityCopyWithImpl<$Res>
     extends _$BanFromCommunityCopyWithImpl<$Res>
-    implements _$BanFromCommunityCopyWith<$Res> {
-  __$BanFromCommunityCopyWithImpl(
-      _BanFromCommunity _value, $Res Function(_BanFromCommunity) _then)
-      : super(_value, (v) => _then(v as _BanFromCommunity));
+    implements _$$_BanFromCommunityCopyWith<$Res> {
+  __$$_BanFromCommunityCopyWithImpl(
+      _$_BanFromCommunity _value, $Res Function(_$_BanFromCommunity) _then)
+      : super(_value, (v) => _then(v as _$_BanFromCommunity));
 
   @override
-  _BanFromCommunity get _value => super._value as _BanFromCommunity;
+  _$_BanFromCommunity get _value => super._value as _$_BanFromCommunity;
 
   @override
   $Res call({
@@ -803,7 +804,7 @@ class __$BanFromCommunityCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_BanFromCommunity(
+    return _then(_$_BanFromCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -877,7 +878,7 @@ class _$_BanFromCommunity extends _BanFromCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BanFromCommunity &&
+            other is _$_BanFromCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
@@ -903,8 +904,8 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$BanFromCommunityCopyWith<_BanFromCommunity> get copyWith =>
-      __$BanFromCommunityCopyWithImpl<_BanFromCommunity>(this, _$identity);
+  _$$_BanFromCommunityCopyWith<_$_BanFromCommunity> get copyWith =>
+      __$$_BanFromCommunityCopyWithImpl<_$_BanFromCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -942,7 +943,7 @@ abstract class _BanFromCommunity extends BanFromCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BanFromCommunityCopyWith<_BanFromCommunity> get copyWith =>
+  _$$_BanFromCommunityCopyWith<_$_BanFromCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1009,25 +1010,25 @@ class _$AddModToCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$AddModToCommunityCopyWith<$Res>
+abstract class _$$_AddModToCommunityCopyWith<$Res>
     implements $AddModToCommunityCopyWith<$Res> {
-  factory _$AddModToCommunityCopyWith(
-          _AddModToCommunity value, $Res Function(_AddModToCommunity) then) =
-      __$AddModToCommunityCopyWithImpl<$Res>;
+  factory _$$_AddModToCommunityCopyWith(_$_AddModToCommunity value,
+          $Res Function(_$_AddModToCommunity) then) =
+      __$$_AddModToCommunityCopyWithImpl<$Res>;
   @override
   $Res call({int communityId, int personId, bool added, String auth});
 }
 
 /// @nodoc
-class __$AddModToCommunityCopyWithImpl<$Res>
+class __$$_AddModToCommunityCopyWithImpl<$Res>
     extends _$AddModToCommunityCopyWithImpl<$Res>
-    implements _$AddModToCommunityCopyWith<$Res> {
-  __$AddModToCommunityCopyWithImpl(
-      _AddModToCommunity _value, $Res Function(_AddModToCommunity) _then)
-      : super(_value, (v) => _then(v as _AddModToCommunity));
+    implements _$$_AddModToCommunityCopyWith<$Res> {
+  __$$_AddModToCommunityCopyWithImpl(
+      _$_AddModToCommunity _value, $Res Function(_$_AddModToCommunity) _then)
+      : super(_value, (v) => _then(v as _$_AddModToCommunity));
 
   @override
-  _AddModToCommunity get _value => super._value as _AddModToCommunity;
+  _$_AddModToCommunity get _value => super._value as _$_AddModToCommunity;
 
   @override
   $Res call({
@@ -1036,7 +1037,7 @@ class __$AddModToCommunityCopyWithImpl<$Res>
     Object? added = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_AddModToCommunity(
+    return _then(_$_AddModToCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1089,7 +1090,7 @@ class _$_AddModToCommunity extends _AddModToCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _AddModToCommunity &&
+            other is _$_AddModToCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
@@ -1108,8 +1109,9 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$AddModToCommunityCopyWith<_AddModToCommunity> get copyWith =>
-      __$AddModToCommunityCopyWithImpl<_AddModToCommunity>(this, _$identity);
+  _$$_AddModToCommunityCopyWith<_$_AddModToCommunity> get copyWith =>
+      __$$_AddModToCommunityCopyWithImpl<_$_AddModToCommunity>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1138,7 +1140,7 @@ abstract class _AddModToCommunity extends AddModToCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$AddModToCommunityCopyWith<_AddModToCommunity> get copyWith =>
+  _$$_AddModToCommunityCopyWith<_$_AddModToCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1230,11 +1232,11 @@ class _$EditCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$EditCommunityCopyWith<$Res>
+abstract class _$$_EditCommunityCopyWith<$Res>
     implements $EditCommunityCopyWith<$Res> {
-  factory _$EditCommunityCopyWith(
-          _EditCommunity value, $Res Function(_EditCommunity) then) =
-      __$EditCommunityCopyWithImpl<$Res>;
+  factory _$$_EditCommunityCopyWith(
+          _$_EditCommunity value, $Res Function(_$_EditCommunity) then) =
+      __$$_EditCommunityCopyWithImpl<$Res>;
   @override
   $Res call(
       {int communityId,
@@ -1247,15 +1249,15 @@ abstract class _$EditCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$EditCommunityCopyWithImpl<$Res>
+class __$$_EditCommunityCopyWithImpl<$Res>
     extends _$EditCommunityCopyWithImpl<$Res>
-    implements _$EditCommunityCopyWith<$Res> {
-  __$EditCommunityCopyWithImpl(
-      _EditCommunity _value, $Res Function(_EditCommunity) _then)
-      : super(_value, (v) => _then(v as _EditCommunity));
+    implements _$$_EditCommunityCopyWith<$Res> {
+  __$$_EditCommunityCopyWithImpl(
+      _$_EditCommunity _value, $Res Function(_$_EditCommunity) _then)
+      : super(_value, (v) => _then(v as _$_EditCommunity));
 
   @override
-  _EditCommunity get _value => super._value as _EditCommunity;
+  _$_EditCommunity get _value => super._value as _$_EditCommunity;
 
   @override
   $Res call({
@@ -1267,7 +1269,7 @@ class __$EditCommunityCopyWithImpl<$Res>
     Object? nsfw = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_EditCommunity(
+    return _then(_$_EditCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1341,7 +1343,7 @@ class _$_EditCommunity extends _EditCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _EditCommunity &&
+            other is _$_EditCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.title, title) &&
@@ -1367,8 +1369,8 @@ class _$_EditCommunity extends _EditCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$EditCommunityCopyWith<_EditCommunity> get copyWith =>
-      __$EditCommunityCopyWithImpl<_EditCommunity>(this, _$identity);
+  _$$_EditCommunityCopyWith<_$_EditCommunity> get copyWith =>
+      __$$_EditCommunityCopyWithImpl<_$_EditCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1406,7 +1408,7 @@ abstract class _EditCommunity extends EditCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EditCommunityCopyWith<_EditCommunity> get copyWith =>
+  _$$_EditCommunityCopyWith<_$_EditCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1467,25 +1469,25 @@ class _$DeleteCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$DeleteCommunityCopyWith<$Res>
+abstract class _$$_DeleteCommunityCopyWith<$Res>
     implements $DeleteCommunityCopyWith<$Res> {
-  factory _$DeleteCommunityCopyWith(
-          _DeleteCommunity value, $Res Function(_DeleteCommunity) then) =
-      __$DeleteCommunityCopyWithImpl<$Res>;
+  factory _$$_DeleteCommunityCopyWith(
+          _$_DeleteCommunity value, $Res Function(_$_DeleteCommunity) then) =
+      __$$_DeleteCommunityCopyWithImpl<$Res>;
   @override
   $Res call({int communityId, bool deleted, String auth});
 }
 
 /// @nodoc
-class __$DeleteCommunityCopyWithImpl<$Res>
+class __$$_DeleteCommunityCopyWithImpl<$Res>
     extends _$DeleteCommunityCopyWithImpl<$Res>
-    implements _$DeleteCommunityCopyWith<$Res> {
-  __$DeleteCommunityCopyWithImpl(
-      _DeleteCommunity _value, $Res Function(_DeleteCommunity) _then)
-      : super(_value, (v) => _then(v as _DeleteCommunity));
+    implements _$$_DeleteCommunityCopyWith<$Res> {
+  __$$_DeleteCommunityCopyWithImpl(
+      _$_DeleteCommunity _value, $Res Function(_$_DeleteCommunity) _then)
+      : super(_value, (v) => _then(v as _$_DeleteCommunity));
 
   @override
-  _DeleteCommunity get _value => super._value as _DeleteCommunity;
+  _$_DeleteCommunity get _value => super._value as _$_DeleteCommunity;
 
   @override
   $Res call({
@@ -1493,7 +1495,7 @@ class __$DeleteCommunityCopyWithImpl<$Res>
     Object? deleted = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_DeleteCommunity(
+    return _then(_$_DeleteCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1537,7 +1539,7 @@ class _$_DeleteCommunity extends _DeleteCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _DeleteCommunity &&
+            other is _$_DeleteCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.deleted, deleted) &&
@@ -1554,8 +1556,8 @@ class _$_DeleteCommunity extends _DeleteCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$DeleteCommunityCopyWith<_DeleteCommunity> get copyWith =>
-      __$DeleteCommunityCopyWithImpl<_DeleteCommunity>(this, _$identity);
+  _$$_DeleteCommunityCopyWith<_$_DeleteCommunity> get copyWith =>
+      __$$_DeleteCommunityCopyWithImpl<_$_DeleteCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1581,7 +1583,7 @@ abstract class _DeleteCommunity extends DeleteCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeleteCommunityCopyWith<_DeleteCommunity> get copyWith =>
+  _$$_DeleteCommunityCopyWith<_$_DeleteCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1659,11 +1661,11 @@ class _$RemoveCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$RemoveCommunityCopyWith<$Res>
+abstract class _$$_RemoveCommunityCopyWith<$Res>
     implements $RemoveCommunityCopyWith<$Res> {
-  factory _$RemoveCommunityCopyWith(
-          _RemoveCommunity value, $Res Function(_RemoveCommunity) then) =
-      __$RemoveCommunityCopyWithImpl<$Res>;
+  factory _$$_RemoveCommunityCopyWith(
+          _$_RemoveCommunity value, $Res Function(_$_RemoveCommunity) then) =
+      __$$_RemoveCommunityCopyWithImpl<$Res>;
   @override
   $Res call(
       {int communityId,
@@ -1674,15 +1676,15 @@ abstract class _$RemoveCommunityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RemoveCommunityCopyWithImpl<$Res>
+class __$$_RemoveCommunityCopyWithImpl<$Res>
     extends _$RemoveCommunityCopyWithImpl<$Res>
-    implements _$RemoveCommunityCopyWith<$Res> {
-  __$RemoveCommunityCopyWithImpl(
-      _RemoveCommunity _value, $Res Function(_RemoveCommunity) _then)
-      : super(_value, (v) => _then(v as _RemoveCommunity));
+    implements _$$_RemoveCommunityCopyWith<$Res> {
+  __$$_RemoveCommunityCopyWithImpl(
+      _$_RemoveCommunity _value, $Res Function(_$_RemoveCommunity) _then)
+      : super(_value, (v) => _then(v as _$_RemoveCommunity));
 
   @override
-  _RemoveCommunity get _value => super._value as _RemoveCommunity;
+  _$_RemoveCommunity get _value => super._value as _$_RemoveCommunity;
 
   @override
   $Res call({
@@ -1692,7 +1694,7 @@ class __$RemoveCommunityCopyWithImpl<$Res>
     Object? expires = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_RemoveCommunity(
+    return _then(_$_RemoveCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1752,7 +1754,7 @@ class _$_RemoveCommunity extends _RemoveCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _RemoveCommunity &&
+            other is _$_RemoveCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.removed, removed) &&
@@ -1773,8 +1775,8 @@ class _$_RemoveCommunity extends _RemoveCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$RemoveCommunityCopyWith<_RemoveCommunity> get copyWith =>
-      __$RemoveCommunityCopyWithImpl<_RemoveCommunity>(this, _$identity);
+  _$$_RemoveCommunityCopyWith<_$_RemoveCommunity> get copyWith =>
+      __$$_RemoveCommunityCopyWithImpl<_$_RemoveCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1806,7 +1808,7 @@ abstract class _RemoveCommunity extends RemoveCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$RemoveCommunityCopyWith<_RemoveCommunity> get copyWith =>
+  _$$_RemoveCommunityCopyWith<_$_RemoveCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1867,25 +1869,25 @@ class _$FollowCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$FollowCommunityCopyWith<$Res>
+abstract class _$$_FollowCommunityCopyWith<$Res>
     implements $FollowCommunityCopyWith<$Res> {
-  factory _$FollowCommunityCopyWith(
-          _FollowCommunity value, $Res Function(_FollowCommunity) then) =
-      __$FollowCommunityCopyWithImpl<$Res>;
+  factory _$$_FollowCommunityCopyWith(
+          _$_FollowCommunity value, $Res Function(_$_FollowCommunity) then) =
+      __$$_FollowCommunityCopyWithImpl<$Res>;
   @override
   $Res call({int communityId, bool follow, String auth});
 }
 
 /// @nodoc
-class __$FollowCommunityCopyWithImpl<$Res>
+class __$$_FollowCommunityCopyWithImpl<$Res>
     extends _$FollowCommunityCopyWithImpl<$Res>
-    implements _$FollowCommunityCopyWith<$Res> {
-  __$FollowCommunityCopyWithImpl(
-      _FollowCommunity _value, $Res Function(_FollowCommunity) _then)
-      : super(_value, (v) => _then(v as _FollowCommunity));
+    implements _$$_FollowCommunityCopyWith<$Res> {
+  __$$_FollowCommunityCopyWithImpl(
+      _$_FollowCommunity _value, $Res Function(_$_FollowCommunity) _then)
+      : super(_value, (v) => _then(v as _$_FollowCommunity));
 
   @override
-  _FollowCommunity get _value => super._value as _FollowCommunity;
+  _$_FollowCommunity get _value => super._value as _$_FollowCommunity;
 
   @override
   $Res call({
@@ -1893,7 +1895,7 @@ class __$FollowCommunityCopyWithImpl<$Res>
     Object? follow = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_FollowCommunity(
+    return _then(_$_FollowCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -1937,7 +1939,7 @@ class _$_FollowCommunity extends _FollowCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _FollowCommunity &&
+            other is _$_FollowCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.follow, follow) &&
@@ -1954,8 +1956,8 @@ class _$_FollowCommunity extends _FollowCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$FollowCommunityCopyWith<_FollowCommunity> get copyWith =>
-      __$FollowCommunityCopyWithImpl<_FollowCommunity>(this, _$identity);
+  _$$_FollowCommunityCopyWith<_$_FollowCommunity> get copyWith =>
+      __$$_FollowCommunityCopyWithImpl<_$_FollowCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1981,7 +1983,7 @@ abstract class _FollowCommunity extends FollowCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FollowCommunityCopyWith<_FollowCommunity> get copyWith =>
+  _$$_FollowCommunityCopyWith<_$_FollowCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2042,25 +2044,25 @@ class _$TransferCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$TransferCommunityCopyWith<$Res>
+abstract class _$$_TransferCommunityCopyWith<$Res>
     implements $TransferCommunityCopyWith<$Res> {
-  factory _$TransferCommunityCopyWith(
-          _TransferCommunity value, $Res Function(_TransferCommunity) then) =
-      __$TransferCommunityCopyWithImpl<$Res>;
+  factory _$$_TransferCommunityCopyWith(_$_TransferCommunity value,
+          $Res Function(_$_TransferCommunity) then) =
+      __$$_TransferCommunityCopyWithImpl<$Res>;
   @override
   $Res call({int communityId, int personId, String auth});
 }
 
 /// @nodoc
-class __$TransferCommunityCopyWithImpl<$Res>
+class __$$_TransferCommunityCopyWithImpl<$Res>
     extends _$TransferCommunityCopyWithImpl<$Res>
-    implements _$TransferCommunityCopyWith<$Res> {
-  __$TransferCommunityCopyWithImpl(
-      _TransferCommunity _value, $Res Function(_TransferCommunity) _then)
-      : super(_value, (v) => _then(v as _TransferCommunity));
+    implements _$$_TransferCommunityCopyWith<$Res> {
+  __$$_TransferCommunityCopyWithImpl(
+      _$_TransferCommunity _value, $Res Function(_$_TransferCommunity) _then)
+      : super(_value, (v) => _then(v as _$_TransferCommunity));
 
   @override
-  _TransferCommunity get _value => super._value as _TransferCommunity;
+  _$_TransferCommunity get _value => super._value as _$_TransferCommunity;
 
   @override
   $Res call({
@@ -2068,7 +2070,7 @@ class __$TransferCommunityCopyWithImpl<$Res>
     Object? personId = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_TransferCommunity(
+    return _then(_$_TransferCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -2112,7 +2114,7 @@ class _$_TransferCommunity extends _TransferCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _TransferCommunity &&
+            other is _$_TransferCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.personId, personId) &&
@@ -2129,8 +2131,9 @@ class _$_TransferCommunity extends _TransferCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$TransferCommunityCopyWith<_TransferCommunity> get copyWith =>
-      __$TransferCommunityCopyWithImpl<_TransferCommunity>(this, _$identity);
+  _$$_TransferCommunityCopyWith<_$_TransferCommunity> get copyWith =>
+      __$$_TransferCommunityCopyWithImpl<_$_TransferCommunity>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2156,7 +2159,7 @@ abstract class _TransferCommunity extends TransferCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$TransferCommunityCopyWith<_TransferCommunity> get copyWith =>
+  _$$_TransferCommunityCopyWith<_$_TransferCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2217,25 +2220,25 @@ class _$BlockCommunityCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$BlockCommunityCopyWith<$Res>
+abstract class _$$_BlockCommunityCopyWith<$Res>
     implements $BlockCommunityCopyWith<$Res> {
-  factory _$BlockCommunityCopyWith(
-          _BlockCommunity value, $Res Function(_BlockCommunity) then) =
-      __$BlockCommunityCopyWithImpl<$Res>;
+  factory _$$_BlockCommunityCopyWith(
+          _$_BlockCommunity value, $Res Function(_$_BlockCommunity) then) =
+      __$$_BlockCommunityCopyWithImpl<$Res>;
   @override
   $Res call({int communityId, bool block, String auth});
 }
 
 /// @nodoc
-class __$BlockCommunityCopyWithImpl<$Res>
+class __$$_BlockCommunityCopyWithImpl<$Res>
     extends _$BlockCommunityCopyWithImpl<$Res>
-    implements _$BlockCommunityCopyWith<$Res> {
-  __$BlockCommunityCopyWithImpl(
-      _BlockCommunity _value, $Res Function(_BlockCommunity) _then)
-      : super(_value, (v) => _then(v as _BlockCommunity));
+    implements _$$_BlockCommunityCopyWith<$Res> {
+  __$$_BlockCommunityCopyWithImpl(
+      _$_BlockCommunity _value, $Res Function(_$_BlockCommunity) _then)
+      : super(_value, (v) => _then(v as _$_BlockCommunity));
 
   @override
-  _BlockCommunity get _value => super._value as _BlockCommunity;
+  _$_BlockCommunity get _value => super._value as _$_BlockCommunity;
 
   @override
   $Res call({
@@ -2243,7 +2246,7 @@ class __$BlockCommunityCopyWithImpl<$Res>
     Object? block = freezed,
     Object? auth = freezed,
   }) {
-    return _then(_BlockCommunity(
+    return _then(_$_BlockCommunity(
       communityId: communityId == freezed
           ? _value.communityId
           : communityId // ignore: cast_nullable_to_non_nullable
@@ -2287,7 +2290,7 @@ class _$_BlockCommunity extends _BlockCommunity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _BlockCommunity &&
+            other is _$_BlockCommunity &&
             const DeepCollectionEquality()
                 .equals(other.communityId, communityId) &&
             const DeepCollectionEquality().equals(other.block, block) &&
@@ -2304,8 +2307,8 @@ class _$_BlockCommunity extends _BlockCommunity {
 
   @JsonKey(ignore: true)
   @override
-  _$BlockCommunityCopyWith<_BlockCommunity> get copyWith =>
-      __$BlockCommunityCopyWithImpl<_BlockCommunity>(this, _$identity);
+  _$$_BlockCommunityCopyWith<_$_BlockCommunity> get copyWith =>
+      __$$_BlockCommunityCopyWithImpl<_$_BlockCommunity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2331,6 +2334,6 @@ abstract class _BlockCommunity extends BlockCommunity {
   String get auth => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BlockCommunityCopyWith<_BlockCommunity> get copyWith =>
+  _$$_BlockCommunityCopyWith<_$_BlockCommunity> get copyWith =>
       throw _privateConstructorUsedError;
 }
