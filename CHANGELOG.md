@@ -1,3 +1,9 @@
+## Unreleased
+
+### Changed
+
+- Upgrade to dart 2.17
+
 ## v0.20.0 - 2022-04-30
 
 ### Added
