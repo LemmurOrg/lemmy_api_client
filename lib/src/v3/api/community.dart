@@ -3,6 +3,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../../utils/serde.dart';
 import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
@@ -14,7 +15,7 @@ part 'community.g.dart';
 class GetCommunity
     with _$GetCommunity
     implements LemmyApiQuery<FullCommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory GetCommunity({
     int? id,
     String? name,
@@ -39,7 +40,7 @@ class GetCommunity
 class CreateCommunity
     with _$CreateCommunity
     implements LemmyApiQuery<CommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory CreateCommunity({
     required String name,
     required String title,
@@ -68,7 +69,7 @@ class CreateCommunity
 class ListCommunities
     with _$ListCommunities
     implements LemmyApiQuery<List<CommunityView>> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory ListCommunities({
     @JsonKey(name: 'type_') PostListingType? type,
     SortType? sort,
@@ -97,7 +98,7 @@ class ListCommunities
 class BanFromCommunity
     with _$BanFromCommunity
     implements LemmyApiQuery<BannedCommunityUser> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory BanFromCommunity({
     required int communityId,
     required int personId,
@@ -126,7 +127,7 @@ class BanFromCommunity
 class AddModToCommunity
     with _$AddModToCommunity
     implements LemmyApiQuery<List<CommunityModeratorView>> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory AddModToCommunity({
     required int communityId,
     required int personId,
@@ -154,7 +155,7 @@ class AddModToCommunity
 class EditCommunity
     with _$EditCommunity
     implements LemmyApiQuery<CommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory EditCommunity({
     required int communityId,
     String? title,
@@ -183,7 +184,7 @@ class EditCommunity
 class DeleteCommunity
     with _$DeleteCommunity
     implements LemmyApiQuery<CommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory DeleteCommunity({
     required int communityId,
     required bool deleted,
@@ -208,7 +209,7 @@ class DeleteCommunity
 class RemoveCommunity
     with _$RemoveCommunity
     implements LemmyApiQuery<CommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory RemoveCommunity({
     required int communityId,
     required bool removed,
@@ -235,7 +236,7 @@ class RemoveCommunity
 class FollowCommunity
     with _$FollowCommunity
     implements LemmyApiQuery<CommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory FollowCommunity({
     required int communityId,
     required bool follow,
@@ -260,7 +261,7 @@ class FollowCommunity
 class TransferCommunity
     with _$TransferCommunity
     implements LemmyApiQuery<FullCommunityView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory TransferCommunity({
     required int communityId,
     required int personId,
@@ -285,7 +286,7 @@ class TransferCommunity
 class BlockCommunity
     with _$BlockCommunity
     implements LemmyApiQuery<BlockedCommunity> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory BlockCommunity({
     required int communityId,
     required bool block,

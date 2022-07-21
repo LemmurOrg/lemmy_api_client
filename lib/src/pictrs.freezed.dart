@@ -147,7 +147,9 @@ class _$_PictrsUploadFile extends _PictrsUploadFile {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PictrsUploadFileToJson(this);
+    return _$$_PictrsUploadFileToJson(
+      this,
+    );
   }
 }
 
@@ -161,9 +163,9 @@ abstract class _PictrsUploadFile extends PictrsUploadFile {
       _$_PictrsUploadFile.fromJson;
 
   @override
-  String get deleteToken => throw _privateConstructorUsedError;
+  String get deleteToken;
   @override
-  String get file => throw _privateConstructorUsedError;
+  String get file;
   @override
   @JsonKey(ignore: true)
   _$$_PictrsUploadFileCopyWith<_$_PictrsUploadFile> get copyWith =>
@@ -326,7 +328,9 @@ class _$_PictrsUpload extends _PictrsUpload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PictrsUploadToJson(this);
+    return _$$_PictrsUploadToJson(
+      this,
+    );
   }
 }
 
@@ -341,11 +345,11 @@ abstract class _PictrsUpload extends PictrsUpload {
       _$_PictrsUpload.fromJson;
 
   @override
-  String get msg => throw _privateConstructorUsedError;
+  String get msg;
   @override
-  List<PictrsUploadFile> get files => throw _privateConstructorUsedError;
+  List<PictrsUploadFile> get files;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PictrsUploadCopyWith<_$_PictrsUpload> get copyWith =>

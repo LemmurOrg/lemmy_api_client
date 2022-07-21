@@ -99,7 +99,7 @@ class __$$_GetPostCopyWithImpl<$Res> extends _$GetPostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetPost extends _GetPost {
   const _$_GetPost({required this.id, this.auth}) : super._();
 
@@ -139,7 +139,9 @@ class _$_GetPost extends _GetPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPostToJson(this);
+    return _$$_GetPostToJson(
+      this,
+    );
   }
 }
 
@@ -151,9 +153,9 @@ abstract class _GetPost extends GetPost {
   factory _GetPost.fromJson(Map<String, dynamic> json) = _$_GetPost.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetPostCopyWith<_$_GetPost> get copyWith =>
@@ -318,7 +320,7 @@ class __$$_CreatePostCopyWithImpl<$Res> extends _$CreatePostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreatePost extends _CreatePost {
   const _$_CreatePost(
       {required this.name,
@@ -387,7 +389,9 @@ class _$_CreatePost extends _CreatePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreatePostToJson(this);
+    return _$$_CreatePostToJson(
+      this,
+    );
   }
 }
 
@@ -406,19 +410,19 @@ abstract class _CreatePost extends CreatePost {
       _$_CreatePost.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get body => throw _privateConstructorUsedError;
+  String? get body;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
-  String? get honeypot => throw _privateConstructorUsedError;
+  String? get honeypot;
   @override
   @JsonKey(ignore: true)
   _$$_CreatePostCopyWith<_$_CreatePost> get copyWith =>
@@ -595,7 +599,7 @@ class __$$_GetPostsCopyWithImpl<$Res> extends _$GetPostsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetPosts extends _GetPosts {
   const _$_GetPosts(
       {@JsonKey(name: 'type_') this.type,
@@ -671,7 +675,9 @@ class _$_GetPosts extends _GetPosts {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPostsToJson(this);
+    return _$$_GetPostsToJson(
+      this,
+    );
   }
 }
 
@@ -691,21 +697,21 @@ abstract class _GetPosts extends GetPosts {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type => throw _privateConstructorUsedError;
+  PostListingType? get type;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  String? get communityName => throw _privateConstructorUsedError;
+  String? get communityName;
   @override
-  bool? get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetPostsCopyWith<_$_GetPosts> get copyWith =>
@@ -814,7 +820,7 @@ class __$$_CreatePostLikeCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreatePostLike extends _CreatePostLike {
   const _$_CreatePostLike(
       {required this.postId, required this.score, required this.auth})
@@ -860,7 +866,9 @@ class _$_CreatePostLike extends _CreatePostLike {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreatePostLikeToJson(this);
+    return _$$_CreatePostLikeToJson(
+      this,
+    );
   }
 }
 
@@ -875,11 +883,11 @@ abstract class _CreatePostLike extends CreatePostLike {
       _$_CreatePostLike.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  VoteType get score => throw _privateConstructorUsedError;
+  VoteType get score;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreatePostLikeCopyWith<_$_CreatePostLike> get copyWith =>
@@ -1029,7 +1037,7 @@ class __$$_EditPostCopyWithImpl<$Res> extends _$EditPostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_EditPost extends _EditPost {
   const _$_EditPost(
       {required this.postId,
@@ -1092,7 +1100,9 @@ class _$_EditPost extends _EditPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditPostToJson(this);
+    return _$$_EditPostToJson(
+      this,
+    );
   }
 }
 
@@ -1109,17 +1119,17 @@ abstract class _EditPost extends EditPost {
   factory _EditPost.fromJson(Map<String, dynamic> json) = _$_EditPost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get body => throw _privateConstructorUsedError;
+  String? get body;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_EditPostCopyWith<_$_EditPost> get copyWith =>
@@ -1226,7 +1236,7 @@ class __$$_DeletePostCopyWithImpl<$Res> extends _$DeletePostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_DeletePost extends _DeletePost {
   const _$_DeletePost(
       {required this.postId, required this.deleted, required this.auth})
@@ -1272,7 +1282,9 @@ class _$_DeletePost extends _DeletePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeletePostToJson(this);
+    return _$$_DeletePostToJson(
+      this,
+    );
   }
 }
 
@@ -1287,11 +1299,11 @@ abstract class _DeletePost extends DeletePost {
       _$_DeletePost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_DeletePostCopyWith<_$_DeletePost> get copyWith =>
@@ -1409,7 +1421,7 @@ class __$$_RemovePostCopyWithImpl<$Res> extends _$RemovePostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_RemovePost extends _RemovePost {
   const _$_RemovePost(
       {required this.postId,
@@ -1462,7 +1474,9 @@ class _$_RemovePost extends _RemovePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemovePostToJson(this);
+    return _$$_RemovePostToJson(
+      this,
+    );
   }
 }
 
@@ -1478,13 +1492,13 @@ abstract class _RemovePost extends RemovePost {
       _$_RemovePost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_RemovePostCopyWith<_$_RemovePost> get copyWith =>
@@ -1589,7 +1603,7 @@ class __$$_LockPostCopyWithImpl<$Res> extends _$LockPostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_LockPost extends _LockPost {
   const _$_LockPost(
       {required this.postId, required this.locked, required this.auth})
@@ -1635,7 +1649,9 @@ class _$_LockPost extends _LockPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LockPostToJson(this);
+    return _$$_LockPostToJson(
+      this,
+    );
   }
 }
 
@@ -1649,11 +1665,11 @@ abstract class _LockPost extends LockPost {
   factory _LockPost.fromJson(Map<String, dynamic> json) = _$_LockPost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get locked => throw _privateConstructorUsedError;
+  bool get locked;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_LockPostCopyWith<_$_LockPost> get copyWith =>
@@ -1760,7 +1776,7 @@ class __$$_StickyPostCopyWithImpl<$Res> extends _$StickyPostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_StickyPost extends _StickyPost {
   const _$_StickyPost(
       {required this.postId, required this.stickied, required this.auth})
@@ -1806,7 +1822,9 @@ class _$_StickyPost extends _StickyPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StickyPostToJson(this);
+    return _$$_StickyPostToJson(
+      this,
+    );
   }
 }
 
@@ -1821,11 +1839,11 @@ abstract class _StickyPost extends StickyPost {
       _$_StickyPost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get stickied => throw _privateConstructorUsedError;
+  bool get stickied;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_StickyPostCopyWith<_$_StickyPost> get copyWith =>
@@ -1930,7 +1948,7 @@ class __$$_SavePostCopyWithImpl<$Res> extends _$SavePostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_SavePost extends _SavePost {
   const _$_SavePost(
       {required this.postId, required this.save, required this.auth})
@@ -1976,7 +1994,9 @@ class _$_SavePost extends _SavePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SavePostToJson(this);
+    return _$$_SavePostToJson(
+      this,
+    );
   }
 }
 
@@ -1990,11 +2010,11 @@ abstract class _SavePost extends SavePost {
   factory _SavePost.fromJson(Map<String, dynamic> json) = _$_SavePost.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool get save => throw _privateConstructorUsedError;
+  bool get save;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_SavePostCopyWith<_$_SavePost> get copyWith =>
@@ -2081,7 +2101,7 @@ class __$$_GetSiteMetadataCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetSiteMetadata extends _GetSiteMetadata {
   const _$_GetSiteMetadata({required this.url}) : super._();
 
@@ -2116,7 +2136,9 @@ class _$_GetSiteMetadata extends _GetSiteMetadata {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSiteMetadataToJson(this);
+    return _$$_GetSiteMetadataToJson(
+      this,
+    );
   }
 }
 
@@ -2129,7 +2151,7 @@ abstract class _GetSiteMetadata extends GetSiteMetadata {
       _$_GetSiteMetadata.fromJson;
 
   @override
-  String get url => throw _privateConstructorUsedError;
+  String get url;
   @override
   @JsonKey(ignore: true)
   _$$_GetSiteMetadataCopyWith<_$_GetSiteMetadata> get copyWith =>
@@ -2238,7 +2260,7 @@ class __$$_CreatePostReportCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreatePostReport extends _CreatePostReport {
   const _$_CreatePostReport(
       {required this.postId, required this.reason, required this.auth})
@@ -2284,7 +2306,9 @@ class _$_CreatePostReport extends _CreatePostReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreatePostReportToJson(this);
+    return _$$_CreatePostReportToJson(
+      this,
+    );
   }
 }
 
@@ -2299,11 +2323,11 @@ abstract class _CreatePostReport extends CreatePostReport {
       _$_CreatePostReport.fromJson;
 
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String get reason => throw _privateConstructorUsedError;
+  String get reason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreatePostReportCopyWith<_$_CreatePostReport> get copyWith =>
@@ -2412,7 +2436,7 @@ class __$$_ResolvePostReportCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ResolvePostReport extends _ResolvePostReport {
   const _$_ResolvePostReport(
       {required this.reportId, required this.resolved, required this.auth})
@@ -2459,7 +2483,9 @@ class _$_ResolvePostReport extends _ResolvePostReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResolvePostReportToJson(this);
+    return _$$_ResolvePostReportToJson(
+      this,
+    );
   }
 }
 
@@ -2474,11 +2500,11 @@ abstract class _ResolvePostReport extends ResolvePostReport {
       _$_ResolvePostReport.fromJson;
 
   @override
-  int get reportId => throw _privateConstructorUsedError;
+  int get reportId;
   @override
-  bool get resolved => throw _privateConstructorUsedError;
+  bool get resolved;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ResolvePostReportCopyWith<_$_ResolvePostReport> get copyWith =>
@@ -2619,7 +2645,7 @@ class __$$_ListPostReportsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ListPostReports extends _ListPostReports {
   const _$_ListPostReports(
       {this.page,
@@ -2679,7 +2705,9 @@ class _$_ListPostReports extends _ListPostReports {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListPostReportsToJson(this);
+    return _$$_ListPostReportsToJson(
+      this,
+    );
   }
 }
 
@@ -2696,15 +2724,15 @@ abstract class _ListPostReports extends ListPostReports {
       _$_ListPostReports.fromJson;
 
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  bool? get unresolvedOnly => throw _privateConstructorUsedError;
+  bool? get unresolvedOnly;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ListPostReportsCopyWith<_$_ListPostReports> get copyWith =>

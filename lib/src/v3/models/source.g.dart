@@ -14,8 +14,8 @@ _$_PersonSafe _$$_PersonSafeFromJson(Map<String, dynamic> json) =>
       avatar: json['avatar'] as String?,
       banned: json['banned'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       actorId: json['actor_id'] as String,
       bio: json['bio'] as String?,
       local: json['local'] as bool,
@@ -26,8 +26,8 @@ _$_PersonSafe _$$_PersonSafeFromJson(Map<String, dynamic> json) =>
       matrixUserId: json['matrix_user_id'] as String?,
       admin: json['admin'] as bool,
       botAccount: json['bot_account'] as bool,
-      banExpires: const ForceUtcDateTimeNullable()
-          .fromJson(json['ban_expires'] as String?),
+      banExpires: _$JsonConverterFromJson<String, DateTime>(
+          json['ban_expires'], const ForceUtcDateTime().fromJson),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -39,7 +39,8 @@ Map<String, dynamic> _$$_PersonSafeToJson(_$_PersonSafe instance) =>
       'avatar': instance.avatar,
       'banned': instance.banned,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'actor_id': instance.actorId,
       'bio': instance.bio,
       'local': instance.local,
@@ -50,10 +51,22 @@ Map<String, dynamic> _$$_PersonSafeToJson(_$_PersonSafe instance) =>
       'matrix_user_id': instance.matrixUserId,
       'admin': instance.admin,
       'bot_account': instance.botAccount,
-      'ban_expires':
-          const ForceUtcDateTimeNullable().toJson(instance.banExpires),
+      'ban_expires': _$JsonConverterToJson<String, DateTime>(
+          instance.banExpires, const ForceUtcDateTime().toJson),
       'instance_host': instance.instanceHost,
     };
+
+Value? _$JsonConverterFromJson<Json, Value>(
+  Object? json,
+  Value? Function(Json json) fromJson,
+) =>
+    json == null ? null : fromJson(json as Json);
+
+Json? _$JsonConverterToJson<Json, Value>(
+  Value? value,
+  Json? Function(Value value) toJson,
+) =>
+    value == null ? null : toJson(value);
 
 _$_LocalUserSettings _$$_LocalUserSettingsFromJson(Map<String, dynamic> json) =>
     _$_LocalUserSettings(
@@ -106,8 +119,8 @@ _$_Site _$$_SiteFromJson(Map<String, dynamic> json) => _$_Site(
       sidebar: json['sidebar'] as String?,
       description: json['description'] as String?,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       enableDownvotes: json['enable_downvotes'] as bool,
       openRegistration: json['open_registration'] as bool,
       enableNsfw: json['enable_nsfw'] as bool,
@@ -132,7 +145,8 @@ Map<String, dynamic> _$$_SiteToJson(_$_Site instance) => <String, dynamic>{
       'sidebar': instance.sidebar,
       'description': instance.description,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'enable_downvotes': instance.enableDownvotes,
       'open_registration': instance.openRegistration,
       'enable_nsfw': instance.enableNsfw,
@@ -160,8 +174,8 @@ _$_PrivateMessage _$$_PrivateMessageFromJson(Map<String, dynamic> json) =>
       deleted: json['deleted'] as bool,
       read: json['read'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       apId: json['ap_id'] as String,
       local: json['local'] as bool,
       instanceHost: json['instance_host'] as String,
@@ -176,7 +190,8 @@ Map<String, dynamic> _$$_PrivateMessageToJson(_$_PrivateMessage instance) =>
       'deleted': instance.deleted,
       'read': instance.read,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'ap_id': instance.apId,
       'local': instance.local,
       'instance_host': instance.instanceHost,
@@ -194,8 +209,8 @@ _$_PostReport _$$_PostReportFromJson(Map<String, dynamic> json) =>
       resolved: json['resolved'] as bool,
       resolverId: json['resolver_id'] as int?,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -211,7 +226,8 @@ Map<String, dynamic> _$$_PostReportToJson(_$_PostReport instance) =>
       'resolved': instance.resolved,
       'resolver_id': instance.resolverId,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'instance_host': instance.instanceHost,
     };
 
@@ -225,8 +241,8 @@ _$_Post _$$_PostFromJson(Map<String, dynamic> json) => _$_Post(
       removed: json['removed'] as bool,
       locked: json['locked'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       deleted: json['deleted'] as bool,
       nsfw: json['nsfw'] as bool,
       stickied: json['stickied'] as bool,
@@ -249,7 +265,8 @@ Map<String, dynamic> _$$_PostToJson(_$_Post instance) => <String, dynamic>{
       'removed': instance.removed,
       'locked': instance.locked,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'deleted': instance.deleted,
       'nsfw': instance.nsfw,
       'stickied': instance.stickied,
@@ -374,8 +391,8 @@ _$_ModRemoveCommunity _$$_ModRemoveCommunityFromJson(
       communityId: json['community_id'] as int,
       reason: json['reason'] as String?,
       removed: json['removed'] as bool?,
-      expires:
-          const ForceUtcDateTimeNullable().fromJson(json['expires'] as String?),
+      expires: _$JsonConverterFromJson<String, DateTime>(
+          json['expires'], const ForceUtcDateTime().fromJson),
       when: const ForceUtcDateTime().fromJson(json['when_'] as String),
       instanceHost: json['instance_host'] as String,
     );
@@ -388,7 +405,8 @@ Map<String, dynamic> _$$_ModRemoveCommunityToJson(
       'community_id': instance.communityId,
       'reason': instance.reason,
       'removed': instance.removed,
-      'expires': const ForceUtcDateTimeNullable().toJson(instance.expires),
+      'expires': _$JsonConverterToJson<String, DateTime>(
+          instance.expires, const ForceUtcDateTime().toJson),
       'when_': const ForceUtcDateTime().toJson(instance.when),
       'instance_host': instance.instanceHost,
     };
@@ -402,8 +420,8 @@ _$_ModBanFromCommunity _$$_ModBanFromCommunityFromJson(
       communityId: json['community_id'] as int,
       reason: json['reason'] as String?,
       banned: json['banned'] as bool?,
-      expires:
-          const ForceUtcDateTimeNullable().fromJson(json['expires'] as String?),
+      expires: _$JsonConverterFromJson<String, DateTime>(
+          json['expires'], const ForceUtcDateTime().fromJson),
       when: const ForceUtcDateTime().fromJson(json['when_'] as String),
       instanceHost: json['instance_host'] as String,
     );
@@ -417,7 +435,8 @@ Map<String, dynamic> _$$_ModBanFromCommunityToJson(
       'community_id': instance.communityId,
       'reason': instance.reason,
       'banned': instance.banned,
-      'expires': const ForceUtcDateTimeNullable().toJson(instance.expires),
+      'expires': _$JsonConverterToJson<String, DateTime>(
+          instance.expires, const ForceUtcDateTime().toJson),
       'when_': const ForceUtcDateTime().toJson(instance.when),
       'instance_host': instance.instanceHost,
     };
@@ -428,8 +447,8 @@ _$_ModBan _$$_ModBanFromJson(Map<String, dynamic> json) => _$_ModBan(
       otherPersonId: json['other_person_id'] as int,
       reason: json['reason'] as String?,
       banned: json['banned'] as bool?,
-      expires:
-          const ForceUtcDateTimeNullable().fromJson(json['expires'] as String?),
+      expires: _$JsonConverterFromJson<String, DateTime>(
+          json['expires'], const ForceUtcDateTime().fromJson),
       when: const ForceUtcDateTime().fromJson(json['when_'] as String),
       instanceHost: json['instance_host'] as String,
     );
@@ -440,7 +459,8 @@ Map<String, dynamic> _$$_ModBanToJson(_$_ModBan instance) => <String, dynamic>{
       'other_person_id': instance.otherPersonId,
       'reason': instance.reason,
       'banned': instance.banned,
-      'expires': const ForceUtcDateTimeNullable().toJson(instance.expires),
+      'expires': _$JsonConverterToJson<String, DateTime>(
+          instance.expires, const ForceUtcDateTime().toJson),
       'when_': const ForceUtcDateTime().toJson(instance.when),
       'instance_host': instance.instanceHost,
     };
@@ -517,8 +537,8 @@ _$_CommunitySafe _$$_CommunitySafeFromJson(Map<String, dynamic> json) =>
       description: json['description'] as String?,
       removed: json['removed'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       deleted: json['deleted'] as bool,
       nsfw: json['nsfw'] as bool,
       actorId: json['actor_id'] as String,
@@ -536,7 +556,8 @@ Map<String, dynamic> _$$_CommunitySafeToJson(_$_CommunitySafe instance) =>
       'description': instance.description,
       'removed': instance.removed,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'deleted': instance.deleted,
       'nsfw': instance.nsfw,
       'actor_id': instance.actorId,
@@ -556,8 +577,8 @@ _$_CommentReport _$$_CommentReportFromJson(Map<String, dynamic> json) =>
       resolved: json['resolved'] as bool,
       resolverId: json['resolver_id'] as int?,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       instanceHost: json['instance_host'] as String,
     );
 
@@ -571,7 +592,8 @@ Map<String, dynamic> _$$_CommentReportToJson(_$_CommentReport instance) =>
       'resolved': instance.resolved,
       'resolver_id': instance.resolverId,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'instance_host': instance.instanceHost,
     };
 
@@ -584,8 +606,8 @@ _$_Comment _$$_CommentFromJson(Map<String, dynamic> json) => _$_Comment(
       removed: json['removed'] as bool,
       read: json['read'] as bool,
       published: const ForceUtcDateTime().fromJson(json['published'] as String),
-      updated:
-          const ForceUtcDateTimeNullable().fromJson(json['updated'] as String?),
+      updated: _$JsonConverterFromJson<String, DateTime>(
+          json['updated'], const ForceUtcDateTime().fromJson),
       deleted: json['deleted'] as bool,
       apId: json['ap_id'] as String,
       local: json['local'] as bool,
@@ -602,7 +624,8 @@ Map<String, dynamic> _$$_CommentToJson(_$_Comment instance) =>
       'removed': instance.removed,
       'read': instance.read,
       'published': const ForceUtcDateTime().toJson(instance.published),
-      'updated': const ForceUtcDateTimeNullable().toJson(instance.updated),
+      'updated': _$JsonConverterToJson<String, DateTime>(
+          instance.updated, const ForceUtcDateTime().toJson),
       'deleted': instance.deleted,
       'ap_id': instance.apId,
       'local': instance.local,

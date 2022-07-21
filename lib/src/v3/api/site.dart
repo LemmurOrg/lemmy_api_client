@@ -3,6 +3,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../../utils/serde.dart';
 import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
@@ -12,7 +13,7 @@ part 'site.g.dart';
 
 @freezed
 class Search with _$Search implements LemmyApiQuery<SearchResults> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory Search({
     required String q,
     @JsonKey(name: 'type_') SearchType? type,
@@ -41,7 +42,7 @@ class Search with _$Search implements LemmyApiQuery<SearchResults> {
 
 @freezed
 class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory GetModlog({
     int? modPersonId,
     int? communityId,
@@ -65,7 +66,7 @@ class GetModlog with _$GetModlog implements LemmyApiQuery<Modlog> {
 
 @freezed
 class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory CreateSite({
     required String name,
     String? sidebar,
@@ -100,7 +101,7 @@ class CreateSite with _$CreateSite implements LemmyApiQuery<SiteView> {
 
 @freezed
 class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory EditSite({
     String? name,
     String? sidebar,
@@ -135,7 +136,7 @@ class EditSite with _$EditSite implements LemmyApiQuery<SiteView> {
 
 @freezed
 class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory GetSite({
     String? auth,
   }) = _GetSite;
@@ -156,7 +157,7 @@ class GetSite with _$GetSite implements LemmyApiQuery<FullSiteView> {
 
 @freezed
 class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<FullSiteView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory LeaveAdmin({
     required String auth,
   }) = _LeaveAdmin;
@@ -177,7 +178,7 @@ class LeaveAdmin with _$LeaveAdmin implements LemmyApiQuery<FullSiteView> {
 
 @freezed
 class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory GetSiteConfig({
     required String auth,
   }) = _GetSiteConfig;
@@ -198,7 +199,7 @@ class GetSiteConfig with _$GetSiteConfig implements LemmyApiQuery<String> {
 
 @freezed
 class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory SaveSiteConfig({
     required String configHjson,
     required String auth,
@@ -222,7 +223,7 @@ class SaveSiteConfig with _$SaveSiteConfig implements LemmyApiQuery<String> {
 class ResolveObject
     with _$ResolveObject
     implements LemmyApiQuery<ResolveObjectResponse> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory ResolveObject({
     required String q,
     String? auth,
@@ -246,7 +247,7 @@ class ResolveObject
 class GetUnreadRegistrationApplicationCount
     with _$GetUnreadRegistrationApplicationCount
     implements LemmyApiQuery<int> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory GetUnreadRegistrationApplicationCount({
     required String auth,
   }) = _GetUnreadRegistrationApplicationCount;
@@ -271,7 +272,7 @@ class GetUnreadRegistrationApplicationCount
 class ListRegistrationApplications
     with _$ListRegistrationApplications
     implements LemmyApiQuery<List<RegistrationApplicationView>> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory ListRegistrationApplications({
     bool? unreadOnly,
     int? page,
@@ -303,7 +304,7 @@ class ListRegistrationApplications
 class ApproveRegistrationApplication
     with _$ApproveRegistrationApplication
     implements LemmyApiQuery<RegistrationApplicationView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory ApproveRegistrationApplication({
     required int id,
     required bool approve,

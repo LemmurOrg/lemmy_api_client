@@ -140,7 +140,7 @@ class __$$_CreateCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreateComment extends _CreateComment {
   const _$_CreateComment(
       {required this.content,
@@ -198,7 +198,9 @@ class _$_CreateComment extends _CreateComment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreateCommentToJson(this);
+    return _$$_CreateCommentToJson(
+      this,
+    );
   }
 }
 
@@ -215,15 +217,15 @@ abstract class _CreateComment extends CreateComment {
       _$_CreateComment.fromJson;
 
   @override
-  String get content => throw _privateConstructorUsedError;
+  String get content;
   @override
-  int? get parentId => throw _privateConstructorUsedError;
+  int? get parentId;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String? get formId => throw _privateConstructorUsedError;
+  String? get formId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreateCommentCopyWith<_$_CreateComment> get copyWith =>
@@ -341,7 +343,7 @@ class __$$_EditCommentCopyWithImpl<$Res> extends _$EditCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_EditComment extends _EditComment {
   const _$_EditComment(
       {required this.content,
@@ -394,7 +396,9 @@ class _$_EditComment extends _EditComment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditCommentToJson(this);
+    return _$$_EditCommentToJson(
+      this,
+    );
   }
 }
 
@@ -410,13 +414,13 @@ abstract class _EditComment extends EditComment {
       _$_EditComment.fromJson;
 
   @override
-  String get content => throw _privateConstructorUsedError;
+  String get content;
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  String? get formId => throw _privateConstructorUsedError;
+  String? get formId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_EditCommentCopyWith<_$_EditComment> get copyWith =>
@@ -525,7 +529,7 @@ class __$$_DeleteCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_DeleteComment extends _DeleteComment {
   const _$_DeleteComment(
       {required this.commentId, required this.deleted, required this.auth})
@@ -571,7 +575,9 @@ class _$_DeleteComment extends _DeleteComment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeleteCommentToJson(this);
+    return _$$_DeleteCommentToJson(
+      this,
+    );
   }
 }
 
@@ -586,11 +592,11 @@ abstract class _DeleteComment extends DeleteComment {
       _$_DeleteComment.fromJson;
 
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_DeleteCommentCopyWith<_$_DeleteComment> get copyWith =>
@@ -710,7 +716,7 @@ class __$$_RemoveCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_RemoveComment extends _RemoveComment {
   const _$_RemoveComment(
       {required this.commentId,
@@ -763,7 +769,9 @@ class _$_RemoveComment extends _RemoveComment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemoveCommentToJson(this);
+    return _$$_RemoveCommentToJson(
+      this,
+    );
   }
 }
 
@@ -779,13 +787,13 @@ abstract class _RemoveComment extends RemoveComment {
       _$_RemoveComment.fromJson;
 
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_RemoveCommentCopyWith<_$_RemoveComment> get copyWith =>
@@ -894,7 +902,7 @@ class __$$_MarkCommentAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_MarkCommentAsRead extends _MarkCommentAsRead {
   const _$_MarkCommentAsRead(
       {required this.commentId, required this.read, required this.auth})
@@ -941,7 +949,9 @@ class _$_MarkCommentAsRead extends _MarkCommentAsRead {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MarkCommentAsReadToJson(this);
+    return _$$_MarkCommentAsReadToJson(
+      this,
+    );
   }
 }
 
@@ -956,11 +966,11 @@ abstract class _MarkCommentAsRead extends MarkCommentAsRead {
       _$_MarkCommentAsRead.fromJson;
 
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_MarkCommentAsReadCopyWith<_$_MarkCommentAsRead> get copyWith =>
@@ -1067,7 +1077,7 @@ class __$$_SaveCommentCopyWithImpl<$Res> extends _$SaveCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_SaveComment extends _SaveComment {
   const _$_SaveComment(
       {required this.commentId, required this.save, required this.auth})
@@ -1113,7 +1123,9 @@ class _$_SaveComment extends _SaveComment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SaveCommentToJson(this);
+    return _$$_SaveCommentToJson(
+      this,
+    );
   }
 }
 
@@ -1128,11 +1140,11 @@ abstract class _SaveComment extends SaveComment {
       _$_SaveComment.fromJson;
 
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  bool get save => throw _privateConstructorUsedError;
+  bool get save;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_SaveCommentCopyWith<_$_SaveComment> get copyWith =>
@@ -1241,7 +1253,7 @@ class __$$_CreateCommentLikeCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreateCommentLike extends _CreateCommentLike {
   const _$_CreateCommentLike(
       {required this.commentId, required this.score, required this.auth})
@@ -1288,7 +1300,9 @@ class _$_CreateCommentLike extends _CreateCommentLike {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreateCommentLikeToJson(this);
+    return _$$_CreateCommentLikeToJson(
+      this,
+    );
   }
 }
 
@@ -1303,11 +1317,11 @@ abstract class _CreateCommentLike extends CreateCommentLike {
       _$_CreateCommentLike.fromJson;
 
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  VoteType get score => throw _privateConstructorUsedError;
+  VoteType get score;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreateCommentLikeCopyWith<_$_CreateCommentLike> get copyWith =>
@@ -1486,7 +1500,7 @@ class __$$_GetCommentsCopyWithImpl<$Res> extends _$GetCommentsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetComments extends _GetComments {
   const _$_GetComments(
       {@JsonKey(name: 'type_') this.type,
@@ -1562,7 +1576,9 @@ class _$_GetComments extends _GetComments {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetCommentsToJson(this);
+    return _$$_GetCommentsToJson(
+      this,
+    );
   }
 }
 
@@ -1583,21 +1599,21 @@ abstract class _GetComments extends GetComments {
 
   @override
   @JsonKey(name: 'type_')
-  CommentListingType? get type => throw _privateConstructorUsedError;
+  CommentListingType? get type;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  String? get communityName => throw _privateConstructorUsedError;
+  String? get communityName;
   @override
-  bool? get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetCommentsCopyWith<_$_GetComments> get copyWith =>
@@ -1706,7 +1722,7 @@ class __$$_CreateCommentReportCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreateCommentReport extends _CreateCommentReport {
   const _$_CreateCommentReport(
       {required this.commentId, required this.reason, required this.auth})
@@ -1753,7 +1769,9 @@ class _$_CreateCommentReport extends _CreateCommentReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreateCommentReportToJson(this);
+    return _$$_CreateCommentReportToJson(
+      this,
+    );
   }
 }
 
@@ -1768,11 +1786,11 @@ abstract class _CreateCommentReport extends CreateCommentReport {
       _$_CreateCommentReport.fromJson;
 
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  String get reason => throw _privateConstructorUsedError;
+  String get reason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreateCommentReportCopyWith<_$_CreateCommentReport> get copyWith =>
@@ -1881,7 +1899,7 @@ class __$$_ResolveCommentReportCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ResolveCommentReport extends _ResolveCommentReport {
   const _$_ResolveCommentReport(
       {required this.reportId, required this.resolved, required this.auth})
@@ -1928,7 +1946,9 @@ class _$_ResolveCommentReport extends _ResolveCommentReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResolveCommentReportToJson(this);
+    return _$$_ResolveCommentReportToJson(
+      this,
+    );
   }
 }
 
@@ -1943,11 +1963,11 @@ abstract class _ResolveCommentReport extends ResolveCommentReport {
       _$_ResolveCommentReport.fromJson;
 
   @override
-  int get reportId => throw _privateConstructorUsedError;
+  int get reportId;
   @override
-  bool get resolved => throw _privateConstructorUsedError;
+  bool get resolved;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ResolveCommentReportCopyWith<_$_ResolveCommentReport> get copyWith =>
@@ -2088,7 +2108,7 @@ class __$$_ListCommentReportsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ListCommentReports extends _ListCommentReports {
   const _$_ListCommentReports(
       {this.page,
@@ -2149,7 +2169,9 @@ class _$_ListCommentReports extends _ListCommentReports {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListCommentReportsToJson(this);
+    return _$$_ListCommentReportsToJson(
+      this,
+    );
   }
 }
 
@@ -2166,15 +2188,15 @@ abstract class _ListCommentReports extends ListCommentReports {
       _$_ListCommentReports.fromJson;
 
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  bool? get unresolvedOnly => throw _privateConstructorUsedError;
+  bool? get unresolvedOnly;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ListCommentReportsCopyWith<_$_ListCommentReports> get copyWith =>

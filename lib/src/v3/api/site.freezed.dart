@@ -207,7 +207,7 @@ class __$$_SearchCopyWithImpl<$Res> extends _$SearchCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_Search extends _Search {
   const _$_Search(
       {required this.q,
@@ -294,7 +294,9 @@ class _$_Search extends _Search {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchToJson(this);
+    return _$$_SearchToJson(
+      this,
+    );
   }
 }
 
@@ -315,26 +317,26 @@ abstract class _Search extends Search {
   factory _Search.fromJson(Map<String, dynamic> json) = _$_Search.fromJson;
 
   @override
-  String get q => throw _privateConstructorUsedError;
+  String get q;
   @override
   @JsonKey(name: 'type_')
-  SearchType? get type => throw _privateConstructorUsedError;
+  SearchType? get type;
   @override
-  PostListingType? get listingType => throw _privateConstructorUsedError;
+  PostListingType? get listingType;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  String? get communityName => throw _privateConstructorUsedError;
+  String? get communityName;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get creatorId => throw _privateConstructorUsedError;
+  int? get creatorId;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_SearchCopyWith<_$_Search> get copyWith =>
@@ -471,7 +473,7 @@ class __$$_GetModlogCopyWithImpl<$Res> extends _$GetModlogCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetModlog extends _GetModlog {
   const _$_GetModlog(
       {this.modPersonId, this.communityId, this.page, this.limit, this.auth})
@@ -527,7 +529,9 @@ class _$_GetModlog extends _GetModlog {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetModlogToJson(this);
+    return _$$_GetModlogToJson(
+      this,
+    );
   }
 }
 
@@ -544,15 +548,15 @@ abstract class _GetModlog extends GetModlog {
       _$_GetModlog.fromJson;
 
   @override
-  int? get modPersonId => throw _privateConstructorUsedError;
+  int? get modPersonId;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetModlogCopyWith<_$_GetModlog> get copyWith =>
@@ -821,7 +825,7 @@ class __$$_CreateSiteCopyWithImpl<$Res> extends _$CreateSiteCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreateSite extends _CreateSite {
   const _$_CreateSite(
       {required this.name,
@@ -939,7 +943,9 @@ class _$_CreateSite extends _CreateSite {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreateSiteToJson(this);
+    return _$$_CreateSiteToJson(
+      this,
+    );
   }
 }
 
@@ -966,35 +972,35 @@ abstract class _CreateSite extends CreateSite {
       _$_CreateSite.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get sidebar => throw _privateConstructorUsedError;
+  String? get sidebar;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool? get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get enableDownvotes;
   @override
-  bool? get openRegistration => throw _privateConstructorUsedError;
+  bool? get openRegistration;
   @override
-  bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get enableNsfw;
   @override
-  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly;
   @override
-  bool? get requireEmailVerification => throw _privateConstructorUsedError;
+  bool? get requireEmailVerification;
   @override
-  bool? get requireApplication => throw _privateConstructorUsedError;
+  bool? get requireApplication;
   @override
-  String? get applicationQuestion => throw _privateConstructorUsedError;
+  String? get applicationQuestion;
   @override
-  bool? get privateInstance => throw _privateConstructorUsedError;
+  bool? get privateInstance;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
-  String? get defaultTheme => throw _privateConstructorUsedError;
+  String? get defaultTheme;
   @override
   @JsonKey(ignore: true)
   _$$_CreateSiteCopyWith<_$_CreateSite> get copyWith =>
@@ -1261,7 +1267,7 @@ class __$$_EditSiteCopyWithImpl<$Res> extends _$EditSiteCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_EditSite extends _EditSite {
   const _$_EditSite(
       {this.name,
@@ -1379,7 +1385,9 @@ class _$_EditSite extends _EditSite {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditSiteToJson(this);
+    return _$$_EditSiteToJson(
+      this,
+    );
   }
 }
 
@@ -1405,35 +1413,35 @@ abstract class _EditSite extends EditSite {
   factory _EditSite.fromJson(Map<String, dynamic> json) = _$_EditSite.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get sidebar => throw _privateConstructorUsedError;
+  String? get sidebar;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool? get enableDownvotes => throw _privateConstructorUsedError;
+  bool? get enableDownvotes;
   @override
-  bool? get openRegistration => throw _privateConstructorUsedError;
+  bool? get openRegistration;
   @override
-  bool? get enableNsfw => throw _privateConstructorUsedError;
+  bool? get enableNsfw;
   @override
-  bool? get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool? get communityCreationAdminOnly;
   @override
-  bool? get requireEmailVerification => throw _privateConstructorUsedError;
+  bool? get requireEmailVerification;
   @override
-  bool? get requireApplication => throw _privateConstructorUsedError;
+  bool? get requireApplication;
   @override
-  String? get applicationQuestion => throw _privateConstructorUsedError;
+  String? get applicationQuestion;
   @override
-  bool? get privateInstance => throw _privateConstructorUsedError;
+  bool? get privateInstance;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
-  String? get defaultTheme => throw _privateConstructorUsedError;
+  String? get defaultTheme;
   @override
   @JsonKey(ignore: true)
   _$$_EditSiteCopyWith<_$_EditSite> get copyWith =>
@@ -1514,7 +1522,7 @@ class __$$_GetSiteCopyWithImpl<$Res> extends _$GetSiteCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetSite extends _GetSite {
   const _$_GetSite({this.auth}) : super._();
 
@@ -1549,7 +1557,9 @@ class _$_GetSite extends _GetSite {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSiteToJson(this);
+    return _$$_GetSiteToJson(
+      this,
+    );
   }
 }
 
@@ -1560,7 +1570,7 @@ abstract class _GetSite extends GetSite {
   factory _GetSite.fromJson(Map<String, dynamic> json) = _$_GetSite.fromJson;
 
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetSiteCopyWith<_$_GetSite> get copyWith =>
@@ -1645,7 +1655,7 @@ class __$$_LeaveAdminCopyWithImpl<$Res> extends _$LeaveAdminCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_LeaveAdmin extends _LeaveAdmin {
   const _$_LeaveAdmin({required this.auth}) : super._();
 
@@ -1680,7 +1690,9 @@ class _$_LeaveAdmin extends _LeaveAdmin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LeaveAdminToJson(this);
+    return _$$_LeaveAdminToJson(
+      this,
+    );
   }
 }
 
@@ -1692,7 +1704,7 @@ abstract class _LeaveAdmin extends LeaveAdmin {
       _$_LeaveAdmin.fromJson;
 
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_LeaveAdminCopyWith<_$_LeaveAdmin> get copyWith =>
@@ -1779,7 +1791,7 @@ class __$$_GetSiteConfigCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetSiteConfig extends _GetSiteConfig {
   const _$_GetSiteConfig({required this.auth}) : super._();
 
@@ -1814,7 +1826,9 @@ class _$_GetSiteConfig extends _GetSiteConfig {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetSiteConfigToJson(this);
+    return _$$_GetSiteConfigToJson(
+      this,
+    );
   }
 }
 
@@ -1826,7 +1840,7 @@ abstract class _GetSiteConfig extends GetSiteConfig {
       _$_GetSiteConfig.fromJson;
 
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetSiteConfigCopyWith<_$_GetSiteConfig> get copyWith =>
@@ -1924,7 +1938,7 @@ class __$$_SaveSiteConfigCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_SaveSiteConfig extends _SaveSiteConfig {
   const _$_SaveSiteConfig({required this.configHjson, required this.auth})
       : super._();
@@ -1966,7 +1980,9 @@ class _$_SaveSiteConfig extends _SaveSiteConfig {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SaveSiteConfigToJson(this);
+    return _$$_SaveSiteConfigToJson(
+      this,
+    );
   }
 }
 
@@ -1980,9 +1996,9 @@ abstract class _SaveSiteConfig extends SaveSiteConfig {
       _$_SaveSiteConfig.fromJson;
 
   @override
-  String get configHjson => throw _privateConstructorUsedError;
+  String get configHjson;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_SaveSiteConfigCopyWith<_$_SaveSiteConfig> get copyWith =>
@@ -2080,7 +2096,7 @@ class __$$_ResolveObjectCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ResolveObject extends _ResolveObject {
   const _$_ResolveObject({required this.q, this.auth}) : super._();
 
@@ -2120,7 +2136,9 @@ class _$_ResolveObject extends _ResolveObject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResolveObjectToJson(this);
+    return _$$_ResolveObjectToJson(
+      this,
+    );
   }
 }
 
@@ -2133,9 +2151,9 @@ abstract class _ResolveObject extends ResolveObject {
       _$_ResolveObject.fromJson;
 
   @override
-  String get q => throw _privateConstructorUsedError;
+  String get q;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ResolveObjectCopyWith<_$_ResolveObject> get copyWith =>
@@ -2229,7 +2247,7 @@ class __$$_GetUnreadRegistrationApplicationCountCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetUnreadRegistrationApplicationCount
     extends _GetUnreadRegistrationApplicationCount {
   const _$_GetUnreadRegistrationApplicationCount({required this.auth})
@@ -2269,7 +2287,9 @@ class _$_GetUnreadRegistrationApplicationCount
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetUnreadRegistrationApplicationCountToJson(this);
+    return _$$_GetUnreadRegistrationApplicationCountToJson(
+      this,
+    );
   }
 }
 
@@ -2284,7 +2304,7 @@ abstract class _GetUnreadRegistrationApplicationCount
       _$_GetUnreadRegistrationApplicationCount.fromJson;
 
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetUnreadRegistrationApplicationCountCopyWith<
@@ -2410,7 +2430,7 @@ class __$$_ListRegistrationApplicationsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ListRegistrationApplications extends _ListRegistrationApplications {
   const _$_ListRegistrationApplications(
       {this.unreadOnly, this.page, this.limit, required this.auth})
@@ -2462,7 +2482,9 @@ class _$_ListRegistrationApplications extends _ListRegistrationApplications {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListRegistrationApplicationsToJson(this);
+    return _$$_ListRegistrationApplicationsToJson(
+      this,
+    );
   }
 }
 
@@ -2479,13 +2501,13 @@ abstract class _ListRegistrationApplications
       _$_ListRegistrationApplications.fromJson;
 
   @override
-  bool? get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ListRegistrationApplicationsCopyWith<_$_ListRegistrationApplications>
@@ -2610,7 +2632,7 @@ class __$$_ApproveRegistrationApplicationCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ApproveRegistrationApplication
     extends _ApproveRegistrationApplication {
   const _$_ApproveRegistrationApplication(
@@ -2667,7 +2689,9 @@ class _$_ApproveRegistrationApplication
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ApproveRegistrationApplicationToJson(this);
+    return _$$_ApproveRegistrationApplicationToJson(
+      this,
+    );
   }
 }
 
@@ -2684,13 +2708,13 @@ abstract class _ApproveRegistrationApplication
       _$_ApproveRegistrationApplication.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  bool get approve => throw _privateConstructorUsedError;
+  bool get approve;
   @override
-  String? get denyReason => throw _privateConstructorUsedError;
+  String? get denyReason;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ApproveRegistrationApplicationCopyWith<_$_ApproveRegistrationApplication>
