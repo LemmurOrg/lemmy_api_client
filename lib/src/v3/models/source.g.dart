@@ -545,6 +545,7 @@ _$_CommunitySafe _$$_CommunitySafeFromJson(Map<String, dynamic> json) =>
       local: json['local'] as bool,
       icon: json['icon'] as String?,
       banner: json['banner'] as String?,
+      postingRestrictedToMods: json['posting_restricted_to_mods'] as bool,
       instanceHost: json['instance_host'] as String,
     );
 
@@ -564,6 +565,7 @@ Map<String, dynamic> _$$_CommunitySafeToJson(_$_CommunitySafe instance) =>
       'local': instance.local,
       'icon': instance.icon,
       'banner': instance.banner,
+      'posting_restricted_to_mods': instance.postingRestrictedToMods,
       'instance_host': instance.instanceHost,
     };
 
