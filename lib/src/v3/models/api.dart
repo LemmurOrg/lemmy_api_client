@@ -1,13 +1,14 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../v3.dart';
+import '../../utils/serde.dart';
 
 part 'api.freezed.dart';
 part 'api.g.dart';
 
 @freezed
 class FullCommunityView with _$FullCommunityView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory FullCommunityView({
     required CommunityView communityView,
     required Site? site,
@@ -24,7 +25,7 @@ class FullCommunityView with _$FullCommunityView {
 
 @freezed
 class FullPostView with _$FullPostView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory FullPostView({
     required PostView postView,
     required CommunityView communityView,
@@ -41,7 +42,7 @@ class FullPostView with _$FullPostView {
 
 @freezed
 class SearchResults with _$SearchResults {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory SearchResults({
     @JsonKey(name: 'type_') required SearchType type,
     required List<CommentView> comments,
@@ -59,7 +60,7 @@ class SearchResults with _$SearchResults {
 
 @freezed
 class Modlog with _$Modlog {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory Modlog({
     required List<ModRemovePostView> removedPosts,
     required List<ModLockPostView> lockedPosts,
@@ -81,7 +82,7 @@ class Modlog with _$Modlog {
 
 @freezed
 class FullCommentView with _$FullCommentView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory FullCommentView({
     required CommentView commentView,
     required List<int> recipientIds,
@@ -96,7 +97,7 @@ class FullCommentView with _$FullCommentView {
 
 @freezed
 class FullSiteView with _$FullSiteView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory FullSiteView({
     SiteView? siteView,
     required List<PersonViewSafe> admins,
@@ -115,7 +116,7 @@ class FullSiteView with _$FullSiteView {
 
 @freezed
 class MyUserInfo with _$MyUserInfo {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory MyUserInfo({
     required LocalUserSettingsView localUserView,
     required List<CommunityFollowerView> follows,
@@ -133,7 +134,7 @@ class MyUserInfo with _$MyUserInfo {
 
 @freezed
 class FederatedInstances with _$FederatedInstances {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory FederatedInstances({
     required List<String> linked,
     List<String>? allowed,
@@ -149,7 +150,7 @@ class FederatedInstances with _$FederatedInstances {
 
 @freezed
 class Captcha with _$Captcha {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory Captcha({
     /// A Base64 encoded png
     required String png,
@@ -166,7 +167,7 @@ class Captcha with _$Captcha {
 
 @freezed
 class FullPersonView with _$FullPersonView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory FullPersonView({
     required PersonViewSafe personView,
     required List<CommunityModeratorView> moderates,
@@ -182,7 +183,7 @@ class FullPersonView with _$FullPersonView {
 
 @freezed
 class BannedCommunityUser with _$BannedCommunityUser {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory BannedCommunityUser({
     required PersonViewSafe personView,
     required bool banned,
@@ -197,7 +198,7 @@ class BannedCommunityUser with _$BannedCommunityUser {
 
 @freezed
 class BannedPerson with _$BannedPerson {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory BannedPerson({
     required PersonViewSafe personView,
     required bool banned,
@@ -211,7 +212,7 @@ class BannedPerson with _$BannedPerson {
 
 @freezed
 class ResolveObjectResponse with _$ResolveObjectResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ResolveObjectResponse({
     CommentView? comment,
     PostView? post,
@@ -227,7 +228,7 @@ class ResolveObjectResponse with _$ResolveObjectResponse {
 
 @freezed
 class SiteMetadata with _$SiteMetadata {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory SiteMetadata({
     String? title,
     String? description,
@@ -243,7 +244,7 @@ class SiteMetadata with _$SiteMetadata {
 
 @freezed
 class BlockedPerson with _$BlockedPerson {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory BlockedPerson({
     required PersonViewSafe personView,
     required bool blocked,
@@ -257,7 +258,7 @@ class BlockedPerson with _$BlockedPerson {
 
 @freezed
 class BlockedCommunity with _$BlockedCommunity {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory BlockedCommunity({
     required CommunityView communityView,
     required bool blocked,
@@ -271,7 +272,7 @@ class BlockedCommunity with _$BlockedCommunity {
 
 @freezed
 class ReportCount with _$ReportCount {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ReportCount({
     int? communityId,
     required int commentReports,
@@ -286,7 +287,7 @@ class ReportCount with _$ReportCount {
 
 @freezed
 class UnreadCount with _$UnreadCount {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory UnreadCount({
     required int replies,
     required int mentions,
@@ -301,7 +302,7 @@ class UnreadCount with _$UnreadCount {
 
 @freezed
 class LoginResponse with _$LoginResponse {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory LoginResponse({
     Jwt? jwt,
     required bool verifyEmailSent,

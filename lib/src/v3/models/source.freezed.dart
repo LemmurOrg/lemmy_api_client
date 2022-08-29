@@ -328,9 +328,7 @@ class __$$_PersonSafeCopyWithImpl<$Res> extends _$PersonSafeCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PersonSafe extends _PersonSafe {
   const _$_PersonSafe(
       {required this.id,
@@ -465,7 +463,9 @@ class _$_PersonSafe extends _PersonSafe {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonSafeToJson(this);
+    return _$$_PersonSafeToJson(
+      this,
+    );
   }
 }
 
@@ -496,43 +496,43 @@ abstract class _PersonSafe extends PersonSafe {
       _$_PersonSafe.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get displayName => throw _privateConstructorUsedError;
+  String? get displayName;
   @override
-  String? get avatar => throw _privateConstructorUsedError;
+  String? get avatar;
   @override
-  bool get banned => throw _privateConstructorUsedError;
+  bool get banned;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  String get actorId => throw _privateConstructorUsedError;
+  String get actorId;
   @override
-  String? get bio => throw _privateConstructorUsedError;
+  String? get bio;
   @override
-  bool get local => throw _privateConstructorUsedError;
+  bool get local;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get inboxUrl => throw _privateConstructorUsedError;
+  String get inboxUrl;
   @override
-  String get sharedInboxUrl => throw _privateConstructorUsedError;
+  String get sharedInboxUrl;
   @override
-  String? get matrixUserId => throw _privateConstructorUsedError;
+  String? get matrixUserId;
   @override
-  bool get admin => throw _privateConstructorUsedError;
+  bool get admin;
   @override
-  bool get botAccount => throw _privateConstructorUsedError;
+  bool get botAccount;
   @override
-  DateTime? get banExpires => throw _privateConstructorUsedError;
+  DateTime? get banExpires;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PersonSafeCopyWith<_$_PersonSafe> get copyWith =>
@@ -835,9 +835,7 @@ class __$$_LocalUserSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_LocalUserSettings extends _LocalUserSettings {
   const _$_LocalUserSettings(
       {required this.id,
@@ -971,7 +969,9 @@ class _$_LocalUserSettings extends _LocalUserSettings {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalUserSettingsToJson(this);
+    return _$$_LocalUserSettingsToJson(
+      this,
+    );
   }
 }
 
@@ -1002,41 +1002,41 @@ abstract class _LocalUserSettings extends LocalUserSettings {
       _$_LocalUserSettings.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  String? get email => throw _privateConstructorUsedError;
+  String? get email;
   @override
-  bool get showNsfw => throw _privateConstructorUsedError;
+  bool get showNsfw;
   @override
-  String get theme => throw _privateConstructorUsedError;
+  String get theme;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType get defaultSortType => throw _privateConstructorUsedError;
+  SortType get defaultSortType;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType get defaultListingType => throw _privateConstructorUsedError;
+  PostListingType get defaultListingType;
   @override
-  String get lang => throw _privateConstructorUsedError;
+  String get lang;
   @override
-  bool get showAvatars => throw _privateConstructorUsedError;
+  bool get showAvatars;
   @override
-  bool get showScores => throw _privateConstructorUsedError;
+  bool get showScores;
   @override
-  bool get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool get sendNotificationsToEmail;
   @override
-  bool get showReadPosts => throw _privateConstructorUsedError;
+  bool get showReadPosts;
   @override
-  bool get showBotAccounts => throw _privateConstructorUsedError;
+  bool get showBotAccounts;
   @override
-  bool get showNewPostNotifs => throw _privateConstructorUsedError;
+  bool get showNewPostNotifs;
   @override
-  bool get emailVerified => throw _privateConstructorUsedError;
+  bool get emailVerified;
   @override
-  bool get acceptedApplication => throw _privateConstructorUsedError;
+  bool get acceptedApplication;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_LocalUserSettingsCopyWith<_$_LocalUserSettings> get copyWith =>
@@ -1391,9 +1391,7 @@ class __$$_SiteCopyWithImpl<$Res> extends _$SiteCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_Site extends _Site {
   const _$_Site(
       {required this.id,
@@ -1548,7 +1546,9 @@ class _$_Site extends _Site {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteToJson(this);
+    return _$$_SiteToJson(
+      this,
+    );
   }
 }
 
@@ -1581,49 +1581,49 @@ abstract class _Site extends Site {
   factory _Site.fromJson(Map<String, dynamic> json) = _$_Site.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get sidebar => throw _privateConstructorUsedError;
+  String? get sidebar;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  bool get enableDownvotes => throw _privateConstructorUsedError;
+  bool get enableDownvotes;
   @override
-  bool get openRegistration => throw _privateConstructorUsedError;
+  bool get openRegistration;
   @override
-  bool get enableNsfw => throw _privateConstructorUsedError;
+  bool get enableNsfw;
   @override
-  bool get communityCreationAdminOnly => throw _privateConstructorUsedError;
+  bool get communityCreationAdminOnly;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool get requireEmailVerification => throw _privateConstructorUsedError;
+  bool get requireEmailVerification;
   @override
-  bool get requireApplication => throw _privateConstructorUsedError;
+  bool get requireApplication;
   @override
-  String? get applicationQuestion => throw _privateConstructorUsedError;
+  String? get applicationQuestion;
   @override
-  bool get privateInstance => throw _privateConstructorUsedError;
+  bool get privateInstance;
   @override
-  String get defaultTheme => throw _privateConstructorUsedError;
+  String get defaultTheme;
   @override
-  String get actorId => throw _privateConstructorUsedError;
+  String get actorId;
   @override
-  String get lastRefreshedAt => throw _privateConstructorUsedError;
+  String get lastRefreshedAt;
   @override
-  String get inboxUrl => throw _privateConstructorUsedError;
+  String get inboxUrl;
   @override
-  String get publicKey => throw _privateConstructorUsedError;
+  String get publicKey;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_SiteCopyWith<_$_Site> get copyWith => throw _privateConstructorUsedError;
@@ -1841,9 +1841,7 @@ class __$$_PrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PrivateMessage extends _PrivateMessage {
   const _$_PrivateMessage(
       {required this.id,
@@ -1933,7 +1931,9 @@ class _$_PrivateMessage extends _PrivateMessage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateMessageToJson(this);
+    return _$$_PrivateMessageToJson(
+      this,
+    );
   }
 }
 
@@ -1956,27 +1956,27 @@ abstract class _PrivateMessage extends PrivateMessage {
       _$_PrivateMessage.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get creatorId => throw _privateConstructorUsedError;
+  int get creatorId;
   @override
-  int get recipientId => throw _privateConstructorUsedError;
+  int get recipientId;
   @override
-  String get content => throw _privateConstructorUsedError;
+  String get content;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  String get apId => throw _privateConstructorUsedError;
+  String get apId;
   @override
-  bool get local => throw _privateConstructorUsedError;
+  bool get local;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PrivateMessageCopyWith<_$_PrivateMessage> get copyWith =>
@@ -2206,9 +2206,7 @@ class __$$_PostReportCopyWithImpl<$Res> extends _$PostReportCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PostReport extends _PostReport {
   const _$_PostReport(
       {required this.id,
@@ -2306,7 +2304,9 @@ class _$_PostReport extends _PostReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostReportToJson(this);
+    return _$$_PostReportToJson(
+      this,
+    );
   }
 }
 
@@ -2330,29 +2330,29 @@ abstract class _PostReport extends PostReport {
       _$_PostReport.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get creatorId => throw _privateConstructorUsedError;
+  int get creatorId;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String get originalPostName => throw _privateConstructorUsedError;
+  String get originalPostName;
   @override
-  String? get originalPostUrl => throw _privateConstructorUsedError;
+  String? get originalPostUrl;
   @override
-  String? get originalPostBody => throw _privateConstructorUsedError;
+  String? get originalPostBody;
   @override
-  String get reason => throw _privateConstructorUsedError;
+  String get reason;
   @override
-  bool get resolved => throw _privateConstructorUsedError;
+  bool get resolved;
   @override
-  int? get resolverId => throw _privateConstructorUsedError;
+  int? get resolverId;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PostReportCopyWith<_$_PostReport> get copyWith =>
@@ -2681,9 +2681,7 @@ class __$$_PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_Post extends _Post {
   const _$_Post(
       {required this.id,
@@ -2821,7 +2819,9 @@ class _$_Post extends _Post {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostToJson(this);
+    return _$$_PostToJson(
+      this,
+    );
   }
 }
 
@@ -2852,45 +2852,45 @@ abstract class _Post extends Post {
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get body => throw _privateConstructorUsedError;
+  String? get body;
   @override
-  int get creatorId => throw _privateConstructorUsedError;
+  int get creatorId;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  bool get locked => throw _privateConstructorUsedError;
+  bool get locked;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool get nsfw;
   @override
-  bool get stickied => throw _privateConstructorUsedError;
+  bool get stickied;
   @override
-  String? get embedTitle => throw _privateConstructorUsedError;
+  String? get embedTitle;
   @override
-  String? get embedDescription => throw _privateConstructorUsedError;
+  String? get embedDescription;
   @override
-  String? get embedHtml => throw _privateConstructorUsedError;
+  String? get embedHtml;
   @override
-  String? get thumbnailUrl => throw _privateConstructorUsedError;
+  String? get thumbnailUrl;
   @override
-  String get apId => throw _privateConstructorUsedError;
+  String get apId;
   @override
-  bool get local => throw _privateConstructorUsedError;
+  bool get local;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PostCopyWith<_$_Post> get copyWith => throw _privateConstructorUsedError;
@@ -3030,9 +3030,7 @@ class __$$_PasswordResetRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PasswordResetRequest extends _PasswordResetRequest {
   const _$_PasswordResetRequest(
       {required this.id,
@@ -3094,7 +3092,9 @@ class _$_PasswordResetRequest extends _PasswordResetRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PasswordResetRequestToJson(this);
+    return _$$_PasswordResetRequestToJson(
+      this,
+    );
   }
 }
 
@@ -3111,15 +3111,15 @@ abstract class _PasswordResetRequest extends PasswordResetRequest {
       _$_PasswordResetRequest.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get localUserId => throw _privateConstructorUsedError;
+  int get localUserId;
   @override
-  String get tokenEncrypted => throw _privateConstructorUsedError;
+  String get tokenEncrypted;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PasswordResetRequestCopyWith<_$_PasswordResetRequest> get copyWith =>
@@ -3287,9 +3287,7 @@ class __$$_ModRemovePostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModRemovePost extends _ModRemovePost {
   const _$_ModRemovePost(
       {required this.id,
@@ -3360,7 +3358,9 @@ class _$_ModRemovePost extends _ModRemovePost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemovePostToJson(this);
+    return _$$_ModRemovePostToJson(
+      this,
+    );
   }
 }
 
@@ -3379,20 +3379,20 @@ abstract class _ModRemovePost extends ModRemovePost {
       _$_ModRemovePost.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  bool? get removed => throw _privateConstructorUsedError;
+  bool? get removed;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModRemovePostCopyWith<_$_ModRemovePost> get copyWith =>
@@ -3545,9 +3545,7 @@ class __$$_ModLockPostCopyWithImpl<$Res> extends _$ModLockPostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModLockPost extends _ModLockPost {
   const _$_ModLockPost(
       {required this.id,
@@ -3613,7 +3611,9 @@ class _$_ModLockPost extends _ModLockPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModLockPostToJson(this);
+    return _$$_ModLockPostToJson(
+      this,
+    );
   }
 }
 
@@ -3631,18 +3631,18 @@ abstract class _ModLockPost extends ModLockPost {
       _$_ModLockPost.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool? get locked => throw _privateConstructorUsedError;
+  bool? get locked;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModLockPostCopyWith<_$_ModLockPost> get copyWith =>
@@ -3797,9 +3797,7 @@ class __$$_ModStickyPostCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModStickyPost extends _ModStickyPost {
   const _$_ModStickyPost(
       {required this.id,
@@ -3865,7 +3863,9 @@ class _$_ModStickyPost extends _ModStickyPost {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModStickyPostToJson(this);
+    return _$$_ModStickyPostToJson(
+      this,
+    );
   }
 }
 
@@ -3883,18 +3883,18 @@ abstract class _ModStickyPost extends ModStickyPost {
       _$_ModStickyPost.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  bool? get stickied => throw _privateConstructorUsedError;
+  bool? get stickied;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModStickyPostCopyWith<_$_ModStickyPost> get copyWith =>
@@ -4062,9 +4062,7 @@ class __$$_ModRemoveCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModRemoveComment extends _ModRemoveComment {
   const _$_ModRemoveComment(
       {required this.id,
@@ -4135,7 +4133,9 @@ class _$_ModRemoveComment extends _ModRemoveComment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommentToJson(this);
+    return _$$_ModRemoveCommentToJson(
+      this,
+    );
   }
 }
 
@@ -4154,20 +4154,20 @@ abstract class _ModRemoveComment extends ModRemoveComment {
       _$_ModRemoveComment.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  bool? get removed => throw _privateConstructorUsedError;
+  bool? get removed;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModRemoveCommentCopyWith<_$_ModRemoveComment> get copyWith =>
@@ -4348,9 +4348,7 @@ class __$$_ModRemoveCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModRemoveCommunity extends _ModRemoveCommunity {
   const _$_ModRemoveCommunity(
       {required this.id,
@@ -4428,7 +4426,9 @@ class _$_ModRemoveCommunity extends _ModRemoveCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommunityToJson(this);
+    return _$$_ModRemoveCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -4448,22 +4448,22 @@ abstract class _ModRemoveCommunity extends ModRemoveCommunity {
       _$_ModRemoveCommunity.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  bool? get removed => throw _privateConstructorUsedError;
+  bool? get removed;
   @override
-  DateTime? get expires => throw _privateConstructorUsedError;
+  DateTime? get expires;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModRemoveCommunityCopyWith<_$_ModRemoveCommunity> get copyWith =>
@@ -4657,9 +4657,7 @@ class __$$_ModBanFromCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModBanFromCommunity extends _ModBanFromCommunity {
   const _$_ModBanFromCommunity(
       {required this.id,
@@ -4743,7 +4741,9 @@ class _$_ModBanFromCommunity extends _ModBanFromCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanFromCommunityToJson(this);
+    return _$$_ModBanFromCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -4764,24 +4764,24 @@ abstract class _ModBanFromCommunity extends ModBanFromCommunity {
       _$_ModBanFromCommunity.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get otherPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  bool? get banned => throw _privateConstructorUsedError;
+  bool? get banned;
   @override
-  DateTime? get expires => throw _privateConstructorUsedError;
+  DateTime? get expires;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModBanFromCommunityCopyWith<_$_ModBanFromCommunity> get copyWith =>
@@ -4955,9 +4955,7 @@ class __$$_ModBanCopyWithImpl<$Res> extends _$ModBanCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModBan extends _ModBan {
   const _$_ModBan(
       {required this.id,
@@ -5034,7 +5032,9 @@ class _$_ModBan extends _ModBan {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanToJson(this);
+    return _$$_ModBanToJson(
+      this,
+    );
   }
 }
 
@@ -5053,22 +5053,22 @@ abstract class _ModBan extends ModBan {
   factory _ModBan.fromJson(Map<String, dynamic> json) = _$_ModBan.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get otherPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  bool? get banned => throw _privateConstructorUsedError;
+  bool? get banned;
   @override
-  DateTime? get expires => throw _privateConstructorUsedError;
+  DateTime? get expires;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModBanCopyWith<_$_ModBan> get copyWith =>
@@ -5236,9 +5236,7 @@ class __$$_ModAddCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModAddCommunity extends _ModAddCommunity {
   const _$_ModAddCommunity(
       {required this.id,
@@ -5311,7 +5309,9 @@ class _$_ModAddCommunity extends _ModAddCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddCommunityToJson(this);
+    return _$$_ModAddCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -5330,20 +5330,20 @@ abstract class _ModAddCommunity extends ModAddCommunity {
       _$_ModAddCommunity.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get otherPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool? get removed => throw _privateConstructorUsedError;
+  bool? get removed;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModAddCommunityCopyWith<_$_ModAddCommunity> get copyWith =>
@@ -5511,9 +5511,7 @@ class __$$_ModTransferCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModTransferCommunity extends _ModTransferCommunity {
   const _$_ModTransferCommunity(
       {required this.id,
@@ -5587,7 +5585,9 @@ class _$_ModTransferCommunity extends _ModTransferCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModTransferCommunityToJson(this);
+    return _$$_ModTransferCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -5606,20 +5606,20 @@ abstract class _ModTransferCommunity extends ModTransferCommunity {
       _$_ModTransferCommunity.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get otherPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool? get removed => throw _privateConstructorUsedError;
+  bool? get removed;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModTransferCommunityCopyWith<_$_ModTransferCommunity> get copyWith =>
@@ -5767,9 +5767,7 @@ class __$$_ModAddCopyWithImpl<$Res> extends _$ModAddCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModAdd extends _ModAdd {
   const _$_ModAdd(
       {required this.id,
@@ -5836,7 +5834,9 @@ class _$_ModAdd extends _ModAdd {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddToJson(this);
+    return _$$_ModAddToJson(
+      this,
+    );
   }
 }
 
@@ -5853,18 +5853,18 @@ abstract class _ModAdd extends ModAdd {
   factory _ModAdd.fromJson(Map<String, dynamic> json) = _$_ModAdd.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get modPersonId => throw _privateConstructorUsedError;
+  int get modPersonId;
   @override
-  int get otherPersonId => throw _privateConstructorUsedError;
+  int get otherPersonId;
   @override
-  bool? get removed => throw _privateConstructorUsedError;
+  bool? get removed;
   @override
   @JsonKey(name: 'when_')
-  DateTime get when => throw _privateConstructorUsedError;
+  DateTime get when;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModAddCopyWith<_$_ModAdd> get copyWith =>
@@ -6122,9 +6122,7 @@ class __$$_CommunitySafeCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunitySafe extends _CommunitySafe {
   const _$_CommunitySafe(
       {required this.id,
@@ -6229,7 +6227,9 @@ class _$_CommunitySafe extends _CommunitySafe {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunitySafeToJson(this);
+    return _$$_CommunitySafeToJson(
+      this,
+    );
   }
 }
 
@@ -6255,33 +6255,33 @@ abstract class _CommunitySafe extends CommunitySafe {
       _$_CommunitySafe.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  bool get nsfw => throw _privateConstructorUsedError;
+  bool get nsfw;
   @override
-  String get actorId => throw _privateConstructorUsedError;
+  String get actorId;
   @override
-  bool get local => throw _privateConstructorUsedError;
+  bool get local;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommunitySafeCopyWith<_$_CommunitySafe> get copyWith =>
@@ -6487,9 +6487,7 @@ class __$$_CommentReportCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommentReport extends _CommentReport {
   const _$_CommentReport(
       {required this.id,
@@ -6575,7 +6573,9 @@ class _$_CommentReport extends _CommentReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReportToJson(this);
+    return _$$_CommentReportToJson(
+      this,
+    );
   }
 }
 
@@ -6597,25 +6597,25 @@ abstract class _CommentReport extends CommentReport {
       _$_CommentReport.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get creatorId => throw _privateConstructorUsedError;
+  int get creatorId;
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  String get originalCommentText => throw _privateConstructorUsedError;
+  String get originalCommentText;
   @override
-  String get reason => throw _privateConstructorUsedError;
+  String get reason;
   @override
-  bool get resolved => throw _privateConstructorUsedError;
+  bool get resolved;
   @override
-  int? get resolverId => throw _privateConstructorUsedError;
+  int? get resolverId;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommentReportCopyWith<_$_CommentReport> get copyWith =>
@@ -6854,9 +6854,7 @@ class __$$_CommentCopyWithImpl<$Res> extends _$CommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_Comment extends _Comment {
   const _$_Comment(
       {required this.id,
@@ -6955,7 +6953,9 @@ class _$_Comment extends _Comment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentToJson(this);
+    return _$$_CommentToJson(
+      this,
+    );
   }
 }
 
@@ -6979,31 +6979,31 @@ abstract class _Comment extends Comment {
   factory _Comment.fromJson(Map<String, dynamic> json) = _$_Comment.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get creatorId => throw _privateConstructorUsedError;
+  int get creatorId;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  int? get parentId => throw _privateConstructorUsedError;
+  int? get parentId;
   @override
-  String get content => throw _privateConstructorUsedError;
+  String get content;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  DateTime? get updated => throw _privateConstructorUsedError;
+  DateTime? get updated;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get apId => throw _privateConstructorUsedError;
+  String get apId;
   @override
-  bool get local => throw _privateConstructorUsedError;
+  bool get local;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommentCopyWith<_$_Comment> get copyWith =>
@@ -7157,9 +7157,7 @@ class __$$_PersonMentionCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PersonMention extends _PersonMention {
   const _$_PersonMention(
       {required this.id,
@@ -7224,7 +7222,9 @@ class _$_PersonMention extends _PersonMention {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonMentionToJson(this);
+    return _$$_PersonMentionToJson(
+      this,
+    );
   }
 }
 
@@ -7242,17 +7242,17 @@ abstract class _PersonMention extends PersonMention {
       _$_PersonMention.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get recipientId => throw _privateConstructorUsedError;
+  int get recipientId;
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PersonMentionCopyWith<_$_PersonMention> get copyWith =>
@@ -7421,9 +7421,7 @@ class __$$_RegistrationApplicationCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_RegistrationApplication extends _RegistrationApplication {
   const _$_RegistrationApplication(
       {required this.id,
@@ -7496,7 +7494,9 @@ class _$_RegistrationApplication extends _RegistrationApplication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegistrationApplicationToJson(this);
+    return _$$_RegistrationApplicationToJson(
+      this,
+    );
   }
 }
 
@@ -7515,19 +7515,19 @@ abstract class _RegistrationApplication extends RegistrationApplication {
       _$_RegistrationApplication.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get localUserId => throw _privateConstructorUsedError;
+  int get localUserId;
   @override
-  String get answer => throw _privateConstructorUsedError;
+  String get answer;
   @override
-  int? get adminId => throw _privateConstructorUsedError;
+  int? get adminId;
   @override
-  String? get denyReason => throw _privateConstructorUsedError;
+  String? get denyReason;
   @override
-  DateTime get published => throw _privateConstructorUsedError;
+  DateTime get published;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_RegistrationApplicationCopyWith<_$_RegistrationApplication>

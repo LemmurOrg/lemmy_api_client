@@ -138,7 +138,7 @@ class __$$_PersonViewSafeCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PersonViewSafe extends _PersonViewSafe {
   const _$_PersonViewSafe(
       {required this.person, required this.counts, required this.instanceHost})
@@ -185,7 +185,9 @@ class _$_PersonViewSafe extends _PersonViewSafe {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonViewSafeToJson(this);
+    return _$$_PersonViewSafeToJson(
+      this,
+    );
   }
 }
 
@@ -200,11 +202,11 @@ abstract class _PersonViewSafe extends PersonViewSafe {
       _$_PersonViewSafe.fromJson;
 
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  PersonAggregates get counts => throw _privateConstructorUsedError;
+  PersonAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PersonViewSafeCopyWith<_$_PersonViewSafe> get copyWith =>
@@ -521,7 +523,7 @@ class __$$_PersonMentionViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PersonMentionView extends _PersonMentionView {
   const _$_PersonMentionView(
       {required this.personMention,
@@ -625,7 +627,9 @@ class _$_PersonMentionView extends _PersonMentionView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonMentionViewToJson(this);
+    return _$$_PersonMentionViewToJson(
+      this,
+    );
   }
 }
 
@@ -650,31 +654,31 @@ abstract class _PersonMentionView extends PersonMentionView {
       _$_PersonMentionView.fromJson;
 
   @override
-  PersonMention get personMention => throw _privateConstructorUsedError;
+  PersonMention get personMention;
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  PersonSafe get recipient;
   @override
-  CommentAggregates get counts => throw _privateConstructorUsedError;
+  CommentAggregates get counts;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get saved => throw _privateConstructorUsedError;
+  bool get saved;
   @override
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+  bool get creatorBlocked;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PersonMentionViewCopyWith<_$_PersonMentionView> get copyWith =>
@@ -836,7 +840,7 @@ class __$$_LocalUserSettingsViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_LocalUserSettingsView extends _LocalUserSettingsView {
   const _$_LocalUserSettingsView(
       {required this.localUser,
@@ -891,7 +895,9 @@ class _$_LocalUserSettingsView extends _LocalUserSettingsView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LocalUserSettingsViewToJson(this);
+    return _$$_LocalUserSettingsViewToJson(
+      this,
+    );
   }
 }
 
@@ -907,13 +913,13 @@ abstract class _LocalUserSettingsView extends LocalUserSettingsView {
       _$_LocalUserSettingsView.fromJson;
 
   @override
-  LocalUserSettings get localUser => throw _privateConstructorUsedError;
+  LocalUserSettings get localUser;
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  PersonAggregates get counts => throw _privateConstructorUsedError;
+  PersonAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_LocalUserSettingsViewCopyWith<_$_LocalUserSettingsView> get copyWith =>
@@ -1040,7 +1046,7 @@ class __$$_SiteViewCopyWithImpl<$Res> extends _$SiteViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_SiteView extends _SiteView {
   const _$_SiteView(
       {required this.site, required this.counts, required this.instanceHost})
@@ -1087,7 +1093,9 @@ class _$_SiteView extends _SiteView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteViewToJson(this);
+    return _$$_SiteViewToJson(
+      this,
+    );
   }
 }
 
@@ -1101,11 +1109,11 @@ abstract class _SiteView extends SiteView {
   factory _SiteView.fromJson(Map<String, dynamic> json) = _$_SiteView.fromJson;
 
   @override
-  Site get site => throw _privateConstructorUsedError;
+  Site get site;
   @override
-  SiteAggregates get counts => throw _privateConstructorUsedError;
+  SiteAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_SiteViewCopyWith<_$_SiteView> get copyWith =>
@@ -1265,7 +1273,7 @@ class __$$_PrivateMessageViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PrivateMessageView extends _PrivateMessageView {
   const _$_PrivateMessageView(
       {required this.privateMessage,
@@ -1321,7 +1329,9 @@ class _$_PrivateMessageView extends _PrivateMessageView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PrivateMessageViewToJson(this);
+    return _$$_PrivateMessageViewToJson(
+      this,
+    );
   }
 }
 
@@ -1337,13 +1347,13 @@ abstract class _PrivateMessageView extends PrivateMessageView {
       _$_PrivateMessageView.fromJson;
 
   @override
-  PrivateMessage get privateMessage => throw _privateConstructorUsedError;
+  PrivateMessage get privateMessage;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe get recipient => throw _privateConstructorUsedError;
+  PersonSafe get recipient;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PrivateMessageViewCopyWith<_$_PrivateMessageView> get copyWith =>
@@ -1600,7 +1610,7 @@ class __$$_PostViewCopyWithImpl<$Res> extends _$PostViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PostView extends _PostView {
   const _$_PostView(
       {required this.post,
@@ -1692,7 +1702,9 @@ class _$_PostView extends _PostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostViewToJson(this);
+    return _$$_PostViewToJson(
+      this,
+    );
   }
 }
 
@@ -1714,27 +1726,27 @@ abstract class _PostView extends PostView {
   factory _PostView.fromJson(Map<String, dynamic> json) = _$_PostView.fromJson;
 
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  PostAggregates get counts => throw _privateConstructorUsedError;
+  PostAggregates get counts;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get saved => throw _privateConstructorUsedError;
+  bool get saved;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+  bool get creatorBlocked;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PostViewCopyWith<_$_PostView> get copyWith =>
@@ -2016,7 +2028,7 @@ class __$$_PostReportViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PostReportView extends _PostReportView {
   const _$_PostReportView(
       {required this.postReport,
@@ -2103,7 +2115,9 @@ class _$_PostReportView extends _PostReportView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostReportViewToJson(this);
+    return _$$_PostReportViewToJson(
+      this,
+    );
   }
 }
 
@@ -2125,25 +2139,25 @@ abstract class _PostReportView extends PostReportView {
       _$_PostReportView.fromJson;
 
   @override
-  PostReport get postReport => throw _privateConstructorUsedError;
+  PostReport get postReport;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe get postCreator => throw _privateConstructorUsedError;
+  PersonSafe get postCreator;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  PostAggregates get counts => throw _privateConstructorUsedError;
+  PostAggregates get counts;
   @override
-  PersonSafe? get resolver => throw _privateConstructorUsedError;
+  PersonSafe? get resolver;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PostReportViewCopyWith<_$_PostReportView> get copyWith =>
@@ -2439,7 +2453,7 @@ class __$$_CommentViewCopyWithImpl<$Res> extends _$CommentViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommentView extends _CommentView {
   const _$_CommentView(
       {required this.comment,
@@ -2536,7 +2550,9 @@ class _$_CommentView extends _CommentView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentViewToJson(this);
+    return _$$_CommentViewToJson(
+      this,
+    );
   }
 }
 
@@ -2560,29 +2576,29 @@ abstract class _CommentView extends CommentView {
       _$_CommentView.fromJson;
 
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe? get recipient => throw _privateConstructorUsedError;
+  PersonSafe? get recipient;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  CommentAggregates get counts => throw _privateConstructorUsedError;
+  CommentAggregates get counts;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get saved => throw _privateConstructorUsedError;
+  bool get saved;
   @override
-  bool get creatorBlocked => throw _privateConstructorUsedError;
+  bool get creatorBlocked;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommentViewCopyWith<_$_CommentView> get copyWith =>
@@ -2887,7 +2903,7 @@ class __$$_CommentReportViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommentReportView extends _CommentReportView {
   const _$_CommentReportView(
       {required this.commentReport,
@@ -2980,7 +2996,9 @@ class _$_CommentReportView extends _CommentReportView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentReportViewToJson(this);
+    return _$$_CommentReportViewToJson(
+      this,
+    );
   }
 }
 
@@ -3003,27 +3021,27 @@ abstract class _CommentReportView extends CommentReportView {
       _$_CommentReportView.fromJson;
 
   @override
-  CommentReport get commentReport => throw _privateConstructorUsedError;
+  CommentReport get commentReport;
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe get commentCreator => throw _privateConstructorUsedError;
+  PersonSafe get commentCreator;
   @override
-  bool get creatorBannedFromCommunity => throw _privateConstructorUsedError;
+  bool get creatorBannedFromCommunity;
   @override
-  VoteType? get myVote => throw _privateConstructorUsedError;
+  VoteType? get myVote;
   @override
-  CommentAggregates get counts => throw _privateConstructorUsedError;
+  CommentAggregates get counts;
   @override
-  PersonSafe? get resolver => throw _privateConstructorUsedError;
+  PersonSafe? get resolver;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommentReportViewCopyWith<_$_CommentReportView> get copyWith =>
@@ -3206,7 +3224,7 @@ class __$$_ModAddCommunityViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModAddCommunityView extends _ModAddCommunityView {
   const _$_ModAddCommunityView(
       {required this.modAddCommunity,
@@ -3268,7 +3286,9 @@ class _$_ModAddCommunityView extends _ModAddCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddCommunityViewToJson(this);
+    return _$$_ModAddCommunityViewToJson(
+      this,
+    );
   }
 }
 
@@ -3285,15 +3305,15 @@ abstract class _ModAddCommunityView extends ModAddCommunityView {
       _$_ModAddCommunityView.fromJson;
 
   @override
-  ModAddCommunity get modAddCommunity => throw _privateConstructorUsedError;
+  ModAddCommunity get modAddCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModAddCommunityViewCopyWith<_$_ModAddCommunityView> get copyWith =>
@@ -3481,7 +3501,7 @@ class __$$_ModTransferCommunityViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModTransferCommunityView extends _ModTransferCommunityView {
   const _$_ModTransferCommunityView(
       {required this.modTransferCommunity,
@@ -3543,7 +3563,9 @@ class _$_ModTransferCommunityView extends _ModTransferCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModTransferCommunityViewToJson(this);
+    return _$$_ModTransferCommunityViewToJson(
+      this,
+    );
   }
 }
 
@@ -3560,16 +3582,15 @@ abstract class _ModTransferCommunityView extends ModTransferCommunityView {
       _$_ModTransferCommunityView.fromJson;
 
   @override
-  ModTransferCommunity get modTransferCommunity =>
-      throw _privateConstructorUsedError;
+  ModTransferCommunity get modTransferCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModTransferCommunityViewCopyWith<_$_ModTransferCommunityView>
@@ -3727,7 +3748,7 @@ class __$$_ModAddViewCopyWithImpl<$Res> extends _$ModAddViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModAddView extends _ModAddView {
   const _$_ModAddView(
       {required this.modAdd,
@@ -3782,7 +3803,9 @@ class _$_ModAddView extends _ModAddView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModAddViewToJson(this);
+    return _$$_ModAddViewToJson(
+      this,
+    );
   }
 }
 
@@ -3798,13 +3821,13 @@ abstract class _ModAddView extends ModAddView {
       _$_ModAddView.fromJson;
 
   @override
-  ModAdd get modAdd => throw _privateConstructorUsedError;
+  ModAdd get modAdd;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  PersonSafe get moddedPerson => throw _privateConstructorUsedError;
+  PersonSafe get moddedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModAddViewCopyWith<_$_ModAddView> get copyWith =>
@@ -3991,7 +4014,7 @@ class __$$_ModBanFromCommunityViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
   const _$_ModBanFromCommunityView(
       {required this.modBanFromCommunity,
@@ -4054,7 +4077,9 @@ class _$_ModBanFromCommunityView extends _ModBanFromCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanFromCommunityViewToJson(this);
+    return _$$_ModBanFromCommunityViewToJson(
+      this,
+    );
   }
 }
 
@@ -4071,16 +4096,15 @@ abstract class _ModBanFromCommunityView extends ModBanFromCommunityView {
       _$_ModBanFromCommunityView.fromJson;
 
   @override
-  ModBanFromCommunity get modBanFromCommunity =>
-      throw _privateConstructorUsedError;
+  ModBanFromCommunity get modBanFromCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  PersonSafe get bannedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModBanFromCommunityViewCopyWith<_$_ModBanFromCommunityView>
@@ -4238,7 +4262,7 @@ class __$$_ModBanViewCopyWithImpl<$Res> extends _$ModBanViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModBanView extends _ModBanView {
   const _$_ModBanView(
       {required this.modBan,
@@ -4293,7 +4317,9 @@ class _$_ModBanView extends _ModBanView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModBanViewToJson(this);
+    return _$$_ModBanViewToJson(
+      this,
+    );
   }
 }
 
@@ -4309,13 +4335,13 @@ abstract class _ModBanView extends ModBanView {
       _$_ModBanView.fromJson;
 
   @override
-  ModBan get modBan => throw _privateConstructorUsedError;
+  ModBan get modBan;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  PersonSafe get bannedPerson => throw _privateConstructorUsedError;
+  PersonSafe get bannedPerson;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModBanViewCopyWith<_$_ModBanView> get copyWith =>
@@ -4498,7 +4524,7 @@ class __$$_ModLockPostViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModLockPostView extends _ModLockPostView {
   const _$_ModLockPostView(
       {required this.modLockPost,
@@ -4558,7 +4584,9 @@ class _$_ModLockPostView extends _ModLockPostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModLockPostViewToJson(this);
+    return _$$_ModLockPostViewToJson(
+      this,
+    );
   }
 }
 
@@ -4575,15 +4603,15 @@ abstract class _ModLockPostView extends ModLockPostView {
       _$_ModLockPostView.fromJson;
 
   @override
-  ModLockPost get modLockPost => throw _privateConstructorUsedError;
+  ModLockPost get modLockPost;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModLockPostViewCopyWith<_$_ModLockPostView> get copyWith =>
@@ -4812,7 +4840,7 @@ class __$$_ModRemoveCommentViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModRemoveCommentView extends _ModRemoveCommentView {
   const _$_ModRemoveCommentView(
       {required this.modRemoveComment,
@@ -4883,7 +4911,9 @@ class _$_ModRemoveCommentView extends _ModRemoveCommentView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommentViewToJson(this);
+    return _$$_ModRemoveCommentViewToJson(
+      this,
+    );
   }
 }
 
@@ -4902,19 +4932,19 @@ abstract class _ModRemoveCommentView extends ModRemoveCommentView {
       _$_ModRemoveCommentView.fromJson;
 
   @override
-  ModRemoveComment get modRemoveComment => throw _privateConstructorUsedError;
+  ModRemoveComment get modRemoveComment;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Comment get comment => throw _privateConstructorUsedError;
+  Comment get comment;
   @override
-  PersonSafe get commenter => throw _privateConstructorUsedError;
+  PersonSafe get commenter;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModRemoveCommentViewCopyWith<_$_ModRemoveCommentView> get copyWith =>
@@ -5078,7 +5108,7 @@ class __$$_ModRemoveCommunityViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
   const _$_ModRemoveCommunityView(
       {required this.modRemoveCommunity,
@@ -5134,7 +5164,9 @@ class _$_ModRemoveCommunityView extends _ModRemoveCommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemoveCommunityViewToJson(this);
+    return _$$_ModRemoveCommunityViewToJson(
+      this,
+    );
   }
 }
 
@@ -5150,14 +5182,13 @@ abstract class _ModRemoveCommunityView extends ModRemoveCommunityView {
       _$_ModRemoveCommunityView.fromJson;
 
   @override
-  ModRemoveCommunity get modRemoveCommunity =>
-      throw _privateConstructorUsedError;
+  ModRemoveCommunity get modRemoveCommunity;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModRemoveCommunityViewCopyWith<_$_ModRemoveCommunityView> get copyWith =>
@@ -5340,7 +5371,7 @@ class __$$_ModRemovePostViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModRemovePostView extends _ModRemovePostView {
   const _$_ModRemovePostView(
       {required this.modRemovePost,
@@ -5401,7 +5432,9 @@ class _$_ModRemovePostView extends _ModRemovePostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModRemovePostViewToJson(this);
+    return _$$_ModRemovePostViewToJson(
+      this,
+    );
   }
 }
 
@@ -5418,15 +5451,15 @@ abstract class _ModRemovePostView extends ModRemovePostView {
       _$_ModRemovePostView.fromJson;
 
   @override
-  ModRemovePost get modRemovePost => throw _privateConstructorUsedError;
+  ModRemovePost get modRemovePost;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModRemovePostViewCopyWith<_$_ModRemovePostView> get copyWith =>
@@ -5609,7 +5642,7 @@ class __$$_ModStickyPostViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_ModStickyPostView extends _ModStickyPostView {
   const _$_ModStickyPostView(
       {required this.modStickyPost,
@@ -5670,7 +5703,9 @@ class _$_ModStickyPostView extends _ModStickyPostView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModStickyPostViewToJson(this);
+    return _$$_ModStickyPostViewToJson(
+      this,
+    );
   }
 }
 
@@ -5687,15 +5722,15 @@ abstract class _ModStickyPostView extends ModStickyPostView {
       _$_ModStickyPostView.fromJson;
 
   @override
-  ModStickyPost get modStickyPost => throw _privateConstructorUsedError;
+  ModStickyPost get modStickyPost;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  Post get post => throw _privateConstructorUsedError;
+  Post get post;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_ModStickyPostViewCopyWith<_$_ModStickyPostView> get copyWith =>
@@ -5830,7 +5865,7 @@ class __$$_CommunityFollowerViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunityFollowerView extends _CommunityFollowerView {
   const _$_CommunityFollowerView(
       {required this.community,
@@ -5880,7 +5915,9 @@ class _$_CommunityFollowerView extends _CommunityFollowerView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityFollowerViewToJson(this);
+    return _$$_CommunityFollowerViewToJson(
+      this,
+    );
   }
 }
 
@@ -5895,11 +5932,11 @@ abstract class _CommunityFollowerView extends CommunityFollowerView {
       _$_CommunityFollowerView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get follower => throw _privateConstructorUsedError;
+  PersonSafe get follower;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityFollowerViewCopyWith<_$_CommunityFollowerView> get copyWith =>
@@ -6034,7 +6071,7 @@ class __$$_CommunityModeratorViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunityModeratorView extends _CommunityModeratorView {
   const _$_CommunityModeratorView(
       {required this.community,
@@ -6084,7 +6121,9 @@ class _$_CommunityModeratorView extends _CommunityModeratorView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityModeratorViewToJson(this);
+    return _$$_CommunityModeratorViewToJson(
+      this,
+    );
   }
 }
 
@@ -6099,11 +6138,11 @@ abstract class _CommunityModeratorView extends CommunityModeratorView {
       _$_CommunityModeratorView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get moderator => throw _privateConstructorUsedError;
+  PersonSafe get moderator;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityModeratorViewCopyWith<_$_CommunityModeratorView> get copyWith =>
@@ -6234,7 +6273,7 @@ class __$$_PersonBlockViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PersonBlockView extends _PersonBlockView {
   const _$_PersonBlockView(
       {required this.person, required this.target, required this.instanceHost})
@@ -6281,7 +6320,9 @@ class _$_PersonBlockView extends _PersonBlockView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonBlockViewToJson(this);
+    return _$$_PersonBlockViewToJson(
+      this,
+    );
   }
 }
 
@@ -6296,11 +6337,11 @@ abstract class _PersonBlockView extends PersonBlockView {
       _$_PersonBlockView.fromJson;
 
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  PersonSafe get target => throw _privateConstructorUsedError;
+  PersonSafe get target;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_PersonBlockViewCopyWith<_$_PersonBlockView> get copyWith =>
@@ -6431,7 +6472,7 @@ class __$$_CommunityBlockViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunityBlockView extends _CommunityBlockView {
   const _$_CommunityBlockView(
       {required this.person,
@@ -6481,7 +6522,9 @@ class _$_CommunityBlockView extends _CommunityBlockView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityBlockViewToJson(this);
+    return _$$_CommunityBlockViewToJson(
+      this,
+    );
   }
 }
 
@@ -6496,11 +6539,11 @@ abstract class _CommunityBlockView extends CommunityBlockView {
       _$_CommunityBlockView.fromJson;
 
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityBlockViewCopyWith<_$_CommunityBlockView> get copyWith =>
@@ -6633,7 +6676,7 @@ class __$$_CommunityPersonBanViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunityPersonBanView extends _CommunityPersonBanView {
   const _$_CommunityPersonBanView(
       {required this.community,
@@ -6683,7 +6726,9 @@ class _$_CommunityPersonBanView extends _CommunityPersonBanView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityPersonBanViewToJson(this);
+    return _$$_CommunityPersonBanViewToJson(
+      this,
+    );
   }
 }
 
@@ -6698,11 +6743,11 @@ abstract class _CommunityPersonBanView extends CommunityPersonBanView {
       _$_CommunityPersonBanView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  PersonSafe get person => throw _privateConstructorUsedError;
+  PersonSafe get person;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityPersonBanViewCopyWith<_$_CommunityPersonBanView> get copyWith =>
@@ -6865,7 +6910,7 @@ class __$$_CommunityViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunityView extends _CommunityView {
   const _$_CommunityView(
       {required this.community,
@@ -6925,7 +6970,9 @@ class _$_CommunityView extends _CommunityView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityViewToJson(this);
+    return _$$_CommunityViewToJson(
+      this,
+    );
   }
 }
 
@@ -6942,15 +6989,15 @@ abstract class _CommunityView extends CommunityView {
       _$_CommunityView.fromJson;
 
   @override
-  CommunitySafe get community => throw _privateConstructorUsedError;
+  CommunitySafe get community;
   @override
-  bool get subscribed => throw _privateConstructorUsedError;
+  bool get subscribed;
   @override
-  bool get blocked => throw _privateConstructorUsedError;
+  bool get blocked;
   @override
-  CommunityAggregates get counts => throw _privateConstructorUsedError;
+  CommunityAggregates get counts;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityViewCopyWith<_$_CommunityView> get copyWith =>
@@ -7144,7 +7191,7 @@ class __$$_RegistrationApplicationViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_RegistrationApplicationView extends _RegistrationApplicationView {
   const _$_RegistrationApplicationView(
       {required this.registrationApplication,
@@ -7206,7 +7253,9 @@ class _$_RegistrationApplicationView extends _RegistrationApplicationView {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegistrationApplicationViewToJson(this);
+    return _$$_RegistrationApplicationViewToJson(
+      this,
+    );
   }
 }
 
@@ -7224,16 +7273,15 @@ abstract class _RegistrationApplicationView
       _$_RegistrationApplicationView.fromJson;
 
   @override
-  RegistrationApplication get registrationApplication =>
-      throw _privateConstructorUsedError;
+  RegistrationApplication get registrationApplication;
   @override
-  LocalUserSettings get creatorLocalUser => throw _privateConstructorUsedError;
+  LocalUserSettings get creatorLocalUser;
   @override
-  PersonSafe get creator => throw _privateConstructorUsedError;
+  PersonSafe get creator;
   @override
-  PersonSafe? get admin => throw _privateConstructorUsedError;
+  PersonSafe? get admin;
   @override
-  String get instanceHost => throw _privateConstructorUsedError;
+  String get instanceHost;
   @override
   @JsonKey(ignore: true)
   _$$_RegistrationApplicationViewCopyWith<_$_RegistrationApplicationView>

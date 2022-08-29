@@ -161,7 +161,7 @@ class __$$_PersonAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PersonAggregates extends _PersonAggregates {
   const _$_PersonAggregates(
       {required this.id,
@@ -226,7 +226,9 @@ class _$_PersonAggregates extends _PersonAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonAggregatesToJson(this);
+    return _$$_PersonAggregatesToJson(
+      this,
+    );
   }
 }
 
@@ -244,17 +246,17 @@ abstract class _PersonAggregates extends PersonAggregates {
       _$_PersonAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  int get postCount => throw _privateConstructorUsedError;
+  int get postCount;
   @override
-  int get postScore => throw _privateConstructorUsedError;
+  int get postScore;
   @override
-  int get commentCount => throw _privateConstructorUsedError;
+  int get commentCount;
   @override
-  int get commentScore => throw _privateConstructorUsedError;
+  int get commentScore;
   @override
   @JsonKey(ignore: true)
   _$$_PersonAggregatesCopyWith<_$_PersonAggregates> get copyWith =>
@@ -460,7 +462,7 @@ class __$$_SiteAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_SiteAggregates extends _SiteAggregates {
   const _$_SiteAggregates(
       {required this.id,
@@ -548,7 +550,9 @@ class _$_SiteAggregates extends _SiteAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SiteAggregatesToJson(this);
+    return _$$_SiteAggregatesToJson(
+      this,
+    );
   }
 }
 
@@ -570,25 +574,25 @@ abstract class _SiteAggregates extends SiteAggregates {
       _$_SiteAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get siteId => throw _privateConstructorUsedError;
+  int get siteId;
   @override
-  int get users => throw _privateConstructorUsedError;
+  int get users;
   @override
-  int get posts => throw _privateConstructorUsedError;
+  int get posts;
   @override
-  int get comments => throw _privateConstructorUsedError;
+  int get comments;
   @override
-  int get communities => throw _privateConstructorUsedError;
+  int get communities;
   @override
-  int get usersActiveDay => throw _privateConstructorUsedError;
+  int get usersActiveDay;
   @override
-  int get usersActiveWeek => throw _privateConstructorUsedError;
+  int get usersActiveWeek;
   @override
-  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int get usersActiveMonth;
   @override
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
+  int get usersActiveHalfYear;
   @override
   @JsonKey(ignore: true)
   _$$_SiteAggregatesCopyWith<_$_SiteAggregates> get copyWith =>
@@ -768,9 +772,7 @@ class __$$_PostAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@ForceUtcDateTime()
-@ForceUtcDateTimeNullable()
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_PostAggregates extends _PostAggregates {
   const _$_PostAggregates(
       {required this.id,
@@ -845,7 +847,9 @@ class _$_PostAggregates extends _PostAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PostAggregatesToJson(this);
+    return _$$_PostAggregatesToJson(
+      this,
+    );
   }
 }
 
@@ -865,21 +869,21 @@ abstract class _PostAggregates extends PostAggregates {
       _$_PostAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get postId => throw _privateConstructorUsedError;
+  int get postId;
   @override
-  int get comments => throw _privateConstructorUsedError;
+  int get comments;
   @override
-  int get score => throw _privateConstructorUsedError;
+  int get score;
   @override
-  int get upvotes => throw _privateConstructorUsedError;
+  int get upvotes;
   @override
-  int get downvotes => throw _privateConstructorUsedError;
+  int get downvotes;
   @override
-  DateTime get newestCommentTime => throw _privateConstructorUsedError;
+  DateTime get newestCommentTime;
   @override
-  DateTime get newestCommentTimeNecro => throw _privateConstructorUsedError;
+  DateTime get newestCommentTimeNecro;
   @override
   @JsonKey(ignore: true)
   _$$_PostAggregatesCopyWith<_$_PostAggregates> get copyWith =>
@@ -1072,7 +1076,7 @@ class __$$_CommunityAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommunityAggregates extends _CommunityAggregates {
   const _$_CommunityAggregates(
       {required this.id,
@@ -1157,7 +1161,9 @@ class _$_CommunityAggregates extends _CommunityAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunityAggregatesToJson(this);
+    return _$$_CommunityAggregatesToJson(
+      this,
+    );
   }
 }
 
@@ -1178,23 +1184,23 @@ abstract class _CommunityAggregates extends CommunityAggregates {
       _$_CommunityAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get subscribers => throw _privateConstructorUsedError;
+  int get subscribers;
   @override
-  int get posts => throw _privateConstructorUsedError;
+  int get posts;
   @override
-  int get comments => throw _privateConstructorUsedError;
+  int get comments;
   @override
-  int get usersActiveDay => throw _privateConstructorUsedError;
+  int get usersActiveDay;
   @override
-  int get usersActiveWeek => throw _privateConstructorUsedError;
+  int get usersActiveWeek;
   @override
-  int get usersActiveMonth => throw _privateConstructorUsedError;
+  int get usersActiveMonth;
   @override
-  int get usersActiveHalfYear => throw _privateConstructorUsedError;
+  int get usersActiveHalfYear;
   @override
   @JsonKey(ignore: true)
   _$$_CommunityAggregatesCopyWith<_$_CommunityAggregates> get copyWith =>
@@ -1325,7 +1331,7 @@ class __$$_CommentAggregatesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_CommentAggregates extends _CommentAggregates {
   const _$_CommentAggregates(
       {required this.id,
@@ -1384,7 +1390,9 @@ class _$_CommentAggregates extends _CommentAggregates {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentAggregatesToJson(this);
+    return _$$_CommentAggregatesToJson(
+      this,
+    );
   }
 }
 
@@ -1401,15 +1409,15 @@ abstract class _CommentAggregates extends CommentAggregates {
       _$_CommentAggregates.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  int get id;
   @override
-  int get commentId => throw _privateConstructorUsedError;
+  int get commentId;
   @override
-  int get score => throw _privateConstructorUsedError;
+  int get score;
   @override
-  int get upvotes => throw _privateConstructorUsedError;
+  int get upvotes;
   @override
-  int get downvotes => throw _privateConstructorUsedError;
+  int get downvotes;
   @override
   @JsonKey(ignore: true)
   _$$_CommentAggregatesCopyWith<_$_CommentAggregates> get copyWith =>

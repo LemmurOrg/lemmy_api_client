@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import '../../utils/serde.dart';
+
 part 'jwt.freezed.dart';
 part 'jwt.g.dart';
 
@@ -34,7 +36,7 @@ class Jwt {
 
 @freezed
 class JwtPayload with _$JwtPayload {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory JwtPayload({
     required int iat,
     required String iss,

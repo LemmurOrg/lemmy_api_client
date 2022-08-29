@@ -115,7 +115,7 @@ class __$$_GetCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetCommunity extends _GetCommunity {
   const _$_GetCommunity({this.id, this.name, this.auth}) : super._();
 
@@ -159,7 +159,9 @@ class _$_GetCommunity extends _GetCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetCommunityToJson(this);
+    return _$$_GetCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -174,11 +176,11 @@ abstract class _GetCommunity extends GetCommunity {
       _$_GetCommunity.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  int? get id;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetCommunityCopyWith<_$_GetCommunity> get copyWith =>
@@ -345,7 +347,7 @@ class __$$_CreateCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreateCommunity extends _CreateCommunity {
   const _$_CreateCommunity(
       {required this.name,
@@ -414,7 +416,9 @@ class _$_CreateCommunity extends _CreateCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreateCommunityToJson(this);
+    return _$$_CreateCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -433,19 +437,19 @@ abstract class _CreateCommunity extends CreateCommunity {
       _$_CreateCommunity.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreateCommunityCopyWith<_$_CreateCommunity> get copyWith =>
@@ -587,7 +591,7 @@ class __$$_ListCommunitiesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ListCommunities extends _ListCommunities {
   const _$_ListCommunities(
       {@JsonKey(name: 'type_') this.type,
@@ -646,7 +650,9 @@ class _$_ListCommunities extends _ListCommunities {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListCommunitiesToJson(this);
+    return _$$_ListCommunitiesToJson(
+      this,
+    );
   }
 }
 
@@ -664,15 +670,15 @@ abstract class _ListCommunities extends ListCommunities {
 
   @override
   @JsonKey(name: 'type_')
-  PostListingType? get type => throw _privateConstructorUsedError;
+  PostListingType? get type;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ListCommunitiesCopyWith<_$_ListCommunities> get copyWith =>
@@ -839,7 +845,7 @@ class __$$_BanFromCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_BanFromCommunity extends _BanFromCommunity {
   const _$_BanFromCommunity(
       {required this.communityId,
@@ -909,7 +915,9 @@ class _$_BanFromCommunity extends _BanFromCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BanFromCommunityToJson(this);
+    return _$$_BanFromCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -928,19 +936,19 @@ abstract class _BanFromCommunity extends BanFromCommunity {
       _$_BanFromCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get ban => throw _privateConstructorUsedError;
+  bool get ban;
   @override
-  bool? get removeData => throw _privateConstructorUsedError;
+  bool? get removeData;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  int? get expires => throw _privateConstructorUsedError;
+  int? get expires;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_BanFromCommunityCopyWith<_$_BanFromCommunity> get copyWith =>
@@ -1060,7 +1068,7 @@ class __$$_AddModToCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_AddModToCommunity extends _AddModToCommunity {
   const _$_AddModToCommunity(
       {required this.communityId,
@@ -1115,7 +1123,9 @@ class _$_AddModToCommunity extends _AddModToCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddModToCommunityToJson(this);
+    return _$$_AddModToCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -1131,13 +1141,13 @@ abstract class _AddModToCommunity extends AddModToCommunity {
       _$_AddModToCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get added => throw _privateConstructorUsedError;
+  bool get added;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_AddModToCommunityCopyWith<_$_AddModToCommunity> get copyWith =>
@@ -1304,7 +1314,7 @@ class __$$_EditCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_EditCommunity extends _EditCommunity {
   const _$_EditCommunity(
       {required this.communityId,
@@ -1374,7 +1384,9 @@ class _$_EditCommunity extends _EditCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditCommunityToJson(this);
+    return _$$_EditCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -1393,19 +1405,19 @@ abstract class _EditCommunity extends EditCommunity {
       _$_EditCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get icon => throw _privateConstructorUsedError;
+  String? get icon;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get nsfw;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_EditCommunityCopyWith<_$_EditCommunity> get copyWith =>
@@ -1514,7 +1526,7 @@ class __$$_DeleteCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_DeleteCommunity extends _DeleteCommunity {
   const _$_DeleteCommunity(
       {required this.communityId, required this.deleted, required this.auth})
@@ -1561,7 +1573,9 @@ class _$_DeleteCommunity extends _DeleteCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeleteCommunityToJson(this);
+    return _$$_DeleteCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -1576,11 +1590,11 @@ abstract class _DeleteCommunity extends DeleteCommunity {
       _$_DeleteCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_DeleteCommunityCopyWith<_$_DeleteCommunity> get copyWith =>
@@ -1721,7 +1735,7 @@ class __$$_RemoveCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_RemoveCommunity extends _RemoveCommunity {
   const _$_RemoveCommunity(
       {required this.communityId,
@@ -1780,7 +1794,9 @@ class _$_RemoveCommunity extends _RemoveCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RemoveCommunityToJson(this);
+    return _$$_RemoveCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -1797,15 +1813,15 @@ abstract class _RemoveCommunity extends RemoveCommunity {
       _$_RemoveCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get removed => throw _privateConstructorUsedError;
+  bool get removed;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  int? get expires => throw _privateConstructorUsedError;
+  int? get expires;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_RemoveCommunityCopyWith<_$_RemoveCommunity> get copyWith =>
@@ -1914,7 +1930,7 @@ class __$$_FollowCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_FollowCommunity extends _FollowCommunity {
   const _$_FollowCommunity(
       {required this.communityId, required this.follow, required this.auth})
@@ -1961,7 +1977,9 @@ class _$_FollowCommunity extends _FollowCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FollowCommunityToJson(this);
+    return _$$_FollowCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -1976,11 +1994,11 @@ abstract class _FollowCommunity extends FollowCommunity {
       _$_FollowCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get follow => throw _privateConstructorUsedError;
+  bool get follow;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_FollowCommunityCopyWith<_$_FollowCommunity> get copyWith =>
@@ -2089,7 +2107,7 @@ class __$$_TransferCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_TransferCommunity extends _TransferCommunity {
   const _$_TransferCommunity(
       {required this.communityId, required this.personId, required this.auth})
@@ -2137,7 +2155,9 @@ class _$_TransferCommunity extends _TransferCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TransferCommunityToJson(this);
+    return _$$_TransferCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -2152,11 +2172,11 @@ abstract class _TransferCommunity extends TransferCommunity {
       _$_TransferCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_TransferCommunityCopyWith<_$_TransferCommunity> get copyWith =>
@@ -2265,7 +2285,7 @@ class __$$_BlockCommunityCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_BlockCommunity extends _BlockCommunity {
   const _$_BlockCommunity(
       {required this.communityId, required this.block, required this.auth})
@@ -2312,7 +2332,9 @@ class _$_BlockCommunity extends _BlockCommunity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockCommunityToJson(this);
+    return _$$_BlockCommunityToJson(
+      this,
+    );
   }
 }
 
@@ -2327,11 +2349,11 @@ abstract class _BlockCommunity extends BlockCommunity {
       _$_BlockCommunity.fromJson;
 
   @override
-  int get communityId => throw _privateConstructorUsedError;
+  int get communityId;
   @override
-  bool get block => throw _privateConstructorUsedError;
+  bool get block;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_BlockCommunityCopyWith<_$_BlockCommunity> get copyWith =>

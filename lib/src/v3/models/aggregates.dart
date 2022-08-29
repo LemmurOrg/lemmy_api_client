@@ -1,13 +1,14 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../utils/force_utc_datetime.dart';
+import '../../utils/serde.dart';
 
 part 'aggregates.freezed.dart';
 part 'aggregates.g.dart';
 
 @freezed
 class PersonAggregates with _$PersonAggregates {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PersonAggregates({
     required int id,
     required int personId,
@@ -24,7 +25,7 @@ class PersonAggregates with _$PersonAggregates {
 
 @freezed
 class SiteAggregates with _$SiteAggregates {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory SiteAggregates({
     required int id,
     required int siteId,
@@ -45,9 +46,7 @@ class SiteAggregates with _$SiteAggregates {
 
 @freezed
 class PostAggregates with _$PostAggregates {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PostAggregates({
     required int id,
     required int postId,
@@ -66,7 +65,7 @@ class PostAggregates with _$PostAggregates {
 
 @freezed
 class CommunityAggregates with _$CommunityAggregates {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunityAggregates({
     required int id,
     required int communityId,
@@ -86,7 +85,7 @@ class CommunityAggregates with _$CommunityAggregates {
 
 @freezed
 class CommentAggregates with _$CommentAggregates {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommentAggregates({
     required int id,
     required int commentId,

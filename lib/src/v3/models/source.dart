@@ -2,6 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
 import '../../utils/force_utc_datetime.dart';
+import '../../utils/serde.dart';
 import '../../utils/workaround_settings_index.dart';
 
 part 'source.freezed.dart';
@@ -9,9 +10,7 @@ part 'source.g.dart';
 
 @freezed
 class PersonSafe with _$PersonSafe {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PersonSafe({
     required int id,
     required String name,
@@ -41,9 +40,7 @@ class PersonSafe with _$PersonSafe {
 
 @freezed
 class LocalUserSettings with _$LocalUserSettings {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory LocalUserSettings({
     required int id,
     required int personId,
@@ -73,9 +70,7 @@ class LocalUserSettings with _$LocalUserSettings {
 
 @freezed
 class Site with _$Site {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory Site({
     required int id,
     required String name,
@@ -107,9 +102,7 @@ class Site with _$Site {
 
 @freezed
 class PrivateMessage with _$PrivateMessage {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PrivateMessage({
     required int id,
     required int creatorId,
@@ -131,9 +124,7 @@ class PrivateMessage with _$PrivateMessage {
 
 @freezed
 class PostReport with _$PostReport {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PostReport({
     required int id,
     required int creatorId,
@@ -156,9 +147,7 @@ class PostReport with _$PostReport {
 
 @freezed
 class Post with _$Post {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory Post({
     required int id,
     required String name,
@@ -188,9 +177,7 @@ class Post with _$Post {
 
 @freezed
 class PasswordResetRequest with _$PasswordResetRequest {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PasswordResetRequest({
     required int id,
     required int localUserId,
@@ -206,9 +193,7 @@ class PasswordResetRequest with _$PasswordResetRequest {
 
 @freezed
 class ModRemovePost with _$ModRemovePost {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModRemovePost({
     required int id,
     required int modPersonId,
@@ -226,9 +211,7 @@ class ModRemovePost with _$ModRemovePost {
 
 @freezed
 class ModLockPost with _$ModLockPost {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModLockPost({
     required int id,
     required int modPersonId,
@@ -245,9 +228,7 @@ class ModLockPost with _$ModLockPost {
 
 @freezed
 class ModStickyPost with _$ModStickyPost {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModStickyPost({
     required int id,
     required int modPersonId,
@@ -264,9 +245,7 @@ class ModStickyPost with _$ModStickyPost {
 
 @freezed
 class ModRemoveComment with _$ModRemoveComment {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModRemoveComment({
     required int id,
     required int modPersonId,
@@ -284,9 +263,7 @@ class ModRemoveComment with _$ModRemoveComment {
 
 @freezed
 class ModRemoveCommunity with _$ModRemoveCommunity {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModRemoveCommunity({
     required int id,
     required int modPersonId,
@@ -305,9 +282,7 @@ class ModRemoveCommunity with _$ModRemoveCommunity {
 
 @freezed
 class ModBanFromCommunity with _$ModBanFromCommunity {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModBanFromCommunity({
     required int id,
     required int modPersonId,
@@ -327,9 +302,7 @@ class ModBanFromCommunity with _$ModBanFromCommunity {
 
 @freezed
 class ModBan with _$ModBan {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModBan({
     required int id,
     required int modPersonId,
@@ -347,9 +320,7 @@ class ModBan with _$ModBan {
 
 @freezed
 class ModAddCommunity with _$ModAddCommunity {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModAddCommunity({
     required int id,
     required int modPersonId,
@@ -367,9 +338,7 @@ class ModAddCommunity with _$ModAddCommunity {
 
 @freezed
 class ModTransferCommunity with _$ModTransferCommunity {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModTransferCommunity({
     required int id,
     required int modPersonId,
@@ -387,9 +356,7 @@ class ModTransferCommunity with _$ModTransferCommunity {
 
 @freezed
 class ModAdd with _$ModAdd {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModAdd({
     required int id,
     required int modPersonId,
@@ -405,9 +372,7 @@ class ModAdd with _$ModAdd {
 
 @freezed
 class CommunitySafe with _$CommunitySafe {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunitySafe({
     required int id,
     required String name,
@@ -432,9 +397,7 @@ class CommunitySafe with _$CommunitySafe {
 
 @freezed
 class CommentReport with _$CommentReport {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommentReport({
     required int id,
     required int creatorId,
@@ -455,9 +418,7 @@ class CommentReport with _$CommentReport {
 
 @freezed
 class Comment with _$Comment {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory Comment({
     required int id,
     required int creatorId,
@@ -481,9 +442,7 @@ class Comment with _$Comment {
 
 @freezed
 class PersonMention with _$PersonMention {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PersonMention({
     required int id,
     required int recipientId,
@@ -500,9 +459,7 @@ class PersonMention with _$PersonMention {
 
 @freezed
 class RegistrationApplication with _$RegistrationApplication {
-  @ForceUtcDateTime()
-  @ForceUtcDateTimeNullable()
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory RegistrationApplication({
     required int id,
     required int localUserId,

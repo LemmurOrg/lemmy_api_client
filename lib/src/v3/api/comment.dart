@@ -3,6 +3,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../../utils/serde.dart';
 import '../models/api.dart';
 import '../models/views.dart';
 import '../query.dart';
@@ -14,7 +15,7 @@ part 'comment.g.dart';
 class CreateComment
     with _$CreateComment
     implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory CreateComment({
     required String content,
     int? parentId,
@@ -38,7 +39,7 @@ class CreateComment
 
 @freezed
 class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory EditComment({
     required String content,
     required int commentId,
@@ -63,7 +64,7 @@ class EditComment with _$EditComment implements LemmyApiQuery<FullCommentView> {
 class DeleteComment
     with _$DeleteComment
     implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory DeleteComment({
     required int commentId,
     required bool deleted,
@@ -87,7 +88,7 @@ class DeleteComment
 class RemoveComment
     with _$RemoveComment
     implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory RemoveComment({
     required int commentId,
     required bool removed,
@@ -112,7 +113,7 @@ class RemoveComment
 class MarkCommentAsRead
     with _$MarkCommentAsRead
     implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory MarkCommentAsRead({
     required int commentId,
     required bool read,
@@ -134,7 +135,7 @@ class MarkCommentAsRead
 
 @freezed
 class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory SaveComment({
     required int commentId,
     required bool save,
@@ -158,7 +159,7 @@ class SaveComment with _$SaveComment implements LemmyApiQuery<FullCommentView> {
 class CreateCommentLike
     with _$CreateCommentLike
     implements LemmyApiQuery<FullCommentView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory CreateCommentLike({
     required int commentId,
     required VoteType score,
@@ -182,7 +183,7 @@ class CreateCommentLike
 class GetComments
     with _$GetComments
     implements LemmyApiQuery<List<CommentView>> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory GetComments({
     @JsonKey(name: 'type_') CommentListingType? type,
     SortType? sort,
@@ -213,7 +214,7 @@ class GetComments
 class CreateCommentReport
     with _$CreateCommentReport
     implements LemmyApiQuery<CommentReportView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory CreateCommentReport({
     required int commentId,
     required String reason,
@@ -237,7 +238,7 @@ class CreateCommentReport
 class ResolveCommentReport
     with _$ResolveCommentReport
     implements LemmyApiQuery<CommentReportView> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory ResolveCommentReport({
     required int reportId,
     required bool resolved,
@@ -261,7 +262,7 @@ class ResolveCommentReport
 class ListCommentReports
     with _$ListCommentReports
     implements LemmyApiQuery<List<CommentReportView>> {
-  @JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+  @apiSerde
   const factory ListCommentReports({
     int? page,
     int? limit,

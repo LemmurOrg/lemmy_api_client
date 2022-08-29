@@ -114,7 +114,7 @@ class __$$_JwtPayloadCopyWithImpl<$Res> extends _$JwtPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake)
+@modelSerde
 class _$_JwtPayload extends _JwtPayload {
   const _$_JwtPayload({required this.iat, required this.iss, required this.sub})
       : super._();
@@ -159,7 +159,9 @@ class _$_JwtPayload extends _JwtPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_JwtPayloadToJson(this);
+    return _$$_JwtPayloadToJson(
+      this,
+    );
   }
 }
 
@@ -174,11 +176,11 @@ abstract class _JwtPayload extends JwtPayload {
       _$_JwtPayload.fromJson;
 
   @override
-  int get iat => throw _privateConstructorUsedError;
+  int get iat;
   @override
-  String get iss => throw _privateConstructorUsedError;
+  String get iss;
   @override
-  int get sub => throw _privateConstructorUsedError;
+  int get sub;
   @override
   @JsonKey(ignore: true)
   _$$_JwtPayloadCopyWith<_$_JwtPayload> get copyWith =>

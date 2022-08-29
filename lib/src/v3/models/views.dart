@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
+import '../../utils/serde.dart';
 import 'aggregates.dart';
 import 'source.dart';
 
@@ -9,7 +10,7 @@ part 'views.g.dart';
 
 @freezed
 class PersonViewSafe with _$PersonViewSafe {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PersonViewSafe({
     required PersonSafe person,
     required PersonAggregates counts,
@@ -23,7 +24,7 @@ class PersonViewSafe with _$PersonViewSafe {
 
 @freezed
 class PersonMentionView with _$PersonMentionView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PersonMentionView({
     required PersonMention personMention,
     required Comment comment,
@@ -47,7 +48,7 @@ class PersonMentionView with _$PersonMentionView {
 
 @freezed
 class LocalUserSettingsView with _$LocalUserSettingsView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory LocalUserSettingsView({
     required LocalUserSettings localUser,
     required PersonSafe person,
@@ -62,7 +63,7 @@ class LocalUserSettingsView with _$LocalUserSettingsView {
 
 @freezed
 class SiteView with _$SiteView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory SiteView({
     required Site site,
     required SiteAggregates counts,
@@ -76,7 +77,7 @@ class SiteView with _$SiteView {
 
 @freezed
 class PrivateMessageView with _$PrivateMessageView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PrivateMessageView({
     required PrivateMessage privateMessage,
     required PersonSafe creator,
@@ -91,7 +92,7 @@ class PrivateMessageView with _$PrivateMessageView {
 
 @freezed
 class PostView with _$PostView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PostView({
     required Post post,
     required PersonSafe creator,
@@ -113,7 +114,7 @@ class PostView with _$PostView {
 
 @freezed
 class PostReportView with _$PostReportView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PostReportView({
     required PostReport postReport,
     required Post post,
@@ -134,7 +135,7 @@ class PostReportView with _$PostReportView {
 
 @freezed
 class CommentView with _$CommentView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommentView({
     required Comment comment,
     required PersonSafe creator,
@@ -157,7 +158,7 @@ class CommentView with _$CommentView {
 
 @freezed
 class CommentReportView with _$CommentReportView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommentReportView({
     required CommentReport commentReport,
     required Comment comment,
@@ -179,7 +180,7 @@ class CommentReportView with _$CommentReportView {
 
 @freezed
 class ModAddCommunityView with _$ModAddCommunityView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModAddCommunityView({
     required ModAddCommunity modAddCommunity,
     required PersonSafe moderator,
@@ -195,7 +196,7 @@ class ModAddCommunityView with _$ModAddCommunityView {
 
 @freezed
 class ModTransferCommunityView with _$ModTransferCommunityView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModTransferCommunityView({
     required ModTransferCommunity modTransferCommunity,
     required PersonSafe moderator,
@@ -211,7 +212,7 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
 
 @freezed
 class ModAddView with _$ModAddView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModAddView({
     required ModAdd modAdd,
     required PersonSafe moderator,
@@ -226,7 +227,7 @@ class ModAddView with _$ModAddView {
 
 @freezed
 class ModBanFromCommunityView with _$ModBanFromCommunityView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
     required PersonSafe moderator,
@@ -242,7 +243,7 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
 
 @freezed
 class ModBanView with _$ModBanView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModBanView({
     required ModBan modBan,
     required PersonSafe moderator,
@@ -257,7 +258,7 @@ class ModBanView with _$ModBanView {
 
 @freezed
 class ModLockPostView with _$ModLockPostView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModLockPostView({
     required ModLockPost modLockPost,
     required PersonSafe moderator,
@@ -273,7 +274,7 @@ class ModLockPostView with _$ModLockPostView {
 
 @freezed
 class ModRemoveCommentView with _$ModRemoveCommentView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
     required PersonSafe moderator,
@@ -291,7 +292,7 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
 
 @freezed
 class ModRemoveCommunityView with _$ModRemoveCommunityView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModRemoveCommunityView({
     required ModRemoveCommunity modRemoveCommunity,
     required PersonSafe moderator,
@@ -306,7 +307,7 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
 
 @freezed
 class ModRemovePostView with _$ModRemovePostView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModRemovePostView({
     required ModRemovePost modRemovePost,
     required PersonSafe moderator,
@@ -322,7 +323,7 @@ class ModRemovePostView with _$ModRemovePostView {
 
 @freezed
 class ModStickyPostView with _$ModStickyPostView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory ModStickyPostView({
     required ModStickyPost modStickyPost,
     required PersonSafe moderator,
@@ -338,7 +339,7 @@ class ModStickyPostView with _$ModStickyPostView {
 
 @freezed
 class CommunityFollowerView with _$CommunityFollowerView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunityFollowerView({
     required CommunitySafe community,
     required PersonSafe follower,
@@ -352,7 +353,7 @@ class CommunityFollowerView with _$CommunityFollowerView {
 
 @freezed
 class CommunityModeratorView with _$CommunityModeratorView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunityModeratorView({
     required CommunitySafe community,
     required PersonSafe moderator,
@@ -366,7 +367,7 @@ class CommunityModeratorView with _$CommunityModeratorView {
 
 @freezed
 class PersonBlockView with _$PersonBlockView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory PersonBlockView({
     required PersonSafe person,
     required PersonSafe target,
@@ -380,7 +381,7 @@ class PersonBlockView with _$PersonBlockView {
 
 @freezed
 class CommunityBlockView with _$CommunityBlockView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunityBlockView({
     required PersonSafe person,
     required CommunitySafe community,
@@ -394,7 +395,7 @@ class CommunityBlockView with _$CommunityBlockView {
 
 @freezed
 class CommunityPersonBanView with _$CommunityPersonBanView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunityPersonBanView({
     required CommunitySafe community,
     required PersonSafe person,
@@ -408,7 +409,7 @@ class CommunityPersonBanView with _$CommunityPersonBanView {
 
 @freezed
 class CommunityView with _$CommunityView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory CommunityView({
     required CommunitySafe community,
     required bool subscribed,
@@ -424,7 +425,7 @@ class CommunityView with _$CommunityView {
 
 @freezed
 class RegistrationApplicationView with _$RegistrationApplicationView {
-  @JsonSerializable(fieldRename: FieldRename.snake)
+  @modelSerde
   const factory RegistrationApplicationView({
     required RegistrationApplication registrationApplication,
     required LocalUserSettings creatorLocalUser,

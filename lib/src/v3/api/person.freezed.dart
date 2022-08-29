@@ -98,7 +98,7 @@ class __$$_LoginCopyWithImpl<$Res> extends _$LoginCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_Login extends _Login {
   const _$_Login({required this.usernameOrEmail, required this.password})
       : super._();
@@ -140,7 +140,9 @@ class _$_Login extends _Login {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LoginToJson(this);
+    return _$$_LoginToJson(
+      this,
+    );
   }
 }
 
@@ -153,9 +155,9 @@ abstract class _Login extends Login {
   factory _Login.fromJson(Map<String, dynamic> json) = _$_Login.fromJson;
 
   @override
-  String get usernameOrEmail => throw _privateConstructorUsedError;
+  String get usernameOrEmail;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
   @JsonKey(ignore: true)
   _$$_LoginCopyWith<_$_Login> get copyWith =>
@@ -344,7 +346,7 @@ class __$$_RegisterCopyWithImpl<$Res> extends _$RegisterCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_Register extends _Register {
   const _$_Register(
       {required this.username,
@@ -425,7 +427,9 @@ class _$_Register extends _Register {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RegisterToJson(this);
+    return _$$_RegisterToJson(
+      this,
+    );
   }
 }
 
@@ -445,23 +449,23 @@ abstract class _Register extends Register {
   factory _Register.fromJson(Map<String, dynamic> json) = _$_Register.fromJson;
 
   @override
-  String get username => throw _privateConstructorUsedError;
+  String get username;
   @override
-  String? get email => throw _privateConstructorUsedError;
+  String? get email;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
-  String get passwordVerify => throw _privateConstructorUsedError;
+  String get passwordVerify;
   @override
-  bool get showNsfw => throw _privateConstructorUsedError;
+  bool get showNsfw;
   @override
-  String? get captchaUuid => throw _privateConstructorUsedError;
+  String? get captchaUuid;
   @override
-  String? get captchaAnswer => throw _privateConstructorUsedError;
+  String? get captchaAnswer;
   @override
-  String? get honeypot => throw _privateConstructorUsedError;
+  String? get honeypot;
   @override
-  String? get answer => throw _privateConstructorUsedError;
+  String? get answer;
   @override
   @JsonKey(ignore: true)
   _$$_RegisterCopyWith<_$_Register> get copyWith =>
@@ -513,7 +517,7 @@ class __$$_GetCaptchaCopyWithImpl<$Res> extends _$GetCaptchaCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetCaptcha extends _GetCaptcha {
   const _$_GetCaptcha() : super._();
 
@@ -537,7 +541,9 @@ class _$_GetCaptcha extends _GetCaptcha {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetCaptchaToJson(this);
+    return _$$_GetCaptchaToJson(
+      this,
+    );
   }
 }
 
@@ -871,7 +877,7 @@ class __$$_SaveUserSettingsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_SaveUserSettings extends _SaveUserSettings {
   const _$_SaveUserSettings(
       {this.showNsfw,
@@ -1015,7 +1021,9 @@ class _$_SaveUserSettings extends _SaveUserSettings {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SaveUserSettingsToJson(this);
+    return _$$_SaveUserSettingsToJson(
+      this,
+    );
   }
 }
 
@@ -1048,45 +1056,45 @@ abstract class _SaveUserSettings extends SaveUserSettings {
       _$_SaveUserSettings.fromJson;
 
   @override
-  bool? get showNsfw => throw _privateConstructorUsedError;
+  bool? get showNsfw;
   @override
-  String? get theme => throw _privateConstructorUsedError;
+  String? get theme;
   @override
   @JsonKey(fromJson: sortTypeFromIndex, toJson: sortTypeToIndex)
-  SortType? get defaultSortType => throw _privateConstructorUsedError;
+  SortType? get defaultSortType;
   @override
   @JsonKey(fromJson: postListingTypeFromIndex, toJson: postListingTypeToIndex)
-  PostListingType? get defaultListingType => throw _privateConstructorUsedError;
+  PostListingType? get defaultListingType;
   @override
-  String? get lang => throw _privateConstructorUsedError;
+  String? get lang;
   @override
-  String? get avatar => throw _privateConstructorUsedError;
+  String? get avatar;
   @override
-  String? get banner => throw _privateConstructorUsedError;
+  String? get banner;
   @override
-  String? get displayName => throw _privateConstructorUsedError;
+  String? get displayName;
   @override
-  String? get email => throw _privateConstructorUsedError;
+  String? get email;
   @override
-  String? get bio => throw _privateConstructorUsedError;
+  String? get bio;
   @override
-  String? get matrixUserId => throw _privateConstructorUsedError;
+  String? get matrixUserId;
   @override
-  bool? get showAvatars => throw _privateConstructorUsedError;
+  bool? get showAvatars;
   @override
-  bool? get showScores => throw _privateConstructorUsedError;
+  bool? get showScores;
   @override
-  bool? get sendNotificationsToEmail => throw _privateConstructorUsedError;
+  bool? get sendNotificationsToEmail;
   @override
-  bool? get showReadPosts => throw _privateConstructorUsedError;
+  bool? get showReadPosts;
   @override
-  bool? get botAccount => throw _privateConstructorUsedError;
+  bool? get botAccount;
   @override
-  bool? get showBotAccounts => throw _privateConstructorUsedError;
+  bool? get showBotAccounts;
   @override
-  bool? get showNewPostNotifs => throw _privateConstructorUsedError;
+  bool? get showNewPostNotifs;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_SaveUserSettingsCopyWith<_$_SaveUserSettings> get copyWith =>
@@ -1214,7 +1222,7 @@ class __$$_ChangePasswordCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_ChangePassword extends _ChangePassword {
   const _$_ChangePassword(
       {required this.newPassword,
@@ -1270,7 +1278,9 @@ class _$_ChangePassword extends _ChangePassword {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChangePasswordToJson(this);
+    return _$$_ChangePasswordToJson(
+      this,
+    );
   }
 }
 
@@ -1286,13 +1296,13 @@ abstract class _ChangePassword extends ChangePassword {
       _$_ChangePassword.fromJson;
 
   @override
-  String get newPassword => throw _privateConstructorUsedError;
+  String get newPassword;
   @override
-  String get newPasswordVerify => throw _privateConstructorUsedError;
+  String get newPasswordVerify;
   @override
-  String get oldPassword => throw _privateConstructorUsedError;
+  String get oldPassword;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_ChangePasswordCopyWith<_$_ChangePassword> get copyWith =>
@@ -1472,7 +1482,7 @@ class __$$_GetPersonDetailsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetPersonDetails extends _GetPersonDetails {
   const _$_GetPersonDetails(
       {this.personId,
@@ -1546,7 +1556,9 @@ class _$_GetPersonDetails extends _GetPersonDetails {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPersonDetailsToJson(this);
+    return _$$_GetPersonDetailsToJson(
+      this,
+    );
   }
 }
 
@@ -1566,21 +1578,21 @@ abstract class _GetPersonDetails extends GetPersonDetails {
       _$_GetPersonDetails.fromJson;
 
   @override
-  int? get personId => throw _privateConstructorUsedError;
+  int? get personId;
   @override
-  String? get username => throw _privateConstructorUsedError;
+  String? get username;
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  bool? get savedOnly => throw _privateConstructorUsedError;
+  bool? get savedOnly;
   @override
-  String? get auth => throw _privateConstructorUsedError;
+  String? get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetPersonDetailsCopyWith<_$_GetPersonDetails> get copyWith =>
@@ -1667,7 +1679,7 @@ class __$$_MarkAllAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_MarkAllAsRead extends _MarkAllAsRead {
   const _$_MarkAllAsRead({required this.auth}) : super._();
 
@@ -1702,7 +1714,9 @@ class _$_MarkAllAsRead extends _MarkAllAsRead {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MarkAllAsReadToJson(this);
+    return _$$_MarkAllAsReadToJson(
+      this,
+    );
   }
 }
 
@@ -1714,7 +1728,7 @@ abstract class _MarkAllAsRead extends MarkAllAsRead {
       _$_MarkAllAsRead.fromJson;
 
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_MarkAllAsReadCopyWith<_$_MarkAllAsRead> get copyWith =>
@@ -1819,7 +1833,7 @@ class __$$_AddAdminCopyWithImpl<$Res> extends _$AddAdminCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_AddAdmin extends _AddAdmin {
   const _$_AddAdmin(
       {required this.personId, required this.added, required this.auth})
@@ -1865,7 +1879,9 @@ class _$_AddAdmin extends _AddAdmin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddAdminToJson(this);
+    return _$$_AddAdminToJson(
+      this,
+    );
   }
 }
 
@@ -1879,11 +1895,11 @@ abstract class _AddAdmin extends AddAdmin {
   factory _AddAdmin.fromJson(Map<String, dynamic> json) = _$_AddAdmin.fromJson;
 
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get added => throw _privateConstructorUsedError;
+  bool get added;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_AddAdminCopyWith<_$_AddAdmin> get copyWith =>
@@ -2033,7 +2049,7 @@ class __$$_BanPersonCopyWithImpl<$Res> extends _$BanPersonCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_BanPerson extends _BanPerson {
   const _$_BanPerson(
       {required this.personId,
@@ -2097,7 +2113,9 @@ class _$_BanPerson extends _BanPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BanPersonToJson(this);
+    return _$$_BanPersonToJson(
+      this,
+    );
   }
 }
 
@@ -2115,17 +2133,17 @@ abstract class _BanPerson extends BanPerson {
       _$_BanPerson.fromJson;
 
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get ban => throw _privateConstructorUsedError;
+  bool get ban;
   @override
-  bool? get removeData => throw _privateConstructorUsedError;
+  bool? get removeData;
   @override
-  String? get reason => throw _privateConstructorUsedError;
+  String? get reason;
   @override
-  int? get expires => throw _privateConstructorUsedError;
+  int? get expires;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_BanPersonCopyWith<_$_BanPerson> get copyWith =>
@@ -2256,7 +2274,7 @@ class __$$_GetRepliesCopyWithImpl<$Res> extends _$GetRepliesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetReplies extends _GetReplies {
   const _$_GetReplies(
       {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
@@ -2311,7 +2329,9 @@ class _$_GetReplies extends _GetReplies {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetRepliesToJson(this);
+    return _$$_GetRepliesToJson(
+      this,
+    );
   }
 }
 
@@ -2328,15 +2348,15 @@ abstract class _GetReplies extends GetReplies {
       _$_GetReplies.fromJson;
 
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  bool? get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetRepliesCopyWith<_$_GetReplies> get copyWith =>
@@ -2469,7 +2489,7 @@ class __$$_GetPersonMentionsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetPersonMentions extends _GetPersonMentions {
   const _$_GetPersonMentions(
       {this.sort, this.page, this.limit, this.unreadOnly, required this.auth})
@@ -2525,7 +2545,9 @@ class _$_GetPersonMentions extends _GetPersonMentions {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPersonMentionsToJson(this);
+    return _$$_GetPersonMentionsToJson(
+      this,
+    );
   }
 }
 
@@ -2542,15 +2564,15 @@ abstract class _GetPersonMentions extends GetPersonMentions {
       _$_GetPersonMentions.fromJson;
 
   @override
-  SortType? get sort => throw _privateConstructorUsedError;
+  SortType? get sort;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  bool? get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetPersonMentionsCopyWith<_$_GetPersonMentions> get copyWith =>
@@ -2661,7 +2683,7 @@ class __$$_MarkPersonMentionAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
   const _$_MarkPersonMentionAsRead(
       {required this.personMentionId, required this.read, required this.auth})
@@ -2710,7 +2732,9 @@ class _$_MarkPersonMentionAsRead extends _MarkPersonMentionAsRead {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MarkPersonMentionAsReadToJson(this);
+    return _$$_MarkPersonMentionAsReadToJson(
+      this,
+    );
   }
 }
 
@@ -2725,11 +2749,11 @@ abstract class _MarkPersonMentionAsRead extends MarkPersonMentionAsRead {
       _$_MarkPersonMentionAsRead.fromJson;
 
   @override
-  int get personMentionId => throw _privateConstructorUsedError;
+  int get personMentionId;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_MarkPersonMentionAsReadCopyWith<_$_MarkPersonMentionAsRead>
@@ -2827,7 +2851,7 @@ class __$$_DeleteAccountCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_DeleteAccount extends _DeleteAccount {
   const _$_DeleteAccount({required this.password, required this.auth})
       : super._();
@@ -2868,7 +2892,9 @@ class _$_DeleteAccount extends _DeleteAccount {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeleteAccountToJson(this);
+    return _$$_DeleteAccountToJson(
+      this,
+    );
   }
 }
 
@@ -2882,9 +2908,9 @@ abstract class _DeleteAccount extends DeleteAccount {
       _$_DeleteAccount.fromJson;
 
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_DeleteAccountCopyWith<_$_DeleteAccount> get copyWith =>
@@ -2971,7 +2997,7 @@ class __$$_PasswordResetCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_PasswordReset extends _PasswordReset {
   const _$_PasswordReset({required this.email}) : super._();
 
@@ -3006,7 +3032,9 @@ class _$_PasswordReset extends _PasswordReset {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PasswordResetToJson(this);
+    return _$$_PasswordResetToJson(
+      this,
+    );
   }
 }
 
@@ -3019,7 +3047,7 @@ abstract class _PasswordReset extends PasswordReset {
       _$_PasswordReset.fromJson;
 
   @override
-  String get email => throw _privateConstructorUsedError;
+  String get email;
   @override
   @JsonKey(ignore: true)
   _$$_PasswordResetCopyWith<_$_PasswordReset> get copyWith =>
@@ -3128,7 +3156,7 @@ class __$$_PasswordChangeCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_PasswordChange extends _PasswordChange {
   const _$_PasswordChange(
       {required this.token,
@@ -3177,7 +3205,9 @@ class _$_PasswordChange extends _PasswordChange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PasswordChangeToJson(this);
+    return _$$_PasswordChangeToJson(
+      this,
+    );
   }
 }
 
@@ -3192,11 +3222,11 @@ abstract class _PasswordChange extends PasswordChange {
       _$_PasswordChange.fromJson;
 
   @override
-  String get token => throw _privateConstructorUsedError;
+  String get token;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
-  String get passwordVerify => throw _privateConstructorUsedError;
+  String get passwordVerify;
   @override
   @JsonKey(ignore: true)
   _$$_PasswordChangeCopyWith<_$_PasswordChange> get copyWith =>
@@ -3305,7 +3335,7 @@ class __$$_CreatePrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_CreatePrivateMessage extends _CreatePrivateMessage {
   const _$_CreatePrivateMessage(
       {required this.content, required this.recipientId, required this.auth})
@@ -3353,7 +3383,9 @@ class _$_CreatePrivateMessage extends _CreatePrivateMessage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CreatePrivateMessageToJson(this);
+    return _$$_CreatePrivateMessageToJson(
+      this,
+    );
   }
 }
 
@@ -3368,11 +3400,11 @@ abstract class _CreatePrivateMessage extends CreatePrivateMessage {
       _$_CreatePrivateMessage.fromJson;
 
   @override
-  String get content => throw _privateConstructorUsedError;
+  String get content;
   @override
-  int get recipientId => throw _privateConstructorUsedError;
+  int get recipientId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_CreatePrivateMessageCopyWith<_$_CreatePrivateMessage> get copyWith =>
@@ -3481,7 +3513,7 @@ class __$$_EditPrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_EditPrivateMessage extends _EditPrivateMessage {
   const _$_EditPrivateMessage(
       {required this.privateMessageId,
@@ -3531,7 +3563,9 @@ class _$_EditPrivateMessage extends _EditPrivateMessage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditPrivateMessageToJson(this);
+    return _$$_EditPrivateMessageToJson(
+      this,
+    );
   }
 }
 
@@ -3546,11 +3580,11 @@ abstract class _EditPrivateMessage extends EditPrivateMessage {
       _$_EditPrivateMessage.fromJson;
 
   @override
-  int get privateMessageId => throw _privateConstructorUsedError;
+  int get privateMessageId;
   @override
-  String get content => throw _privateConstructorUsedError;
+  String get content;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_EditPrivateMessageCopyWith<_$_EditPrivateMessage> get copyWith =>
@@ -3659,7 +3693,7 @@ class __$$_DeletePrivateMessageCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_DeletePrivateMessage extends _DeletePrivateMessage {
   const _$_DeletePrivateMessage(
       {required this.privateMessageId,
@@ -3709,7 +3743,9 @@ class _$_DeletePrivateMessage extends _DeletePrivateMessage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeletePrivateMessageToJson(this);
+    return _$$_DeletePrivateMessageToJson(
+      this,
+    );
   }
 }
 
@@ -3724,11 +3760,11 @@ abstract class _DeletePrivateMessage extends DeletePrivateMessage {
       _$_DeletePrivateMessage.fromJson;
 
   @override
-  int get privateMessageId => throw _privateConstructorUsedError;
+  int get privateMessageId;
   @override
-  bool get deleted => throw _privateConstructorUsedError;
+  bool get deleted;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_DeletePrivateMessageCopyWith<_$_DeletePrivateMessage> get copyWith =>
@@ -3840,7 +3876,7 @@ class __$$_MarkPrivateMessageAsReadCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
   const _$_MarkPrivateMessageAsRead(
       {required this.privateMessageId, required this.read, required this.auth})
@@ -3888,7 +3924,9 @@ class _$_MarkPrivateMessageAsRead extends _MarkPrivateMessageAsRead {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MarkPrivateMessageAsReadToJson(this);
+    return _$$_MarkPrivateMessageAsReadToJson(
+      this,
+    );
   }
 }
 
@@ -3903,11 +3941,11 @@ abstract class _MarkPrivateMessageAsRead extends MarkPrivateMessageAsRead {
       _$_MarkPrivateMessageAsRead.fromJson;
 
   @override
-  int get privateMessageId => throw _privateConstructorUsedError;
+  int get privateMessageId;
   @override
-  bool get read => throw _privateConstructorUsedError;
+  bool get read;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_MarkPrivateMessageAsReadCopyWith<_$_MarkPrivateMessageAsRead>
@@ -4027,7 +4065,7 @@ class __$$_GetPrivateMessagesCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetPrivateMessages extends _GetPrivateMessages {
   const _$_GetPrivateMessages(
       {this.unreadOnly, this.page, this.limit, required this.auth})
@@ -4079,7 +4117,9 @@ class _$_GetPrivateMessages extends _GetPrivateMessages {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetPrivateMessagesToJson(this);
+    return _$$_GetPrivateMessagesToJson(
+      this,
+    );
   }
 }
 
@@ -4095,13 +4135,13 @@ abstract class _GetPrivateMessages extends GetPrivateMessages {
       _$_GetPrivateMessages.fromJson;
 
   @override
-  bool? get unreadOnly => throw _privateConstructorUsedError;
+  bool? get unreadOnly;
   @override
-  int? get page => throw _privateConstructorUsedError;
+  int? get page;
   @override
-  int? get limit => throw _privateConstructorUsedError;
+  int? get limit;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetPrivateMessagesCopyWith<_$_GetPrivateMessages> get copyWith =>
@@ -4208,7 +4248,7 @@ class __$$_BlockPersonCopyWithImpl<$Res> extends _$BlockPersonCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_BlockPerson extends _BlockPerson {
   const _$_BlockPerson(
       {required this.personId, required this.block, required this.auth})
@@ -4254,7 +4294,9 @@ class _$_BlockPerson extends _BlockPerson {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BlockPersonToJson(this);
+    return _$$_BlockPersonToJson(
+      this,
+    );
   }
 }
 
@@ -4269,11 +4311,11 @@ abstract class _BlockPerson extends BlockPerson {
       _$_BlockPerson.fromJson;
 
   @override
-  int get personId => throw _privateConstructorUsedError;
+  int get personId;
   @override
-  bool get block => throw _privateConstructorUsedError;
+  bool get block;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_BlockPersonCopyWith<_$_BlockPerson> get copyWith =>
@@ -4360,7 +4402,7 @@ class __$$_GetUnreadCountCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetUnreadCount extends _GetUnreadCount {
   const _$_GetUnreadCount({required this.auth}) : super._();
 
@@ -4395,7 +4437,9 @@ class _$_GetUnreadCount extends _GetUnreadCount {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetUnreadCountToJson(this);
+    return _$$_GetUnreadCountToJson(
+      this,
+    );
   }
 }
 
@@ -4408,7 +4452,7 @@ abstract class _GetUnreadCount extends GetUnreadCount {
       _$_GetUnreadCount.fromJson;
 
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetUnreadCountCopyWith<_$_GetUnreadCount> get copyWith =>
@@ -4506,7 +4550,7 @@ class __$$_GetReportCountCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetReportCount extends _GetReportCount {
   const _$_GetReportCount({this.communityId, required this.auth}) : super._();
 
@@ -4547,7 +4591,9 @@ class _$_GetReportCount extends _GetReportCount {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetReportCountToJson(this);
+    return _$$_GetReportCountToJson(
+      this,
+    );
   }
 }
 
@@ -4560,9 +4606,9 @@ abstract class _GetReportCount extends GetReportCount {
       _$_GetReportCount.fromJson;
 
   @override
-  int? get communityId => throw _privateConstructorUsedError;
+  int? get communityId;
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetReportCountCopyWith<_$_GetReportCount> get copyWith =>
@@ -4649,7 +4695,7 @@ class __$$_GetBannedPersonsCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_GetBannedPersons extends _GetBannedPersons {
   const _$_GetBannedPersons({required this.auth}) : super._();
 
@@ -4684,7 +4730,9 @@ class _$_GetBannedPersons extends _GetBannedPersons {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GetBannedPersonsToJson(this);
+    return _$$_GetBannedPersonsToJson(
+      this,
+    );
   }
 }
 
@@ -4697,7 +4745,7 @@ abstract class _GetBannedPersons extends GetBannedPersons {
       _$_GetBannedPersons.fromJson;
 
   @override
-  String get auth => throw _privateConstructorUsedError;
+  String get auth;
   @override
   @JsonKey(ignore: true)
   _$$_GetBannedPersonsCopyWith<_$_GetBannedPersons> get copyWith =>
@@ -4782,7 +4830,7 @@ class __$$_VerifyEmailCopyWithImpl<$Res> extends _$VerifyEmailCopyWithImpl<$Res>
 
 /// @nodoc
 
-@JsonSerializable(fieldRename: FieldRename.snake, includeIfNull: false)
+@apiSerde
 class _$_VerifyEmail extends _VerifyEmail {
   const _$_VerifyEmail({required this.token}) : super._();
 
@@ -4817,7 +4865,9 @@ class _$_VerifyEmail extends _VerifyEmail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VerifyEmailToJson(this);
+    return _$$_VerifyEmailToJson(
+      this,
+    );
   }
 }
 
@@ -4829,7 +4879,7 @@ abstract class _VerifyEmail extends VerifyEmail {
       _$_VerifyEmail.fromJson;
 
   @override
-  String get token => throw _privateConstructorUsedError;
+  String get token;
   @override
   @JsonKey(ignore: true)
   _$$_VerifyEmailCopyWith<_$_VerifyEmail> get copyWith =>
