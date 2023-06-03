@@ -48,6 +48,7 @@ class CreateCommunity
     String? icon,
     String? banner,
     bool? nsfw,
+    bool? postingRestrictedToMods,
     required String auth,
   }) = _CreateCommunity;
 
@@ -163,6 +164,7 @@ class EditCommunity
     String? icon,
     String? banner,
     bool? nsfw,
+    bool? postingRestrictedToMods,
     required String auth,
   }) = _EditCommunity;
 

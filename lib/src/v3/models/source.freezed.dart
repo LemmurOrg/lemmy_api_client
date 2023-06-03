@@ -5890,6 +5890,7 @@ mixin _$CommunitySafe {
   bool get local => throw _privateConstructorUsedError;
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
+  bool get postingRestrictedToMods => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5917,6 +5918,7 @@ abstract class $CommunitySafeCopyWith<$Res> {
       bool local,
       String? icon,
       String? banner,
+      bool postingRestrictedToMods,
       String instanceHost});
 }
 
@@ -5944,6 +5946,7 @@ class _$CommunitySafeCopyWithImpl<$Res>
     Object? local = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? postingRestrictedToMods = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5999,6 +6002,10 @@ class _$CommunitySafeCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      postingRestrictedToMods: postingRestrictedToMods == freezed
+          ? _value.postingRestrictedToMods
+          : postingRestrictedToMods // ignore: cast_nullable_to_non_nullable
+              as bool,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -6028,6 +6035,7 @@ abstract class _$$_CommunitySafeCopyWith<$Res>
       bool local,
       String? icon,
       String? banner,
+      bool postingRestrictedToMods,
       String instanceHost});
 }
 
@@ -6057,6 +6065,7 @@ class __$$_CommunitySafeCopyWithImpl<$Res>
     Object? local = freezed,
     Object? icon = freezed,
     Object? banner = freezed,
+    Object? postingRestrictedToMods = freezed,
     Object? instanceHost = freezed,
   }) {
     return _then(_$_CommunitySafe(
@@ -6112,6 +6121,10 @@ class __$$_CommunitySafeCopyWithImpl<$Res>
           ? _value.banner
           : banner // ignore: cast_nullable_to_non_nullable
               as String?,
+      postingRestrictedToMods: postingRestrictedToMods == freezed
+          ? _value.postingRestrictedToMods
+          : postingRestrictedToMods // ignore: cast_nullable_to_non_nullable
+              as bool,
       instanceHost: instanceHost == freezed
           ? _value.instanceHost
           : instanceHost // ignore: cast_nullable_to_non_nullable
@@ -6138,6 +6151,7 @@ class _$_CommunitySafe extends _CommunitySafe {
       required this.local,
       this.icon,
       this.banner,
+      required this.postingRestrictedToMods,
       required this.instanceHost})
       : super._();
 
@@ -6171,11 +6185,13 @@ class _$_CommunitySafe extends _CommunitySafe {
   @override
   final String? banner;
   @override
+  final bool postingRestrictedToMods;
+  @override
   final String instanceHost;
 
   @override
   String toString() {
-    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner, instanceHost: $instanceHost)';
+    return 'CommunitySafe(id: $id, name: $name, title: $title, description: $description, removed: $removed, published: $published, updated: $updated, deleted: $deleted, nsfw: $nsfw, actorId: $actorId, local: $local, icon: $icon, banner: $banner, postingRestrictedToMods: $postingRestrictedToMods, instanceHost: $instanceHost)';
   }
 
   @override
@@ -6197,6 +6213,8 @@ class _$_CommunitySafe extends _CommunitySafe {
             const DeepCollectionEquality().equals(other.local, local) &&
             const DeepCollectionEquality().equals(other.icon, icon) &&
             const DeepCollectionEquality().equals(other.banner, banner) &&
+            const DeepCollectionEquality().equals(
+                other.postingRestrictedToMods, postingRestrictedToMods) &&
             const DeepCollectionEquality()
                 .equals(other.instanceHost, instanceHost));
   }
@@ -6218,6 +6236,7 @@ class _$_CommunitySafe extends _CommunitySafe {
       const DeepCollectionEquality().hash(local),
       const DeepCollectionEquality().hash(icon),
       const DeepCollectionEquality().hash(banner),
+      const DeepCollectionEquality().hash(postingRestrictedToMods),
       const DeepCollectionEquality().hash(instanceHost));
 
   @JsonKey(ignore: true)
@@ -6248,6 +6267,7 @@ abstract class _CommunitySafe extends CommunitySafe {
       required final bool local,
       final String? icon,
       final String? banner,
+      required final bool postingRestrictedToMods,
       required final String instanceHost}) = _$_CommunitySafe;
   const _CommunitySafe._() : super._();
 
@@ -6280,6 +6300,8 @@ abstract class _CommunitySafe extends CommunitySafe {
   String? get icon;
   @override
   String? get banner;
+  @override
+  bool get postingRestrictedToMods;
   @override
   String get instanceHost;
   @override

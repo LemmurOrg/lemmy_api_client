@@ -199,6 +199,7 @@ mixin _$CreateCommunity {
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
   bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get postingRestrictedToMods => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -219,6 +220,7 @@ abstract class $CreateCommunityCopyWith<$Res> {
       String? icon,
       String? banner,
       bool? nsfw,
+      bool? postingRestrictedToMods,
       String auth});
 }
 
@@ -239,6 +241,7 @@ class _$CreateCommunityCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
+    Object? postingRestrictedToMods = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -266,6 +269,10 @@ class _$CreateCommunityCopyWithImpl<$Res>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      postingRestrictedToMods: postingRestrictedToMods == freezed
+          ? _value.postingRestrictedToMods
+          : postingRestrictedToMods // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -288,6 +295,7 @@ abstract class _$$_CreateCommunityCopyWith<$Res>
       String? icon,
       String? banner,
       bool? nsfw,
+      bool? postingRestrictedToMods,
       String auth});
 }
 
@@ -310,6 +318,7 @@ class __$$_CreateCommunityCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
+    Object? postingRestrictedToMods = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$_CreateCommunity(
@@ -337,6 +346,10 @@ class __$$_CreateCommunityCopyWithImpl<$Res>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      postingRestrictedToMods: postingRestrictedToMods == freezed
+          ? _value.postingRestrictedToMods
+          : postingRestrictedToMods // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -356,6 +369,7 @@ class _$_CreateCommunity extends _CreateCommunity {
       this.icon,
       this.banner,
       this.nsfw,
+      this.postingRestrictedToMods,
       required this.auth})
       : super._();
 
@@ -375,11 +389,13 @@ class _$_CreateCommunity extends _CreateCommunity {
   @override
   final bool? nsfw;
   @override
+  final bool? postingRestrictedToMods;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'CreateCommunity(name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
+    return 'CreateCommunity(name: $name, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, postingRestrictedToMods: $postingRestrictedToMods, auth: $auth)';
   }
 
   @override
@@ -394,6 +410,8 @@ class _$_CreateCommunity extends _CreateCommunity {
             const DeepCollectionEquality().equals(other.icon, icon) &&
             const DeepCollectionEquality().equals(other.banner, banner) &&
             const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
+            const DeepCollectionEquality().equals(
+                other.postingRestrictedToMods, postingRestrictedToMods) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -407,6 +425,7 @@ class _$_CreateCommunity extends _CreateCommunity {
       const DeepCollectionEquality().hash(icon),
       const DeepCollectionEquality().hash(banner),
       const DeepCollectionEquality().hash(nsfw),
+      const DeepCollectionEquality().hash(postingRestrictedToMods),
       const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
@@ -430,6 +449,7 @@ abstract class _CreateCommunity extends CreateCommunity {
       final String? icon,
       final String? banner,
       final bool? nsfw,
+      final bool? postingRestrictedToMods,
       required final String auth}) = _$_CreateCommunity;
   const _CreateCommunity._() : super._();
 
@@ -448,6 +468,8 @@ abstract class _CreateCommunity extends CreateCommunity {
   String? get banner;
   @override
   bool? get nsfw;
+  @override
+  bool? get postingRestrictedToMods;
   @override
   String get auth;
   @override
@@ -1166,6 +1188,7 @@ mixin _$EditCommunity {
   String? get icon => throw _privateConstructorUsedError;
   String? get banner => throw _privateConstructorUsedError;
   bool? get nsfw => throw _privateConstructorUsedError;
+  bool? get postingRestrictedToMods => throw _privateConstructorUsedError;
   String get auth => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1186,6 +1209,7 @@ abstract class $EditCommunityCopyWith<$Res> {
       String? icon,
       String? banner,
       bool? nsfw,
+      bool? postingRestrictedToMods,
       String auth});
 }
 
@@ -1206,6 +1230,7 @@ class _$EditCommunityCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
+    Object? postingRestrictedToMods = freezed,
     Object? auth = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1233,6 +1258,10 @@ class _$EditCommunityCopyWithImpl<$Res>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      postingRestrictedToMods: postingRestrictedToMods == freezed
+          ? _value.postingRestrictedToMods
+          : postingRestrictedToMods // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1255,6 +1284,7 @@ abstract class _$$_EditCommunityCopyWith<$Res>
       String? icon,
       String? banner,
       bool? nsfw,
+      bool? postingRestrictedToMods,
       String auth});
 }
 
@@ -1277,6 +1307,7 @@ class __$$_EditCommunityCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? banner = freezed,
     Object? nsfw = freezed,
+    Object? postingRestrictedToMods = freezed,
     Object? auth = freezed,
   }) {
     return _then(_$_EditCommunity(
@@ -1304,6 +1335,10 @@ class __$$_EditCommunityCopyWithImpl<$Res>
           ? _value.nsfw
           : nsfw // ignore: cast_nullable_to_non_nullable
               as bool?,
+      postingRestrictedToMods: postingRestrictedToMods == freezed
+          ? _value.postingRestrictedToMods
+          : postingRestrictedToMods // ignore: cast_nullable_to_non_nullable
+              as bool?,
       auth: auth == freezed
           ? _value.auth
           : auth // ignore: cast_nullable_to_non_nullable
@@ -1323,6 +1358,7 @@ class _$_EditCommunity extends _EditCommunity {
       this.icon,
       this.banner,
       this.nsfw,
+      this.postingRestrictedToMods,
       required this.auth})
       : super._();
 
@@ -1342,11 +1378,13 @@ class _$_EditCommunity extends _EditCommunity {
   @override
   final bool? nsfw;
   @override
+  final bool? postingRestrictedToMods;
+  @override
   final String auth;
 
   @override
   String toString() {
-    return 'EditCommunity(communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, auth: $auth)';
+    return 'EditCommunity(communityId: $communityId, title: $title, description: $description, icon: $icon, banner: $banner, nsfw: $nsfw, postingRestrictedToMods: $postingRestrictedToMods, auth: $auth)';
   }
 
   @override
@@ -1362,6 +1400,8 @@ class _$_EditCommunity extends _EditCommunity {
             const DeepCollectionEquality().equals(other.icon, icon) &&
             const DeepCollectionEquality().equals(other.banner, banner) &&
             const DeepCollectionEquality().equals(other.nsfw, nsfw) &&
+            const DeepCollectionEquality().equals(
+                other.postingRestrictedToMods, postingRestrictedToMods) &&
             const DeepCollectionEquality().equals(other.auth, auth));
   }
 
@@ -1375,6 +1415,7 @@ class _$_EditCommunity extends _EditCommunity {
       const DeepCollectionEquality().hash(icon),
       const DeepCollectionEquality().hash(banner),
       const DeepCollectionEquality().hash(nsfw),
+      const DeepCollectionEquality().hash(postingRestrictedToMods),
       const DeepCollectionEquality().hash(auth));
 
   @JsonKey(ignore: true)
@@ -1398,6 +1439,7 @@ abstract class _EditCommunity extends EditCommunity {
       final String? icon,
       final String? banner,
       final bool? nsfw,
+      final bool? postingRestrictedToMods,
       required final String auth}) = _$_EditCommunity;
   const _EditCommunity._() : super._();
 
@@ -1416,6 +1458,8 @@ abstract class _EditCommunity extends EditCommunity {
   String? get banner;
   @override
   bool? get nsfw;
+  @override
+  bool? get postingRestrictedToMods;
   @override
   String get auth;
   @override

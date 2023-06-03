@@ -1,7 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../enums.dart';
-import '../../utils/force_utc_datetime.dart';
 import '../../utils/serde.dart';
 import '../../utils/workaround_settings_index.dart';
 
@@ -387,6 +386,7 @@ class CommunitySafe with _$CommunitySafe {
     required bool local,
     String? icon,
     String? banner,
+    required bool postingRestrictedToMods,
     required String instanceHost,
   }) = _CommunitySafe;
 

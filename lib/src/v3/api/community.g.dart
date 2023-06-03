@@ -36,6 +36,7 @@ _$_CreateCommunity _$$_CreateCommunityFromJson(Map<String, dynamic> json) =>
       icon: json['icon'] as String?,
       banner: json['banner'] as String?,
       nsfw: json['nsfw'] as bool?,
+      postingRestrictedToMods: json['posting_restricted_to_mods'] as bool?,
       auth: json['auth'] as String,
     );
 
@@ -55,6 +56,7 @@ Map<String, dynamic> _$$_CreateCommunityToJson(_$_CreateCommunity instance) {
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
   writeNotNull('nsfw', instance.nsfw);
+  writeNotNull('posting_restricted_to_mods', instance.postingRestrictedToMods);
   val['auth'] = instance.auth;
   return val;
 }
@@ -145,6 +147,7 @@ _$_EditCommunity _$$_EditCommunityFromJson(Map<String, dynamic> json) =>
       icon: json['icon'] as String?,
       banner: json['banner'] as String?,
       nsfw: json['nsfw'] as bool?,
+      postingRestrictedToMods: json['posting_restricted_to_mods'] as bool?,
       auth: json['auth'] as String,
     );
 
@@ -164,6 +167,7 @@ Map<String, dynamic> _$$_EditCommunityToJson(_$_EditCommunity instance) {
   writeNotNull('icon', instance.icon);
   writeNotNull('banner', instance.banner);
   writeNotNull('nsfw', instance.nsfw);
+  writeNotNull('posting_restricted_to_mods', instance.postingRestrictedToMods);
   val['auth'] = instance.auth;
   return val;
 }
